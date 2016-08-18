@@ -1,0 +1,47 @@
+@charset "UTF-8";
+/* CSS Document */
+/*===================================================
+    トップページ用CSS(スマホ)
+===================================================*/
+#wrap {
+	padding: 19px 15px;
+}
+
+/*  ニュース
+-------------------------------------------------- */
+#main .news {
+	margin: 20px 0;
+}
+	#main .news dt {
+		width: 100%;
+		float: none;
+		margin-bottom: 2px;
+	}
+	#main .news dd {
+		margin-left: 0;
+		font-size: 12px;
+		padding-top: 4px;
+	}
+	#main .news dd > * {
+		display: block;
+	}
+	#main .news dd time {
+		width: 100%;
+		font-size: 11px;
+	}
+
+/*  コンテンツ一覧
+-------------------------------------------------- */
+#content li a:before {
+	transition: none;
+}
+#content li a:hover:before {
+	border-color: transparent !important;
+}
+
+/* --------------------------------------------------
+    footer
+-------------------------------------------------- */
+footer {
+	padding: 0;
+}

@@ -1,0 +1,208 @@
+@charset "UTF-8";
+/* CSS Document */
+/*===================================================
+    先輩インタビュー用CSS(スマホ)
+===================================================*/
+/*//////////////////////////////////////////////////
+    先輩一覧
+///////////////////////////////////////////////////*/
+.senior {
+	padding-top: 10px;
+}
+	.senior ul {
+		margin-left: -10px;
+	}
+	.senior li {
+		width: 140px;
+		height: 230px;
+		margin: 0 0 20px 10px;
+	}
+		.senior li a {
+			transition: none;
+		}
+		.senior li a:hover {
+			opacity: 1;
+		}
+			.senior li a p.name {
+				height: 90px;
+				padding: 8px 5px 0;
+				font-size: 10px;
+			}
+			.senior li a p.name:before {
+				border-width: 0 0 10px 10px;
+			}
+				.senior li a p.name span {
+					font-size: 18px;
+					margin: 0;
+				}
+
+/*//////////////////////////////////////////////////
+    先輩インタビュー詳細
+///////////////////////////////////////////////////*/
+
+/*  一覧へ戻る
+-------------------------------------------------- */
+.back {
+	padding-top: 13px;
+}
+	.back a {
+		background-position: left center;
+		padding-left: 30px;
+		font-size: 12px;
+	}
+
+/*  画像
+-------------------------------------------------- */
+.photoBox p.name {
+	width: 100%;
+	padding: 6px 15px;
+	position: static;
+	font-size: 11px;
+}
+	.photoBox p.name span {
+		font-size: 20px;
+	}
+
+/*  メッセージ
+-------------------------------------------------- */
+.photoBox + .msg {
+	font-size: 15px;
+	margin-top: 20px;
+	text-align: left;
+}
+
+/*  入社前後
+-------------------------------------------------- */
+.bfaf {
+	margin: 27px 0 40px;
+}
+	.bfaf > div {
+		width: 100%;
+		max-width: 100%;
+		min-height: 165px;
+		padding: 13px 15px;
+		float: none !important;
+	}
+		.bfaf > div > p {
+			margin-bottom: 13px;
+		}
+		/* 前職、スキルなど */
+		.bfaf > div dd + dt {
+			margin-top: 6px;
+		}
+
+	/* 入社前 */
+	.bfaf .bef {
+		margin-bottom: 45px;
+	}
+	.bfaf .bef:before {
+		width: 37px;
+		height: 25px;
+		background-image: url("../image/interview/arrow_smt.png");
+		background-size: contain;
+		top: auto;
+		bottom: -38px;
+		right: 50%;
+		margin-right: -18.5px;
+	}
+
+/*  IHSを選んだ理由～入社1年または2年後に感じた成長の実感
+-------------------------------------------------- */
+.sentBox dt.hline {
+	margin: 5px 0 20px;
+	font-size: 16px;
+}
+
+/*  1日の流れ
+-------------------------------------------------- */
+div.time {
+	background-position: 10px top;
+	padding-bottom: 20px;
+}
+
+/* 時間 */
+.time h4,
+p.time {
+	font-size: 16px;
+}
+.time span {
+	width: 80px;
+	height: 30px;
+	line-height: 25px;
+	font-size: 15px;
+	margin-right: 15px;
+}
+
+/* 詳細 */
+.time ol {
+	margin-left: 7px;
+	padding-top: 5px;
+}
+	.time ol li {
+		background-position: left 20px;
+		padding-left: 24px;
+		margin-top: 15px;
+	}
+		.time ol li .ovBox {
+			padding: 15px;
+		}
+			.time ol li .ovBox h5,
+			aside.point h6 {
+				font-size: 14px;
+				margin-bottom: 7px;
+			}
+
+/* point */
+aside.point {
+	padding: 10px 12px 15px;
+	margin-top: 10px;
+}
+	/* 三角形 */
+	aside.point:before {
+		border-width: 45px 75px 0 0;
+	}
+	aside.point:after {
+		font-size: 10px;
+		top: 3px;
+		left: 6px;
+		letter-spacing: 1px;
+	}
+		aside.point h6 {
+			padding-left: 64px;
+			margin-bottom: 8px;
+		}
+
+/*  アドバイス
+-------------------------------------------------- */
+.adv {
+	padding: 18px 15px 10px;
+	margin: 50px 0;
+}
+	.adv h3 {
+		margin-bottom: 15px;
+		font-size: 15px;
+		padding-left: 80px;
+	}
+	.adv h3:before {
+		width: 75px;
+		height: 27px;
+		font-size: 10px;
+		line-height: 27px;
+		padding-left: 10px;
+		top: -1px;
+		left: -4px;
+	}
+
+/*  次の先輩、前の先輩へのリンク
+-------------------------------------------------- */
+.pageLink > div {
+	transition: none;
+}
+.pageLink > div:hover {
+	opacity: 1;
+}
+
+	.pageLink > div p {
+		height: 40px;
+		padding-top: 5px;
+	}

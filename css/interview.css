@@ -1,0 +1,375 @@
+@charset "UTF-8";
+/* CSS Document */
+/*===================================================
+    先輩インタビュー用CSS
+===================================================*/
+/* 名前 */
+p.name {
+	text-align: center;
+	color: #333;
+	line-height: 1.5;
+	background-color: #FFF;
+	font-size: 12px;
+	font-weight: 700;
+	font-family: 'Noto Sans Japanese';
+	letter-spacing: 0.7px;
+}
+	p.name span {
+		display: block;
+		font-family: 'Montserrat';
+		color: #80C269;
+		letter-spacing: 3px;
+	}
+
+/*//////////////////////////////////////////////////
+    先輩一覧
+///////////////////////////////////////////////////*/
+.senior {
+	padding-top: 60px;
+	text-align: center;
+}
+	.senior ul {
+		margin-left: -20px;
+		display: inline-block;
+		overflow: hidden;
+	}
+		.senior li {
+			width: 280px;
+			height: 380px;
+			margin: 0 0 30px 20px;
+			float: left;
+		}
+			.senior li a {
+				transition: 0.3s;
+			}
+			.senior li a:hover {
+				opacity: 0.7;
+				-ms-filter: "alpha(opacity=70)";
+			}
+				.senior li a img {
+					width: 100%;
+				}
+				.senior li a p.name {
+					height: 100px;
+					padding-top: 16px;
+					position: relative;
+				}
+				.senior li a p.name:before {
+					content: "";
+					display: block;
+					width: 0;
+					height: 0;
+					border-style: solid;
+					border-width: 0 0 20px 20px;
+					border-color: transparent transparent #81c269 transparent;
+					position: absolute;
+					bottom: 0;
+					right: 0;
+				}
+					.senior li a p.name span {
+						font-size: 20px;
+						margin: 2px 0;
+					}
+
+/*//////////////////////////////////////////////////
+    先輩インタビュー詳細
+///////////////////////////////////////////////////*/
+
+/*  一覧へ戻る
+-------------------------------------------------- */
+.back {
+	padding-top: 20px;
+}
+	.back a {
+		background: url("../image/interview/arrow_prev.png") left 55% no-repeat;
+		background-size: 20px auto;
+		padding-left: 40px;
+		font-size: 15px;
+		font-family: 'Noto Sans Japanese';
+		font-weight: 700;
+		color: #333;
+		letter-spacing: 1px;
+		transition: 0.3s;
+	}
+	.back a:hover {
+		opacity: 0.7;
+		-ms-filter: "alpha(opacity=70)";
+	}
+
+/*  画像
+-------------------------------------------------- */
+.photoBox {
+	position: relative;
+	margin-top: 20px;
+}
+	.photoBox img {
+		width: 100%;
+	}
+	.photoBox p.name {
+		width: 320px;
+		border: solid 3px #80C269;
+		padding: 6px 0 10px;
+		position: absolute;
+		left: 40px;
+		bottom: 40px;
+	}
+		.photoBox p.name span {
+			font-size: 30px;
+			line-height: 1;
+			margin: 7px 0;
+		}
+
+/*  メッセージ
+-------------------------------------------------- */
+.photoBox + .msg {
+	text-align: center;
+	font-family: 'Noto Sans Japanese';
+	font-weight: 700;
+	line-height: 2;
+	font-size: 20px;
+	margin-top: 27px;
+	letter-spacing: 3.7px;
+}
+
+/*  入社前後
+-------------------------------------------------- */
+.bfaf {
+	overflow: hidden;
+	margin: 32px 0 60px;
+}
+	.bfaf > div {
+		width: 44%;
+		max-width: 420px;
+		min-height: 183px;
+		padding: 14px 35px 0;
+		border: solid 3px #333;
+		background-color: #FFF;
+	}
+		.bfaf > div > p {
+			background: url("../image/interview/bfaf_ttl_bg.png") center center no-repeat;
+			background-size: 101px auto;
+			text-align: center;
+			font-family: 'Noto Sans Japanese';
+			font-weight: 700;
+			letter-spacing: 3px;
+			margin-bottom: 16px;
+		}
+
+		/* 前職、スキルなど */
+		.bfaf > div dt {
+			font-weight: bold;
+			line-height: 1;
+		}
+		.bfaf > div dt:before {
+			content: "■";
+			margin-right: 8px;
+		}
+		.bfaf > div dd {
+			line-height: 2;
+		}
+		.bfaf > div dd + dt {
+			margin-top: 12px;
+		}
+
+	/* 入社前 */
+	.bfaf .bef {
+		float: left;
+		border-color: #E4DFCF;
+		position: relative;
+	}
+	.bfaf .bef:before {
+		content: "";
+		display: block;
+		width: 50px;
+		height: 74px;
+		background: url("../image/interview/arrow_pc.png") no-repeat;
+		position: absolute;
+		top: 51px;
+		right: -22%;
+	}
+
+	/* 入社後 */
+	.bfaf .aft {
+		float: right;
+	}
+
+/*  IHSを選んだ理由～入社1年または2年後に感じた成長の実感
+-------------------------------------------------- */
+.sentBox {
+	margin-bottom: 3px;
+}
+	.sentBox dt.hline {
+		margin-bottom: 15px;
+	}
+
+/*  1日の流れ
+-------------------------------------------------- */
+div.time {
+	background: url("../image/interview/time_bg_h.png") 57px top repeat-y;
+	background-size: 3px auto;
+	padding-bottom: 10px;
+}
+
+/* 時間 */
+.time h4,
+p.time {
+	font-weight: 700;
+	font-size: 18px;
+}
+.time span {
+	width: 120px;
+	height: 40px;
+	line-height: 35px;
+	background-color: #FFF;
+	display: inline-block;
+	font-family: 'Montserrat';
+	font-size: 20px;
+	border: solid 3px #80C269;
+	text-align: center;
+	margin-right: 40px;
+	letter-spacing: 4px;
+}
+
+/* 詳細 */
+.time ol {
+	margin-left: 54px;
+}
+	.time ol li {
+		min-height: 100px;
+		background: url("../image/interview/time_bg_w.png") left 35px no-repeat;
+		background-size: 100px auto;
+		padding-left: 100px;
+		margin-top: 10px;
+	}
+		.time ol li .ovBox {
+			background-color: #FFF;
+			padding: 28px 5% 25px;
+		}
+			.time ol li .ovBox h5,
+			aside.point h6 {
+				font-weight: bold;
+				font-size: 16px;
+				margin-bottom: 2px;
+			}
+			.time ol li .ovBox p {
+				line-height: 1.7;
+			}
+	
+/* point */
+aside.point {
+	border: solid 3px #6FB855;
+	background-color: #FAFAFA;
+	padding: 28px 4% 25px;
+	margin-top: 15px;
+	position: relative;
+}
+	/* 三角形 */
+	aside.point:before,
+	aside.point:after {
+		display: block;
+		position: absolute;
+	}
+	aside.point:before {
+		content: "";
+		width: 0;
+		height: 0;
+		border-style: solid;
+		border-width: 60px 100px 0 0;
+		border-color: #6FB855 transparent transparent transparent;
+		left: 0;
+		top: 0;
+	}
+	aside.point:after {
+		content: "POINT";
+		font-family: 'Montserrat';
+		font-weight: 700;
+		color: #FFF;
+		left: 7px;
+		top: 7px;
+		letter-spacing: 1.5px;
+	}
+		aside.point h6 {
+			padding-left: 60px;
+			margin-bottom: 10px;
+		}
+
+/*  アドバイス
+-------------------------------------------------- */
+.adv {
+	border: solid 3px #6FB855;
+	background-color: #FFF;
+	padding: 40px 6% 25px;
+	margin: 100px 0;
+}
+	.adv h3 {
+		font-family: 'Noto Sans Japanese';
+		font-weight: 700;
+		margin: 0 0 30px;
+		text-align: left;
+		font-size: 20px;
+		padding-left: 133px;
+	}
+	.adv h3:before {
+		width: 98px;
+		height: 40px;
+		font-size: 14px;
+		line-height: 40px;
+		margin-left: 0;
+		padding-left: 16px;
+		content: "ADVICE";
+		font-family: 'Montserrat';
+		color: #FFF;
+		background: url("../image/interview/adv_bg.png") no-repeat;
+		background-size: contain;
+		background-color: transparent !important;
+		left: 0;
+		top: -4px;
+	}
+	.adv p {
+		line-height: 2;
+	}
+
+/*  次の先輩、前の先輩へのリンク
+-------------------------------------------------- */
+.pageLink > div {
+	width: 50%;
+	display: inline-block;
+	transition: 0.3s;
+}
+.pageLink > div:hover {
+	opacity: 0.7;
+	-ms-filter: "alpha(opacity=70)";
+}
+	.pageLink > div img {
+		width: 100%;
+	}
+	.pageLink > div p {
+		height: 50px;
+		text-align: center;
+		padding-top: 10px;
+	}
+		.pageLink > div p span {
+			display: inline-block;
+			color: #FFF;
+			font-size: 20px;
+			font-family: 'Montserrat';
+			font-weight: 700;
+		}
+
+	.pageLink .prev p {
+		background-color: #555;
+	}
+		.pageLink .prev p span {
+			background: url("../image/interview/arrow_prev.png") left center no-repeat;
+			background-size: 20px auto;
+			padding-left: 40px;
+		}
+
+	.pageLink .next p {
+		background-color: #6FB855;
+	}
+		.pageLink .next p span {
+			background: url("../image/interview/arrow_next.png") right center no-repeat;
+			background-size: 19px auto;
+			padding-right: 40px;
+		}
