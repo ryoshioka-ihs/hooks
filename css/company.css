@@ -118,47 +118,24 @@ article h3.adopt:before {
 	max-width: 960px;
 }
 
-table {
-  border-top: 1px solid #999;
-  border-right: 1px solid #999;
+#company .cont .sentBox table {
   border-collapse: collapse;
   width: 100%;
 }
-table th,
-table td {
-  border-left: 1px solid #999;
-  border-bottom: 1px solid #999;
+#company .cont .sentBox table th {
+  border-bottom: 5px solid #e36d45;
+  padding: 0px 10px 10px;
+  font-weight: bold;
+}
+#company .cont .sentBox table td{
+  border-bottom: 1px solid #ccc;
   padding: 10px;
 }
-table th {
-  background-color: #eee;
+#company .cont .sentBox table td.dash{
+  border-bottom: 1px dashed #ccc;
+  padding: 10px;
+}
+#company .cont .sentBox table th {
   text-align: left;
 }
-
-@media screen and (max-width: 400px) {
-  table {
-    border: none;
-  }
-  table thead {
-    display: none;
-  }
-  table tr {
-    border-top: 1px solid #999;
-    display: block;
-    margin-bottom: 20px;
-  }
-  table td {
-    border-right: 1px solid #999;
-    border-bottom: 1px solid #999;
-    display: block;
-    padding: 10px;
-    text-align: right;
-  }
-  table td::before {
-    content: attr(data-label);
-    float: left;
-    font-weight: bold;
-  }
-}
-
 

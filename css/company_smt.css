@@ -86,3 +86,26 @@ article h3.adopt {
 /* --------------------------------------------------------
     部門紹介
 -------------------------------------------------------- */	
+
+#company .cont .sentBox table {
+    border: none;
+  }
+#company .cont .sentBox table thead {
+    display: none;
+  }
+#company .cont .sentBox table tr {
+    display: block;
+    margin-bottom: 20px;
+  }
+#company .cont .sentBox table td {
+	border: none;
+    display: block;
+    padding: 8px;
+    text-align: left;
+  }
+#company .cont .sentBox table td.dash{
+	border: none;
+	display: block;
+    padding: 8px 8px 0px;
+    text-align: left;
+}
