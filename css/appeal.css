@@ -17,3 +17,22 @@
 .sentBox.allE .detail {
 	margin-top: 27px;
 }
+
+/*//////////////////////////////////////////////////
+    女性が活躍できる職場
+///////////////////////////////////////////////////*/
+
+#appeal .cont .sentBox .textArea dl {
+	margin-top:15px;
+}
+#appeal .cont .sentBox .textArea dt {
+	font-weight: bold;
+}
+#appeal .cont .sentBox .textArea ul {
+	margin-left:15px;
+}
+#appeal .cont .sentBox .textArea li {
+	padding-left:5px;
+	list-style-type: disc;
+}
+

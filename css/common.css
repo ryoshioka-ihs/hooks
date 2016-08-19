@@ -106,9 +106,13 @@ a:hover {
 #interview .btn {
 	background-color: #80C269;
 }
-
+/*
 #recruit .btn {
 	background-color: #6093CA;
+}
+*/
+#info .btn {
+	background-color: #6093CA; /* ファイル名と同一に変更　recruit -→ info */
 }
 
 #faq .btn {
