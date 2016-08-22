@@ -353,18 +353,21 @@ header .menu {
 
 /*  ローカルナビゲーション
 ------------------------------------------------ */
+
 #lNav {
 	margin-bottom: 35px;
 	overflow: hidden;
 }
-	#lNav li {
+	#lNav li,
+	#info #lNav li {
 		width: 48%;
 		height: 36px;
 		margin: 0 0 10px 0;
 		float: left;
 		font-size: 12px;
 	}
-	#lNav li:nth-of-type(even) {
+	#lNav li:nth-of-type(even),
+	#info #lNav li:nth-of-type(even) {
 		float: right;
 	}
 		#lNav li a {
@@ -373,6 +376,11 @@ header .menu {
 		#lNav li a:hover {
 			opacity: 1;
 		}
+
+	/* 募集要項専用 */
+#info #lNav {
+	margin-bottom: 20px;	
+}		
 
 /* --------------------------------------------------
     footer

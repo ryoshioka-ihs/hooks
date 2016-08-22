@@ -4,119 +4,54 @@
     募集要項用CSS(スマホ)
 ===================================================*/
 
-
-/*流用できそうだったら流用する*/
-
 /* --------------------------------------------------------
-    採用担当者からのメッセージ
--------------------------------------------------------- */
-article h3.adopt {
-	height: 60px;
-	font-size: 10px;
-	margin: 0 0 27px;
-	padding-top: 7px;
+    募集要項(新卒・中途)
+-------------------------------------------------------- */ 
+
+/* インデックス　リンクボタン */
+#lNav {
+    margin-bottom: 10px;
+}    
+
+#index {
+    margin-bottom: 15px;
+    overflow: hidden;
 }
-	article h3.adopt span {
-		margin-bottom: 0;
-	}
+    #index li,
+    #index #lNav li {
+        width: 48%;
+        height: 60px;
+        margin: 0 0 10px 0;
+        float: left;
+        font-size: 14px;
+    }
+    #index li:nth-of-type(even),
+    #index #lNav li:nth-of-type(even) {
+        float: right;
+    }
+        #lNav li a {
+            transition: none;
+        }
+        #lNav li a:hover {
+            opacity: 1;
+        }
 
-	.sentBox.msg .imgArea figcaption {
-		font-size: 10px;
-		text-align: right;
-		letter-spacing: 1px;
-		margin-top: 7px;
-	}
-		.sentBox.msg .imgArea figcaption > span {
-			font-size: 15px;
-			margin-left: 10px;
-			display: inline;
-			vertical-align: -1px;
-			letter-spacing: 3px;
-		}
-		.sentBox.msg .imgArea figcaption .roma {
-			display: inline;
-			vertical-align: 2px;
-			margin-left: 5px;
-		}
+        #index li span {
+            color: #F00;
+            display: block;
+            font-size: 10px;
+        }
 
-/* --------------------------------------------------------
-    部門紹介
--------------------------------------------------------- */	
-
-#company .cont .sentBox table.departments {
-    border: none;
-}
-
-#company .cont .sentBox table.departments thead {
-    display: none;
-}
-
-#company .cont .sentBox table.departments tr {
-    display: block;
-    margin-bottom: 20px;
-}
-
-#company .cont .sentBox table.departments tbody th,
-#company .cont .sentBox table.departments tbody td {
-    border: none;
-    display: block;
-    padding: 5px;
-    text-align: left;
-}
-
-#company .cont .sentBox table.departments tbody td.dash {
-    border: none;
-    display: block;
-    padding: 5px 5px 0;
-    text-align: left;
-}
-
-#company .cont .sentBox table.departments tbody td.support {
+/* テーブル */
+#info .cont .sentBox table.info tbody td ul {
     margin-left: 15px;
 }
 
-#company .cont .sentBox table.departments tbody td.dept {
-    width: 100%;
-    font-size: 1.125em;
-    font-weight: bold;
-}
-
-#company .cont .sentBox table.departments tbody td ul {
-    margin-left: 20px;
-}
-
-#company .cont .sentBox table.departments tbody td li {
-    padding-left: 0px;
-    list-style-type: disc;
-}
-
-
-/* --------------------------------------------------------
-    会社概要
--------------------------------------------------------- */	
-
-#company .cont .sentBox table.profile tbody td ul {
-    margin-left: 15px;
-}
-
-#company .cont .sentBox table.profile tbody td li {
+#info .cont .sentBox table.info tbody td li {
     padding-left: 0;
     list-style-type: disc;
 }
 
-#company .cont .sentBox .textArea {
-    display: block;
-    padding: 14px 4% 0 0;
-    width: 100%;
-    word-break: normal;
+#info .cont .sentBox table.info tbody th {
+    width:30%;
 }
-
-#company .cont .sentBox .ggmap {
-    width: 100%;
-}
-
-
-
-
-
-

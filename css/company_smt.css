@@ -139,6 +139,7 @@ article h3.adopt {
     会社概要
 -------------------------------------------------------- */	
 
+/* テーブル */
 #company .cont .sentBox table.profile tbody td ul {
     margin-left: 15px;
 }
@@ -148,6 +149,7 @@ article h3.adopt {
     list-style-type: disc;
 }
 
+/* グーグルマップ */
 #company .cont .sentBox .textArea {
     display: block;
     padding: 14px 4% 0 0;
