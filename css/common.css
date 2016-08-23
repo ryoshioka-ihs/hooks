@@ -539,6 +539,11 @@ h3 + figure {
 	border-color: #F48494 transparent transparent;
 }
 
+/* 黄 */
+.tri.yellow:before {
+	border-color: #f0be0f transparent transparent;
+}
+
 /* --------------------------------------------------------
     詳細タイトルとその内容
 -------------------------------------------------------- */
