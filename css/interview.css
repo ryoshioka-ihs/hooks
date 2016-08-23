@@ -373,3 +373,13 @@ aside.point {
 			background-size: 19px auto;
 			padding-right: 40px;
 		}
+
+/*　リスト　*/
+#interview .cont .sentBox ul {
+    margin-left: 12px;
+}
+
+#interview .cont .sentBox li {
+    padding-left: 5px;
+    list-style-type: disc;
+}

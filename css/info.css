@@ -5,128 +5,190 @@
 ===================================================*/
 
 /* --------------------------------------------------------
-    部門紹介
+    募集要項(新卒・中途)
 -------------------------------------------------------- */	
 
-#company .cont figure.deptimg {
-    max-width: 960px;
-    margin-bottom: 60px;
+/* インデックス　リンクボタン */
+#index {
+    overflow: hidden;
+    margin-bottom: 95px;
 }
 
+    #index li {
+        width: 49.3%;
+        float: left;
+        margin-left: 1.3%;
+        color: #6093ca;
+        display: table;
+        font-size: 20px;
+        font-family: "Noto Sans Japanese";
+        background: #fff !important;
+        border: solid 3px #6093ca; 
+        text-align: center;    
+        height: 90px;   
+    }
+
+    #index li:first-child {
+        margin-left: 0;
+    }
+    #index li:hover {
+        opacity: 1;
+    }
+        #index li > * {
+            width: 100%;
+            line-height: 1.4;
+            display: table-cell;
+            vertical-align: middle;
+            padding: 3%;
+        }
+
+        #index li a { 
+            color: #6093ca !important;           
+            transition: 0.3s;
+        }
+        #index li a:hover {
+            color: #6093ca !important;
+            opacity: 0.7;
+        }
+
+        #index li span {
+            color: #F00;
+            display: block;
+            font-size: 14px;
+        }
 
 /*　テーブル　*/
-
-#company .cont .sentBox table.departments {
+#info .cont .sentBox table.info {
     border-collapse: collapse;
     width: 100%;
 }
 
-#company .cont .sentBox table.departments th {
-    text-align: left;
-}
-
-#company .cont .sentBox table.departments thead th {
-    border-bottom: 4px solid #e36d45;
-    padding: 0px 15px 15px;
-    font-weight: bold;
-    font-size: 1.125em;
-}
-
-#company .cont .sentBox table.departments tbody th,
-#company .cont .sentBox table.departments tbody td {
-    border-bottom: 1px solid #f4f4f4;
-    padding: 15px;
-}
-
-#company .cont .sentBox table.departments tbody th.dash,
-#company .cont .sentBox table.departments tbody td.dash {
-    border-bottom: 1px dashed #f4f4f4;
-    padding: 15px 15px 10px;
-}
-
-#company .cont .sentBox table.departments tbody td.dept {
-    width: 35%;
-}
-
-#company .cont .sentBox table.departments tbody td ul {
-    margin-left: 12px;
-}
-
-#company .cont .sentBox table.departments tbody td li {
-    padding-left: 5px;
-    list-style-type: disc;
-}
-
-
-/* --------------------------------------------------------
-    会社概要
--------------------------------------------------------- */	
-
-/*　テーブル　*/
-#company .cont .sentBox table.profile {
-    border-collapse: collapse;
-    width: 100%;
-}
-
-#company .cont .sentBox table.profile th,
-#company .cont .sentBox table.profile td {
+#info .cont .sentBox table.info th,
+#info .cont .sentBox table.info td {
     padding: 10px;
     border: 1px solid #E6E9EE;
 }
 
-#company .cont .sentBox table.profile th {
+#info .cont .sentBox table.info th {
     background-color: #F9FAFC;
     text-align: center;
 }
 
-#company .cont .sentBox table.profile tbody td ul {
+#info .cont .sentBox table.info tbody td ul {
     margin-left: 15px;
 }
 
-#company .cont .sentBox table.profile tbody td li {
+#info .cont .sentBox table.info tbody td li {
     padding-left: 5px;
     list-style-type: disc;
 }
 
-#company .cont .margb60 {
-    margin-bottom: 60px;
+#info .cont .sentBox .info tbody li dl {
+    margin-bottom: 8px;
+    line-height: 130%;
 }
 
-#company .cont .sentBox .margb30 {
-    margin-bottom: 30px;
+#info .cont .sentBox .info tbody li dt {
+    font-weight: bold;
 }
 
-#company .cont .sentBox .textArea {
-    padding: 14px 4% 0 0;
-    width: 48%;
-    word-break: normal;
+/*　テーブル内　リンクボタン*/
+#info .cont .sentBox .info .btn {
+    margin-top: 8px;    
+}
+#info .cont .sentBox .info .btn a {
+    background: url("../image/common/btn_arrow.png") right center no-repeat #555;
+    background-size: 16px auto;
+    transition: 0.3s;
 }
 
-#company .cont .sentBox .textArea h4.hline {
-    margin-bottom: 10px;
+#info .cont .sentBox .info .btn a:hover {
+    opacity: 0.7;
 }
 
-#company .cont .sentBox .textArea p.margb10 {
-    margin-bottom: 10px;
-}
+/* --------------------------------------------------------
+    卒業校一覧
+-------------------------------------------------------- */ 
 
-#company .cont .sentBox .ggmap {
-    border: 1px solid #ccc;
-    position: relative;
-    padding-bottom: 40%;
-    padding-top: 0;
-    height: 0;
-    overflow: hidden;
-    border: 1px solid ccc;
-}
-
-#company .cont .sentBox .ggmap iframe,
-#company .cont .sentBox .ggmap object,
-#company .cont .sentBox .ggmap embed {
-    position: absolute;
-    top: 0;
-    left: 0;
+/*　学校別　ナビゲーション*/
+#sch {
+    display: table;
     width: 100%;
-    height: 100%;
+    margin: 40px 0;
+}
+    #sch ul{
+        background-color: #6093ca;
+        height: 50px;
+        padding-top: 12px;            
+    }
+         #sch li{
+            color: #FFF;
+            cursor: pointer;
+            display: table-cell;
+            font-family: "Noto Sans Japanese";
+            font-weight: bold;
+            vertical-align: middle;
+            text-align: center;
+            width: 4%;
+    }
+            #sch li a {
+                color: #FFF;
+                border-bottom: 1px solid #FFF;
+                padding-bottom: 2px;
+            }
+
+            #sch li a:hover {
+                text-decoration: none;
+                border-bottom: 0;
+                padding-bottom: 2px;
+            }
+
+/*　見出し　H4　*/
+#info .cont .sentBox #univ h4,
+#info .cont .sentBox #voca h4,
+#info .cont .sentBox #jc h4 {
+    color: #6093ca;
+    font-size: 18px;
+    font-weight: bold;
+    font-family:'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', sans-serif !important;
+    padding-bottom: 5px;
+    border-bottom: 3px solid #6093ca;
 }
 
+    #info .cont .sentBox #univ h4 span,
+    #info .cont .sentBox #voca h4 span,
+    #info .cont .sentBox #jc h4 span {
+        font-size: 14px;
+    }
+        #info .cont .sentBox #univ,
+        #info .cont .sentBox #jc,
+        #info .cont .sentBox #voca {
+            font-size: 14px;            
+        }
+        #info .cont .sentBox #univ,
+        #info .cont .sentBox #jc {
+            margin-bottom:35px;
+        }
+
+/* リスト */
+#info .cont .sentBox #univ ul,
+#info .cont .sentBox #jc ul,
+#info .cont .sentBox #voca ul {
+    margin: 10px 15px 0px 30px;
+    width: 100%
+}
+
+    #info .cont .sentBox #univ li,
+    #info .cont .sentBox #voca li{
+        padding-right: 20px;
+        margin: 0;
+        list-style-type:none;
+        float: left;
+}
+#info .cont .sentBox #univ li {
+        width: 260px;
+    }
+
+#info .cont .sentBox #voca li {
+        width: 390px;
+    }

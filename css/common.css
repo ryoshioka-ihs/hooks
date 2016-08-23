@@ -106,11 +106,7 @@ a:hover {
 #interview .btn {
 	background-color: #80C269;
 }
-/*
-#recruit .btn {
-	background-color: #6093CA;
-}
-*/
+
 #info .btn {
 	background-color: #6093CA; /* ファイル名と同一に変更　recruit -→ info */
 }
@@ -245,7 +241,7 @@ article .ttl h2 {
 	color: #80C269;
 }
 
-#recruit .ttl h2 {
+#info .ttl h2 {
 	border-color: #6093CA;
 	color: #6093CA;
 }
@@ -302,7 +298,7 @@ article h3:before {
 	background-color: #80C269;
 }
 
-#recruit h3:before {
+#info h3:before {
 	background-color: #6093CA;
 }
 
@@ -741,10 +737,12 @@ header {
 
 /*  ローカルナビゲーション
 ------------------------------------------------ */
+
 #lNav {
 	overflow: hidden;
 	margin-bottom: 95px;
 }
+
 	#lNav li {
 		width: 24%;
 		float: left;
@@ -754,6 +752,7 @@ header {
 		background: #E4DFCF !important;
 		display: table;
 	}
+
 	#lNav li:first-child {
 		margin-left: 0;
 	}
@@ -790,13 +789,21 @@ header {
 		background-color: #80C269;
 	}
 	
-	#recruit #lNav li a {
+	#info #lNav li a {
 		background-color: #6093CA;
 	}
 	
 	#faq #lNav li a {
 		background-color: #F0BE0F;
 	}
+
+	/* 募集要項専用*/	
+#info #lNav {
+	margin-bottom: 60px;
+}
+	#info #lNav li {
+		width: 32.4%;
+	}	
 
 /* --------------------------------------------------
     footer
@@ -847,4 +854,234 @@ footer #sign {
 }
 footer #sign .pm {
 	margin: 0 20px;
+}
+
+/*  マージン
+-------------------------------------------------- */
+.mreset {
+    margin: 0 !important;
+}
+
+.mt00 {
+    margin-top: 0 !important;
+}
+
+.mr00 {
+    margin-right: 0 !important;
+}
+
+.mb00 {
+    margin-bottom: 0 !important;
+}
+
+.ml00 {
+    margin-left: 0 !important;
+}
+
+.mt05 {
+    margin-top: 5px !important;
+}
+
+.mr05 {
+    margin-right: 5px !important;
+}
+
+.mb05 {
+    margin-bottom: 5px !important;
+}
+
+.ml05 {
+    margin-left: 5px !important;
+}
+
+.mt10 {
+    margin-top: 10px !important;
+}
+
+.mr10 {
+    margin-right: 10px !important;
+}
+
+.mb10 {
+    margin-bottom: 10px !important;
+}
+
+.ml10 {
+    margin-left: 10px !important;
+}
+
+.mt15 {
+    margin-top: 15px !important;
+}
+
+.mr15 {
+    margin-right: 15px !important;
+}
+
+.mb15 {
+    margin-bottom: 15px !important;
+}
+
+.ml15 {
+    margin-left: 15px !important;
+}
+
+.mt20 {
+    margin-top: 20px !important;
+}
+
+.mr20 {
+    margin-right: 20px !important;
+}
+
+.mb20 {
+    margin-bottom: 20px !important;
+}
+
+.ml20 {
+    margin-left: 20px !important;
+}
+
+.mt25 {
+    margin-top: 25px !important;
+}
+
+.mr25 {
+    margin-right: 25px !important;
+}
+
+.mb25 {
+    margin-bottom: 25px !important;
+}
+
+.ml25 {
+    margin-left: 25px !important;
+}
+
+.mt30 {
+    margin-top: 30px !important;
+}
+
+.mr30 {
+    margin-right: 30px !important;
+}
+
+.mb30 {
+    margin-bottom: 30px !important;
+}
+
+.ml30 {
+    margin-left: 30px !important;
+}
+
+.mt35 {
+    margin-top: 35px !important;
+}
+
+.mr35 {
+    margin-right: 35px !important;
+}
+
+.mb35 {
+    margin-bottom: 35px !important;
+}
+
+.ml35 {
+    margin-left: 35px !important;
+}
+
+.mt40 {
+    margin-top: 40px !important;
+}
+
+.mr40 {
+    margin-right: 40px !important;
+}
+
+.mb40 {
+    margin-bottom: 40px !important;
+}
+
+.ml40 {
+    margin-left: 40px !important;
+}
+
+.mt45 {
+    margin-top: 45px !important;
+}
+
+.mr45 {
+    margin-right: 45px !important;
+}
+
+.mb45 {
+    margin-bottom: 45px !important;
+}
+
+.ml45 {
+    margin-left: 45px !important;
+}
+
+.mt50 {
+    margin-top: 50px !important;
+}
+
+.mr50 {
+    margin-right: 50px !important;
+}
+
+.mb50 {
+    margin-bottom: 50px !important;
+}
+
+.ml50 {
+    margin-left: 50px !important;
+}
+
+.mt60 {
+    margin-top: 60px !important;
+}
+
+.mr60 {
+    margin-right: 60px !important;
+}
+
+.mb60 {
+    margin-bottom: 60px !important;
+}
+
+.ml60 {
+    margin-left: 60px !important;
+}
+
+.mt100 {
+    margin-top: 100px !important;
+}
+
+.mr100 {
+    margin-right: 100px !important;
+}
+
+.mb100 {
+    margin-bottom: 100px !important;
+}
+
+.ml100 {
+    margin-left: 100px !important;
+}
+
+.mt150 {
+    margin-top: 150px !important;
+}
+
+.mr150 {
+    margin-right: 150px !important;
+}
+
+.mb150 {
+    margin-bottom: 150px !important;
+}
+
+.ml150 {
+    margin-left: 150px !important;
 }
