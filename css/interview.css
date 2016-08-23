@@ -376,7 +376,7 @@ aside.point {
 
 /*　リスト　*/
 #interview .cont .sentBox ul {
-    margin-left: 12px;
+	margin: 10px 10px 10px 20px;
 }
 
 #interview .cont .sentBox li {
