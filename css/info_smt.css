@@ -55,3 +55,72 @@
 #info .cont .sentBox table.info tbody th {
     width:30%;
 }
+
+
+/* --------------------------------------------------------
+    卒業校一覧
+-------------------------------------------------------- */ 
+/*　学校別　ナビゲーション*/
+#sch {
+    display: table;
+    width: 100%;
+    margin: 20px 0;
+}
+    #sch ul{
+        background-color: #6093ca;
+        height: 40px;
+        padding-top: 10px;            
+    }
+         #sch li{
+            font-size: 12px;
+            /*
+            color: #FFF;
+            cursor: pointer;
+            display: table-cell;
+            font-family: "Noto Sans Japanese";
+            vertical-align: middle;
+            text-align: center;
+            width: 4%;
+            */
+    }
+            #sch li a {
+                color: #FFF;
+                border-bottom: 1px solid #FFF;
+                padding-bottom: 1px;
+            }
+
+            #sch li a:hover {
+                text-decoration: none;
+                border-bottom: 0;
+                padding-bottom: 1px;
+            }
+
+/*　見出し　H4　*/
+#info .cont .sentBox #univ h4,
+#info .cont .sentBox #voca h4,
+#info .cont .sentBox #jc h4 {
+    font-size: 15px;
+}
+    #info .cont .sentBox #univ h4 span,
+    #info .cont .sentBox #voca h4 span,
+    #info .cont .sentBox #jc h4 span {
+        font-size: 13px;
+    }
+/* リスト */
+#info .cont .sentBox #univ ul,
+#info .cont .sentBox #voca ul,
+#info .cont .sentBox #jc ul {
+    margin: 10px 10px 0;
+    width: 100%
+}
+
+#info .cont .sentBox #univ li,
+#info .cont .sentBox #voca li,
+#info .cont .sentBox #jc li {
+    padding: 0;
+    margin: ;
+    list-style-type:none;
+    font-size: 14px;
+    float: left;
+    width: 95%;
+}

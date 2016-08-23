@@ -206,3 +206,13 @@ aside.point {
 		height: 40px;
 		padding-top: 5px;
 	}
+
+/* リスト */
+#interview .cont .sentBox ul{
+    margin-left: 15px;
+}
+
+#interview .cont .sentBox li {
+    padding-left: 0;
+    list-style-type: disc;
+}

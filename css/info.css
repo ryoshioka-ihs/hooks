@@ -126,6 +126,7 @@
             cursor: pointer;
             display: table-cell;
             font-family: "Noto Sans Japanese";
+            font-weight: bold;
             vertical-align: middle;
             text-align: center;
             width: 4%;
@@ -143,9 +144,9 @@
             }
 
 /*　見出し　H4　*/
-#info .cont .sentBox .univ h4,
-#info .cont .sentBox .voca h4,
-#info .cont .sentBox .jc h4 {
+#info .cont .sentBox #univ h4,
+#info .cont .sentBox #voca h4,
+#info .cont .sentBox #jc h4 {
     color: #6093ca;
     font-size: 18px;
     font-weight: bold;
@@ -154,14 +155,40 @@
     border-bottom: 3px solid #6093ca;
 }
 
-    #info .cont .sentBox .univ h4 span,
-    #info .cont .sentBox .voca h4 span,
-    #info .cont .sentBox .jc h4 span {
+    #info .cont .sentBox #univ h4 span,
+    #info .cont .sentBox #voca h4 span,
+    #info .cont .sentBox #jc h4 span {
         font-size: 14px;
     }
-
-        #info .cont .sentBox .univ ul,
-        #info .cont .sentBox .voca ul,
-        #info .cont .sentBox .jc ul {
-            margin: 10px 35px 30px;
+        #info .cont .sentBox #univ,
+        #info .cont .sentBox #jc,
+        #info .cont .sentBox #voca {
+            font-size: 14px;            
         }
+        #info .cont .sentBox #univ,
+        #info .cont .sentBox #jc {
+            margin-bottom:35px;
+        }
+
+/* リスト */
+#info .cont .sentBox #univ ul,
+#info .cont .sentBox #jc ul,
+#info .cont .sentBox #voca ul {
+    margin: 10px 15px 0px 30px;
+    width: 100%
+}
+
+    #info .cont .sentBox #univ li,
+    #info .cont .sentBox #voca li{
+        padding-right: 20px;
+        margin: 0;
+        list-style-type:none;
+        float: left;
+}
+#info .cont .sentBox #univ li {
+        width: 260px;
+    }
+
+#info .cont .sentBox #voca li {
+        width: 390px;
+    }
