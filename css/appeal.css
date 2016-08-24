@@ -19,6 +19,58 @@
 }
 
 /*//////////////////////////////////////////////////
+    福利厚生・社内行事
+///////////////////////////////////////////////////*/
+
+#appeal .cont .sentBox .textArea02 {
+    padding: 14px 4% 0 0;
+    width: 100%;
+}
+
+#appeal .cont .sentBox .welfare {
+	margin-bottom: 40px;
+}
+#appeal .cont .sentBox .welfare:after {
+    visibility: hidden;
+    display: block;
+    content: " ";
+    clear: both;
+    height: 0;
+    }
+#appeal .cont .sentBox .welfare dl,
+#appeal .cont .sentBox .welfare .textArea02 {	
+	border-bottom :1px solid #e4dfcf;
+	float: left;
+	margin-top: 20px;
+	padding-bottom: 40px;
+	width: 100%;	
+}
+#appeal .cont .sentBox .welfare .textArea02 {	
+	margin-top: 0;
+}
+#appeal .cont .sentBox .welfare dl.last {
+	border-bottom : 0 !important;
+	padding-bottom: 0 !important;
+}
+#appeal .cont .sentBox .welfare dt {
+	font-weight: bold;
+	font-size: 14px;
+	float: left;
+	width: 180px;	
+}
+#appeal .cont .sentBox .welfare .link {
+	margin-top: 20px;
+	padding: 20px 4%;
+	background-color: #f0f0f0;
+}
+#appeal .cont .sentBox .welfare .link h5 {
+	font-weight: bold;
+	font-size: 14px;
+}
+
+
+
+/*//////////////////////////////////////////////////
     女性が活躍できる職場
 ///////////////////////////////////////////////////*/
 
@@ -29,10 +81,45 @@
 	font-weight: bold;
 }
 #appeal .cont .sentBox .textArea ul {
-	margin-left:15px;
+	margin-left:20px;
 }
 #appeal .cont .sentBox .textArea li {
 	padding-left:5px;
 	list-style-type: disc;
+}
+
+/* 産休・育休取得者の声 */
+#appeal .cont .sentBox .voice {	
+	margin-top: 40px;
+}
+#appeal .cont .sentBox .voice dl {
+	background-color: #fafafa;
+	border: #f48494 3px solid;
+	margin-bottom: 20px ;
+	padding: 30px 20px;
+}
+#appeal .cont .sentBox .voice dt {
+	width: 70px;
+	height: 100%;	
+	float: left;
+	margin-right:30px;
+}
+#appeal .cont .sentBox .voice dt img {
+	padding-left: 10px;
+	width: 60px;
+	clear: both;
+}
+#appeal .cont .sentBox .voice dt span {
+	padding-top: 10px;
+	font-size: 12px;
+	font-weight: bold;
+	display: block;
+}
+#appeal .cont .sentBox .voice h5 {
+	font-size: 16px;
+	font-weight: bold;
+	margin-bottom: 10px;
+}
+#appeal .cont .sentBox .voice p {
 }
 

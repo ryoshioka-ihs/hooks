@@ -371,7 +371,7 @@ h3 + figure {
 		color: #80C269;
 	}
 
-	#recruit .sentBox .hline {
+	#info .sentBox .hline {
 		color: #6093CA;
 	}
 
@@ -1089,4 +1089,10 @@ footer #sign .pm {
 
 .ml150 {
     margin-left: 150px !important;
+}
+
+/* 別ウィンドウのリンク */
+a.link_blank {
+	background: url("/image/common/link_blank.png") right top no-repeat !important;
+	padding-right:16px;	
 }
