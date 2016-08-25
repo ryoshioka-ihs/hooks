@@ -42,6 +42,9 @@
 	padding-bottom: 40px;
 	width: 100%;	
 }
+#appeal .cont .sentBox .welfare dl {
+	overflow: hidden;
+}
 #appeal .cont .sentBox .welfare .textArea02 {	
 	margin-top: 0;
 }
@@ -55,6 +58,11 @@
 	float: left;
 	width: 180px;	
 }
+
+#appeal .cont .sentBox .welfare dd {
+	padding-left: 180px;
+}
+
 #appeal .cont .sentBox .welfare .link {
 	margin-top: 20px;
 	padding: 20px 4%;
