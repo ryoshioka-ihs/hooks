@@ -22,11 +22,6 @@
     福利厚生・社内行事
 ///////////////////////////////////////////////////*/
 
-#appeal .cont .sentBox .textArea02 {
-    padding: 14px 4% 0 0;
-    width: 100%;
-}
-
 #appeal .cont .sentBox .welfare {
 	margin-bottom: 40px;
 }
@@ -37,6 +32,8 @@
     clear: both;
     height: 0;
     }
+
+ /* 福利厚生 定義リスト */   
 #appeal .cont .sentBox .welfare dl,
 #appeal .cont .sentBox .welfare .textArea02 {	
 	border-bottom :1px solid #e4dfcf;
@@ -68,7 +65,20 @@
 	font-size: 14px;
 }
 
+/* イベント見出し */
+#appeal .cont .sentBox h4.event {
+	font-weight: bold;
+	font-size: 18px;
+	text-align: center;
+	margin-top: -30px;
+	padding-bottom: 20px;
+	border-bottom: 1px #e4dfcf solid;
+	margin-bottom: 10px;
+}
 
+#appeal .cont .sentBox .textArea h5 {
+	margin-bottom: 10px;
+}
 
 /*//////////////////////////////////////////////////
     女性が活躍できる職場
