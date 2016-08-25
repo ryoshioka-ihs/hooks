@@ -124,3 +124,32 @@
     float: left;
     width: 95%;
 }
+
+
+/* --------------------------------------------------------
+    会社説明会（新卒・中途）
+-------------------------------------------------------- */ 
+/* 卒業生別　表 */
+#info .cont .sentBox .session {
+    margin-bottom:20px;
+
+}
+
+/* 会場のご案内 */
+
+#info .cont .sentBox .guide,
+#info .cont .sentBox .guide02 {
+    padding: 16px;
+    margin-bottom: 16px;
+}
+
+#info .cont .sentBox .guide02 .left {
+    display: block;
+    width: 100%;
+    margin-bottom: 8px;    
+}
+
+#info .cont .sentBox .guide02 p.btn {
+    background-color: #555;   
+    clear: both;
+}

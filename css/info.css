@@ -191,3 +191,103 @@
 #info .cont .sentBox #voca li {
         width: 390px;
     }
+
+
+/* --------------------------------------------------------
+    会社説明会（新卒・中途）
+-------------------------------------------------------- */ 
+/* 卒業生別　表 */
+#info .cont .sentBox .session {
+    margin-bottom: 60px;
+}
+
+#info .cont .sentBox .session h4 {    
+    color: #6093ca;    
+    font-size: 18px;
+    font-weight: bold;    
+    text-align: center;
+}
+
+#info .cont .sentBox .session table {
+    margin-top: 20px;
+    width: 100%;
+}
+
+#info .cont .sentBox .session table thead tr {
+    border-bottom: 3px #6093ca solid; 
+}
+
+#info .cont .sentBox .session table thead tr th {
+    padding: 0 8px 16px 8px;
+    text-align :left;
+    font-weight: bold;
+}
+
+#info .cont .sentBox .session table tbody tr th.date{
+    border-bottom: 1px #e4dfcf solid;
+    padding: 20px 8px;
+    width: 26%;    
+}
+#info .cont .sentBox .session table tbody tr td {
+    padding: 20px 8px;
+    border-bottom: 1px #e4dfcf solid;
+}
+
+#info .cont .sentBox .session table tbody tr td.time,
+#info .cont .sentBox .session table tbody tr td.venue {
+    width: 20%
+}
+
+#info .cont .sentBox .session table tbody tr td.apply {
+    width: 22%
+}
+
+/* 会場のご案内 */
+#info .cont .sentBox .access h4 {
+    border-bottom: 1px #e4dfcf solid;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 20px 10px; 
+    text-align: center;
+    margin-bottom: 30px;  
+}
+#info .cont .sentBox .access .tokyo h5,
+#info .cont .sentBox .access .osaka h5 {
+    font-weight: bold;    
+}
+
+#info .cont .sentBox .access .tokyo,
+#info .cont .sentBox .access .osaka {
+    margin-bottom: 60px;
+}
+
+#info .cont .sentBox .access .ggmap{
+    width: 840px;
+    height: 300px;
+}
+
+
+
+#info .cont .sentBox .guide,
+#info .cont .sentBox .guide02 {
+    background: #f0f0f0;
+    padding: 20px 40px;
+    margin-bottom: 20px;
+    clear: both;
+    overflow: hidden;
+}
+
+#info .cont .sentBox .guide h5,
+#info .cont .sentBox .guide02 h5 {
+    font-weight: bold; 
+}
+
+#info .cont .sentBox .guide02 .left {
+    float: left;
+    width: 480px;
+}
+
+#info .cont .sentBox .guide02 p.btn {
+    background-color: #555;
+    margin-top: 5px;
+}
