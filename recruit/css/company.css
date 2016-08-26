@@ -31,7 +31,7 @@
 -------------------------------------------------------- */
 .preMsg {
 	height: 480px;
-	background: url("../image/company/president.png") left top no-repeat;
+	background: url("/recruit/image/company/president.png") left top no-repeat;
 	position: relative;
 	font-weight: 700;
 	font-family: 'Noto Sans Japanese';
@@ -80,7 +80,7 @@
 -------------------------------------------------------- */
 article h3.adopt {
 	height: 60px;
-	background: url("../image/company/adopt_bg.png") left center no-repeat;
+	background: url("/recruit/image/company/adopt_bg.png") left center no-repeat;
 	color: #FFF;
 	font-size: 13px;
 	margin: -20px -3% 35px;
@@ -183,6 +183,7 @@ article h3.adopt:before {
 #company .cont .sentBox table.profile th {
     background-color: #F9FAFC;
     text-align: center;
+    width: 7em;
 }
 
 #company .cont .sentBox table.profile tbody td ul {
