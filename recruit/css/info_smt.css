@@ -153,3 +153,6 @@
     background-color: #555;   
     clear: both;
 }
+
+#info .cont .sentBox .access .ggmap{
+    width: 100%;
