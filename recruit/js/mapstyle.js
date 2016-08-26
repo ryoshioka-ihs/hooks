@@ -18,7 +18,6 @@ function initialize() {
     title: 'IIMヒューマン・ソリューション株式会社 東京本社'
   };
   var marker = new google.maps.Marker(markerOptions);
-
   var latlng = new google.maps.LatLng(34.710835,135.499917);
   var myOptions = {
     zoom: 18, /*拡大比率*/
