@@ -25,6 +25,11 @@
 	width: 100%;
 	display: block;
 }
+
+#appeal .cont .sentBox .welfare dd {
+    padding-left: 0px;
+}
+
 #appeal .cont .sentBox .welfare .link {
 	margin-top: 5px;
 	padding: 20px 4%;
@@ -88,12 +93,14 @@
 	font-weight: bold;
 
 }
-
 #appeal .cont .sentBox .voice dd {
 	clear: left;
+	padding-left: 0px;
 } 
 #appeal .cont .sentBox .voice h5 {
 	font-size: 16px;
 	font-weight: bold;
 	margin-bottom: 8px;
 }
+
+

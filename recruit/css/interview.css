@@ -81,7 +81,7 @@ p.name {
 	padding-top: 20px;
 }
 	.back a {
-		background: url("../image/interview/arrow_prev.png") left 55% no-repeat;
+		background: url("/recruit/image/interview/arrow_prev.png") left 55% no-repeat;
 		background-size: 20px auto;
 		padding-left: 40px;
 		font-size: 15px;
@@ -146,7 +146,7 @@ p.name {
 		background-color: #FFF;
 	}
 		.bfaf > div > p {
-			background: url("../image/interview/bfaf_ttl_bg.png") center center no-repeat;
+			background: url("/recruit/image/interview/bfaf_ttl_bg.png") center center no-repeat;
 			background-size: 101px auto;
 			text-align: center;
 			font-family: 'Noto Sans Japanese';
@@ -182,7 +182,7 @@ p.name {
 		display: block;
 		width: 50px;
 		height: 74px;
-		background: url("../image/interview/arrow_pc.png") no-repeat;
+		background: url("/recruit/image/interview/arrow_pc.png") no-repeat;
 		position: absolute;
 		top: 51px;
 		right: -22%;
@@ -205,7 +205,7 @@ p.name {
 /*  1日の流れ
 -------------------------------------------------- */
 div.time {
-	background: url("../image/interview/time_bg_h.png") 57px top repeat-y;
+	background: url("/recruit/image/interview/time_bg_h.png") 57px top repeat-y;
 	background-size: 3px auto;
 	padding-bottom: 10px;
 }

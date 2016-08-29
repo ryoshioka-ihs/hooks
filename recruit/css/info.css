@@ -97,7 +97,7 @@
     margin-top: 8px;    
 }
 #info .cont .sentBox .info .btn a {
-    background: url("../image/common/btn_arrow.png") right center no-repeat #555;
+    background: url("/recruit/image/common/btn_arrow.png") right center no-repeat #555;
     background-size: 16px auto;
     transition: 0.3s;
 }
