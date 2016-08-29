@@ -80,7 +80,7 @@
 }
 
 #info .cont .sentBox table.info tbody td li {
-    padding-left: 5px;
+    padding-left: 0px;
     list-style-type: disc;
 }
 
@@ -179,18 +179,28 @@
 }
 
     #info .cont .sentBox #univ li,
+    #info .cont .sentBox #jc li,
     #info .cont .sentBox #voca li{
         padding-right: 20px;
-        margin: 0;
-        list-style-type:none;
+        list-style-type: disc;
         float: left;
+    }
+
+    #info .cont .sentBox #univ li,
+    #info .cont .sentBox #voca li{
+        margin: 0;
 }
-#info .cont .sentBox #univ li {
+    #info .cont .sentBox #univ li {
         width: 260px;
     }
 
-#info .cont .sentBox #voca li {
+    #info .cont .sentBox #voca li {
         width: 390px;
+    }
+
+    #info .cont .sentBox #jc li {
+    width: 260px;
+    clear: both;
     }
 
 

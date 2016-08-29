@@ -43,6 +43,10 @@
         }
 
 /* テーブル */
+#info .cont .sentBox table.info {
+    width: 100%;
+}
+
 #info .cont .sentBox table.info tbody td ul {
     margin-left: 15px;
 }
@@ -54,6 +58,11 @@
 
 #info .cont .sentBox table.info tbody th {
     width:30%;
+}
+
+#info .cont .sentBox .info tbody td p.btn {
+    width: 100%;
+    font-size: 14px;
 }
 
 
@@ -119,9 +128,10 @@
 #info .cont .sentBox #jc li {
     padding: 0;
     margin: ;
-    list-style-type:none;
+    list-style-type: disc;
     font-size: 14px;
     float: left;
+    margin-left: 15px;
     width: 95%;
 }
 
@@ -132,11 +142,43 @@
 /* 卒業生別　表 */
 #info .cont .sentBox .session {
     margin-bottom:20px;
-
 }
 
-/* 会場のご案内 */
+/* スケジュール */
+#info .cont .sentBox .session thead th {
+    display: none;
+}
 
+#info .cont .sentBox .session table tbody tr th.date {
+    border-top: 5px #6093ca solid;
+    border-bottom: 1px #6093ca solid;
+    border-collapse: collapse;
+    display: block;
+    font-weight: bold;
+    padding: 20px 8px;
+    width: 100%;
+}
+
+
+#info .cont .sentBox .session table tbody tr td.time,
+#info .cont .sentBox .session table tbody tr td.venue,
+#info .cont .sentBox .session table tbody tr td.apply {
+    display: block;
+    width: 100%;
+}
+
+#info .cont .sentBox .session table tbody tr td.time::before {
+                content: "時間 ： ";
+            }
+#info .cont .sentBox .session table tbody tr td.venue::before {
+                content: "開催地 ： ";
+            }
+
+#info .cont .sentBox .session table tbody tr td.apply::before {
+                content: "応募締切 ： ";
+            } 
+
+/* 会場のご案内 */
 #info .cont .sentBox .guide,
 #info .cont .sentBox .guide02 {
     padding: 16px;
@@ -156,3 +198,4 @@
 
 #info .cont .sentBox .access .ggmap{
     width: 100%;
+}
