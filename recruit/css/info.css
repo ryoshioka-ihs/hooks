@@ -72,6 +72,7 @@
 #info .cont .sentBox table.info th {
     background-color: #F9FAFC;
     text-align: center;
+    width: 7em;
 }
 
 #info .cont .sentBox table.info tbody td ul {
