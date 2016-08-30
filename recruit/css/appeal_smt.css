@@ -54,7 +54,7 @@
 
 #appeal .cont .sentBox .textArea02 {
 	padding-top: 15px;
-
+}
 /*//////////////////////////////////////////////////
     女性が活躍できる職場
 ///////////////////////////////////////////////////*/
@@ -75,19 +75,25 @@
 	background-color: #fafafa;
 	border: #f48494 3px solid;
 	margin-bottom: 10px ;
-	padding: 15px;
+	padding: 15px 10px 10px;
 }
+
 #appeal .cont .sentBox .voice dt {
-	width: 100%;
-	margin: 0 10px 15px 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    text-align: center;
+    clear: both;
+    margin: 0 0 10px;
 }
+
 #appeal .cont .sentBox .voice dt img {
-	padding-left: 0px;
-	width: 40px;
-	margin-right: 10px;
+	width: 50px;
+	margin: auto 0;
+	padding-left: 0;
 }
 #appeal .cont .sentBox .voice dt span {
-	display: inline-block;
+	display: block;
 	padding-top: 10px;
 	font-size: 12px;
 	font-weight: bold;
@@ -98,7 +104,7 @@
 	padding-left: 0px;
 } 
 #appeal .cont .sentBox .voice h5 {
-	font-size: 16px;
+	font-size: 14px;
 	font-weight: bold;
 	margin-bottom: 8px;
 }
