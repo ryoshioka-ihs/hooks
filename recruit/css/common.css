@@ -115,6 +115,10 @@ a:hover {
 	background-color: #F0BE0F;
 }
 
+#contact .btn {
+	background-color: #333;
+}
+
 /* エントリーボタン */
 .btn.entry {
 	background-color: #FF9B2A;
@@ -251,6 +255,10 @@ article .ttl h2 {
 	color: #F0BE0F;
 }
 
+#contact .ttl h2 {
+	border-color: #333;
+	color: #333;
+}
 /* --------------------------------------------------------
     タイトル(h3)
 -------------------------------------------------------- */
@@ -802,13 +810,23 @@ header {
 		background-color: #F0BE0F;
 	}
 
+	#contact #lNav li a {
+		background-color: #555;
+	}
+
 	/* 募集要項専用*/	
 #info #lNav {
 	margin-bottom: 60px;
 }
 	#info #lNav li {
 		width: 32.4%;
-	}	
+	}
+
+	/* 採用エントリーフォーム専用*/
+
+	#contact #lNav li {
+		width: 49.3%;
+	}
 
 /* --------------------------------------------------
     footer
