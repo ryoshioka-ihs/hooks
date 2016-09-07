@@ -1118,3 +1118,27 @@ a.link_blank {
 	padding-right:16px;	
 }
 
+
+
+/*//////////////////////////////////////////////////
+
+    フォーム読み込み前にローディング画像を表示
+
+///////////////////////////////////////////////////*/
+
+
+.loading {
+	background-image: url("/recruit/image/common/loading.gif");
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	background-size: 40px 40px;
+	display: block;
+	height: 40px;
+	left: 50%;
+	margin-left: -20px;
+	position: absolute;
+	width: 40px;
+	z-index: 100;
+}
+/*//////////////////////////////////////////////////
+

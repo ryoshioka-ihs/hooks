@@ -4,30 +4,38 @@
     採用エントリーフォーム用CSS
 ===================================================*/
 
-/*.sentBox {
-    padding: 30px 10px;
-    margin: 0 -10px 50px;
-}*/
-
-#contact .cont .sentBox {
-	padding: 0;
-    margin: 0;
+#contact .cont .sentBox {	
+   background-color: rgb(249, 249, 249);
+   padding: 0;
+   margin-left: -60px;
+   position: relative;
+   overflow: hidden;
 }
 
+#contact .cont .sentBox .googleForm01_sp,
+#contact .cont .sentBox .googleForm02_sp {
+    display: block;
+    margin: 0 auto;
+    width: 320px;
+}
+
+#contact .cont .sentBox .googleForm01_pc,
+#contact .cont .sentBox .googleForm02_pc {
+    display: none;
+}
+/*
 .googleForm01 {
     position: relative;
     width: 100%;
-    padding-bottom: 650%;
-    height: 0;
-    overflow: hidden;
+    padding-bottom: 600%; 
+
 }
 
 .googleForm02 {
     position: relative;
     width: 100%;
-    padding-bottom: 450%;
-    height: 0;
-    overflow: hidden;
+    padding-bottom: 320%;
+
 }
 
 .googleForm01 iframe,
@@ -38,6 +46,7 @@
     width: 100% !important;
     height: 100% !important;
 }
+*/
 
 
 
