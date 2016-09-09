@@ -176,6 +176,18 @@ article h3.adopt {
     width: 100%;
 }
 
+/* 売上実績 グラフ画像 */
+#company .cont .sentBox .imgArea02 {
+    width: 100%;
+    display: block;
+}
+
+#company .cont .sentBox .imgArea02 img {
+    height: auto;
+    max-width: 300px;
+    width: 100%;
+}
+
 
 
 

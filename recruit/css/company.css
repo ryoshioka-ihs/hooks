@@ -239,3 +239,17 @@ article h3.adopt:before {
     height: 100%;
 }
 
+/* 売上実績 グラフ画像 */
+#company .cont .sentBox .imgArea02 {
+    padding-top: 20px;
+    text-align: center;
+    width: 100%;
+}
+#company .cont .sentBox .imgArea02 img {
+    height: auto;
+    max-width: 500px;
+    width: 100%;
+}
+
+
+
