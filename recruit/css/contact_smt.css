@@ -4,38 +4,24 @@
     採用エントリーフォーム用CSS
 ===================================================*/
 
-#contact .cont .sentBox {	
+#contact .cont .sentBox { 
    background-color: rgb(249, 249, 249);
    padding: 0;
-   margin-left: -60px;
    position: relative;
    overflow: hidden;
+   min-width: 320px;
 }
 
-#contact .cont .sentBox .googleForm01_sp,
-#contact .cont .sentBox .googleForm02_sp {
-    display: block;
-    margin: 0 auto;
-    width: 320px;
-}
-
-#contact .cont .sentBox .googleForm01_pc,
-#contact .cont .sentBox .googleForm02_pc {
-    display: none;
-}
-/*
 .googleForm01 {
     position: relative;
     width: 100%;
-    padding-bottom: 600%; 
-
+    padding-bottom: 345%;
 }
 
 .googleForm02 {
     position: relative;
     width: 100%;
-    padding-bottom: 320%;
-
+    padding-bottom: 173%;
 }
 
 .googleForm01 iframe,
@@ -46,7 +32,76 @@
     width: 100% !important;
     height: 100% !important;
 }
-*/
 
 
+@media screen and (max-width: 480px) {
+   .googleForm01 {
+    position: relative;
+    width: 100%;
+    padding-bottom: 710%;
+}
 
+.googleForm02 {
+    position: relative;
+    width: 100%;
+    padding-bottom: 380%;
+}
+
+.googleForm01 iframe,
+.googleForm02 iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height: 100% !important;
+  }
+}
+
+
+@media screen and (max-width: 320px) {
+   .googleForm01 {
+    position: relative;
+    width: 100%;
+    padding-bottom: 730%;
+    margin-left: -30px;
+}
+
+.googleForm02 {
+    position: relative;
+    width: 100%;
+    padding-bottom: 400%;
+}
+
+.googleForm01 iframe,
+.googleForm02 iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height: 100% !important;
+  }
+}
+
+@media only screen and (orientation:landscape) {
+  /* ランドスケープ用 */
+  .googleForm01 {
+    position: relative;
+    width: 100%;
+    padding-bottom: 480%;
+}
+
+.googleForm02 {
+    position: relative;
+    width: 100%;
+    padding-bottom: 280%;
+}
+
+.googleForm01 iframe,
+.googleForm02 iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height: 100% !important;
+  }
+}

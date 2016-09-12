@@ -6,13 +6,9 @@
 
 #contact .cont .sentBox {	
     background-color: rgb(249, 249, 249);
-    padding: 60px 10% 10px;
-    position: relative;
+    padding: 60px 10% 10px;    
+    position: relative;    
     overflow: hidden;
 }
 
-#contact .cont .sentBox .googleForm01_sp,
-#contact .cont .sentBox .googleForm02_sp {
-	display: none;
-}
 
