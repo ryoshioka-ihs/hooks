@@ -292,8 +292,7 @@
 
 
 
-#info .cont .sentBox .guide,
-#info .cont .sentBox .guide02 {
+#info .cont .sentBox .guide {
     background: #f0f0f0;
     padding: 20px 40px;
     margin-bottom: 20px;
@@ -301,17 +300,11 @@
     overflow: hidden;
 }
 
-#info .cont .sentBox .guide h5,
-#info .cont .sentBox .guide02 h5 {
+#info .cont .sentBox .guide h5 {
     font-weight: bold; 
 }
 
-#info .cont .sentBox .guide02 .left {
-    float: left;
-    width: 480px;
-}
-
-#info .cont .sentBox .guide02 p.btn {
+#info .cont .sentBox .guide p.btn {
     background-color: #555;
     margin-top: 5px;
 }

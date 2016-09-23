@@ -14,8 +14,9 @@
 	}
 	.senior li {
 		width: 140px;
-		height: 230px;
-		margin: 0 0 20px 10px;
+		width: calc(50% - 10px);
+		height: auto;
+		margin: 0 0 10px 10px;
 	}
 		.senior li a {
 			transition: none;
