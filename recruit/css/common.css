@@ -715,10 +715,8 @@ header {
 /*  プライバシーポリシーなど
 -------------------------------------------------- */
 #policyList {
-	position: fixed;
-	bottom: 50px;
 	text-align: left;
-	margin: 15px 0 0 50px;
+	margin: 50px 0 0 50px;
 }
 	#policyList li {
 		font-weight: 500;
