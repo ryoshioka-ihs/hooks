@@ -52,10 +52,21 @@
         }
 
         #index li span {
-            color: #F00;
             display: block;
             font-size: 14px;
         }
+		#index .disable {
+			border: solid 3px #ccc;
+		}
+		#index .disable a {
+			color: #ccc !important;
+			cursor: default;
+		}
+		#index .disable a:hover {
+			color: #ccc !important;
+			opacity: 1;
+			transition: none;
+		}
 
 /*　テーブル　*/
 #info .cont .sentBox table.info {
