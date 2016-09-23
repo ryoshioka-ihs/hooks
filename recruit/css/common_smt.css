@@ -403,3 +403,12 @@ footer #pageTop {
 footer #pageTop:hover {
 	opacity: 1;
 }
+
+
+/* --------------------------------------------------
+    スマホで非表示
+-------------------------------------------------- */
+.hiddenSmt {
+	display: none !important;
+}
+
