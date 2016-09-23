@@ -12,6 +12,8 @@ $(document).ready(function(){
 	//スマホ版グローバルナビゲーション
 	setGnavi();
 
+	//ローディング画像
+	scrollTopAfterSendMail()
 });
 
 
@@ -132,3 +134,19 @@ function setGnavi() {
 	$(window).resize(function(){resetPos();});
 	resetPos();
 }
+
+
+
+//======================================================================================================
+// scrollTopAfterSendMail()
+// 機能  ：フォーム読み込み前にローディング画像を表示
+// 引数  ：
+// 戻り値：
+//======================================================================================================
+function scrollTopAfterSendMail() {
+	$("#js-googleForm").load(function(){
+		$('html,body').animate({ scrollTop: 0 }, 'fast');
+		$('.loading').fadeOut();
+	});
+}
+

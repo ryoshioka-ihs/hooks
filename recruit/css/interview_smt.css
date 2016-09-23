@@ -98,7 +98,7 @@
 	.bfaf .bef:before {
 		width: 37px;
 		height: 25px;
-		background-image: url("../image/interview/arrow_smt.png");
+		background-image: url("/recruit/image/interview/arrow_smt.png");
 		background-size: contain;
 		top: auto;
 		bottom: -38px;

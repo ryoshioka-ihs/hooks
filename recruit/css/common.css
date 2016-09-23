@@ -76,7 +76,7 @@ a:hover {
     height: 50px;
 	line-height: 50px;
 	text-align: center;
-	background: url("../image/common/btn_arrow.png") right center no-repeat;
+	background: url("/recruit/image/common/btn_arrow.png") right center no-repeat;
 	background-size: 16px auto;
 	border-radius: 4px;
 	color: #FFF;
@@ -115,6 +115,10 @@ a:hover {
 	background-color: #F0BE0F;
 }
 
+#contact .btn {
+	background-color: #333;
+}
+
 /* エントリーボタン */
 .btn.entry {
 	background-color: #FF9B2A;
@@ -147,7 +151,7 @@ a:hover {
     左黒三角リンク
 -------------------------------------------------------- */
 .linkBk {
-	background: url("../image/common/link_arrow.png") left 7px no-repeat;
+	background: url("/recruit/image/common/link_arrow.png") left 7px no-repeat;
 	background-size: 5px auto;
 	padding-left: 10px;
 	line-height: 1.5;
@@ -186,19 +190,19 @@ article .ttl {
 /* 背景画像設定
    kv1→会社紹介、kv2→IHSの魅力、kv3→先輩インタビュー、kv4→募集要項、kv5→よくある質問にて使用 */
 article #kv1.ttl {
-	background-image: url("../image/common/kv1.png");
+	background-image: url("/recruit/image/common/kv1.png");
 }
 article #kv2.ttl {
-	background-image: url("../image/common/kv2.png");
+	background-image: url("/recruit/image/common/kv2.png");
 }
 article #kv3.ttl {
-	background-image: url("../image/common/kv3.png");
+	background-image: url("/recruit/image/common/kv3.png");
 }
 article #kv4.ttl {
-	background-image: url("../image/common/kv4.png");
+	background-image: url("/recruit/image/common/kv4.png");
 }
 article #kv5.ttl {
-	background-image: url("../image/common/kv5.png");
+	background-image: url("/recruit/image/common/kv5.png");
 }
 
 /* タイトル */
@@ -251,6 +255,10 @@ article .ttl h2 {
 	color: #F0BE0F;
 }
 
+#contact .ttl h2 {
+	border-color: #333;
+	color: #333;
+}
 /* --------------------------------------------------------
     タイトル(h3)
 -------------------------------------------------------- */
@@ -471,7 +479,7 @@ h3 + figure {
 			font-family: 'Montserrat';
 			font-weight: 700;
 			font-size: 36px;
-			background: url("../image/common/icon_freeCall.png") left center no-repeat;
+			background: url("/recruit/image/common/icon_freeCall.png") left center no-repeat;
 			background-size: 28px auto;
 			padding-left: 38px;
 			letter-spacing: 3.5px;
@@ -773,7 +781,7 @@ header {
 		}
 
 		#lNav li a {
-			background: url("../image/common/btn_arrow.png") right center no-repeat;
+			background: url("/recruit/image/common/btn_arrow.png") right center no-repeat;
 			background-size: 16px auto;
 			transition: 0.3s;
 		}
@@ -802,13 +810,23 @@ header {
 		background-color: #F0BE0F;
 	}
 
+	#contact #lNav li a {
+		background-color: #555;
+	}
+
 	/* 募集要項専用*/	
 #info #lNav {
 	margin-bottom: 60px;
 }
 	#info #lNav li {
 		width: 32.4%;
-	}	
+	}
+
+	/* 採用エントリーフォーム専用*/
+
+	#contact #lNav li {
+		width: 49.3%;
+	}
 
 /* --------------------------------------------------
     footer
@@ -1091,8 +1109,36 @@ footer #sign .pm {
     margin-left: 150px !important;
 }
 
+
+/*  リンク
+-------------------------------------------------- */
 /* 別ウィンドウのリンク */
 a.link_blank {
-	background: url("/image/common/link_blank.png") right top no-repeat !important;
+	background: url("/recruit/image/common/link_blank.png") right top no-repeat !important;
 	padding-right:16px;	
 }
+
+
+
+/*//////////////////////////////////////////////////
+
+    フォーム読み込み前にローディング画像を表示
+
+///////////////////////////////////////////////////*/
+
+
+.loading {
+	background-image: url("/recruit/image/common/loading.gif");
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	background-size: 40px 40px;
+	display: block;
+	height: 40px;
+	left: 50%;
+	margin-left: -20px;
+	position: absolute;
+	width: 40px;
+	z-index: 100;
+}
+/*//////////////////////////////////////////////////
+

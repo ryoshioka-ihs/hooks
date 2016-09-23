@@ -23,6 +23,7 @@
         height: 60px;
         margin: 0 0 10px 0;
         float: left;
+        font-weight: bold;
         font-size: 14px;
     }
     #index li:nth-of-type(even),
@@ -39,10 +40,20 @@
         #index li span {
             color: #F00;
             display: block;
-            font-size: 10px;
+            font-size: 8px;
         }
 
+#info .cont #new,
+#info .cont #mid {
+    margin-top:-20px;
+    padding-top:20px;
+}
+
 /* テーブル */
+#info .cont .sentBox table.info {
+    width: 100%;
+}
+
 #info .cont .sentBox table.info tbody td ul {
     margin-left: 15px;
 }
@@ -54,6 +65,11 @@
 
 #info .cont .sentBox table.info tbody th {
     width:30%;
+}
+
+#info .cont .sentBox .info tbody td p.btn {
+    width: 100%;
+    font-size: 14px;
 }
 
 
@@ -73,15 +89,7 @@
     }
          #sch li{
             font-size: 12px;
-            /*
-            color: #FFF;
-            cursor: pointer;
-            display: table-cell;
-            font-family: "Noto Sans Japanese";
-            vertical-align: middle;
-            text-align: center;
-            width: 4%;
-            */
+
     }
             #sch li a {
                 color: #FFF;
@@ -96,10 +104,19 @@
             }
 
 /*　見出し　H4　*/
+
+#info .cont .sentBox #univ,
+#info .cont .sentBox #voca,
+#info .cont .sentBox #jc{
+	margin-top:-40px;
+    padding-top:40px;
+}
+
 #info .cont .sentBox #univ h4,
 #info .cont .sentBox #voca h4,
 #info .cont .sentBox #jc h4 {
     font-size: 15px;
+
 }
     #info .cont .sentBox #univ h4 span,
     #info .cont .sentBox #voca h4 span,
@@ -119,9 +136,10 @@
 #info .cont .sentBox #jc li {
     padding: 0;
     margin: ;
-    list-style-type:none;
+    list-style-type: disc;
     font-size: 14px;
     float: left;
+    margin-left: 15px;
     width: 95%;
 }
 
@@ -132,10 +150,56 @@
 /* 卒業生別　表 */
 #info .cont .sentBox .session {
     margin-bottom:20px;
-
 }
 
+#info .cont .sentBox .session h4 {
+    font-size: 16px;
+}
+
+/* スケジュール */
+#info .cont .sentBox .session thead th {
+    display: none;
+}
+
+#info .cont .sentBox .session table tbody tr th.date {
+    /*border-top: 5px #6093ca solid;*/
+    border-bottom: 5px #6093ca solid;
+    border-collapse: collapse;
+    display: block;
+    font-weight: bold;
+    padding: 10px 0;
+    margin-top: 10px;
+    width: 100%;
+}
+
+#info .cont .sentBox .session table tbody tr td {
+    padding: 10px 0;
+}
+
+#info .cont .sentBox .session table tbody tr td.time,
+#info .cont .sentBox .session table tbody tr td.venue,
+#info .cont .sentBox .session table tbody tr td.apply {
+    display: block;
+    width: 100%;
+    font-size: 14px;
+}
+
+#info .cont .sentBox .session table tbody tr td.time::before {
+                content: "時間 ： ";
+            }
+#info .cont .sentBox .session table tbody tr td.venue::before {
+                content: "開催地 ： ";
+            }
+
+#info .cont .sentBox .session table tbody tr td.apply::before {
+                content: "応募締切 ： ";
+            } 
+
 /* 会場のご案内 */
+#info .cont .sentBox .access .tokyo,
+#info .cont .sentBox .access .osaka {
+    margin-bottom: 30px;
+}
 
 #info .cont .sentBox .guide,
 #info .cont .sentBox .guide02 {
@@ -152,7 +216,10 @@
 #info .cont .sentBox .guide02 p.btn {
     background-color: #555;   
     clear: both;
+    width: 100%;
 }
 
 #info .cont .sentBox .access .ggmap{
     width: 100%;
+    margin-top: 20px;
+}

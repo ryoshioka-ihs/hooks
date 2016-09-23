@@ -102,6 +102,21 @@ article h3.adopt {
 
 #company .cont .sentBox table.departments tbody th,
 #company .cont .sentBox table.departments tbody td {
+    border: 0;
+    padding: 5px 0px;
+}
+
+#company .cont .sentBox table.departments tbody th.dash,
+#company .cont .sentBox table.departments tbody td.dash {
+	border:0;
+	padding: 5px 0px;
+}
+
+#company .cont .sentBox table.departments tbody th {
+	font-weight: bold;
+}
+
+#company .cont .sentBox table.departments tbody td {
     border: none;
     display: block;
     padding: 5px;
@@ -158,6 +173,18 @@ article h3.adopt {
 }
 
 #company .cont .sentBox .ggmap {
+    width: 100%;
+}
+
+/* 売上実績 グラフ画像 */
+#company .cont .sentBox .imgArea02 {
+    width: 100%;
+    display: block;
+}
+
+#company .cont .sentBox .imgArea02 img {
+    height: auto;
+    max-width: 400px;
     width: 100%;
 }
 
