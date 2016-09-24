@@ -1,6 +1,9 @@
 title: "IHS新卒・中途採用サイト"
-baseurl: ""
+baseurl: "/recruit"
 url: "http://www.iimhs.co.jp"
+
+source: "src"
+destination: "dest"
 
 exclude:
   - Gemfile
