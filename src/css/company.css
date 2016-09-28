@@ -1,0 +1,237 @@
+@charset "UTF-8";
+/* CSS Document */
+/*===================================================
+    会社紹介用CSS
+===================================================*/
+/*//////////////////////////////////////////////////
+    メッセージ・求める人材
+///////////////////////////////////////////////////*/
+/* --------------------------------------------------------
+    社長、採用担当者メッセージ共通使用
+-------------------------------------------------------- */
+.sentBox.msg {
+	margin-bottom: 100px;
+}
+	.sentBox.msg p {
+		margin-top: 25px;
+	}
+	.sentBox.msg p:nth-of-type(1) {
+		margin-top: 0;
+	}
+
+.roma {
+	font-family: 'Montserrat';
+	font-size: 13px;
+	color: #E36D45;
+	letter-spacing: 2px;
+}
+
+/* --------------------------------------------------------
+    社長メッセージ
+-------------------------------------------------------- */
+.preMsg {
+	height: 480px;
+	background: url("/recruit/image/company/president.png") left top no-repeat;
+	position: relative;
+	font-weight: 700;
+	font-family: 'Noto Sans Japanese';
+}
+	.preMsg h4 {
+		width: 480px;
+		position: absolute;
+		top: 160px;
+		right: 4%;
+		letter-spacing: 5px;
+	}
+		.preMsg h4 span {
+			display: block;
+			text-align: center;
+			background-color: #FFF;
+			line-height: 50px;
+			font-size: 26px;
+			margin-bottom: 20px;
+		}
+
+	.preMsg p {
+		position: absolute;
+		bottom: 130px;
+		right: 6%;
+		letter-spacing: 2px;
+	}
+		.preMsg p span {
+			display: inline-block;
+		}
+		.preMsg p span.name {
+			font-size: 24px;
+			vertical-align: -3px;
+			margin: 0 15px 0 20px;
+			letter-spacing: 5px;
+		}
+		.preMsg p span.roma {
+			vertical-align: 2px;
+		}
+
+.preMsg + .sentBox {
+	line-height: 2;
+}
+
+/* --------------------------------------------------------
+    採用担当者からのメッセージ
+-------------------------------------------------------- */
+article h3.adopt {
+	height: 60px;
+	background: url("/recruit/image/company/adopt_bg.png") left center no-repeat;
+	color: #FFF;
+	font-size: 13px;
+	margin: -20px -3% 35px;
+	padding-top: 2px;
+	line-height: 1.5;
+}
+
+article h3.adopt:before {
+	display: none;
+}
+
+.sentBox.msg .imgArea figcaption {
+	font-weight: 700;
+	font-family: 'Noto Sans Japanese';
+	letter-spacing: 2px;
+	line-height: 1.5;
+}
+	.sentBox.msg .imgArea figcaption > span {
+		font-size: 18px;
+		margin: 15px 0 0 20px;
+		display: inline-block;
+		vertical-align: -20px;
+		text-align: left;
+		letter-spacing: 4px;
+	}
+	.sentBox.msg .imgArea figcaption .roma {
+		display: block;
+	}
+
+/* --------------------------------------------------------
+    部門紹介
+-------------------------------------------------------- */	
+
+#company .cont figure.deptimg {
+    max-width: 960px;
+    margin-bottom: 60px;
+}
+
+
+/*　テーブル　*/
+
+#company .cont .sentBox table.departments {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#company .cont .sentBox table.departments th {
+    text-align: left;
+}
+
+#company .cont .sentBox table.departments thead th {
+    border-bottom: 4px solid #e36d45;
+    padding: 0px 15px 15px;
+    font-weight: bold;
+    font-size: 1.125em;
+}
+
+#company .cont .sentBox table.departments tbody th,
+#company .cont .sentBox table.departments tbody td {
+    border-bottom: 1px solid #f4f4f4;
+    padding: 15px;
+}
+
+#company .cont .sentBox table.departments tbody th.dash,
+#company .cont .sentBox table.departments tbody td.dash {
+    border-bottom: 1px dashed #f4f4f4;
+    padding: 15px 15px 10px;
+}
+
+#company .cont .sentBox table.departments tbody td.dept {
+    width: 35%;
+}
+
+#company .cont .sentBox table.departments tbody td ul {
+    margin-left: 12px;
+}
+
+#company .cont .sentBox table.departments tbody td li {
+    padding-left: 0;
+    list-style-type: disc;
+}
+
+
+/* --------------------------------------------------------
+    会社概要
+-------------------------------------------------------- */	
+
+/*　テーブル　*/
+#company .cont .sentBox table.profile {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#company .cont .sentBox table.profile th,
+#company .cont .sentBox table.profile td {
+    padding: 10px;
+    border: 1px solid #E6E9EE;
+}
+
+#company .cont .sentBox table.profile th {
+    background-color: #F9FAFC;
+    text-align: center;
+    width: 7em;
+}
+
+#company .cont .sentBox table.profile tbody td ul {
+    margin-left: 15px;
+}
+
+#company .cont .sentBox table.profile tbody td li {
+    padding-left: 0;
+    list-style-type: disc;
+}
+
+
+/*　レイアウト　*/
+#company .cont .margb60 {
+    margin-bottom: 60px;
+}
+
+#company .cont .sentBox .margb30 {
+    margin-bottom: 30px;
+}
+
+#company .cont .sentBox .textArea {
+    padding: 14px 4% 0 0;
+    width: 48%;
+    word-break: normal;
+}
+
+#company .cont .sentBox .textArea h4.hline {
+    margin-bottom: 10px;
+}
+
+#company .cont .sentBox .textArea p.margb10 {
+    margin-bottom: 10px;
+}
+
+#company .cont .sentBox .ggmap {
+    overflow: hidden;
+}
+
+/* 売上実績 グラフ画像 */
+#company .cont .sentBox .imgArea02 {
+    padding-top: 20px;
+    text-align: center;
+    width: 100%;
+}
+#company .cont .sentBox .imgArea02 img {
+    height: auto;
+    width: 70%;
+}
+
+
