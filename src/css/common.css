@@ -65,6 +65,16 @@ a:hover {
 	text-decoration: none;
 }
 
+/* スマホ用電話発信リンク */
+a[href^="tel:"] {
+	color: #333 !important;
+	text-decoration: none !important;
+	cursor: default !important;
+}
+a[href^="tel:"]:hover {
+	text-decoration: none !important;
+}
+
 /*//////////////////////////////////////////////////
     全ページ共通パーツ
 ///////////////////////////////////////////////////*/
