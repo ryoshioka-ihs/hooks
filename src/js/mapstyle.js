@@ -96,7 +96,8 @@ $(function () {
       'map_title': 'IIMヒューマン・ソリューション株式会社 大阪支店',
       'icon_url': '/recruit/image/info/mapLogoOsaka.png',
       'icon_width': 100,
-      'icon_height': 72
+      'icon_height': 72,
+			'link_map_url': 'https://goo.gl/maps/GP4Uh3ATGFJ2'
 		}
 		showGoogleMap(args);
 	}
