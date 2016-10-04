@@ -13,7 +13,10 @@ $(document).ready(function(){
 	setGnavi();
 
 	//ローディング画像
-	scrollTopAfterSendMail()
+	scrollTopAfterSendMail();
+
+	// 終了した会社説明会日程を非表示
+  hideFinishedDate();
 });
 
 
@@ -147,6 +150,34 @@ function scrollTopAfterSendMail() {
 	$("#js-googleForm").load(function(){
 		$('html,body').animate({ scrollTop: 0 }, 'fast');
 		$('.loading').fadeOut();
+	});
+}
+
+//======================================================================================================
+// hideFinishedDate()
+// 機能  ：終了した会社説明会日程を非表示
+// 引数  ：
+// 戻り値：
+//======================================================================================================
+function hideFinishedDate() {
+	$sessions = jQuery('.session .date');
+	if ( $sessions.length <= 0 ) {
+		return;
+	}
+
+	var today = new Date();
+
+	$sessions.each( function() {
+		var date  = $(this).text();
+		var match = date.match(/([0-9]{4})年([0-9]{1,2})?月([0-9]{1,2})?日/);
+		var year  = match[1];
+		var month = Number(match[2]) - 1; /* JSのDateは月を0-11で扱うため調整 */
+		var day   = Number(match[3]) + 1; /* 当日の日付まで表示するため調整 */
+		var session_date = new Date(year, month, day);
+
+		if (today.getTime() > session_date.getTime()) {
+			$(this).closest('tr').hide();
+		}
 	});
 }
 
