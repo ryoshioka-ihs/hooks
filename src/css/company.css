@@ -75,6 +75,19 @@
 	line-height: 2;
 }
 
+/* モバイルとPCの間で写真にメッセージが掛からないよう調整 */
+@media screen and (min-width: 769px) and (max-width: 1200px) {
+	.preMsg h4 {
+		width: 480px;
+		position: absolute;
+		top: 260px;
+	}
+	.preMsg p {
+		position: absolute;
+		bottom: 40px;
+	}
+}
+
 /* --------------------------------------------------------
     採用担当者からのメッセージ
 -------------------------------------------------------- */
