@@ -1,6 +1,6 @@
 @charset "UTF-8";
 @import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
-@import url(http://fonts.googleapis.com/earlyaccess/notosansjapanese.css);
+@import url(https://fonts.googleapis.com/earlyaccess/notosansjapanese.css);
 /* CSS Document */
 /*===================================================
     土台作成用CSS
@@ -805,15 +805,15 @@ header {
 	#appeal #lNav li a {
 		background-color: #F48494;
 	}
-	
+
 	#interview #lNav li a {
 		background-color: #80C269;
 	}
-	
+
 	#info #lNav li a {
 		background-color: #6093CA;
 	}
-	
+
 	#faq #lNav li a {
 		background-color: #F0BE0F;
 	}
@@ -822,7 +822,7 @@ header {
 		background-color: #555;
 	}
 
-	/* 募集要項専用*/	
+	/* 募集要項専用*/
 #info #lNav {
 	margin-bottom: 60px;
 }
@@ -1123,7 +1123,7 @@ footer #sign .pm {
 /* 別ウィンドウのリンク */
 a.link_blank {
 	background: url("/recruit/image/common/link_blank.png") right top no-repeat !important;
-	padding-right:16px;	
+	padding-right:16px;
 }
 
 
