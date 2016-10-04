@@ -17,6 +17,9 @@ $(document).ready(function(){
 
 	// 終了した会社説明会日程を非表示
   hideFinishedDate();
+
+	// PCではtelリンクを無効化
+	removeTelLinkOnPC();
 });
 
 
@@ -177,6 +180,25 @@ function hideFinishedDate() {
 
 		if (today.getTime() > session_date.getTime()) {
 			$(this).closest('tr').hide();
+		}
+	});
+}
+
+//======================================================================================================
+//	removeTelLinkOnPC()
+// 機能  ：PCではtelリンクを無効化
+// 引数  ：
+// 戻り値：
+//======================================================================================================
+function removeTelLinkOnPC() {
+	$(function(){
+		var ua = navigator.userAgent.toLowerCase();
+		var isMobile = /iphone/.test(ua)||/android(.+)?mobile/.test(ua);
+
+		if (!isMobile) {
+			$('a[href^="tel:"]').on('click', function(e) {
+				return false;
+			});
 		}
 	});
 }
