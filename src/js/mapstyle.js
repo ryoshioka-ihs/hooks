@@ -91,8 +91,8 @@ $(function () {
 	if ($gmapAccessOsaka.size() > 0) {
 		var args = {
 			'element_id': 'gmapAccessOsaka',
-			'longitude': 34.7105001,
-			'latitude': 135.4982108,
+			'longitude': 34.710600,
+			'latitude': 135.499968,
       'map_title': 'IIMヒューマン・ソリューション株式会社 大阪支店',
       'icon_url': '/recruit/image/info/mapLogoOsaka.png',
       'icon_width': 100,
