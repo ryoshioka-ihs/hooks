@@ -6,7 +6,7 @@
 
 /* --------------------------------------------------------
     募集要項(新卒・中途)
--------------------------------------------------------- */	
+-------------------------------------------------------- */
 
 /* インデックス　リンクボタン */
 #index {
@@ -23,9 +23,9 @@
         font-size: 20px;
         font-family: "Noto Sans Japanese";
         background: #fff !important;
-        border: solid 3px #6093ca; 
-        text-align: center;    
-        height: 90px;   
+        border: solid 3px #6093ca;
+        text-align: center;
+        height: 90px;
     }
 
     #index li:first-child {
@@ -42,8 +42,8 @@
             padding: 3%;
         }
 
-        #index li a { 
-            color: #6093ca !important;           
+        #index li a {
+            color: #6093ca !important;
             transition: 0.3s;
         }
         #index li a:hover {
@@ -108,7 +108,7 @@
 
 /*　テーブル内　リンクボタン*/
 #info .cont .sentBox .info .btn {
-    margin-top: 8px;    
+    margin-top: 8px;
 }
 #info .cont .sentBox .info .btn a {
     background: url("/recruit/image/common/btn_arrow.png") right center no-repeat #555;
@@ -122,7 +122,7 @@
 
 /* --------------------------------------------------------
     卒業校一覧
--------------------------------------------------------- */ 
+-------------------------------------------------------- */
 
 /*　学校別　ナビゲーション*/
 #sch {
@@ -133,7 +133,7 @@
     #sch ul{
         background-color: #6093ca;
         height: 50px;
-        padding-top: 12px;            
+        padding-top: 12px;
     }
          #sch li{
             color: #FFF;
@@ -176,7 +176,7 @@
         #info .cont .sentBox #univ,
         #info .cont .sentBox #jc,
         #info .cont .sentBox #voca {
-            font-size: 14px;            
+            font-size: 14px;
         }
         #info .cont .sentBox #univ,
         #info .cont .sentBox #voca {
@@ -219,16 +219,16 @@
 
 /* --------------------------------------------------------
     会社説明会（新卒・中途）
--------------------------------------------------------- */ 
+-------------------------------------------------------- */
 /* 卒業生別　表 */
 #info .cont .sentBox .session {
     margin-bottom: 60px;
 }
 
-#info .cont .sentBox .session h4 {    
-    color: #6093ca;    
+#info .cont .sentBox .session h4 {
+    color: #6093ca;
     font-size: 18px;
-    font-weight: bold;    
+    font-weight: bold;
     text-align: center;
 }
 
@@ -238,7 +238,7 @@
 }
 
 #info .cont .sentBox .session table thead tr {
-    border-bottom: 3px #6093ca solid; 
+    border-bottom: 3px #6093ca solid;
 }
 
 #info .cont .sentBox .session table thead tr th {
@@ -250,7 +250,7 @@
 #info .cont .sentBox .session table tbody tr th.date{
     border-bottom: 1px #e4dfcf solid;
     padding: 20px 8px;
-    width: 26%;    
+    width: 26%;
 }
 #info .cont .sentBox .session table tbody tr td {
     padding: 20px 8px;
@@ -271,13 +271,13 @@
     border-bottom: 1px #e4dfcf solid;
     font-size: 18px;
     font-weight: bold;
-    padding: 20px 10px; 
+    padding: 20px 10px;
     text-align: center;
-    margin-bottom: 30px;  
+    margin-bottom: 30px;
 }
 #info .cont .sentBox .access .tokyo h5,
 #info .cont .sentBox .access .osaka h5 {
-    font-weight: bold;    
+    font-weight: bold;
 }
 
 #info .cont .sentBox .access .tokyo,
@@ -301,12 +301,13 @@
 }
 
 #info .cont .sentBox .guide h5 {
-    font-weight: bold; 
+    font-weight: bold;
 }
 
 #info .cont .sentBox .guide p.btn {
     background-color: #555;
     margin-top: 5px;
+    margin-right: 5px;
 }
 
 /* エントリーボタン（申し込み方法） */
