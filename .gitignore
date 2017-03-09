@@ -3,6 +3,7 @@ _site/
 dest/
 .sass-cache/
 .jekyll-metadata
+Gemfile.lock
 
 
 ### Node ###
