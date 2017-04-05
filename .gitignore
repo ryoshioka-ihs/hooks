@@ -48,6 +48,8 @@ Icon
 .fseventsd
 .Spotlight-V100
 .TemporaryItems
+
+vendor/bundle
 .Trashes
 .VolumeIcon.icns
 .com.apple.timemachine.donotpresent
@@ -101,4 +103,6 @@ Session.vim
 *~
 # auto-generated tag files
 tags
+
+vendor/bundle
 
