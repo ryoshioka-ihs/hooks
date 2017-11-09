@@ -21,12 +21,20 @@
 .googleForm02 {
     position: relative;
     width: 100%;
-    padding-bottom: 173%;
+    padding-bottom: 250%;
+    
+}
+
+.googleForm03 {
+    position: relative;
+    width: 100%;
+    padding-bottom: 450%;
     
 }
 
 .googleForm01 iframe,
-.googleForm02 iframe {
+.googleForm02 iframe,
+.googleForm03 iframe {
     position: absolute;
     top: 0;
     left: 0;
@@ -45,15 +53,22 @@
         width: 100%;
         padding-bottom: 400%;
     }
+
+    .googleForm03 {
+        position: relative;
+        width: 100%;
+        padding-bottom: 800%;
+    }
+
     .googleForm01 iframe,
-    .googleForm02 iframe {
+    .googleForm02 iframe
+    .googleForm03 iframe {
         position: absolute;
         top: 0;
         left: 0;
         width: 100% !important;
         height: 100% !important;
     }
-}
 
 @media screen and (max-width: 320px) {
     .googleForm01 {
@@ -62,14 +77,17 @@
         padding-bottom: 730%;
         margin-left: -30px;
     }
-    .googleForm02 {
+    .googleForm02,
+    .googleForm03 {
         position: relative;
         width: 100%;
         padding-bottom: 400%;
         margin-left: -30px;
     }
+
     .googleForm01 iframe,
-    .googleForm02 iframe {
+    .googleForm02 iframe,
+    .googleForm03 iframe {
         position: absolute;
         top: 0;
         left: 0;
@@ -85,18 +103,23 @@
         width: 100%;
         padding-bottom: 480%;
     }
-    .googleForm02 {
+    .googleForm02,
+    .googleForm03{
         position: relative;
         width: 100%;
         padding-bottom: 280%;
     }
+  
     .googleForm01 iframe,
-    .googleForm02 iframe {
+    .googleForm02 iframe,
+    .googleForm03 iframe{
         position: absolute;
         top: 0;
         left: 0;
         width: 100% !important;
         height: 100% !important;
     }
+
+
 }
 
