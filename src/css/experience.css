@@ -1,0 +1,124 @@
+@charset "UTF-8";
+/* CSS Document */
+/*===================================================
+    募集要項用CSS
+===================================================*/
+
+/* --------------------------------------------------------
+    募集要項(新卒・中途)
+-------------------------------------------------------- */
+
+/* インデックス　リンクボタン */
+#index {
+    overflow: hidden;
+    margin-bottom: 95px;
+}
+
+    #index li {
+        width: 32.4%;
+        float: left;
+        margin-left: 1.3%;
+        color: #6E6E6E;
+        display: table;
+        font-size: 20px;
+        font-family: "Noto Sans Japanese";
+        background: #fff !important;
+        border: solid 3px #6E6E6E;
+        text-align: center;
+        height: 90px;
+    }
+
+    #index li:first-child {
+        margin-left: 0;
+    }
+    #index li:hover {
+        opacity: 1;
+    }
+        #index li > * {
+            width: 100%;
+            line-height: 1.4;
+            display: table-cell;
+            vertical-align: middle;
+            padding: 3%;
+        }
+
+        #index li a {
+            color: #6E6E6E !important;
+            transition: 0.3s;
+        }
+        #index li a:hover {
+            color: #6E6E6E !important;
+            opacity: 0.7;
+        }
+
+        #index li span {
+            display: block;
+            font-size: 14px;
+        }
+
+		/* 無効化しているボタンのスタイル */
+		#index .disable {
+			border: solid 3px #ccc;
+		}
+		#index .disable a {
+			color: #ccc !important;
+			cursor: default;
+		}
+		#index .disable a:hover {
+			color: #ccc !important;
+			opacity: 1;
+			transition: none;
+		}
+
+
+/* --------------------------------------------------------
+    コンテンツ
+-------------------------------------------------------- */
+
+
+/*　見出し　H4　*/
+#experience .cont .sentBox #work h4{
+    color: #6E6E6E;
+    font-size: 18px;
+    font-weight: bold;
+    padding-bottom: 5px;
+    border-bottom: 3px solid #6E6E6E;
+}
+
+    #experience .cont .sentBox #work h4 span{
+        font-size: 14px;
+        margin-bottom:35px;
+    }
+
+/* リスト */
+#experience .cont .sentBox #work ol{
+    margin: 10px 15px 0px 30px;
+    width: 100%;
+    list-style-type:decimal;
+}
+
+    #experience .cont .sentBox #work li{
+        padding-right: 20px;
+    }
+
+/*ボタン*/;
+#experience .cont .btn {
+    margin-top: 8px;
+    width: 100%;
+}
+
+#experience .cont .btn a {
+    background: url("/recruit/image/common/btn_arrow.png") right center no-repeat #555;
+    background-size: 16px auto;
+    transition: 0.3s;
+    width: 250px
+}
+
+#experience .cont .btn a:hover {
+    opacity: 0.7;
+}
+
+
+
+
+

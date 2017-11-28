@@ -414,7 +414,7 @@ footer #pageTop:hover {
 	display: none !important;
 }
 /* --------------------------------------------------
-    バナー
+    バナー 横1列
 -------------------------------------------------- */
 .banner{
 	position: relative;
@@ -423,7 +423,8 @@ footer #pageTop:hover {
 }
 
 @media screen and (max-width: 480px) {
-	    .banner {
+	    .banner
+	     {
         position: relative;
         width: 100% !important;
     }
@@ -432,7 +433,7 @@ footer #pageTop:hover {
 @media screen and (max-width: 320px) {
     .banner {
         position: relative;
-        width: 500% !important;
+        width: 10% !important;
         margin-left: -30px;
     }
 }
@@ -441,5 +442,42 @@ footer #pageTop:hover {
     .banner {
         position: relative;
         width: 100% !important;
+    }
+}
+/* --------------------------------------------------
+    バナー 横2つ
+-------------------------------------------------- */
+.banner2,.banner3{
+	position: relative;
+	margin-top:15px;
+	width: 170px;
+}
+
+@media screen and (max-width: 480px) {
+	    .banner2,.banner3{
+        position: relative;
+        height: 40px;
+        width: 48% !important;
+    }
+    	.banner3{
+    		margin-left: 10px;
+    	}
+}
+
+@media screen and (max-width: 320px) {
+    .banner2,.banner3 {
+        position: relative;
+        width: 50% !important;
+        margin-left: -30px;
+    }
+}
+@media only screen and (orientation:landscape) {
+    /* ランドスケープ用 */
+    .banner2,.banner3 {
+        position: relative;
+        width: 50% !important;
+    }
+    .banner3{
+    	margin-left: 10px;
     }
 }

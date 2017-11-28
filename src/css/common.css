@@ -1,3 +1,4 @@
+
 @charset "UTF-8";
 @import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
 @import url(https://fonts.googleapis.com/earlyaccess/notosansjapanese.css);
@@ -214,6 +215,9 @@ article #kv4.ttl {
 article #kv5.ttl {
 	background-image: url("/recruit/image/common/kv5.png");
 }
+article #kv6.ttl {
+	background-image: url("/recruit/image/common/kv4.png");
+}
 
 /* タイトル */
 article .ttl h2 {
@@ -260,6 +264,11 @@ article .ttl h2 {
 	color: #6093CA;
 }
 
+#guide .ttl h2 {
+	border-color: #8904B1;
+	color: #8904B1;
+}
+
 #faq .ttl h2 {
 	border-color: #F0BE0F;
 	color: #F0BE0F;
@@ -269,6 +278,17 @@ article .ttl h2 {
 	border-color: #333;
 	color: #333;
 }
+#experience .ttl h2 {
+	border-color: #6E6E6E;
+	color: #6E6E6E;
+}
+#guideline .ttl h2 {
+	border-color: #8904B1;
+	color: #8904B1;
+}
+
+
+
 /* --------------------------------------------------------
     タイトル(h3)
 -------------------------------------------------------- */
@@ -423,10 +443,27 @@ h3 + figure {
 			height: auto;
 		}
 
-/* バナー */
+
+/* バナー width:960px; */
 	.banner{
 	margin-top: 30px;
 }
+
+/* バナー 横に並列（左側） */
+	.banner2{
+	margin-top: 30px ;
+	width: 470px;
+	float: left;
+}
+
+/* バナー 横に並列（右側） */
+	.banner3{
+	margin-top: 30px ;
+	width: 470px;
+	margin-left: 15px;
+}
+
+
 
 /* 画像に半透明のフィルターを乗せる */
 	.ImgHov a:hover{

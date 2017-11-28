@@ -102,8 +102,11 @@
 		#content li.blue a:hover:before {
 			border-color: #6093CA;
 		}
-		#content li.yellow a:hover:before {
-			border-color: #F0BE0F;
+		#content li.gray a:hover:before {
+			border-color: #6E6E6E;
+		}
+		#content li.purple a:hover:before {
+			border-color: #8904B1;
 		}
 
 
