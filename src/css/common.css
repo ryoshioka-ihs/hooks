@@ -444,9 +444,9 @@ h3 + figure {
 		}
 
 
-/* バナー width:960px; */
+/* バナー 横に一列） */
 	.banner{
-	margin-top: 30px;
+	margin-top: -50px;
 }
 
 /* バナー 横に並列（左側） */
