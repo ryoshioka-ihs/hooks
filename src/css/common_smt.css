@@ -363,7 +363,7 @@ header .menu {
 	#lNav li,
 	#info #lNav li {
 		width: 48%;
-		height: 36px;
+		/*height: 36px;*/
 		margin: 0 0 10px 0;
 		float: left;
 		font-size: 12px;

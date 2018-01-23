@@ -106,6 +106,11 @@
     font-weight: bold;
 }
 
+span{
+    font-size: 17px;
+    font-weight: bold
+}
+
 /*　テーブル内　リンクボタン*/
 #info .cont .sentBox .info .btn {
     margin-top: 8px;
@@ -120,16 +125,23 @@
     opacity: 0.7;
 }
 
-.box{
-    width: 150px;
-    height: 30px;
-    margin-left: -50px;
+.mbox{
+    width: 200px;
+    height: 50px;
+    /*margin-left: -50px;*/
     margin-bottom: 10px;
 }
 
-.box p{
+.mbox p{
     font-weight: bold;
     text-align: center;
+    font-size: 20px;
+    line-height: 50px;
+}
+
+
+.mbox .info a:hover{
+    text-decoration: none;
 }
 
 /* --------------------------------------------------------
