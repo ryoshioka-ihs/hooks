@@ -83,6 +83,79 @@
     text-align: center;
 }
 
+/*クローズボタン（幅が狭い）*/
+.closes{
+    width: 40%;
+    display: inline-block;
+    position: absolute;
+    margin-top: -0.5%;
+    margin-left: 10%;
+}
+
+/*クローズボタン（幅が広い）*/
+.closel{
+    width: 40%;
+    display: inline-block;
+    position: absolute;
+    margin-top: 20%;
+    margin-left: 10%;
+}
+
+@media screen and (max-width: 800px) {
+        .closes
+         {
+        position: absolute;
+        width: 30% !important;
+        margin-top:0.5%;
+        margin-left: 15%;
+    }
+}
+
+@media screen and (max-width: 800px) {
+        .closel
+         {
+        position: absolute;
+        width: 30% !important;
+        margin-top:20%;
+        margin-left: 15%
+    }
+}
+
+@media screen and (max-width: 480px) {
+        .closes
+         {
+        position: absolute;
+        width: 40% !important;
+        margin-top:8%;
+        margin-left: 12%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+        .closel
+         {
+        position: absolute;
+        width: 40% !important;
+        margin-top:50%;
+        margin-left: 12%;
+    }
+}
+
+@media screen and (max-width: 320px) {
+        .closes .closel {
+        position: absolute;
+        width: 10% !important;
+        margin-left: -30px;
+    }
+}
+@media only screen and (orientation:landscape) {
+    /* ランドスケープ用 */
+        .closes .closel {
+        position: absolute;
+        width: 100% !important;
+    }
+}
+
 /* --------------------------------------------------------
     卒業校一覧
 -------------------------------------------------------- */ 

@@ -111,6 +111,7 @@ span{
     font-weight: bold
 }
 
+
 /*　テーブル内　リンクボタン*/
 #info .cont .sentBox .info .btn {
     margin-top: 8px;
@@ -142,6 +143,24 @@ span{
 
 .mbox .info a:hover{
     text-decoration: none;
+}
+
+/*クローズボタン（幅が狭い）*/
+.closes{
+    width: 200px;
+	display: inline-block;
+	position: absolute;
+    margin-top: 1%;
+    margin-left: 20%;
+}
+
+/*クローズボタン（幅が広い）*/
+.closel{
+    width: 200px;
+    display: inline-block;
+    position: absolute;
+    margin-top: 15%;
+    margin-left: 20%;
 }
 
 /* --------------------------------------------------------
