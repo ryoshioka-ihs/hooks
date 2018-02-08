@@ -56,6 +56,7 @@
 -------------------------------------------------- */
 .photoBox p.name {
 	width: 100%;
+	height: 100%;
 	padding: 6px 15px;
 	position: static;
 	font-size: 11px;
@@ -63,6 +64,21 @@
 	.photoBox p.name span {
 		font-size: 20px;
 	}
+
+	.photoBox p.name span.group {
+			font-size: 13px;
+			line-height: 1.2;
+			color:#bbbbbb;
+			padding: 0px 5px;
+			margin: 5px 10px;
+		}
+
+	.photoBox p.name span.profile {
+			font-size: 13px;
+			line-height: 1.2;
+			padding: 0px 5px;
+			margin: 5px 10px;
+		}
 
 /*  メッセージ
 -------------------------------------------------- */

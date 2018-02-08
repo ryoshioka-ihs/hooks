@@ -14,12 +14,54 @@ p.name {
 	font-family: 'Noto Sans Japanese';
 	letter-spacing: 0.7px;
 }
-	p.name span {
+	p.name span.initial {
 		display: block;
 		font-family: 'Montserrat';
 		color: #80C269;
 		letter-spacing: 3px;
 	}
+
+	p.name span.profile {
+		display: block;
+		font-family: 'Montserrat';
+		letter-spacing: 3px;
+		text-align: left;
+	}
+/* --------------------------------------------------
+	ページ内リンク
+-------------------------------------------------- */
+.linkInPage {
+	margin-top: 20px;
+}
+/* 隣接しているセクションのh2タグの上マージンを調整 */
+.linkInPage + section h2 {
+	margin-top: 50px;
+}
+	.linkInPage li {
+		font-size: 13px;
+		font-weight: bold;
+		display: inline-block;
+		border: 1px solid #DDD;
+		margin: 0 10px 5px 0;
+	}
+	.linkInPage li:last-child {
+		margin-right: 0;
+	}
+		.linkInPage li a {
+			display: block;
+			width: 100%;
+			height: auto;
+			color: #282828;
+			padding: 5px 10px 5px 20px;
+			background: #FFF url("/recruit/image/interview/linkInPage_arrow.png") 8px center no-repeat;
+			background-size: 7px auto;
+			transition: 0.3s;
+		}
+		.linkInPage li a:hover {
+			text-decoration: none;
+			background-color: #E5EBF3;
+		}
+
 
 /*//////////////////////////////////////////////////
     先輩一覧
@@ -106,7 +148,8 @@ p.name {
 		width: 100%;
 	}
 	.photoBox p.name {
-		width: 320px;
+		width: 480px;
+		height: 200px;
 		border: solid 3px #80C269;
 		padding: 6px 0 10px;
 		position: absolute;
@@ -116,7 +159,21 @@ p.name {
 		.photoBox p.name span {
 			font-size: 30px;
 			line-height: 1;
-			margin: 7px 0;
+			margin: 7px 30px;
+		}
+		.photoBox p.name span.group {
+			font-size: 22px;
+			line-height: 1.2;
+			color:#bbbbbb;
+			padding: 0px 5px;
+			margin: 5px 10px;
+		}
+
+		.photoBox p.name span.profile {
+			font-size: 13px;
+			line-height: 1.2;
+			padding: 3px 20px;
+			margin: 8px 8px;
 		}
 
 /*  メッセージ
@@ -196,7 +253,7 @@ p.name {
 /*  IHSを選んだ理由～入社1年または2年後に感じた成長の実感
 -------------------------------------------------- */
 .sentBox {
-	margin-bottom: 3px;
+	margin-bottom: 60px;
 }
 	.sentBox dt.hline {
 		margin-bottom: 15px;
@@ -315,8 +372,8 @@ aside.point {
 		font-size: 14px;
 		line-height: 40px;
 		margin-left: 0;
-		padding-left: 16px;
-		content: "message";
+		padding-left: 12px;
+		content: "Message";
 		font-family: 'Montserrat';
 		color: #FFF;
 		background: url("../image/interview/adv_bg.png") no-repeat;
