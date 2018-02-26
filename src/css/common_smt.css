@@ -413,37 +413,7 @@ footer #pageTop:hover {
 .hiddenSmt {
 	display: none !important;
 }
-/* --------------------------------------------------
-    バナー 横1列
--------------------------------------------------- */
-.banner{
-	position: relative;
-	margin-top:15px;
-	width: 400px;
-}
 
-@media screen and (max-width: 480px) {
-	    .banner
-	     {
-        position: relative;
-        width: 100% !important;
-    }
-}
-
-@media screen and (max-width: 320px) {
-    .banner {
-        position: relative;
-        width: 10% !important;
-        margin-left: -30px;
-    }
-}
-@media only screen and (orientation:landscape) {
-    /* ランドスケープ用 */
-    .banner {
-        position: relative;
-        width: 100% !important;
-    }
-}
 /* --------------------------------------------------
     バナー 横2つ
 -------------------------------------------------- */

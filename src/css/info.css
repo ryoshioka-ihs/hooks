@@ -364,3 +364,9 @@ span{
 	padding: 0;
 }
 
+
+/* バナー 横に一列） */
+	.banner{
+	margin-top: -50px;
+	width: 100%;
+}

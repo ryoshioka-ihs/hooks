@@ -444,27 +444,6 @@ h3 + figure {
 		}
 
 
-/* バナー 横に一列） */
-	.banner{
-	margin-top: -50px;
-}
-
-/* バナー 横に並列（左側） */
-	.banner2{
-	margin-top: 30px ;
-	width: 470px;
-	float: left;
-}
-
-/* バナー 横に並列（右側） */
-	.banner3{
-	margin-top: 30px ;
-	width: 470px;
-	margin-left: 15px;
-}
-
-
-
 /* 画像に半透明のフィルターを乗せる */
 	.ImgHov a:hover{
 	display: block;
@@ -1221,3 +1200,22 @@ em {
 .textRight {
 	text-align: right;
 	}
+
+
+/* --------------------------------------------------
+    おまけ
+-------------------------------------------------- */
+/* バナー 横に並列（左側） 
+	.banner2{
+	margin-top: 30px ;
+	width: 470px;
+	float: left;
+}
+
+/* バナー 横に並列（右側） 
+	.banner3{
+	margin-top: 30px ;
+	width: 470px;
+	margin-left: 15px;
+}
+*/
