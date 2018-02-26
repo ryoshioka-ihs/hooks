@@ -30,32 +30,32 @@
     社長メッセージ
 -------------------------------------------------------- */
 .preMsg {
-	height: 480px;
+	height: 280px;
 	background: url("/recruit/image/company/president.png") left top no-repeat;
 	position: relative;
 	font-weight: 700;
 	font-family: 'Noto Sans Japanese';
 }
 	.preMsg h4 {
-		width: 480px;
+		width: 520px;
 		position: absolute;
-		top: 160px;
-		right: 4%;
+		top: 80px;
+		left: 4%;
 		letter-spacing: 5px;
 	}
 		.preMsg h4 span {
 			display: block;
 			text-align: center;
-			background-color: #FFF;
 			line-height: 50px;
-			font-size: 26px;
-			margin-bottom: 20px;
+			font-size: 30px;
+			font-weight: bold;
+			color: #E36D45;
 		}
 
 	.preMsg p {
 		position: absolute;
-		bottom: 130px;
-		right: 6%;
+		top: 75%;
+		left: 25%;
 		letter-spacing: 2px;
 	}
 		.preMsg p span {
@@ -76,7 +76,7 @@
 }
 
 /* モバイルとPCの間で写真にメッセージが掛からないよう調整 */
-@media screen and (min-width: 769px) and (max-width: 1200px) {
+@media screen and (min-width: 769px) and (max-width: 1000px) {
 	.preMsg h4 {
 		width: 480px;
 		position: absolute;
@@ -85,6 +85,27 @@
 	.preMsg p {
 		position: absolute;
 		bottom: 40px;
+	}
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1200px) {
+.preMsg{
+	background: url("/recruit/image/company/president.png") 80%;
+}
+
+	.preMsg h4 {
+		width: 480px;	
+		top: 80px;
+		left: -2%;
+	}
+
+	.preMsg h4 span{
+		font-size: 25px;
+		line-height: 1.5
+	}
+
+	.preMsg p {
+		left: 7%;
 	}
 }
 
@@ -220,7 +241,7 @@ article h3.adopt:before {
 
 #company .cont .sentBox .textArea {
     padding: 14px 4% 0 0;
-    width: 48%;
+    /*width: 48%;*/
     word-break: normal;
 }
 

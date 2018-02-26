@@ -18,28 +18,29 @@
     社長メッセージ
 -------------------------------------------------------- */
 .preMsg {
-	height: 240px;
+	height: 500px;
 	margin: 0 -10px;
 	background-color: #F7F7F7;
-	background-size: auto 100%;
+	background-size: 100%;
+	background-image: url("/recruit/image/company/president_smt.png") ;
 }
 	.preMsg h4 {
-		width: 240px;
-		top: 130px;
-		right: 0;
+		width: 300px;
+		top: 40px;
+		left: 35px;
 		letter-spacing: 2.5px;
 	}
 		.preMsg h4 span {
 			line-height: 25px;
-			font-size: 13px;
+			font-size: 20px;
 			padding-left: 5px;
 			margin-bottom: 10px;
 		}
 
 	.preMsg p {
-		bottom: 15px;
-		right: 8px;
-		font-size: 10px;
+		top:30%;
+		left: 16%;
+		font-size: 15px;
 	}
 		.preMsg p span.name {
 			font-size: 15px;
@@ -50,6 +51,39 @@
 		.preMsg p span.roma {
 			vertical-align: 0;
 		}
+
+@media screen and (min-width: 481px) and (max-width: 768px){
+.preMsg {
+	height: 180px;
+	margin: 0 -10px;
+	background-color: #F7F7F7;
+	background-size: 100%;
+	background-image: url("/recruit/image/company/president.png") ;
+}
+
+	.preMsg p {
+		top:75%;
+		left: 16%;
+		font-size: 15px;
+	}
+
+@media screen and (min-width: 768px) and (max-width: 1024px){
+.preMsg {
+	height: 180px;
+	margin: 0 -10px;
+	background-color: #F7F7F7;
+	background-size: 100%;
+	background-image: url("/recruit/image/company/president.png") ;
+}
+
+	.preMsg h4 {
+		width: 400px;
+	}
+
+	.preMsg p {
+		top:75%;
+	}
+
 
 /* --------------------------------------------------------
     採用担当者からのメッセージ
