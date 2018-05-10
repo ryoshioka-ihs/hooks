@@ -1,0 +1,372 @@
+@charset "UTF-8";
+/* CSS Document */
+/*===================================================
+    募集要項用CSS
+===================================================*/
+
+/* --------------------------------------------------------
+    募集要項(新卒・中途)
+-------------------------------------------------------- */
+
+/* インデックス　リンクボタン */
+#index {
+    overflow: hidden;
+    margin-bottom: 95px;
+}
+
+    #index li {
+        width: 32.4%;
+        float: left;
+        margin-left: 1.3%;
+        color: #6093ca;
+        display: table;
+        font-size: 20px;
+        font-family: "Noto Sans Japanese";
+        background: #fff !important;
+        border: solid 3px #6093ca;
+        text-align: center;
+        height: 90px;
+    }
+
+    #index li:first-child {
+        margin-left: 0;
+    }
+    #index li:hover {
+        opacity: 1;
+    }
+        #index li > * {
+            width: 100%;
+            line-height: 1.4;
+            display: table-cell;
+            vertical-align: middle;
+            padding: 3%;
+        }
+
+        #index li a {
+            color: #6093ca !important;
+            transition: 0.3s;
+        }
+        #index li a:hover {
+            color: #6093ca !important;
+            opacity: 0.7;
+        }
+
+        #index li span {
+            display: block;
+            font-size: 14px;
+        }
+
+		/* 無効化しているボタンのスタイル */
+		#index .disable {
+			border: solid 3px #ccc;
+		}
+		#index .disable a {
+			color: #ccc !important;
+			cursor: default;
+		}
+		#index .disable a:hover {
+			color: #ccc !important;
+			opacity: 1;
+			transition: none;
+		}
+
+/*　テーブル　*/
+#info .cont .sentBox table.info {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#info .cont .sentBox table.info th,
+#info .cont .sentBox table.info td {
+    padding: 10px;
+    border: 1px solid #E6E9EE;
+}
+
+#info .cont .sentBox table.info th {
+    background-color: #F9FAFC;
+    text-align: center;
+    width: 7em;
+}
+
+#info .cont .sentBox table.info tbody td ul {
+    margin-left: 15px;
+}
+
+#info .cont .sentBox table.info tbody td li {
+    padding-left: 0px;
+    list-style-type: disc;
+}
+
+#info .cont .sentBox .info tbody li dl {
+    margin-bottom: 8px;
+    line-height: 130%;
+}
+
+#info .cont .sentBox .info tbody li dt {
+    font-weight: bold;
+}
+
+span{
+    font-size: 17px;
+    font-weight: bold
+}
+
+
+/*　テーブル内　リンクボタン*/
+#info .cont .sentBox .info .btn {
+    margin-top: 8px;
+}
+#info .cont .sentBox .info .btn a {
+    background: url("/recruit/image/common/btn_arrow.png") right center no-repeat #555;
+    background-size: 16px auto;
+    transition: 0.3s;
+}
+
+#info .cont .sentBox .info .btn a:hover {
+    opacity: 0.7;
+}
+
+.mbox{
+    width: 200px;
+    height: 50px;
+    /*margin-left: -50px;*/
+    margin-bottom: 10px;
+}
+
+.mbox p{
+    font-weight: bold;
+    text-align: center;
+    font-size: 20px;
+    line-height: 50px;
+}
+
+
+.mbox .info a:hover{
+    text-decoration: none;
+}
+
+/*クローズボタン（幅が狭い）*/
+.closes{
+    width: 200px;
+	display: inline-block;
+	position: absolute;
+    margin-top: 1%;
+    margin-left: 20%;
+}
+
+/*クローズボタン（幅が広い）*/
+.closel{
+    width: 200px;
+    display: inline-block;
+    position: absolute;
+    margin-top: 15%;
+    margin-left: 20%;
+}
+
+/* --------------------------------------------------------
+    卒業校一覧
+-------------------------------------------------------- */
+
+/*　学校別　ナビゲーション*/
+#sch {
+    display: table;
+    width: 100%;
+    margin: 40px 0;
+}
+    #sch ul{
+        background-color: #6093ca;
+        height: 50px;
+        padding-top: 12px;
+    }
+         #sch li{
+            color: #FFF;
+            cursor: pointer;
+            display: table-cell;
+            font-family: "Noto Sans Japanese";
+            font-weight: bold;
+            vertical-align: middle;
+            text-align: center;
+            width: 4%;
+    }
+            #sch li a {
+                color: #FFF;
+                border-bottom: 1px solid #FFF;
+                padding-bottom: 2px;
+            }
+
+            #sch li a:hover {
+                text-decoration: none;
+                border-bottom: 0;
+                padding-bottom: 2px;
+            }
+
+/*　見出し　H4　*/
+#info .cont .sentBox #univ h4,
+#info .cont .sentBox #voca h4,
+#info .cont .sentBox #jc h4 {
+    color: #6093ca;
+    font-size: 18px;
+    font-weight: bold;
+    padding-bottom: 5px;
+    border-bottom: 3px solid #6093ca;
+}
+
+    #info .cont .sentBox #univ h4 span,
+    #info .cont .sentBox #voca h4 span,
+    #info .cont .sentBox #jc h4 span {
+        font-size: 14px;
+    }
+        #info .cont .sentBox #univ,
+        #info .cont .sentBox #jc,
+        #info .cont .sentBox #voca {
+            font-size: 14px;
+        }
+        #info .cont .sentBox #univ,
+        #info .cont .sentBox #voca {
+            margin-bottom:35px;
+        }
+
+/* リスト */
+#info .cont .sentBox #univ ul,
+#info .cont .sentBox #jc ul,
+#info .cont .sentBox #voca ul {
+    margin: 10px 15px 0px 30px;
+    width: 100%
+}
+
+    #info .cont .sentBox #univ li,
+    #info .cont .sentBox #jc li,
+    #info .cont .sentBox #voca li{
+        padding-right: 20px;
+        list-style-type: disc;
+        float: left;
+    }
+
+    #info .cont .sentBox #univ li,
+    #info .cont .sentBox #voca li{
+        margin: 0;
+}
+    #info .cont .sentBox #univ li {
+        width: 260px;
+    }
+
+    #info .cont .sentBox #voca li {
+        width: 390px;
+    }
+
+    #info .cont .sentBox #jc li {
+    width: 260px;
+    clear: both;
+    }
+
+
+/* --------------------------------------------------------
+    会社説明会（新卒・中途）
+-------------------------------------------------------- */
+/* 卒業生別　表 */
+#info .cont .sentBox .session {
+    margin-bottom: 60px;
+}
+
+#info .cont .sentBox .session h4 {
+    color: #6093ca;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+}
+
+#info .cont .sentBox .session table {
+    margin-top: 20px;
+    width: 100%;
+}
+
+#info .cont .sentBox .session table thead tr {
+    border-bottom: 3px #6093ca solid;
+}
+
+#info .cont .sentBox .session table thead tr th {
+    padding: 0 8px 16px 8px;
+    text-align :left;
+    font-weight: bold;
+}
+
+#info .cont .sentBox .session table tbody tr th.date{
+    border-bottom: 1px #e4dfcf solid;
+    padding: 20px 8px;
+    width: 26%;
+}
+#info .cont .sentBox .session table tbody tr td {
+    padding: 20px 8px;
+    border-bottom: 1px #e4dfcf solid;
+}
+
+#info .cont .sentBox .session table tbody tr td.time,
+#info .cont .sentBox .session table tbody tr td.venue {
+    width: 20%
+}
+
+#info .cont .sentBox .session table tbody tr td.apply {
+    width: 22%
+}
+
+/* 会場のご案内 */
+#info .cont .sentBox .access h4 {
+    border-bottom: 1px #e4dfcf solid;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 20px 10px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+#info .cont .sentBox .access .tokyo h5,
+#info .cont .sentBox .access .osaka h5 {
+    font-weight: bold;
+}
+
+#info .cont .sentBox .access .tokyo,
+#info .cont .sentBox .access .osaka {
+    margin-bottom: 60px;
+}
+
+#info .cont .sentBox .access .ggmap{
+    width: 100%;
+    height: 300px;
+}
+
+
+
+#info .cont .sentBox .guide {
+    background: #f0f0f0;
+    padding: 20px 40px;
+    margin-bottom: 20px;
+    clear: both;
+    overflow: hidden;
+}
+
+#info .cont .sentBox .guide h5 {
+    font-weight: bold;
+}
+
+#info .cont .sentBox .guide p.btn {
+    background-color: #555;
+    margin-top: 5px;
+    margin-right: 5px;
+}
+
+/* エントリーボタン（申し込み方法） */
+#info .cont .sentBox .guide p.btn.entry {
+	background-color: #FF9B2A;
+	font-size: 100%;
+	line-height: 50px;
+	margin-top: 5px;
+}
+#info .cont .sentBox .guide p.btn.entry a {
+	padding: 0;
+}
+
+
+/* バナー 横に一列） */
+	.banner{
+	margin-top: -50px;
+	width: 100%;
+}

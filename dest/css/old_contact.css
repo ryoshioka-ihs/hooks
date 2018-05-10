@@ -1,0 +1,12 @@
+@charset "UTF-8";
+/* CSS Document */
+/*===================================================
+    採用エントリーフォーム用CSS
+===================================================*/
+
+#contact .cont .sentBox {	
+    background-color: rgb(249, 249, 249);
+    padding: 60px 10% 10px;
+    position: relative;    
+    overflow: hidden;
+}

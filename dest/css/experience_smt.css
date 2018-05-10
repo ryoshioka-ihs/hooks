@@ -1,0 +1,55 @@
+@charset "UTF-8";
+/* CSS Document */
+/*===================================================
+    募集要項用CSS(スマホ)
+===================================================*/
+
+
+/* --------------------------------------------------------
+    コンテンツ
+-------------------------------------------------------- */ 
+
+/*　見出し　H4　*/
+
+#experience .cont .sentBox #work{
+	margin-top:-40px;
+    padding-top:40px;
+}
+
+#experience .cont .sentBox #work h4,{
+    font-size: 15px;
+
+}
+    #experience .cont .sentBox #work h4 span{
+        font-size: 13px;
+    }
+/* リスト */
+#experience .cont .sentBox #work ol{
+    margin: 10px 10px 0;
+    width: 100%
+}
+
+#experience .cont .sentBox #work li{
+    padding: 0;
+    margin: ;
+    list-style-type: decimal;
+    font-size: 14px;
+    float: left;
+    margin-left: 15px;
+    width: 95%;
+}
+
+/*ボタン*/;
+#experience .cont .btn {
+    margin-top: 8px;
+}
+
+#experience .cont .btn a {
+    background: url("/recruit/image/common/btn_arrow.png") right center no-repeat #555;
+    background-size: 16px auto;
+    transition: 0.3s;
+    width: 100%;
+}
+
+
+

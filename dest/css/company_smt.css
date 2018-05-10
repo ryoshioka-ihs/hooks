@@ -1,0 +1,229 @@
+@charset "UTF-8";
+/* CSS Document */
+/*===================================================
+    会社紹介用CSS(スマホ)
+===================================================*/
+/*//////////////////////////////////////////////////
+    メッセージ・求める人材
+///////////////////////////////////////////////////*/
+/* --------------------------------------------------------
+    社長、採用担当者メッセージ共通使用
+-------------------------------------------------------- */
+.roma {
+	font-size: 10px;
+	letter-spacing: 1.5px;
+}
+
+/* --------------------------------------------------------
+    社長メッセージ
+-------------------------------------------------------- */
+.preMsg {
+	height: 500px;
+	margin: 0 -10px;
+	background-color: #F7F7F7;
+	background-size: 100%;
+	background-image: url("/recruit/image/company/president_smt.png") ;
+}
+	.preMsg h4 {
+		width: 300px;
+		top: 40px;
+		left: 35px;
+		letter-spacing: 2.5px;
+	}
+		.preMsg h4 span {
+			line-height: 25px;
+			font-size: 20px;
+			padding-left: 5px;
+			margin-bottom: 10px;
+		}
+
+	.preMsg p {
+		top:30%;
+		left: 16%;
+		font-size: 15px;
+	}
+		.preMsg p span.name {
+			font-size: 15px;
+			vertical-align: -1px;
+			margin: 0 5px 0 10px;
+			letter-spacing: 3px;
+		}
+		.preMsg p span.roma {
+			vertical-align: 0;
+		}
+
+@media screen and (min-width: 481px) and (max-width: 768px){
+.preMsg {
+	height: 180px;
+	margin: 0 -10px;
+	background-color: #F7F7F7;
+	background-size: 100%;
+	background-image: url("/recruit/image/company/president.png") ;
+}
+
+	.preMsg p {
+		top:75%;
+		left: 16%;
+		font-size: 15px;
+	}
+
+@media screen and (min-width: 768px) and (max-width: 1024px){
+.preMsg {
+	height: 180px;
+	margin: 0 -10px;
+	background-color: #F7F7F7;
+	background-size: 100%;
+	background-image: url("/recruit/image/company/president.png") ;
+}
+
+	.preMsg h4 {
+		width: 400px;
+	}
+
+	.preMsg p {
+		top:75%;
+	}
+
+
+/* --------------------------------------------------------
+    採用担当者からのメッセージ
+-------------------------------------------------------- */
+article h3.adopt {
+	height: 60px;
+	font-size: 10px;
+	margin: 0 0 27px;
+	padding-top: 7px;
+}
+	article h3.adopt span {
+		margin-bottom: 0;
+	}
+
+	.sentBox.msg .imgArea figcaption {
+		font-size: 10px;
+		text-align: right;
+		letter-spacing: 1px;
+		margin-top: 7px;
+	}
+		.sentBox.msg .imgArea figcaption > span {
+			font-size: 15px;
+			margin-left: 10px;
+			display: inline;
+			vertical-align: -1px;
+			letter-spacing: 3px;
+		}
+		.sentBox.msg .imgArea figcaption .roma {
+			display: inline;
+			vertical-align: 2px;
+			margin-left: 5px;
+		}
+
+/* --------------------------------------------------------
+    部門紹介
+-------------------------------------------------------- */	
+
+#company .cont .sentBox table.departments {
+    border: none;
+}
+
+#company .cont .sentBox table.departments thead {
+    display: none;
+}
+
+#company .cont .sentBox table.departments tr {
+    display: block;
+    margin-bottom: 20px;
+}
+
+#company .cont .sentBox table.departments tbody th,
+#company .cont .sentBox table.departments tbody td {
+    border: 0;
+    padding: 5px 0px;
+}
+
+#company .cont .sentBox table.departments tbody th.dash,
+#company .cont .sentBox table.departments tbody td.dash {
+	border:0;
+	padding: 5px 0px;
+}
+
+#company .cont .sentBox table.departments tbody th {
+	font-weight: bold;
+}
+
+#company .cont .sentBox table.departments tbody td {
+    border: none;
+    display: block;
+    padding: 5px;
+    text-align: left;
+}
+
+#company .cont .sentBox table.departments tbody td.dash {
+    border: none;
+    display: block;
+    padding: 5px 5px 0;
+    text-align: left;
+}
+
+#company .cont .sentBox table.departments tbody td.support {
+    margin-left: 15px;
+}
+
+#company .cont .sentBox table.departments tbody td.dept {
+    width: 100%;
+    font-size: 1.125em;
+    font-weight: bold;
+}
+
+#company .cont .sentBox table.departments tbody td ul {
+    margin-left: 20px;
+}
+
+#company .cont .sentBox table.departments tbody td li {
+    padding-left: 0px;
+    list-style-type: disc;
+}
+
+
+/* --------------------------------------------------------
+    会社概要
+-------------------------------------------------------- */	
+
+/* テーブル */
+#company .cont .sentBox table.profile tbody td ul {
+    margin-left: 15px;
+}
+
+#company .cont .sentBox table.profile tbody td li {
+    padding-left: 0;
+    list-style-type: disc;
+}
+
+/* グーグルマップ */
+#company .cont .sentBox .textArea {
+    display: block;
+    padding: 14px 4% 0 0;
+    width: 100%;
+    word-break: normal;
+}
+
+#company .cont .sentBox .ggmap {
+    width: 100%;
+}
+
+/* 売上実績 グラフ画像 */
+#company .cont .sentBox .imgArea02 {
+    width: 100%;
+    display: block;
+}
+
+#company .cont .sentBox .imgArea02 img {
+    height: auto;
+    max-width: 400px;
+    width: 100%;
+}
+
+
+
+
+
+

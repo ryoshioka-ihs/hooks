@@ -1,0 +1,133 @@
+@charset "UTF-8";
+/* CSS Document */
+/*===================================================
+    トップページ用CSS
+===================================================*/
+
+/*  キービジュアル
+-------------------------------------------------- */
+#main .keyv img {
+	width: 100%;
+	height: auto;
+}
+
+/*  ニュース
+-------------------------------------------------- */
+#main .news {
+	background-color: #FFF;
+	margin: 30px 0;
+	padding: 10px 10px 0;
+	overflow: hidden;
+}
+	#main .news dt {
+		width: 100px;
+		line-height: 30px;
+		clear: both;
+		float: left;
+		background-color: #EEE;
+		text-align: center;
+		font-family: 'Montserrat';
+		margin-bottom: 10px;
+	}
+	#main .news dd {
+		min-height: 30px;
+		margin: 0 0 10px 140px;
+		padding-top: 4px;
+	}
+	#main .news dd > * {
+		display: table-cell;
+		vertical-align: top;
+	}
+	#main .news dd time {
+		width: 105px;
+		font-weight: bold;
+		font-size: 12px;
+		padding-top: 2px;
+	}
+
+/*  コンテンツ一覧
+-------------------------------------------------- */
+#content {
+	margin-right: -20px;
+	text-align: center;
+}
+	#content li {
+		width: 25%;
+		height: auto;
+		max-width: 300px;
+		max-height: 280px;
+		display: inline-block;
+		text-align: left;
+		vertical-align: top;
+		padding-right: 20px;
+		margin-bottom: 20px;
+	}
+	#content li.long {
+		width: 50%;
+		max-width: 600px;
+	}
+		#content li img {
+			width: 100%;
+			max-width: 280px;
+			height: 100%;
+		}
+		#content li.long img {
+			max-width: 580px;
+		}
+
+		#content li a {
+			display: inline-block;
+			position: relative;
+		}
+		#content li a:before {
+			content: "";
+			display: block;
+			border: solid 3px transparent;
+			transition: 0.3s;
+			position: absolute;
+			left: 0;
+			right: 0;
+			top: 0;
+			bottom: 0;
+		}
+		#content li.orange a:hover:before {
+			border-color: #E36D45;
+		}
+		#content li.pink a:hover:before {
+			border-color: #F48494;
+		}
+		#content li.green a:hover:before {
+			border-color: #80C269;
+		}
+		#content li.blue a:hover:before {
+			border-color: #6093CA;
+		}
+		#content li.gray a:hover:before {
+			border-color: #6E6E6E;
+		}
+		#content li.purple a:hover:before {
+			border-color: #8904B1;
+		}
+
+
+@media (max-width: 1008px) {
+	#content {
+		margin-right: -10px;
+	}
+		#content li {
+			width: 50%;
+			padding-right: 10px;
+			margin-bottom: 10px;
+		}
+		#content li.long {
+			width: 100%;
+		}
+}
+@media (min-width: 1009px) and (max-width: 1140px) {
+	#content li {
+		width: 33%;
+	}
+	#content li.long {
+		width: 66%;
+	}
+}

@@ -1,0 +1,332 @@
+@charset "UTF-8";
+/* CSS Document */
+/*===================================================
+    募集要項用CSS(スマホ)
+===================================================*/
+
+/* --------------------------------------------------------
+    募集要項(新卒・中途)
+-------------------------------------------------------- */ 
+
+/* インデックス　リンクボタン */
+#lNav {
+    margin-bottom: 10px;
+}    
+
+#index {
+    margin-bottom: 15px;
+    overflow: hidden;
+}
+    #index li,
+    #index #lNav li {
+        width: 48%;
+        height: 60px;
+        margin: 0 0 10px 0;
+        float: left;
+        font-weight: bold;
+        font-size: 14px;
+    }
+    #index li:nth-of-type(even),
+    #index #lNav li:nth-of-type(even) {
+        float: right;
+    }
+        #lNav li a {
+            transition: none;
+        }
+        #lNav li a:hover {
+            opacity: 1;
+        }
+
+        #index li span {
+            display: block;
+            font-size: 8px;
+        }
+
+#info .cont #new,
+#info .cont #mid {
+    margin-top:-20px;
+    padding-top:20px;
+}
+
+/* テーブル */
+#info .cont .sentBox table.info {
+    width: 100%;
+}
+
+#info .cont .sentBox table.info tbody td ul {
+    margin-left: 15px;
+}
+
+#info .cont .sentBox table.info tbody td li {
+    padding-left: 0;
+    list-style-type: disc;
+}
+
+#info .cont .sentBox table.info tbody th {
+    width:30%;
+}
+
+#info .cont .sentBox .info tbody td p.btn {
+    width: 100%;
+    font-size: 14px;
+}
+
+.mbox{
+    width: 200px;
+    height: 50px;
+    margin-left: 0px;
+    margin-bottom: 10px;
+}
+
+.mbox p{
+    font-weight: bold;
+    text-align: center;
+}
+
+/*クローズボタン（幅が狭い）*/
+.closes{
+    width: 40%;
+    display: inline-block;
+    position: absolute;
+    margin-top: -0.5%;
+    margin-left: 10%;
+}
+
+/*クローズボタン（幅が広い）*/
+.closel{
+    width: 40%;
+    display: inline-block;
+    position: absolute;
+    margin-top: 20%;
+    margin-left: 10%;
+}
+
+@media screen and (max-width: 800px) {
+        .closes
+         {
+        position: absolute;
+        width: 30% !important;
+        margin-top:0.5%;
+        margin-left: 15%;
+    }
+}
+
+@media screen and (max-width: 800px) {
+        .closel
+         {
+        position: absolute;
+        width: 30% !important;
+        margin-top:20%;
+        margin-left: 15%
+    }
+}
+
+@media screen and (max-width: 480px) {
+        .closes
+         {
+        position: absolute;
+        width: 40% !important;
+        margin-top:8%;
+        margin-left: 12%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+        .closel
+         {
+        position: absolute;
+        width: 40% !important;
+        margin-top:50%;
+        margin-left: 12%;
+    }
+}
+
+@media screen and (max-width: 320px) {
+        .closes .closel {
+        position: absolute;
+        width: 10% !important;
+        margin-left: -30px;
+    }
+}
+@media only screen and (orientation:landscape) {
+    /* ランドスケープ用 */
+        .closes .closel {
+        position: absolute;
+        width: 100% !important;
+    }
+}
+
+/* --------------------------------------------------------
+    卒業校一覧
+-------------------------------------------------------- */ 
+/*　学校別　ナビゲーション*/
+#sch {
+    display: table;
+    width: 100%;
+    margin: 20px 0;
+}
+    #sch ul{
+        background-color: #6093ca;
+        height: 40px;
+        padding-top: 10px;            
+    }
+         #sch li{
+            font-size: 12px;
+
+    }
+            #sch li a {
+                color: #FFF;
+                border-bottom: 1px solid #FFF;
+                padding-bottom: 1px;
+            }
+
+            #sch li a:hover {
+                text-decoration: none;
+                border-bottom: 0;
+                padding-bottom: 1px;
+            }
+
+/*　見出し　H4　*/
+
+#info .cont .sentBox #univ,
+#info .cont .sentBox #voca,
+#info .cont .sentBox #jc{
+	margin-top:-40px;
+    padding-top:40px;
+}
+
+#info .cont .sentBox #univ h4,
+#info .cont .sentBox #voca h4,
+#info .cont .sentBox #jc h4 {
+    font-size: 15px;
+
+}
+    #info .cont .sentBox #univ h4 span,
+    #info .cont .sentBox #voca h4 span,
+    #info .cont .sentBox #jc h4 span {
+        font-size: 13px;
+    }
+/* リスト */
+#info .cont .sentBox #univ ul,
+#info .cont .sentBox #voca ul,
+#info .cont .sentBox #jc ul {
+    margin: 10px 10px 0;
+    width: 100%
+}
+
+#info .cont .sentBox #univ li,
+#info .cont .sentBox #voca li,
+#info .cont .sentBox #jc li {
+    padding: 0;
+    margin: ;
+    list-style-type: disc;
+    font-size: 14px;
+    float: left;
+    margin-left: 15px;
+    width: 95%;
+}
+
+
+/* --------------------------------------------------------
+    会社説明会（新卒・中途）
+-------------------------------------------------------- */ 
+/* 卒業生別　表 */
+#info .cont .sentBox .session {
+    margin-bottom:20px;
+}
+
+#info .cont .sentBox .session h4 {
+    font-size: 16px;
+}
+
+/* スケジュール */
+#info .cont .sentBox .session thead th {
+    display: none;
+}
+
+#info .cont .sentBox .session table tbody tr th.date {
+    /*border-top: 5px #6093ca solid;*/
+    border-bottom: 5px #6093ca solid;
+    border-collapse: collapse;
+    display: block;
+    font-weight: bold;
+    padding: 10px 0;
+    margin-top: 10px;
+    width: 100%;
+}
+
+#info .cont .sentBox .session table tbody tr td {
+    padding: 10px 0;
+}
+
+#info .cont .sentBox .session table tbody tr td.time,
+#info .cont .sentBox .session table tbody tr td.venue,
+#info .cont .sentBox .session table tbody tr td.apply {
+    display: block;
+    width: 100%;
+    font-size: 14px;
+}
+
+#info .cont .sentBox .session table tbody tr td.time::before {
+                content: "時間 ： ";
+            }
+#info .cont .sentBox .session table tbody tr td.venue::before {
+                content: "開催地 ： ";
+            }
+
+#info .cont .sentBox .session table tbody tr td.apply::before {
+                content: "応募締切 ： ";
+            } 
+
+/* 会場のご案内 */
+#info .cont .sentBox .access .tokyo,
+#info .cont .sentBox .access .osaka {
+    margin-bottom: 30px;
+}
+
+#info .cont .sentBox .guide {
+    padding: 16px;
+    margin-bottom: 16px;
+}
+
+#info .cont .sentBox .guide p.btn {
+    background-color: #555;   
+    clear: both;
+    width: 100%;
+}
+
+#info .cont .sentBox .access .ggmap{
+    width: 100%;
+    margin-top: 20px;
+}
+/* --------------------------------------------------
+    バナー 横1列
+-------------------------------------------------- */
+.banner{
+    position: relative;
+    margin-top:15px;
+    /*width: 400px;*/
+}
+
+@media screen and (max-width: 480px) {
+        .banner
+         {
+        position: relative;
+        width: 100% !important;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .banner {
+        position: relative;
+        width: 10% !important;
+        margin-left: -30px;
+    }
+}
+@media only screen and (orientation:landscape) {
+    /* ランドスケープ用 */
+    .banner {
+        position: relative;
+        width: 100% !important;
+    }
+}
