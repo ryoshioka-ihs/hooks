@@ -325,6 +325,10 @@ span{
     width: 22%
 }
 
+#info .cont .sentBox .session table tbody tr td.situation {
+    width: 10%
+}
+
 /* 会場のご案内 */
 #info .cont .sentBox .access h4 {
     border-bottom: 1px #e4dfcf solid;
