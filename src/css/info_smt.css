@@ -83,6 +83,10 @@
     text-align: center;
 }
 
+.flow{
+	max-width: 100%;
+}
+
 /*クローズボタン（幅が狭い）*/
 .closes{
     width: 40%;

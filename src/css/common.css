@@ -814,7 +814,7 @@ header {
 			line-height: 1.4;
 			display: table-cell;
 			vertical-align: middle;
-			padding: 0 12%;
+			/*padding: 0 12%;*/
 		}
 
 		#lNav li a {
