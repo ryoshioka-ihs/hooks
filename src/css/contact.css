@@ -17,15 +17,38 @@
 
 #contact .cont .sentBox table.form th {
     background-color: #F9FAFC;
-    text-align: center;    
+    text-align: left;    
     padding: 10px;
     border: 1px solid #E6E9EE;
-    width: 11em;
+    /*width: 11em;*/
+    width: 30%;
+}
+
+#contact .cont .sentBox table.form th span {
+    color: red;
+    font-weight: bold;
 }
 
 #contact .cont .sentBox table.form td {
     padding: 10px;
     border: 1px solid #E6E9EE;
+    /*width: 10%;*/
+}
+
+#contact .cont .sentBox table.form td.w10 {
+    width: 10%;
+}
+#contact .cont .sentBox table.form td.w20 {
+    width: 20%;
+}
+
+#contact .cont .sentBox table.form td.w30 {
+    width: 30%;
+}
+
+
+#contact .cont .sentBox table.form td.text {
+    width: 5%;
 }
 
 #contact .cont .sentBox table.form td form.birthday {
@@ -38,7 +61,12 @@
 #contact .cont .sentBox table.form tbody td select,
 #contact .cont .sentBox table.form tbody td input {
     border: none;
+    width: 100%;
 }
+
+#contact .cont .sentBox table.form tbody td input.none{
+    width: auto;
+} 
 
 #contact .cont .sentBox table.form tbody td textarea {
     width: 450px;
