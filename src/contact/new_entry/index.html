@@ -21,49 +21,47 @@ title: 新卒採用エントリーフォーム | IHS新卒・中途採用サイ�
             <section>
                 <h3><span>2019年新卒入社 会社説明会お申込み</span></h3>
                 <div class="sentBox margb60">
-                	<form action="mailer.php" method="post" enctype="multipart/form-data">
+                    <form action="mailer.php" method="post" enctype="multipart/form-data">
                     <section>
                         <table class="form">
                             <tbody>
-							  <tr>
-							    <th><span class="R">【必須】</span>種別</th>
-							    <td colspan="6">
-							    	<select name="new" required>
-							    		<option></option>
-							    		<option value="新卒（2019年卒）">新卒（2019年卒）</option>
-							    	</select>
-							    </th>
-							  </tr>
-							  <tr>
-							    <th><span class="R">【必須】</span>氏名（全角文字）</th>
-							    <td colspan="6">
-							    	<input type="text" name="name" placeholder="(例)本郷　太郎" required>
-							    </td>
-							  </tr>
-							  <tr>
-							    <th><span class="R">【必須】</span>フリガナ（全角カナ）</th>
-							    <td colspan="6">
-							    	<input type="text" name="phonetic" placeholder="(例)ホンゴウ　タロウ" required="">
-							    </td>
-							  </tr>
-							  <tr>
-							    <th><span class="R">【必須】</span>性別</th>
-							    <td colspan="6">
-							    	<select name="sex" required>
-							    		<option></option>
-							    		<option value="男性">男性</option>
-							    		<option value="女性">女性</option>
-							    	</select>
-							    </td>
-							  </tr>
-							  <tr>
-							    <th><span class="R">【必須】</span>生年月日</th>
-							    <td class="w20">
-							    	<input name="birth_year" type="text" class="Bjs-changeYear" maxlength='4' required>
-							    </td>
-							    <td class="w10">年</td>
-							    <td class="w20">
-							    	<select name="birth_month" class="Bjs-changeMonth" required>                                 	
+                              <tr>
+                                <th><span class="R">【必須】</span>種別</th>
+                                <td colspan="6">
+                                    <select name="new" required>
+                                        <option></option>
+                                        <option value="新卒（2019年卒）">新卒（2019年卒）</option>
+                                    </select>
+                              </tr>
+                            　　<tr>
+                                <th><span class="R">【必須】</span>氏名（全角文字）</th>
+                                <td colspan="6">
+                                    <input type="text" name="name" placeholder="(例)本郷　太郎" required>
+                                </td>
+                              <tr>
+                                <th><span class="R">【必須】</span>フリガナ（全角カナ）</th>
+                                <td colspan="6">
+                                    <input type="text" name="phonetic" placeholder="(例)ホンゴウ　タロウ" required>
+                                </td>
+                              </tr>
+                              <tr>
+                                <th><span class="R">【必須】</span>性別</th>
+                                <td colspan="6">
+                                    <select name="sex" required>
+                                        <option></option>
+                                        <option value="男性">男性</option>
+                                        <option value="女性">女性</option>
+                                    </select>
+                                </td>
+                              </tr>
+                              <tr>
+                                <th><span class="R">【必須】</span>生年月日</th>
+                                <td class="w20">
+                                    <input name="birth_year" type="text" class="Bjs-changeYear" maxlength='4' placeholder="西暦" required>
+                                </td>
+                                <td class="w10">年</td>
+                                <td class="w20">
+                                    <select name="birth_month" class="Bjs-changeMonth" required>                                    
                                         <option value="1">1</option>
                                         <option value="2">2</option>
                                         <option value="3">3</option>
@@ -77,10 +75,10 @@ title: 新卒採用エントリーフォーム | IHS新卒・中途採用サイ�
                                         <option value="11">11</option>
                                         <option value="12">12</option>
                                     </select>
-							    </td>
-							    <td class="w10">月</td>
-							    <td class="w20">
-							    	<select name="birth_day" class="Bjs-changeDay" required>                              	
+                                </td>
+                                <td class="w10">月</td>
+                                <td class="w20">
+                                    <select name="birth_day" class="Bjs-changeDay" required>                                
                                         <option value="1">1</option>
                                         <option value="2">2</option>
                                         <option value="3">3</option>
@@ -112,14 +110,14 @@ title: 新卒採用エントリーフォーム | IHS新卒・中途採用サイ�
                                         <option value="30">30</option>
                                         <option value="31">31</option>
                                     </select>
-							    </td>
-							    <td class="w10">日</td>
-							  </tr>
-							  <tr>
-							    <th><span class="R">【必須】</span>お住まい</th>
-							    <td colspan="6">
-							    	<select name="residence"　required>
-                                    	<option></option>
+                                </td>
+                                <td class="w10">日</td>
+                              </tr>
+                              <tr>
+                                <th><span class="R">【必須】</span>お住まい</th>
+                                <td colspan="6">
+                                    <select name="residence"　required>
+                                        <option></option>
                                         <option value="男性">北海道</option>
                                         <option value="青森県">青森県</option>
                                         <option value="岩手県">岩手県</option>
@@ -169,110 +167,101 @@ title: 新卒採用エントリーフォーム | IHS新卒・中途採用サイ�
                                         <option value="沖縄県">沖縄県</option>
                                         <option value="日本国外">日本国外</option>
                                     </select>
-							    </td>
-							  </tr>
-							  <tr>
-							    <th>お住まい（日本国外を選択された方）</th>
-							    <td colspan="6">
-							    	<input type="text" name="other_residence" placeholder="国名を入力してください">
-							    </td>
-							  </tr>
-							  <tr>
-							    <th><span class="R">【必須】</span>電話番号（携帯番号）</th>
-							    <td>
-							    	<input type="tel" name="phone1" required placeholder="070" maxlength='3'>
-							    </td>
-							    <td>-</td>
-							    <td>
-							    	<input type="tel" name="phone2" required placeholder="0000" maxlength='4'>
-							    </td>
-							    <td>-</td>
-							    <td colspan="2">
-							    	<input type="tel" name="phone3" required placeholder="0000" maxlength='4'>
-							    </td>
-							  </tr>
-							  <tr>
-							    <th><span class="R">【必須】</span>メールアドレス<br>
-							    ※</th>
-							    <td colspan="6">
-							    	<input type="email" name="emailadd" required>
-							    </td>
-							  </tr>
-
-							  <tr>
-							    <th>何を見てご応募いただきましたか？（複数回答可）</th>
-							    <td colspan="6">
-							    	<input type="checkbox" name="enquete1" class="none" value="学校求人票">学校求人票
-							    	<input type="checkbox" name="enquete1" class="none" value="学内説明会">学内説明会
-							    	<input type="checkbox" name="enquete1" class="none" value="弊社HP">弊社HP
-							    	<input type="checkbox" name="enquete1" class="none" value="ハローワーク">ハローワーク
-							    	<input type="checkbox" name="enquete1" class="none" value="その他">その他
-							    </td>
-							  </tr>
-							  <tr>
-							    <th>その他を選択された方はご記入ください。</th>
-							    <td colspan="6">
-							    	<input type="text" name="enquete1_ohter">
-							    </td>
-							  </tr>
-							  <tr>
-							    <th><span class="R">【必須】</span>会社説明会希望日時</th>
-							    <td colspan="6">
-							    	<select name="experience" required>
-							    		<option value="2018年9月14日（金）13:30-16:30［東京］">2018年9月14日（金）13:30-16:30［東京］</option>
-							    		<option value="2018年9月25日（火）16:30-19:00［東京］">2018年9月25日（火）16:30-19:00［東京］</option>
-							    	</select>
-							    </td>
-							  </tr>
-							  <tr>
-							    <th>業務体験※希望される方のみ選択してください</th>
-							    <td colspan="6">
-							    	<select name="experience">
-							    		<option value="希望しない">希望しない</option>
-							    		<option value="2018年9月20日（木）13:30-15:30［構築］">2018年9月20日（木）13:30-15:30［構築］</option>
-							    	</select>
-							    </td>
-							  </tr>
-							  <tr>
-							    <th><span class="R">【必須】</span>現在の状態</th>
-							    <td colspan="6">
-							    	<select name="status" required>
-							    		<option value="大学院生">大学院生</option>
-							    		<option value="大学生">大学生</option>
-							    		<option value="短期大学生">短期大学生</option>
-							    		<option value="専門学生">専門学生</option>
-							    		<option value="高専生">高専生</option>
-							    		<option value="高校生">高校生</option>
-							    		<option value="その他">その他</option>
-							    	</select>
-							    </td>
-							  </tr>
-							  <tr>
-							    <th>その他を選択された方はご記入ください。</th>
-							    <td colspan="6">
-							    	<input type="text" name="status_other">
-							    </td>
-							  </tr>
-							  <tr>
-							    <th><span class="R">【必須】</span>最終卒業学校名（全角文字）</th>
-							    <td colspan="6">
-							    	<input type="text" name="last_school" required>
-							    </td>
-							  </tr>
-							  <tr>
-							    <th>備考</th>
-							    <td colspan="6">
-							    	<textarea name="remarks"　cols="100" rows="5" maxlength="500"></textarea>
-							    </td>
-							  </tr>
-							  <!--<tr>
-							    <th>履歴書</th>
-							    <td colspan="6">
-							    	<input type="file" name="resume"><br>
-							    	<p>履歴書が無い方は<a href="https://www.iimhs.co.jp/recruit/image/entry/IHS履歴書.xlsx">こちらからダウンロード</a>可能です。</p>
-							    </td>
-							  </tr>
-							  -->
+                                </td>
+                              </tr>
+                              <tr>
+                                <th>お住まい（日本国外を選択された方）</th>
+                                <td colspan="6">
+                                    <input type="text" name="other_residence" placeholder="国名を入力してください">
+                                </td>
+                              </tr>
+                              <tr>
+                                <th><span class="R">【必須】</span>電話番号（携帯番号）</th>
+                                <td>
+                                    <input type="tel" name="phone1" required placeholder="070" maxlength='3'>
+                                </td>
+                                <td>-</td>
+                                <td>
+                                    <input type="tel" name="phone2" required placeholder="0000" maxlength='4'>
+                                </td>
+                                <td>-</td>
+                                <td colspan="2">
+                                    <input type="tel" name="phone3" required placeholder="0000" maxlength='4'>
+                                </td>
+                              </tr>
+                              <tr>
+                                <th><span class="R">【必須】</span>メールアドレス<br>
+                                ※</th>
+                                <td colspan="6">
+                                    <input type="email" name="emailadd" placeholder="(例)abc@iimhs.co.jp" required>
+                                </td>
+                              </tr>
+                              <tr>
+                                <th>何を見てご応募いただきましたか？（複数回答可）</th>
+                                <td colspan="6">
+                                    <input type="checkbox" name="enquete1" class="none" value="学校求人票">学校求人票
+                                    <input type="checkbox" name="enquete1" class="none" value="学内説明会">学内説明会
+                                    <input type="checkbox" name="enquete1" class="none" value="弊社HP">弊社HP
+                                    <input type="checkbox" name="enquete1" class="none" value="ハローワーク">ハローワーク
+                                    <input type="checkbox" name="enquete1" class="none" value="その他">その他
+                                </td>
+                              </tr>
+                              <tr>
+                                <th>その他を選択された方はご記入ください。</th>
+                                <td colspan="6">
+                                    <input type="text" name="enquete1_ohter">
+                                </td>
+                              </tr>
+                              <tr>
+                                <th><span class="R">【必須】</span>会社説明会希望日時</th>
+                                <td colspan="6">
+                                    <select name="experience" required>
+                                        <option value="2018年9月14日（金）13:30-16:30［東京］">2018年9月14日（金）13:30-16:30［東京］</option>
+                                        <option value="2018年9月25日（火）16:30-19:00［東京］">2018年9月25日（火）16:30-19:00［東京］</option>
+                                    </select>
+                                </td>
+                              </tr>
+                              <tr>
+                                <th>業務体験※希望される方のみ選択してください</th>
+                                <td colspan="6">
+                                    <select name="experience">
+                                        <option value="希望しない">希望しない</option>
+                                        <option value="2018年9月20日（木）13:30-15:30［構築］">2018年9月20日（木）13:30-15:30［構築］</option>
+                                    </select>
+                                </td>
+                              </tr>
+                              <tr>
+                                <th><span class="R">【必須】</span>現在の状態</th>
+                                <td colspan="6">
+                                    <select name="status" required>
+                                        <option value="大学院生">大学院生</option>
+                                        <option value="大学生">大学生</option>
+                                        <option value="短期大学生">短期大学生</option>
+                                        <option value="専門学生">専門学生</option>
+                                        <option value="高専生">高専生</option>
+                                        <option value="高校生">高校生</option>
+                                        <option value="その他">その他</option>
+                                    </select>
+                                </td>
+                              </tr>
+                              <tr>
+                                <th>その他を選択された方はご記入ください。</th>
+                                <td colspan="6">
+                                    <input type="text" name="status_other">
+                                </td>
+                              </tr>
+                              <tr>
+                                <th><span class="R">【必須】</span>最終卒業学校名（全角文字）</th>
+                                <td colspan="6">
+                                    <input type="text" name="last_school" required>
+                                </td>
+                              </tr>
+                              <tr>
+                                <th>備考</th>
+                                <td colspan="6">
+                                    <input type="text" name="remarks" >
+                                </td>
+                              </tr>
                                 <tr>
                                     <td colspan="7">本フォームから送信頂きました個人情報については、弊社の「採用応募者に対する個人情報の取り扱いについて」( <a href="http://www.iimhs.co.jp/privacy/recruit.html">http://www.iimhs.co.jp/privacy/recruit.html</a> ) に則り管理致します。何卒ご理解、ご了承賜ります様宜しくお願い致します。<br>
                                     <input type="checkbox" name="checkbox" value="同意する" required class="none">同意する
