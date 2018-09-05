@@ -23,68 +23,57 @@ title: 中途採用エントリーフォーム | IHS新卒・中途採用サイ�
                 <div class="sentBox margb60">
                 	<form action="mailer.php" method="post" enctype="multipart/form-data">
                     <section>
+                    	<p>「<span style="color: red">※</span>」が付いている項目は必須項目です。</p>
+                    	<p>携帯電話・スマートフォンからエントリーの方へ<br>「ドメイン指定受信」機能を利用されている方は、「iimhs.co.jp」からメールを受信できるよう設定してください。</p>
                         <table class="form">
                             <tbody>
 							  <tr>
-							    <th><span class="R">【必須】</span>現在のステータス</th>
+							    <th><span class="R">※</span>希望の職種</th>
 							    <td colspan="6">
-							    	<select name="status" required>
-							    		<option></option>
-							    		<option value="在職中">在職中</option>
-							    		<option value="離職中">離職中</option>
-							    		<option value="その他">その他</option>
-							    	</select>
-							    </th>
-							  </tr>
-							  <tr>
-							    <th><span class="R">【必須】</span>勤続年数</th>
-							    <td colspan="6">
-							    	<select name="working_year" required>
-							    		<option></option>
-							    		<option value="1年未満">1年未満</option>
-							    		<option value="1～3年">1～3年</option>
-							    		<option value="3～5年">3～5年</option>
-							    		<option value="5～10年">5～10年</option>
-							    		<option value="10年以上">10年以上</option>
-							    	</select>
+							    	<select name="desired_job_category" required>
+                                        <option></option>                                    	
+                                        <option value="【未経験】総合的な技術職">【未経験】総合的な技術職</option>
+                                        <option value="【未経験】専門技術職">【未経験】専門技術職</option>
+                                        <option value="【未経験】営業職">【未経験】営業職</option>
+                                        <option value="【経験者】専門技術職">【経験者】専門技術職</option>
+                                        <option value="【経験者】ITソリューション営業/営業マネージャー">【経験者】ITソリューション営業/営業マネージャー</option>
+                                        <option value="【経験者】ITソリューション営業/企画営業マネージャー">【経験者】ITソリューション営業/企画営業マネージャー</option>
+                                    </select>
 							    </td>
 							  </tr>
 							  <tr>
-							    <th><span class="R">【必須】</span>現在の職種</th>
+							    <th><span class="R">※</span>就業可能時期</th>
 							    <td colspan="6">
-							    	<select name="job_category" required>
-							    		<option></option>
-							    		<option value="IT">IT</option>
-							    	</select>
+							    	<select name="start_work" required>
+                                        <option></option>                                    	
+                                        <option value="すぐ">すぐ</option>
+                                        <option value="3ヶ月以内">3ヶ月以内</option>
+                                        <option value="半年以内">半年以内</option>
+                                        <option value="未定">未定</option>
+                                    </select>
 							    </td>
 							  </tr>
 							  <tr>
-							    <th>現在の年収</th>
-							    <td colspan="6">
-							    	<select name="current_annual_income">
-							    		<option></option>
-							    		<option value="100万円未満">100万円未満</option>
-							    		<option value="100～300万円">100～300万円</option>
-							    		<option value="300～500万円">300～500万円</option>
-							    		<option value="500～800万円">500～800万円</option>
-							    		<option value="800万円以上">800万円以上</option>
-							    	</select>
+							    <th>希望の年収</th>
+							    <td colspan="4">
+							    	<input type="text" name="desired_annual_income" placeholder="(例)300">
 							    </td>
+							    <td colspan="2">万円</td>
 							  </tr>
 							  <tr>
-							    <th><span class="R">【必須】</span>氏名（全角文字）</th>
+							    <th><span class="R">※</span>氏名（全角文字）</th>
 							    <td colspan="6">
 							    	<input type="text" name="name" placeholder="(例)本郷　太郎" required>
 							    </td>
 							  </tr>
 							  <tr>
-							    <th><span class="R">【必須】</span>フリガナ（全角カナ）</th>
+							    <th><span class="R">※</span>フリガナ（全角カナ）</th>
 							    <td colspan="6">
 							    	<input type="text" name="phonetic" placeholder="(例)ホンゴウ　タロウ" required>
 							    </td>
 							  </tr>
 							  <tr>
-							    <th><span class="R">【必須】</span>性別</th>
+							    <th><span class="R">※</span>性別</th>
 							    <td colspan="6">
 							    	<select name="sex" required>
 							    		<option></option>
@@ -94,7 +83,7 @@ title: 中途採用エントリーフォーム | IHS新卒・中途採用サイ�
 							    </td>
 							  </tr>
 							  <tr>
-							    <th><span class="R">【必須】</span>生年月日</th>
+							    <th><span class="R">※</span>生年月日</th>
 							    <td class="w20">
 							    	<input name="birth_year" type="text" class="Bjs-changeYear" maxlength='4' required placeholder="西暦">
 							    </td>
@@ -153,7 +142,7 @@ title: 中途採用エントリーフォーム | IHS新卒・中途採用サイ�
 							    <td class="w10">日</td>
 							  </tr>
 							  <tr>
-							    <th><span class="R">【必須】</span>お住まい</th>
+							    <th><span class="R">※</span>お住まい</th>
 							    <td colspan="6">
 							    	<select name="residence"　required>
                                     	<option></option>
@@ -215,7 +204,7 @@ title: 中途採用エントリーフォーム | IHS新卒・中途採用サイ�
 							    </td>
 							  </tr>
 							  <tr>
-							    <th><span class="R">【必須】</span>電話番号（携帯番号）</th>
+							    <th><span class="R">※</span>電話番号（携帯番号）</th>
 							    <td>
 							    	<input type="tel" name="phone1" required placeholder="070" maxlength='3'>
 							    </td>
@@ -229,47 +218,62 @@ title: 中途採用エントリーフォーム | IHS新卒・中途採用サイ�
 							    </td>
 							  </tr>
 							  <tr>
-							    <th><span class="R">【必須】</span>メールアドレス<br>
-							    ※</th>
+							    <th><span class="R">※</span>メールアドレス<br>
+							    </th>
 							    <td colspan="6">
-							    	<input type="email" name="emailadd" placeholder="(例)abc@iimhs.co.jp"　required>
+							    	<input type="email" name="emailadd" placeholder="abc@iimhs.co.jp"　required>
 							    </td>
 							  </tr>
 							  <tr>
-							    <th><span class="R">【必須】</span>就業可能時期</th>
+							    <th><span class="R">※</span>現在のステータス</th>
 							    <td colspan="6">
-							    	<select name="start_work" required>
-                                        <option></option>                                    	
-                                        <option value="すぐ">すぐ</option>
-                                        <option value="3ヶ月以内">3ヶ月以内</option>
-                                        <option value="半年以内">半年以内</option>
-                                        <option value="未定">未定</option>
-                                    </select>
+							    	<select name="status" required>
+							    		<option></option>
+							    		<option value="在職中">在職中</option>
+							    		<option value="離職中">離職中</option>
+							    		<option value="その他">その他</option>
+							    	</select>
+							    </th>
+							  </tr>
+							  <tr>
+							    <th><span class="R">※</span>現在の職種</th>
+							    <td colspan="6">
+							    	<select name="job_category" required>
+							    		<option></option>
+							    		<option value="管理・事務">管理・事務</option>
+							    		<option value="販売・接客">販売・接客</option>
+							    		<option value="企画・営業">企画・営業</option>
+							    		<option value="ITエンジニア">ITエンジニア</option>
+							    		<option value="その他の技術職">その他の技術職</option>
+							    		<option value="その他">その他</option>
+							    	</select>
 							    </td>
 							  </tr>
 							  <tr>
-							    <th><span class="R">【必須】</span>希望の職種</th>
+							    <th><span class="R">※</span>勤続年数</th>
 							    <td colspan="6">
-							    	<select name="desired_job_category" required>
-                                        <option></option>                                    	
-                                        <option value="【未経験】総合的な技術職">【未経験】総合的な技術職</option>
-                                        <option value="【未経験】専門技術職">【未経験】専門技術職</option>
-                                        <option value="【未経験】営業職">【未経験】営業職</option>
-                                        <option value="【経験者】専門技術職">【経験者】専門技術職</option>
-                                        <option value="【経験者】ITソリューション営業/営業マネージャー">【経験者】ITソリューション営業/営業マネージャー</option>
-                                        <option value="【経験者】ITソリューション営業/企画営業マネージャー">【経験者】ITソリューション営業/企画営業マネージャー</option>
-                                    </select>
+							    	<select name="working_year" required>
+							    		<option></option>
+							    		<option value="1年未満">1年未満</option>
+							    		<option value="1～3年">1～3年</option>
+							    		<option value="3～5年">3～5年</option>
+							    		<option value="5～10年">5～10年</option>
+							    		<option value="10年以上">10年以上</option>
+							    	</select>
 							    </td>
 							  </tr>
+
 							  <tr>
-							    <th>希望の年収</th>
+							    <th>現在の年収</th>
 							    <td colspan="4">
-							    	<input type="text" name="desired_annual_income" placeholder="(例)300">
+							    	<input type="text" name="current_annual_income" placeholder="(例)300">
 							    </td>
 							    <td colspan="2">万円</td>
 							  </tr>
+
+
 							  <tr>
-							    <th><span class="R">【必須】</span>第一面接希望日程</td>
+							    <th><span class="R">※</span>第一面接希望日程</td>
 							    <td class="w20">
 							    	<select name="interview1_year"  class="one-changeYear" required>
 							    		<option value="2018">2018</option>
@@ -463,14 +467,13 @@ title: 中途採用エントリーフォーム | IHS新卒・中途採用サイ�
 							    	<input type="text" name="remarks">
 							    </td>
 							  </tr>
-							  <!--<tr>
-							    <th>履歴書</th>
-							    <td colspan="6">
-							    	<input type="file" name="resume"><br>
-							    	<p>履歴書が無い方は<a href="https://www.iimhs.co.jp/recruit/image/entry/IHS履歴書.xlsx">こちらからダウンロード</a>可能です。</p>
+							  <tr>
+							    <!--<th>履歴書</th>-->
+							    <td colspan="7">
+							    	<p>履歴書が無い方は<a href="https://www.iimhs.co.jp/recruit/image/entry/テンプレート_履歴書.xls">こちらからダウンロード</a>可能です。</p>
 							    </td>
 							  </tr>
-							  -->
+							  
                                 <tr>
                                     <td colspan="7">本フォームから送信頂きました個人情報については、弊社の「採用応募者に対する個人情報の取り扱いについて」( <a href="http://www.iimhs.co.jp/privacy/recruit.html">http://www.iimhs.co.jp/privacy/recruit.html</a> ) に則り管理致します。何卒ご理解、ご了承賜ります様宜しくお願い致します。<br>
                                     <input type="checkbox" name="checkbox" value="同意する" required class="none">同意する
@@ -480,10 +483,14 @@ title: 中途採用エントリーフォーム | IHS新卒・中途採用サイ�
                         </table>
                         
                         <input type="submit" value="送信する" class="btn" style="background-color: #FF9B2A">
+
                     </section>
                 </form>
+
                 </div>
+
             </section>
+
         </div>
         <!--/.cont-->
     </section>
