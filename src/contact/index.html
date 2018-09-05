@@ -9,7 +9,7 @@ title: 採用に関するお問い合わせ | IHS新卒・中途採用サイト
 <article id="contact">
     <section>
         <div id="kv1" class="ttl">
-            <h2><span>採用エントリーフォーム</span>ENTRY FORM</h2>
+            <h2><span>採用についてのお問合わせ</span>CONTACT</h2>
         </div>
         <div class="cont">
             <!--<nav id="lNav">
@@ -24,31 +24,48 @@ title: 採用に関するお問い合わせ | IHS新卒・中途採用サイト
 
                 	<form action="mailer.php" method="post">
                     <section>
+                        <p>「<span style="color: red">※</span>」が付いている項目は必須項目です。</p>
+                        <p>携帯電話・スマートフォンからエントリーの方へ<br>「ドメイン指定受信」機能を利用されている方は、「iimhs.co.jp」からメールを受信できるよう設定してください。</p>
                         <table class="form">
                             <tbody>
-                                <tr>
-                                    <th>お名前<br>(全角文字)</th>
-                                    <td><input type="text" name="name" required></td>
-                                </tr>
-                                <tr>
-                                    <th>フリガナ<br>(全角カタカナ)</th>
-                                    <td><input type="text" name="name2" required></td>
-                                </tr>
-                                <tr>
-                                    <th>メールアドレス</th>
-                                    <td><input type="text" name="emailAdd" required></td>
-                                </tr>
-                                <tr>
-                                    <th>電話番号</th>
-                                    <td><input type="text" name="phone" required></td>
-                                </tr>
+                            　　<tr>
+                                <th><span class="R">※</span>氏名（全角文字）</th>
+                                <td colspan="6">
+                                    <input type="text" name="name" placeholder="(例)本郷　太郎" required>
+                                </td>
+                              <tr>
+                                <th><span class="R">※</span>フリガナ（全角カナ）</th>
+                                <td colspan="6">
+                                    <input type="text" name="phonetic" placeholder="(例)ホンゴウ　タロウ" required>
+                                </td>
+                              </tr>
+                              <tr>
+                                <th><span class="R">※</span>メールアドレス</th>
+                                <td colspan="6">
+                                    <input type="email" name="emailadd" placeholder="(例)abc@iimhs.co.jp" required>
+                                </td>
+                              </tr>
+                              <tr>
+                                <th><span class="R">※</span>電話番号（携帯番号）</th>
+                                <td>
+                                    <input type="tel" name="phone1" required placeholder="070" maxlength='3'>
+                                </td>
+                                <td>-</td>
+                                <td>
+                                    <input type="tel" name="phone2" required placeholder="0000" maxlength='4'>
+                                </td>
+                                <td>-</td>
+                                <td colspan="2">
+                                    <input type="tel" name="phone3" required placeholder="0000" maxlength='4'>
+                                </td>
+                              </tr>
                                	<tr>
-                                    <th>お問合わせ内容※できるだけ具体的に</th>
-                                    <td><textarea cols="200" name="message" class="message"></textarea></td>
+                                    <th><span class="R">※</span>お問合わせ内容</th>
+                                    <td colspan="6"><textarea cols="200" name="message" class="message" placeholder="できるだけ具体的に記載してください。"></textarea></td>
                                 </tr>                              
                                 <tr>
                                     <th>個人情報の取扱いについて</th>
-                                    <td>本フォームから送信頂きました個人情報については、弊社の「採用応募者に対する個人情報の取り扱いについて」( <a href="http://www.iimhs.co.jp/privacy/recruit.html">http://www.iimhs.co.jp/privacy/recruit.html</a> ) に則り管理致します。何卒ご理解、ご了承賜ります様宜しくお願い致します。<br><input type="checkbox" name="checkbox" class="none" value="同意する" required>同意する</td>
+                                    <td colspan="6">本フォームから送信頂きました個人情報については、弊社の「採用応募者に対する個人情報の取り扱いについて」( <a href="http://www.iimhs.co.jp/privacy/recruit.html">http://www.iimhs.co.jp/privacy/recruit.html</a> ) に則り管理致します。何卒ご理解、ご了承賜ります様宜しくお願い致します。<br><input type="checkbox" name="checkbox" class="none" value="同意する" required>同意する</td>
                                 </tr>
                             </tbody>
                         </table>

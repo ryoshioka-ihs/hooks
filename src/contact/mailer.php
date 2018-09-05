@@ -11,9 +11,11 @@ $to                = $_ENV['TO'];
 
 //お客様情報
 $name = $_POST['name'];//お名前
-$name2 = $_POST['name2'];//フリガナ
-$emailAdd = $_POST['emailAdd'];//メールアドレス
-$phone = $_POST['phone'];//電話番号
+$phonetic = $_POST['phonetic'];//フリガナ
+$emailadd = $_POST['emailadd'];//メールアドレス
+$phone1 = $_POST['phone1'];//電話番号(1枠目)
+$phone2 = $_POST['phone2'];//電話番号(2枠目)
+$phone3 = $_POST['phone3'];//電話番号(3枠目)
 $message = $_POST['message'];//応募きっかけ
 $check = $_POST['check'];// 個人情報の取扱
 
@@ -45,10 +47,10 @@ $email->addTo($to)->
        setFrom($from)->
        setFromName("IHS採用担当")->
        setSubject("【IHS採用サイトからお問い合わせがありました】" )->
-       setText("IHS採用サイトより、下記のお問い合わせがありました。\r\nご確認の上、ご対応をお願いいたします。\r\n\r\n\お名前: $name （ $name2 ）\r\n メールアドレス: $emailAdd \r\n\r\n 電話番号: $phone \r\n お問合わせ内容: $message \r\n ")->
+       setText("IHS採用サイトより、下記のお問い合わせがありました。\r\nご確認の上、ご対応をお願いいたします。\r\n\r\n\お名前: $name （ $phonetic ）\r\n メールアドレス: $emailadd \r\n\r\n 電話番号: $phone1 - $phone2 - phone3 \r\n お問合わせ内容: $message \r\n ")->
 
 
-       setHtml("IHS採用サイトより、下記のお問い合わせがありました。<br />ご確認の上、ご対応をお願いいたします。<br /><br />お名前: $name （ $name2 ）<br /> メールアドレス: $emailAdd <br /> 電話番号: $phone <br /> お問合わせ内容: $message <br />")->
+       setHtml("IHS採用サイトより、下記のお問い合わせがありました。<br />ご確認の上、ご対応をお願いいたします。<br /><br />お名前: $name （ $phonetic ）<br /> メールアドレス: $emailadd <br /> 電話番号: $phone1 - $phone2 - phone3 <br /> お問合わせ内容: $message <br />")->
        addCategory('contact');
 
 $response = $sendgrid->send($email);
