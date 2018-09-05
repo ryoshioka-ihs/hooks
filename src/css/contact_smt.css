@@ -20,7 +20,7 @@
     text-align: center;    
     padding: 10px;
     border: 1px solid #E6E9EE;
-    width: 11em;
+    /*width: 11em;*/
 }
 
 #contact .cont .sentBox table.form td {
