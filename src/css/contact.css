@@ -60,7 +60,7 @@
 #contact .cont .sentBox table.form tbody td form,
 #contact .cont .sentBox table.form tbody td select,
 #contact .cont .sentBox table.form tbody td input {
-    border: none;
+    /*border: none;*/
     width: 100%;
 }
 
