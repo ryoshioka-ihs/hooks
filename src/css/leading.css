@@ -60,4 +60,8 @@
     list-style-type: disc;
 }
 
+/* バナー 横に一列） */
+    .banner{
+    width: 100%;
+}
 
