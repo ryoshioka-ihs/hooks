@@ -1,0 +1,63 @@
+@charset "UTF-8";
+/* CSS Document */
+/*===================================================
+    リーディングページCSS
+===================================================*/
+
+
+
+
+/* --------------------------------------------------------
+    セミナー
+-------------------------------------------------------- */	
+
+#leading .cont figure.leading {
+    max-width: 960px;
+    margin-bottom: 60px;
+}
+
+
+/*　テーブル　*/
+
+#leading .cont .sentBox table.leading {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#leading .cont .sentBox table.leading th {
+    text-align: left;
+}
+
+#leading .cont .sentBox table.leading thead th {
+    border-bottom: 4px solid #050DF6;
+    padding: 0px 15px 15px;
+    font-weight: bold;
+    font-size: 1.125em;
+}
+
+#leading .cont .sentBox table.leading tbody th,
+#leading .cont .sentBox table.leading tbody td {
+    border-bottom: 1px solid #f4f4f4;
+    padding: 15px;
+}
+
+#leading .cont .sentBox table.leading tbody th.dash,
+#leading .cont .sentBox table.leading tbody td.dash {
+    border-bottom: 1px dashed #f4f4f4;
+    padding: 15px 15px 10px;
+}
+
+#leading .cont .sentBox table.leading tbody td.dept {
+    width: 35%;
+}
+
+#leading .cont .sentBox table.leading tbody td ul {
+    margin-left: 12px;
+}
+
+#leading .cont .sentBox table.leading tbody td li {
+    padding-left: 0;
+    list-style-type: disc;
+}
+
+
