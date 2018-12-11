@@ -4,7 +4,25 @@
     リーディングページCSS
 ===================================================*/
 
+/* --------------------------------------------------------
+    イラスト（背景白）
+-------------------------------------------------------- */
+.sentBox_i {
+    background-color: #FFF;
+    padding: 5% 20px;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+    overflow: hidden;
+    position: relative;
+    line-height: 2;
+}
 
+.sentBox_i h2{
+    border-bottom: 4px solid #050DF6;
+    font-weight: bold;
+    font-size: 1.125em;
+    margin-bottom: 20px;
+}
 
 
 /* --------------------------------------------------------
