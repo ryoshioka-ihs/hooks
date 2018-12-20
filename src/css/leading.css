@@ -5,27 +5,6 @@
 ===================================================*/
 
 /* --------------------------------------------------------
-    イラスト（背景白）
--------------------------------------------------------- */
-.sentBox_i {
-    background-color: #FFF;
-    padding: 5% 20px;
-    margin-bottom: 20px;
-    letter-spacing: 1px;
-    overflow: hidden;
-    position: relative;
-    line-height: 2;
-}
-
-.sentBox_i h2{
-    border-bottom: 4px solid #050DF6;
-    font-weight: bold;
-    font-size: 1.125em;
-    margin-bottom: 20px;
-}
-
-
-/* --------------------------------------------------------
     セミナー
 -------------------------------------------------------- */	
 
@@ -57,6 +36,14 @@
 #leading .cont .sentBox table.leading tbody td {
     border-bottom: 1px solid #f4f4f4;
     padding: 15px;
+}
+
+#leading .cont .sentBox table.leading tbody th ul{
+    margin-left: 50px; 
+}
+
+#leading .cont .sentBox table.leading tbody th ul li{
+    list-style-image: url(/recruit/image/seminar/check.png);
 }
 
 #leading .cont .sentBox table.leading tbody th.dash,

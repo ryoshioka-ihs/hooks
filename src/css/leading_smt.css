@@ -3,7 +3,13 @@
 /*===================================================
    リーディングページCSS
 ===================================================*/
+#leading .cont .sentBox table.leading tbody th ul{
+    margin-left:30px; 
+}
 
+#leading .cont .sentBox table.leading thead th {
+    font-size: 15px;
+}
 
 /* --------------------------------------------------
     バナー 横1列
