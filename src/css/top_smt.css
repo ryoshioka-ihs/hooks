@@ -39,6 +39,32 @@
 	border-color: transparent !important;
 }
 
+/*  採用
+-------------------------------------------------- */
+.saiyou ul li{
+	width: 112px;
+	height: 30px;
+	line-height: 30px;
+	font-size: 15px;
+	margin-right: 3px;
+}
+
+.saiyou ul li.shinsotsu{
+	background-color: #F781F3;
+}
+.saiyou ul li.chuto{
+	background-color: #58FA58;
+}
+.saiyou ul li.expert{
+	background-color: #81DAF5;
+}
+
+.saiyou ul li.shinsotsu,
+.saiyou ul li.chuto,
+.saiyou ul li.expert{
+	text-shadow: 0 2px 0 #6E6E6E;
+}
+
 /* --------------------------------------------------
     footer
 -------------------------------------------------- */
