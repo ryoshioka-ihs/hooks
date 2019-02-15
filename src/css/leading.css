@@ -65,6 +65,10 @@
     list-style-type: disc;
 }
 
+#leading .cont .sentBox table.leading tbody td li.whiteDisc{
+    list-style-type: circle;
+}
+
 /* バナー 横に一列） */
     .banner{
     width: 100%;
