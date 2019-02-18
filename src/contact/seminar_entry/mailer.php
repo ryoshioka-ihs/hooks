@@ -28,12 +28,14 @@ $remarks = $_POST['remarks'];//備考
 $checkbox = $_POST['checkbox'];//同意する
 
 //セミナー複数選択
-echo ;
 if (isset($_POST['course']) && is_array($_POST['course'])) {
-  foreach( $_POST['course'] as $value ){
-      echo "{$value}, ";
-  }
+    $course = implode("<br />", $_POST["course"]);
 }
+
+//アンケート
+if (isset($_POST['enquete']) && is_array($_POST['enquete'])) {
+      $enquete = implode("<br />", $_POST["enquete"]);
+  }
 
 //ユーザーへ送信するメール
 $sendgrid = new SendGrid($sendgrid_username,$sendgrid_password, array("turn_off_ssl_verification" => true));
@@ -56,7 +58,7 @@ $email->addTo($emailadd)->
               電話番号: $phone1 - $phone2 - $phone3 \r\n 
               メールアドレス: $emailadd \r\n 
               現在の状態: $status \r\n 
-              ご希望のコース：$course \r\n 
+              ご希望のコース：\r\n $course \r\n 
               PCの貸出：$pc \r\n
               業種: $status_other \r\n 
               学校名: $last_school \r\n
@@ -81,7 +83,7 @@ $email->addTo($emailadd)->
               電話番号: $phone1 - $phone2 - $phone3 <br> 
               メールアドレス: $emailadd <br> 
               現在の状態: $status <br> 
-              ご希望のコース：$course <br>
+              ご希望のコース：<br> $course <br>
               PCの貸出：$pc <br> 
               業種: $status_other <br> 
               学校名: $last_school <br>
@@ -110,11 +112,11 @@ $email->addTo($to)->
               電話番号: $phone1 - $phone2 - $phone3 \r\n 
               メールアドレス: $emailadd \r\n 
               現在の状態: $status \r\n 
-              ご希望のコース：$course \r\n
+              ご希望のコース：\r\n $course \r\n 
               PCの貸出：$pc \r\n
               業種: $status_other \r\n 
               学校名: $last_school \r\n
-              何をみてご応募いただきましたか？: $enquete \r\n
+              何をみてご応募いただきましたか？：\r\n $enquete \r\n 
               備考: $remarks \r\n\r\n
 
               確認後は受付完了メールを送付ください。\r\n")->
@@ -122,7 +124,6 @@ $email->addTo($to)->
 
 
        setHtml("
-
               氏名: $name 様 <br>
               フリガナ: $phonetic 様<br>
               性別: $sex <br> 
@@ -130,15 +131,14 @@ $email->addTo($to)->
               電話番号: $phone1 - $phone2 - $phone3 <br>
               メールアドレス: $emailadd <br> 
               現在の状態: $status <br> 
-              ご希望のコース：$course <br>
+              ご希望のコース：<br> $course <br>
               PCの貸出：$pc <br> 
               業種: $status_other <br> 
               学校名: $last_school <br><br>
-              何をみてご応募いただきましたか？: $enquete <br>
+              何をみてご応募いただきましたか？: <br> $enquete <br>
               備考: $remarks <br><br>
 
               確認後は受付完了メールを送付ください。<br>")->
-       addCategory('contact');
        addCategory('contact');
 
 $response = $sendgrid->send($email);

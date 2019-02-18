@@ -65,12 +65,28 @@
     list-style-type: disc;
 }
 
-#leading .cont .sentBox table.leading tbody td li.whiteDisc{
+#leading .cont .sentBox table.leading tbody td li ul li.whiteDisc{
     list-style-type: circle;
 }
 
 /* バナー 横に一列） */
     .banner{
     width: 100%;
+}
+
+/*エントリーフォームへのバナーボタン*/
+.enBtn{
+    width: 100%;
+    height: 60px;
+    background-color: #81BEF7;
+    text-align: center;
+    padding:10px; 
+
+}
+
+.enBtn a{
+    color: #FFF;
+    font-weight: bold;
+    font-size: 2em;
 }
 
