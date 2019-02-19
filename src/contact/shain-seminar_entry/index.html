@@ -1,0 +1,171 @@
+---
+layout: contact
+global_menu: contact
+description: IHSが開催している「IT無料セミナー」のお申込みフォームです。
+keywords: 無料セミナー,WinActor,IT基礎,Excel活用,Excelマクロ,VBScript,VBA,PowerShell,Python
+title: IT無料セミナーエントリーフォーム | IHS新卒・中途採用サイト
+---
+<!--▽コンテンツ(コンテンツidを指定。会社紹介→company、IHSの魅力→appeal、先輩インタビュー→interview、募集要項→recruit、よくある質問→faq)▽-->
+<article id="contact">
+    <section>
+        <div id="kv1" class="ttl">
+            <h2><span>IT無料セミナー　エントリーフォーム</span>SEMINAR ENTRY FORM</h2>
+        </div>
+        <div class="cont">
+
+            <section>
+                <h3><span>セミナーお申込み</span></h3>
+                <div class="sentBox margb60">
+                    <form action="mailer.php" method="post" enctype="multipart/form-data">
+                    <section>
+	                    <p>セミナーのお申込みをご希望される方は、必要事項を明記の上、下記フォームよりお申し込みください。</p>
+	                    <table class="form">
+                            <tbody>
+                            　　<tr>
+                                <th><span class="R">【必須】</span>氏名（全角文字）</th>
+                                <td colspan="6">
+                                    <input type="text" name="name" placeholder="(例)本郷　太郎" required>
+                                </td>
+                              <tr>
+                                <th><span class="R">【必須】</span>フリガナ（全角カナ）</th>
+                                <td colspan="6">
+                                    <input type="text" name="phonetic" placeholder="(例)ホンゴウ　タロウ" required>
+                                </td>
+                              </tr>
+                              <tr>
+                                <th><span class="R">【必須】</span>性別</th>
+                                <td colspan="6">
+                                    <select name="sex" required>
+                                        <option></option>
+                                        <option value="男性">男性</option>
+                                        <option value="女性">女性</option>
+                                    </select>
+                                </td>
+                              </tr>
+                              <tr>
+                                <th><span class="R">【必須】</span>年齢</th>
+                                <td colspan="6">
+                                    <input type="text" name="age" placeholder="(例)20" required>
+                                </td>
+                              </tr>
+                              <tr>
+                                <th><span class="R">【必須】</span>電話番号（携帯番号）</th>
+                                <td>
+                                    <input type="tel" name="phone1" required placeholder="070" maxlength='3'>
+                                </td>
+                                <td>-</td>
+                                <td>
+                                    <input type="tel" name="phone2" required placeholder="0000" maxlength='4'>
+                                </td>
+                                <td>-</td>
+                                <td colspan="2">
+                                    <input type="tel" name="phone3" required placeholder="0000" maxlength='4'>
+                                </td>
+                              </tr>
+                              <tr>
+                                <th><span class="R">【必須】</span>メールアドレス</th>
+                                <td colspan="6">
+                                    <input type="email" name="emailadd" placeholder="(例)abc@iimhs.co.jp" required>
+                                </td>
+                              </tr>
+
+                              <tr>
+                                <th><span class="R">【必須】</span>ご希望のコース</th>
+                                <td colspan="6">
+                                	<table>
+                                		<tbody>
+                                			<tr style="border: none">
+                                				<td style="border: none"><input type="checkbox" name="course[]" value="　・4月：Excelの活用" class="none"></td>
+                                				<td style="border: none">4月：Excelの活用</td>
+                                			</tr>
+                                			<tr>
+                                				<td style="border: none"><input type="checkbox" name="course[]" value="　・5月：Excelマクロ（マクロで作業を自動化）" class="none"></td>
+                                				<td style="border: none">5月：Excelマクロ（マクロで作業を自動化）</td>
+                                			</tr>
+                                			<tr>
+                                				<td style="border: none"><input type="checkbox" name="course[]" value="　・6月：WinActorを理解する" class="none"></td>
+                                				<td style="border: none">6月：WinActorを理解する</td>
+                                			</tr>
+                                			<tr>
+                                				<td style="border: none"><input type="checkbox" name="course[]" value="　・4月27日：Excelの活用、JAVA入門、情報処理技術の基本" class="none"></td>
+                                				<td style="border: none">4月27日：Excelの活用、JAVA入門、情報処理技術の基本</td>
+                                			</tr>
+                                			<tr>
+                                				<td style="border: none"><input type="checkbox" name="course[]" value="　・4月28日：Excelマクロ（マクロで作業を自動化）、コンピュータサイエンス入門、VBScriptの使い方、情報処理技術の基本" class="none"></td>
+                                				<td style="border: none">4月28日：Excelマクロ（マクロで作業を自動化）、コンピュータサイエンス入門、VBScriptの使い方、情報処理技術の基本</td>
+                                			</tr>
+                                			<tr>
+                                				<td style="border: none"><input type="checkbox" name="course[]" value="　・4月29日：WinActorを理解する、使ってみよう！PowerShell、情報処理技術の基本" class="none"></td>
+                                				<td style="border: none">4月29日：WinActorを理解する、使ってみよう！PowerShell、情報処理技術の基本</td>
+                                			</tr>
+                                		</tbody>
+                                  </table>
+                                </td>
+                              </tr>
+                              <tr>
+                                <th><span class="R">【必須】</span>PCの貸出<br><span style="color: red">※基本的に各自持参ください。持っていない方は『希望する』を選択ください。</span></th>
+                                <td colspan="6">
+                                    <select name="pc" required>                                    	
+                                    	<option value="希望しない">希望しない</option>
+                                    	<option value="希望する">希望する</option>
+                                    </select>
+                                </td>
+                              </tr>
+
+                              <tr>
+                                <th>備考</th>
+                                <td colspan="6">
+                                    <input type="text" name="remarks" >
+                                </td>
+                              </tr>
+                                <tr>
+                                    <td colspan="7">本フォームから送信頂きました個人情報については、弊社の「採用応募者に対する個人情報の取り扱いについて」( <a href="http://www.iimhs.co.jp/privacy/recruit.html">http://www.iimhs.co.jp/privacy/recruit.html</a> ) に則り管理致します。何卒ご理解、ご了承賜ります様宜しくお願い致します。<br>
+                                    <input type="checkbox" name="checkbox" value="同意する" required class="none">同意する
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        
+                        <input type="submit" value="送信する" class="btn" style="background-color: #FF9B2A">
+                    </section>
+                </form>
+                </div>
+            </section>
+        </div>
+        <!--/.cont-->
+    </section>
+</article>
+<!--△コンテンツ△-->
+
+
+    <!--生年月日制御スクリプト-->
+    <script type="text/javascript">
+        (function($){
+          function formSetDay(){
+            var lastday = formSetLastDay($('.Bjs-changeYear').val(), $('.Bjs-changeMonth').val());
+            var option = '';
+            for (var i = 1; i <= lastday; i++) {
+              if (i === $('.Bjs-changeDay').val()){
+                option += '<option value="' + i + '" selected="selected">' + i + '</option>\n';
+              }else{
+                option += '<option value="' + i + '">' + i + '</option>\n';
+              }
+            }
+            $('.Bjs-changeDay').html(option);
+          }
+
+          function formSetLastDay(year, month){
+            var lastday = new Array('', 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31);
+            if ((year % 4 === 0 && year % 100 !== 0) || year % 400 === 0){
+              lastday[2] = 29;
+            }
+            return lastday[month];
+          }
+
+          $('.Bjs-changeYear, .Bjs-changeMonth').change(function(){
+            formSetDay();
+          });
+        })(jQuery);
+    </script>
+    <!--生年月日制御スクリプト-->
+
