@@ -219,7 +219,36 @@ article #kv6.ttl {
 	background-image: url("/recruit/image/common/kv6.png");
 }
 
-/* タイトル */
+/* h1タイトル */
+article .ttl h1 {
+	max-width: 580px;
+	text-align: center;
+	margin: auto;
+	position: relative;
+	border: solid 3px transparent;
+	font-family: 'Montserrat';
+	font-size: 55px;
+	letter-spacing: 2px;
+	color: #FFF;
+	text-shadow:	
+    #5882FA 3px 0px 0px, #5882FA -3px 0px 0px,
+    #5882FA 0px -2px 0px, #5882FA 0px 2px 0px,
+    #5882FA 2px 2px 0px, #5882FA -2px 2px 0px,
+    #5882FA 2px -2px 0px, #5882FA -2px -2px 0px,
+    #5882FA 1px 2px 0px, #5882FA -1px 2px 0px,
+    #5882FA 1px -2px 0px, #5882FA -1px -2px 0px,
+    #5882FA 2px 1px 0px, #5882FA -2px 1px 0px,
+    #5882FA 2px -1px 0px, #5882FA -2px -1px 0px,
+    #5882FA 1px 1px 0px, #5882FA -1px 1px 0px,
+    #5882FA 1px -1px 0px, #5882FA -1px -1px 0px;*/
+
+}
+
+article .ttl h1 span{
+	font-size: 25px;
+}
+
+/* h2タイトル */
 article .ttl h2 {
 	max-width: 580px;
 	height: 100px;

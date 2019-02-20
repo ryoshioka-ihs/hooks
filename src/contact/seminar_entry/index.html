@@ -1,15 +1,15 @@
 ---
 layout: contact
 global_menu: contact
-description: IHSが開催している「情報処理技術の基本&業務プロセスセミナー」のお申込みフォームです。
-keywords: セミナー,情報処理技術,IT基礎,無料,業務プロセス
-title: 情報処理技術の基本&業務プロセスセミナーエントリーフォーム | IHS新卒・中途採用サイト
+description: IHSが開催している「IT無料セミナー」のお申込みフォームです。
+keywords: 無料セミナー,WinActor,IT基礎,Excel活用,Excelマクロ,VBScript,VBA,PowerShell,Python
+title: IT無料セミナーエントリーフォーム | IHS新卒・中途採用サイト
 ---
 <!--▽コンテンツ(コンテンツidを指定。会社紹介→company、IHSの魅力→appeal、先輩インタビュー→interview、募集要項→recruit、よくある質問→faq)▽-->
 <article id="contact">
     <section>
         <div id="kv1" class="ttl">
-            <h2><span>情報処理技術の基本&業務プロセス セミナーエントリーフォーム</span>SEMINAR ENTRY FORM</h2>
+            <h2><span>IT無料セミナー　エントリーフォーム</span>SEMINAR ENTRY FORM</h2>
         </div>
         <div class="cont">
 
@@ -18,23 +18,25 @@ title: 情報処理技術の基本&業務プロセスセミナーエントリー
                 <div class="sentBox margb60">
                     <form action="mailer.php" method="post" enctype="multipart/form-data">
                     <section>
-                        <p>「<span style="color: red">※</span>」が付いている項目は必須項目です。</p>
+                      <p>セミナーのお申込みをご希望される方は、必要事項を明記の上、下記フォームよりお申し込みください。</p>
+                      <p>お申込みの受付が完了しましたら、担当より折り返しご連絡させていただきます。</p>
+                      <p>お申し込み後、3営業日以内に受付完了の連絡がない場合、恐れ入りますが「web@iimhs.co.jp」へお問い合わせいただけますでしょうか。
                         <p>携帯電話・スマートフォンからエントリーの方へ<br>「ドメイン指定受信」機能を利用されている方は、「iimhs.co.jp」からメールを受信できるよう設定してください。</p>
                         <table class="form">
                             <tbody>
                             　　<tr>
-                                <th><span class="R">※</span>氏名（全角文字）</th>
+                                <th><span class="R">【必須】</span>氏名（全角文字）</th>
                                 <td colspan="6">
                                     <input type="text" name="name" placeholder="(例)本郷　太郎" required>
                                 </td>
                               <tr>
-                                <th><span class="R">※</span>フリガナ（全角カナ）</th>
+                                <th><span class="R">【必須】</span>フリガナ（全角カナ）</th>
                                 <td colspan="6">
                                     <input type="text" name="phonetic" placeholder="(例)ホンゴウ　タロウ" required>
                                 </td>
                               </tr>
                               <tr>
-                                <th><span class="R">※</span>性別</th>
+                                <th><span class="R">【必須】</span>性別</th>
                                 <td colspan="6">
                                     <select name="sex" required>
                                         <option></option>
@@ -44,13 +46,13 @@ title: 情報処理技術の基本&業務プロセスセミナーエントリー
                                 </td>
                               </tr>
                               <tr>
-                                <th><span class="R">※</span>年齢</th>
+                                <th><span class="R">【必須】</span>年齢</th>
                                 <td colspan="6">
                                     <input type="text" name="age" placeholder="(例)20" required>
                                 </td>
                               </tr>
                               <tr>
-                                <th><span class="R">※</span>電話番号（携帯番号）</th>
+                                <th><span class="R">【必須】</span>電話番号（携帯番号）</th>
                                 <td>
                                     <input type="tel" name="phone1" required placeholder="070" maxlength='3'>
                                 </td>
@@ -64,14 +66,14 @@ title: 情報処理技術の基本&業務プロセスセミナーエントリー
                                 </td>
                               </tr>
                               <tr>
-                                <th><span class="R">※</span>メールアドレス</th>
+                                <th><span class="R">【必須】</span>メールアドレス</th>
                                 <td colspan="6">
                                     <input type="email" name="emailadd" placeholder="(例)abc@iimhs.co.jp" required>
                                 </td>
                               </tr>
 
                               <tr>
-                                <th><span class="R">※</span>現在の状態</th>
+                                <th><span class="R">【必須】</span>現在の状態</th>
                                 <td colspan="6">
                                     <select name="status" required>
                                     	<option value="就業中">就業中</option>
@@ -87,6 +89,48 @@ title: 情報処理技術の基本&業務プロセスセミナーエントリー
                                 </td>
                               </tr>
                               <tr>
+                                <th><span class="R">【必須】</span>ご希望のコース</th>
+                                <td colspan="6">
+                                	<table>
+                                		<tbody>
+                                			<tr style="border: none">
+                                				<td style="border: none"><input type="checkbox" name="course[]" value="　・5月：Excelデータの活用" class="none"></td>
+                                				<td style="border: none">5月：Excel データの活用</td>
+                                			</tr>
+                                			<tr>
+                                				<td style="border: none"><input type="checkbox" name="course[]" value="　・6月：Excel マクロ入門（マクロで作業を自動化）" class="none"></td>
+                                				<td style="border: none">6月：Excel マクロ入門（マクロで作業を自動化）</td>
+                                			</tr>
+                                			<tr>
+                                				<td style="border: none"><input type="checkbox" name="course[]" value="　・7月：RPA WinActorを理解する" class="none"></td>
+                                				<td style="border: none">7月：RPA WinActorを理解する</td>
+                                			</tr>
+                                			<tr>
+                                				<td style="border: none"><input type="checkbox" name="course[]" value="　・4月27日：Excelでデータ活用、JAVA入門、情報処理技術の基本" class="none"></td>
+                                				<td style="border: none">4月27日：Excelでデータ活用、JAVA入門、情報処理技術の基本</td>
+                                			</tr>
+                                			<tr>
+                                				<td style="border: none"><input type="checkbox" name="course[]" value="　・4月28日：Excelマクロ（マクロで作業を自動化）、コンピュータサイエンス入門、Python入門、情報処理技術の基本" class="none"></td>
+                                				<td style="border: none">4月28日：Excelマクロ（マクロで作業を自動化）、コンピュータサイエンス入門、Python入門、情報処理技術の基本</td>
+                                			</tr>
+                                			<tr>
+                                				<td style="border: none"><input type="checkbox" name="course[]" value="　・4月29日：RPA WinActorを理解する、使ってみよう！PowerShell、情報処理技術の基本" class="none"></td>
+                                				<td style="border: none">4月29日：RPA WinActorを理解する、使ってみよう！PowerShell、情報処理技術の基本</td>
+                                			</tr>
+                                		</tbody>
+                                  </table>
+                                </td>
+                              </tr>
+                              <tr>
+                                <th><span class="R">【必須】</span>PCの貸出</th>
+                                <td colspan="6">
+                                    <select name="pc" required>
+                                    	<option value="希望する">希望する</option>
+                                    	<option value="希望しない">希望しない</option>
+                                    </select>
+                                </td>
+                              </tr>
+                              <tr>
                                 <th>業種<br>※「就業中」を選択された方はご記入ください。</th>
                                 <td colspan="6">
                                     <input type="text" name="status_other">
@@ -95,7 +139,19 @@ title: 情報処理技術の基本&業務プロセスセミナーエントリー
                               <tr>
                                 <th>学校名（全角文字）<br>※学生の方はご記入ください。</th>
                                 <td colspan="6">
-                                    <input type="text" name="last_school" required>
+                                    <input type="text" name="last_school">
+<<<<<<< HEAD
+                                </td>
+                              </tr>
+                              <tr>
+                                <th><span class="R">【必須】</span>何を見てご応募いただきましたか？</th>
+                                <td colspan="6">
+                                  <input type="checkbox" name="enquete[]" value="　・インターネットからの検索" class="none">インターネットからの検索
+                                  <input type="checkbox" name="enquete[]" value="　・広告" class="none">広告
+                                  <input type="checkbox" name="enquete[]" value="　・その他" class="none">その他
+                                    </select>
+=======
+>>>>>>> 湯谷さん削除
                                 </td>
                               </tr>
                               <tr>

@@ -43,6 +43,15 @@ article .ttl {
 	margin-bottom: 65px;
 	background-size: auto 100%;
 }
+
+/* h1タイトル */
+article .ttl h1 {
+	font-size: 35px;
+}
+
+article .ttl h1 span{
+	font-size: 20px;
+}
 	/* タイトル */
 	article .ttl h2 {
 		max-width: 260px;
