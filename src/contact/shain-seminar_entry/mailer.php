@@ -55,7 +55,7 @@ $email->addTo($emailadd)->
               備考: $remarks \r\n\r\n
 
               ※本メールは自動送信されています。\r\n
-              お問い合わせがある場合は、web@iimhs.co.jpまでご連絡ください。")->
+              お問い合わせがある場合は、itseminar@iimhs.co.jpまでご連絡ください。")->
 
 
 
@@ -74,7 +74,7 @@ $email->addTo($emailadd)->
               備考: $remarks <br><br>
 
               ※本メールは自動送信されています。<br><br>
-              お問い合わせがある場合は、web@iimhs.co.jpまでご連絡ください。")->
+              お問い合わせがある場合は、itseminar@iimhs.co.jpまでご連絡ください。")->
        addCategory('contact');
 
 $response = $sendgrid->send($email);
@@ -99,7 +99,8 @@ $email->addTo($to)->
               PCの貸出：$pc \r\n
               備考: $remarks \r\n\r\n
 
-              ")->
+              ※本メールは自動送信されています。\r\n
+              お問い合わせがある場合は、itseminar@iimhs.co.jpまでご連絡ください。")->
 
 
 
@@ -114,13 +115,14 @@ $email->addTo($to)->
               PCの貸出：$pc <br> 
               備考: $remarks <br><br>
 
-              ")->
+			  ※本メールは自動送信されています。<br><br>
+              お問い合わせがある場合は、itseminar@iimhs.co.jpまでご連絡ください。")->
        addCategory('contact');
 
 $response = $sendgrid->send($email);
 var_dump($response);
 
 // 正常終了時にthanks.htmlへリダイレクト
-header('Location: /recruit/contact/seminar_entry/thanks.html');
+header('Location: /recruit/contact/shain-seminar_entry/thanks.html');
 exit();
 
