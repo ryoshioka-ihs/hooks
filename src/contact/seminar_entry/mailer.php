@@ -43,6 +43,7 @@ $email    = new SendGrid\Email();
 $email->addTo($emailadd)->
        setFrom($from)->
        setFromName("IIMヒューマン・ソリューション株式会社")->
+<<<<<<< HEAD
        setSubject("【IHS】お申込みありがとうございます" )->
        setText(" $name 様\r\n\r\n
 
@@ -91,6 +92,14 @@ $email->addTo($emailadd)->
 
               ※本メールは自動送信されています。<br><br>
               お問い合わせがある場合は、web@iimhs.co.jpまでご連絡ください。")->
+=======
+       setSubject("【IHS】エントリーありがとうございます" )->
+       setText(" $name 様\r\n\r\nこの度はIIMヒューマン・ソリューションの『情報処理技術の基本&業務プロセスセミナー』へご応募くださり、\r\n誠にありがとうございます。\r\n採用担当より折り返しご連絡いたしますので、今しばらくお待ちください。\r\n\r\n 氏名: $name \r\n フリガナ: $phonetic \r\n 性別: $sex \r\n 年齢: $age 歳 \r\n 電話番号: $phone1 - $phone2 -$phone3 \r\n メールアドレス: $emailadd \r\n 現在の状態: $status \r\n 業種: $status_other \r\n 学校名: $last_school \r\n 備考: $remarks \r\n\r\n※本メールは自動送信されています。\r\nお問い合わせがある場合は、saiyou@iimhs.co.jpまでご連絡ください。")->
+
+
+
+       setHtml(" $name 様<br /><br />この度はIIMヒューマン・ソリューションの『情報処理技術の基本&業務プロセスセミナー』へご応募くださり、<br />誠にありがとうございます。<br />採用担当より折り返しご連絡いたしますので、今しばらくお待ちください。<br /><br /> 氏名: $name <br /> フリガナ: $phonetic <br /> 性別: $sex <br /> 年齢: $age 歳 <br /> 電話番号: $phone1 - $phone2 -$phone3 <br /> メールアドレス: $emailadd <br /> 現在の状態: $status <br /> 業種: $status_other <br /> 学校名: $last_school <br /> 備考: $remarks <br /><br />※本メールは自動送信されています。<br />お問い合わせがある場合は、saiyou@iimhs.co.jpまでご連絡ください。")->
+>>>>>>> 湯谷さん削除
        addCategory('contact');
 
 $response = $sendgrid->send($email);
@@ -102,6 +111,7 @@ $email    = new SendGrid\Email();
 $email->addTo($to)->
        setFrom($from)->
        setFromName("IHS")->
+<<<<<<< HEAD
        setSubject("【『IT無料セミナー』へのエントリーがありました】" )->
        setText(" 『IT無料セミナー』へのエントリーがありました\r\n\r\n
 
@@ -139,6 +149,13 @@ $email->addTo($to)->
               備考: $remarks <br><br>
 
               確認後は受付完了メールを送付ください。<br>")->
+=======
+       setSubject("【『情報処理技術の基本&業務プロセスセミナー』へのエントリーがありました】" )->
+       setText("下記内容にて『情報処理技術の基本&業務プロセスセミナー』へのお申込みを受け付けました。\r\nご担当者は確認後、受付メールを送付してください。\r\n\r\n氏名: $name \r\n フリガナ: $phonetic \r\n 性別: $sex \r\n 年齢: $age 歳 \r\n 電話番号: $phone1 - $phone2 -$phone3 \r\n メールアドレス: $emailadd \r\n 現在の状態: $status \r\n 業種: $status_other \r\n 学校名: $last_school \r\n 備考: $remarks")->
+
+
+       setHtml("下記内容にて『情報処理技術の基本&業務プロセスセミナー』へのお申込みを受け付けました。<br />ご担当者は確認後、受付メールを送付してください。<br /><br />氏名: $name <br /> フリガナ: $phonetic <br /> 性別: $sex <br /> 年齢: $age 歳 <br /> 電話番号: $phone1 - $phone2 -$phone3 <br /> メールアドレス: $emailadd <br /> 現在の状態: $status <br /> 業種: $status_other <br /> 学校名: $last_school<br /> 備考: $remarks <br /><br />")->
+>>>>>>> 湯谷さん削除
        addCategory('contact');
 
 $response = $sendgrid->send($email);
