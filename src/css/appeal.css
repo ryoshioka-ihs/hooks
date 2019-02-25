@@ -18,8 +18,8 @@
 	margin-top: 27px;
 }
 
-figure{
-	display: inline-block;
+.boxImg{
+	display: inline-flex;
 }
 
 figure.right{
@@ -27,7 +27,7 @@ figure.right{
 }
 
 
-/*figure
+
 
 /*//////////////////////////////////////////////////
     福利厚生・社内行事
