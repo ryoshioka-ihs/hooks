@@ -56,6 +56,10 @@
 	padding-top: 15px;
 }
 
+.boxImg{
+	display: inline-block;
+}
+
 figure.right{
 	margin-left: 0px;
 }
