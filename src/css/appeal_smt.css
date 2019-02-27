@@ -55,6 +55,14 @@
 #appeal .cont .sentBox .textArea02 {
 	padding-top: 15px;
 }
+
+.boxImg{
+	display: inline-block;
+}
+
+figure.right{
+	margin-left: 0px;
+}
 /*//////////////////////////////////////////////////
     女性が活躍できる職場
 ///////////////////////////////////////////////////*/

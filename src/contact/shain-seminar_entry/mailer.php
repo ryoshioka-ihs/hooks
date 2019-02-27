@@ -18,7 +18,10 @@ $phone1 = $_POST['phone1'];//電話番号1枠目
 $phone2 = $_POST['phone2'];//電話番号2枠目
 $phone3 = $_POST['phone3'];//電話番号3枠目
 $emailadd = $_POST['emailadd'];//メールアドレス
-$course = $_POST['course'];//セミナーコース
+$course1 = $_POST['course1'];//4月27日
+$course2 = $_POST['course2'];//4月28日
+$course3 = $_POST['course3'];//4月29日
+//$course4 = $_POST['course4'];//5～7月セミナー
 $pc = $_POST['pc'];//PC貸出希望
 $remarks = $_POST['remarks'];//備考
 $checkbox = $_POST['checkbox'];//同意する
@@ -50,7 +53,9 @@ $email->addTo($emailadd)->
               年齢: $age 歳 \r\n 
               電話番号: $phone1 - $phone2 - $phone3 \r\n 
               メールアドレス: $emailadd \r\n 
-              ご希望のコース：\r\n $course \r\n 
+              【4月27日（土）】：$course1 \r\n
+              【4月28日（日）】：$course2 \r\n
+              【4月29日（月・祝）】：$course3 \r\n
               PCの貸出：$pc \r\n
               備考: $remarks \r\n\r\n
 
@@ -69,7 +74,9 @@ $email->addTo($emailadd)->
               年齢: $age 歳 <br>
               電話番号: $phone1 - $phone2 - $phone3 <br> 
               メールアドレス: $emailadd <br> 
-              ご希望のコース：<br> $course <br>
+              【4月27日（土）】：$course1 <br>
+              【4月28日（日）】：$course2 <br>
+              【4月29日（月・祝）】：$course3 <br>
               PCの貸出：$pc <br> 
               備考: $remarks <br><br>
 
@@ -95,7 +102,9 @@ $email->addTo($to)->
               年齢: $age 歳 \r\n 
               電話番号: $phone1 - $phone2 - $phone3 \r\n 
               メールアドレス: $emailadd \r\n 
-              ご希望のコース：\r\n $course \r\n 
+              【4月27日（土）】：$course1 \r\n
+              【4月28日（日）】：$course2 \r\n
+              【4月29日（月・祝）】：$course3 \r\n
               PCの貸出：$pc \r\n
               備考: $remarks \r\n\r\n
 
@@ -111,11 +120,13 @@ $email->addTo($to)->
               年齢: $age 歳 <br> 
               電話番号: $phone1 - $phone2 - $phone3 <br>
               メールアドレス: $emailadd <br> 
-              ご希望のコース：<br> $course <br>
+              【4月27日（土）】：$course1 <br>
+              【4月28日（日）】：$course2 <br>
+              【4月29日（月・祝）】：$course3 <br>
               PCの貸出：$pc <br> 
               備考: $remarks <br><br>
 
-			  ※本メールは自動送信されています。<br><br>
+		※本メールは自動送信されています。<br><br>
               お問い合わせがある場合は、itseminar@iimhs.co.jpまでご連絡ください。")->
        addCategory('contact');
 
