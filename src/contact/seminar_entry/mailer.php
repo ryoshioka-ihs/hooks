@@ -18,8 +18,10 @@ $phone1 = $_POST['phone1'];//電話番号1枠目
 $phone2 = $_POST['phone2'];//電話番号2枠目
 $phone3 = $_POST['phone3'];//電話番号3枠目
 $emailadd = $_POST['emailadd'];//メールアドレス
-$status = $_POST['status'];//現在の状態
-$course = $_POST['course'];//セミナーコース
+$course1 = $_POST['course1'];//4月27日
+$course2 = $_POST['course2'];//4月28日
+$course3 = $_POST['course3'];//4月29日
+//$course4 = $_POST['course4'];//5～7月セミナー
 $pc = $_POST['pc'];//PC貸出希望
 $status_other = $_POST['status_other'];//業種
 $last_school = $_POST['last_school'];//学校名
@@ -43,7 +45,6 @@ $email    = new SendGrid\Email();
 $email->addTo($emailadd)->
        setFrom($from)->
        setFromName("IIMヒューマン・ソリューション株式会社")->
-<<<<<<< HEAD
        setSubject("【IHS】お申込みありがとうございます" )->
        setText(" $name 様\r\n\r\n
 
@@ -58,15 +59,17 @@ $email->addTo($emailadd)->
               年齢: $age 歳 \r\n 
               電話番号: $phone1 - $phone2 - $phone3 \r\n 
               メールアドレス: $emailadd \r\n 
-              現在の状態: $status \r\n 
-              ご希望のコース：\r\n $course \r\n 
+              【4月27日（土）】：$course1 \r\n
+              【4月28日（日）】：$course2 \r\n
+              【4月29日（月・祝）】：$course3 \r\n
+              【一般セミナー】：$course4 \r\n
               PCの貸出：$pc \r\n
               業種: $status_other \r\n 
               学校名: $last_school \r\n
               備考: $remarks \r\n\r\n
 
               ※本メールは自動送信されています。\r\n
-              お問い合わせがある場合は、web@iimhs.co.jpまでご連絡ください。")->
+              お問い合わせがある場合は、itseminar@iimhs.co.jpまでご連絡ください。")->
 
 
 
@@ -83,23 +86,17 @@ $email->addTo($emailadd)->
               年齢: $age 歳 <br>
               電話番号: $phone1 - $phone2 - $phone3 <br> 
               メールアドレス: $emailadd <br> 
-              現在の状態: $status <br> 
-              ご希望のコース：<br> $course <br>
-              PCの貸出：$pc <br> 
+              【4月27日（土）】：$course1 <br>
+              【4月28日（日）】：$course2 <br>
+              【4月29日（月・祝）】：$course3 <br>
+              【一般セミナー】：$course4 <br>
+              PCの貸出：$pc <br>
               業種: $status_other <br> 
               学校名: $last_school <br>
               備考: $remarks <br><br>
 
               ※本メールは自動送信されています。<br><br>
-              お問い合わせがある場合は、web@iimhs.co.jpまでご連絡ください。")->
-=======
-       setSubject("【IHS】エントリーありがとうございます" )->
-       setText(" $name 様\r\n\r\nこの度はIIMヒューマン・ソリューションの『情報処理技術の基本&業務プロセスセミナー』へご応募くださり、\r\n誠にありがとうございます。\r\n採用担当より折り返しご連絡いたしますので、今しばらくお待ちください。\r\n\r\n 氏名: $name \r\n フリガナ: $phonetic \r\n 性別: $sex \r\n 年齢: $age 歳 \r\n 電話番号: $phone1 - $phone2 -$phone3 \r\n メールアドレス: $emailadd \r\n 現在の状態: $status \r\n 業種: $status_other \r\n 学校名: $last_school \r\n 備考: $remarks \r\n\r\n※本メールは自動送信されています。\r\nお問い合わせがある場合は、saiyou@iimhs.co.jpまでご連絡ください。")->
-
-
-
-       setHtml(" $name 様<br /><br />この度はIIMヒューマン・ソリューションの『情報処理技術の基本&業務プロセスセミナー』へご応募くださり、<br />誠にありがとうございます。<br />採用担当より折り返しご連絡いたしますので、今しばらくお待ちください。<br /><br /> 氏名: $name <br /> フリガナ: $phonetic <br /> 性別: $sex <br /> 年齢: $age 歳 <br /> 電話番号: $phone1 - $phone2 -$phone3 <br /> メールアドレス: $emailadd <br /> 現在の状態: $status <br /> 業種: $status_other <br /> 学校名: $last_school <br /> 備考: $remarks <br /><br />※本メールは自動送信されています。<br />お問い合わせがある場合は、saiyou@iimhs.co.jpまでご連絡ください。")->
->>>>>>> 湯谷さん削除
+              お問い合わせがある場合は、itseminar@iimhs.co.jpまでご連絡ください。")->
        addCategory('contact');
 
 $response = $sendgrid->send($email);
@@ -111,7 +108,6 @@ $email    = new SendGrid\Email();
 $email->addTo($to)->
        setFrom($from)->
        setFromName("IHS")->
-<<<<<<< HEAD
        setSubject("【『IT無料セミナー』へのエントリーがありました】" )->
        setText(" 『IT無料セミナー』へのエントリーがありました\r\n\r\n
 
@@ -121,47 +117,44 @@ $email->addTo($to)->
               年齢: $age 歳 \r\n 
               電話番号: $phone1 - $phone2 - $phone3 \r\n 
               メールアドレス: $emailadd \r\n 
-              現在の状態: $status \r\n 
-              ご希望のコース：\r\n $course \r\n 
+              【4月27日（土）】：$course1 \r\n
+              【4月28日（日）】：$course2 \r\n
+              【4月29日（月・祝）】：$course3 \r\n
+              【一般セミナー】：$course4 \r\n
               PCの貸出：$pc \r\n
               業種: $status_other \r\n 
               学校名: $last_school \r\n
-              何をみてご応募いただきましたか？：\r\n $enquete \r\n 
               備考: $remarks \r\n\r\n
 
-              確認後は受付完了メールを送付ください。\r\n")->
+              ※本メールは自動送信されています。\r\n
+              お問い合わせがある場合は、itseminar@iimhs.co.jpまでご連絡ください。")->
 
 
 
        setHtml("
-              氏名: $name 様 <br>
-              フリガナ: $phonetic 様<br>
+              氏名: $name 様 <br> 
+              フリガナ: $phonetic 様 <br> 
               性別: $sex <br> 
-              年齢: $age 歳 <br> 
-              電話番号: $phone1 - $phone2 - $phone3 <br>
+              年齢: $age 歳 <br>
+              電話番号: $phone1 - $phone2 - $phone3 <br> 
               メールアドレス: $emailadd <br> 
-              現在の状態: $status <br> 
-              ご希望のコース：<br> $course <br>
-              PCの貸出：$pc <br> 
+              【4月27日（土）】：$course1 <br>
+              【4月28日（日）】：$course2 <br>
+              【4月29日（月・祝）】：$course3 <br>
+              【一般セミナー】：$course4 <br>
+              PCの貸出：$pc <br>
               業種: $status_other <br> 
-              学校名: $last_school <br><br>
-              何をみてご応募いただきましたか？: <br> $enquete <br>
+              学校名: $last_school <br>
               備考: $remarks <br><br>
 
-              確認後は受付完了メールを送付ください。<br>")->
-=======
-       setSubject("【『情報処理技術の基本&業務プロセスセミナー』へのエントリーがありました】" )->
-       setText("下記内容にて『情報処理技術の基本&業務プロセスセミナー』へのお申込みを受け付けました。\r\nご担当者は確認後、受付メールを送付してください。\r\n\r\n氏名: $name \r\n フリガナ: $phonetic \r\n 性別: $sex \r\n 年齢: $age 歳 \r\n 電話番号: $phone1 - $phone2 -$phone3 \r\n メールアドレス: $emailadd \r\n 現在の状態: $status \r\n 業種: $status_other \r\n 学校名: $last_school \r\n 備考: $remarks")->
-
-
-       setHtml("下記内容にて『情報処理技術の基本&業務プロセスセミナー』へのお申込みを受け付けました。<br />ご担当者は確認後、受付メールを送付してください。<br /><br />氏名: $name <br /> フリガナ: $phonetic <br /> 性別: $sex <br /> 年齢: $age 歳 <br /> 電話番号: $phone1 - $phone2 -$phone3 <br /> メールアドレス: $emailadd <br /> 現在の状態: $status <br /> 業種: $status_other <br /> 学校名: $last_school<br /> 備考: $remarks <br /><br />")->
->>>>>>> 湯谷さん削除
+		※本メールは自動送信されています。<br><br>
+              お問い合わせがある場合は、itseminar@iimhs.co.jpまでご連絡ください。")->
        addCategory('contact');
 
 $response = $sendgrid->send($email);
 var_dump($response);
 
 // 正常終了時にthanks.htmlへリダイレクト
-header('Location: /recruit/contact/seminar_entry/thanks.html');
+header('Location: /recruit/contact/shain-seminar_entry/thanks.html');
 exit();
 
