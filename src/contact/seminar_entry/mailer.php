@@ -21,11 +21,12 @@ $emailadd = $_POST['emailadd'];//メールアドレス
 $course1 = $_POST['course1'];//4月27日
 $course2 = $_POST['course2'];//4月28日
 $course3 = $_POST['course3'];//4月29日
-//$course4 = $_POST['course4'];//5～7月セミナー
+$course = $_POST['course'];//5～7月セミナー
 $pc = $_POST['pc'];//PC貸出希望
 $status_other = $_POST['status_other'];//業種
 $last_school = $_POST['last_school'];//学校名
-$enquete = $_POST['enquete'];//アンケート
+$enquete = $_POST['enquete'];//セミナーを知ったきっかけ
+$purpose = $_POST['purpose'];//セミナーに参加した目的
 $remarks = $_POST['remarks'];//備考
 $checkbox = $_POST['checkbox'];//同意する
 
@@ -34,10 +35,7 @@ if (isset($_POST['course']) && is_array($_POST['course'])) {
     $course = implode("<br />", $_POST["course"]);
 }
 
-//アンケート
-if (isset($_POST['enquete']) && is_array($_POST['enquete'])) {
-      $enquete = implode("<br />", $_POST["enquete"]);
-  }
+
 
 //ユーザーへ送信するメール
 $sendgrid = new SendGrid($sendgrid_username,$sendgrid_password, array("turn_off_ssl_verification" => true));
@@ -62,7 +60,8 @@ $email->addTo($emailadd)->
               【4月27日（土）】：$course1 \r\n
               【4月28日（日）】：$course2 \r\n
               【4月29日（月・祝）】：$course3 \r\n
-              【一般セミナー】：$course4 \r\n
+              【一般セミナー】：\r\n
+              　・$course \r\n
               PCの貸出：$pc \r\n
               業種: $status_other \r\n 
               学校名: $last_school \r\n
@@ -89,7 +88,8 @@ $email->addTo($emailadd)->
               【4月27日（土）】：$course1 <br>
               【4月28日（日）】：$course2 <br>
               【4月29日（月・祝）】：$course3 <br>
-              【一般セミナー】：$course4 <br>
+              【一般セミナー】：<br>
+              　・$course <br>
               PCの貸出：$pc <br>
               業種: $status_other <br> 
               学校名: $last_school <br>
@@ -120,10 +120,13 @@ $email->addTo($to)->
               【4月27日（土）】：$course1 \r\n
               【4月28日（日）】：$course2 \r\n
               【4月29日（月・祝）】：$course3 \r\n
-              【一般セミナー】：$course4 \r\n
+              【一般セミナー】：\r\n
+              　・$course \r\n
               PCの貸出：$pc \r\n
               業種: $status_other \r\n 
               学校名: $last_school \r\n
+              本セミナーを知ったきっかけ: $enquete \r\n
+              本セミナーに参加した目的: $purpose \r\n
               備考: $remarks \r\n\r\n
 
               ※本メールは自動送信されています。\r\n
@@ -141,10 +144,13 @@ $email->addTo($to)->
               【4月27日（土）】：$course1 <br>
               【4月28日（日）】：$course2 <br>
               【4月29日（月・祝）】：$course3 <br>
-              【一般セミナー】：$course4 <br>
+              【一般セミナー】：<br>
+              　・$course <br>
               PCの貸出：$pc <br>
               業種: $status_other <br> 
               学校名: $last_school <br>
+              本セミナーを知ったきっかけ: $enquete <br>
+              本セミナーに参加した目的: $purpose <br>
               備考: $remarks <br><br>
 
 		※本メールは自動送信されています。<br><br>

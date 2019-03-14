@@ -26,15 +26,6 @@ $pc = $_POST['pc'];//PC貸出希望
 $remarks = $_POST['remarks'];//備考
 $checkbox = $_POST['checkbox'];//同意する
 
-//セミナー複数選択
-if (isset($_POST['course']) && is_array($_POST['course'])) {
-    $course = implode("<br />", $_POST["course"]);
-}
-
-//アンケート
-if (isset($_POST['enquete']) && is_array($_POST['enquete'])) {
-      $enquete = implode("<br />", $_POST["enquete"]);
-  }
 
 //ユーザーへ送信するメール
 $sendgrid = new SendGrid($sendgrid_username,$sendgrid_password, array("turn_off_ssl_verification" => true));
