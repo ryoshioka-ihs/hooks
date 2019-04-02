@@ -28,6 +28,14 @@
         height: 90px;
     }
 
+    /*タブレットのwidthが1024pxの時*/
+    @media (width: 1024px){
+    	#index li{
+    		font-size: 16px;
+    	}
+    }
+
+
     #index li:first-child {
         margin-left: 0;
     }
@@ -85,7 +93,7 @@
 #info .cont .sentBox table.info th {
     background-color: #F9FAFC;
     text-align: center;
-    width: 7em;
+    width: 20%;
 }
 
 #info .cont .sentBox table.info tbody td ul {
@@ -186,40 +194,59 @@ span{
 
 .info2Box,
 .info3Box{
-    max-width: 50%;
     display: inline-block;
     margin-right: 20px;
+    margin-bottom: 20px;
     position: relative;
     width: 270px;
     height: 270px;
 }
 
+    /*タブレットのwidthが1024pxの時*/
+    @media (width: 1024px){
+    	.info3Box{
+    		width: 200px;
+    	}
+    }
+
+    /*タブレットのwidthが768pxの時*/
+    @media (width: 768px){
+    	.info3Box{
+    		width: 220px;
+    	}
+    }
+
 .info4Box{
-    max-width: 50%;
     display: inline-block;
     margin-right: 15px;
     position: relative;
+    margin-bottom: 20px;
     width: 225px;
     height: 225px;
 }
+    /*タブレットのwidthが1024pxの時*/
+    @media (width: 1024px){
+    	.info4Box{
+    		width: auto;
+    	}
+    }
+
 
 .textBox{
     padding:10px;
-    padding-top: 6%;
+    padding-top: 7%;
 }
 
 .info2Box h1,
-.info3Box h1{
+.info3Box h1,
+.info4Box h1{
     color: #000;
-    font-size: 25px;
+    font-size: 16px;
+    padding: 5px;
+    font-weight: bold;
     background-color: rgba( 255, 255, 255, 0.55 );
 }   
 
-.info4Box h1{
-    color: #000;
-    font-size: 24px;
-    background-color: rgba( 255, 255, 255, 0.55 );
-}
 
 .info2Box p,
 .info3Box p,
