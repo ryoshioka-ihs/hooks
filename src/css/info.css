@@ -192,59 +192,52 @@ span{
     text-align: center;
 }
 
-.info2Box,
-.info3Box{
-    display: inline-block;
+
+.infoBox{
     margin-right: 15px;
     position: relative;
     margin-bottom: 20px;
-    width: 225px;
-    height: 225px;
+    /*width: 225px;*/
+    height: 110px;
+}
+
+
+.infoBox > p{
+    padding-top: 10px;
+    color: #000;
+    padding: 5px;
 }
 
     /*タブレットのwidthが1024pxの時*/
     @media (width: 1024px){
-    	.info3Box{
+    	.infoBox{
     		width: 200px;
     	}
     }
 
     /*タブレットのwidthが768pxの時*/
     @media (width: 768px){
-    	.info3Box{
+    	.infoBox{
     		width: 220px;
     	}
     }
 
-
-
-.textBox{
-    padding:10px;
-    padding-top: 7%;
-}
-
-.info2Box h1,
-.info3Box h1{
-    color: #000;
-    font-size: 16px;
-    padding: 5px;
-    margin-top: 15px;
-    font-weight: bold;
-    background-color: rgba( 153, 153, 153, 0.2 );
-}   
-
-
-.info2Box p,
-.info3Box p{
-    color: #000;
-    padding: 5px;
-    background-color: rgba( 153, 153, 153, 0.2 );
-}   
-
-/*新卒の画像*/
 .boxBI{
     background-color: #FFF;
 }
+
+.textBox{
+    padding:10px;
+}
+
+.infoBox h1{
+    color: #000;
+    font-size: 18px;
+    padding: 5px;
+    margin-top: 15px;
+    font-weight: bold;
+}   
+
 
 /* --------------------------------------------------------
     卒業校一覧
