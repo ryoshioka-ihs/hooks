@@ -220,6 +220,7 @@ span{
 
 .textBox{
     padding:10px;
+    border: solid 3px #6093CA;
 }
 
 .infoBox h1{
