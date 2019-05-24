@@ -99,9 +99,9 @@ p.names {
 		overflow: hidden;
 	}
 		.senior li {
-			width: 280px;
-			height: 380px;
-			margin: 0 0 30px 20px;
+			width: 210px;
+			height: 320px;
+			margin: 0 0 20px 20px;
 			float: left;
 		}
 			.senior li a {
@@ -116,7 +116,7 @@ p.names {
 				}
 				.senior li a p.name {
 					height: 100px;
-					padding-top: 16px;
+					padding-top: 10px;
 					position: relative;
 				}
 				.senior li a p.name:before {
