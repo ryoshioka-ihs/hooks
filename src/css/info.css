@@ -86,7 +86,6 @@
 
 #info .cont .sentBox table.info th,
 #info .cont .sentBox table.info td {
-    padding: 10px;
     border: 1px solid #E6E9EE;
 }
 
@@ -94,6 +93,11 @@
     background-color: #F9FAFC;
     text-align: center;
     width: 20%;
+    padding: 10px 5px;
+}
+
+#info .cont .sentBox table.info td {
+    padding: 10px;
 }
 
 #info .cont .sentBox table.info tbody td ul {
@@ -114,11 +118,11 @@
     font-weight: bold;
 }
 
+
 span{
     /*font-size: 17px;*/
     font-weight: bold
 }
-
 
 /*　テーブル内　リンクボタン*/
 #info .cont .sentBox .info .btn {
@@ -208,19 +212,7 @@ span{
     padding: 5px;
 }
 
-    /*タブレットのwidthが1024pxの時*/
-    @media (width: 1024px){
-    	.infoBox{
-    		width: 200px;
-    	}
-    }
 
-    /*タブレットのwidthが768pxの時*/
-    @media (width: 768px){
-    	.infoBox{
-    		width: 220px;
-    	}
-    }
 
 .boxBI{
     background-color: #FFF;
