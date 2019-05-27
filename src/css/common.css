@@ -415,7 +415,7 @@ h3 + figure {
 -------------------------------------------------------- */
 .sentBox {
 	background-color: #FFF;
-	padding: 60px 6%;
+	padding: 60px 3%;
 	margin-bottom: 20px;
 	letter-spacing: 1px;
 	overflow: hidden;
@@ -813,7 +813,8 @@ header {
 /*  コンテンツ
 ------------------------------------------------ */
 .cont {
-	max-width: 960px;
+	/*max-width: 960px;*/
+	max-width: 1000px;
 	margin: auto;
 }
 

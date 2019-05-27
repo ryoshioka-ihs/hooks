@@ -4,6 +4,60 @@
     トップページ用CSS
 ===================================================*/
 
+/*  採用
+-------------------------------------------------- */
+.saiyou ul li{
+	width: 200px;
+	height: 50px;
+	line-height: 50px;
+	display: inline-block;
+	text-shadow: 0 2px 0 #BDBDBD;
+	font-size: 25px;
+	color: #FFF;
+	font-weight: bold;
+	text-align: center;
+	margin-right: 5px;
+}
+
+.saiyou ul li.shinsotsu,
+.saiyou ul li.chuto,
+.saiyou ul li.expert{
+		opacity: 0.8;
+}
+
+.saiyou ul li.shinsotsu{
+	background-color: #F6CEF5;
+}
+.saiyou ul li.chuto{
+	background-color: #E3F6CE;
+}
+
+.saiyou ul li.expert{
+	background-color: #CEECF5;
+}	
+
+.saiyou ul li.shinsotsu a,
+.saiyou ul li.chuto a,
+.saiyou ul li.expert a {
+	color: #FFF;
+}
+
+.saiyou ul li.shinsotsu:hover{
+	background-color: #F781F3;
+}
+.saiyou ul li.chuto:hover{
+	background-color: #58FA58;
+}
+.saiyou ul li.expert:hover{
+	background-color: #81DAF5;
+}
+
+.saiyou ul li.shinsotsu:hover,
+.saiyou ul li.chuto:hover,
+.saiyou ul li.expert:hover{
+	text-shadow: 0 2px 0 #6E6E6E;
+}
+
 /*  キービジュアル
 -------------------------------------------------- */
 #main .keyv img {
