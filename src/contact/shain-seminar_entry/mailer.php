@@ -25,7 +25,7 @@ $checkbox = $_POST['checkbox'];//同意する
 
 //セミナー複数選択
 if (isset($_POST['course']) && is_array($_POST['course'])) {
-    $course = implode("<br />", $_POST["course"]);
+    $course = implode("、", $_POST["course"]);
 }
 
 //ユーザーへ送信するメール
@@ -118,6 +118,6 @@ $response = $sendgrid->send($email);
 var_dump($response);
 
 // 正常終了時にthanks.htmlへリダイレクト
-header('Location: /recruit/contact/shain-seminar_entry/thanks.html');
+header('Location: /recruit/contact/seminar_entry/thanks.html');
 exit();
 
