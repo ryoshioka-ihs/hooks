@@ -221,7 +221,7 @@ article #kv6.ttl {
 
 /* h1タイトル */
 article .ttl h1 {
-	max-width: 580px;
+	/*max-width: 580px;*/
 	text-align: center;
 	margin: auto;
 	position: relative;
