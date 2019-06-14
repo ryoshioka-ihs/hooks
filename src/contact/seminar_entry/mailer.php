@@ -57,8 +57,8 @@ $email->addTo($emailadd)->
               年齢: $age 歳 \r\n 
               電話番号: $phone1 - $phone2 - $phone3 \r\n 
               メールアドレス: $emailadd \r\n 
-              【一般セミナー】：\r\n
-              　$course \r\n
+              【お申込みセミナー】：\r\n
+              $course \r\n
               PCの貸出：$pc \r\n
               業種: $status_other \r\n 
               学校名: $last_school \r\n
@@ -111,8 +111,8 @@ $email->addTo($to)->
               年齢: $age 歳 \r\n 
               電話番号: $phone1 - $phone2 - $phone3 \r\n 
               メールアドレス: $emailadd \r\n 
-              【一般セミナー】：\r\n
-              　$course \r\n
+              【お申込みセミナー】：\r\n
+              $course \r\n
               PCの貸出：$pc \r\n
               業種: $status_other \r\n 
               学校名: $last_school \r\n
@@ -132,8 +132,8 @@ $email->addTo($to)->
               年齢: $age 歳 <br>
               電話番号: $phone1 - $phone2 - $phone3 <br> 
               メールアドレス: $emailadd <br> 
-              【一般セミナー】：<br>
-              　$course <br>
+              【お申込みセミナー】：<br>
+              $course <br>
               PCの貸出：$pc <br>
               業種: $status_other <br> 
               学校名: $last_school <br>
@@ -149,6 +149,6 @@ $response = $sendgrid->send($email);
 var_dump($response);
 
 // 正常終了時にthanks.htmlへリダイレクト
-header('Location: /recruit/contact/shain-seminar_entry/thanks.html');
+header('Location: /recruit/contact/seminar_entry/thanks.html');
 exit();
 

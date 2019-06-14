@@ -118,6 +118,6 @@ $response = $sendgrid->send($email);
 var_dump($response);
 
 // 正常終了時にthanks.htmlへリダイレクト
-header('Location: /recruit/contact/seminar_entry/thanks.html');
+header('Location: /recruit/contact/shain-seminar_entry/thanks.html');
 exit();
 
