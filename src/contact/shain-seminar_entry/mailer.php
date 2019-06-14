@@ -25,7 +25,7 @@ $checkbox = $_POST['checkbox'];//同意する
 
 //セミナー複数選択
 if (isset($_POST['course']) && is_array($_POST['course'])) {
-    $course = implode("、", $_POST["course"]);
+    $course = implode("<br>", $_POST["course"]);
 }
 
 //ユーザーへ送信するメール
