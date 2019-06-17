@@ -242,21 +242,25 @@ title: インターンシップ2019夏 | IHS新卒・中途採用サイト
                                         <option value="短期大学生">短期大学生</option>
                                         <option value="専門学生">専門学生</option>
                                         <option value="高専生">高専生</option>
-                                        <option value="高校生">高校生</option>
-                                        <option value="その他">その他</option>
                                     </select>
                                 </td>
                               </tr>
                               <tr>
-                                <th>その他を選択された方はご記入ください。</th>
+                                <th><span class="R">※</span>学校名（全角文字）</th>
                                 <td colspan="6">
-                                    <input type="text" name="status_other">
+                                    <input type="text" name="school" required>
                                 </td>
                               </tr>
                               <tr>
-                                <th><span class="R">※</span>最終卒業学校名（全角文字）</th>
+                                <th><span class="R">※</span>学部（全角文字）</th>
                                 <td colspan="6">
-                                    <input type="text" name="last_school" required>
+                                    <input type="text" name="faculty" required>
+                                </td>
+                              </tr>
+                              <tr>
+                                <th><span class="R">※</span>学科（全角文字）</th>
+                                <td colspan="6">
+                                    <input type="text" name="department" required>
                                 </td>
                               </tr>
                               <tr>
