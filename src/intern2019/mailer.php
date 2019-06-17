@@ -26,8 +26,9 @@ $enquete1 = $_POST['enquete1'];//セミナー参加目的
 $enquete1_other = $_POST['enquete1_other'];//セミナー参加目的（その他）
 $pc = $_POST['pc'];//PC貸出
 $status = $_POST['status'];//現在の状態
-$status_other = $_POST['status_other'];//現在の状態（その他）
-$last_school = $_POST['last_school'];//最終卒業学校名
+$school = $_POST['school'];//学校名
+$faculty = $_POST['faculty'];//学部
+$department = $_POST['department'];//学科
 $remarks = $_POST['remarks'];//備考
 //$resume = $_POST['resume'];//履歴書
 $checkbox = $_POST['checkbox'];//同意する
@@ -43,11 +44,60 @@ $email->addTo($emailadd)->
        setFrom($from)->
        setFromName("IIMヒューマン・ソリューション株式会社 セミナー担当")->
        setSubject("【IHS】エントリーありがとうございます" )->
-       setText(" $name 様\r\n\r\nこの度はIIMヒューマン・ソリューションのインターンシップへご応募くださり、\r\n誠にありがとうございます。\r\nセミナー担当より折り返しご連絡いたしますので、\r\n今しばらくお待ちください。\r\n\r\n 氏名: $name \r\n フリガナ: $phonetic \r\n 性別: $sex \r\n 生年月日: $birth_year 年 $birth_month 月 $birth_day 日 \r\n お住まい: $residence \r\n お住まい（日本国外を選択された方）:$other_residence \r\n 電話番号: $phone1 - $phone2 -$phone3 \r\n メールアドレス: $emailadd \r\n セミナー参加目的: $enquete1 \r\n セミナー参加目的（その他）: $enquete1_other \r\n ノートPC貸出: $pc \r\n 現在の状態: $status \r\n 現在の状態（その他）:$status_other \r\n 最終卒業学校名: $last_school 備考: $remarks\r\n\r\n※本メールは自動送信されています。\r\nお問い合わせがある場合は、saiyou@iimhs.co.jpまでご連絡ください。")->
+       setText(" $name 様\r\n\r\n
+
+                  この度はIIMヒューマン・ソリューションのインターンシップへご応募くださり、\r\n
+                  誠にありがとうございます。\r\n
+                  セミナー担当より折り返しご連絡いたしますので、\r\n
+                  今しばらくお待ちください。\r\n\r\n 
+
+                  氏名: $name \r\n 
+                  フリガナ: $phonetic \r\n 
+                  性別: $sex \r\n 
+                  生年月日: $birth_year 年 $birth_month 月 $birth_day 日 \r\n 
+                  お住まい: $residence \r\n 
+                  お住まい（日本国外を選択された方）:$other_residence \r\n 
+                  電話番号: $phone1 - $phone2 -$phone3 \r\n 
+                  メールアドレス: $emailadd \r\n 
+                  セミナー参加目的: $enquete1 \r\n 
+                  セミナー参加目的（その他）: $enquete1_other \r\n 
+                  ノートPC貸出: $pc \r\n 
+                  現在の状態: $status \r\n 
+                  学校名: $school \r\n 
+                  学部: $faculty \r\n 
+                  学科: $department \r\n 
+                  備考: $remarks\r\n\r\n
+
+                  ※本メールは自動送信されています。\r\n
+                  お問い合わせがある場合は、saiyou@iimhs.co.jpまでご連絡ください。")->
 
 
+       setHtml(" $name 様<br><br>
 
-       setHtml(" $name 様<br /><br />この度はIIMヒューマン・ソリューションのインターンシップへご応募くださり、<br />誠にありがとうございます。<br />セミナー担当より折り返しご連絡いたしますので、<br />今しばらくお待ちください。<br /><br /> 氏名: $name <br /> フリガナ: $phonetic <br /> 性別: $sex <br /> 生年月日: $birth_year 年 $birth_month 月 $birth_day 日 <br /> お住まい: $residence <br /> お住まい（日本国外を選択された方）:$other_residence <br /> 電話番号: $phone1 - $phone2 -$phone3 <br /> メールアドレス: $emailadd <br /> セミナー参加目的: $enquete1 <br /> セミナー参加目的（その他）: $enquete1_other <br /> ノートPC貸出: $pc <br /> 現在の状態: $status <br /> 現在の状態（その他）:$status_other <br /> 最終卒業学校名: $last_school <br />備考: $remarks<br /><br />※本メールは自動送信されています。<br />お問い合わせがある場合は、saiyou@iimhs.co.jpまでご連絡ください。")->
+                  この度はIIMヒューマン・ソリューションのインターンシップへご応募くださり、<br>
+                  誠にありがとうございます。<br>
+                  セミナー担当より折り返しご連絡いたしますので、<br>
+                  今しばらくお待ちください。<br><br>
+
+                  氏名: $name <br> 
+                  フリガナ: $phonetic <br> 
+                  性別: $sex <br> 
+                  生年月日: $birth_year 年 $birth_month 月 $birth_day 日 <br> 
+                  お住まい: $residence <br> 
+                  お住まい（日本国外を選択された方）:$other_residence <br> 
+                  電話番号: $phone1 - $phone2 -$phone3 <br> 
+                  メールアドレス: $emailadd <br> 
+                  セミナー参加目的: $enquete1 <br> 
+                  セミナー参加目的（その他）: $enquete1_other <br> 
+                  ノートPC貸出: $pc <br> 
+                  現在の状態: $status <br> 
+                  学校名: $school <br> 
+                  学部: $faculty <br> 
+                  学科: $department <br> 
+                  備考: $remarks　<br><br>
+
+                  ※本メールは自動送信されています。<br>
+                  お問い合わせがある場合は、saiyou@iimhs.co.jpまでご連絡ください。")->
        addCategory('contact');
 
 $response = $sendgrid->send($email);
@@ -60,10 +110,53 @@ $email->addTo($to)->
        setFrom($from)->
        setFromName("IHS採用担当")->
        setSubject("【インターンシップへエントリーがありました】" )->
-       setText("インターンシップにエントリーがありました。\r\nご確認の上、ご対応をお願いいたします。\r\n\r\n氏名: $name \r\n フリガナ: $phonetic \r\n 性別: $sex \r\n 生年月日: $birth_year 年 $birth_month 月 $birth_day 日 \r\n お住まい: $residence \r\n お住まい（日本国外を選択された方）:$other_residence \r\n 電話番号: $phone1 - $phone2 -$phone3 \r\n メールアドレス: $emailadd \r\n セミナー参加目的: $enquete1 \r\n セミナー参加目的（その他）: $enquete1_other \r\n ノートPC貸出: $pc \r\n 現在の状態: $status \r\n 現在の状態（その他）:$status_other \r\n 最終卒業学校名: $last_school \r\n 備考: $remarks\r\n\r\n")->
+       setText("
+                  インターンシップへエントリーがありました\r\n
+                  自動受付完了メールを送付しております。\r\n
+                  ご対応をお願いいたします。\r\n\r\n 
+
+                  氏名: $name \r\n 
+                  フリガナ: $phonetic \r\n 
+                  性別: $sex \r\n 
+                  生年月日: $birth_year 年 $birth_month 月 $birth_day 日 \r\n 
+                  お住まい: $residence \r\n 
+                  お住まい（日本国外を選択された方）:$other_residence \r\n 
+                  電話番号: $phone1 - $phone2 -$phone3 \r\n 
+                  メールアドレス: $emailadd \r\n 
+                  セミナー参加目的: $enquete1 \r\n 
+                  セミナー参加目的（その他）: $enquete1_other \r\n 
+                  ノートPC貸出: $pc \r\n 
+                  現在の状態: $status \r\n 
+                  学校名: $school \r\n 
+                  学部: $faculty \r\n 
+                  学科: $department \r\n 
+                  備考: $remarks\r\n\r\n
+
+                  ※本メールは自動送信されています。\r\n")->
 
 
-       setHtml("インターンシップにエントリーがありました。<br />ご担当者は確認後、受付メールを送付してください。<br /><br />氏名: $name <br /> フリガナ: $phonetic <br /> 性別: $sex <br /> 生年月日: $birth_year 年 $birth_month 月 $birth_day 日 <br /> お住まい: $residence <br /> お住まい（日本国外を選択された方）:$other_residence <br /> 電話番号: $phone1 - $phone2 -$phone3 <br /> メールアドレス: $emailadd <br /> セミナー参加目的: $enquete1 <br /> セミナー参加目的（その他）: $enquete1_other <br /> ノートPC貸出: $pc <br /> 現在の状態: $status <br /> 現在の状態（その他）:$status_other <br /> 最終卒業学校名: $last_school <br /> 備考: $remarks")->
+       setHtml("  インターンシップへエントリーがありました<br>
+                  自動受付完了メールを送付しております。<br>
+                  ご対応をお願いいたします。<br><br>
+
+                  氏名: $name <br> 
+                  フリガナ: $phonetic <br> 
+                  性別: $sex <br> 
+                  生年月日: $birth_year 年 $birth_month 月 $birth_day 日 <br> 
+                  お住まい: $residence <br> 
+                  お住まい（日本国外を選択された方）:$other_residence <br> 
+                  電話番号: $phone1 - $phone2 -$phone3 <br>
+                  メールアドレス: $emailadd <br> 
+                  セミナー参加目的: $enquete1 <br> 
+                  セミナー参加目的（その他）: $enquete1_other <br> 
+                  ノートPC貸出: $pc <br> 
+                  現在の状態: $status <br> 
+                  学校名: $school <br> 
+                  学部: $faculty <br> 
+                  学科: $department <br> 
+                  備考: $remarks<br><br>
+
+                  ※本メールは自動送信されています。<br>")->
        addCategory('contact');
 
 $response = $sendgrid->send($email);
