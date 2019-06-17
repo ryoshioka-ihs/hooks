@@ -18,14 +18,15 @@ $phone1 = $_POST['phone1'];//電話番号1枠目
 $phone2 = $_POST['phone2'];//電話番号2枠目
 $phone3 = $_POST['phone3'];//電話番号3枠目
 $emailadd = $_POST['emailadd'];//メールアドレス
-$course1 = $_POST['course1'];//4月27日
-$course2 = $_POST['course2'];//4月28日
-$course3 = $_POST['course3'];//4月29日
-//$course4 = $_POST['course4'];//5～7月セミナー
+$course = $_POST['course'];//参加コース
 $pc = $_POST['pc'];//PC貸出希望
 $remarks = $_POST['remarks'];//備考
 $checkbox = $_POST['checkbox'];//同意する
 
+//セミナー複数選択
+if (isset($_POST['course']) && is_array($_POST['course'])) {
+    $course = implode("<br>", $_POST["course"]);
+}
 
 //ユーザーへ送信するメール
 $sendgrid = new SendGrid($sendgrid_username,$sendgrid_password, array("turn_off_ssl_verification" => true));
@@ -44,9 +45,7 @@ $email->addTo($emailadd)->
               年齢: $age 歳 \r\n 
               電話番号: $phone1 - $phone2 - $phone3 \r\n 
               メールアドレス: $emailadd \r\n 
-              【4月27日（土）】：$course1 \r\n
-              【4月28日（日）】：$course2 \r\n
-              【4月29日（月・祝）】：$course3 \r\n
+              お申込みセミナー：$course \r\n
               PCの貸出：$pc \r\n
               備考: $remarks \r\n\r\n
 
@@ -65,9 +64,7 @@ $email->addTo($emailadd)->
               年齢: $age 歳 <br>
               電話番号: $phone1 - $phone2 - $phone3 <br> 
               メールアドレス: $emailadd <br> 
-              【4月27日（土）】：$course1 <br>
-              【4月28日（日）】：$course2 <br>
-              【4月29日（月・祝）】：$course3 <br>
+              お申込みセミナー：$course <br>
               PCの貸出：$pc <br> 
               備考: $remarks <br><br>
 
@@ -93,9 +90,7 @@ $email->addTo($to)->
               年齢: $age 歳 \r\n 
               電話番号: $phone1 - $phone2 - $phone3 \r\n 
               メールアドレス: $emailadd \r\n 
-              【4月27日（土）】：$course1 \r\n
-              【4月28日（日）】：$course2 \r\n
-              【4月29日（月・祝）】：$course3 \r\n
+              お申込みセミナー：$course \r\n
               PCの貸出：$pc \r\n
               備考: $remarks \r\n\r\n
 
@@ -111,9 +106,7 @@ $email->addTo($to)->
               年齢: $age 歳 <br> 
               電話番号: $phone1 - $phone2 - $phone3 <br>
               メールアドレス: $emailadd <br> 
-              【4月27日（土）】：$course1 <br>
-              【4月28日（日）】：$course2 <br>
-              【4月29日（月・祝）】：$course3 <br>
+              お申込みセミナー：$course <br>
               PCの貸出：$pc <br> 
               備考: $remarks <br><br>
 
