@@ -45,12 +45,12 @@ article .ttl {
 }
 
 /* h1タイトル */
-article .ttl h1 {
-	font-size: 35px;
-}
-
 article .ttl h1 span{
 	font-size: 20px;
+}
+
+article .ttl h1 {
+	font-size: 25px;
 }
 	/* タイトル */
 	article .ttl h2 {
@@ -62,7 +62,7 @@ article .ttl h1 span{
 		letter-spacing: 1.5px;
 	}
 		article .ttl h2 span {
-			font-size: 15px;
+			font-size: 12px;
 			margin: 11px 0 2px;
 			letter-spacing: 3px;
 		}
