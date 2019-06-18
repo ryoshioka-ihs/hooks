@@ -17,7 +17,6 @@ $birth_year = $_POST['birth_year'];//誕生年
 $birth_month = $_POST['birth_month'];//誕生月
 $birth_day = $_POST['birth_day'];//誕生日
 $residence = $_POST['residence'];//お住まい
-$other_residence = $_POST['other_residence'];//お住まい（日本国外を選択された方）
 $phone1 = $_POST['phone1'];//電話番号1枠目
 $phone2 = $_POST['phone2'];//電話番号2枠目
 $phone3 = $_POST['phone3'];//電話番号3枠目
@@ -56,7 +55,6 @@ $email->addTo($emailadd)->
                   性別: $sex \r\n 
                   生年月日: $birth_year 年 $birth_month 月 $birth_day 日 \r\n 
                   お住まい: $residence \r\n 
-                  お住まい（日本国外を選択された方）:$other_residence \r\n 
                   電話番号: $phone1 - $phone2 -$phone3 \r\n 
                   メールアドレス: $emailadd \r\n 
                   セミナー参加目的: $enquete1 \r\n 
@@ -84,7 +82,6 @@ $email->addTo($emailadd)->
                   性別: $sex <br> 
                   生年月日: $birth_year 年 $birth_month 月 $birth_day 日 <br> 
                   お住まい: $residence <br> 
-                  お住まい（日本国外を選択された方）:$other_residence <br> 
                   電話番号: $phone1 - $phone2 -$phone3 <br> 
                   メールアドレス: $emailadd <br> 
                   セミナー参加目的: $enquete1 <br> 
@@ -120,7 +117,6 @@ $email->addTo($to)->
                   性別: $sex \r\n 
                   生年月日: $birth_year 年 $birth_month 月 $birth_day 日 \r\n 
                   お住まい: $residence \r\n 
-                  お住まい（日本国外を選択された方）:$other_residence \r\n 
                   電話番号: $phone1 - $phone2 -$phone3 \r\n 
                   メールアドレス: $emailadd \r\n 
                   セミナー参加目的: $enquete1 \r\n 
@@ -144,7 +140,6 @@ $email->addTo($to)->
                   性別: $sex <br> 
                   生年月日: $birth_year 年 $birth_month 月 $birth_day 日 <br> 
                   お住まい: $residence <br> 
-                  お住まい（日本国外を選択された方）:$other_residence <br> 
                   電話番号: $phone1 - $phone2 -$phone3 <br>
                   メールアドレス: $emailadd <br> 
                   セミナー参加目的: $enquete1 <br> 
