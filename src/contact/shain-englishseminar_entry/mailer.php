@@ -22,13 +22,13 @@ $phone1 = $_POST['phone1'];//電話番号1枠目
 $phone2 = $_POST['phone2'];//電話番号2枠目
 $phone3 = $_POST['phone3'];//電話番号3枠目
 $emailadd = $_POST['emailadd'];//メールアドレス
-$course1 = $_POST['course'];//4月27日
+$course = $_POST['course'];//コース
 $remarks = $_POST['remarks'];//備考
 $checkbox = $_POST['checkbox'];//同意する
 
 //セミナー複数選択
 if (isset($_POST['course']) && is_array($_POST['course'])) {
-    $course = implode("<br />", $_POST["course"]);
+    $course = implode("、", $_POST["course"]);
 }
 
 //ユーザーへ送信するメール
@@ -40,7 +40,7 @@ $email->addTo($emailadd)->
        setSubject("【IHS】お申込みありがとうございます" )->
        setText(" $name さん\r\n\r\n
 
-              『えいごで楽しく遊ぼう！Enjoy English ワークショップ』へのお申込みを受付ました。\r\n\r\n
+              『IHSお楽しみセミナー』へのお申込みを受付ました。\r\n\r\n
 
               お父様/お母様の氏名: $name 様 \r\n 
               フリガナ: $phonetic 様 \r\n 
@@ -49,7 +49,7 @@ $email->addTo($emailadd)->
               お名前③: $childname3   年齢: $childage3 歳 \r\n  
               電話番号: $phone1 - $phone2 - $phone3 \r\n 
               メールアドレス: $emailadd \r\n 
-              【4月27日（土）】：$course 10：30～\r\n
+              【8月10日(土)】：$course \r\n
               備考: $remarks \r\n\r\n
 
               ※本メールは自動送信されています。\r\n
@@ -59,7 +59,7 @@ $email->addTo($emailadd)->
 
        setHtml("  $name さん<br><br>
 
-              『えいごで楽しく遊ぼう！Enjoy English ワークショップ』へのお申込みを受付ました。<br><br>
+              『IHSお楽しみセミナー』へのお申込みを受付ました。<br><br>
 
               お父様/お母様の氏名: $name 様 <br> 
               フリガナ: $phonetic 様 <br> 
@@ -68,7 +68,7 @@ $email->addTo($emailadd)->
               お名前③: $childname3   年齢: $childage3 歳 <br>  
               電話番号: $phone1 - $phone2 - $phone3 <br> 
               メールアドレス: $emailadd <br> 
-              【4月27日（土）】：$course 10：30～<br>
+              【8月10日(土)】：$course <br>
               備考: $remarks <br><br>
 
               ※本メールは自動送信されています。<br>
@@ -84,8 +84,8 @@ $email    = new SendGrid\Email();
 $email->addTo($to)->
        setFrom($from)->
        setFromName("IHS")->
-       setSubject("【えいごで楽しく遊ぼう！Enjoy English ワークショップ』へのエントリーがありました】" )->
-       setText(" 『えいごで楽しく遊ぼう！Enjoy English ワークショップ』へのエントリーがありました\r\n\r\n
+       setSubject("【IHSお楽しみセミナー』へのエントリーがありました】" )->
+       setText(" 『IHSお楽しみセミナー』へのエントリーがありました\r\n\r\n
 
               お父様/お母様の氏名: $name 様 \r\n 
               フリガナ: $phonetic 様 \r\n 
@@ -94,7 +94,7 @@ $email->addTo($to)->
               お名前③: $childname3   年齢: $childage3 歳 \r\n  
               電話番号: $phone1 - $phone2 - $phone3 \r\n 
               メールアドレス: $emailadd \r\n 
-              【4月27日（土）】：$course 10：30～\r\n
+              【8月10日(土)】：$course \r\n
               備考: $remarks \r\n\r\n
 
               ※本メールは自動送信されています。\r\n
@@ -110,7 +110,7 @@ $email->addTo($to)->
               お名前③: $childname3   年齢: $childage3 歳 <br>  
               電話番号: $phone1 - $phone2 - $phone3 <br> 
               メールアドレス: $emailadd <br> 
-              【4月27日（土）】：$course 10：30～<br>
+              【8月10日(土)】：$course <br>
               備考: $remarks <br><br>
 
 		※本メールは自動送信されています。<br>
