@@ -50,7 +50,7 @@
 #leading .cont .sentBox table.leading tbody td.dash {
     border-bottom: 1px dashed #f4f4f4;
     padding: 15px 15px 10px;
-    width: 10px;
+    width: 15%;
 }
 
 #leading .cont .sentBox table.leading tbody td.dept {
