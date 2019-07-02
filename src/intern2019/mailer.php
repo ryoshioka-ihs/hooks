@@ -23,6 +23,7 @@ $phone3 = $_POST['phone3'];//電話番号3枠目
 $emailadd = $_POST['emailadd'];//メールアドレス
 $enquete1 = $_POST['enquete1'];//セミナー参加目的
 $enquete1_other = $_POST['enquete1_other'];//セミナー参加目的（その他）
+$intern = $_POST['intern'];//インターンシップ応募日程
 $pc = $_POST['pc'];//PC貸出
 $status = $_POST['status'];//現在の状態
 $school = $_POST['school'];//学校名
@@ -58,7 +59,8 @@ $email->addTo($emailadd)->
                   電話番号: $phone1 - $phone2 -$phone3 \r\n 
                   メールアドレス: $emailadd \r\n 
                   セミナー参加目的: $enquete1 \r\n 
-                  セミナー参加目的（その他）: $enquete1_other \r\n 
+                  セミナー参加目的（その他）: $enquete1_other \r\n
+                  インターンシップ応募日程: $intern \r\n
                   ノートPC貸出: $pc \r\n 
                   現在の状態: $status \r\n 
                   学校名: $school \r\n 
@@ -85,7 +87,8 @@ $email->addTo($emailadd)->
                   電話番号: $phone1 - $phone2 -$phone3 <br> 
                   メールアドレス: $emailadd <br> 
                   セミナー参加目的: $enquete1 <br> 
-                  セミナー参加目的（その他）: $enquete1_other <br> 
+                  セミナー参加目的（その他）: $enquete1_other <br>
+                  インターンシップ応募日程: $intern <br>
                   ノートPC貸出: $pc <br> 
                   現在の状態: $status <br> 
                   学校名: $school <br> 
@@ -121,6 +124,7 @@ $email->addTo($to)->
                   メールアドレス: $emailadd \r\n 
                   セミナー参加目的: $enquete1 \r\n 
                   セミナー参加目的（その他）: $enquete1_other \r\n 
+                  インターンシップ応募日程: $intern \r\n
                   ノートPC貸出: $pc \r\n 
                   現在の状態: $status \r\n 
                   学校名: $school \r\n 
@@ -144,6 +148,7 @@ $email->addTo($to)->
                   メールアドレス: $emailadd <br> 
                   セミナー参加目的: $enquete1 <br> 
                   セミナー参加目的（その他）: $enquete1_other <br> 
+                  インターンシップ応募日程: $intern <br>
                   ノートPC貸出: $pc <br> 
                   現在の状態: $status <br> 
                   学校名: $school <br> 

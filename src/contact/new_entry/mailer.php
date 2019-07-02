@@ -25,6 +25,7 @@ $phone3 = $_POST['phone3'];//電話番号3枠目
 $emailadd = $_POST['emailadd'];//メールアドレス
 $enquete1 = $_POST['enquete1'];//何を見てご応募いただきましたか？
 $enquete1_other = $_POST['enquete1_other'];//何を見てご応募いただきましたか？（その他）
+$setsumeikai = $_POST['setsumeikai'];//説明会日程
 $experience = $_POST['experience'];//業務体験
 $status = $_POST['status'];//現在の状態
 $status_other = $_POST['status_other'];//現在の状態（その他）
@@ -41,11 +42,62 @@ $email->addTo($emailadd)->
        setFrom($from)->
        setFromName("IIMヒューマン・ソリューション株式会社 採用担当")->
        setSubject("【IHS】エントリーありがとうございます" )->
-       setText(" $name 様\r\n\r\nこの度はIIMヒューマン・ソリューションの会社説明会へご応募くださり、\r\n誠にありがとうございます。\r\n採用担当より折り返しご連絡いたしますので、\r\n今しばらくお待ちください。\r\n\r\n 種別: $new \r\n 氏名: $name \r\n フリガナ: $phonetic \r\n 性別: $sex \r\n 生年月日: $birth_year 年 $birth_month 月 $birth_day 日 \r\n お住まい: $residence \r\n お住まい（日本国外を選択された方）:$other_residence \r\n 電話番号: $phone1 - $phone2 -$phone3 \r\n メールアドレス: $emailadd \r\n 何を見てご応募いただきましたか？: $enquete1 \r\n 何を見てご応募いただきましたか？（その他）: $enquete1_other \r\n 業務体験: $experience \r\n 現在の状態: $status \r\n 現在の状態（その他）:$status_other \r\n 最終卒業学校名: $last_school \r\n\r\n※本メールは自動送信されています。\r\nお問い合わせがある場合は、saiyou@iimhs.co.jpまでご連絡ください。")->
+       setText(" 
+       	$name 様\r\n\r\n
+
+       	この度はIIMヒューマン・ソリューションの会社説明会へご応募くださり、\r\n
+       	誠にありがとうございます。\r\n
+       	採用担当より折り返しご連絡いたしますので、\r\n
+       	今しばらくお待ちください。\r\n\r\n 
+
+       	種別: $new \r\n 
+       	氏名: $name \r\n 
+       	フリガナ: $phonetic \r\n 
+       	性別: $sex \r\n 
+       	生年月日: $birth_year 年 $birth_month 月 $birth_day 日 \r\n 
+       	お住まい: $residence \r\n 
+       	お住まい（日本国外を選択された方）:$other_residence \r\n 
+       	電話番号: $phone1 - $phone2 -$phone3 \r\n 
+       	メールアドレス: $emailadd \r\n 
+       	何を見てご応募いただきましたか？: $enquete1 \r\n 
+       	何を見てご応募いただきましたか？（その他）: $enquete1_other \r\n
+		会社説明会希望日時: $setsumeikai \r\n 
+       	業務体験: $experience \r\n 
+       	現在の状態: $status \r\n 
+       	現在の状態（その他）:$status_other \r\n 
+       	最終卒業学校名: $last_school \r\n\r\n
+
+       	※本メールは自動送信されています。\r\n
+       	お問い合わせがある場合は、saiyou@iimhs.co.jpまでご連絡ください。")->
 
 
 
-       setHtml(" $name 様<br /><br />この度はIIMヒューマン・ソリューションの会社説明会へご応募くださり、<br />誠にありがとうございます。<br />採用担当より折り返しご連絡いたしますので、<br />今しばらくお待ちください。<br /><br /> 種別: $new <br /> 氏名: $name <br /> フリガナ: $phonetic <br /> 性別: $sex <br /> 生年月日: $birth_year 年 $birth_month 月 $birth_day 日 <br /> お住まい: $residence <br /> お住まい（日本国外を選択された方）:$other_residence <br /> 電話番号: $phone1 - $phone2 -$phone3 <br /> メールアドレス: $emailadd <br /> 何を見てご応募いただきましたか？: $enquete1 <br /> 何を見てご応募いただきましたか？（その他）: $enquete1_other <br /> 業務体験: $experience <br /> 現在の状態: $status <br /> 現在の状態（その他）:$status_other <br /> 最終卒業学校名: $last_school <br /><br />※本メールは自動送信されています。<br />お問い合わせがある場合は、saiyou@iimhs.co.jpまでご連絡ください。")->
+       setHtml(" 
+       	$name 様<br /><br />
+
+       	この度はIIMヒューマン・ソリューションの会社説明会へご応募くださり、<br />
+       	誠にありがとうございます。<br />
+       	採用担当より折り返しご連絡いたしますので、<br />
+       	今しばらくお待ちください。<br /><br /> 
+
+       	種別: $new <br /> 
+       	氏名: $name <br /> 
+       	フリガナ: $phonetic <br /> 
+       	性別: $sex <br /> 
+       	生年月日: $birth_year 年 $birth_month 月 $birth_day 日 <br /> 
+       	お住まい: $residence <br /> 
+       	お住まい（日本国外を選択された方）:$other_residence <br /> 
+       	電話番号: $phone1 - $phone2 -$phone3 <br /> 
+       	メールアドレス: $emailadd <br /> 
+       	何を見てご応募いただきましたか？: $enquete1 <br /> 
+       	何を見てご応募いただきましたか？（その他）: $enquete1_other <br />
+       	会社説明会希望日時: $setsumeikai <br /> 
+       	業務体験: $experience <br /> 
+       	現在の状態: $status <br /> 
+       	現在の状態（その他）:$status_other <br /> 
+       	最終卒業学校名: $last_school <br /><br />
+
+       	※本メールは自動送信されています。<br />お問い合わせがある場合は、saiyou@iimhs.co.jpまでご連絡ください。")->
        addCategory('contact');
 
 $response = $sendgrid->send($email);
@@ -58,10 +110,49 @@ $email->addTo($to)->
        setFrom($from)->
        setFromName("IHS採用担当")->
        setSubject("【IHS中途採用サイトからエントリーがありました】" )->
-       setText("IHS採用サイトより、下記のエントリーがありました。\r\nご確認の上、ご対応をお願いいたします。\r\n\r\n種別: $new \r\n 氏名: $name \r\n フリガナ: $phonetic \r\n 性別: $sex \r\n 生年月日: $birth_year 年 $birth_month 月 $birth_day 日 \r\n お住まい: $residence \r\n お住まい（日本国外を選択された方）:$other_residence \r\n 電話番号: $phone1 - $phone2 -$phone3 \r\n メールアドレス: $emailadd \r\n 何を見てご応募いただきましたか？: $enquete1 \r\n 何を見てご応募いただきましたか？（その他）: $enquete1_other \r\n 業務体験: $experience \r\n 現在の状態: $status \r\n 現在の状態（その他）:$status_other \r\n 最終卒業学校名: $last_school")->
+       setText("
+
+       	IHS採用サイトより、下記のエントリーがありました。\r\n
+       	ご確認の上、ご対応をお願いいたします。\r\n\r\n
+
+       	種別: $new \r\n 
+       	氏名: $name \r\n 
+       	フリガナ: $phonetic \r\n 
+       	性別: $sex \r\n 
+       	生年月日: $birth_year 年 $birth_month 月 $birth_day 日 \r\n 
+       	お住まい: $residence \r\n 
+       	お住まい（日本国外を選択された方）:$other_residence \r\n 
+       	電話番号: $phone1 - $phone2 -$phone3 \r\n 
+       	メールアドレス: $emailadd \r\n 
+       	何を見てご応募いただきましたか？: $enquete1 \r\n 
+       	何を見てご応募いただきましたか？（その他）: $enquete1_other \r\n
+		会社説明会希望日時: $setsumeikai \r\n 
+       	業務体験: $experience \r\n 
+       	現在の状態: $status \r\n 
+       	現在の状態（その他）:$status_other \r\n 
+       	最終卒業学校名: $last_school \r\n\r\n")->
 
 
-       setHtml("下記内容にて会社説明会へのお申込みを受け付けました。<br />ご担当者は確認後、受付メールを送付してください。<br /><br />種別: $new <br /> 氏名: $name <br /> フリガナ: $phonetic <br /> 性別: $sex <br /> 生年月日: $birth_year 年 $birth_month 月 $birth_day 日 <br /> お住まい: $residence <br /> お住まい（日本国外を選択された方）:$other_residence <br /> 電話番号: $phone1 - $phone2 -$phone3 <br /> メールアドレス: $emailadd <br /> 何を見てご応募いただきましたか？: $enquete1 <br /> 何を見てご応募いただきましたか？（その他）: $enquete1_other <br /> 業務体験: $experience <br /> 現在の状態: $status <br /> 現在の状態（その他）:$status_other <br /> 最終卒業学校名: $last_school ")->
+       setHtml("
+       	下記内容にて会社説明会へのお申込みを受け付けました。<br />
+       	ご担当者は確認後、受付メールを送付してください。<br /><br />
+
+       	種別: $new <br /> 
+       	氏名: $name <br /> 
+       	フリガナ: $phonetic <br /> 
+       	性別: $sex <br /> 
+       	生年月日: $birth_year 年 $birth_month 月 $birth_day 日 <br /> 
+       	お住まい: $residence <br /> 
+       	お住まい（日本国外を選択された方）:$other_residence <br /> 
+       	電話番号: $phone1 - $phone2 -$phone3 <br /> 
+       	メールアドレス: $emailadd <br /> 
+       	何を見てご応募いただきましたか？: $enquete1 <br /> 
+       	何を見てご応募いただきましたか？（その他）: $enquete1_other <br />
+       	会社説明会希望日時: $setsumeikai <br /> 
+       	業務体験: $experience <br /> 
+       	現在の状態: $status <br /> 
+       	現在の状態（その他）:$status_other <br /> 
+       	最終卒業学校名: $last_school <br /><br />")->
        addCategory('contact');
 
 $response = $sendgrid->send($email);
