@@ -76,11 +76,15 @@
 }
 
 /* モバイルとPCの間で写真にメッセージが掛からないよう調整 */
-@media screen and (min-width: 769px) and (max-width: 1000px) {
+@media screen and (min-width: 823px) and (max-width: 1000px) {
+	.preMsg{
+	background: url("/recruit/image/company/president.png") 75%;
+	}
+
 	.preMsg h4 {
 		width: 480px;
 		position: absolute;
-		top: 260px;
+		/*top: 260px;*/
 	}
 	.preMsg p {
 		position: absolute;
@@ -91,7 +95,7 @@
 @media screen and (min-width: 1024px) and (max-width: 1200px) {
 .preMsg{
 	background: url("/recruit/image/company/president.png") 80%;
-}
+		}
 
 	.preMsg h4 {
 		width: 480px;	
