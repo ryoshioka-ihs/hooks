@@ -51,11 +51,68 @@ $email->addTo($emailadd)->
        setFrom($from)->
        setFromName("IIMヒューマン・ソリューション株式会社 採用担当")->
        setSubject("【IHS】エントリーありがとうございます" )->
-       setText(" $name 様\r\n\r\nこの度はIIMヒューマン・ソリューションの会社説明会へご応募くださり、\r\n誠にありがとうございます。\r\n採用担当より折り返しご連絡いたしますので、\r\n今しばらくお待ちください。\r\n\r\n 現在のステータス: $status \r\n 勤続年数: $working_year \r\n 現在の職種: $job_category \r\n 氏名: $name \r\n フリガナ: $phonetic \r\n 性別: $sex \r\n 生年月日: $birth_year 年 $birth_month 月 $birth_day 日 \r\n お住まい: $residence \r\n お住まい（日本国外を選択された方）: $other_residence \r\n 電話番号（携帯番号）: $phone1 - $phone2 - $phone3 \r\n メールアドレス: $emailadd \r\n 就業可能時期: $start_work \r\n 希望の職種: $desired_job_category \r\n 希望の年収: $desired_annual_income 万円 \r\n 会社説明会希望日時: $mensetsu \r\n 第一面接希望日: $interview1_year 年 $interview1_month 月 $interview1_day 日 \r\n 第二面接希望日: $interview2_year 年 $interview2_month 月 $interview2_day 日 \r\n 第三面接希望日: $interview3_year 年 $interview3_month 月 $interview3_day 日 \r\n 備考: $remarks \r\n\r\n ※このメールは自動送信です。\r\n 何かございましたらsaiyou@iimhs.co.jpまでお問い合わせください。")->
+       setText(" 
+       	$name 様\r\n\r\n
+
+       	この度はIIMヒューマン・ソリューションの会社説明会へご応募くださり、\r\n
+       	誠にありがとうございます。\r\n
+       	採用担当より折り返しご連絡いたしますので、\r\n
+       	今しばらくお待ちください。\r\n\r\n 
+
+       	現在のステータス: $status \r\n 
+       	勤続年数: $working_year \r\n 
+       	現在の職種: $job_category \r\n 
+       	氏名: $name \r\n 
+       	フリガナ: $phonetic \r\n 
+       	性別: $sex \r\n 
+       	生年月日: $birth_year 年 $birth_month 月 $birth_day 日 \r\n 
+       	お住まい: $residence \r\n 
+       	お住まい（日本国外を選択された方）: $other_residence \r\n 
+       	電話番号（携帯番号）: $phone1 - $phone2 - $phone3 \r\n 
+       	メールアドレス: $emailadd \r\n 
+       	就業可能時期: $start_work \r\n 
+       	希望の職種: $desired_job_category \r\n 
+       	希望の年収: $desired_annual_income 万円 \r\n 
+       	会社説明会希望日時: $mensetsu \r\n 
+       	第一面接希望日: $interview1_year 年 $interview1_month 月 $interview1_day 日 \r\n 
+       	第二面接希望日: $interview2_year 年 $interview2_month 月 $interview2_day 日 \r\n 
+       	第三面接希望日: $interview3_year 年 $interview3_month 月 $interview3_day 日 \r\n 
+       	備考: $remarks \r\n\r\n 
+
+       	※このメールは自動送信です。\r\n 
+       	何かございましたらsaiyou@iimhs.co.jpまでお問い合わせください。")->
 
 
 
-       setHtml(" $name 様<br /><br />この度はIIMヒューマン・ソリューションの会社説明会へご応募くださり、<br />誠にありがとうございます。<br />採用担当より折り返しご連絡いたしますので、<br />今しばらくお待ちください。<br /><br /> 現在のステータス: $status <br /> 勤続年数: $working_year <br /> 現在の職種: $job_category <br /> 氏名: $name <br /> フリガナ: $phonetic <br /> 性別: $sex <br /> 生年月日: $birth_year 年 $birth_month 月 $birth_day 日 <br /> お住まい: $residence <br /> お住まい（日本国外を選択された方）: $other_residence <br /> 電話番号（携帯番号）: $phone1 - $phone2 - $phone3 <br /> メールアドレス: $emailadd <br /> 就業可能時期: $start_work <br /> 希望の職種: $desired_job_category <br /> 希望の年収: $desired_annual_income 万円<br /> 会社説明会希望日時: $mensetsu <br>第一面接希望日: $interview1_year 年 $interview1_month 月 $interview1_day 日 <br /> 第二面接希望日: $interview2_year 年 $interview2_month 月 $interview2_day 日 <br /> 第三面接希望日: $interview3_year 年 $interview3_month 月 $interview3_day 日 <br /> 備考: $remarks <br /><br /> ※このメールは自動送信です。<br /> 何かございましたらsaiyou@iimhs.co.jpまでお問い合わせください。")->
+       setHtml(" 
+       	$name 様<br /><br />
+
+       	この度はIIMヒューマン・ソリューションの会社説明会へご応募くださり、<br />
+       	誠にありがとうございます。<br />
+       	採用担当より折り返しご連絡いたしますので、<br />
+       	今しばらくお待ちください。<br /><br /> 
+
+       	現在のステータス: $status <br /> 
+       	勤続年数: $working_year <br /> 
+       	現在の職種: $job_category <br /> 
+       	氏名: $name <br /> 
+       	フリガナ: $phonetic <br /> 
+       	性別: $sex <br /> 
+       	生年月日: $birth_year 年 $birth_month 月 $birth_day 日 <br />
+       	お住まい: $residence <br /> 
+       	お住まい（日本国外を選択された方）: $other_residence <br /> 
+       	電話番号（携帯番号）: $phone1 - $phone2 - $phone3 <br /> 
+       	メールアドレス: $emailadd <br /> 
+       	就業可能時期: $start_work <br /> 
+       	希望の職種: $desired_job_category <br /> 
+       	希望の年収: $desired_annual_income 万円<br /> 
+       	会社説明会希望日時: $mensetsu <br>
+       	第一面接希望日: $interview1_year 年 $interview1_month 月 $interview1_day 日 <br /> 
+       	第二面接希望日: $interview2_year 年 $interview2_month 月 $interview2_day 日 <br /> 
+       	第三面接希望日: $interview3_year 年 $interview3_month 月 $interview3_day 日 <br /> 備考: $remarks <br /><br /> 
+
+       	※このメールは自動送信です。<br /> 
+       	何かございましたらsaiyou@iimhs.co.jpまでお問い合わせください。")->
        addCategory('contact');
 
 $response = $sendgrid->send($email);
@@ -68,10 +125,54 @@ $email->addTo($to)->
        setFrom($from)->
        setFromName("IHS採用担当")->
        setSubject("【IHS中途採用サイトからエントリーがありました】" )->
-       setText("IHS採用サイトより、下記のエントリーがありました。\r\nご確認の上、ご対応をお願いいたします。\r\n\r\n現在のステータス: $status \r\n 勤続年数: $working_year \r\n 現在の職種: $job_category \r\n 氏名: $name \r\n フリガナ: $phonetic \r\n 性別: $sex \r\n 生年月日: $birth_year 年 $birth_month 月 $birth_day 日 \r\n お住まい: $residence \r\n お住まい（日本国外を選択された方）: $other_residence \r\n 電話番号（携帯番号）: $phone1 - $phone2 - $phone3 \r\n メールアドレス: $emailadd \r\n 就業可能時期: $start_work \r\n 希望の職種: $desired_job_category \r\n 希望の年収: $desired_annual_income 万円 \r\n 会社説明会希望日時: $mensetsu \r\n 第一面接希望日: $interview1_year 年 $interview1_month 月 $interview1_day 日 \r\n 第二面接希望日: $interview2_year 年 $interview2_month 月 $interview2_day 日 \r\n 第三面接希望日: $interview3_year 年 $interview3_month 月 $interview3_day 日 \r\n 備考: $remarks \r\n\r\n ")->
+       setText("
+       	IHS採用サイトより、下記のエントリーがありました。\r\n
+       	ご確認の上、ご対応をお願いいたします。\r\n\r\n
+
+       	現在のステータス: $status \r\n 
+       	勤続年数: $working_year \r\n 
+       	現在の職種: $job_category \r\n 
+       	氏名: $name \r\n 
+       	フリガナ: $phonetic \r\n 
+       	性別: $sex \r\n 
+       	生年月日: $birth_year 年 $birth_month 月 $birth_day 日 \r\n 
+       	お住まい: $residence \r\n 
+       	お住まい（日本国外を選択された方）: $other_residence \r\n 
+       	電話番号（携帯番号）: $phone1 - $phone2 - $phone3 \r\n 
+       	メールアドレス: $emailadd \r\n 
+       	就業可能時期: $start_work \r\n 
+       	希望の職種: $desired_job_category \r\n 
+       	希望の年収: $desired_annual_income 万円 \r\n 
+       	会社説明会希望日時: $mensetsu \r\n 
+       	第一面接希望日: $interview1_year 年 $interview1_month 月 $interview1_day 日 \r\n 
+       	第二面接希望日: $interview2_year 年 $interview2_month 月 $interview2_day 日 \r\n 
+       	第三面接希望日: $interview3_year 年 $interview3_month 月 $interview3_day 日 \r\n 
+       	備考: $remarks \r\n\r\n ")->
 
 
-       setHtml("下記内容にて会社説明会へのお申込みを受け付けました。<br />ご担当者は確認後、受付メールを送付してください。<br /><br />現在のステータス: $status <br /> 勤続年数: $working_year <br /> 現在の職種: $job_category <br /> 氏名: $name <br /> フリガナ: $phonetic <br /> 性別: $sex <br /> 生年月日: $birth_year 年 $birth_month 月 $birth_day 日 <br /> お住まい: $residence <br /> お住まい（日本国外を選択された方）: $other_residence <br /> 電話番号（携帯番号）: $phone1 - $phone2 - $phone3 <br /> メールアドレス: $emailadd <br /> 就業可能時期: $start_work <br /> 希望の職種: $desired_job_category <br /> 希望の年収: $desired_annual_income 万円<br /> 会社説明会希望日時: $mensetsu <br>第一面接希望日: $interview1_year 年 $interview1_month 月 $interview1_day 日 <br /> 第二面接希望日: $interview2_year 年 $interview2_month 月 $interview2_day 日 <br /> 第三面接希望日: $interview3_year 年 $interview3_month 月 $interview3_day 日 <br /> 備考: $remarks <br /><br />")->
+       setHtml("
+       	下記内容にて会社説明会へのお申込みを受け付けました。<br />
+       	ご担当者は確認後、受付メールを送付してください。<br /><br />
+
+       	現在のステータス: $status <br /> 
+       	勤続年数: $working_year <br /> 
+       	現在の職種: $job_category <br /> 
+       	氏名: $name <br /> 
+       	フリガナ: $phonetic <br /> 
+       	性別: $sex <br /> 
+       	生年月日: $birth_year 年 $birth_month 月 $birth_day 日 <br /> 
+       	お住まい: $residence <br /> 
+       	お住まい（日本国外を選択された方）: $other_residence <br /> 
+       	電話番号（携帯番号）: $phone1 - $phone2 - $phone3 <br /> 
+       	メールアドレス: $emailadd <br /> 
+       	就業可能時期: $start_work <br /> 
+       	希望の職種: $desired_job_category <br /> 
+       	希望の年収: $desired_annual_income 万円<br /> 
+       	会社説明会希望日時: $mensetsu <br>
+       	第一面接希望日: $interview1_year 年 $interview1_month 月 $interview1_day 日 <br /> 
+       	第二面接希望日: $interview2_year 年 $interview2_month 月 $interview2_day 日 <br /> 
+       	第三面接希望日: $interview3_year 年 $interview3_month 月 $interview3_day 日 <br /> 
+       	備考: $remarks <br /><br />")->
        addCategory('contact');
 
 $response = $sendgrid->send($email);

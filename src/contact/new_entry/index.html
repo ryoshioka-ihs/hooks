@@ -35,7 +35,6 @@ title: 新卒採用エントリーフォーム | IHS新卒・中途採用サイ�
                                 <th><span class="R">※</span>種別</th>
                                 <td colspan="6">
                                     <select name="new" required>
-                                        <option></option>
                                         <option value="新卒（2020年卒）">新卒（2020年卒）</option>
                                     </select>
                               </tr>
@@ -204,11 +203,11 @@ title: 新卒採用エントリーフォーム | IHS新卒・中途採用サイ�
                               <tr>
                                 <th>何を見てご応募いただきましたか？（複数回答可）</th>
                                 <td colspan="6">
-                                    <input type="checkbox" name="enquete1" class="none" value="学校求人票">学校求人票
-                                    <input type="checkbox" name="enquete1" class="none" value="学内説明会">学内説明会
-                                    <input type="checkbox" name="enquete1" class="none" value="弊社HP">弊社HP
-                                    <input type="checkbox" name="enquete1" class="none" value="ハローワーク">ハローワーク
-                                    <input type="checkbox" name="enquete1" class="none" value="その他">その他
+                                    <input type="checkbox" name="enquete1[]" class="none" value="学校求人票">学校求人票
+                                    <input type="checkbox" name="enquete1[]" class="none" value="学内説明会">学内説明会
+                                    <input type="checkbox" name="enquete1[]" class="none" value="弊社HP">弊社HP
+                                    <input type="checkbox" name="enquete1[]" class="none" value="ハローワーク">ハローワーク
+                                    <input type="checkbox" name="enquete1[]" class="none" value="その他">その他
                                 </td>
                               </tr>
                               <tr>
@@ -242,7 +241,7 @@ title: 新卒採用エントリーフォーム | IHS新卒・中途採用サイ�
                               <tr>
                                 <th>業務体験※希望される方のみ選択してください</th>
                                 <td colspan="6">
-                                    <select name="experience">
+                                    <select name="experience" required="">
                                         <option value="希望しない">希望しない</option>
                                         <option class="info_view_timer" data-end-date="2019/7/10 0:00"  value="2019年7月16日（火）10:00-12:00［RPA］">2019年7月16日（火）10:00-12:00［RPA］</option>
 
@@ -278,7 +277,7 @@ title: 新卒採用エントリーフォーム | IHS新卒・中途採用サイ�
                               <tr>
                                 <th>備考</th>
                                 <td colspan="6">
-                                    <input type="text" name="remarks" >
+                                    <input type="text" name="remarks">
                                 </td>
                               </tr>
                                 <tr>

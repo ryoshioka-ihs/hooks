@@ -34,6 +34,10 @@ $remarks = $_POST['remarks'];//備考
 //$resume = $_POST['resume'];//履歴書
 $checkbox = $_POST['checkbox'];//同意する
 
+//アンケート複数選択
+if (isset($_POST['enquete1']) && is_array($_POST['enquete1'])) {
+    $enquete1 = implode("、", $_POST["enquete1"]);
+}
 
 //ユーザーへ送信するメール
 $sendgrid = new SendGrid($sendgrid_username,$sendgrid_password, array("turn_off_ssl_verification" => true));
@@ -65,7 +69,8 @@ $email->addTo($emailadd)->
        	業務体験: $experience \r\n 
        	現在の状態: $status \r\n 
        	現在の状態（その他）:$status_other \r\n 
-       	最終卒業学校名: $last_school \r\n\r\n
+       	最終卒業学校名: $last_school \r\n
+       	備考: $remarks \r\n\r\n
 
        	※本メールは自動送信されています。\r\n
        	お問い合わせがある場合は、saiyou@iimhs.co.jpまでご連絡ください。")->
@@ -95,7 +100,8 @@ $email->addTo($emailadd)->
        	業務体験: $experience <br /> 
        	現在の状態: $status <br /> 
        	現在の状態（その他）:$status_other <br /> 
-       	最終卒業学校名: $last_school <br /><br />
+       	最終卒業学校名: $last_school <br />
+       	備考: $remarks <br><br />
 
        	※本メールは自動送信されています。<br />お問い合わせがある場合は、saiyou@iimhs.co.jpまでご連絡ください。")->
        addCategory('contact');
@@ -109,7 +115,7 @@ $email    = new SendGrid\Email();
 $email->addTo($to)->
        setFrom($from)->
        setFromName("IHS採用担当")->
-       setSubject("【IHS中途採用サイトからエントリーがありました】" )->
+       setSubject("【IHS新卒採用サイトからエントリーがありました】" )->
        setText("
 
        	IHS採用サイトより、下記のエントリーがありました。\r\n
@@ -130,7 +136,8 @@ $email->addTo($to)->
        	業務体験: $experience \r\n 
        	現在の状態: $status \r\n 
        	現在の状態（その他）:$status_other \r\n 
-       	最終卒業学校名: $last_school \r\n\r\n")->
+       	最終卒業学校名: $last_school \r\n
+       	備考: $remarks \r\n\r\n")->
 
 
        setHtml("
@@ -152,7 +159,8 @@ $email->addTo($to)->
        	業務体験: $experience <br /> 
        	現在の状態: $status <br /> 
        	現在の状態（その他）:$status_other <br /> 
-       	最終卒業学校名: $last_school <br /><br />")->
+       	最終卒業学校名: $last_school <br />
+       	備考: $remarks <br><br />")->
        addCategory('contact');
 
 $response = $sendgrid->send($email);
