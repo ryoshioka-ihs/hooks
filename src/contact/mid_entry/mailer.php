@@ -26,6 +26,7 @@ $phone1 = $_POST['phone1'];//電話番号1枠目
 $phone2 = $_POST['phone2'];//電話番号2枠目
 $phone3 = $_POST['phone3'];//電話番号3枠目
 $emailadd = $_POST['emailadd'];//メールアドレス
+$line = $_POST['line'];//LINE希望
 $start_work = $_POST['start_work'];//就業可能時期
 $desired_job_category = $_POST['desired_job_category'];//希望の職種
 $desired_annual_income = $_POST['desired_annual_income'];//希望の年収
@@ -79,6 +80,8 @@ $email->addTo($emailadd)->
        	第三面接希望日: $interview3_year 年 $interview3_month 月 $interview3_day 日 \r\n 
        	備考: $remarks \r\n\r\n 
 
+              $line \r\n 
+
        	※このメールは自動送信です。\r\n 
        	何かございましたらsaiyou@iimhs.co.jpまでお問い合わせください。")->
 
@@ -110,6 +113,8 @@ $email->addTo($emailadd)->
        	第一面接希望日: $interview1_year 年 $interview1_month 月 $interview1_day 日 <br /> 
        	第二面接希望日: $interview2_year 年 $interview2_month 月 $interview2_day 日 <br /> 
        	第三面接希望日: $interview3_year 年 $interview3_month 月 $interview3_day 日 <br /> 備考: $remarks <br /><br /> 
+
+              $line <br /> 
 
        	※このメールは自動送信です。<br /> 
        	何かございましたらsaiyou@iimhs.co.jpまでお問い合わせください。")->
@@ -147,7 +152,11 @@ $email->addTo($to)->
        	第一面接希望日: $interview1_year 年 $interview1_month 月 $interview1_day 日 \r\n 
        	第二面接希望日: $interview2_year 年 $interview2_month 月 $interview2_day 日 \r\n 
        	第三面接希望日: $interview3_year 年 $interview3_month 月 $interview3_day 日 \r\n 
-       	備考: $remarks \r\n\r\n ")->
+       	備考: $remarks \r\n\r\n
+
+              $line \r\n 
+              
+              ")->
 
 
        setHtml("
@@ -172,7 +181,11 @@ $email->addTo($to)->
        	第一面接希望日: $interview1_year 年 $interview1_month 月 $interview1_day 日 <br /> 
        	第二面接希望日: $interview2_year 年 $interview2_month 月 $interview2_day 日 <br /> 
        	第三面接希望日: $interview3_year 年 $interview3_month 月 $interview3_day 日 <br /> 
-       	備考: $remarks <br /><br />")->
+       	備考: $remarks <br /><br />
+
+              $line <br /> 
+              
+              ")->
        addCategory('contact');
 
 $response = $sendgrid->send($email);
