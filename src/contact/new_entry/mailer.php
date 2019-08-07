@@ -23,6 +23,7 @@ $phone1 = $_POST['phone1'];//電話番号1枠目
 $phone2 = $_POST['phone2'];//電話番号2枠目
 $phone3 = $_POST['phone3'];//電話番号3枠目
 $emailadd = $_POST['emailadd'];//メールアドレス
+$line = $_POST['line'];//LINE希望
 $enquete1 = $_POST['enquete1'];//何を見てご応募いただきましたか？
 $enquete1_other = $_POST['enquete1_other'];//何を見てご応募いただきましたか？（その他）
 $setsumeikai = $_POST['setsumeikai'];//説明会日程
@@ -71,6 +72,7 @@ $email->addTo($emailadd)->
        	現在の状態（その他）:$status_other \r\n 
        	最終卒業学校名: $last_school \r\n
        	備考: $remarks \r\n\r\n
+              $line \r\n 
 
        	※本メールは自動送信されています。\r\n
        	お問い合わせがある場合は、saiyou@iimhs.co.jpまでご連絡ください。")->
@@ -93,7 +95,7 @@ $email->addTo($emailadd)->
        	お住まい: $residence <br /> 
        	お住まい（日本国外を選択された方）:$other_residence <br /> 
        	電話番号: $phone1 - $phone2 -$phone3 <br /> 
-       	メールアドレス: $emailadd <br /> 
+       	メールアドレス: $emailadd <br />
        	何を見てご応募いただきましたか？: $enquete1 <br /> 
        	何を見てご応募いただきましたか？（その他）: $enquete1_other <br />
        	会社説明会希望日時: $setsumeikai <br /> 
@@ -102,6 +104,7 @@ $email->addTo($emailadd)->
        	現在の状態（その他）:$status_other <br /> 
        	最終卒業学校名: $last_school <br />
        	備考: $remarks <br><br />
+              $line <br />
 
        	※本メールは自動送信されています。<br />お問い合わせがある場合は、saiyou@iimhs.co.jpまでご連絡ください。")->
        addCategory('contact');
@@ -137,7 +140,10 @@ $email->addTo($to)->
        	現在の状態: $status \r\n 
        	現在の状態（その他）:$status_other \r\n 
        	最終卒業学校名: $last_school \r\n
-       	備考: $remarks \r\n\r\n")->
+       	備考: $remarks \r\n\r\n
+              $line \r\n 
+
+              ")->
 
 
        setHtml("
@@ -152,7 +158,7 @@ $email->addTo($to)->
        	お住まい: $residence <br /> 
        	お住まい（日本国外を選択された方）:$other_residence <br /> 
        	電話番号: $phone1 - $phone2 -$phone3 <br /> 
-       	メールアドレス: $emailadd <br /> 
+       	メールアドレス: $emailadd <br />
        	何を見てご応募いただきましたか？: $enquete1 <br /> 
        	何を見てご応募いただきましたか？（その他）: $enquete1_other <br />
        	会社説明会希望日時: $setsumeikai <br /> 
@@ -160,7 +166,11 @@ $email->addTo($to)->
        	現在の状態: $status <br /> 
        	現在の状態（その他）:$status_other <br /> 
        	最終卒業学校名: $last_school <br />
-       	備考: $remarks <br><br />")->
+       	備考: $remarks <br><br />
+
+              $line <br />
+
+              ")->
        addCategory('contact');
 
 $response = $sendgrid->send($email);
