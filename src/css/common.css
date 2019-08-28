@@ -774,6 +774,17 @@ header {
 			background-color: #F0BE0F;
 		}
 
+		/* インターンシップ */
+		#gNav li:nth-of-type(6) a:before {
+			background-color: #A8A9D8;
+		}
+
+		/* インターンシップ */
+		#gNav li:nth-of-type(7) a:before ul .sub li a:before{
+			margin-left: 10px;
+			background-color: #A8A9D8;
+		}
+
 /*  問い合わせボタン
 -------------------------------------------------- */
 #btnList {
