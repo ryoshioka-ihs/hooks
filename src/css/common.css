@@ -778,12 +778,15 @@ header {
 		#gNav li:nth-of-type(6) a:before {
 			background-color: #A8A9D8;
 		}
+		/* 子ナビゲーション*/
+			#gNav ul .sub{
+				margin-left: 10px;
+				position: relative;
+			}
 
-		/* インターンシップ */
-		#gNav li:nth-of-type(7) a:before ul .sub li a:before{
-			margin-left: 10px;
-			background-color: #A8A9D8;
-		}
+			#gNav li .sub{
+				margin-top:0px; 
+			}
 
 /*  問い合わせボタン
 -------------------------------------------------- */
