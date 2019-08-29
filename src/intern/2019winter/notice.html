@@ -1,0 +1,98 @@
+---
+layout: intern
+global_menu: intern2019summer
+description: 
+keywords: インターンシップ,IT,職業体験
+title: インターンシップ 冬季2019 | IHS新卒・中途採用サイト
+---
+<!--▽コンテンツ(コンテンツidを指定。会社紹介→company、IHSの魅力→appeal、先輩インタビュー→interview、募集要項→recruit、よくある質問→faq)▽-->
+
+
+
+
+<article id="intern">
+    <section>
+        <div id="kv1" class="ttl">
+            <h2><span>冬季2019インターンシップのお知らせ</span>NOTICE FORM</h2>
+        </div>
+        <div class="cont">
+            <section>
+                <div class="sentBox margb60">
+                    <form action="notice.php" method="post" enctype="multipart/form-data">
+                    <section>
+                    	<ul>
+                    		<li style="list-style-type: disc;">「<span style="color: red">※</span>」が付いている項目は必須項目です。</li>
+                    		<li style="list-style-type: disc;">携帯電話・スマートフォンからご登録の方へ<br>
+                    			「ドメイン指定受信」機能を利用されている方は、「iimhs.co.jp」からメールを受信できるよう設定してください。</li>
+                    	</ul>
+                        <table class="form">
+                            <tbody>
+
+                            　　<tr>
+                                <th><span class="R">※</span>氏名（全角文字）</th>
+                                <td colspan="6">
+                                    <input type="text" name="name" placeholder="(例)本郷　太郎" required>
+                                </td>
+                              <tr>
+                                <th><span class="R">※</span>フリガナ（全角カナ）</th>
+                                <td colspan="6">
+                                    <input type="text" name="phonetic" placeholder="(例)ホンゴウ　タロウ" required>
+                                </td>
+                              </tr>
+                              <tr>
+                                <th><span class="R">※</span>メールアドレス</th>
+                                <td colspan="6">
+                                    <input type="email" name="emailadd" placeholder="(例)abc@iimhs.co.jp" required>
+                                </td>
+                              </tr>
+
+                                <tr>
+                                    <td colspan="7">本フォームから送信頂きました個人情報については、弊社の「インターンシップ応募者に対する個人情報の取り扱いについて」( <a href="http://www.iimhs.co.jp/privacy/recruit_intern.html">http://www.iimhs.co.jp/privacy/recruit_intern.html</a> ) に則り管理致します。何卒ご理解、ご了承賜ります様宜しくお願い致します。<br>
+                                    <input type="checkbox" name="checkbox" value="同意する" required class="none">同意する
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        
+                        <input type="submit" value="送信する" class="btn" style="background-color: #FF9B2A">
+                    </section>
+                </form>
+                </div>
+            </section>
+        </div>
+        <!--/.cont-->
+    </section>
+</article>
+<!--△コンテンツ△-->
+
+
+    <!--生年月日制御スクリプト-->
+    <script type="text/javascript">
+        (function($){
+          function formSetDay(){
+            var lastday = formSetLastDay($('.Bjs-changeYear').val(), $('.Bjs-changeMonth').val());
+            var option = '';
+            for (var i = 1; i <= lastday; i++) {
+              if (i === $('.Bjs-changeDay').val()){
+                option += '<option value="' + i + '" selected="selected">' + i + '</option>\n';
+              }else{
+                option += '<option value="' + i + '">' + i + '</option>\n';
+              }
+            }
+            $('.Bjs-changeDay').html(option);
+          }
+
+          function formSetLastDay(year, month){
+            var lastday = new Array('', 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31);
+            if ((year % 4 === 0 && year % 100 !== 0) || year % 400 === 0){
+              lastday[2] = 29;
+            }
+            return lastday[month];
+          }
+
+          $('.Bjs-changeYear, .Bjs-changeMonth').change(function(){
+            formSetDay();
+          });
+        })(jQuery);
+    </script>
+    <!--生年月日制御スクリプト-->
