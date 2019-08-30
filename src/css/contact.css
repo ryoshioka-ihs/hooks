@@ -9,13 +9,15 @@
 -------------------------------------------------------- */	
 
 /*　テーブル　*/
-#contact .cont .sentBox table.form {
+#contact .cont .sentBox table.form,
+#intern .cont .sentBox table.form {
     border-collapse: collapse;
     width: 100%;
     margin-right: 10px;
 }
 
-#contact .cont .sentBox table.form th {
+#contact .cont .sentBox table.form th,
+#intern .cont .sentBox table.form th {
     background-color: #F9FAFC;
     text-align: left;    
     padding: 10px;
@@ -24,58 +26,71 @@
     width: 30%;
 }
 
-#contact .cont .sentBox table.form th span {
+#contact .cont .sentBox table.form th span,
+#intern .cont .sentBox table.form th span {
     color: red;
     font-weight: bold;
 }
 
-#contact .cont .sentBox table.form td {
+#contact .cont .sentBox table.form td,
+#intern .cont .sentBox table.form td {
     padding: 10px;
     border: 1px solid #E6E9EE;
     /*width: 10%;*/
 }
 
-#contact .cont .sentBox table.form td.w10 {
+#contact .cont .sentBox table.form td.w10,
+#intern .cont .sentBox table.form td.w10 {
     width: 10%;
 }
-#contact .cont .sentBox table.form td.w20 {
+#contact .cont .sentBox table.form td.w20,
+#intern .cont .sentBox table.form td.w20 {
     width: 20%;
 }
 
-#contact .cont .sentBox table.form td.w30 {
+#contact .cont .sentBox table.form td.w30,
+#intern .cont .sentBox table.form td.w30 {
     width: 30%;
 }
 
 
-#contact .cont .sentBox table.form td.text {
+#contact .cont .sentBox table.form td.text
+#intern .cont .sentBox table.form td.text, {
     width: 5%;
 }
 
-#contact .cont .sentBox table.form td form.birthday {
+#contact .cont .sentBox table.form td form.birthday,
+#intern .cont .sentBox table.form td form.birthday {
     width: 30px;
     margin-right: 5px;
     margin-left:  5px;
 }
 
 #contact .cont .sentBox table.form tbody td form,
+#intern .cont .sentBox table.form tbody td form,
 #contact .cont .sentBox table.form tbody td select,
-#contact .cont .sentBox table.form tbody td input {
+#intern .cont .sentBox table.form tbody td select,
+#contact .cont .sentBox table.form tbody td input,
+#intern .cont .sentBox table.form tbody td input {
     /*border: none;*/
     width: 100%;
 }
 
-#contact .cont .sentBox table.form tbody td input.none{
+#contact .cont .sentBox table.form tbody td input.none,
+#intern .cont .sentBox table.form tbody td input.none{
     width: auto;
 } 
 
-#contact .cont .sentBox table.form tbody td textarea {
+#contact .cont .sentBox table.form tbody td textarea,
+#intern .cont .sentBox table.form tbody td textarea {
     width: 450px;
     height: 40px;
     display: block;
     border: none;
 }
 
-#contact .cont .sentBox table.form tbody td textarea.message {
+#contact .cont .sentBox table.form tbody td textarea.message,
+#intern .cont .sentBox table.form tbody td textarea.message {
     width: 650px;
     height: 500px;
     display: block;
@@ -83,11 +98,13 @@
 }
 
 /*　レイアウト　*/
-#contact .cont .margb60 {
+#contact .cont .margb60,
+#intern .cont .margb60 {
     margin-bottom: 60px;
 }
 
-#contact .cont .sentBox .margb30 {
+#contact .cont .sentBox .margb30,
+#intern .cont .sentBox .margb30 {
     margin-bottom: 30px;
 }
 

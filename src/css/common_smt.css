@@ -371,7 +371,8 @@ header .menu {
 	overflow: hidden;
 }
 	#lNav li,
-	#info #lNav li {
+	#info #lNav li,
+	#intern #lNav li {
 		width: 48%;
 		/*height: 36px;*/
 		margin: 0 0 10px 0;
@@ -379,7 +380,8 @@ header .menu {
 		font-size: 12px;
 	}
 	#lNav li:nth-of-type(even),
-	#info #lNav li:nth-of-type(even) {
+	#info #lNav li:nth-of-type(even),
+	#intern #lNav li:nth-of-type(even) {
 		float: right;
 	}
 		#lNav li a {
@@ -389,8 +391,9 @@ header .menu {
 			opacity: 1;
 		}
 
-	/* 募集要項専用 */
-#info #lNav {
+	
+#info #lNav,
+#intern #lNav {
 	margin-bottom: 20px;	
 }		
 

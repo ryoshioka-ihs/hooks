@@ -13,7 +13,14 @@
             <li{% if page.global_menu=="interview" %} class="act" {% endif %}><a href="/recruit/interview/interview.html">先輩インタビュー</a></li>
             <li{% if page.global_menu=="info" %} class="act" {% endif %}><a href="/recruit/info/guideline.html">募集要項</a></li>
             <li{% if page.global_menu=="faq" %} class="act" {% endif %}><a href="/recruit/faq.html">よくある質問</a></li>
-            </ul>
+            <!--<li{% if page.global_menu=="intern" %} class="act" {% endif %}>--><li><a tabindex="-1">インターンシップ</a>
+            	<ul class="sub">
+            		<li{% if page.global_menu=="intern2019summer" %} class="act" {% endif %} style="margin-top: 0px; margin-bottom: 0px;"><a href="/recruit/intern/2019summer/">夏季2019</a></li>
+            		<!--<li{% if page.global_menu=="intern2019winter" %} class="act" {% endif %} style="margin-top: 0px; margin-bottom: 0px;"><a href="/recruit/intern/2019winter/">冬季2019</a></li>-->
+            	</ui>
+            </li>
+        	</ul>
+
         </nav>
         <ul id="btnList">
             <li class="btn entry"><a href="/recruit/contact/new_entry/"><span>ENTRY</span>採用エントリーフォーム</a></li>

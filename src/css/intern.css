@@ -1,0 +1,250 @@
+@charset "UTF-8";
+/* CSS Document */
+/*===================================================
+    インターンシップ用CSS
+===================================================*/
+
+/* --------------------------------------------------------
+    インターン概要
+-------------------------------------------------------- */
+
+/*　テーブル　*/
+#intern .cont .sentBox table.intern {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#intern .cont .sentBox table.intern th,
+#intern .cont .sentBox table.intern td {
+    border: 1px solid #E6E9EE;
+}
+
+#intern .cont .sentBox table.intern th {
+    background-color: #F9FAFC;
+    text-align: center;
+    width: 20%;
+    padding: 10px 5px;
+}
+
+#intern .cont .sentBox table.intern td {
+    padding: 10px;
+}
+
+#intern .cont .sentBox table.intern tbody td ul {
+    margin-left: 15px;
+}
+
+#intern .cont .sentBox table.intern tbody td li {
+    padding-left: 0px;
+    list-style-type: disc;
+}
+
+#intern .cont .sentBox .intern tbody li dl {
+    margin-bottom: 8px;
+    line-height: 130%;
+}
+
+#intern .cont .sentBox .intern tbody li dt {
+    font-weight: bold;
+}
+
+
+span{
+    /*font-size: 17px;*/
+    font-weight: bold
+}
+
+/*　テーブル内　リンクボタン*/
+#intern .cont .sentBox .intern .btn {
+    margin-top: 8px;
+}
+#intern .cont .sentBox .intern .btn a {
+    background: url("/recruit/image/common/btn_arrow.png") right center no-repeat #555;
+    background-size: 16px auto;
+    transition: 0.3s;
+}
+
+#intern .cont .sentBox .intern .btn a:hover {
+    opacity: 0.7;
+}
+
+.mbox{
+    width: 200px;
+    height: 50px;
+    /*margin-left: -50px;*/
+    margin-bottom: 10px;
+}
+
+.mbox p{
+    font-weight: bold;
+    text-align: center;
+    font-size: 20px;
+    line-height: 50px;
+}
+
+
+.mbox .intern a:hover{
+    text-decoration: none;
+}
+
+
+/*エントリーフォームへのバナーボタン*/
+.enBtn{
+	width: 100%;
+	height: 60px;
+	background-color: #FF9B2A;
+	text-align: center;
+	padding:10px; 
+
+}
+
+.enBtn a{
+	color: #FFF;
+	font-weight: bold;
+	font-size: 2em;
+}
+
+
+
+
+.internBox > p{
+    padding-top: 10px;
+    color: #000;
+    padding: 5px;
+}
+
+
+
+.boxBI{
+    background-color: #FFF;
+}
+
+.textBox{
+    padding:10px;
+    border: solid 3px #6093CA;
+}
+
+.internBox h1{
+    color: #000;
+    font-size: 18px;
+    padding: 5px;
+    margin-top: 15px;
+    font-weight: bold;
+}   
+
+
+
+/* --------------------------------------------------------
+    インターンシップ日程
+-------------------------------------------------------- */
+
+#intern .cont .sentBox .session {
+    margin-bottom: 60px;
+}
+
+#intern .cont .sentBox .session h4 {
+    color: #A8A9D8;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+}
+
+#intern .cont .sentBox .session table {
+    margin-top: 20px;
+    width: 100%;
+}
+
+#intern .cont .sentBox .session table thead tr {
+    border-bottom: 3px #A8A9D8 solid;
+}
+
+#intern .cont .sentBox .session table thead tr th {
+    padding: 0 8px 16px 8px;
+    text-align :left;
+    font-weight: bold;
+}
+
+#intern .cont .sentBox .session table tbody tr th.date{
+    border-bottom: 1px #e4dfcf solid;
+    padding: 20px 8px;
+    width: 26%;
+}
+#intern .cont .sentBox .session table tbody tr td {
+    padding: 20px 8px;
+    border-bottom: 1px #e4dfcf solid;
+}
+
+#intern .cont .sentBox .session table tbody tr td.time,
+#intern .cont .sentBox .session table tbody tr td.venue {
+    width: 20%
+}
+
+#intern .cont .sentBox .session table tbody tr td.apply {
+    width: 22%
+}
+
+#intern .cont .sentBox .session table tbody tr td.situation {
+    width: 10%
+}
+
+/* 会場のご案内 */
+#intern .cont .sentBox .access h4 {
+    border-bottom: 1px #e4dfcf solid;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 20px 10px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+#intern .cont .sentBox .access .tokyo h5,
+#intern .cont .sentBox .access .osaka h5 {
+    font-weight: bold;
+}
+
+#intern .cont .sentBox .access .tokyo,
+#intern .cont .sentBox .access .osaka {
+    margin-bottom: 60px;
+}
+
+#intern .cont .sentBox .access .ggmap{
+    width: 100%;
+    height: 300px;
+}
+
+
+
+#intern .cont .sentBox .guide {
+    background: #f0f0f0;
+    padding: 20px 40px;
+    margin-bottom: 20px;
+    clear: both;
+    overflow: hidden;
+}
+
+#intern .cont .sentBox .guide h5 {
+    font-weight: bold;
+}
+
+#intern .cont .sentBox .guide p.btn {
+    background-color: #555;
+    margin-top: 5px;
+    margin-right: 5px;
+}
+
+/* エントリーボタン（申し込み方法） */
+#intern .cont .sentBox .guide p.btn.entry {
+	background-color: #FF9B2A;
+	font-size: 100%;
+	line-height: 50px;
+	margin-top: 5px;
+}
+#intern .cont .sentBox .guide p.btn.entry a {
+	padding: 0;
+}
+
+
+/* バナー 横に一列） */
+	.banner{
+	margin-top: -50px;
+	width: 100%;
+}

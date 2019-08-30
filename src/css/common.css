@@ -126,9 +126,14 @@ a[href^="tel:"]:hover {
 	background-color: #F0BE0F;
 }
 
+#intern .btn {
+	background-color: #8904B1; 
+}
+
 #contact .btn {
 	background-color: #333;
 }
+
 
 /* エントリーボタン */
 .btn.entry {
@@ -216,6 +221,11 @@ article #kv5.ttl {
 	background-image: url("/recruit/image/common/kv5.png");
 }
 article #kv6.ttl {
+	background-image: url("/recruit/image/common/kv6.png");
+}
+
+/*未設定*/
+article #kv7.ttl {
 	background-image: url("/recruit/image/common/kv6.png");
 }
 
@@ -317,8 +327,13 @@ article .ttl h2 {
 }
 
 #leading .ttl h2 {
-	border-color: #050DF6;
-	color: #050DF6;
+	border-color: #A8A9D8;
+	color: #A8A9D8;
+}
+
+#intern .ttl h2 {
+	border-color: #A8A9D8;
+	color: #A8A9D8;
 }
 
 /* --------------------------------------------------------
@@ -374,6 +389,10 @@ article h3:before {
 
 #faq h3:before {
 	background-color: #F0BE0F;
+}
+
+#intern h3:before {
+	background-color: #A8A9D8;
 }
 
 /* --------------------------------------------------
@@ -447,6 +466,10 @@ h3 + figure {
 
 	#faq .sentBox .hline {
 		color: #F0BE0F;
+	}
+
+	#intern .sentBox .hline {
+		color: #8904B1;
 	}
 
 	/* sentBox内のbtnの幅とマージンの設定 */
@@ -774,6 +797,17 @@ header {
 			background-color: #F0BE0F;
 		}
 
+		/* インターンシップ */
+		#gNav li:nth-of-type(6) a:before {
+			background-color: #A8A9D8;
+		}
+		/* 子ナビゲーション*/
+			#gNav ul .sub{
+				margin-left: 10px;
+				position: relative;
+			}
+
+
 /*  問い合わせボタン
 -------------------------------------------------- */
 #btnList {
@@ -859,6 +893,7 @@ header {
 			opacity: 0.7;
 		}
 
+
 	/* ボタン色 */
 	#company #lNav li a {
 		background-color: #E36D45;
@@ -884,11 +919,16 @@ header {
 		background-color: #555;
 	}
 
-	/* 募集要項専用*/
-#info #lNav {
+	#intern #lNav li a {
+		background-color: #A8A9D8;
+	}
+	
+#info #lNav,
+#intern #lNav {
 	margin-bottom: 60px;
 }
-	#info #lNav li {
+	#info #lNav li,
+	#intern #lNav li {
 		width: 32.4%;
 	}
 
