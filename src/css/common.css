@@ -1304,3 +1304,25 @@ em {
 	margin-left: 15px;
 }
 */
+
+
+/*渡辺ここからインターンバナー*/
+
+.internbanner{
+	background: #A8A9D8;
+	padding-top: 20px;
+	padding-bottom: 20px;
+    border-radius: 8px;
+
+	}
+
+	
+.internbanner a,
+a:hover {
+	color: #fff;
+	text-decoration: none;
+	font-weight: bold;
+	font-size: 13pt;
+}
+
+/*渡辺ここまで*/
