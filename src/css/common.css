@@ -1317,12 +1317,10 @@ em {
 	}
 
 	
-.internbanner a,
-a:hover {
+.internbanner a{
 	color: #fff;
 	text-decoration: none;
 	font-weight: bold;
-	font-size: 13pt;
 }
 
 /*渡辺ここまで*/
