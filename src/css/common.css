@@ -126,12 +126,8 @@ a[href^="tel:"]:hover {
 	background-color: #F0BE0F;
 }
 
-#topics .btn {
-	background-color: #EDE168;
-}
-
 #intern .btn {
-	background-color: #BCA9F5; 
+	background-color: #8904B1; 
 }
 
 #contact .btn {
@@ -317,11 +313,6 @@ article .ttl h2 {
 	color: #F0BE0F;
 }
 
-#topics .ttl h2 {
-	border-color: #EDE168;
-	color: #EDE168;
-}
-
 #contact .ttl h2 {
 	border-color: #333;
 	color: #333;
@@ -341,8 +332,8 @@ article .ttl h2 {
 }
 
 #intern .ttl h2 {
-	border-color: #BCA9F5;
-	color: #BCA9F5;
+	border-color: #A8A9D8;
+	color: #A8A9D8;
 }
 
 /* --------------------------------------------------------
@@ -400,12 +391,8 @@ article h3:before {
 	background-color: #F0BE0F;
 }
 
-#topics h3:before {
-	background-color: #EDE168;
-}
-
 #intern h3:before {
-	background-color: #BCA9F5;
+	background-color: #A8A9D8;
 }
 
 /* --------------------------------------------------
@@ -494,12 +481,8 @@ h3 + figure {
 		color: #F0BE0F;
 	}
 
-	#topics .sentBox .hline {
-		color: #EDE168;
-	}
-
 	#intern .sentBox .hline {
-		color: #BCA9F5;
+		color: #8904B1;
 	}
 
 	/* sentBox内のbtnの幅とマージンの設定 */
@@ -663,7 +646,7 @@ h3 + figure {
 
 /* 紫 */
 .tri.purple:before {
-	border-color: #BCA9F5 transparent transparent;
+	border-color: #A8A9D8 transparent transparent;
 }
 
 /* 桃 */
@@ -673,9 +656,8 @@ h3 + figure {
 
 /* 黄 */
 .tri.yellow:before {
-	border-color: #EDE168 transparent transparent;
+	border-color: #f0be0f transparent transparent;
 }
-
 
 /* --------------------------------------------------------
     詳細タイトルとその内容
@@ -828,14 +810,9 @@ header {
 			background-color: #F0BE0F;
 		}
 
-		/* トピックス */
-		#gNav li:nth-of-type(6) a:before {
-			background-color: #EDE168;
-		}
-
 		/* インターンシップ */
-		#gNav li:nth-of-type(8) a:before {
-			background-color: #BCA9F5;
+		#gNav li:nth-of-type(6) a:before {
+			background-color: #A8A9D8;
 		}
 		/* 子ナビゲーション*/
 			#gNav ul .sub{
@@ -951,16 +928,12 @@ header {
 		background-color: #F0BE0F;
 	}
 
-	#topics #lNav li a {
-		background-color: #EDE168;
-	}
-
 	#contact #lNav li a {
 		background-color: #555;
 	}
 
 	#intern #lNav li a {
-		background-color: #BCA9F5;
+		background-color: #A8A9D8;
 	}
 	
 #info #lNav,
@@ -1336,7 +1309,7 @@ em {
 /*渡辺ここからインターンバナー*/
 
 .internbanner{
-	background: #BCA9F5;
+	background: #A8A9D8;
 	padding-top: 20px;
 	padding-bottom: 20px;
     border-radius: 8px;

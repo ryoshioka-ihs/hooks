@@ -160,11 +160,9 @@
 			border-color: #6E6E6E;
 		}
 		#content li.purple a:hover:before {
-			border-color: #F9FAFC;
+			border-color: #8904B1;
 		}
-		#content li.yellow a:hover:before {
-			border-color: #EDE168;
-		}
+
 
 @media (max-width: 1008px) {
 	#content {
