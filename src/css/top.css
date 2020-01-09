@@ -156,6 +156,9 @@
 		#content li.blue a:hover:before {
 			border-color: #6093CA;
 		}
+		#content li.violet a:hover:before {
+			border-color: #483d8b;
+		}
 		#content li.gray a:hover:before {
 			border-color: #6E6E6E;
 		}

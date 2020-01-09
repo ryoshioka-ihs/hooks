@@ -313,6 +313,11 @@ article .ttl h2 {
 	color: #F0BE0F;
 }
 
+#topics .ttl h2 {
+	border-color: #483d8b;
+	color: #483d8b;
+}
+
 #contact .ttl h2 {
 	border-color: #333;
 	color: #333;
@@ -649,6 +654,11 @@ h3 + figure {
 	border-color: #A8A9D8 transparent transparent;
 }
 
+/* バイオレット */
+.tri.violet:before {
+	border-color: #483d8b transparent transparent;
+}
+
 /* 桃 */
 .tri.pink:before {
 	border-color: #F48494 transparent transparent;
@@ -811,9 +821,14 @@ header {
 		}
 
 		/* インターンシップ */
-		#gNav li:nth-of-type(6) a:before {
+		#gNav li:nth-of-type(7) a:before {
 			background-color: #A8A9D8;
 		}
+		/* お知らせ */
+		#gNav li:nth-of-type(6) a:before {
+			background-color: #483d8b;
+		}
+
 		/* 子ナビゲーション*/
 			#gNav ul .sub{
 				margin-left: 10px;
@@ -926,6 +941,10 @@ header {
 
 	#faq #lNav li a {
 		background-color: #F0BE0F;
+	}
+
+	#topics #lNav li a {
+		background-color: #483d8b;
 	}
 
 	#contact #lNav li a {
