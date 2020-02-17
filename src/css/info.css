@@ -362,7 +362,7 @@ span{
 #info .cont .sentBox .session table tbody tr th.date{
     border-bottom: 1px #e4dfcf solid;
     padding: 20px 8px;
-    /*width: 26%;*/
+    width: 0%;
 }
 #info .cont .sentBox .session table tbody tr td {
     padding: 20px 8px;
@@ -371,7 +371,7 @@ span{
 
 #info .cont .sentBox .session table tbody tr td.time,
 #info .cont .sentBox .session table tbody tr td.venue {
-    /*width: 20%;*/
+    width: 0%;
     
 }
 
@@ -380,11 +380,11 @@ span{
 }
 
 #info .cont .sentBox .session table tbody tr td.apply {
-    /*width: 20%*/
+    width: 0%;
 }
 
 #info .cont .sentBox .session table tbody tr td.situation {
-   /* width: 22%*/
+    width: 0%;
 }
 
 /* 会場のご案内 */
