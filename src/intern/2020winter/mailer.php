@@ -24,9 +24,9 @@ $emailadd = $_POST['emailadd'];//メールアドレス
 $enquete1 = $_POST['enquete1'];//セミナー参加目的
 $enquete1_other = $_POST['enquete1_other'];//セミナー参加目的（その他）
 $intern1 = $_POST['intern1'];//インターンシップ応募日程　第一希望
-$intern2 = $_POST['intern2'];//インターンシップ応募日程　第二希望
-$intern1 = $_POST['intern3'];//インターンシップ応募日程　第三希望
-$intern2 = $_POST['intern4'];//インターンシップ応募日程　第四希望
+//$intern2 = $_POST['intern2'];//インターンシップ応募日程　第二希望
+//$intern3 = $_POST['intern3'];//インターンシップ応募日程　第三希望
+//$intern4 = $_POST['intern4'];//インターンシップ応募日程　第四希望
 $status = $_POST['status'];//現在の状態
 $category = $_POST['category'];//卒業見込み年度
 $school = $_POST['school'];//学校名
@@ -64,9 +64,6 @@ $email->addTo($emailadd)->
                   セミナー参加目的: $enquete1 \r\n 
                   セミナー参加目的（その他）: $enquete1_other \r\n
                   インターンシップ応募日程　第一希望: $intern1 \r\n
-                  インターンシップ応募日程　第二希望: $intern2 \r\n
-                  インターンシップ応募日程　第三希望: $intern3 \r\n
-                  インターンシップ応募日程　第四希望: $intern4 \r\n
                   現在の状態: $status \r\n
                   卒業見込み年度: $category \r\n
                   学校名: $school \r\n 
@@ -95,9 +92,7 @@ $email->addTo($emailadd)->
                   セミナー参加目的: $enquete1 <br> 
                   セミナー参加目的（その他）: $enquete1_other <br>
                   インターンシップ応募日程　第一希望: $intern1 <br>
-                  インターンシップ応募日程　第二希望: $intern2 <br>
-                  インターンシップ応募日程　第三希望: $intern3 <br>
-                  インターンシップ応募日程　第四希望: $intern4 <br>
+
                   現在の状態: $status <br>
                   卒業見込み年度: $category <br> 
                   学校名: $school <br> 
@@ -134,9 +129,7 @@ $email->addTo($to)->
                   セミナー参加目的: $enquete1 \r\n 
                   セミナー参加目的（その他）: $enquete1_other \r\n 
                   インターンシップ応募日程　第一希望: $intern1 \r\n
-                  インターンシップ応募日程　第二希望: $intern2 \r\n
-                  インターンシップ応募日程　第三希望: $intern3 \r\n
-                  インターンシップ応募日程　第四希望: $intern4 \r\n
+
                   現在の状態: $status \r\n
                   卒業見込み年度: $category \r\n 
                   学校名: $school \r\n 
@@ -161,9 +154,7 @@ $email->addTo($to)->
                   セミナー参加目的: $enquete1 <br> 
                   セミナー参加目的（その他）: $enquete1_other <br> 
                   インターンシップ応募日程　第一希望: $intern1 <br>
-                  インターンシップ応募日程　第二希望: $intern2 <br>
-                  インターンシップ応募日程　第三希望: $intern3 <br>
-                  インターンシップ応募日程　第四希望: $intern4 <br>
+
                   現在の状態: $status <br>
                   卒業見込み年度: $category <br> 
                   学校名: $school <br> 
