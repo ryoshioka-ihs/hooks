@@ -477,3 +477,14 @@ footer #pageTop:hover {
     	margin-left: 10px;
     }
 }
+
+/*3月説明会表示渡辺*/
+@media screen and (max-width: 768px){
+
+#info .marchchange{
+	margin-left: 3%;
+	margin-right: 3%;
+}
+}
+
+/*3月説明会表示渡辺ここまで*/
