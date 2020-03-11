@@ -1,0 +1,182 @@
+---
+layout:       case
+global_menu:  cases
+title:        "急成長を続ける企業のSCCM管理ポイント増設"
+description:  "新規SCCM管理ポイントの構築支援の事例。増設により、管理されていなかったクライアントを一元管理することができました。
+また、既存サーバでのクライアントの管理を、新規増設を行った管理ポイントと冗長化構成を行うことにより、サーバの負荷分散にもつながりました。"
+keywords:     "SCCM,管理ポイント,クライアント管理,事例"
+date:         2016-10-17 09:00:00 +0900
+PDF:          "case125"
+categories:
+ - "インフラ構築"
+tags:
+ - "System Center Configuration Manager"
+---
+
+<section>
+  <h1>{{ page.title }}</h1>
+  <ul class="linkInPage">
+    <li><a href="#toc-background">背景</a></li>
+    <li><a href="#toc-overview">概要</a></li>
+    <li><a href="#toc-sysCon">構成図</a></li>
+    <li><a href="#toc-point">作業のポイント</a></li>
+    <li><a href="#toc-IHS-result">弊社利用による効果</a></li>
+    <li><a href="#toc-work">作業内容の詳細</a></li>
+    <li><a href="#PdfDownload">PDFダウンロード</a></li>
+  </ul>
+
+  <section id="toc-background">
+    <h2>背景</h2>
+    <div class="smtSent">
+      <p>合併や再編を繰り返しながらダイナミックに変化するビジネスの世界。</p>
+      <p>成長著しい企業ほど、その業務を支えるICT環境の運用管理は複雑で、統制しづらい状況に陥りがちです。</p>
+      <p>今回のお客様は、急成長する大手小売業のグループ各社にITサービス、保守・運用、コンサルティングを提供されています。</p>
+      <p>IT関連サービスだけでなく、経理・会計業務や人事業務のシェアードサービスも提供されており、サービスの対象となる従業員は数十万人。</p>
+      <p>グループ全体のICT資産全体を管理するお客様が目標とされているのは、品質・サービス向上と合理的コスト削減の両立です。</p>
+      <br>
+      <p>お客様は、以前からマイクロソフト社の運用管理ソリューション System Center を用いてPCを一元管理されていました。</p>
+      <p>ところが、企業規模の拡大にともなってクライアント管理台数が1サーバで管理できる台数の上限を超え、部分的にウイルス対策ソフトの導入状況やセキュリティパッチの適用状況が把握できない状態になったため、管理台数を増やすことが急務となりました。</p>
+      <br>
+      <p>IHSは、以前お客様のSystem Center製品を用いた管理基盤構築をお手伝いし、運用をご支援し続けてきました。</p>
+      <p>今回のプロジェクトは、お客様の環境を熟知した、System Center 製品構築経験を持つ技術者が中心となって、System Center Configuration Manager（SCCM）の役割である管理ポイント増設の運用設計から実装までをおこないました。</p>
+    </div>
+  </section>
+
+  <section id="toc-overview">
+    <h2>概要</h2>
+    <div class="smtSent">
+      <table class="baseTb">
+        <tbody>
+          <tr>
+            <th>業種</th>
+            <td>小売業</td>
+          </tr>
+          <tr>
+            <th>目的</th>
+            <td>クライアント増加による、管理ポイントの増加</td>
+          </tr>
+          <tr>
+            <th>作業規模</th>
+            <td>
+              <p>利用ユーザー数：約30,000名</p>
+              <br>
+              <p>[既存サーバ環境]</p>
+              <ul class="grayDisc">
+                <li>Active Directory ドメインコントローラ</li>
+                <li>System Center 2012 Configuration Manager プライマリサーバ</li>
+                <li>Microsoft SQL Server 2008 R2</li>
+              </ul>
+              <br>
+              <p>[新規サーバ環境]</p>
+              <ul class="grayDisc">
+                <li>System Center 2012 Configuration Manager 管理ポイント</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <th>作業ボリューム</th>
+            <td>6人日</td>
+          </tr>
+          <tr>
+            <th>作業内容</th>
+            <td>
+              <ul class="grayDisc">
+                <li>要件定義</li>
+                <li>基本設計</li>
+                <li>設定作業/動作試験</li>
+                <li>ドキュメント作成</li>
+              </ul>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section id="toc-sysCon">
+    <h2>構成図</h2>
+    <div class="smtSent">
+      <div class="lightBox">
+        <figure>
+          <img src="/image/cases/case125_01.png" alt="システム構成図">
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section id="toc-point">
+    <h2>作業のポイント</h2>
+    <div class="smtSent">
+      <h3>新規管理ポイント増設による管理対象クライアント追加</h3>
+      <p>マイクロソフト社のSystem Center 2012 Configuration Manager（SCCM）は、1つのサイトシステムに「管理ポイント」「配布ポイント」等の役割が割り当てられます。</p>
+      <p>お客様の環境でも、これまで1台のプライマリサイトがすべての役割を担っていました。</p>
+      <p>しかし、プライマリサイトの管理ポイントで管理可能なクライアント数の上限は25,000台。</p>
+      <p>お客様は、30,000台を管理する必要があったため、今回、「管理ポイント」の役割だけを担うサーバを新規に増設されました。</p>
+      <p>これにより、喫緊の課題であったクライアントの一元管理を取り戻すことが出来ました。</p>
+      <h3>複数の管理ポイント導入による高可用性の実現</h3>
+      <p>サイト内に管理ポイントを複数インストールすると、ネットワーク負荷分散（NLB）機能が自動的に搭載されます。今回、管理ポイントを増設することによってNLBが搭載され、サーバのネットワーク負荷分散につながりました。管理対象のクライアントは増えていますが、管理ポイントの増設前より可用性が向上しました。</p>
+    </div>
+  </section>
+
+  <section id="toc-IHS-result">
+    <h2>弊社利用による効果</h2>
+    <div class="smtSent">
+      <h3>System Center製品構築実績</h3>
+      <p>IHSでは、近年SCCM リプレースによる移行作業など様々な環境でのSystem Center 製品の構築を経験しており、System Center を用いた基盤構築についてのノウハウを蓄積、社内で共有しています。</p>
+      <p>今回のお客様のように、日本国内だけで大規模なクライアント管理をされる例は非常にまれですが、これまでの経験を活かして適切な提案ができました。</p>
+      <h3>確かな技術力</h3>
+      <p>今回のお客様は、初期導入直後から長期間にわたってIHSが運用をご支援させていただいています。</p>
+      <p>お客様のシステム環境を熟知しているということや製品知識があるという理由だけでなく、トータルな技術力についても評価していただき、これまでもお客様から様々なご相談をいただいておりました。</p>
+      <p>時には、お客様のご相談内容をそのまま実行するのではなく、別の解決方法をご提案させていただいたこともあります。</p>
+      <p>そうしたことを続ける中で、お客様との信頼関係を築くことができたと感じています。</p>
+    </div>
+  </section>
+
+  <section id="toc-work">
+  <h2>作業内容の詳細</h2>
+  <div class="smtSent">
+    <h3>設計</h3>
+        <ol class="numList">
+          <li>
+            <p>基本設計</p>
+          </li>
+          <div class="textIndent--style3">
+            <ul class="grayDisc">
+              <li>運用設計</li>
+            </ul>
+          </div>
+        </ol>
+
+    <h3>環境構築</h3>
+        <ol class="numList">
+          <li>
+            <p>構成管理機能</p>
+          </li>
+            <div class="textIndent--style3">
+              <ul class="grayDisc">
+                <li>System Center 2012 Configuration Manager</li>
+              </ul>
+            </div>
+        </ol>
+
+    <h3>環境構築</h3>
+        <ol class="numList">
+          <li>
+            <p>環境移行対象</p>
+          </li>
+        </ol>
+
+    <h3>納品ドキュメント</h3>
+        <div class="texyIndent--style3">
+          <ul class="grayDisc">
+            <li>基本設計</li>
+            <li>詳細設計書</li>
+            <li>作業手順書</li>
+            <li>結果報告書</li>
+          </ul>
+        </div>
+  </div>
+  </section>
+
+</section>
+

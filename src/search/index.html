@@ -1,0 +1,59 @@
+---
+title:       "サイト内検索"
+description: ""
+keywords:    ""
+noindex:     true 
+nosearch:    true
+layout:      utility
+global_menu: utility
+---
+
+<section data-bind="if: searchQuery">
+	<h1>&quot;<span data-bind="text: searchQuery"></span>&quot;の検索結果 (<span data-bind="text: results().length"></span>件)</h1>
+
+	<div class="siteSearch siteSearch--inContent">
+		<form class="siteSearchForm siteSearchForm--lg" name="seek" method="get" action="/search/">
+			<input class="siteSearchBox" name="q" data-bind="value: searchQuery" type="text">
+			<input class="siteSearchBtn" value="" type="submit">
+		</form>
+	</div>
+
+	<ul class="repoList" data-bind="foreach: results">
+		<li>
+			<a target="_blank" data-bind="attr: { href: link }">
+				<section>
+					<h3 data-bind="text: title"></h3>
+					<p data-bind="text: description"></p>
+				</section>
+			</a>
+		</li>
+	</ul>
+
+	<div data-bind="if: !results().length && !isSearching()">
+		<p>キーワードに一致する情報は見つかりませんでした。</p>
+	</div>
+
+	<div class="search-loading" data-bind="if: isSearching">
+		<p>検索中...</p>
+	</div>
+</section>
+
+<section data-bind="if: !searchQuery">
+	<h1>サイト内検索</h1>
+	<p>キーワードを入力して、検索ボタンを押してください。</p>
+
+	<div class="siteSearch siteSearch--inContent">
+		<p id="scBtn">検索</p>
+		<form class="siteSearchForm siteSearchForm--lg" name="seek" method="get" action="/search/">
+			<input class="siteSearchBox" name="q" data-bind="value: searchQuery" type="text">
+			<input class="siteSearchBtn" value="" type="submit">
+		</form>
+	</div>
+</section>
+
+<script type="text/javascript" src="/js/moment.min.js"></script>
+<script type="text/javascript" src="/js/knockout-3.4.0.js"></script>
+<script type="text/javascript" src="/js/query-string.js"></script>
+<script type="text/javascript" src="/js/azure-search.min.js"></script>
+<script type="text/javascript" src="/js/search-results.js"></script>
+

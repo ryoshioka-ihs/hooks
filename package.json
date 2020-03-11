@@ -1,0 +1,30 @@
+{
+  "name": "ihs-corporate2016",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ryoshioka-ihs/ihs-corporate.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "async-each-series": "^0.1.1",
+    "azure-search": "0.0.6"
+  },
+  "devDependencies": {
+    "csslint-stylish": "0.0.5",
+    "gulp": "^3.9.1",
+    "gulp-command": "^0.1.2",
+    "gulp-csslint": "^1.0.0",
+    "gulp-htmlhint": "^0.3.1",
+    "gulp-util": "^3.0.7",
+    "htmlhint-stylish": "^1.0.3",
+    "simplecrawler": "^1.0.1",
+    "vinyl-ftp": "^0.5.0"
+  }
+}

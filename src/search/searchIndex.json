@@ -1,0 +1,36 @@
+---
+layout:  null
+nosearch: true
+---
+{% assign posts = site.posts %}
+{% assign pages = site.pages | where_exp: "item", "item.nosearch == null" %}
+[
+	{% for post in posts %}{
+		"id": "{{ post.url | prepend: site.baseurl | prepend: site.url | remove: ':' | replace: '.', '-' | replace: '/', '-' }}",
+		"title": "{{ post.title | xml_escape }}",
+		"content": "{{ post.content | strip_html | xml_escape | strip_newlines | normalize_whitespace | remove: '\' }}",
+		"description": "{{ post.description | xml_escape }}",
+		{% if post.link and post.link != "" %}"link": "{{ post.link }}",{% else %}"link": "{{ post.url }}",{% endif %}
+		"categories": [
+			{% for category in post.categories %}"{% if category == "cases" %}導入事例{% elsif category == "topics" %}トピックス{% else %}{{ category }}{% endif %}"{% unless forloop.last == true %},
+			{% endunless %}{% endfor %}{% if post.categories.size > 0 and post.tags.size > 0 %},
+			{% endif %}{% for tag in post.tags %}"{{ tag }}"{% unless forloop.last == true %},
+			{% endunless %}{% endfor %}
+		],
+		"pubdate": "{{ post.date | date_to_xmlschema | remove: '+09:00' }}.000Z"
+	}{% unless forloop.last == true %},{% endunless %}{% endfor %}{% if posts.size > 0 and pages.size > 0 %},
+	{% endif %}{% for page in pages %}{
+		"id": "{{ page.url | prepend: site.baseurl | prepend: site.url | remove: ':' | replace: '.', '-' | replace: '/', '-' }}",
+		"title": "{{ page.title | xml_escape }}",
+		"content": "{{ page.content | strip_html | xml_escape | strip_newlines | remove: '"' | remove: '	' | remove: '  ' | remove: '\' }}",
+		"description": "{{ page.description | xml_escape }}",
+		{% if page.link and page.link != "" %}"link": "{{ page.link }}",{% else %}"link": "{{ page.url }}",{% endif %}
+		"categories": [
+			{% for category in page.categories %}"{{ category }}"{% unless forloop.last == true %},
+			{% endunless %}{% endfor %}{% if page.categories.size > 0 and page.tags.size > 0 %},
+			{% endif %}{% for tag in page.tags %}"{{ tag }}"{% unless forloop.last == true %},
+			{% endunless %}{% endfor %}
+		]
+	}{% unless forloop.last == true %},{% endunless %}{% endfor %}
+]
+

@@ -1,0 +1,178 @@
+---
+layout:     "uipath-form"
+global_menu:  ""
+description:  WinActor&UiPathの取り組みとハンズオンセミナーキャンセルフォームです。"
+keywords:   "uipath,セミナー"
+category:   ""
+title:      "WinActor&UiPathの取り組みとハンズオンセミナーキャンセルお申込みフォーム"
+---
+<script type="text/javascript" src="/js/seminar.js"></script>
+      <!-- Contact information-->
+      <section class="section section-lg bg-white">
+        <div class="shell shell-bigger">
+          <div class="range range-ten range-50 range-sm-center range-lg-justify">
+            <div class="cell-sm-9 cell-md-6">
+              <h3>『WinActor&UiPathの取り組みとハンズオンセミナー』 キャンセル受付フォーム</h3>
+              <!--<hr class="divider divider-left divider-default"/>-->
+              <p class="big">セミナーのキャンセルをご希望される方は、必要事項を明記の上、下記フォームよりお申し込みください。</p>
+              ※キャンセルは開催日の前日までメールで承ります。<br>
+              当日のキャンセルは申し訳ございませんが、お電話にて承ります。右記電話番号にご連絡ください。
+                
+
+              <!-- RD Mailform-->
+              <form class="rd-mailform" data-form-output="form-output-global" data-form-type="contact" method="post" action="mailer.php">
+                <div class="range range-20">
+                  <div class="cell-xs-12 offset-custom-1">
+                    <div class="form-wrap form-wrap-validation">
+                      <label class="form-label-outside">【<span style="color: red">必須</span>】会社名（全角）</label>
+                      <input class="form-input" type="text" name="company" data-constraints="@Required"/ required placeholder="（例）ＩＩＭヒューマン・ソリューション株式会社">
+                    </div>
+                  </div>
+                  <div class="cell-sm-6">
+                    <div class="form-wrap form-wrap-validation">
+                      <label class="form-label-outside">【<span style="color: red">必須</span>】姓（全角）</label>
+                      <input class="form-input" type="text" name="lastname" data-constraints="@Required"/ required placeholder="（例）本郷">
+                    </div>
+                  </div>
+                  <div class="cell-sm-6">
+                    <div class="form-wrap form-wrap-validation">
+                      <label class="form-label-outside">【<span style="color: red">必須</span>】名（全角）</label>
+                      <input class="form-input" type="text" name="firstname" data-constraints="@Required"/ required placeholder="（例）太郎">
+                    </div>
+                  </div>
+                  <div class="cell-sm-6">
+                    <div class="form-wrap form-wrap-validation">
+                      <label class="form-label-outside" for="form-1-email">【<span style="color: red">必須</span>】メールアドレス（半角）</label>
+                      <input class="form-input" id="form-1-email" type="email" name="emailAdress" data-constraints="@Email @Required" required>
+                    </div>
+                  </div>
+                  <div class="cell-sm-6">
+                    <div class="form-wrap form-wrap-validation">
+                      <label class="form-label-outside">【<span style="color: red">必須</span>】電話番号（半角）</label>
+                      <input class="form-input" type="text" name="phone" data-constraints="@Numeric @Required"/ required  placeholder="（例）03-5684-640">
+                    </div>            
+                  </div>
+		              
+		          <div class="cell-xs-12 offset-custom-1">
+		            <div class="form-wrap form-wrap-validation">
+		                <label class="form-label-outside" >【<span style="color: red">必須</span>】キャンセルする開催日および項目</label>
+		                <select class="form-control" data-placeholder="All" data-minimum-results-for-search="Infinity" name="seminar" required>
+                      <option>選択してください</option>
+
+                      
+                      <!--<option class="view_timer" data-end-date="2020/3/4 0:00" value="2020年3月4日(水)　10：00-11：00　①WinActorとUiPathの機能比較や運用ノウハウ​">2020年3月4日(水)　10：00-11：00　①WinActorとUiPathの機能比較や運用ノウハウ​</option>
+                      <option class="view_timer" data-end-date="2020/3/4 0:00" value="2020年3月4日(水)　11：10-12：30　②UiPath初級講座">2020年3月4日(水)　11：10-12：30　②UiPath初級講座</option>
+                      <option class="view_timer" data-end-date="2020/3/4 0:00" value="2020年3月4日(水)　13：30-15：00　③WinActor初級講座">2020年3月4日(水)　13：30-15：00　③WinActor初級講座</option>
+
+                      <option class="view_timer" data-end-date="2020/3/11 0:00" value="2020年3月11日(水)　10：00-11：00　①WinActorとUiPathの機能比較や運用ノウハウ​">2020年3月11日(水)　10：00-11：00　①WinActorとUiPathの機能比較や運用ノウハウ​</option>
+                      <option class="view_timer" data-end-date="2020/3/11 0:00" value="2020年3月11日(水)　11：10-12：30　②UiPath初級講座">2020年3月11日(水)　11：10-12：30　②UiPath初級講座</option>
+                      <option class="view_timer" data-end-date="2020/3/11 0:00" value="2020年3月11日(水)　13：30-15：00　③WinActor初級講座">2020年3月11日(水)　13：30-15：00　③WinActor初級講座</option>
+
+                      <option class="view_timer" data-end-date="2020/3/18 0:00" value="2020年3月18日(水)　10：00-11：00　①WinActorとUiPathの機能比較や運用ノウハウ​">2020年3月18日(水)　10：00-11：00　①WinActorとUiPathの機能比較や運用ノウハウ​</option>
+                      <option class="view_timer" data-end-date="2020/3/18 0:00" value="2020年3月18日(水)　11：10-12：30　②UiPath初級講座">2020年3月18日(水)　11：10-12：30　②UiPath初級講座</option>
+                      <option class="view_timer" data-end-date="2020/3/18 0:00" value="2020年3月18日(水)　13：30-15：00　③WinActor初級講座">2020年3月18日(水)　13：30-15：00　③WinActor初級講座</option>
+
+                      <option class="view_timer" data-end-date="2020/3/25 0:00" value="2020年3月25日(水)　10：00-11：00　①WinActorとUiPathの機能比較や運用ノウハウ​">2020年3月25日(水)　10：00-11：00　①WinActorとUiPathの機能比較や運用ノウハウ​</option>
+                      <option class="view_timer" data-end-date="2020/3/25 0:00" value="2020年3月25日(水)　11：10-12：30　②UiPath初級講座">2020年3月25日(水)　11：10-12：30　②UiPath初級講座</option>
+                      <option class="view_timer" data-end-date="2020/3/25 0:00" value="2020年3月25日(水)　13：30-15：00　③WinActor初級講座">2020年3月25日(水)　13：30-15：00　③WinActor初級講座</option>-->
+
+                      <option class="view_timer" data-end-date="2020/4/8 0:00" value="2020年4月8日(水)　10：00-11：00　①WinActorとUiPathの機能比較や運用ノウハウ​">2020年4月8日(水)　10：00-11：00　①WinActorとUiPathの機能比較や運用ノウハウ​</option>
+                      <option class="view_timer" data-end-date="2020/4/8 0:00" value="2020年4月8日(水)　11：10-12：30　②UiPath初級講座">2020年4月8日(水)　11：10-12：30　②UiPath初級講座</option>
+                      <option class="view_timer" data-end-date="2020/4/8 0:00" value="2020年4月8日(水)　13：30-15：00　③WinActor初級講座">
+                      2020年4月8日(水)　13：30-15：00　③WinActor初級講座</option>
+
+                      <option class="view_timer" data-end-date="2020/4/15 0:00" value="2020年4月15日(水)　10：00-11：00　①WinActorとUiPathの機能比較や運用ノウハウ​">2020年4月15日(水)　10：00-11：00　①WinActorとUiPathの機能比較や運用ノウハウ​</option>
+                      <option class="view_timer" data-end-date="2020/4/15 0:00" value="2020年4月15日(水)　11：10-12：30　②UiPath初級講座">2020年4月15日(水)　11：10-12：30　②UiPath初級講座</option>
+                      <option class="view_timer" data-end-date="2020/4/15 0:00" value="2020年4月15日(水)　13：30-15：00　③WinActor初級講座">
+                      2020年4月15日(水)　13：30-15：00　③WinActor初級講座</option>
+
+                      <option class="view_timer" data-end-date="2020/4/22 0:00" value="2020年4月22日(水)　10：00-11：00　①WinActorとUiPathの機能比較や運用ノウハウ​">2020年4月22日(水)　10：00-11：00　①WinActorとUiPathの機能比較や運用ノウハウ​</option>
+                      <option class="view_timer" data-end-date="2020/4/22 0:00" value="2020年4月22日(水)　11：10-12：30　②UiPath初級講座">2020年4月22日(水)　11：10-12：30　②UiPath初級講座</option>
+                      <option class="view_timer" data-end-date="2020/4/22 0:00" value="2020年4月22日(水)　13：30-15：00　③WinActor初級講座">
+                      2020年4月22日(水)　13：30-15：00　③WinActor初級講座</option>
+
+                      <option class="view_timer" data-end-date="2020/5/13 0:00" value="2020年5月13日(水)　10：00-11：00　①WinActorとUiPathの機能比較や運用ノウハウ​">2020年5月13日(水)　10：00-11：00　①WinActorとUiPathの機能比較や運用ノウハウ​</option>
+                      <option class="view_timer" data-end-date="2020/5/13 0:00" value="2020年5月13日(水)　11：10-12：30　②UiPath初級講座">2020年5月13日(水)　11：10-12：30　②UiPath初級講座</option>
+                      <option class="view_timer" data-end-date="2020/5/13 0:00" value="2020年5月13日(水)　13：30-15：00　③WinActor初級講座">
+                      2020年5月13日(水)　13：30-15：00　③WinActor初級講座</option>
+
+                      <option class="view_timer" data-end-date="2020/5/20 0:00" value="2020年5月20日(水)　10：00-11：00　①WinActorとUiPathの機能比較や運用ノウハウ​">2020年5月20日(水)　10：00-11：00　①WinActorとUiPathの機能比較や運用ノウハウ​</option>
+                      <option class="view_timer" data-end-date="2020/5/20 0:00" value="2020年5月20日(水)　11：10-12：30　②UiPath初級講座">2020年5月20日(水)　11：10-12：30　②UiPath初級講座</option>
+                      <option class="view_timer" data-end-date="2020/5/20 0:00" value="2020年5月20日(水)　13：30-15：00　③WinActor初級講座">
+                      2020年5月20日(水)　13：30-15：00　③WinActor初級講座</option>
+
+                      <option class="view_timer" data-end-date="2020/5/27 0:00" value="2020年5月27日(水)　10：00-11：00　①WinActorとUiPathの機能比較や運用ノウハウ​">2020年5月27日(水)　10：00-11：00　①WinActorとUiPathの機能比較や運用ノウハウ​</option>
+                      <option class="view_timer" data-end-date="2020/5/27 0:00" value="2020年5月27日(水)　11：10-12：30　②UiPath初級講座">2020年5月27日(水)　11：10-12：30　②UiPath初級講座</option>
+                      <option class="view_timer" data-end-date="2020/5/27 0:00" value="2020年5月27日(水)　13：30-15：00　③WinActor初級講座">
+                      2020年5月27日(水)　13：30-15：00　③WinActor初級講座</option>
+
+	    				</select>
+		              </div>
+		            </div>
+		       	 
+                  <div class="cell-xs-12">
+                    <div class="form-wrap form-wrap-validation">
+                      <label class="form-label-outside">特記事項</label>
+                      <textarea class="form-input" id="form-1-message" name="message" type="text"></textarea>
+                    </div>
+                  </div>
+                  <div class="cell-xs-12">
+                    <div class="form-wrap">
+                      <label class="checkbox-inline">
+                        <input type="checkbox" name="check" value="同意する" required/>同意する<a href="/privacy/seminar.html" target="_blank">セミナー応募者に対する個人情報の取扱いについて</a>
+                      </label>
+                    </div>
+                  </div> 
+                  <div class="cell-xs-12 offset-custom-1">
+                    <div class="form-button">
+                      <button class="button button-primary" type="submit">送信</button>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <div class="cell-sm-9 cell-md-4 cell-lg-3">
+              <div class="column-aside">
+                <div class="range">
+                  <div class="cell-xs-10 cell-sm-6 cell-md-12">
+                    <h6>会社住所</h6>
+                    <hr class="divider-thin"/>
+                    <article class="box-inline"><span class="icon icon-md-smaller icon-primary mdi mdi-map-marker"></span><span>東京都千代田区内幸町1-1-6<br>ＮＴＴ日比谷ビル4F<br>IIMヒューマン・ソリューション株式会社</span></article>
+                  </div>
+                  <div class="cell-xs-10 cell-sm-6 cell-md-12">
+                    <h6>電話番号</h6>
+                    <hr class="divider-thin"/>
+                    <article class="box-inline"><span class="icon icon-md-smaller icon-primary mdi mdi-phone"></span>
+                      <ul class="list-comma">
+                        <li>03-6811-1260</li>
+                      </ul>
+                    </article>
+                  </div>
+                  <div class="cell-xs-10 cell-sm-6 cell-md-12">
+                    <h6>メールアドレス</h6>
+                    <hr class="divider-thin"/>
+                    <article class="box-inline"><span class="icon icon-md-smaller icon-primary mdi mdi-email-open"></span>
+                    	<!--<span><a href="mailto:web@iimhs.co.jp?subject=【お問合わせ】WinActorセミナー受付状況について&amp;body=IIMヒューマン・ソリューション株式会社%0d%0a	WinActorセミナー担当者">web@iimhs.co.jp</a></span></article>-->
+                    	<span><a href="mailto:web@iimhs.co.jp">web@iimhs.co.jp</a></span></article>
+                  </div>
+                  <!--<div class="cell-xs-10 cell-sm-6 cell-md-12">
+                    <h6>Opening hours </h6>
+                    <hr class="divider-thin"/>
+                    <article class="box-inline"><span class="icon icon-md-smaller icon-primary mdi mdi-calendar-clock"></span>
+                      <ul class="list-0">
+                        <li>Mon–Fri: 9:00 am–6:00 pm</li>
+                        <li>Sat–Sun: 11:00 am–4:00 pm</li>
+                      </ul>
+                    </article>
+                  </div>
+                  -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- Page Footer-->
+      <!-- Footer Default-->

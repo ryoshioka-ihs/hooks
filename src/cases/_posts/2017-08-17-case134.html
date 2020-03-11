@@ -1,0 +1,174 @@
+---
+layout:       case
+global_menu:  cases
+title:        "VMware vSphere 6.0を使用した仮想基盤の構築"
+description:  "IHS が得意とする VMware vSphere 6.0 を使用した仮想基盤の構築に関する事例をご紹介。作業は仮想化技術資格保有者が対応、作業品質についても高評価をいただいています。"
+keywords:     "仮想化基盤, vCenter Server 6.0, ESXi 6.0"
+date:         2017-08-17 10:30:00 +0900
+PDF:          "case134"
+categories:
+ - "インフラ運用"
+ - "インフラ構築"
+tags:
+ - "仮想化基盤"
+ - "vCenter Server 6.0"
+ - "ESXi 6.0"
+---
+
+<section>
+  <h1>{{ page.title }}</h1>
+  <ul class="linkInPage">
+    <li><a href="#toc-1">背景</a></li>
+    <li><a href="#toc-2">概要</a></li>
+    <li><a href="#toc-3">構成図</a></li>
+    <li><a href="#toc-4">作業のポイント</a></li>
+    <li><a href="#toc-5">弊社利用による効果</a></li>
+    <li><a href="#toc-6">作業内容の詳細</a></li>
+    <li><a href="#PdfDownload">PDFダウンロード</a></li>
+  </ul>
+
+  <section id="toc-1">
+    <h2>背景</h2>
+    <div class="smtSent">
+    	<p>既存インフラ基盤のハードウェア及びソフトウェアの保守期限切れのため製品サポートを受けることができないリスクや、機器の老朽化に伴うシステムパフォーマンスの低下といった課題が顕在化していることもあり、仮想基盤構築の実績を評価いただいている弊社にご依頼をいただき、 VMware vSphere 6.0 の構築支援を行いました。</p>
+    	<br>
+    	<p>弊社では、以前より仮想基盤環境の構築や更改の対応をさせていただいており、 VMware 社が提供する VMware vSphere Suite を用いた仮想基盤構築を得意としております。また、作業には仮想化技術資格保有者が対応させて頂いているため、作業品質についても高い評価を頂いております。</p>
+    </div>
+  </section>
+
+  <section id="toc-2">
+    <h2>概要</h2>
+    <div class="smtSent">
+      <table class="baseTb">
+        <tbody>
+          <tr>
+             <th>業種</th>
+            <td>損害保険業</td>
+          </tr>
+          <tr>
+            <th>目的</th>
+            <td>VMware vSphere 6.0 を使用した仮想基盤環境の構築</td>
+          </tr>
+          <tr>
+            <th>作業規模</th>
+            <td>
+              <p>[検証環境]<BR>
+              VMware vSphere 6.0</p>
+              <ul class="grayDisc">
+                <li>vSphere ESXi 6.0 ： 1 台</li>
+                <li>vCenter Server 6.0 ： 1 台</li>
+                <li>vSphere Web Client ： 1 台</li>
+                <li>ゲスト OS ： 6 台</li>
+              </ul>
+              <p>[本番環境]<BR>
+              VMware vSphere 6.0</p>
+              <ul class="grayDisc">
+                <li>vSphere ESXi 6.0 ： 2 台</li>
+                <li>vCenter Server 6.0 ： 1 台</li>
+                <li>vSphere Web Client ： 1 台</li>
+                <li>ゲスト OS ： 13 台</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <th>作業ボリューム</th>
+            <td>2 人月</td>
+          </tr>
+          <tr>
+            <th>作業内容</th>
+            <td>
+             VMware vSphere 6.0 設計/構築/動作試験
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+   <section id="toc-3">
+    <h2>構成図</h2>
+    <div class="smtSent">
+      <div class="lightBox">
+        <figure>
+          <img src="/image/cases/case134_01.png" alt="システム構成図">
+        </figure>
+      </div>
+    </div>
+  </section>
+
+ <section id="toc-4">
+    <h2>作業のポイント</h2>
+    <div class="smtSent">
+      <h3>最新の仮想化ソリューションへのバージョンアップ</h3>
+      <p>VMware vSphere 4.0 から、 VMware vSphere 6.0 へバージョンアップしたことにより、最新の仮想化ソリューションに更新されました。<br>
+		バージョンアップした際に引き継げる設定値は同様にしておりましたが、運用後に問題になる設定については最適な設定値にする等、運用後に問題になる設定値を洗い出し、設定の変更を行いました。<br>
+		上記の設定値については、弊社のナレッジに基づき、実際に問題となった設定についてアドバイスをさせていただいております。<br>
+		これにより、業務システムの最適な動作環境の提供と、最新ソリューションのメーカーサポートの提供を実現しました。</p>
+    </div>
+  </section>
+
+  <section id="toc-5">
+    <h2>弊社利用による効果</h2>
+    <div class="smtSent">
+      <h3>最新の仮想化ソリューションに対応した既存運用手順書の更新作業に掛かる工数を削減</h3>
+      <p>従来の vSphere Client を使用したユーザーインターフェースから、ブラウザベースの vSphere Web Client を使用したユーザーインターフェースへの変更に伴い、運用手順書の大幅な更新作業が必要となりました。</p>
+      <p>本来であれば、既存の運用手順書を使用し、新規に構築した仮想基盤環境で手順を再現し、再手順化するといった作業が必要となりますが、弊社では日々仮想マシンの構築や検証作業を実施していることから、弊社内の検証環境、およびこれまでに蓄積したナレッジを使用することができ、手順書更新の作業に掛かる工数を最小限に抑え、コストの削減を図りました。<br>※ VMware 社は vSphere 5.0 以降からブラウザベースのユーザーインターフェースの使用を推奨としています。</p>
+
+    </div>
+  </section>
+
+ <section id="toc-6">
+  <h2>作業内容の詳細</h2>
+  <div class="smtSent">
+
+    <h3>設計</h3>
+    <ol class="numList">
+      <li><p>基本設計</p></li>
+       <ul class="grayDisc">
+        <li>ハードウェア設計</li>
+        <li>ソフトウェア設計</li>
+        <li>OS 設計</li>
+        <li>仮想基盤設計</li>
+      </ul>
+  </ol>
+
+    <h3>環境構築</h3>
+    <ol class="numList">
+      <li><p>仮想基盤構築</p></li>
+      <ul class="grayDisc">
+      <li>VMware vSphere ESXi 6.0 インストール／設定</li>
+      <li>VMware vCenter Server 6.0 インストール／設定</li>
+      <li>VMware vSphere Web Client インストール／設定</li>
+    </ul>
+    <li><p>ゲスト OS 作成</p></li>
+    <ul class="grayDisc">
+      <li>ゲスト OS 作成</li>
+      <li>Windows Server 2012 R2 インストール／設定</li>
+    </ul>
+	</ol>
+    <h3>動作試験</h3>
+    <ol class="numList">
+    	<li><p>仮想基盤動作試験</p></li>
+     <ul class="grayDisc">
+      <li>VMware vSphere ESXi 6.0 動作試験</li>
+      <li>VMware vCenter Server 6.0 動作試験</li>
+      <li>VMware vSphere Web Client 動作試験</li>
+    </ul>   
+    <li><p>ゲスト OS 動作試験</p></li>
+    <ul class="grayDisc">
+      <li>ゲスト OS 動作試験</li>
+    </ul>
+	</ol>
+
+    <h3>納品ドキュメント</h3>
+    <ul class="grayDisc">
+      <li>基本設計書</li>
+      <li>詳細設計書</li>
+      <li>動作確認項目表兼結果報告書</li>
+      <li>運用手順書</li>
+    </ul>
+  </div>
+  </section>
+
+</section>
+

@@ -1,0 +1,213 @@
+---
+layout:       case
+global_menu:  cases
+title:        "情報セキュリティ運用効率化のためのVMware仮想基盤構築"
+description:  "今回ご紹介する事例では、放送業界のお客様の業務システムにおける情報セキュリティ基盤を、自動化により人的コストを抑えながら強化することが課題でした。そこで弊社にて、情報セキュリティパッケージ導入にあたって
+基盤整備とパッケージの機能を補完する自動化をおこない、情報セキュリティ運用の効率化をご支援しました。"
+keywords:     "仮想化基盤,ARCServe,Password Safe"
+date:         2017-02-24 00:00:00 +0900
+PDF:          "case128"
+categories:
+ - "インフラ構築"
+ - "セキュリティ"
+tags:
+ - "仮想化基盤"
+ - "ARCServe"
+ - "Password Safe"
+---
+
+<section>
+  <h1>{{ page.title }}</h1>
+  <ul class="linkInPage">
+    <li><a href="#toc-background">背景</a></li>
+    <li><a href="#toc-overview">概要</a></li>
+    <li><a href="#toc-sysCon">構成図</a></li>
+    <li><a href="#toc-point">作業のポイント</a></li>
+    <li><a href="#toc-IHS-result">弊社利用による効果</a></li>
+    <li><a href="#toc-work">作業内容の詳細</a></li>
+    <li><a href="#PdfDownload">PDFダウンロード</a></li>
+  </ul>
+
+  <section id="toc-background">
+    <h2>背景</h2>
+    <div class="smtSent">
+      <p>企業の情報セキュリティに関する意識は高まる一方です。中でも、さまざまな機密情報や個人情報を取り扱う放送業界では、2016年に外部からの攻撃による大規模な個人情報漏洩事件があったこともあり、今回のお客様も情報保護や事故防止の仕組み作りが大きな課題となっていました。</p>
+      <br>
+      <p>情報セキュリティは、外部からの脅威への対策はもちろん、社内の情報管理の強化が必須です。お客様の環境では、業務サーバへのログイン時に、特権ID及び一般IDを使用して個人の特定ができるログを残せていませんでした。事故や事件が発生した場合、まずログを解析することが基本ですが、情報にアクセスしたりシステムを操作した個人を特定できなければ、原因究明や対策を施すことはできません。また、現行システムの特権IDはパスワードを定期的に変更するシステムになっていませんでした。情報漏洩の事故や事件は、システムそのものよりも、人による操作や運用方法が原因となっている場合が多いと言われています。システムによるパスワードの定期的な変更は、単純なことに見えますが、人による管理のばらつきをなくし、事故の未然防止につながる重要な機能です。</p>
+      <br>
+      <p>IHSでは、特定アカウントのパスワード自動変更管理サービスを提供するため、Password Safe導入用の仮想基盤の構築させていただきました。また、運用効率を向上させるためにスクリプトを提供し、サービスの自動化を実装しております。</p>
+    </div>
+  </section>
+
+  <section id="toc-overview">
+  <h2>概要</h2>
+  <div class="smtSent">
+    <table class="baseTb">
+      <tbody>
+        <tr>
+          <th>業種</th>
+          <td>放送業</td>
+        </tr>
+        <tr>
+          <th>目的</th>
+          <td>特定アカウントのパスワード自動化変更管理導入のための仮想基盤の構築
+          </td>
+        </tr>
+        <tr>
+          <th>作業規模</th>
+          <td>
+          [開発環境 – 第一フェーズ]
+          <ul class="grayDisc">
+          	<li>物理サーバ 2台(VMware vSphere ESXi)</li>
+          	<li>仮想サーバ 2台(VMware vCenter Server兼バックアップサーバ、Password Safeサーバ)</li>
+          	<li>L2スイッチ2台</li>
+          	<li>共有ストレージ1台</li>
+          </ul>
+          [本番環境 – 第二フェーズ]
+          <ul class="grayDisc">
+          	<li>物理サーバ 2台(VMware vSphere ESXi)</li>
+          	<li>仮想サーバ 2台(VMware vCenter Server兼バックアップサーバ、Password Safeサーバ)</li>
+          	<li>L2スイッチ2台</li>
+          	<li>共有ストレージ1台</li>
+          </ul>
+          </td>
+        </tr>
+        <tr>
+          <th>作業ボリューム</th>
+          <td>第一フェーズ／6人月<br>
+          第二フェーズ／6人月</td>
+        </tr>
+        <tr>
+          <th>作業内容</th>
+          <td>要件定義/基本設計/詳細設計/インフラ構築/インフラテスト/ドキュメント作成
+          </td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section id="toc-sysCon">
+  <h2>構成図</h2>
+  <div class="smtSent">
+    <div class="lightBox">
+    <figure><img src="/image/cases/case128_01.png" alt="システム構成図"></figure>
+    </div>
+  </div>
+  </section>
+
+  <section id="toc-point">
+    <h2>作業のポイント</h2>
+    <div class="smtSent">
+      <h3>vCenter Serverによる仮想基盤管理機能の冗長化</h3>
+      <p>Password Safeサーバ導入に伴い、仮想基盤導入の管理ソフトウェアであるvCenter Serverの導入によりHAクラスタを組み込んだ構成となるため、vCenter Server自体にも高い冗長性が求められていました。本件では、ESXi2台を用いてアクティブ-アクティブ構成とし、Password SafeサーバとvCenterサーバを別ESXiサーバで稼働させたHAクラスタ上に配置することにより、サーバ障害が原因のダウンタイム軽減を目的とした構成にしました。また、物理サーバのNICに障害が発生した場合でも、残ったポートで通信が行えるように、2つのポートをグループ化するチーミング構成にしました。</p>
+
+      <h3>ARCServe D2Dによるサービス停止時間の短縮</h3>
+      <p>バックアップを実施する際には、vCenterサービスを停止する必要があります。お客様は、バックアップ終了後のサーバ再起動・各種接続等を手動で実施されていたため、人手がかかる上に担当者による技術のばらつきがあり、障害対応に時間がかかり、vCenterサーバに接続不可能な時間がどうしても長くなっていました。そこで、ARCserve D2Dの、特定のコマンドを起動させる機能を用いて、スナップショット取得後にvCenterサービスを起動するバッチを起動させる環境を構築しました。これにより、vCenterのサービス停止期間を短縮し、全体的なダウンタイムを減少させることができました。</p>
+
+      <h3>スクリプト作成によりPassword Safeの機能を補完</h3>
+      <p>Password Safeには世代管理の機能がありません。Password Safeの標準機能でバックアップを取得すると、バックアップデータが溜まり続けてしまいます。そこで、IHSがスクリプトを作成し、Password Safeバックアップファイルの世代管理を実現、世代管理の自動化をおこない、お客様の運用工数削減に貢献することができました。</p>
+    </div>
+  </section>
+
+  <section id="toc-IHS-result">
+  <h2>弊社利用による効果</h2>
+  <div class="smtSent">
+    <h3>自動化のノウハウを活かした運用の効率化</h3>
+    <p>IHSには、VBS、bat、PowerShellといったスクリプトをカスタマイズすることによってパッケージによる自動化の効率をさらに向上させるノウハウがあります。<br>本件でも、<br>
+    <ul class="grayDisc">
+     <li>Password Safeバックアップファイルを世代管理するスクリプト</li>
+     <li>ARCServe D2Dが内包するSQL Serverのバックアップスクリプト</li>
+    </ul>
+    等を作成し、パッケージ製品の標準機能では解決できない機能を提供することによって、お客様のご要望にお応えしました。優れたセキュリティ製品は多数ありますが、お客様の環境や体制にあわせた無理のない運用をおこなわなければ、その効果を最大限に引き出すことができません。情報セキュリティの運用は24時間365日続く業務です。運用を効率化することは、それにかかるコストを削減するだけでなく、セキュリティを強化することにつながるため、地味ながら重要な取り組みです。<br />
+    <br />
+    IHSには、本件以外にも、System Center Configuration Managerの運用で、PowerShellを使用し自動化をおこなった実績があり、お客様からは、カスタマイズによる運用品質の向上、ならびに運用工数削減が実現できたことをご評価いただいております。
+</p><br />
+    <h3>仮想化の強みをプラスαでご提案</h3>
+    <p>当初お客様のご要望では、仮想アプライアンスの実行のための仮想化環境が必要ということでした。これのみを要件とし提案することは、比較的容易におこなうことができます。しかし、それだけでは仮想化の持つさまざまなメリット（クラスタリングやネットワーク高可用性等）が考慮されていません。IHSでは常にお客様のご要望に沿ったものからさらに「プラスα」でご提供可能なサービスや機能をご提案させていただいおります。</p>
+    <br />
+    <h3>ハードウェア構成のご提案</h3>
+    <p>IHSでは、サーバの構成だけではなく、ストレージまたはネットワーク機器構成のご提案もおこなっております。今回は、信頼性のため、サービス継続に重点を置いた単一障害点を排除する構成をご提案することを心がけ、ネットワーク機器の多重構成に加えて、データの安全性を確保する設定をさせていただきました。</p>
+
+
+  </div>
+  </section>
+
+  <section id="toc-work">
+  <h2>作業内容の詳細</h2>
+  <div class="smtSent">
+    <h3>要件定義・設計</h3>
+        <ol class="numList">
+          <li><p>要件定義</p></li>
+          <div class="textIndent--style3">
+          <ul class="grayDisc">
+            <li>プロジェクト要件定義</li>
+            <li>機能要件の定義</li>
+            <li>非機能要件の定義</li>
+          </ul>
+          </div>
+          <li><p>基本設計</p></li>
+          <div class="textIndent--style3">
+          <ul class="grayDisc">
+            <li>ネットワーク設計</li>
+            <li>サーバ設計</li>
+            <li>ストレージ設計</li>
+            <li>仮想基盤設計</li>
+            <li>インフラ設計</li>
+            <li>信頼性設計</li>
+            <li>運用設計</li>
+            <li>バックアップ設計</li>
+          </ul>
+          </div>
+        </ol>
+
+    <h3>環境構築</h3>
+        <ol class="numList">
+          <li><p>仮想基盤構築</p></li>
+          <div class="textIndent--style3">
+          <ul class="grayDisc">
+            <li>VMware ESXi 5.5</li>
+            <li>VMware HA (High Availability)</li>
+          </ul>
+          </div>
+          <li><p>仮想基盤管理機能</p></li>
+          <div class="textIndent--style3">
+          <ul class="grayDisc">
+            <li>vCenter Server 5.5</li>
+          </ul>
+          </div>
+          <li><p>システムバックアップ機能</p></li>
+          <div class="textIndent--style3">
+          <ul class="grayDisc">
+            <li>CA ARCserve D2D r16.5 for Windows</li>
+            <li>世代管理バッチ作成</li>
+          </ul>
+          </div>
+          <li><p>ストレージ機能</p></li>
+          <div class="textIndent--style3">
+          <ul class="grayDisc">
+            <li>NEC iStorage M10</li>
+          </ul>
+          </div>
+          <li><p>ネットワーク機能</p></li>
+          <div class="textIndent--style3">
+          <ul class="grayDisc">
+            <li>DGS-1100-16</li>
+          </ul>
+          </div>
+        </ol>
+
+    <h3>納品ドキュメント</h3>
+        <div class="texyIndent--style3">
+          <ul class="grayDisc">
+            <li>要件定義書</li>
+            <li>基本設計書</li>
+            <li>詳細設計書</li>
+            <li>動作確認項目表兼結果報告書</li>
+            <li>運用手順書</li>
+          </ul>
+        </div>
+    </div>
+  </section>
+</section>
+

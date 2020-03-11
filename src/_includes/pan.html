@@ -1,0 +1,59 @@
+{% capture url %}
+  {{ page.url | remove: "/" }}
+{% endcapture %}
+
+{% if url.size > 0 %}
+  <ul id="tpcpth" itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+    <li>
+      <a href="/" itemprop="url"><span itemprop="title">ホーム</span></a>
+    </li>
+
+		{% comment %}
+			* 該当ページのカテゴリに'cases'が含まれていれば
+				パンクズリストに導入事例のリンクを追加
+			* casesカテゴリは、記事を/cases/_posts/に格納することで自動的に付与されます。
+		{% endcomment %}
+		{% if page.categories contains 'cases' %}
+		<li property="itemListElement" typeof="ListItem">
+			<a href="/cases/" itemprop="url">
+				<span itemprop="title">導入事例</span>
+			</a>
+    </li>
+		{% endif %}
+
+		{% comment %}
+			* 該当ページのカテゴリに'topics'または'reports'が含まれていれば
+				パンクズリストに導入事例のリンクを追加
+			* topicsカテゴリは、記事を/topics/_posts/に格納することで自動的に付与されます。
+		{% endcomment %}
+		{% if page.categories contains 'topics' or page.categories contains 'reports' %}
+		<li property="itemListElement" typeof="ListItem">
+			<a href="/topics/" itemprop="url">
+				<span itemprop="title">トピックス</span>
+			</a>
+    </li>
+		{% endif %}
+
+    <!-- パンくずリストアイテムの繰り返し -->
+    {% assign position = 0 %}
+    {% for crumb in breadcrumbs %}
+
+      <!-- トップページの場合処理を終了 -->
+      {% if crumb.url == "/" %}
+        {% continue %}
+      {% endif %}
+
+      <!-- SEO -->
+      {% assign position = position  | plus: 1 %}
+
+      <li property="itemListElement" typeof="ListItem">
+        {% if crumb.url != page.url %}<a property="item" typeof="WebPage" href="{{ crumb.url }}">{% endif %}
+        <span property="name">{{ crumb.title }}</span>
+        {% if crumb.url != page.url %}</a>{% endif %}
+        <meta property="position" content="{{ position }}" />
+      </li>
+
+    {% endfor %}
+  </ul>
+{% endif %}
+

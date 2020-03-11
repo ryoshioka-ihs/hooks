@@ -1,0 +1,155 @@
+---
+layout:       case
+global_menu:  cases
+title:        "スポット障害対応"
+description:  "障害時のスポット対応事例。弊社では幅広いOSをカバーする障害対応が可能で、経験者も豊富です。このような経験を生かして、迅速且つ臨機応変な障害対応が可能となります。"
+keywords:     "障害対応,事例"
+date:         2012-07-27 09:14:00 +0900
+PDF:          "case084"
+categories: 
+ - "インフラ運用"
+ - "運用支援サービス"
+tags:
+ - "#"
+---
+
+<section>
+  <h1>{{ page.title }}</h1>
+  <ul class="linkInPage">
+    <li><a href="#toc-1">背景</a></li>
+    <li><a href="#toc-2">概要</a></li>
+    <li><a href="#toc-3">作業詳細</a></li>
+    <li><a href="#toc-4">作業効果</a></li>
+    <li><a href="#toc-5">弊社利用による効果</a></li>
+    <li><a href="#PdfDownload">PDFダウンロード</a></li>
+  </ul>
+
+  <section id="toc-1">
+    <h2>背景</h2>
+    <div class="smtSent">
+    <p>お客様のシステム運用環境は、サーバーーが500台程稼働しています。そこで、障害が発生したサーバーーの機能によっては、多数のサーバーーに連鎖的に障害が伝播することがあります。同時に数台～数十台のサーバーーからの障害が一斉に報告されるような事態が年に2～3回程度発生しています。</p>
+    <br>
+    <p>その場合に、対応に当たる要員が不足します。そこで、お客様の人的要員に余裕が無い状況でのサーバーーで障害が一斉に発生するような事態には、当社のサービス要員が対応に当たらせていただくことになりました。</p>
+  </section>
+
+  <section id="toc-2">
+    <h2>概要</h2>
+    <div class="smtSent">
+    <p>当社要員は、通常はシステム基盤構築作業あるいは、システム運用サービスに携わっています。以下は、障害のスポット対応の作業の流れです</p>
+    <div class="lightBox">
+    <figure><img src="/image/cases/case084_01.png" alt="図1" /></figure>
+    </div>
+    
+    <br>
+    <table class="baseTb">
+      <tbody>
+        <tr>
+        <th>契約形態</th>
+        <td>業務委託</td>
+        </tr>
+        <tr>
+        <th>生産方式</th>
+        <td>実績払い<br>
+            H23年度対応回数：4回<br>
+            12人日
+        </td>
+        </tr>
+        <tr>
+        <th>要員</th>
+        <td>最大5名</td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+  </section>
+
+  <section id="toc-3">
+    <h2>作業詳細</h2>
+    <div class="smtSent">
+    <p>弊社作業員にて実施しました障害対応の一例を以下に示します。</p>
+      <h3>1.MSCS/MSFC(Microsoft Cluster Service/Microsoft Failover Cluster)関連</h3>
+      <table class="rangeTb">    
+        <tbody>
+          <tr>
+          <th>サーバー/障害</th> <th>障害原因</th> <th>対応</th>
+          </tr>
+          <tr>
+          <td>クラスターシステムのOS起動不可</td>
+          <td>クォーラムディスクで利用しているSAN DiskにてI/Oエラーが発生し、極端なスローレスポンスが発生</td>
+          <td>障害対象Diskを交換し解決。恒久対応策としてI/Oエラー監視ログ機能を追加</td>
+          </tr>
+        </tbody>
+      </table>
+
+        <h3>2.Active Directory関連</h3>
+        <table class="rangeTb">      
+          <tbody>
+            
+          </tbody><tr>
+            <th>サーバー/障害</th>
+            <th>障害原因</th>
+            <th>対応</th>
+            </tr>
+            <tr>
+            <td>AD認証を利用するシステムへのログイン不可</td>
+            <td>ADのバージョンアップによるデフォルト認証方式の差異</td>
+            <td>ADの認証方式を変更することにより解決</td>
+            </tr>
+        </table>
+
+        <h3>3.VMware vSphere関連</h3>
+        <table class="rangeTb">
+          <tbody>
+            <tr>
+            <th>サーバー/障害</th>
+            <th>障害原因</th>
+            <th>対応</th>
+            </tr>
+            <tr>
+            <td>P2V実施後仮想マシン(Windows)へログイン時にライセンス認証画面が表示される</td>
+            <td>プレインストールモデルのOSを利用していたため</td>
+            <td>Microsoftライセンスセンターより新しいライセンスキーをいただき適用<br>
+            <small class="notes">※別途Windowsライセンスの準備が必要</small>
+            </td>
+            </tr>
+            <tr>
+            <td>P2V実施後仮想マシンが起動しない</td>
+            <td>移行元サーバーがハードウェアベンダー製のprocessorを利用していたため</td>
+            <td>仮想マシンのHALを正常稼働するものと交換することにより解決</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h3>4.DNSサービス関連</h3>
+        <table class="rangeTb">
+          <tbody>
+          <tr>
+            <th>サーバー/障害</th>
+            <th>障害原因</th>
+            <th>対応</th>
+            </tr>
+            <tr>
+            <td>BINDサービスのハングアップ</td>
+            <td>Windows7移行に伴うIPv6トラフィックの発生とBINDサーバーのIPv6非対応によるリクエストタイムアウト</td>
+            <td>BINDサーバーのIPv6設定を無効化し解決</td>
+          </tr>
+          </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section id="toc-4">
+    <h2>作業効果</h2>
+    <div class="smtSent">
+    <p>お客様は、保守作業に当たる要員数を最小限に抑えることができます。普段は、別の業務に従事していて「火事場」に駆けつける「消防団方式」とお客様は呼んでおられます。</p>
+    </div>
+  </section>
+   
+  <section id="toc-5">
+    <h2>弊社利用による効果</h2>
+    <div class="smtSent">
+    <p>弊社では幅広いOSをカバーする障害対応が可能で、経験者も豊富です。このような経験を生かして、迅速且つ臨機応変な障害対応が可能となります。</p>
+    </div>
+  </section>
+</section>
+

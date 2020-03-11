@@ -1,0 +1,135 @@
+---
+layout:     "xoblos-form"
+global_menu:  ""
+description:  "xoBlosに関する資料をダウンロードいただけます。"
+keywords:   "xoBlos,資料請求"
+category:   ""
+title:      "xoBlos資料請求フォーム"
+---
+
+      <!-- Contact information-->
+      <section class="section section-lg bg-white">
+        <div class="shell shell-bigger">
+          <div class="range range-ten range-50 range-sm-center range-lg-justify">
+            <div class="cell-sm-9 cell-md-6">
+              <h3>xoBlosの導入・運用サービスの資料請求</h3>
+              <!--<hr class="divider divider-left divider-default"/>-->
+
+              <!-- RD Mailform-->
+              <form class="rd-mailform" data-form-output="form-output-global" data-form-type="contact" method="post" action="mailer.php">
+                <div class="range range-20">
+                  <div class="cell-xs-12 offset-custom-1">
+                    <div class="form-wrap form-wrap-validation">
+                      <label class="form-label-outside">【<span style="color: red">必須</span>】会社名</label>
+                      <input class="form-input" type="text" name="company" data-constraints="@Required" required placeholder="(例)IIMヒューマン・ソリューション株式会社">
+                    </div>
+                  </div>
+                  <div class="cell-sm-6">
+                    <div class="form-wrap form-wrap-validation">
+                      <label class="form-label-outside">【<span style="color: red">必須</span>】部署</label>
+                      <input class="form-input" type="text" name="despartment" data-constraints="@Required"/ required placeholder="(例)システム部">
+                 	</div>
+                 </div>
+                  <div class="cell-sm-6">
+                    <div class="form-wrap form-wrap-validation">
+                      <label class="form-label-outside">お役職</label>
+                      <input class="form-input" type="text" name="position"/>
+                    </div>                   
+                  </div> 
+                  <div class="cell-sm-6">
+                    <div class="form-wrap form-wrap-validation">
+                      <label class="form-label-outside">【<span style="color: red">必須</span>】姓</label>
+                      <input class="form-input" type="text" name="name1" data-constraints="@Required"/ required placeholder="(例)本郷">
+                    </div>
+                  </div> 
+                  <div class="cell-sm-6">
+                    <div class="form-wrap form-wrap-validation">
+                      <label class="form-label-outside">【<span style="color: red">必須</span>】名</label>
+                      <input class="form-input" type="text" name="name2" data-constraints="@Required"/ required placeholder="太郎">
+                    </div>
+                  </div>
+                  <div class="cell-sm-12">
+                    <div class="form-wrap form-wrap-validation">
+                      <label class="form-label-outside">【<span style="color: red">必須</span>】メールアドレス</label>
+                      <input class="form-input" type="email" name="emailAdress" data-constraints="@Email @Required" required placeholder="企業ドメインでの入力をお願いいたします。">
+                    </div>
+                  </div>
+                  <div class="cell-sm-4">
+                    <div class="form-wrap form-wrap-validation">
+                      <label class="form-label-outside">【<span style="color: red">必須</span>】電話番号</label>
+                      <input class="form-input" type="text" name="phone1" data-constraints="@Numeric @Required"/ required  placeholder="(例)03">
+                    </div>            
+                  </div>
+                  
+                  <div class="cell-sm-4">
+                    <div class="form-wrap form-wrap-validation">
+                      <label class="form-label-outside"></label>
+                      <input class="form-input" type="text" name="phone2" data-constraints="@Numeric @Required"/ required  placeholder="1234">
+                    </div>            
+                  </div>
+
+                  <div class="cell-sm-4">
+                    <div class="form-wrap form-wrap-validation">
+                      <label class="form-label-outside"></label>
+                      <input class="form-input" type="text" name="phone3" data-constraints="@Numeric @Required"/ required  placeholder="5678">
+                    </div>            
+                  </div>
+
+                  <div class="cell-xs-12">
+                    <div class="form-wrap">
+                      <label class="checkbox-inline">
+                        <input type="checkbox" name="check" required value="同意する" />同意する<a href="https://www.iimhs.co.jp/privacy/policy.html" target="_blank">個人情報保護ポリシーについて</a>
+                      </label>
+                    </div>
+                  </div> 
+                  <div class="cell-xs-12 offset-custom-1">
+                    <div class="form-button">
+                      <button class="button button-primary" type="submit">資料請求</button>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <div class="cell-sm-9 cell-md-4 cell-lg-3">
+              <div class="column-aside">
+                <div class="range">
+                  <div class="cell-xs-10 cell-sm-6 cell-md-12">
+                    <h6>会社住所</h6>
+                    <hr class="divider-thin"/>
+                    <article class="box-inline"><span class="icon icon-md-smaller icon-primary mdi mdi-map-marker"></span><span>東京都文京区本郷2丁目27番20号<br>本郷センタービル6F<br>IIMヒューマン・ソリューション株式会社</span></article>
+                  </div>
+                  <div class="cell-xs-10 cell-sm-6 cell-md-12">
+                    <h6>電話番号</h6>
+                    <hr class="divider-thin"/>
+                    <article class="box-inline"><span class="icon icon-md-smaller icon-primary mdi mdi-phone"></span>
+                      <ul class="list-comma">
+                        <li>03-5684-6840</li>
+                      </ul>
+                    </article>
+                  </div>
+                  <div class="cell-xs-10 cell-sm-6 cell-md-12">
+                    <h6>メールアドレス</h6>
+                    <hr class="divider-thin"/>
+                    <article class="box-inline"><span class="icon icon-md-smaller icon-primary mdi mdi-email-open"></span><span><a href="mailto:web@iimhs.co.jp">web@iimhs.co.jp</a></span></article>
+                  </div>
+                  <!--<div class="cell-xs-10 cell-sm-6 cell-md-12">
+                    <h6>Opening hours </h6>
+                    <hr class="divider-thin"/>
+                    <article class="box-inline"><span class="icon icon-md-smaller icon-primary mdi mdi-calendar-clock"></span>
+                      <ul class="list-0">
+                        <li>Mon–Fri: 9:00 am–6:00 pm</li>
+                        <li>Sat–Sun: 11:00 am–4:00 pm</li>
+                      </ul>
+                    </article>
+                  </div>
+                  -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- Page Footer-->
+      <!-- Footer Default-->

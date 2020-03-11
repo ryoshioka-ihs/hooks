@@ -1,0 +1,80 @@
+---
+layout: contact
+global_menu: contact
+description: IHSの総合お問い合わせフォームです。サービスや製品の導入をご検討中の方はこちらからお問い合わせください
+keywords: お問い合わせ
+title: 総合お問い合わせ
+---
+
+<h1>総合お問合わせ</h1>
+<br>
+<section>
+	<div class="smtSent">
+	<form method="post" action="mailer.php">
+		<table class="baseTb">
+				<tr>
+				<th>【<span style="color: red">必須</span>】貴社名</th>
+				<td><input type="text" name="company" placeholder="(例)IIMヒューマン・ソリューション株式会社" required></td>
+				</tr>
+				<tr>
+				<th>【<span style="color: red">必須</span>】部署名</th>
+				<td><input type="text" name="department" placeholder="(例)システム部" required></td>
+				</tr>
+				<tr>
+				<th>【<span style="color: red">必須</span>】お名前(全角文字)</th>
+				<td><input type="text" name="name" placeholder="(例)本郷　太郎" required></td>
+				</tr>
+				<tr>
+				<th>【<span style="color: red">必須</span>】メールアドレス(半角文字)</th>
+				<td><input type="email" name="emailAdd" placeholder="(例)xxx@iimhs.co.jp" required></td>
+				</tr>
+				<tr>
+				<th>【<span style="color: red">必須</span>】お電話番号(半角文字)</th>
+				<td><input type="tel" name="phone" placeholder="(例)03-1234-5678" required></td>
+				</tr>
+				<tr>
+				<th>【<span style="color: red">必須</span>】お問い合わせのカテゴリー</th>
+				<td>
+					<select name="category">
+						<option value="人材">人材</option>
+						<option value="構築">構築</option>
+						<option value="WinActor">WinActor</option>
+						<option value="xoBlos">xoBlos</option>
+						<option value="Druva">Druva</option>
+						<option value="その他">その他</option>
+					</select>
+				</td>
+				</tr>	
+				<tr>
+				<th>【<span style="color: red">必須</span>】お問合わせ内容</th>
+				<td><textarea name="message" required></textarea></td>
+				</tr>
+				<tr>
+				<th>【<span style="color: red">必須</span>】何をみてお問い合わせいただきましたか？</th>
+				<td>
+					<select name="enquete">
+						<option value="インターネットからの検索">インターネットからの検索</option>
+						<option value="弊社からのDM">弊社からのDM</option>
+						<option value="弊社営業からのご案内">弊社営業からのご案内</option>
+						<option value="御社社員様からのご紹介">御社社員様からのご紹介</option>
+						<option value="他企業様からのご紹介">他企業様からのご紹介</option>
+						<option value="パートナー企業様">パートナー企業様</option>
+						<option value="弊社開催セミナーに参加">弊社開催セミナーに参加</option>
+						<option value="JUAS展示会">JUAS展示会</option>
+						<option value="その他">その他</option>
+					</select>
+				</td>
+				</tr>				
+
+                <tr>
+                <th>個人情報の取扱いについて</th>
+                <td>本フォームから送信頂きました個人情報については、弊社の「個人情報保護に対する基本方針」( <a href="https://www.iimhs.co.jp/privacy/contact.html">https://www.iimhs.co.jp/privacy/contact.html</a> ) に則り管理致します。何卒ご理解、ご了承賜ります様宜しくお願い致します。<br>
+                <input type="checkbox" name="check" value="同意する" required class="check">同意する</td>
+            </tr>
+			</tbody>
+		</table>
+		<br>
+		<input type="submit" value="送信する" style="width: 200px;">
+	</form>
+	</div>
+</section>

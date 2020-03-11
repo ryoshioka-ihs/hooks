@@ -1,0 +1,21 @@
+<nav>
+    <dl>
+        <dt class="act"><a href="/contact/">お問い合わせ</a></dt>
+        <dd>
+            <ul>
+                <li{% if page.title == "総合お問い合わせ" %} class="act"{% endif %}><a href="/contact/contact/">総合お問い合わせ</a></li>
+                <li{% if page.title == "採用に関するお問い合わせ" %} class="act"{% endif %}><a href="/recruit/contact/">採用に関するお問い合わせ</a></li>
+                <li{% if page.title == "メールマガジン登録" %} class="act"{% endif %}><a href="/contact/mailmagazine/">メールマガジン登録</a></li>
+            </ul>
+        </dd>
+    </dl>
+</nav>
+
+
+    <aside id="bnr">
+        <ul>
+            {% include side/side_bn_cases.html %}
+            {% include side/side_bn_tech-rep.html %}
+            {% include side/side_bn_contact.html %}
+        </ul>
+    </aside>

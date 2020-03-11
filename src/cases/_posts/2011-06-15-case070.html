@@ -1,0 +1,102 @@
+---
+layout:       "case"
+global_menu:  "cases"
+title:        "仮想環境のバージョンアップ事例"
+description:  "仮想環境における、ホストマシンの仮想OSバージョンアップ事例についてご紹介いたします。"
+keywords:     "VMware,バージョンアップ,事例"
+date:         2011-06-15 13:23:00 +0900
+PDF:          "case070"
+categories: 
+ - "インフラ構築"
+tags:
+ - "VMware vSphere"
+ - "仮想化基盤"
+---
+
+<section>
+  <h1>{{ page.title }}</h1>
+  <ul class="linkInPage">
+    <li><a href="#toc-background">背景</a></li>
+    <li><a href="#toc-overview">作業内容</a></li>
+    <li><a href="#toc-effect">作業効果</a></li>
+    <li><a href="#toc-IHS-result">弊社利用による効果</a></li>
+    <li><a href="#PdfDownload">PDFダウンロード</a></li>
+  </ul>
+
+  <section id="toc-background">
+    <h2>背景</h2>
+    <div class="smtSent">
+    <p>今回は仮想環境における、ホストマシンの仮想OSバージョンアップ事例についてご紹介致します。お客様は、自社で開発されているシステムをWindows Server 2008 R2に対応させるため、新たに開発環境の構築を計画されておりました。既存の開発環境はすでにVMware製品によって仮想化されており、Windows Server 2008 R2を仮想環境上に追加することをご希望でした。</p>
+    <br>
+    <p>しかし、お客様が使用されているVMware ESX3.5、vCenter2.5はWindows Server 2008 R2をサポートしておらず、Windows Server 2008 R2を動作させるためにはVMware ESX、vCenterのバージョンアップが必要となります。</p>
+    <br>
+    <p>Windows Server 2008やWindows 7を仮想環境上で稼動させる機会が今後増えることから、お客様はVMware ESX、vCenterのバージョンアップを決断。弊社にて仮想OSのバージョンアップ、既存仮想マシンの構成ファイルのバージョンアップを担当させて頂きました。</p>
+    <br>
+      <table class="baseTb">
+        <tbody>
+        <tr>
+        <th>作業規模</th>
+        <td>
+        <ul class="grayDisc">
+          <li>VMware vCenter2.5から4.0へのバージョンアップ(1台)</li>
+          <li>VMware ESX3.5から4.0へのバージョンアップ(7台)</li>
+          <li>仮想マシン構成ファイルのバージョンアップ(50台)</li>
+        </ul>
+        </td>
+        </tr>
+        <tr>
+        <th>作業期間</th>
+        <td>25人日</td>
+        </tr>
+        <tr>
+        <th>作業人数</th>
+        <td>5人</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section id="toc-overview">
+    <h2>作業内容</h2>
+    <div class="smtSent">
+    <p>仮想マシンの停止を最小限に抑える必要がある反面、仮想OSのバージョンアップを行うためにはホストマシンを停止する必要があります。そこで、以下の方法で作業を計画。</p>
+      <h3>1.作業対象のホストマシン上で稼働する仮想マシンを、停止せずに他のホストマシン上に退避</h3>
+      <div class="lightBox">
+      <figure><img src="/image/cases/case070_01.png" alt="図1" /></figure>
+      </div>
+
+      <h3>2.作業対象ホストマシンのバージョンアップ作業を実施</h3>
+      <div class="lightBox">
+      <figure><img src="/image/cases/case070_02.png" alt="図2" /></figure>
+
+      <h3>3.移動した仮想マシンを元のホストマシン上に戻す</h3>
+      <div class="lightBox">
+      <figure><img src="/image/cases/case070_03.png" alt="図3" /></figure>
+      </div>
+
+      <h3>4.仮想マシンの構成ファイルのバージョンアップを実施</h3>
+      <div class="lightBox">
+      <figure><img src="/image/cases/case070_04.png" alt="図4" /></figure>
+      </div>
+      <br>
+      この手順をホストマシンの台数分繰り返すことで、既存の仮想マシンを稼動させたままホストマシンのバージョンアップが可能となり、仮想マシンの停止を仮想マシンの構成ファイルのバージョンアップ作業時間のみに抑えることが可能となります。ただし、無計画に仮想マシンを移動させるとリソース不足により仮想マシンの停止に陥る可能性があるため、vCenterにて過去数カ月間の仮想マシン、ホストマシンのリソース状況を確認し、仮想マシンの退避先を決定。退避の際にリソース不足にならずに仮想マシンを稼働できる作業スケジュールを作成した上でバージョンアップ作業を実施致しました。
+    </div>
+  </section>
+
+  <section id="toc-effect">
+    <h2>作業効果</h2>
+    <div class="smtSent">
+    <p>作業の結果、Windows Server 2008 R2などの最新OSを使うことができるようになったことに加え、Fault ToleranceやData Recoveryなど、仮想環境の運用管理をより効率的に行うことのできる機能が追加されました。Fault Toleranceはホストマシンの障害の際に仮想マシンを無停止で他のホストマシンへ移行する機能、Data Recoveryは仮想マシンの構成ファイルのバックアップ・リストアを行う機能です。これらの機能は、従来サードパーティ製のツールを使用する必要がありましたが、vCenter4.0にバージョンアップを行ったことでvCenterの管理画面から一括して管理を行うことが可能となり、サードパーティ製ツールのライセンス・保守費用が不要となりました。</p>
+    </div>
+  </section>
+
+  <section id="toc-IHS-result">
+    <h2>弊社利用による効果</h2>
+    <div class="smtSent">
+    <p>既存の仮想マシンの停止時間は最小限に抑える必要があったため、事前に検証環境で作業をシミュレートし、分単位の作業スケジュールを記載した作業手順書を作成。障害復旧手順も事前に作成し、万一障害が起きた際には仮想マシンを別のホストマシン上でスムーズに起動できる体制を整えました。</p>
+    <p>IHSは「VMware ソリューションプロバイダ プロフェショナルパートナー」認定を受けており、仮想化案件には構築・運用経験のある有資格者が対応をさせて頂きます。仮想化作業に関しましてご興味がございましたら、 IIMヒューマン・ソリューション営業担当までお問い合わせ下さい。</p>
+    </div>
+  </section> 
+</section>
+

@@ -1,0 +1,151 @@
+---
+layout: compus
+global_menu: compus
+description: 貴社お取り組みに関するアンケート
+keywords:
+category:
+title: 貴社お取り組みに関するアンケート
+---
+<section>
+    <div class="smtSent">
+    <h1>貴社お取り組みに関するアンケート</h1>
+    </div>
+
+    <div class="smtSent">
+    <form action="mailer.php" method="post">
+    <h2>1. RPA(業務自動化ツール)導入に関しまして貴社のお取組み状況をお聞かせください。</h2>
+    <div class="radio" style="margin-left:7px;">
+    <input type="radio" name="q1" value="①検討を行っている">①検討を行っている<br>
+    <input type="radio" name="q1" value="②製品紹介やデモを見た">②製品紹介やデモを見た<br>
+    <input type="radio" name="q1" value="③すでに導入を始めている">③すでに導入を始めている<br>
+    <input type="radio" name="q1" value="④不明/未検討/担当外">④不明/未検討/担当外
+    </div>
+    </div>
+
+    <div class="smtSent">                            
+    <h2>2. サーバの脆弱性対策への貴社のお取組み状況をお聞かせください。</h2>
+    <div class="radio" style="margin-left:7px;">
+    <input type="radio" name="q2" value="①検討を行っている">①検討を行っている<br>
+    <input type="radio" name="q2" value="②サービス紹介やデモを見た">②サービス紹介やデモを見た<br>
+    <input type="radio" name="q2" value="③すでに導入を始めている">③すでに導入を始めている<br>
+    <input type="radio" name="q2" value="④不明/未検討/担当外">④不明/未検討/担当外
+    </div>
+    </div>
+
+    <div class="smtSent">
+    <h2>3. Windows10のPC導入/運用に関しまして貴社のお取組み状況をお聞かせください。</h2>
+    <div class="radio" style="margin-left:7px;">
+    <input type="radio" name="q3" value="①管理面で課題を感じている">①管理面で課題を感じている<br>
+    <input type="radio" name="q3" value="②導入の検討を行っている">②導入の検討を行っている<br>
+    <input type="radio" name="q3" value="③特に問題なし">③特に問題なし<br>
+    <input type="radio" name="q3" value="④不明/未検討/担当外">④不明/未検討/担当外
+    </div>
+    </div>
+
+    <div class="smtSent">                            
+    <h2>4. 上記１～4に向けたサービス・製品紹介しております。<br>ご希望が御座いましたらチェックをお付けください。</h2>
+    <div class="checkbox" style="margin-left:7px;">
+    <ul class="numList">
+    <li><p>RPA(業務自動化)ツール</p>
+        <input type="checkbox" name="q4_1[]" value="資料が欲しい">：資料が欲しい<br>
+        <input type="checkbox" name="q4_1[]" value="とりあえず話が聞きたい">：とりあえず話が聞きたい<br>
+        <input type="checkbox" name="q4_1[]" value="希望無し">：希望無し
+    </li>           
+    <li><p>脆弱性対策サービス</p>
+        <input type="checkbox" name="q4_2[]" value="資料が欲しい">：資料が欲しい<br>
+        <input type="checkbox" name="q4_2[]" value="とりあえず話が聞きたい">：とりあえず話が聞きたい<br>
+        <input type="checkbox" name="q4_2[]" value="希望無し">：希望無し
+    </li>
+    <li><p>統合バックアップサービス</p>
+        <input type="checkbox" name="q4_3[]" value="資料が欲しい">：資料が欲しい<br>
+        <input type="checkbox" name="q4_3[]" value="とりあえず話が聞きたい">：とりあえず話が聞きたい<br>
+        <input type="checkbox" name="q4_3[]" value="希望無し">：希望無し
+    </li>
+    <li><p>Windows10 PC展開サービス/運用サービス</p>
+        <input type="checkbox" name="q4_4[]" value="資料が欲しい">：資料が欲しい<br>
+        <input type="checkbox" name="q4_4[]" value="とりあえず話が聞きたい">：とりあえず話が聞きたい<br>
+        <input type="checkbox" name="q4_4[]" value="希望無し">：希望無し
+    </li>
+    <li><p>運用技術者派遣サービス</p>
+        <input type="checkbox" name="q4_5[]" value="連絡次第">：連絡次第
+        <input type="checkbox" name="q4_5[]" value="希望無し">：希望無し
+    </li>
+    </ul>
+	</div>
+
+    <div class="smtSent">                    
+    <h2>5. 要員、営業、その他、何かお気づきの点、ご質問、ご提案がございましたら、お聞かせください。</h2>
+    <div class="enquformSet">
+    <textarea name="q5" cols="103" rows="10"></textarea>
+    </div>
+    </div>
+
+    <div class="smtSent">
+    <h2>6. 最後に、商品を一つお選びください。</h2>
+    <div style="margin-left:7px;">
+    <div class="frer">
+    <div class="lightBox">
+    	<figure class="imgTeam" style="margin: 5px 10px"><img src="/image/compus/img_01.png">
+   		<figcaption class="title">①電球のお酒/てんきゅう(仮)</figcaption></figure>
+    	<figure class="imgTeam" style="margin: 5px 10px"><img src="/image/compus/img_02.png">
+    	<figcaption class="title">②折りたたみ式6機能マルチツール</figcaption></figure>
+    	<figure class="imgTeam" style="margin: 5px 10px"><img src="/image/compus/img_03.png">
+    	<figcaption class="title">③アクアルミナス/ウォーターライト/防災ライト</figcaption></figure>
+	</div>
+	</div>
+    <br>						
+    <div class="radio">
+        <input type="radio" name="q6" value="①電球のお酒/てんきゅう(仮)">①電球のお酒/てんきゅう(仮)<br>
+        <input type="radio" name="q6" value="②折りたたみ式6機能マルチツール">②折りたたみ式6機能マルチツール<br>
+        <input type="radio" name="q6" value="③アクアルミナス/ウォーターライト/防災ライト">③アクアルミナス/ウォーターライト/防災ライト
+    <br>
+	</div>
+    </div>
+
+    <br>
+
+    <div class="smtSent">
+        <h1 class="midashi">お客様情報の入力</h1>
+        <br>
+            <table class="baseTb">
+            <tbody>
+                <tr>
+                    <th>貴社名：</th>
+                    <td><input type="text" name="company" required style="width: 520px"></td>
+                </tr>
+                <tr>
+                    <th>お名前：</th>
+                    <td><input type="text" name="name" required style="width: 520px"></td>
+                </tr>
+                <tr>
+                    <th>emailアドレス：</th>
+                    <td><input type="text" name="email" required style="width: 520px"></td>
+                </tr>
+                <tr>
+                    <th>所在地：</th>
+                    <td><input type="text" name="location" required style="width: 520px"></td>
+                </tr>
+                <tr>
+                    <th>TEL：</th>
+                    <td><input type="text" name="tel" required style="width: 520px"></td>
+                </tr>
+                <tr>
+                    <th>FAX：</th>
+                    <td><input type="text" name="fax" style="width: 520px"></td>
+                </tr>
+                <tr>
+                    <th>部署名:</th>
+                    <td><input type="text" name="despartment" style="width: 520px"></td>
+                </tr>
+                <tr>
+                    <th>お役職:</th>
+                    <td><input type="text" name="position" style="width: 520px"></td>
+                </tr>
+            </tbody>
+            </table>
+    <br>
+    <input type="submit" value="送信する" style="border:solid 1px #848484;">
+    </div>
+	</div>
+
+</section>

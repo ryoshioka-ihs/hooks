@@ -1,0 +1,200 @@
+---
+layout:     "win-form"
+global_menu:  ""
+description:  "RPA「WinActor」の無償、有償セミナーへの参加は、こちらからお申し込み可能です。"
+keywords:   "RPA,WinActor,ハンズオンセミナー,お申込みフォーム"
+category:   ""
+title:      "RPA「WinActorセミナー」お申込み"
+---
+
+      <!-- Contact information-->
+      <section class="section section-lg bg-white">
+        <div class="shell shell-bigger">
+          <div class="range range-ten range-50 range-sm-center range-lg-justify">
+            <div class="cell-sm-9 cell-md-6">
+              <h3>セミナーお申込み</h3>
+              <!--<hr class="divider divider-left divider-default"/>-->
+              <p class="big">セミナーのお申込みをご希望される方は、必要事項を明記の上、下記フォームよりお申し込みください。<br>
+                <span style="color: red">※gmailでのお申込みはお断りさせていただいております。</span><br>
+                <span style="color: red">※参加者様御本人がお申込みいただきますようお願い申し上げます。</span><br>
+                <!--<span style="color: red">※セミナー当日はセミナーの様子を撮影させていただきます。予めご了承ください。</span><br>-->
+                <br>お申込みの受付が完了いたしましたら、担当より折り返しご連絡させていただきます。<br>お申し込み後、3営業日以内に受付完了の折返し連絡がない場合、恐れ入りますが、右記メールアドレス宛にご連絡いただけますでしょうか。</p>
+
+              <!-- RD Mailform-->
+              <form class="rd-mailform" data-form-output="form-output-global" data-form-type="contact" method="post" action="mailer.php">
+                <div class="range range-20">
+                  <div class="cell-xs-12 offset-custom-1">
+                    <div class="form-wrap form-wrap-validation">
+                      <label class="form-label-outside">【<span style="color: red">必須</span>】会社名</label>
+                      <input class="form-input" type="text" name="company" data-constraints="@Required"/ required placeholder="(例)IIMヒューマン・ソリューション株式会社">
+                    </div>
+                	</div>
+                  <div class="cell-sm-6">
+                    <div class="form-wrap form-wrap-validation">
+                      <label class="form-label-outside">【<span style="color: red">必須</span>】部署</label>
+                      <input class="form-input" type="text" name="despartment" data-constraints="@Required"/ required placeholder="(例)システム部">
+                    </div>
+                  </div>
+                  <div class="cell-sm-6">
+                    <div class="form-wrap form-wrap-validation">
+                      <label class="form-label-outside">お役職</label>
+                      <input class="form-input" type="text" name="position"/>
+                    </div>
+                	</div>
+                  <div class="cell-sm-6">
+                    <div class="form-wrap form-wrap-validation">
+                      <label class="form-label-outside">【<span style="color: red">必須</span>】姓</label>
+                      <input class="form-input" type="text" name="name1" data-constraints="@Required"/ required placeholder="(例)本郷">
+                    </div>
+                  </div>
+                  <div class="cell-sm-6">
+                    <div class="form-wrap form-wrap-validation">
+                      <label class="form-label-outside">【<span style="color: red">必須</span>】名</label>
+                      <input class="form-input"type="text" name="name2" data-constraints="@Required"/ required placeholder="太郎">
+                    </div>
+                  </div>
+
+                  <div class="cell-sm-6">
+                    <div class="form-wrap form-wrap-validation">
+                      <label class="form-label-outside">【<span style="color: red">必須</span>】メールアドレス</label>
+                      <input class="form-input" type="email" name="emailAdress" data-constraints="@Email @Required" required placeholder="企業ドメインでの入力をお願いいたします。">
+                    </div>
+                  </div>
+
+                  <div class="cell-sm-6">
+                    <div class="form-wrap form-wrap-validation">
+                        <label class="form-label-outside">【<span style="color: red">必須</span>】従業員数</label>
+                        <select class="form-control select-filter" data-placeholder="All" data-minimum-results-for-search="Infinity" name="people" required>
+                          <option value="①100名以上～500名未満" selected="">①100名以上～500名未満</option>
+                          <option value="②500名以上～1000名未満">②500名以上～1000名未満</option>
+                          <option value="③1000名以上">③1000名以上</option>
+                        </select>
+                    </div>
+                  </div>
+
+                   <div class="cell-sm-4">
+                    <div class="form-wrap form-wrap-validation">
+                      <label class="form-label-outside">【<span style="color: red">必須</span>】電話番号</label>
+                      <input class="form-input" type="text" name="phone1" data-constraints="@Numeric @Required"/ required  placeholder="(例)03">
+                    </div>            
+                  </div>
+                  
+                  <div class="cell-sm-4">
+                    <div class="form-wrap form-wrap-validation">
+                      <label class="form-label-outside"></label>
+                      <input class="form-input" type="text" name="phone2" data-constraints="@Numeric @Required"/ required  placeholder="1234">
+                    </div>            
+                  </div>
+                  
+                  <div class="cell-sm-4">
+                    <div class="form-wrap form-wrap-validation">
+                      <label class="form-label-outside"></label>
+                      <input class="form-input" type="text" name="phone3" data-constraints="@Numeric @Required"/ required placeholder="5678">
+                    </div>            
+                  </div>
+		              
+		          <div class="cell-xs-12 offset-custom-1">
+		            <div class="form-wrap form-wrap-validation">
+		                <label class="form-label-outside" >【<span style="color: red">必須</span>】ご希望の開催日</label>
+		                <select class="form-control select-filter" data-placeholder="All" data-minimum-results-for-search="Infinity" name="seminar" required>
+            					<option value="2018年12月11日(火)　初めての「WinActor」無償入門セミナー">2018年12月11日(火)　初めての「WinActor」無償入門セミナー</option>
+    	        				<option value="2018年12月13日(木)　「RPA導入前！導入成功のカギを握る業務把握等の進め方セミナー」(有償版)">2018年12月13日(木)　「RPA導入前！導入成功のカギを握る業務把握等の進め方セミナー」(有償版)</option>
+    	        				<option value="2018年12月18日(火)　「RPA導入前！導入成功のカギを握る業務把握等の進め方セミナー」">2018年12月18日(火)　「RPA導入前！導入成功のカギを握る業務把握等の進め方セミナー」</option>
+    	        				<option value="2018年12月20日(木)　初めての「WinActor」無償入門セミナー">2018年12月20日(木)　初めての「WinActor」無償入門セミナー</option>
+    	        				<option value="2019年1月8日(火)　初めての「WinActor」無償入門セミナー">2019年1月8日(火)　初めての「WinActor」無償入門セミナー</option>
+    	        				<option value="2019年1月10日(木)　「WinActor」ハンズオンセミナー有償初級コース">2019年1月10日(木)　「WinActor」ハンズオンセミナー有償初級コース</option>
+    	        				<option value="2019年1月17日(木)　「RPA導入前！導入成功のカギを握る業務把握等の進め方セミナー」">2019年1月17日(木)　「RPA導入前！導入成功のカギを握る業務把握等の進め方セミナー」</option>
+    	        				<option value="2019年1月22日(火)　「RPA導入前！導入成功のカギを握る業務把握等の進め方セミナー」(有償版)">2019年1月22日(火)　「RPA導入前！導入成功のカギを握る業務把握等の進め方セミナー」(有償版)</option>
+    	        				<option value="2019年1月29日(火)　初めての「WinActor」無償入門セミナー">2019年1月29日(火)　初めての「WinActor」無償入門セミナー</option>
+		                </select>
+		              </div>
+		            </div>
+		              
+                  <div class="cell-xs-12">
+                    <div class="form-wrap form-wrap-validation">
+                      <label class="form-label-outside">【<span style="color: red">必須</span>】本セミナーに参加され、どのようなことが知りたいですか？</label>
+                      <textarea class="form-input" name="message" type="text" required></textarea>
+                  	</div>
+                  </div>
+
+                  <div class="cell-xs-6">
+                    <div class="form-wrap form-wrap-validation">
+		                <label class="form-label-outside">【<span style="color: red">必須</span>】セミナーを知ったきっかけ</label>
+		                <select class="form-control select-filter" data-placeholder="All" data-minimum-results-for-search="Infinity" name="enquete" required>
+		                  <option value="Googleなどの検索サイト">Googleなどの検索サイト</option>
+		                  <option value="弊社からのメール案内（DM）">弊社からのメール案内（DM）</option>
+		                  <option value="NTT-AT様のHP">NTT-AT様のHP</option>
+		                  <option value="弊社営業からの紹介">弊社営業からの紹介</option>
+		                  <option value="その他">その他</option>	                  
+		                </select>
+		              </div>
+		            </div>
+
+                  <div class="cell-sm-6">
+                    <div class="form-wrap form-wrap-validation">
+                      <label class="form-label-outside">その他を選択された方</label>
+                      <input class="form-input" type="text" name="other" placeholder="その他：セミナーを知ったきっかけ" />
+                    </div>            
+                  </div>
+
+
+
+                  <div class="cell-xs-12">
+                    <div class="form-wrap">
+                      <label class="checkbox-inline">
+                        <input type="checkbox" name="check" value="同意する" required　class="check"/>同意する<a href="https://www.iimhs.co.jp/privacy/policy.html" target="_blank">個人情報保護ポリシーについて</a>
+                      </label>
+                    </div>
+                  </div> 
+                  <div class="cell-xs-12 offset-custom-1">
+                    <div class="form-button">
+                      <button class="button button-primary" type="submit">お申込み</button>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <div class="cell-sm-9 cell-md-4 cell-lg-3">
+              <div class="column-aside">
+                <div class="range">
+                  <div class="cell-xs-10 cell-sm-6 cell-md-12">
+                    <h6>会社住所</h6>
+                    <hr class="divider-thin"/>
+                    <article class="box-inline"><span class="icon icon-md-smaller icon-primary mdi mdi-map-marker"></span><span>東京都文京区本郷2丁目27番20号<br>本郷センタービル6F<br>IIMヒューマン・ソリューション株式会社</span></article>
+                  </div>
+                  <div class="cell-xs-10 cell-sm-6 cell-md-12">
+                    <h6>電話番号</h6>
+                    <hr class="divider-thin"/>
+                    <article class="box-inline"><span class="icon icon-md-smaller icon-primary mdi mdi-phone"></span>
+                      <ul class="list-comma">
+                        <li>03-5684-6840</li>
+                      </ul>
+                    </article>
+                  </div>
+                  <div class="cell-xs-10 cell-sm-6 cell-md-12">
+                    <h6>メールアドレス</h6>
+                    <hr class="divider-thin"/>
+                    <article class="box-inline"><span class="icon icon-md-smaller icon-primary mdi mdi-email-open"></span>
+                    	<span><a href="mailto:web@iimhs.co.jp?subject=【お問合わせ】WinActorセミナー受付状況について&amp;body=IIMヒューマン・ソリューション株式会社%0d%0a	WinActorセミナー担当者">web@iimhs.co.jp</a></span></article>
+                  </div>
+                  <!--<div class="cell-xs-10 cell-sm-6 cell-md-12">
+                    <h6>Opening hours </h6>
+                    <hr class="divider-thin"/>
+                    <article class="box-inline"><span class="icon icon-md-smaller icon-primary mdi mdi-calendar-clock"></span>
+                      <ul class="list-0">
+                        <li>Mon–Fri: 9:00 am–6:00 pm</li>
+                        <li>Sat–Sun: 11:00 am–4:00 pm</li>
+                      </ul>
+                    </article>
+                  </div>
+                  -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- Page Footer-->
+      <!-- Footer Default-->

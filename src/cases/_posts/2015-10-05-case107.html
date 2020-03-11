@@ -1,0 +1,243 @@
+---
+layout:       case
+global_menu:  cases
+title:        "仮想デスクトップスモールスタート環境構築"
+description:  "将来的な仮想デスクトップの本格導入を見据え、一部のデスクトップを先行して仮想化したスモールスタート環境を構築し、仮想デスクトップの運用ノウハウの蓄積を目的としたVDI環境の構築支援の事例をご紹介いたします。"
+keywords:     "仮想化,仮想デスクトップ,スモールスタート,iOS,VDI,事例"
+date:         2015-10-05 16:25:00 +0900
+PDF:          "case107"
+categories: 
+ - "インフラ構築"
+tags:
+ - "VMware Horizon"
+ - "VDI（仮想デスクトップ環境）"
+ - "VMware vCenter Operations Manager"
+---
+
+<section>
+  <h1>{{ page.title }}</h1>
+  <ul class="linkInPage">
+    <li><a href="#toc-background">背景</a></li>
+    <li><a href="#toc-overview">概要</a></li>
+    <li><a href="#toc-sysCon">システム構成図</a></li>
+    <li><a href="#toc-effect">作業効果</a></li>
+    <li><a href="#toc-IHS-result">弊社利用による効果</a></li>
+    <li><a href="#toc-detail">作業内容の詳細</a></li>
+    <li><a href="#PdfDownload">PDFダウンロード</a></li>
+  </ul>
+
+  <section id="toc-background">
+    <h2>背景</h2>
+    <div class="smtSent">
+      <p>お客様は将来的な仮想デスクトップの本格導入を見据え、一部のデスクトップを先行して仮想化したスモールスタート環境を構築し、仮想デスクトップの運用ノウハウの蓄積を計画。また、営業職が外出先からも使用できるようにiOS端末(iPad、iPhone)からの利用を想定されていました。<br /> <br /> 弊社にてお客様の課題と目的を達成するべく、VDI環境の構築を実施させて頂きました。</p>
+    </div>
+  </section>
+
+  <section id="toc-overview">
+    <h2>概要</h2>
+    <div class="smtSent">
+      <table class="baseTb">
+        <tbody>
+          <tr>
+          <th>業種</th>
+          <td>製造業/流通・小売業</td>
+          </tr>
+          <tr>
+          <th>目的</th>
+          <td>
+            <ul class="grayDisc">
+              <li>仮想デスクトップ環境のスモールスタート</li>
+              <li>iOS端末から仮想デスクトップ環境へ接続</li>
+            </ul>
+          </td>
+          </tr>
+          <tr>
+          <th>作業規模</th>
+          <td>利用ユーザー数: 約40名<br /><br />[総サーバー台数]<br /> 
+            <ul class="grayDisc">
+              <li>物理サーバ2台(VMware vSphere ESXi)</li>
+              <li>仮想サーバ4台(VMware vCenter Server、</li>
+              <li>VMware Horizon View、</li>
+              <li>VMware vCenter Operations Manager Analytics VM、</li>
+              <li>VMware vCenter Operations Manager UI VM)</li>
+            </ul>
+          </td>
+          </tr>
+          <tr>
+          <th>作業ボリューム</th>
+          <td>1.6人月</td>
+          </tr>
+          <tr>
+          <th>作業内容</th>
+          <td>
+            <ul class="grayDisc">
+              <li>基本設計</li>
+              <li>詳細設計</li>
+              <li>インフラ構築</li>
+              <li>インフラテスト</li>
+              <li>ドキュメント作成</li>
+            </ul>
+          </td>
+          </tr>
+        </tbody>
+      </table>
+  </section>
+
+  <section id="toc-sysCon">
+    <h2>システム構成図</h2>
+    <div class="smtSent">
+    <div class="lightBox">
+    <figure><img src="/image/cases/case107_01.png" alt="図1" /></figure>
+    </div>
+    </div>
+  </section>
+
+  <section id="toc-effect">
+    <h2>作業効果</h2>
+    <div class="smtSent">
+      <h3>1. VDIスモールスタート環境の実現</h3>
+        <h4>●課題の詳細</h4>
+        <div class="textIndent--style3">
+          <ul class="grayDisc">
+            <li>営業等の外回りをするユーザーが端末を持ち歩いて業務を行うことが多い。</li>
+            <li>紛失による情報漏洩といったセキュリティの観点から、できるだけ持ち出し端末にデータを残さない環境が必要となった。</li>
+            <li>既存で使用しているクライアント端末と同等の機能を有した仮想デスクトップ環境を使用し、今までと使用感の変わらないクライアント環境の移行を実現したい。</li>
+            <li>外部からの接続に使用する情報端末はiOS端末(iPadやiPhone)を想定している。<br />
+            <small class="notes">※外部端末から社内ネットワークへの接続は既存のVPN接続を使用</small></li>
+          </ul>
+        </ul>
+        </div>
+
+        <h4>●どのように改善したか</h4>
+        <div class="textIndent--style3">
+          <ul class="grayDisc">
+            <li>仮想デスクトップ環境構築</li>
+            <li>iOS端末への仮想デスクトップ環境の接続ツール導入</li>
+            <li>iOS端末から仮想デスクトップ環境を使用する際のチューニング</li>
+          </ul>
+        </div>
+
+        <h4>●どんな効果があったか</h4>
+        <div class="textIndent--style3">
+          <ul class="grayDisc">
+            <li>仮想デスクトップ環境上で業務を行うため、持ち出しの情報端末にはデータが残らないセキュリティを実現。</li>
+            <li>VMwareから提供されているタブレット端末環境の操作性を向上するアプリケーションを導入することにより、仮想デスクトップの操作性が向上した。</li>
+          </ul>
+        </div>
+
+      <h3>2.仮想デスクトップ環境の拡張性</h3>
+        <h4>●課題の詳細</h4>
+        <div class="textIndent--style3">
+          <ul class="grayDisc">
+            <li>既存のクライアント環境から仮想デスクトップ環境へ移行するユーザーが増加した時の拡張手法を確立したい。</li>
+          </ul>
+        </div>
+
+        <h4>●どのように改善したか</h4>
+        <div class="textIndent--style3">
+          <ul class="grayDisc">
+            <li>仮想デスクトップ環境の拡張を検討する際の指針となる、仮想デスクトップマシンのリソース算出方法を提示。</li>
+            <li>仮想デスクトップ環境を使用するユーザーが増減した際の仮想デスクトップマシンの増減方法の手順を作成。</li>
+          </ul>
+        </div>
+
+        <h4>●どんな効果があったか</h4>
+        <div class="textIndent--style3">
+          <ul class="grayDisc">
+            <li>仮想デスクトップ環境の拡張手法を提示することにより、ユーザーの使用環境に応じた仮想デスクトップ環境の拡張性を実現した。</li>
+          </ul>
+        </div>
+    </div>
+  </section>
+   
+  <section id="toc-IHS-result">
+    <h2>弊社利用による効果</h2>
+    <div class="smtSent">
+      <h3>作業の効率化</h3>
+        <p>短納期の案件であったことと環境構築期間が限られており、機器等の搬入・設置後迅速に対応しなければならなかった。 <br />
+        事前に作業手順と構築の作業計画書を作成することでスムーズに作業を行うことができた。 <br />IHSにはこういったノウハウが蓄積されており、作業は必ず二人体制で行うことを義務付けているので作業ミスや漏れといった手戻りとなる要素を無くすように心掛けています。</p>
+    </div>
+        </section>
+
+  <section id="toc-detail">
+    <h2>作業内容の詳細</h2>
+    <div class="smtSent">
+      <h3>設計</h3>
+        <ol class="numList">
+          <li><p>基本設計</p></li>
+          <div class="textIndent--style3">
+          <ul class="grayDisc">
+            <li>インフラ設計</li>
+            <li>ネットワーク設計</li>
+            <li>データベース設計</li>
+            <li>セキュリティ設計</li>
+            <li>管理性設計</li>
+            <li>監視性設計</li>
+            <li>可用性設計</li>
+            <li>拡張性設計</li>
+          </ul>
+          </div>
+
+        <li><p>詳細設計</p></li>
+        <div class="textIndent--style3">
+          <ul class="grayDisc">
+            <li>VMware vSphere ESXi 5.1 設計</li>
+            <li>VMware vCenter Server 5.1 設計</li>
+            <li>VMware vSphere Update Manager 設計</li>
+            <li>VMware Horizon View 5.3 設計</li>
+            <li>仮想デスクトップマシンマスター 設計</li>
+            <li>VMware vCenter Operations Manager 設計</li>
+            <li>Microsoft SQL Server 2008 R2 Express 設計</li>
+          </ul>
+        </div>
+
+      <h3>環境構築</h3>
+        <ol class="numList">
+          <li><p>仮想基盤環境</p></li>
+          <div class="textIndent--style3">
+          <ul class="grayDisc">
+            <li>VMware vSphere ESXi 5.1</li>
+          </ul>
+          </div>
+
+          <li><p>仮想基盤管理機能</p></li>
+          <div class="textIndent--style3">
+          <ul class="grayDisc">
+            <li>VMware vCenter Server 5.1</li>
+            <li>VMware vSphere Update Manager</li>
+          </ul>
+          </div>
+
+          <li><p>仮想デスクトップ環境提供機能</p></li>
+          <div class="textIndent--style3">
+          <ul class="grayDisc">
+            <li>VMware Horizon View 5.3</li>
+            <li>仮想デスクトップマシンマスター</li>
+          </ul>
+          </div>
+
+          <li><p>性能監視機能</p></li>
+          <div class="textIndent--style3">
+          <ul class="grayDisc">
+            <li>VMware vCenter Operations Manager</li>
+          </ul>
+          </div>
+
+          <li><p>データベース機能</p></li>
+          <div class="textIndent--style3">
+          <ul class="grayDisc">
+            <li>Microsoft SQL Server 2008 R2 Express</li>
+          </ul>
+          </div>
+
+      <h3>納品ドキュメント</h3>
+        <ul class="grayDisc">
+          <li><strong>基本設計書</strong></li>
+          <li><strong>詳細設計書</strong></li>
+          <li><strong>動作確認項目表兼結果報告書</strong></li>
+          <li><strong>操作手順書</strong></li>
+        </ul>
+    </div>
+  </section>
+</section>
+

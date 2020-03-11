@@ -1,0 +1,190 @@
+---
+layout:       case
+global_menu:  cases
+title:        "VMware Virtual SAN仮想基盤増設支援"
+description:  "VMware Virtual SAN の仮想基盤増設の支援をさせていただいた事例を紹介します。
+IIMヒューマンソリューションは、お客様に仮想化ソリューションの導入実績を評価いただいております。
+また、お客様の業務が円滑に進められるよう、環境の整備やドキュメントの整理等も実施をさせていただいております。"
+keywords:     "仮想化基盤, VMware Virtual SAN 6.0, vSphere ESXi 6.0"
+date:         2017-10-10 00:00:00 +0900
+PDF:          "case141"
+categories:
+- "仮想化基盤"
+- "VMware Virtual SAN 6.0"
+- "vSphere ESXi 6.0"
+tags:
+- "仮想化基盤"
+- "VMware Virtual SAN 6.0"
+- "vSphere ESXi 6.0"
+---
+
+<section>
+  <h1>{{ page.title }}</h1>
+  <ul class="linkInPage">
+    <li><a href="#toc-1">背景</a></li>
+    <li><a href="#toc-2">概要</a></li>
+    <li><a href="#toc-3">構成図</a></li>
+    <li><a href="#toc-4">作業のポイント</a></li>
+    <li><a href="#toc-5">弊社利用による効果</a></li>
+    <li><a href="#toc-6">作業内容の詳細</a></li>
+    <li><a href="#PdfDownload">PDFダウンロード</a></li>
+  </ul>
+
+	<section id="toc-1">
+    <h2>背景</h2>
+    <div class="smtSent">
+    <p>遠隔での監視業務を行っているお客様の業務拡大に伴い、既存の仮想基盤の増設が課題となっておりました。<BR>
+既存仮想基盤上では、遠隔監視業務を行う為、システム監視サーバーが稼働しており、業務の都合上、システムを停止することは出来る限り抑えたいという要望がありました。<BR>
+<BR>
+既存の仮想基盤はお客様が導入したものでしたが、顧客業務に追われており、基盤増設作業に着手する要員を確保できないこと、仮想化ソリューションの技術力に長けた技術者が不在であったことから、弊社の仮想化ソリューションの導入実績をご評価頂き、VMware Virtual SANの増設支援を対応させて頂きました。</p>
+    </div>
+	</section>
+
+	<section id="toc-2">
+    <h2>概要</h2>
+    <div class="smtSent">
+    <table class="baseTb">
+    	<tbody>
+    	<tr>
+    		<th>業種</th>
+    		<td>情報・通信業</td>
+    	</tr>
+    	<tr>
+    		<th>目的</th>
+    		<td>業務拡大に伴う、システム監視用VMware Virtual SAN仮想基盤の増設</td>
+    	</tr>
+    	<tr>
+    		<th>作業規模</th>
+    		<td>
+    		<ul class="grayDisc">
+    		<li>利用ユーザー数：約10名</li>
+    		<li>システム構成</li>
+    	  </ul>
+    		<p>[既存構成]</p>
+    		<ul class="grayDisc">
+    			<li>vSphere ESXi 6.0＋VMware Virtual SAN 6.0 ：4台</li>
+    			<li>VMware vCenter Server 6.0 ：1台</li>
+    		</ul>
+    		<p>[増設後構成]</p>
+    		<ul class="grayDisc">
+    			<li>vSphere ESXi 6.0＋VMware Virtual SAN 6.0 ：5台</li>
+    			<li>VMware vCenter Server 6.0 ：1台</li>
+    		</ul>
+    		</td>
+    	</tr>
+    	<tr>
+    		<th>作業ボリューム</th>
+    		<td>10日間</td>
+    	</tr>
+    	<tr>
+    		<th>作業内容</th>
+    		<td>
+    		 vSphere ESXi 6.0＋VMware Virtual SAN 6.0　1台増設に係る、詳細設計/構築/動作試験
+    		</td>
+    	</tr>
+    	</tbody>
+      </table>
+    </div>
+  </section>
+
+	<section id="toc-3">
+    <h2>構成図</h2>
+    <div class="smtSent">
+    	<div class="lightBox">
+    		<figure>
+    		<img src="/image/cases/case141_01.png" alt="システム構成図">
+    		</figure>
+		</div>
+    </div>
+	</section>
+
+  <section id="toc-4">
+    <h2>作業のポイント</h2>
+    <div class="smtSent">
+      <h3>VMware Virtual　SAN導入・増設手順の確立</h3>
+      <p>既存環境であるVMware Virtual SANの構築手順や詳細設計書が整備されておらず、既存環境を構築した技術者も、当時の構築手順やシステム環境を把握していない状況でした。<BR>
+その為、弊社にて既存環境の調査と構築手順を確立させ、詳細設計書と構築手順書を整備し、仮想化ソリューションに長けていないシステム管理者であっても、基盤増設作業が出来るようになりました。
+</p>
+<BR>
+<h3>ハードウェアラッキングのタグ整理</h3>
+      <p>サーバーラック内のタグ付けやケーブルが整理されておらず、サーバー間やネットワークスイッチ間の紐づけがされていない状況でした。<BR>
+既存環境のネットワークとケーブルの接続状態を現場のサーバー担当者に確認し、ケーブルのタグ付けを行いました。<BR>
+サーバーラック内のタグ整理を行い、機器間の通信経路を目視で把握出来るようになりました。</p>
+    </div>
+  </section>
+
+  <section id="toc-5">
+    <h2>弊社利用による効果</h2>
+    <div class="smtSent">
+    <h3>10日間の短期納品</h3>
+      <p>弊社では、VMware製品に強い技術者を揃えており、仮想基盤ソリューションのVMware vSphere導入及び更改実績や、仮想デスクトップソリューションのVMware Horizon Suite導入実績も多くあります。</p>
+      <P>このような実績と経験から培った仮想化ソリューションのナレッジが大きく反映され、設計から構築、動作試験まで円滑に実施し、10日間という短い納期であっても問題なく完了することができました。</p>
+      <h3>本番システムに影響のない仮想基盤増設</h3>
+      <p>既存の仮想基盤環境では、システム監視サーバーが稼働している状況であり、業務の特性上、システム停止をせずに増設対応を行って欲しいとの要望がありました。</p>
+	<BR>
+		<P>今回の作業では、VMware Virtual SANの特性上、既存クラスタに新しい仮想基盤を追加する必要がありました。</p>
+		<P>既存クラスタ構成やVMware Virtual SANの仕組みを把握してないと、仮想基盤上の稼働システムにパフォーマンス低下やシステム停止といった影響を及ぼす可能性がありますが、弊社の仮想化ソリューションの導入実績や技術者によるこれまでの経験、および事前の入念な調査によって、本番システムに影響なく仮想基盤の増設を完了することができました。</p>
+    </div>
+  </section>
+
+  <section id="toc-6">
+  <h2>作業内容の詳細</h2>
+  <div class="smtSent">
+
+    <h3>環境調査</h3>
+    <ol class="numList">
+    	<li><p>環境調査</p></li>
+    <ul class="grayDisc">
+    	<li>現行仮想基盤環境の調査</li>
+    </ul>
+	</ol>
+
+    <h3>詳細調査</h3>
+    <ol class="numList">
+    	<li><p>仮想基盤機能</p></li>
+    <ul class="grayDisc">
+    	<li>VMware vSphere ESXi 6.0 詳細設計</li>
+    	<li>VMware vCenter Server 6.0 詳細設計</li>
+    </ul>
+    <li><p>仮想ストレージ機能</p></li>
+    <ul class="grayDisc">
+    	<li>VMware Virtual　SAN 6.0 構築／設定</li>
+    </ul>
+	</ol>
+
+    <h3>環境構築</h3>
+    <ol class="numList">
+    	<li><p>仮想基盤機能</p></li>
+    <ul class="grayDisc">
+    	<li>VMware vSphere ESXi 6.0 構築／設定</li>
+    	<li>VMware vCenter Server 6.0 設定</li>
+    </ul>
+    <li><p>仮想ストレージ機能</p></li>
+    <ul class="grayDisc">
+    	<li>VMware Virtual　SAN 6.0 構築／設定</li>
+    </ul>
+	</ol>
+
+	<h3>動作試験</h3>
+	<ol class="numList">
+		<li><p>仮想基盤機能</p></li>
+    <ul class="grayDisc">
+    	<li>VMware vSphere ESXi 6.0 動作試験</li>
+    	<li>VMware vCenter Server 6.0 動作試験</li>
+    </ul>
+    <li><p>仮想ストレージ機能</p></li>
+    <ul class="grayDisc">
+    	<li>VMware Virtual　SAN 6.0 動作試験</li>
+    </ul>
+	</ol>
+
+    <h3>納品ドキュメント</h3>
+    	<ul class="grayDisc">
+    		<li>詳細設計書</li>
+    		<li>動作確認項目表兼結果報告書</li>
+    		<li>VMware Virtual　SAN 構築手順書</li>
+    	</ul>
+  </div>
+  </section>
+</section>
+

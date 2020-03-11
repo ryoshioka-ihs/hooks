@@ -1,0 +1,9 @@
+User-agent: *
+
+Disallow: /downloads/
+Disallow: /search/searchIndex.json
+Disallow: /template.html
+Disallow: /admin/
+
+Sitemap:https://www.iimhs.co.jp/siteMap.xml
+

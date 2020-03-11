@@ -1,0 +1,8 @@
+{
+  //"useSmtp": false,
+  //"host": "stmp.gmail.com",              
+  //"port": 465,													 
+  "username": "azure_ff32edb97831d8964e8d148263507d18@azure.com",					 
+  "password": "QszLbGtRh6Lu",						 
+  "recipientEmail":  "ryosioka@iimhs.co.jp"		 
+}

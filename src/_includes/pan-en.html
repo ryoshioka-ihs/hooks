@@ -1,0 +1,33 @@
+{% capture url %}
+  {{ page.url | remove: "/" }}
+{% endcapture %}
+
+{% if url.size > 0 %}
+  <ul id="tpcpth" itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+    <li>
+      <a href="/" itemprop="url"><span itemprop="title">Home</span></a>
+    </li>
+
+    <!-- パンくずリストアイテムの繰り返し -->
+    {% assign position = 0 %}
+    {% for crumb in breadcrumbs %}
+
+      <!-- トップページの場合処理を終了 -->
+      {% if crumb.url == "/" %}
+        {% continue %}
+      {% endif %}
+
+      <!-- SEO -->
+      {% assign position = position  | plus: 1 %}
+
+      <li property="itemListElement" typeof="ListItem">
+        {% if crumb.url != page.url %}<a property="item" typeof="WebPage" href="{{ crumb.url | prepend: site.baseurl | prepend: site.url }}">{% endif %}
+        <span property="name">{{ crumb.title }}</span>
+        {% if crumb.url != page.url %}</a>{% endif %}
+        <meta property="position" content="{{ position }}" />
+      </li>
+
+    {% endfor %}
+  </ul>
+{% endif %}
+

@@ -1,0 +1,111 @@
+@charset "UTF-8";
+/* CSS Document */
+/*=====================================================================
+    背景画像設定用CSS
+    ※背景画像が必要なパーツを使用する場合、このファイルにて定義する
+    ※画像サイズはＰＣ表示の２倍にすること
+=====================================================================*/
+/*//////////////////////////////////////////////////
+    共通
+///////////////////////////////////////////////////*/
+.loading {
+	background-image: url("../image/common/loading.gif");
+}
+
+/*//////////////////////////////////////////////////
+    サービス・製品一覧
+///////////////////////////////////////////////////*/
+.blueTtl .win {
+	background-image: url("../image/services/bg_win.png");
+}
+.blueTtl .uipath {
+	background-image: url("../image/services/bg_uipath.png");
+}
+.blueTtl .xoblos {
+	background-image: url("../image/services/bg_xoblos.png");
+}
+.blueTtl .ope {
+	background-image: url("../image/services/bg_ope.png");
+}
+.blueTtl .intro {
+	background-image: url("../image/services/bg_intro.png");
+}
+.blueTtl .opti {
+	background-image: url("../image/services/bg_opti.png");
+}
+.blueTtl .secu {
+	background-image: url("../image/services/bg_secu.png");
+}
+.blueTtl .rimo {
+	background-image: url("../image/services/bg_rimo.png");
+}
+.blueTtl .other {
+	background-image: url("../image/services/bg_other.png");
+}
+
+/*//////////////////////////////////////////////////
+    導入事例
+///////////////////////////////////////////////////*/
+.searchCat .ope {
+	background-image: url("../image/cases/bg_ope.png");
+}
+.searchCat .intro {
+	background-image: url("../image/cases/bg_intro.png");
+}
+.searchCat .opti {
+	background-image: url("../image/cases/bg_opti.png");
+}
+.searchCat .secu {
+	background-image: url("../image/cases/bg_secu.png");
+}
+.searchCat .remo {
+	background-image: url("../image/cases/bg_remo.png");
+}
+.searchCat .other {
+	background-image: url("../image/cases/bg_other.png");
+}
+
+
+/*//////////////////////////////////////////////////
+    会社情報
+///////////////////////////////////////////////////*/
+.corpMenu .msg {
+	background-image: url("../image/company/bg_msg.png");
+}
+.corpMenu .about {
+	background-image: url("../image/company/bg_about.png");
+}
+.corpMenu .vision {
+	background-image: url("../image/company/bg_vision.png");
+}
+.corpMenu .history {
+	background-image: url("../image/company/bg_history.png");
+}
+.corpMenu .acmap {
+	background-image: url("../image/company/bg_acmap.png");
+}
+
+
+/*//////////////////////////////////////////////////
+    SEサービス　サービス内容（サイズ指定もここで）
+///////////////////////////////////////////////////*/
+.svDetail .staying {
+	background-image: url("../image/common/tmp_icon17.png");
+	background-size: 83px auto;
+}
+.svDetail .foreign {
+	background-image: url("../image/common/tmp_icon16.png");
+}
+.svDetail .spot {
+	background-image: url("../image/common/tmp_icon12.png");
+}
+
+/*//////////////////////////////////////////////////
+    お問い合わせ
+///////////////////////////////////////////////////*/
+.contactBox.all {
+	background-image: url("../image/contact/bg_all.png");
+}
+.contactBox.adoption {
+	background-image: url("../image/contact/bg_adoption.png");
+}

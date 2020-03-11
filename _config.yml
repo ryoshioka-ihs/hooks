@@ -1,0 +1,94 @@
+# サイト設定
+title: "IIMヒューマン・ソリューション株式会社"
+description: >
+  IIMヒューマン・ソリューション株式会社は、ITインフラを支えるスペシャリストの集団です。
+baseurl: ""
+url: "https://www.iimhs.co.jp"
+
+source: "src"
+destination: "dest"
+# 除外するファイル
+# adminフォルダには管理用のファイルが出力されます。
+# 必要な時にはadminフォルダを一時的に以下のリストから削除します。
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - admin
+  - template.html
+  - _includes
+  - _layout
+  - _plugin
+  - node_modules
+  - package.json
+  - gulpfile.js
+  - .csslintrc.json
+  - .htmlhintrc.json
+  - .jekyll-metadata
+
+# デフォルト設定
+defaults:
+  -
+    scope:
+      path: "cases"
+      type: "posts"
+    values:
+      layout: "cases"
+      permalink: /cases/:year/:month/:title.html
+  -
+    scope:
+      path: "topics"
+      type: "posts"
+    values:
+      layout: "topic"
+      global_menu: "topics"
+      permalink: /topics/:year/:month/:title.html
+  -
+    scope:
+      path: "topics"
+      type: "pages"
+    values:
+      layout: "topics"
+      global_menu: "topics"
+  -
+    scope:
+      path: "reports"
+      type: "posts"
+    values:
+      layout: "topic"
+      global_menu: "topics"
+      permalink: /topics/:year/:month/:title.html
+
+  -
+    scope:
+      path: "other"
+      type: "posts"
+    values:
+      layout: "topic"
+      global_menu: "topics"
+      permalink: /topics/:year/:month/:title.html
+  -
+    scope:
+      path: "faq"
+      type: "posts"
+    values:
+      layout: "win-faq"
+      permalink: /topics/:year/:month/:title.html
+
+  -
+    scope:
+      path: "seminar"
+      type: "posts"
+    values:
+      layout: "win-topics"
+      permalink: /topics/:year/:month/:title.html
+      
+# Gemfileで追加した拡張機能
+gems:
+  - octopress-debugger
+  - octopress-hooks
+  - octopress-paginate
+
+# Build settings
+markdown: kramdown
+
+

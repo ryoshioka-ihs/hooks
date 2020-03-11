@@ -1,0 +1,184 @@
+---
+layout:       case
+global_menu:  cases
+title:        "VDI環境バージョンアップ/UPS機器増設"
+description:  "VMware Viewを使用しているお客様のVDI環境において、ストレージのハードウェアの入れ替え、およびHorizon Viewへのアップグレードを実施した事例を紹介。また同時にUPS機器の拡張作業を行い、電源供給停止後、3時間の業務継続が可能に。
+IIMヒューマン・ソリューションはインフラ環境のバージョンアップ作業や関連する機器の拡張作業等、お客様の運用を幅広く支援しています。"
+keywords:     "仮想化基盤,VDI（仮想デスクトップ環境）,VMware Horizon,UPS"
+date:         2017-09-11 00:00:00 +0900
+PDF:          "case137"
+categories:
+ - "その他"
+tags:
+ - "仮想化基盤,VDI（仮想デスクトップ環境）,VMware Horizon,UPS"
+---
+
+<section>
+  <h1>{{ page.title }}</h1>
+  <ul class="linkInPage">
+    <li><a href="#toc-1">背景</a></li>
+    <li><a href="#toc-2">概要</a></li>
+    <li><a href="#toc-3">構成図</a></li>
+    <li><a href="#toc-4">作業のポイント</a></li>
+    <li><a href="#toc-5">弊社利用による効果</a></li>
+    <li><a href="#toc-6">作業内容の詳細</a></li>
+    <li><a href="#PdfDownload">PDFダウンロード</a></li>
+  </ul>
+
+  <section id="toc-1">
+    <h2>背景</h2>
+    <div class="smtSent">
+      <p>VMware製品のVMware Viewを使用しているお客様のVDI環境において、ストレージのハードウェアおよびVMware Viewのソフトウェア保守期限が迫っており、適切なサポートを受け続けることができないリスクがあったため、ストレージのハードウェアの入れ替えおよびVMware Horizon Viewへのアップグレードを行いました。
+</p>
+      <br>
+      <p>また、既設の非常用電源装置（UPS）のキャパシティでは、ビルが停電している間にシステムを稼働することができず、その間、業務も停止しなければならないといった課題があったため、UPS機器の拡張作業を行い、３時間程度の停電ならば業務を継続することが可能となるようにいたしました。
+</p>
+    </div>
+  </section>
+
+  <section id="toc-2">
+    <h2>概要</h2>
+    <div class="smtSent">
+      <table class="baseTb">
+        <tbody>
+          <tr>
+            <th>業種</th>
+            <td>コンサルティング業</td>
+          </tr>
+          <tr>
+            <th>目的</th>
+            <td>
+            <ul class="grayDisc">
+            <li>VMware View 5.1 からVMware Horizon View 6.0へのアップグレード</li>
+            <li>UPS機器拡張による電力供給時間の延長</li>
+            </ul>
+            </td>
+          </tr>
+          <tr>
+            <th>作業規模</th>
+            <td>
+            <ul class="grayDisc">
+                <li>利用ユーザー数：約40名</li>
+                <li>仮想デスクトップ数：約40台</li>
+                <li>サーバ環境</li>
+              </ul>
+              <p style="margin-left: 40px">VMware ESXiサーバー 2台<br>
+              Active Directoryサーバー  1台<br>
+              VMware vCenterサーバー 1台<br>
+              VMware View Connectionサーバー 1台<br>
+              電源管理サーバー 2台<br>
+              バックアップサーバー 1台<br>
+              ストレージ 1台<br>
+              L2スイッチ 2台<br>
+              UPS 1台 　→4台に増設<br>
+</p>
+              
+            </td>
+          </tr>
+          <tr>
+            <th>作業ボリューム</th>
+            <td>36人日（アップグレード：32人日、UPS拡張：4人日）</td>
+          </tr>
+          <tr>
+            <th>作業内容</th>
+            <td>
+              <ul class="grayDisc">
+                <li>VMware Horizon View 6.0アップグレード</li>
+                <li>ストレージ移行</li>
+                <li>UPS機器増設</li>
+                <li>動作試験</li>
+              </ul>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section id="toc-3">
+    <h2>構成図</h2>
+    <div class="smtSent">
+      <div class="lightBox">
+        <figure>
+          <img src="/image/cases/case137_01.png" alt="システム構成図">
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section id="toc-4">
+    <h2>作業のポイント</h2>
+    <div class="smtSent">
+      <h3>VDIアップグレードによる操作性の向上</h3>
+      <p>VDI環境のアップグレードにより、VMware Viewの保守期限中に滞りなく移行することができ、サーバー上の管理コンソールであるVMware Horizon View Administratorやクライアント上で使用するVMware Horizon Clientのデザインが見やすく一新され、操作性が向上しました。
+</p>
+      <h3>UPS機器増設による電力供給時間の延長</h3>
+      <p>お客様の環境ではUPS機器を導入しておりましたが、その電力供給時間は、電力の供給がUPSに切り替わってからシステムが正常に停止
+するまでの時間のみ確保されておりました。<BR>本作業では、シュナイダーエレクトリック製品PowerChuteNetworkShutdown の管理の元でUPS機器を増設し、2〜3時間といった長時間の停電時においても電力の供給が可能となるよう設定をいたしました。
+</p>
+    </div>
+  </section>
+
+  <section id="toc-5">
+    <h2>弊社利用による効果</h2>
+    <div class="smtSent">
+      <h3>VDI環境構築時からのサポートによるスムーズな作業</h3>
+      <p>お客様は、VDI環境の構築時から弊社にてサポートをさせていただいていたことからお客様の環境はすでに把握しておりました。<BR>
+そのため、お客様の環境に合わせたVDI環境のアップグレード作業とUPSの増設作業をスムーズに実施することができ、作業工数を抑えることができました。
+</p>
+    </div>
+  </section>
+
+  <section id="toc-6">
+  <h2>作業内容の詳細</h2>
+  <div class="smtSent">
+
+    <h3>要件定義</h3>
+      <ul class="grayDisc">
+        <li>ファシリティ要件</li>
+        <li>運用要件</li>
+        <li>外部接続要件</li>
+      </ul>
+
+    <h3>設計</h3>
+      <ul class="grayDisc">
+        <li>ストレージ設計</li>
+        <li>バックアップ設計</li>
+      </ul>
+
+    <h3>環境構築／移行</h3>
+    <ul class="grayDisc">
+      <li>新ストレージの構築</li>
+      <li>旧ストレージから新ストレージへのデータ移行</li>
+      <li>VMware ESXi 5.1から5.5へアップグレード</li>
+      <li>VMware vCenter Server 5.1から5.5へアップグレード</li>
+<li>VMware View Connection Server 5.1から6.0へアップグレード</li>
+<li>VMware View Agent 5.1から6.0へアップグレード</li>
+<li>VMware Data Recovery 2.0からVMware vSphere Data Protection 5.8へアップグレード</li>
+<li>PowerChuteNetworkShutdown設定変更</li>
+<li>UPS装置の拡張バッテリー増設</li>
+    </ul>
+
+    <h3>動作試験</h3>
+    <ul class="grayDisc">
+      <li>VDI基盤の動作確認</li>
+ <li>VDI接続検証</li>
+ <li>バックアップ検証</li>
+ <li>ネットワーク疎通確認</li>
+ <li>機器障害試験</li>
+ <li>UPS装置の動作確認</li>
+
+    </ul>
+
+    <h3>納品ドキュメント</h3>
+    <ul class="grayDisc">
+      <li>詳細設計書</li>
+      <li>動作確認項目表兼結果報告書</li>
+      <li>運用手順書</li>
+    </ul>
+
+  </div>
+  </section>
+
+</section>
+

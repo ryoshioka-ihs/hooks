@@ -1,0 +1,190 @@
+---
+layout:       case
+global_menu:  cases
+title:        "SCCM2007構築事例"
+description:  "システムの大規模な刷新(Active Directory2008化、Windows 7導入、既存SMS2003からSCCM2007導入)の事例をご紹介いたします。"
+keywords:     "Active Directory,クライアント展開,SCCM,クライアント管理,事例"
+date:         2011-10-13 13:37:00 +0900
+PDF:          "case073"
+categories: 
+ - "インフラ構築"
+tags:
+ - "System Center Configuration Manager"
+---
+
+<section>
+  <h1>{{ page.title }}</h1>
+  <ul class="linkInPage">
+    <li><a href="#toc-background">背景</a></li>
+    <li><a href="#toc-work">作業内容</a></li>
+    <li><a href="#toc-effect">作業効果</a></li>
+    <li><a href="#toc-IHS-result">弊社利用による効果</a></li>
+    <li><a href="#PdfDownload">PDFダウンロード</a></li>
+  </ul>
+
+  <section id="toc-background">
+    <h2>背景</h2>
+    <div class="smtSent">
+    <p>システムの老朽化や保守終了のため、お客様はシステムの大規模な刷新を計画されていました。保守期限の切れるハードウェアのリプレースに始まり、Active DirectoryのWindows Server 2008化、Windows 7の導入、さらにクライアント管理効率化のため既存のSMS2003に代わりSCCM2007を導入するというものです。上記の作業のうち、SCCM2007の設計・構築を弊社にて担当させて頂きました。</p>
+    <br>
+      <table class="baseTb">
+        <tbody>
+        <tr>
+        <th>作業規模</th>
+        <td>
+          <p>Active Directory環境</p>
+        <ul class="grayDisc">
+          <li>サーバー：約100台</li>
+          <li>クライアントPC：約1,000台</li>
+        </ul>
+        </td>
+        </tr>
+        <tr>
+        <th>作業期間</th>
+        <td>1ヶ月</td>
+        </tr>
+        <tr>
+        <th>作業人数</th>
+        <td>2人</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section id="toc-work">
+    <h2>作業内容</h2>
+    <div class="smtSent">
+    <h3>現状調査</h3>
+    <ul class="grayDisc">
+      <li>SMS2003</li>
+    <div class="textIndent--style3">    
+    <ul class="grayDisc">
+      <li>使用している機能・設定<br />
+      システム固有情報</li>
+    </ul>
+    </div>
+
+      <h3>設計</h3>
+      <ul class="grayDisc">
+        <li>SQL Server 2008</li>
+        <li>SCCM2007</li>
+      </ul>
+      <div class="textIndent--style3">   
+      <ul class="grayDisc">
+        <li>SCCMコンポーネント役割構成</li>
+        <li>サイト構成・境界</li>
+        <li>クライアントエージェント動作</li>
+        <li>WSUS（Windows Software Update Service）</li>
+      </ul>
+      </div>
+
+      <h3>構築</h3>
+      <ul class="grayDisc">
+        <li>Active Directory拡張</li>
+        <li>SCCM2007　基本構成必須コンポーネント（役割）　設定</li>
+      </ul>
+      <div class="textIndent--style3">
+      <ul class="grayDisc">
+        <li>IIS／WSUS　等</li>
+      </ul>
+      </div>
+
+      <ul class="grayDisc">
+        <li>SCCM2007　基本構成必須機能設定</li>
+      </ul>
+      <div class="textIndent--style3">
+      <ul class="grayDisc">
+        <li>BITS拡張／RDC　等</li>
+      </ul>
+      </div>
+      
+      <ul class="grayDisc">
+        <li>SQL Server</li>
+      </ul>
+      <div class="textIndent--style3">  
+      <ul class="grayDisc">
+        <li>ソフトウェアインストール／初期設定　等</li>
+      </ul>
+      </div>
+      
+      <ul class="grayDisc">
+        <li>SCCM2007</li>
+      </ul>
+      <div class="textIndent--style3">
+      <ul class="grayDisc">
+        <li>ソフトウェアインストール／初期設定／基本設定／サイト設定／コレクション設定　等</li>
+      </ul>
+      </div>
+      
+      <ul class="grayDisc">
+        <li>クライアントPC展開設定</li>
+      </ul>
+
+      <h3>動作検証</h3>
+      <ul class="grayDisc">
+        <li>基本機能</li>
+      </ul>
+      <div class="textIndent--style3">
+      <ul class="grayDisc">
+        <li>ソフトウェア／ハードウェアインベントリ　収集</li>
+        <li>ソフトウェア配布</li>
+        <li>アプリケーション配布／インストール（通知／サイレント）</li>
+      </ul>
+      </div>
+
+      <ul class="grayDisc">
+        <li>新OS（Windows 7/2008 R2）SCCMクライアント　コレクションメンバーへの追加</li>
+        <li>新OS（Windows 7/2008 R2）SCCMクライアント　アプリケーション配布</li>
+        <li>クライアントPC展開</li>
+      </ul>
+      
+      <h3>ドキュメント作成</h3>
+      <ul class="grayDisc">
+        <li>SCCM2007詳細パラメータ</li>
+        <li>SCCM2007運用手順</li>
+      </ul>
+      <div class="textIndent--style3">   
+      <ul class="grayDisc">
+        <li>SCCMクライアントインストール</li>
+        <li>ソフトウェア更新</li>
+        <li>アプリケーション配布</li>
+        <li>クライアントPC展開</li>
+      </ul>
+      </div>
+      
+      <div class="lightBox">
+      <figure><img src="/image/cases/case073_01.png" alt="図1" /></figure>
+      </div>
+    </div>
+  </section>
+
+  <section id="toc-effect">
+    <h2>作業効果</h2>
+    <div class="smtSent">
+      <h3>1.セキュリティの強化</h3>
+      <p>SCCM2007では、クライアントPCのセキュリティ更新プログラムやウィルス対策ソフトの導入状況など、必要な基準を満たしているかどうかを定期的に監査することができます。また、基準に満たないPCが検出された場合、強制的にセキュリティ更新プログラムのインストールや設定変更を行うことができます。これにより、セキュリティリスクの早期検出と速やかな改善が行えるようになり、セキュリティレベルをより高く保つことができるようになりました。</p>
+      
+      <h3>2.クライアントPC展開作業の負荷軽減</h3>
+      <p>SCCM2007にはOSやソフトウェアの配信機能が搭載されており、OSインストールやドメインへの参加、標準ソフトウェアのインストールなど、クライアントPCの一連のセットアップ作業を自動化することができます。この機能により、業務負荷の高いクライアントPCのリプレース作業を短時間で行うことが出来るようなりました。</p>
+      
+      <h3>3.ヘルプデスク業務の効率化</h3>
+      <p>SCCM2007の資産管理機能により、各クライアントPCのハードウェアや導入されているソフトウェアなどの資産情報が自動的にデータベース化され、SCCM2007の管理画面から簡単に参照することが可能となりました。</p>
+      <br>
+      <p>また、Intel vProテクノロジを搭載したクライアントPCへのリプレースを行ったため、電源の入っていないPCの起動や、BIOSの操作をリモートから行うことができるようになり、ヘルプデスク業務の大幅な効率化を行うことができました。</p>
+    </div>
+  </section>
+
+  <section id="toc-IHS-result">
+   <h2>弊社利用による効果</h2>
+   <div class="smtSent">
+    <h3>1.SCCM2007構築実績に基づいたトラブルシューティング</h3>
+    <p>SCCM2007は、導入をスムーズに行うことのできないケースが多々あります。今回のケースでは過去の構築経験や社内検証での事象を踏まえ、エラーの原因となりうる箇所を事前に特定し、設定変更を実施。エラーを発生させることなくインストールを終了することができました。</p>
+    
+    <h3>2.運用効率化を支援</h3>
+    <p>SCCM2007では、管理対象のコンピュータを「コレクション」という単位で管理を行います。例えば、Windows XPのコレクションに対してWindows XP用の更新プログラムを配信することができるなど、非常に有用な機能です。しかし、の初期状態のSCCM2007にはWindows 7やWindows Server 2008のコレクションが用意されておりません。そこで、弊社にて該当のコレクションを作成。また、ソフトウェアや更新プログラムの配信を部署やフロア毎に行うことができるよう、部署別、フロア別のコレクションを作成し、より柔軟にPC管理を行うことのできる環境の構築を行いました。</p>
+    <br>
+    <p>IHSでは、SCCMの構築や、SCCMを使用した資産管理、クライアントPC運用効率化のサポートなどを行っております。ご興味がございましたら、IIMヒューマン・ソリューション営業担当までお問い合わせ下さい。</p>
+  </section> 
+</section>
+

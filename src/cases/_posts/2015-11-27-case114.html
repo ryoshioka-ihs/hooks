@@ -1,0 +1,162 @@
+---
+layout:       case
+global_menu:  cases
+title:        "ネットワークセキュリティシステム構築"
+description:  "ネットワークシステムの刷新に伴う、Webフィルター、Webゲートウェイ、クライアント向けウイルス対策サーバーのリプレースの事例をご紹介いたします。"
+keywords:     "リプレース,i-Filter,TMCM,VBCorp,事例"
+date:         2015-11-27 09:21:00 +0900
+PDF:          "case114"
+categories: 
+ - "インフラ構築"
+tags:
+ - "InterScan Web Security Suite"
+ - "Trend Micro Control Manager "
+ - "Virus Baster Corp"
+ - "i-Filter"
+ - "ネットワーク"
+---
+
+<section>
+  <h1>{{ page.title }}</h1>
+  <ul class="linkInPage">
+    <li><a href="#toc-background">背景</a></li>
+    <li><a href="#toc-overview">概要</a></li>
+    <li><a href="#toc-sysCon">システム構成図</a></li>
+    <li><a href="#toc-effect">作業効果</a></li>
+    <li><a href="#toc-IHS-result">弊社利用による効果</a></li>
+    <li><a href="#toc-detail">作業内容の詳細</a></li>
+    <li><a href="#PdfDownload">PDFダウンロード</a></li>
+  </ul>
+
+  <section id="toc-background">
+   <h2>背景</h2>
+   <div class="smtSent">
+    お客様は、Windows XP のサポート切れに伴い、Windows 7 の導入及び、ネットワークシステムの刷新を計画されておりました。<br>
+    既存環境には、Webフィルター、Webゲートウェイを使用したセキュリティ基盤が構築されておりましたが、後継のソフトウェアが無く、
+    新規ソフトウェアによるシステム構築をお客様は検討されておりました。<br>
+    <br>
+    今回は、弊社にて、Webフィルター、Webゲートウェイ、クライアント向けウイルス対策サーバーのリプレースを担当させていただきました。
+    </div>
+  </section>
+
+  <section id="toc-overview">
+    <h2>概要</h2>
+    <div class="smtSent">
+      <table class="baseTb">
+        <tr>
+        <th>業種</th>
+        <td>官公庁</td>
+        <tr>
+        <th>目的</th>
+        <td>ネットワークセキュリティシステム構築</td>
+        <tr>
+        <th>作業規模</th>
+        <td>
+        <ul class="grayDisc">
+           <li>利用ユーザー数: 約350名</li>
+           <li>総サーバー台数: 2台</li>
+        </ul>
+        </td>
+        <tr>
+        <th>作業ボリューム</th>
+        <td>3人月</td>
+        <tr>
+        <th>作業内容</th>
+        <td>
+        <ul class="grayDisc">
+          <li>Webフィルター構築</li>
+          <li>Webゲートウェイ構築</li>
+          <li>クライアント向けウイルス対策サーバー構築</li>
+        </ul>
+        </td>
+      </table>
+    </tr>
+  </section>
+
+  <section id="toc-sysCon">
+    <h2>システム構成図</h2>
+    <div class="smtSent">
+    <div class="lightBox">
+    <figure><img src="/image/cases/case114_01.png" alt="図1" /></figure>
+
+    </div>
+  </section>
+
+  <section id="toc-effect">
+    <h2>作業効果</h2>
+    <div class="smtSent">
+      <h3>2段階のプロキシ構成による、経路毎のセキュリティ設計</h3>
+      お客様のネットワーク環境は、インターネット側への通信経路と広域イーサネット（WAN接続）側への通信経路が引かれており、通信の宛先ごとに、それぞれのネットワークに要求が振り分けられる構成となっておりました。<br>
+      今回のリプレースでは、上記構成の踏襲に加え、新たにWAN側に向かうネットワークに新たに上位プロキシを構築する要件をいただきました。<br>
+      <br>
+      本構成では、下位プロキシとして、Webフィルター機能を設け、クライアントの要求をフロントで受け付け、通信先のURLにより、それぞれ異なる上位プロキシであるWebゲートウェイサーバーに要求をリレーする構成といたしました。<br>
+      <div class="lightBox">
+      <figure><img src="/image/cases/case114_02.png" alt="図2" /></figure>
+      </div>
+
+      <h3>ウイルス対策機能の統合管理</h3>
+      本件では、Webセキュリティとして導入した、InterScan Web Security Suite(IWSS)の他、クライアントウイルス対策として、ウイルスバスターコーポレートエディション(VBCorp)を導入しております。また、既存環境にはメールセキュリティ対策として、InterScan Messaging Security Suite (IMSS)が構成されておりましたので、これらのウイルスセキュリティツールの統合ソフトウェアとして、Trend Micro Control Manager (TMCM)を導入し、各ツールがTMCM経由で更新定義ファイルを取得するように設定いたしました。<br>
+      これにより、管理用ユーザーインターフェースの一元化と、更新状況の一元管理を可能としております。<br>
+      <div class="lightBox">
+      <figure><img src="/image/cases/case114_03.png" alt="図3" /></figure>
+      </div>
+  </section>
+   
+  <section id="toc-IHS-result">
+    <h2>弊社利用による効果</h2>
+    <div class="smtSent">
+      <h3>フルスタックエンジニアによる一貫した案件対応</h3>
+      ネットワーク経路が複雑化すると、特定のサイトや、特定の動作が実施できないなどの障害が発生した際の切り分けがとても難しくなります。特に、本件では、ネットワーク経路が変更となった為、通信経路の振り分け基準と、各通信経路の通信要求を満たすためには何処のサーバーでどのように設定を入れる必要があるかを考慮する必要がありました。<br>
+      <br>
+      IHSでは、クライアント／サーバー／ネットワークと幅広い分野に経験を持った技術者が設計から試験まで対応を行わせていただいております。これにより、システムを構成している各機器やアプリケーションの機能を考慮した上で各ソフトウェアの最適な機能設計、適切な動作検証を行い、顧客要件を必要十分に満たすシステム構築を行わせていただきました。<br>
+      <div class="lightBox">
+      <figure><img src="/image/cases/case114_04.png" alt="図4" /></figure>
+      </div>
+  </section>
+
+  <section id="toc-detail">
+    <h2>作業内容の詳細</h2>
+    <div class="smtSent">
+      <h3>設計</h3>
+        <ol class="numList">
+          <li><p>基本設計</p></li>
+        <div class="textIndent--style3">
+        <ul class="grayDisc">
+          <li>プラットフォーム設計</li>
+          <li>ネットワーク設計</li>
+          <li>可用性設計</li>
+          <li>セキュリティ設計</li>
+          <li>運用設計</li>
+        </ul>
+        </div>
+        </ol>
+
+      <h3>環境構築</h3>
+        <ol class="numList">
+          <li><p>Webセキュリティ機能</p></li>
+          <div class="textIndent--style3">
+          <ul class="grayDisc">
+          <li>Webフィルターサーバー構築（i-Filter）</li>
+          <li>Webゲートウェイサーバー構築（IWSS）</li>
+          </div>
+
+          <li><p>統合ウイルス対策機能</p></li>
+          <div class="textIndent--style3">
+          <ul class="grayDisc">
+            <li>ウイルス対策統合管理サーバー（TMCM）構築</li>
+            <li>クライアント向けウイルス対策サーバー（VBCorp）構築</li>
+            <li>既存Trend Micro 製品のTMCM統合</li>
+          </ul>
+          </div>
+
+      <h3>納品ドキュメント</h3>
+      <ul class="grayDisc">
+        <li>基本設計書（全サーバー・機能）</li>
+        <li>詳細設計書（全サーバー・機能）</li>
+        <li>動作確認項目表兼結果報告書</li>
+        <li>運用手順書</li>
+      </ul>
+    </div>
+  </section>
+</section>
+

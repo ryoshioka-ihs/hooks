@@ -1,0 +1,113 @@
+		<footer>
+			<div id="pageTop">
+				<p>PAGE TOP</p>
+			</div>
+			{% if page.layout == "top" %}<div id="gmapTopFooter"></div>{% endif %}
+
+			<div class="footTop">
+				<p><a href="/">ホーム</a></p>
+				<div class="tbWrap">
+					<dl>
+						<dt><a href="/services/">サービス・製品</a></dt>
+						<dd>
+							<ul>
+								<!--<li><a href="/services/remote/">リモート運用</a></li>
+								-->
+								<li><a href="/winactor/" target="_blank">WinActor</a></li>
+								<li><a href="/uipath/" target="_blank">UiPath</a></li>
+								<li><a href="/services/operation/">インフラ運用</a></li>
+								<li><a href="/services/construction/">インフラ構築</a></li>
+								<!--<li><a href="/services/webSystemOpt/">Webシステム最適化</a></li>-->
+								<li><a href="/services/security/">セキュリティ</a></li>
+								<li><a href="/services/other/">その他のソリューション</a></li>								
+							</ul>
+						</dd>
+					</dl>
+
+					<dl>
+						<dt><a href="/cases/">導入事例</a></dt>
+						<dd>
+							<ul>
+							<!--リモート運用
+								<li><a href="/cases/remote/">リモート運用</a></li>
+							-->							
+								<li><a href="/cases/operation/">インフラ運用</a></li>
+								<li><a href="/cases/construction/">インフラ構築</a></li>
+								<!--<li><a href="#">Webシステム最適化</a></li>--><!-- ※導入事例の「Webシステム最適化」は一旦非表示 -->
+								<li><a href="/cases/security/">セキュリティ</a></li>
+							</ul>
+						</dd>
+					</dl>
+
+					<dl>
+						<dt><a href="/company/">会社情報</a></dt>
+						<dd>
+							<ul>
+								<li><a href="/company/message/">社長メッセージ</a></li>
+								<li><a href="/company/profile/">会社概要</a></li>
+								<li><a href="/company/vision/">経営理念</a></li>
+								<li><a href="/company/history/">沿革・主要取引先</a></li>
+								<li><a href="/company/access/">アクセスマップ</a></li>
+							</ul>
+						</dd>
+					</dl>
+
+					<dl>
+						<dt><a href="/topics/">トピックス</a></dt>
+						<dd>
+							<ul>
+								{% if site.categories["サービス・製品"].size > 0 %}
+									<li><a href="/topics/services/">サービス・製品</a></li>
+								{% endif %}
+								{% if site.categories["cases"].size > 0 %}
+									<li><a href="/topics/cases/">事例紹介</a></li>
+								{% endif %}
+								<!--{% if site.categories["技術レポート"].size > 0 %}
+									<li><a href="/topics/reports/">技術レポート</a></li>
+								{% endif %}
+								-->
+								{% if site.categories["セミナー"].size > 0 %}
+									<li><a href="/topics/seminar/">セミナー</a></li>
+								{% endif %}
+							</ul>
+						</dd>
+						<p><a href="/contact/">お問い合わせ</a></p>
+					</dl>
+
+					<dl>
+						<dt><a href="/recruit/">採用情報</a></dt>
+						<dd>
+							<ul>
+								<li><a href="/recruit/info/session.html">会社説明会（中途・新卒）</a></li>
+								<li><a href="/recruit/info/guideline.html">募集要項（中途・新卒）</a></li>
+							</ul>
+						</dd>
+					</dl>
+				</div><!--/.tbWrap-->
+			</div><!--/.footTop-->
+
+			<div class="footBot">
+				<ul>
+					<li><a href="/privacy/policy.html">個人情報保護方針</a></li>
+					<li><a href="/privacy/sitePolicy.html">サイトポリシー</a></li>
+					<li><a href="/siteMap.html">サイトマップ</a></li>
+					<!--<li class="outLink"><a href="http://www.iim.co.jp/" target="_blank">株式会社 アイ・アイ・エム</a></li>-->
+				</ul>
+
+				<!-- GlobalSign SSL Seal. Do not edit.  -->
+								<!--
+				<div id="sign">
+					<span id="ss_gmo_img_wrapper_115-57_image_ja">
+						<a href="https://jp.globalsign.com/" target="_blank" rel="nofollow">
+							<img alt="SSL　GMOグローバルサインのサイトシール" border="0" id="ss_img" src="//seal.globalsign.com/SiteSeal/images/gs_noscript_115-57_ja.gif">
+						</a>
+					</span>
+					<script type="text/javascript" src="//seal.globalsign.com/SiteSeal/gmogs_image_115-57_ja.js" defer="defer"></script>
+					<span class="pm"><a href="http://privacymark.jp/" target="_blank"><img src="/image/common/privacy_mark.gif" width="55" height="55" /></a></span>
+				</div>
+								-->
+				<!-- END of GlobalSign SSL Seal. -->
+
+				<p class="cp"><small>©2020 IIM Human Solution Corp.</small></p>
+			</div><!--/.footBot-->
+		</footer>

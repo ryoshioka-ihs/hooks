@@ -1,0 +1,64 @@
+---
+layout:     "win-top"
+global_menu:  ""
+description:  "RPA「WinActor」のアプリケーションについてよくある質問とその回答ページです。"
+keywords:   "WinActor,FAQ,アプリケーション,よくある質問"
+category:   ""
+title:      "WinActorのよくある質問"
+---
+  <section class="breadcrumbs-custom bg-image">
+          <h1 class="heading-1 breadcrumbs-custom-title">WinActorの「アプリケーション」についてよくある質問</h1>
+  </section>
+
+<section class="section section-xl bg-gray-lighter">
+  <div class="center-shell">
+    <div class="range range-ten range-50 range-sm-90 range-sm-center range-lg-justify">
+      <div class="cell-sm-9 cell-md-7">
+        <div class="range range-30">
+            <!-- Bootstrap collapse-->
+              <div class="panel-group panel-group-custom panel-group-corporate" id="accordion1" role="tablist" aria-multiselectable="false">
+                <!-- ここから-->
+                <div class="panel panel-custom panel-corporate">
+                  <div class="panel-heading" id="accordion1Heading1" role="tab">
+                    <div class="panel-title"><a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion1" href="#application-1" aria-controls="accordion1Collapse2">IE以外のブラウザも対応可能ですか？
+                        <div class="panel-arrow"></div></a>
+                    </div>
+                  </div>
+                  <div class="panel-collapse collapse" id="application-1" role="tabpanel" aria-labelledby="accordion1Heading2">
+                    <div class="panel-body">
+                      <p>FirefoxやChromeなどは画像認識で操作することができますが、IEには専用のノードが多数用意されており、より容易に開発ができます。</p>
+                    </div>
+                  </div>
+                </div>
+                <!-- ここから-->
+                <div class="panel panel-custom panel-corporate">
+                  <div class="panel-heading" id="accordion1Heading1" role="tab">
+                    <div class="panel-title"><a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion1" href="#application-2" aria-controls="accordion1Collapse2">社内で使用しているシステムがWinActorでウィンドウ認識できません。<br>どういう理由でしょうか？
+                        <div class="panel-arrow"></div></a>
+                    </div>
+                  </div>
+                  <div class="panel-collapse collapse" id="application-2" role="tabpanel" aria-labelledby="accordion1Heading2">
+                    <div class="panel-body">
+                      <p>ターゲット選択しても何も反応しない、選択時のオレンジ枠が出ても反応しないなどの場合は、対象システムに保護モードがかかっている、上位権限になっていることがあります。<br>保護モードを解除するか、WinActorを管理者として実行することで解消できる可能性があります。</p>
+                    </div>
+                  </div>
+                </div>
+
+              </div><!-- Bootstrap collapse-->
+
+        </div>
+      </div>
+                      <div id="sideMenu">
+            {% include side/side_win-faq.html %}
+            </div><!--/#sideMenu-->
+    </div>
+    <br>
+      <div class="banner_b"><p><a href="/winactor/contact/" onclick="ga('send','event','banner','contact','banner_contact');">▶製品概要や導入支援に関する概要資料のダウンロード</a></p>
+      </div>
+  </div>
+
+</section>
+
+
+      <!-- Page Footer-->
+      <!-- Footer Default-->

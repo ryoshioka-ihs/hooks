@@ -1,0 +1,66 @@
+{% comment %}
+	関連技術レポート
+
+	内部カテゴリ「reports」を含む記事のうち、下記の条件を満たす記事4件を表示
+	* 読み込み元ページで設定された最後のカテゴリを含む 
+	* または、読み込みもとページと同じtagをを含む
+{% endcomment %}
+
+{% assign reports = "" | split: "" %}
+{% for post in site.posts %}
+
+	{% comment %} 技術レポート以外を除外 {% endcomment %}
+	{% unless post.categories contains "reports" %}
+		{% continue %}
+	{% endunless %}
+
+	{% comment %} 読み込み元ページ(自分自身)を除外 {% endcomment %}
+	{% if page.url == post.url %}
+		{% continue %}
+	{% endif %}
+
+	{% comment %} 最後のカテゴリが含まれている記事を追加 {% endcomment %}
+	{% if post.categories contains page.categories.last %}
+		{% assign reports = reports | push: post %}
+		{% continue %}
+	{% endif %}
+
+	{% comment %} 同じタグが含まれる記事を追加 {% endcomment %}
+	{% for tag in page.tags %}
+		{% if post.tags contains tag %}
+			{% assign reports = reports | push: post %}
+			{% break %}
+		{% endif %}
+	{% endfor %}
+
+{% endfor %}
+
+{% comment %} 該当の記事が1件以上あれば表示する {% endcomment %}
+{% if reports.size > 0 %}
+<!--▽技術レポート▽-->
+<section>
+	<h2>技術レポート</h2>
+	<p class="link"><a href="/topics/reports/">技術レポート一覧へ</a></p>
+	<ul class="repoList">
+
+		{% for report in reports limit:4 %}
+			<li>
+				<a href="{{ report.url }}" target="_self">
+					<section>
+						<h3>{{ report.title }}</h3>
+						{% for category in report.categories %}
+							{% if category != "reports" %}
+								<span class="icon">{{ category }}</span>
+							{% endif %}
+						{% endfor %}
+						<p>{{ report.description | slice: 0, 43 }}...</p>
+					</section>
+				</a>
+			</li>
+		{% endfor %}
+
+	</ul>
+</section>
+<!--△技術レポート△-->
+{% endif %}
+

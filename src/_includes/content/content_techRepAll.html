@@ -1,0 +1,37 @@
+{% comment %}
+	* 2015年以降の技術レポートのうち、最新の4件を表示
+{% endcomment %}
+
+{% assign report_posts = "" | split: "" %}
+{% for post in site.posts %}
+	{% if report_posts.size >= 4 %}
+		{% break %}
+	{% endif %}
+	{% assign currentdate = post.date | date: "%Y" | plus: 0 %}
+	{% if post.categories contains "reports" and currentdate > 2014 %}
+		{% assign report_posts = report_posts | push: post %}
+	{% endif %}
+{% endfor %}
+
+{% if report_posts.size > 0 %}
+<!--▽技術レポート▽-->
+<section>
+	<h2>技術レポート</h2>
+	<p class="link"><a href="/topics/reports/">技術レポート一覧へ</a></p>
+	<ul class="repoList">
+		{% for post in report_posts %}
+		<li>
+			<a href="{% if post.link %}{{ post.link }}{% endif %}" target="_self">
+				<section>
+					<h3>{{ post.title }}</h3>
+					<span class="icon">{{ post.categories[1] }}</span>
+					<p>{{ post.description | slice: 0, 58 }}...</p>
+				</section>
+			</a>
+		</li>
+		{% endfor %}
+	</ul>
+</section>
+<!--△技術レポート△-->
+{% endif %}
+

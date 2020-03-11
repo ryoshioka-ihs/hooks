@@ -1,0 +1,1138 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+		<meta name="format-detection" content="telephone=no" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" >
+		<meta name="description" content="" />
+		<meta name="keywords" content="ITソリューション,ITサービス,システム,導入,運用,保守,IHS" />
+		<!--title-->
+		<title>IIMヒューマン・ソリューション株式会社</title>
+		<!--favicon-->
+		<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="image/common/favicons.png" />
+		<!--共通css-->
+		<link rel="stylesheet" type="text/css" href="css/reset.css" />
+		<link rel="stylesheet" type="text/css" href="css/common.css" />
+		<link rel="stylesheet" type="text/css" href="css/bgImg.css" />
+		<link rel="stylesheet" media="screen and (max-width: 768px)" type="text/css" href="css/common_smt.css" />
+		<!--共通js-->
+		<script type="text/javascript" src="js/jquery-1.12.0.min.js"></script>
+		<script type="text/javascript" src="js/common.js"></script>
+		<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>
+		<script type="text/javascript" src="js/jmapstyle.js"></script>
+		<!--[if lt IE 9]>
+		<script type="text/javascript" src="js/html5.min.js"></script>
+		<![endif]-->
+		<!--ページ専用css-->
+		<!--<link rel="stylesheet" type="text/css" href="css/temp.css" />-->
+		<!--<link rel="stylesheet" media="screen and (max-width: 768px)" type="text/css" href="css/temp_smt.css" />-->
+		<!--ページ専用js-->
+		<script type="text/javascript" src="../../public/publicpage/js/temp.js"></script>
+	</head>
+	<body>
+		<!--▽ヘッダー▽-->
+		<header>
+			<p class="notes">ITインフラを支えるスペシャリストIIMヒューマン・ソリューション</p>
+			<h1><a href="http://www.iimhs.co.jp/"><img src="image/common/logo.png" alt="IIMヒューマンソリューション" width="113" height="27" /></a></h1>
+			<nav id="gNav" style="position:relative;">
+				<p id="Menu"><img src="image/common/menu_smt.png" alt="メニュー" width="25" height="22" /></p>
+				<div class="navWrap">
+					<p id="close"><img src="image/common/icon_close.png" alt="閉じる" width="20" height="19" /></p>
+					<ul>
+						<li class="act">
+							<a href="#">サービス・製品</a>
+							<ul class="inNav">
+								<li><a href="#">インフラ運用</a></li>
+								<li><a href="#">インフラ導入</a></li>
+								<li><a href="#">Webシステム最適化</a></li>
+								<li><a href="#">セキュリティ</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="#">導入事例</a>
+							<ul class="inNav">
+								<li><a href="#">インフラ運用</a></li>
+								<li><a href="#">インフラ導入</a></li>
+								<li><a href="#">Webシステム最適化</a></li>
+								<li><a href="#">セキュリティ</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="#">トピックス</a>
+							<ul class="inNav">
+								<li><a href="#">サービス・製品</a></li>
+								<li><a href="#">事例紹介</a></li>
+								<li><a href="#">技術レポート</a></li>
+								<li><a href="#">セミナー</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="#">会社情報</a>
+							<ul class="inNav">
+								<li><a href="#">社長メッセージ</a></li>
+								<li><a href="#">会社概要・組織図</a></li>
+								<li><a href="#">経営理念</a></li>
+								<li><a href="#">沿革・主要取引先</a></li>
+								<li><a href="#">アクセスマップ</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="#">お問い合わせ</a>
+							<ul class="inNav">
+								<li><a href="#">総合お問い合わせ</a></li>
+								<li><a href="#">採用に関するお問い合わせ</a></li>
+								<li><a href="#">メールマガジン登録</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</nav><!--/#gNav-->
+
+			<div id="scWrap">
+				<ul>
+					<li>JA<span>PANESE</span></li>
+					<li><a href="#">EN<span>GLISH</span></a></li>
+				</ul>
+
+				<div class="search">
+					<p id="SCBtn">検索</p>
+					<form name="seek" method="get" action="/cgi-bin/mvltp/mt-search.cgi">
+						<input name="IncludeBlogs" value="1,1,4,2" type="hidden">
+						<input name="limit" value="10" type="hidden">
+						<input name="SearchElement" value="both" type="hidden">
+						<input name="search" value="" type="text">
+						<input class="button" value="" type="submit">
+					</form>
+				</div>
+			</div><!--/#scWrap-->
+
+			<ul id="infoLink">
+				<li class="adop"><a href="#">採用情報</a></li>
+				<li class="mail"><a href="#">メルマガ登録</a></li>
+			</ul><!--/#infoLink-->
+		</header>
+		<!--△ヘッダー△-->
+
+<!--テンプレートhtml上での見栄えを良くするためのstyle設定。ここ以外では使用しないでください-->
+<style>
+.imgBase,
+.iconBase {
+	margin-bottom: 20px;
+}
+/* このテンプレ内のみでの見出しスタイル */
+h1.midashi {
+font-size: 25px;
+letter-spacing: 1.5px;
+overflow: hidden;
+background-color: #3E6BA2;
+color: #fff;
+border-bottom: none;
+padding-bottom: 0;
+padding-left: 0.5em;
+margin: 1em 0;
+}
+</style>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"><!-- ※webfont用 -->
+<!--テンプレートhtml上での見栄えを良くするためのstyle設定。ここ以外では使用しないでください-->
+
+		<!--▽コンテンツ▽-->
+		<article>
+			<section>
+				<!--▼タイトル▼-->
+				<div id="Utility" class="ttl">
+					<p>サンプルテキスト<span>Sample Text</span></p>
+				</div>
+				<!--▲タイトル▲-->
+
+				<!--▼パンくずリスト▼-->
+				<ul id="tpcpth" itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+					<li><a href="#" itemprop="url"><span itemprop="title">ホーム</span></a></li>
+					<li><a href="#" itemprop="url"><span itemprop="title">サンプルテキスト</span></a></li>
+					<li>サンプルテキスト</li>
+				</ul><!-- /#tpcpth -->
+				<!--▲パンくずリスト▲-->
+
+				<div class="wrap">
+					<div id="main">
+						<!--▼==========================Base==========================▼-->
+						<!--▼1.1 見出し▼-->
+						<section>
+						<h1 class="midashi">1.1 見出し</h1>
+								<h1>見出し1</h1>
+								<h2>見出し2</h2>
+								<h3>見出し3</h3>
+								<h4>見出し4</h4>
+						</section>
+						<!--▲1.1 見出し▲-->
+
+						<!--▼1.2 リスト▼-->
+						<section>
+						<h1 class="midashi">1.2 リスト</h1>
+						<h3>リスト1</h3>
+						<ul class="grayDisc">
+						<li>アイテム1</li>
+						<li>アイテム2</li>
+						<li>アイテム3</li>
+						</ul>
+						<br>
+						<h3>リスト2（チェックマーク）</h3>
+						<ul class="ckImgBlue">
+							<li>チェックリスト青</li>
+							<li>チェックリスト青</li>
+						</ul>
+						<br>
+						<ul class="ckImgRed">
+							<li>チェックリスト赤</li>
+							<li>チェックリスト赤</li>
+						</ul>
+						<br>
+						<h3>リスト3（番号リスト）</h3>
+						<ul class="numList">
+							<li>
+								<p>社内技術者による現場の後方支援体制</p>
+								<p>サンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプル</p>
+							</li>
+							<li>
+								<p>業務改善・効率化への取り組み</p>
+								<p>サンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプル</p>
+							</li>
+							<li>
+								<p>複数名でのチーム提案</p>
+								<p>サンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプル</p>
+							</li>
+						</ul>
+						<h3>リスト4（小番号リスト）</h3>
+						 <ol class="snumList">
+							<li>
+								<p>社内技術者による現場の後方支援体制</p>
+								<p>サンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプル</p>
+							</li>
+							<li>
+								<p>業務改善・効率化への取り組み</p>
+								<p>サンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプル</p>
+							</li>
+							<li>
+								<p>複数名でのチーム提案</p>
+								<p>サンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプルサンプル</p>
+							</li>
+						</ol>
+						<h3>リスト5（太字）</h3>
+						　 <ul class="bgrayDisc">
+							<li>リスト</li>
+							<li>リスト</li>
+							<li>リスト</li>
+						  </ul>
+
+						<!--▼メリット▼-->
+						<section>
+						<h3>リスト6（番号リスト/ポイント）</h3>
+						   <ul class="pointList">
+									<li>
+										<p>サンプルテキストサンプルテキスト</p>
+										<ul class="grayDisc">
+											<li>サンプルテキストサンプルテキストサンプルテキストサンプルテキスト </li>
+										</ul>
+									</li>
+									<li>
+										<p>サンプルテキストサンプルテキスト</p>
+										<ul class="grayDisc">
+											<li>サンプルテキストサンプルテキストサンプルテキストサンプルテキスト </li>
+										</ul>
+									</li>
+									<li>
+										<p>サンプルテキストサンプルテキスト</p>
+										<ul class="grayDisc">
+											<li>サンプルテキストサンプルテキストサンプルテキストサンプルテキスト </li>
+										</ul>
+									</li>
+									<li>
+										<p>サンプルテキストサンプルテキスト</p>
+										<ul class="grayDisc">
+											<li>サンプルテキストサンプルテキストサンプルテキストサンプルテキスト </li>
+										</ul>
+									</li>
+									<li>
+										<p>サンプルテキストサンプルテキスト</p>
+										<ul class="grayDisc">
+											<li>サンプルテキストサンプルテキストサンプルテキストサンプルテキスト </li>
+										</ul>
+									</li>
+									<li>
+										<p>サンプルテキストサンプルテキスト</p>
+										<ul class="grayDisc">
+											<li>サンプルテキストサンプルテキストサンプルテキストサンプルテキスト </li>
+										</ul>
+									</li>
+									<li>
+										<p>サンプルテキストサンプルテキスト</p>
+										<ul class="grayDisc">
+											<li>サンプルテキストサンプルテキストサンプルテキストサンプルテキスト </li>
+										</ul>
+									</li>
+									<li>
+										<p>サンプルテキストサンプルテキスト</p>
+										<ul class="grayDisc">
+											<li>サンプルテキストサンプルテキストサンプルテキストサンプルテキスト </li>
+										</ul>
+									</li>
+									<li>
+										<p>サンプルテキストサンプルテキスト</p>
+										<ul class="grayDisc">
+											<li>サンプルテキストサンプルテキストサンプルテキストサンプルテキスト </li>
+										</ul>
+									</li>
+									<li>
+										<p>サンプルテキストサンプルテキスト</p>
+										<ul class="grayDisc">
+											<li>サンプルテキストサンプルテキストサンプルテキストサンプルテキスト </li>
+										</ul>
+									</li>
+								</ul>
+						<h2 class="merit">ポイントの使用例</h2>
+							<div class="whiteBox">
+								<p>サンプルテキストサンプルテキストサンプルテキストサンプルテキスト</p>
+									<ul class="pointList">
+										<li>
+											<p>サンプル</p>
+												<ul class="grayDisc">
+													<li>サンプルテキストサンプルテキストサンプルテキストサンプルテキスト</li>
+													<li>サンプルテキストサンプルテキストサンプルテキストサンプルテキスト</li>
+												</ul>
+										</li>
+										<li>
+											<p>サンプル</p>
+												<ul class="grayDisc">
+													<li>サンプルテキストサンプルテキストサンプルテキストサンプルテキスト</li>
+													<li>サンプルテキストサンプルテキストサンプルテキストサンプルテキスト</li>
+												</ul>
+										</li>
+									</ul>
+							</div>
+						</section>
+						<!--▲メリット▲-->
+						<h3>リスト7（番号なしリスト） <i class="fa fa-asterisk fa-spin" aria-hidden="true" style="color:#55acee"></i></h3>
+						　 <ul class="pointList2">
+							<li>リスト</li>
+							<p>サンプルテキストサンプルテキストサンプルテキストサンプルテキスト </p>
+							<li>リスト</li>
+							<p>サンプルテキストサンプルテキストサンプルテキストサンプルテキスト </p>
+							<li>リスト</li>
+							<p>サンプルテキストサンプルテキストサンプルテキストサンプルテキスト </p>
+						  </ul>
+
+						</section>
+						<!--▲1.2 リスト▲-->
+
+						<!--▼1.3 ボタン▼-->
+						<section>
+						<h1 class="midashi">1.3 ボタン</h1>
+						<p class="dlPdf">
+							<a href="#"><span>PDFダウンロード用ボタン</span></a>
+						</p>
+						<br>
+						<p class="triBoxBlue"><a href="#">IIMヒューマン・ソリューション<br>新卒・中途採用情報</a></p>
+						<br>
+						<br>
+						<div align="left">
+						<p class="oraBtn"><a href="#">テキスト</a></p>		
+						</div>
+						</section>
+						<!--▲1.3 ボタン▲-->
+
+						<!--▼1.4 定義リスト▼-->
+						<section>
+						<h1 class="midashi">1.4 定義リスト <i class="fa fa-asterisk fa-spin" aria-hidden="true" style="color:#55acee"></i></h1>
+						<dl class="definition--style1">
+							<dt><strong>事業者の氏名・名称</strong></dt>
+							<dd>IIMヒューマン･ソリューション株式会社<br>
+							代表取締役 関 マサエ</dd>
+						</dl>
+						<dl class="definition--style1">
+							<dt><strong>個人情報保護管理者</strong></dt>
+							<dd>管理部 個人情報相談窓口担当者 ： 半谷 友紀<br>
+							連絡先 ： 03-5684-6840</dd>
+						</dl>
+						</section>
+						<!--▲1.4 定義リスト▲-->
+
+						<!--▼1.5 テーブル▼-->
+						<section>
+						<h1 class="midashi">1.5 テーブル</h1>
+						<h3>基本的なテーブル</h3>
+						<table class="baseTb">
+							<tbody>
+								<tr>
+									<th style="width: 30%;">認定個人情報保護団体の名称</th>
+									<td style="width: 70%;">一般財団法人日本情報経済社会推進協会(JIPDEC)</td>
+								</tr>
+								<tr>
+									<th>苦情解決の連絡先</th>
+									<td>個人情報保護苦情相談室</td>
+								</tr>
+								<tr>
+									<th>住所</th>
+									<td>〒 106-0032<br>
+									東京都港区六本木一丁目9番9号</td>
+								</tr>
+								<tr>
+									<th>電話番号</th>
+									<td>0120-700-779</td>
+								</tr>
+							</tbody>
+						</table>
+						<br>
+						 <h3>基本的なテーブル（タイトver） <i class="fa fa-asterisk fa-spin" aria-hidden="true" style="color:#55acee"></i></h3>
+						<table class="baseTb--tight">
+							<tbody>
+								<tr>
+									<th>認定個人情報保護団体の名称</th>
+									<td>一般財団法人日本情報経済社会推進協会(JIPDEC)</td>
+								</tr>
+								<tr>
+									<th>苦情解決の連絡先</th>
+									<td>個人情報保護苦情相談室</td>
+								</tr>
+								<tr>
+									<th>住所</th>
+									<td>〒 106-0032<br>
+									東京都港区六本木一丁目9番9号</td>
+								</tr>
+								<tr>
+									<th>電話番号</th>
+									<td>0120-700-779</td>
+								</tr>
+							</tbody>
+						</table>
+
+						<h3>基本的なテーブル2</h3>
+						<table class="rangeTb">
+							<tbody>
+								<tr>
+									<th>個人情報名</th>
+									<th>取得方法</th>
+									<th>利用目的</th>
+								</tr>
+								<tr>
+									<th>委託業務の個人情報</th>
+									<td>委託先より取得</td>
+									<td>受託業務の遂行及びこれらに準ずる業務の遂行</td>
+								</tr>
+							</tbody>
+						</table>
+						<br>
+						<h3>基本的なテーブル2（タイトver）<i class="fa fa-asterisk fa-spin" aria-hidden="true" style="color:#55acee"></i></h3>
+						<table class="rangeTb--tight">
+							<tbody>
+								<tr>
+									<th>個人情報名</th>
+									<th>取得方法</th>
+									<th>利用目的</th>
+								</tr>
+								<tr>
+									<th>委託業務の個人情報</th>
+									<td>委託先より取得</td>
+									<td>受託業務の遂行及びこれらに準ずる業務の遂行</td>
+								</tr>
+							</tbody>
+						</table>
+						</section>
+						<!--▲1.5 テーブル▲-->
+
+						<!--▼1.6 注釈▼-->
+						<section>
+							<h1 class="midashi">1.6 注釈 <i class="fa fa-asterisk fa-spin" aria-hidden="true" style="color:#55acee"></i></h1>
+							<ul class="grayDisc">
+								<li>テキストサンプル</li>
+								<small class="notes">※注釈テスト</small>
+							</ul>
+						</section>
+						<!--▲1.6 注釈▲-->
+
+						<!--▼1.7 図のタイトル▼-->
+						<section>
+							<h1 class="midashi">1.7 図のタイトル <i class="fa fa-asterisk fa-spin" aria-hidden="true" style="color:#55acee"></i></h1>
+							<figure>
+							<img src="http://placehold.it/300x300/55acee/fff/?text=※Dummy image">
+							<figcaption class="title">＜図1：ダミーイメージ＞</figcaption>
+							</figure>
+
+						</section>
+						<!--▲1.7 図のタイトル▲-->						
+
+						<!--▼1.8 図の横にリード文▼-->
+						<section>
+    						<h1 class="midashi">1.8  図の横にリード文<i class="fa fa-asterisk fa-spin" aria-hidden="true" style="color:#55acee"></i></h1>
+    						<div class="frer">
+    						    <div class="smtSent">
+    						            <div class="lightBox">
+    						                        <figure class="imgTeam"><img src="http://placehold.it/300x300/55acee/fff/?text=※Dummy image">
+    						                        <figcaption class="title">キャプション　小</figcaption>
+    						                        </figure>
+    						            <div class="read">
+    						            新規サーバの導入や既存サーバのリブレース時に必要になる仮想サーバの操作作業を、台数単価で精算する形で対応。<br> 都度要件のヒアリングが必要なサーバ構築の作業でありながら、LIXILインフォメーションシステムズ様にて作業が標準化されていたため、台数精算で一定の品質を維持しながらサービスを提供することが可能になりました。
+    						            <!-- /read --></div>
+    						        </div>
+    						    </div>
+    						</div>
+    					</section>
+
+						<!--▲1.8 図の横にリード文▲-->
+
+						<!--▲==========================Base==========================▲-->
+
+						<!--▼==========================Helper==========================▼-->
+						<!--▼2.1 ボーダー▼-->
+						<section>
+						<h1 class="midashi">2.1 ボーダー</h1>
+						<h3>ボーダーサンプル1</h3>
+							<div class="grayBorBox">
+								<section>
+									<h3>テキストサンプル</h3>
+										<p>サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト</p>
+										<p class="link"><a href="#">運用サービスの詳細をみる</a></p>
+										<p class="linkPC"><a href="#">この導入事例をみる</a></p>
+								</section>
+							</div>
+						<h3>ボーダーサンプル2 <i class="fa fa-asterisk fa-spin" aria-hidden="true" style="color:#55acee"></i></h3>
+							<div class="borderd">サンプル</div>
+
+						</section>
+						<!--▲2.1 ボーダー▲-->
+
+						<!--▼2.2 Text Align▼-->
+						<section>
+						<h1 class="midashi">2.2 Text Align <i class="fa fa-asterisk fa-spin" aria-hidden="true" style="color:#55acee"></i></h1>
+							<p class="textLeft">サンプル</p>
+							<p class="textCenter">サンプル</p>
+							<p class="textRight">サンプル</p>
+						</section>
+						<!--▲2.2 Text Align▲-->
+
+						<!--▼2.3 Text Indent▼-->
+						<section>
+						<h1 class="midashi">2.3 Text Indent <i class="fa fa-asterisk fa-spin" aria-hidden="true" style="color:#55acee"></i></h1>
+							<p class="textIndent--style1">* 字下げサンプル1<br>
+							1文字分インデント。注意文などで２行目以降を字下げしたい時に～</p>
+							<br>
+							<p class="textIndent--style2">1）字下げサンプル2<br>
+							1.5文字分インデント。注意文などで２行目以降を字下げしたい時に～</p>
+						</section>
+						<!--▲2.3 Text Indent▲-->
+
+						<!--▲==========================Helper==========================▲-->
+
+						<!--▼左コンテンツのh1背景装飾用（背景画像写真ベース）▼-->
+						<section>
+						<h1 class="midashi">4.1 左コンテンツのh1背景装飾用（背景画像写真ベース）</h1>
+							<div class="imgBase bg1">
+								<h1>インフラ運用</h1>
+								<p>リピートオーダー率90%以上！<br />情報システム部門の様々な業務をお手伝いいたします。</p>
+							</div>
+						</section>
+
+						<section>
+							<div class="imgBase bg2">
+								<h1>インフラ導入</h1>
+								<p>サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト</p>
+							</div>
+						</section>
+
+						<section>
+							<div class="imgBase bg3">
+								<h1>Webシステム最適化</h1>
+								<p>サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト</p>
+							</div>
+						</section>
+
+						<section>
+							<div class="imgBase bg4">
+								<h1>セキュリティ</h1>
+								<p>サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト</p>
+							</div>
+						</section>
+						<!--▲左コンテンツのh1背景装飾用（背景画像写真ベース）▲-->
+
+						<!--▼左コンテンツのh1背景装飾用（アイコン表示）▼-->
+						<section>
+						<h1 class="midashi">4.2 左コンテンツのh1背景装飾用（アイコン表示）</h1>
+							<div class="iconBase icon1">
+								<h1>インフラ運用サービス</h1>
+								<p>サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト</p>
+							</div>
+						</section>
+
+						<section>
+							<div class="iconBase icon2">
+								<h1>ServiceNow</h1>
+								<p>サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト</p>
+							</div>
+						</section>
+
+						<section>
+							<div class="iconBase icon3">
+								<h1>DRraaS with Azure</h1>
+								<p>サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト</p>
+							</div>
+						</section>
+
+						<section>
+							<div class="iconBase icon4">
+								<h1>Webシステム脆弱性診断</h1>
+								<p>サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト</p>
+							</div>
+						</section>
+
+						<section>
+							<div class="iconBase icon5">
+								<h1>WebシステムAzure移行</h1>
+								<p>サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト</p>
+							</div>
+						</section>
+
+						<section>
+							<div class="iconBase icon6">
+								<h1>IT資産管理</h1>
+								<p>サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト</p>
+							</div>
+						</section>
+						<!--▲左コンテンツのh1背景装飾用（アイコン表示）▲-->
+
+						<!--▼サービス対象範囲▼-->
+						<h1 class="midashi">4.3 サービス対象範囲<br>
+						※現状、この素材を使っているページなし</h1>
+						<div class="coverSv icon7">
+							<section>
+								<h3>サーバー・システム運用支援</h3>
+								<p>サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト</p>
+							</section>
+						</div>
+
+						<div class="coverSv icon8">
+							<section>
+								<h3>PC運用・ユーザーサポート</h3>
+								<p>サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト</p>
+							</section>
+						</div>
+
+						<div class="coverSv icon9">
+							<section>
+								<h3>資産管理</h3>
+								<p>サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト</p>
+							</section>
+						</div>
+
+						<div class="coverSv icon10">
+							<section>
+								<h3>その他</h3>
+								<p>サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト</p>
+							</section>
+						</div>
+
+						<div class="coverSv icon11">
+							<section>
+								<h3>お客様先常駐</h3>
+								<p>サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト</p>
+							</section>
+						</div>
+
+						<div class="coverSv icon12">
+							<section>
+								<h3>定期訪問</h3>
+								<p>サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト</p>
+							</section>
+						</div>
+
+						<div class="coverSv icon13">
+							<section>
+								<h3>遠隔システム保守</h3>
+								<p>サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト</p>
+							</section>
+						</div>
+						<!--▲サービス対象範囲▲-->
+
+						<!--▼トピックス＞サービス・製品＞SEサービス内：サービス内容▼-->
+						<h1 class="midashi">4.4 サービス内容</h1>
+							<p>※トピックス＞サービス・製品＞SEサービス内でのサービス内容</p>
+							<section>
+							<h2>サービス内容</h2>
+								<dl class="svDetail">
+									<dt class="staying">常駐 + α</dt>
+									<dd>
+										<p>ご依頼の業務内容に加え、ご要望に応じて業務改善に役立つレポートや資産状況レポートを無料でご提供。</p>
+										<ul class="grayDisc">
+											<li>長年の運用経験を活かした、お客様に最適なインフラ設計・構築</li>
+											<li>ソフトウェア・資産管理の基礎知識と資産管理ツール「LanScope」の操作トレーニングを受けたスタッフが、資産のデータ更新や棚卸しの対応可能。ご要望があれば資産状況レポートを作成</li>
+										</ul>
+									</dd>
+								</dl>
+								<dl class="svDetail">
+									<dt class="foreign">海外</dt>
+									<dd>
+										<p>立ち上げ時や定期作業など、短期間から1年間程度、突然の作業にも対応致します。</p>
+											<ul class="grayDisc">
+												<li>自社のスタッフではコストが見合わない作業も対応可能</li>
+												<li>ビザや海外保険の手続きを弊社にて代行</li>
+												<li>日本に留学していた外国人スタッフも在籍</li>
+											</ul>
+									</dd>
+								</dl>
+								<dl class="svDetail">
+									<dt class="spot">スポット</dt>
+										<dd>
+											<p>必要な時に、必要なスキルを、必要なだけ。繁忙期のみの要員追加など業務に合わせてアウトソースすることで、固定費を変動費にすることが可能です。</p>
+												<ul class="grayDisc">
+													<li>日本全国対応可能</li>
+													<li>1日1人から、24時間365日対応可能</li>
+													<li>1週間前までにご連絡頂ければ対応可能（前日のご依頼もご相談ください）</li>
+												</ul>
+										</dd>
+								</dl>
+							</section>
+						<!--▲トピックス＞サービス・製品＞SEサービス内：サービス内容▲-->
+
+						<!--▼解決できる課題(リスト形式)▼-->
+						<h1 class="midashi">4.5 解決できる課題(リスト形式)<br>
+						※現状、この素材を使っているページなし</h1>
+						<div class="problem">
+							<section>
+								<h2>解決できる課題</h2>
+
+								<div class="coverSv icon14">
+									<section>
+										<h3>セキュリティ</h3>
+										<ul class="grayDisc">
+											<li>セキュリティパッチが適用できていない</li>
+											<li>攻撃されて情報が流出するかもしれない</li>
+											<li>他サイト攻撃の踏み台にされるかもしれない</li>
+										</ul>
+									</section>
+								</div>
+
+								<div class="coverSv icon15">
+									<section>
+										<h3>スケーラブル</h3>
+										<ul class="grayDisc">
+											<li>新規サイトの立ち上げに伴う基盤調達を迅速化したい</li>
+											<li>アクセス増減に対応できる柔軟な基盤を導入したい</li>
+										</ul>
+									</section>
+								</div>
+
+								<div class="coverSv icon16">
+									<section>
+										<h3>ビジネスニーズ</h3>
+										<ul class="grayDisc">
+											<li>グローバルに分散しているシステムを統合したい</li>
+											<li>多デバイス対応にはコストが掛かる</li>
+											<li>デジタルマーケティングの仕組みを導入してより効率的に売り上げを上げたい</li>
+										</ul>
+									</section>
+								</div>
+							</section>
+						</div>
+						<!--▲解決できる課題(リスト形式)▲-->
+
+						<!--▼解決できる課題(課題＆提案形式)▼-->
+						<h1 class="midashi">4.6 解決できる課題(課題＆提案形式)<br>
+						※現状、この素材を使っているページなし</h1>
+						<div class="problem">
+							<section>
+								<h2>解決できる課題</h2>
+								<dl>
+									<dt>販促キャンペーンサイトを立ち上げたい時にシステム立ち上げに時間が掛かり、タイミングを逃してしまった</dt>
+									<dd>サーバの増強は5分も掛からずに完了！ロードバランシングも複雑な設定は不要！</dd>
+
+									<dt>システムリソースを高負荷時にあわせて調達しており、通常時のリソース稼働率が低い</dt>
+									<dd>稼働状況に合わせたリソースの最適配置もクラウドだから容易！<br />コストもニーズにあわせて最適化！</dd>
+
+									<dt>リリース後にパッチ適用等の対策を十分に行えていない</dt>
+									<dd>検証環境の迅速な立ち上げで素早くテストを行い、本番適用までの時間を短縮！</dd>
+
+									<dt>コストの制約で開発環境を持てない</dt>
+									<dd>開発環境は必要な時だけクラウド上で起動することでコストを最小化！</dd>
+
+									<dt>DRシステムも必要だが、費用対効果の観点で投資に踏み切れない</dt>
+									<dd>Azureのサービスを利用してコールドスタンバイのDR環境を安価に用意！</dd>
+								</dl>
+
+							</section>
+						</div>
+						<!--▲解決できる課題(課題＆提案形式)▲-->
+
+						<!--▼お客様の声▼-->
+						<h1 class="midashi">4.7 お客様の声</h1>
+						<div class="voiceWrap">
+							<section>
+								<h2>お客様の声</h2>
+									<div class="voice">
+										<section>
+											<h3>時期により変装する業務を外部リソースで</h3>
+												<p>「時期により変動する業務を外部リソースで賄うことが出来て、だいぶ楽になりました。問題を出さず品質要求をしっかり満たしてくれるので、大変助かっています。」（佐山様）</p>
+										</section>
+									</div>
+							</section>
+						</div>
+						<!--▲お客様の声▲-->
+
+						<!--▼担当エンジニアから一言▼-->
+						<h1 class="midashi">4.8 担当エンジニアから一言</h1>
+						<div class="word">
+							<section>
+								<h2>担当エンジニアから一言</h2>
+									<p>サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト</p>
+							</section>
+						</div>
+						<!--▲担当エンジニアから一言▲-->
+
+						<!--▼この事例のPDFをダウンロード▼-->
+						<h1 class="midashi">4.9 この事例のPDFをダウンロード</h1>
+						<div class="grayBox">
+							<section>
+								<h2>この事例のPDFをダウンロード</h2>
+									<p>システム運用を常駐者＋バックヤード支援でコスト最適化のPDFはこちらからダウンロードできます。</p>
+									<p class="dlPdf"><a href="#"><span>この事例をダウンロード</span></a></p>
+							</section>
+						</div>
+						<!--▲この事例のPDFをダウンロード▲-->
+
+						<!--▼サービス内容と流れ▼-->
+						<h1 class="midashi">4.10.1 サービス内容と流れ</h1>
+						<div class="flow">
+							<ol>
+								<li>対象システムのサービス適用可否判断（無償）</li>
+								<li>災害対策全体計画の策定</li>
+								<li>現行システム構成変更</li>
+								<li>Azureとのネットワーク接続</li>
+							</ol>
+							<ol class="rightList">
+								<li>Azure Site Recoveryの実装</li>
+								<li>待機系への切り替え動作テスト</li>
+								<li>運用支援</li>
+							</ol>
+						</div>
+
+						<h1 class="midashi">4.10.2 サービス内容と流れ（1行で表示）</h1>
+						<div class="flow100">
+							<ol>
+								<li><span>テキストテキスト</span><br>テキストテキストテキスト</li>
+								<li><span>テキストテキスト</span><br>テキストテキストテキスト</li>
+								<li><span>テキストテキスト</span><br>テキストテキストテキスト</li>
+								<li><span>テキストテキスト</span><br>テキストテキストテキスト</li>
+							</ol>
+						</div>
+						<!--▲サービス内容と流れ▲-->
+
+						<!--▼留意事項▼-->
+						<h1 class="midashi">4.11 留意事項</h1>
+						<div class="heed">
+							<section>
+								<h2>本サービス利用における留意事項</h2>
+									<ul class="ckImgRed">
+										<li>Azure上にDR可能なシステムには技術的な制約がございます。</li>
+										<li>実際にAzure上の災害対策システムに切り替えて動作させた場合には稼働時間に応じた課金が発生いたします。</li>
+										<li>MicrosoftとのAzureの契約はお客様にてご対応をお願いいたします。</li>
+										<li>システムで利用するソフトウェアによってはクラウド上で災害対策を行う際に追加のライセンスが必要になる可能性があります。お客様にて各ソフトウェアベンダーもしくは販売店へご確認をお願いいたします。</li>
+									</ul>
+							</section>
+						</div>
+						<!--▲留意事項▲-->
+
+						<!--▼カテゴリから探す▼-->
+						<h1 class="midashi">4.12 カテゴリから探す</h1>
+						<p>導入事例のトップページ</p>
+							<div class="searchCat">
+								<div class="ope textAr">
+									<section>
+										<h3><a href="#">インフラ運用</a></h3>
+											<ul>
+												<li><a href="#">サンプルテキストサンプルテキストサンプルテキスト</a></li>
+												<li><a href="#">サンプルテキストサンプルテキストサンプルテキスト</a></li>
+											</ul>
+									</section>
+								</div>
+								<div class="intro textAr">
+									<section>
+										<h3><a href="#">インフラ導入</a></h3>
+											<ul>
+												<li><a href="#">DRaaS with Azureサービス </a></li>
+												<li><a href="#">System Center Configuration Manager構築サービス </a></li>
+												<li><a href="#">SActive Directory・Exchange構築サービス </a></li>
+												<li><a href="#">仮想環境構築サービス</a></li>
+												<li><a href="#">Horizon VIEWによるVDI環境構築サービス </a></li>
+											</ul>
+									</section>
+								</div>
+								<div class="opti textAr">
+									<section>
+										<h3><a href="#">Webシステム最適化</a></h3>
+											<ul>
+												<li><a href="#">Webシステム脆弱性診断サービス</a></li>
+												<li><a href="#">WebシステムAzure移行サービス</a></li>
+												<li><a href="#">Sitecore導入サービス</a></li>
+											</ul>
+									</section>
+								</div>
+								<div class="secu textAr">
+									<section>
+										<h3><a href="#">セキュリティ</a></h3>
+											<ul>
+												<li><a href="#">IT資産管理サービス</a></li>
+												<li><a href="#">セキュリティ取扱製品一覧</a></li>
+											</ul>
+									</section>
+								</div>
+							</div>
+						<!--▲カテゴリから探す▲-->
+
+						<!--▼ピックアップ▼-->
+						<h1 class="midashi">4.13 ピックアップ</h1>
+						<div class="pickUp">
+							<section>
+								<h3>サーバー・システム運用支援</h3>
+								<p>サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト</p>
+							</section>
+						</div>
+
+						<div class="coverSv icon8">
+							<section>
+								<h3>PC運用・ユーザーサポート</h3>
+								<p>サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト</p>
+							</section>
+						</div>
+
+						<div class="coverSv icon9">
+							<section>
+								<h3>資産管理</h3>
+								<p>サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト</p>
+							</section>
+						</div>
+
+						<div class="coverSv icon10">
+							<section>
+								<h3>その他</h3>
+								<p>サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト</p>
+							</section>
+						</div>
+
+						<div class="coverSv icon11">
+							<section>
+								<h3>お客様先常駐</h3>
+								<p>サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト</p>
+							</section>
+						</div>
+
+						<div class="coverSv icon12">
+							<section>
+								<h3>定期訪問</h3>
+								<p>サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト</p>
+							</section>
+						</div>
+
+						<div class="coverSv icon13">
+							<section>
+								<h3>遠隔システム保守</h3>
+								<p>サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト</p>
+							</section>
+						</div>
+						<!--▲サービス対象範囲▲-->
+
+
+						<!--▼==========================Modules==========================▼-->
+						<!--▼5.1 Light Box▼-->
+						<section>
+						<h1 class="midashi">5.1 Light Box</h1>
+							<div class="lightBox">
+								<figure>
+									<img src="image/business/lightBox_img.png" alt="システム構成図">
+								</figure>
+								<p>拡大する</p>
+							</div>
+						</section>
+						<!--▲5.1 Light Box▲-->
+
+						<!--▼5.2 画像リンク（Hover）▼-->
+						<section>
+						<h1 class="midashi">5.2 画像リンク（Hover）</h1>
+						<div class="lightBox ImgHov">
+								<figure>
+									<a href="#"><img src="image/business/lightBox_img.png" alt="システム構成図"></a>
+								</figure>
+						</div>
+						</section>
+						<!--▲5.2 画像リンク（Hover）▲-->
+
+						<!--▼5.3 ページ内リンク▼-->
+						<section>
+						<h1 class="midashi">5.3 ページ内リンク</h1>
+							<ul class="linkInPage">
+								<li><a href="#sec1">リンク1</a></li>
+								<li><a href="#sec2">リンク2</a></li>
+								<li><a href="#sec3">リンク3</a></li>
+								<li><a href="#sec4">リンク4<br>
+								※長くなったときのサンプル～サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンサンプルテキストサンプルテキストサンプルテキストサンプルテキスト</a></li>
+							</ul>
+						</section>
+						<section id="sec1">
+							<h2>リンク1</h2>
+								<div class="smtSent"><p>サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト</p>
+								</div>
+						</section>
+						<!--▲5.3 ページ内リンク▲-->
+
+						<!--▼6.1 見出し前文章▼-->
+						<section>
+						<h1 class="midashi">6.1　見出し前文章</h1>
+							<div class="free" >H2以前に文章が入る場合に使用します。</div>
+						<!--▲6.1 見出し前文章▲-->
+				
+
+						<!--▲==========================Modules==========================▲-->
+					</div><!--/.main-->
+
+					<div id="sideMenu">
+						<nav>
+							<dl>
+								<dt><a href="#">大見出し</a></dt>
+								<dd>
+									<ul>
+										<li class="act"><a href="#">小見出し</a></li>
+										<li><a href="#">小見出し</a></li>
+										<li><a href="#">小見出し</a></li>
+										<li><a href="#">小見出し</a></li>
+									</ul>
+								</dd>
+							</dl>
+						</nav>
+
+						<aside id="bnr">
+							<ul>
+								<li class="case"><a href="#">導入事例</a></li>
+								<li class="report"><a href="#">技術レポート</a></li>
+								<li class="contact">
+									<p class="oraBtn"><a href="#">お問い合わせ<span>はこちら</span></a></p>
+									<p>製品・サービスのお問い合わせ<br />はお電話<span>でも承ります。</span></p>
+									<p class="tel">03-5684-6840</p>
+									<aside>9:00～18:00（土日、祝日を除く）<br />弊社営業部が対応させていただきます</aside>
+								</li>
+								<li class="svList">
+									<dl>
+										<dt>関連サービス</dt>
+										<dd>
+											<ul>
+												<li><a href="#">サービス名</a></li>
+												<li><a href="#">サービス名</a></li>
+												<li><a href="#">サービス名</a></li>
+												<li><a href="#">サービス名</a></li>
+											</ul>
+										</dd>
+									</dl>
+								</li>
+							</ul>
+						</aside>
+					</div><!--/#sideMenu-->
+				</div><!--/.wrap-->
+
+			</section>
+		</article>
+		<!--△コンテンツ△-->
+
+		<!--▽フッター▽-->
+		<footer>
+		<div id="pageTop">
+			<p>PAGE TOP</p>
+		</div>
+
+			<div class="footTop">
+				<p><a href="#">ホーム</a></p>
+				<div class="tbWrap">
+					<dl>
+						<dt><a href="#">サービス・製品</a></dt>
+						<dd>
+							<ul>
+								<li><a href="#">インフラ運用</a></li>
+								<li><a href="#">インフラ導入</a></li>
+								<li><a href="#">Webシステム最適化</a></li>
+								<li><a href="#">セキュリティ</a></li>
+							</ul>
+						</dd>
+					</dl>
+
+					<dl>
+						<dt><a href="#">導入事例</a></dt>
+						<dd>
+							<ul>
+								<li><a href="#">インフラ運用</a></li>
+								<li><a href="#">インフラ導入</a></li>
+								<li><a href="#">Webシステム最適化</a></li>
+								<li><a href="#">セキュリティ</a></li>
+							</ul>
+						</dd>
+					</dl>
+
+					<dl>
+						<dt><a href="#">会社情報</a></dt>
+						<dd>
+							<ul>
+								<li><a href="#">社長メッセージ</a></li>
+								<li><a href="#">会社概要・組織図</a></li>
+								<li><a href="#">経営理念</a></li>
+								<li><a href="#">沿革・主要取引先</a></li>
+								<li><a href="#">アクセスマップ</a></li>
+							</ul>
+						</dd>
+					</dl>
+
+					<dl>
+						<dt><a href="#">トピックス</a></dt>
+						<dd>
+							<ul>
+								<li><a href="#">サービス・製品</a></li>
+								<li><a href="#">事例紹介</a></li>
+								<li><a href="#">技術レポート</a></li>
+								<li><a href="#">セミナー</a></li>
+							</ul>
+						</dd>
+						<p><a href="#">お問い合わせ</a></p>
+					</dl>
+
+					<dl>
+						<dt><a href="#">採用情報</a></dt>
+						<dd>
+							<ul>
+								<li><a href="#">会社説明会（中途・新卒）</a></li>
+								<li><a href="#">募集要項（中途・新卒）</a></li>
+								<li><a href="#">採用情報</a></li>
+							</ul>
+						</dd>
+					</dl>
+				</div><!--/.tbWrap-->
+			</div><!--/.footTop-->
+
+			<div class="footBot">
+				<ul>
+					<li><a href="#">個人情報保護方針</a></li>
+					<li><a href="#">サイトポリシー</a></li>
+					<li><a href="#">サイトマップ</a></li>
+					<li class="outLink"><a href="http://www.iim.co.jp/" target="_blank">株式会社 アイ・アイ・エム</a></li>
+				</ul>
+
+				<!-- GlobalSign SSL Seal. Do not edit.  -->
+				<div id="sign">
+					<span id="ss_gmo_img_wrapper_115-57_image_ja">
+						<a href="https://jp.globalsign.com/" target="_blank" rel="nofollow">
+							<img alt="SSL　GMOグローバルサインのサイトシール" border="0" id="ss_img" src="//seal.globalsign.com/SiteSeal/images/gs_noscript_115-57_ja.gif">
+						</a>
+					</span>
+					<script type="text/javascript" src="//seal.globalsign.com/SiteSeal/gmogs_image_115-57_ja.js" defer="defer"></script>
+					<span class="pm"><a href="http://privacymark.jp/" target="_blank"><img src="image/common/privacy_mark.gif" width="55" height="55" /></a></span>
+				</div>
+				<!-- END of GlobalSign SSL Seal. -->
+
+				<p class="cp"><small><img src="image/common/copyRight.png" alt="©2016 IIM Human Solution Corp." width="212" height="12" /></small></p>
+			</div><!--/.footBot-->
+		</footer>
+		<!--△フッター△-->
+	</body>
+
+</html>

@@ -1,0 +1,22 @@
+{% comment %} categoriesに指定している数が2個かそれ以上の数の場合、サイドバーに関連サービスを表示する {% endcomment %}
+{% if page.categories.size >= 2 %}
+<li class="svList">
+	<dl>
+		<dt>関連サービス</dt>
+		<dd>
+		<ul>
+			{% if page.categories contains "インフラ運用" %}<li><a href="/services/operation/">インフラ運用</a></li>{% endif %}
+			{% if page.categories contains "運用支援サービス" %}<li><a href="/services/operation/support/">運用支援サービス</a>{% endif %}</li>
+			<!--{% if page.categories contains "ServiceNow" %}<li><a href="">ServiceNow</a></li>{% endif %} -->
+			{% if page.categories contains "インフラ構築" %}<li><a href="/services/construction/">インフラ構築</a></li>{% endif %}
+			{% if page.categories contains "DRaaS with Azureサービス" %}<li><a href="/services/construction/DRaaS-with-Azure/">DRaaS with Azureサービス</a></li>{% endif %}
+			{% if page.categories contains "Webシステム最適化" %}<li><a href="/services/webSystemOpt/">Webシステム最適化</a></li>{% endif %}
+			<!--{% if page.categories contains "WebシステムAzure移行サービス" %}<li><a href="/services/webSystemOpt/azureMigration/">WebシステムAzure移行サービス</a></li>{% endif %}-->
+			{% if page.categories contains "Webシステム脆弱性診断サービス" %}<li><a href="/services/webSystemOpt/vulnerabilityScan/">Webシステム脆弱性診断サービス</a></li>{% endif %}
+			{% if page.categories contains "セキュリティ" %}<li><a href="/services/security/">セキュリティ</a></li>{% endif %}
+			{% if page.categories contains "IT資産管理サービス" %}<li><a href="/services/security/assetManagement/">IT資産管理サービス</a></li>{% endif %}
+		</ul>
+		</dd>
+	</dl>
+</li>
+{% endif %}

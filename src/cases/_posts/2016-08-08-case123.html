@@ -1,0 +1,169 @@
+---
+layout:       case
+global_menu:  cases
+title:        "検証用仮想デスクトップ環境の導入"
+description:  "既存データベースのバージョンアップとVMware Horizon Viewを使用したVDI環境の構築支援の事例をご紹介いたします。"
+keywords:     "VMware Horizon View,VDI,SQL,VMware,事例"
+date:         2016-08-08 18:08:00 +0900
+PDF:          "case123"
+categories:
+ - "インフラ構築"
+tags:
+ - "VMware Horizon"
+ - "VDI（仮想デスクトップ環境）"
+---
+
+<section>
+  <h1>{{ page.title }}</h1>
+  <ul class="linkInPage">
+    <li><a href="#toc-background">背景</a></li>
+    <li><a href="#toc-overview">概要</a></li>
+    <li><a href="#toc-sysCon">構成図</a></li>
+    <li><a href="#toc-IHS-result">弊社利用による効果</a></li>
+    <li><a href="#toc-work">作業内容の詳細</a></li>
+    <li><a href="#PdfDownload">PDFダウンロード</a></li>
+  </ul>
+
+  <section id="toc-background">
+    <h2>背景</h2>
+    <div class="smtSent">
+      <p>セキュリティ強化、PC運用の効率化、柔軟なワークスタイルの実現などを目的に仮想デスクトップ環境の導入を進める企業は年々増加しています。仮想デスクトップ環境は多くのメリットをもたらしますが、仮想基盤が不安定な状態になればユーザの利便性に影響が生じ、場合によっては業務停止につながるリスクがあるため、事前の検証は非常に重要となります。</p>
+      <br>
+      <p>今回ご紹介するお客様は、グループ企業を含む約8000台のデスクトップの仮想化を進められており、実際の導入に先立って検証用環境の構築を計画されていました。既存の仮想基盤（VMware vSphere）を活用するため、仮想デスクトップシステムには、VMware Horizon 6 with Viewの導入を決定、25台の仮想デスクトップを実際に稼働させる環境を構築し、既存業務の継続可否やユーザの使用感、システム管理者の運用の評価・検証を行うことが目的です。</p>
+      <br>
+      <p>この検証用環境構築のパートナー選定の際に、IHSのVMware Horizonの導入実績をご評価いただき、環境構築をお手伝いさせていただきました。</p>
+    </div>
+  </section>
+
+  <section id="toc-overview">
+    <h2>概要</h2>
+    <div class="smtSent">
+    <table class="baseTb">
+      <tbody>
+        <tr>
+          <th>業種</th>
+          <td>流通・小売業</td>
+        </tr>
+        <tr>
+          <th>目的</th>
+          <td>VMware Horizon Viewを使用したVDI環境の構築</td>
+        </tr>
+        <tr>
+          <th>作業規模</th>
+          <td>
+          <ul class="grayDisc">
+            <li>利用ユーザ数:25名</li>
+            <li>総サーバ台数:</li>
+          </ul>
+          <div class="textIndent--style3">
+          <p>物理サーバ 2 台（VMware vSphere ESXi 5.5）</p>
+          <p class="textindent--style1">仮想サーバ 2 台（VMware vCenter Server 5.5、 VMware Horizon 6.0 with View、Microsoft SQL Server 2008 R2 SP2 Standard）</p>
+          </div>
+          </td>
+        </tr>
+        <tr>
+          <th>作業ボリューム</th>
+          <td>1.5人月</td>
+        </tr>
+        <tr>
+          <th>作業内容</th>
+          <td>
+            <ul class="grayDisc">
+              <li>機能設計</li>
+              <li>仮想デスクトップ基盤設計</li>
+              <li>仮想デスクトップマシンマスタ設計</li>
+              <li>データベースアップグレード設計</li>
+              <li>システム動作検証</li>
+              <li>ドキュメント作成</li>
+            </ul>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+  </section>
+
+  <section id="toc-sysCon">
+  <h2>構成図</h2>
+  <div class="smtSent">
+    <p>＜構成図の画像＞</p>
+    <div class="lightBox">
+    <figure><img src="/image/cases/case123_01.png" alt="図1"></figure>
+    </div>
+    </div>
+  </section>
+
+  <section id="toc-point">
+    <h2>作業のポイント</h2>
+    <div class="smtSent">
+      <h3>リンククローン・フルクローン双方の検証が可能な環境をご提供</h3>
+      <p>フルクローンがマスターイメージから複製した仮想デスクトップをユーザ毎に保持するのに対し、リンククローンは共通するOSやアプリケーションを単一のイメージとしてユーザ間で共有し、ユーザ固有のデータを差分ディスクで保持する方式です。フルクローンはユーザ毎にカスタマイズが必要な場合に使用され、リンククローンはユーザのカスタマイズを最小限にとどめ、ガバナンスを維持したい企業で採用されるケースが多い方式です。今回の事例では、将来的な導入範囲の拡大時に最適な方式を決定できるよう、運用効率やデスクトップのカスタマイズ性について両方の方式で検証できる環境を提供させていただきました。</p>
+
+      <h3>既存データベースのバージョンアップ</h3>
+      <p>VMwareの仮想環境では管理サーバであるvCenter ServerでMicrosoft SQL Serverが使われます。既存環境ではMicrosoft SQL Server 2008 R2 Expressが使われていましたが、将来的な仮想デスクトップの増加を見据え、Microsoft SQL Server 2008 R2 SP2 Standardへのバージョンアップを実施いたしました。</p>
+      <br>
+      <p>SQL Serverのバージョンアップは複数のサーバを稼働させている既存環境へ影響するため、確実に行うべき作業です。そのため、事前に入念な検証を行い、作業手順を完全にドキュメント化することで本番作業も問題なく完了することができました。</p>
+    </div>
+  </section>
+
+  <section id="toc-IHS-result">
+    <h2>弊社利用による効果</h2>
+    <div class="smtSent">
+      <h3>蓄積されたノウハウによる高い作業品質</h3>
+      <p>IHSでは、システム構築で発生する作業をすべて手順書に残すことをルールとしています。作業を重ねるごとに手順書のブラッシュアップを行い、チームで情報共有を行うことで、作業品質の向上に努めております。今回の事例でも、製品の既知の問題への対処を含め、構築作業を滞りなく完了することができました。</p>
+    </div>
+  </section>
+
+  <section id="toc-work">
+    <h2>作業内容の詳細</h2>
+    <div class="smtSent">
+      <h3>設計</h3>
+      <ol class="numList">
+        <li><p>基本設計</p></li>
+      </ol>
+      <div class="textIndent--style3">
+        <ul class="grayDisc">
+          <li>機能設計</li>
+          <li>仮想デスクトップ基盤設計</li>
+          <li>仮想デスクトップマシンマスタ設計</li>
+          <li>データベースアップグレード設計</li>
+        </ul>
+      </div>
+
+      <h3>環境構築</h3>
+      <ol class="numList">
+        <li><p>Active Directory機能</p></li>
+        <div class="textIndent--style3">
+        <ul class="grayDisc">
+          <li>OU／グループ／ユーザ</li>
+          <li>Group Policy</li>
+        </ul>
+        </div>
+
+        <li><p>仮想デスクトップ環境提供機能</p></li>
+        <div class="textIndent--style3">
+        <ul class="grayDisc">
+          <li>VMware Horizon View 6.0</li>
+          <li>VMware Horizon View Composer</li>
+          <li>仮想デスクトップマシンマスタ</li>
+          <li>KMSライセンス認証</li>
+        </ul>
+        </div>
+
+        <li><p>データベースアップグレード</p></li>
+        <div class="textIndent--style3">
+        <ul class="grayDisc">
+          <li>Microsoft SQL Server 2008 R2 Standard</li>
+        </ul>
+        </div>
+      </ol>
+
+      <h3>納品ドキュメント</h3>
+      <ul class="grayDisc">
+        <li>サーバ詳細設計書</li>
+        <li>動作確認項目表件結果報告書</li>
+      </ul>
+    </div>
+  </section>
+</section>
+

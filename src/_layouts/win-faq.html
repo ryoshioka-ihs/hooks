@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<!--▽ヘッド▽-->
+{% include win-head.html %}
+<!--△ヘッド△-->
+</head>
+<body>
+	<!--▽ヘッダー▽-->
+	{% include win-header.html %}
+	<!--△ヘッダー△-->
+
+	 <!--▽コンテンツ▽-->
+	<article>
+      <section class="breadcrumbs-custom bg-image">
+        <div class="shell">
+          <h1 class="heading-1 breadcrumbs-custom-title">{{ page.title }}</h1>
+        </div>
+      </section>
+
+
+	<div class="wrap">
+	<div id="main">
+      <section class="section section-xl bg-gray-lighter">
+        <div class="shell shell-bigger">
+          <div class="range range-ten range-50 range-sm-90 range-sm-center range-lg-justify">
+            <div class="cell-sm-9 cell-md-7 cell-lg-6 text-center">
+              <div class="range range-30">
+                {% for post in paginator.posts %}
+                {% if post.link and post.link != "" %}
+                <a href="{{ post.link }}" target="_self">
+                {% else %}
+                <a href="{{ post.url }}" target="_self">
+                {% endif %}                
+                <div class="cell-sm-12 blog-masonry-column">
+
+                  <article class="post-blog"><a href="{{ post.link }}"></a>
+                    <div class="post-blog-caption">
+                      <div class="post-blog-caption-header">
+                        <ul class="post-blog-tags" style="padding-left: 0px;">
+                          <li><a class="button-tags" href="{{ post.link }}">
+                          	{% if post.categories[1] == "FAQ" %}
+							              <div><span class="icon">{{ post.categories[2] }}</span></div></a></li>
+                        </ul>
+                      </div>
+                      <div class="post-blog-caption-body">
+                        <h5><a class="post-blog-title" href="{{ post.link }}">
+                        	{{ post.title }}</p>
+                        	{% else %}
+							            <div><span class="icon">{{ post.categories[3] }}</span></div>
+							            <p>FAQ</p>
+						             {% endif %}</a>
+                        </h5>
+                      </div>
+                    </div>
+
+                  </article>
+
+              </div>
+              {% endfor %}
+            </div>
+
+            {% include win-pagination.html %}
+          </div>
+            <div id="sideMenu">
+            {% include side/side_win-faq.html %}
+            </div><!--/#sideMenu-->
+        </div><!--/#shell shell-bigger-->
+      </section>
+  	</div>
+
+  	</div>
+	<!--△コンテンツ△-->
+
+	<!--▽フッター▽-->
+	{% include win-footer.html %}
+	<!--△フッター△-->
+
+</body>
+
+</html>

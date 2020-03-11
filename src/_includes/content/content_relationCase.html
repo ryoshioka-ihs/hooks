@@ -1,0 +1,66 @@
+{% comment %}
+	関連事例
+
+	内部カテゴリ「cases」を含む記事のうち、下記の条件を満たす記事4件を表示
+	* 読み込み元ページで設定された最後のカテゴリを含む 
+	* または、読み込み元ページと同じtagをを含む
+{% endcomment %}
+
+{% assign cases = "" | split: "" %}
+{% for post in site.posts %}
+
+	{% comment %} 導入事例以外を除外 {% endcomment %}
+	{% unless post.categories contains "cases" %}
+		{% continue %}
+	{% endunless %}
+
+	{% comment %} 読み込み元ページ(自分自身)を除外 {% endcomment %}
+	{% if page.url == post.url %}
+		{% continue %}
+	{% endif %}
+
+	{% comment %} 最後のカテゴリが含まれている記事を追加 {% endcomment %}
+	{% if post.categories contains page.categories.last %}
+		{% assign cases = cases | push: post %}
+		{% continue %}
+	{% endif %}
+
+	{% comment %} 同じタグが含まれる記事を追加 {% endcomment %}
+	{% for tag in page.tags %}
+		{% if post.tags contains tag %}
+			{% assign cases = cases | push: post %}
+			{% break %}
+		{% endif %}
+	{% endfor %}
+
+{% endfor %}
+
+{% comment %} 該当の記事が1件以上あれば表示する {% endcomment %}
+{% if cases.size > 0 %}
+<!--▽関連事例▽-->
+<section id="relatedCases">
+	<h2>関連事例</h2>
+	<p class="link"><a href="/cases/casesAll.html">導入事例一覧へ</a></p>
+	<ul class="lineList">
+
+		{% for case in cases limit:4 %}
+			<li class="triBox">
+				<a href="{{ case.url }}" target="_self">
+					<section>
+						<h3>{{ case.title }}</h3>
+						{% for category in case.categories %}
+							{% if category != "cases" %}
+								<span class="icon">{{ category }}</span>
+							{% endif %}
+						{% endfor %}
+						<p>{{ case.description | slice: 0, 43 }}...</p>
+					</section>
+				</a>
+			</li>
+		{% endfor %}
+
+	</ul>
+</section>
+<!--△関連事例△-->
+{% endif %}
+

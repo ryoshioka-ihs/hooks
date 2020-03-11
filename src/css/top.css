@@ -1,0 +1,744 @@
+@charset "UTF-8";
+/* CSS Document */
+/*===================================================
+    トップページ用CSS
+===================================================*/
+body {
+	min-width: 1000px;
+}
+footer {
+	margin-top: 0;
+}
+
+/* --------------------------------------------------
+    メイン
+-------------------------------------------------- */
+/* 共通設定 */
+#index > section {
+	padding: 55px 0;
+	color: #000;
+}
+#index .sentBox {
+	width: 1000px;
+	margin: auto;
+}
+
+/*左右に余白10pxずつ追加*/
+@media screen and (min-width: 960px) and (max-width: 1024px) {
+   #index .sentBox {padding: 0 10px}
+}
+	#index .sentBox a:hover {
+		text-decoration: none;
+	}
+
+#index section h2 {
+	line-height: 1;
+	font-size: 13px;
+	color: #003E8D;
+	padding: 0;
+	background: none;
+	text-align: center;
+	letter-spacing: 2px;
+	font-family:"Myriad Pro", "メイリオ", "Meiryo UI", "ＭＳ Ｐゴシック", sans-serif;
+}
+#index h2:before {
+	display: none;
+}
+	#index section h2 span {
+		display: block;
+		color: #000;
+		font-family: 'Noto Sans Japanese';
+		font-size: 28px;
+		letter-spacing: 5px;
+		margin-bottom: 17px;
+	}
+
+/*  キービジュアル
+-------------------------------------------------- */
+#index #keyv {
+	width: 100%;
+	min-width: 1000px;
+	overflow: hidden;
+}
+
+	#index #keyv .kvList .key1,
+	#index #keyv .kvList .key2,
+	#index #keyv .kvList .key3, 
+	#index #keyv .kvList .key4,
+	#index #keyv .kvList .key5,
+	#index #keyv .kvList .key6 {
+		height: 600px;
+		background: center top no-repeat;
+		background-size: cover;
+	}
+		#index #keyv .kvList .textBox {
+			width: 1000px;
+			height: 100%;
+			margin: auto;
+			text-align: center;
+			position: relative;
+		}
+			#index #keyv .kvList .textBox h1,h2,
+			#index #keyv .kvList .textBox p {
+				color: #FFF;
+				font-weight: bold;
+				text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+			}
+			#index #keyv .kvList .textBox h2 {
+				font-size: 44px;
+				line-height: 1.7;
+				min-height: 0;
+				background: none;
+				padding: 0;
+				margin: 0;
+			}
+			
+			@media screen and (min-width: 960px) and (max-width: 1024px) {
+				#index #keyv .kvList .textBox h2 {margin: 0 50px;}
+			}	
+
+			#index #keyv .kvList .oraBtn,
+			#index #keyv .kvList .blueBtn,
+			#index #keyv .kvList .blueBtn_btn {
+				position: absolute;
+				left: 50%;
+				bottom: 45px;
+				margin-left: -180px;
+			}
+
+/* メインビジュアル */
+#index #keyv .kvList .key1 {
+	background-image: url("../image/top/keyv1.png");
+}
+	#index #keyv .kvList .key1 .textBox p {
+		height: 96px;
+		text-align: left;
+		font-size: 28px;
+		letter-spacing: 3.5px;
+		position: absolute;
+		top: 50%;
+		margin-top: -48px;
+	}
+
+	@media screen and (min-width: 960px) and (max-width: 1024px) {
+	#index #keyv .kvList .key1 .textBox p {margin-left: 50px; margin-right: 50px;}
+}
+
+
+/* 採用 */
+#index #keyv .kvList .key2 {
+	background-image: url("../image/top/keyv2.png");
+	position: relative;
+}
+	#index #keyv .kvList .key2 .textBox {
+		width: auto;
+		height: 50%;
+		top: 50%;
+	}
+		#index #keyv .kvList .key2 .textBox h2 {
+			letter-spacing: 10px;
+		}
+		#index #keyv .kvList .key2 .textBox h2 + p {
+			letter-spacing: 3px;
+			font-size: 20px;
+		}
+
+/* 導入事例 */
+#index #keyv .kvList .key3 {
+	background-image: url("../image/top/keyv3.png");
+	padding-top: 50px;
+}
+	#index #keyv .kvList .key3 .textBox h2 {
+		border-bottom: 1px solid #FFF;
+		letter-spacing: 7px;
+		padding-bottom: 10px;
+	}
+	#index #keyv .kvList .key3 .textBox h2 + p {
+		margin: 28px 0 45px;
+		font-size: 18px;
+		letter-spacing: 2.5px;
+	}
+
+	#index #keyv .kvList .key3 .textBox ul {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+	}
+
+	@media screen and (min-width: 960px) and (max-width: 1024px) {
+	#index #keyv .kvList .key3 .textBox ul {margin: 0 60px;}
+}
+
+
+	#index #keyv .kvList .key3 .textBox li {
+		width: 480px;
+		min-width: 0;
+		text-align: left;
+		border: 10px solid #83D0D5;
+	}
+
+	@media screen and (min-width: 960px) and (max-width: 1024px) {
+	#index #keyv .kvList .key3 .textBox li {width: 430px;}
+}
+		#index #keyv .kvList .key3 .textBox li a {
+			height: 100%;
+			display: block;
+			padding: 5px 25px 15px 19px;
+			background-color: rgba(255,255,255,0.1);
+			font-size: 13px;
+			letter-spacing: 1.5px;
+			transition: 0.3s;
+		}
+		#index #keyv .kvList .key3 .textBox li a:hover {
+			text-decoration: none;
+			background-color: rgba(255,255,255,0.4);
+		}
+
+		#index #keyv .kvList .key3 .textBox li p.case {
+			font-family:"Myriad Pro", "メイリオ", "Meiryo UI", "ＭＳ Ｐゴシック", sans-serif;
+			font-size: 14px;
+			letter-spacing: 2.5px;
+		}
+			#index #keyv .kvList .key3 .textBox li p.case span {
+				font-size: 28px;
+			}
+
+		#index #keyv .kvList .key3 .textBox li p.case + p {
+			font-size: 22px;
+			letter-spacing: 1px;
+			margin-bottom: 15px;
+		}
+
+/* 最新のサービス・製品 */
+#index #keyv .kvList .key4 {
+	background-image: url("../image/top/keyv4.png");
+	padding-top: 50px;
+}
+	#index #keyv .kvList .key4 .textBox h2 {
+		border-bottom: 1px solid #FFF;
+		letter-spacing: 7px;
+		padding-bottom: 10px;
+	}
+	#index #keyv .kvList .key4 .textBox h2 + p {
+		margin: 28px 0 20px;
+		font-size: 18px;
+		letter-spacing: 2.5px;
+	}
+
+	#index #keyv .kvList .key4 .textBox ul {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+	}
+
+
+	@media screen and (min-width: 960px) and (max-width: 1024px) {
+	#index #keyv .kvList .key4 .textBox ul {margin: 0px 60px;}
+	}
+
+
+/*2行以上*/
+	#index #keyv .kvList .key4 .textBox li {
+		width: 480px;
+		min-width: 0;
+		border: 10px solid #48B1EE;
+		margin-bottom: 15px;
+	}
+
+	#keyv > div > div > div > div.key4.slick-slide.slick-current.slick-active > div > ul > li:nth-child(1) > a > p{
+		margin-top: 0em;
+	}
+
+
+	@media screen and (min-width: 960px) and (max-width: 1024px) {
+	#index #keyv .kvList .key4 .textBox li {width: 430px;}
+}
+		#index #keyv .kvList .key4 .textBox li a {
+			height: 100%;
+			display: block;
+			padding: 20px 25px 15px 19px;
+			background-color: rgba(255,255,255,0.1);
+			font-size: 22px;
+			letter-spacing: 1.5px;
+			transition: 0.3s;
+			text-align: center;
+		}
+		#index #keyv .kvList .key4 .textBox li a:hover {
+			text-decoration: none;
+			background-color: rgba(255,255,255,0.4);
+		}
+
+
+
+/*WinActor*/
+#index #keyv .kvList .key5 {
+	background-image: url("../image/top/keyv5.png");
+	padding-top: 50px;
+}
+	#index #keyv .kvList .key5 .textBox h2 {
+		border-bottom: 1px solid #FFF;
+		letter-spacing: 7px;
+		padding-bottom: 10px;
+	}
+	#index #keyv .kvList .key5 .textBox h2 + p {
+		margin: 28px 0 45px;
+		font-size: 18px;
+		letter-spacing: 2.5px;
+	}
+
+	#index #keyv .kvList .key5 .textBox ul {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+	}
+
+	@media screen and (min-width: 960px) and (max-width: 1024px) {
+	#index #keyv .kvList .key5 .textBox ul {margin: 0 60px;}
+}
+
+
+	#index #keyv .kvList .key5 .textBox li {
+		width: 480px;
+		min-width: 0;
+		text-align: left;
+		border: 10px solid #FFF;
+	}
+
+	@media screen and (min-width: 960px) and (max-width: 1024px) {
+	#index #keyv .kvList .key5 .textBox li {width: 430px;}
+}
+		#index #keyv .kvList .key5 .textBox li a {
+			height: 100%;
+			display: block;
+			padding: 5px 25px 15px 19px;
+			background-color: rgba(255,255,255,0.1);
+			font-size: 13px;
+			letter-spacing: 1.5px;
+			transition: 0.3s;
+		}
+		#index #keyv .kvList .key5 .textBox li a:hover {
+			text-decoration: none;
+			background-color: rgba(255,255,255,0.4);
+		}
+
+		#index #keyv .kvList .key5 .textBox li p.title {
+			font-family:"Myriad Pro", "メイリオ", "Meiryo UI", "ＭＳ Ｐゴシック", sans-serif;
+			font-size: 28px;
+			letter-spacing: 2.5px;
+			text-align: center;
+		}
+
+
+
+/*UiPath*/
+#index #keyv .kvList .key6 {
+	background-image: url("../image/top/keyv6.jpg");
+	padding-top: 50px;
+}
+	#index #keyv .kvList .key6 .textBox h2 {
+		border-bottom: 1px solid navy;
+		letter-spacing: 7px;
+		padding-bottom: 10px;
+
+		color:#00008b;
+		font-weight: bold;
+		text-shadow: 0 2px 4px #f8f8ff;
+	}
+	#index #keyv .kvList .key6 .textBox h2 + p {
+		margin: 28px 0 45px;
+		font-size: 20px;
+		letter-spacing: 2.5px;
+
+		color:#00008b;
+	}
+
+	#index #keyv .kvList .key6 .textBox ul {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+	}
+
+	@media screen and (min-width: 960px) and (max-width: 1024px) {
+	#index #keyv .kvList .key6 .textBox ul {margin: 0 60px;}
+}
+
+
+	#index #keyv .kvList .key6 .textBox li {
+		width: 480px;
+		min-width: 0;
+		text-align: left;
+		border: 10px solid #FFF;
+	}
+
+	@media screen and (min-width: 960px) and (max-width: 1024px) {
+	#index #keyv .kvList .key6 .textBox li {width: 430px;}
+}
+		#index #keyv .kvList .key6 .textBox li a {
+			height: 100%;
+			display: block;
+			padding: 5px 25px 15px 19px;
+			background-color: rgba(255,255,255,0.1);
+			font-size: 18px;
+			letter-spacing: 1.5px;
+			transition: 0.3s;
+		}
+		#index #keyv .kvList .key6 .textBox li a:hover {
+			text-decoration: none;
+			background-color: rgba(255,255,255,0.4);
+		}
+
+		#index #keyv .kvList .key6 .textBox li p.title {
+			font-family:"Myriad Pro", "メイリオ", "Meiryo UI", "ＭＳ Ｐゴシック", sans-serif;
+			font-size: 28px;
+			letter-spacing: 2.5px;
+			text-align: center;
+		}
+
+
+/*  メッセージ
+-------------------------------------------------- */
+#msg {
+	height: 660px;
+	background: #FFF url("../image/top/msg_img.png") right 150px bottom no-repeat;
+}
+
+@media screen and (min-width: 960px) and (max-width: 1024px) {
+	#msg {background: #FFF url("../image/top/msg_img.png") right 30px bottom no-repeat;}	  
+}
+
+	#msg .sentBox {
+		padding-top: 40px;
+	}
+
+/*左右に余白10pxずつ追加*/
+@media screen and (min-width: 960px) and (max-width: 1024px) {
+   #msg .sentBox {padding: 40px 10px 0;}
+}	
+	
+		#msg .sentBox p {
+			line-height: 2.2;
+			letter-spacing: 0.5px;
+		}
+		#msg .sentBox p:first-child {
+			font-weight: bold;
+			font-size: 16px;
+			margin-bottom: 20px;
+		}
+
+/*  サービス
+-------------------------------------------------- */
+#sv h2 {
+	margin-bottom: 85px;
+}
+#sv .sentBox {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+#sv .triBox {
+	width: 320px;
+	height: 420px;
+	text-align: center;
+	vertical-align: top;
+	position: relative;
+	transition: transform 0.2s linear;
+}
+#sv .triBox:hover {
+	transform: scale(1.02);
+	background-color: #FFF;
+}
+
+	#sv .triBox a:before {
+		content: "";
+		width: 280px;
+		height: 100px;
+		border: 1px solid #DDD;
+		background: center top no-repeat;
+		display: block;
+		margin-bottom: 25px;
+	}
+
+	#sv .triBox h3 {
+		font-size: 20px;
+	}
+	#sv .triBox li {
+		color: #000;
+		text-align: left;
+		margin-top: 10px;
+	}
+
+/*====================================
+大きい2枠
+====================================/*
+
+/*インフラ運用 */
+#sv #ope {
+	width: 690px;
+	height: 230px;
+	margin: 0 0 30px 310px;
+}
+	#sv #ope a {
+		padding: 25px 40px 0 130px;
+	}
+
+	#sv #ope a:before {
+		width: 400px;
+		height: 230px;
+		border: none;
+		margin-bottom: 0;
+		position: absolute;
+		top: -28px;
+		left: -310px;
+		background-image: url("../image/top/sv_img1.png");
+	}
+
+/*WinActor */
+#sv #win {
+	width: 690px;
+	height: 230px;
+	margin: 0 0 30px 310px;
+}
+	#sv #win a {
+		padding: 25px 40px 0 130px;
+	}
+
+	#sv #win a:before {
+		width: 400px;
+		height: 230px;
+		border: none;
+		margin-bottom: 0;
+		position: absolute;
+		top: -28px;
+		left: -310px;
+		background-image: url("../image/top/sv_img6.png");
+	}
+
+
+
+/* インフラ構築 New 2017.08.03 
+#sv #intro2 {
+	width: 490px;
+	height: 340px;
+	margin: 0 0 30px 0px;
+}
+	#sv #intro2 a:before {
+		content: "";
+		width: 450px;
+		height: 100px;
+		border: none;
+		background: center top no-repeat;
+		display: block;
+		margin:	0 0 25px 0;
+		background-image: url("../image/top/sv_img2.png");
+	}
+*/
+
+
+/* インフラ構築 */
+#sv #intro a:before {
+	background-image: url("..//image/top/sv_img2.png");
+}
+
+/* Webシステム最適化 
+#sv #opti a:before {
+	background-image: url("../image/top/sv_img3.png");
+}
+*/
+
+/* セキュリティ */
+#sv #secu a:before {
+	background-image: url("../image/top/sv_img4.png");
+}
+
+/*その他のソリューション */
+#sv #other a:before {
+	background-image: url("../image/top/sv_img5.png");
+}
+
+/* ボタン */
+#sv .blueBtn {
+	margin-top: 60px;
+}
+
+/*  リクルート
+-------------------------------------------------- */
+#rec {
+	background-color: #FFF;
+}
+	#rec h2 {
+		margin-bottom: 35px;
+	}
+	#rec .sentBox {
+		text-align: center;
+	}
+		#rec .sentBox p {
+			text-align: center;
+			line-height: 1.8;
+			letter-spacing: 3.5px;
+		}
+		#rec .sentBox li {
+			display: inline-block;
+			overflow: hidden;
+		}
+	
+		/* 写真リンク */
+		#rec #recList {
+			height: 240px;
+			position: relative;
+			background-size: auto 100%;
+			margin: 25px 0 60px;
+		}
+			#rec #recList li {
+				position: absolute;
+				transition: transform 0.2s linear;
+				background: left top no-repeat;
+			}
+				#rec #recList li a {
+					display: block;
+					width: 520px;
+					height: 240px;
+					color: #FFF;
+					font-size: 20px;
+					font-weight: bold;
+					padding-top: 105px;
+					position: relative;
+					transform: skewX(-9deg);
+					z-index: 1;
+				}
+					#rec #recList li a span {
+						display: inline-block;
+						letter-spacing: 5px;
+						transform: skewX(9deg);
+					}
+	
+			/* 会社説明会（中途・新卒） */
+			#rec #recList li.brie {
+				left: 0;
+				background-image: url("../image/top/rec_img1.png");
+			}
+			#rec #recList li.brie:hover {
+				z-index: 2;
+				transform: translateX(10px) translateY(4px) scale(1.03);
+			}
+				#rec #recList li.brie a {
+					left: -20px;
+				}
+	
+			/* 採用エントリーフォーム */
+			#rec #recList li.entry {
+				right: 0;
+				background-image: url("../image/top/rec_img2.png");
+			}
+				#rec #recList li.entry:hover {
+					z-index: 2;
+					transform: translateX(-10px) translateY(4px) scale(1.03);
+				}
+				#rec #recList li.entry a {
+					right: -20px;
+				}
+	
+		/* ボタン */
+		#rec .sentBox li.blueBtn {
+			margin-right: 30px;
+		}
+
+/*  トピックス
+-------------------------------------------------- */
+#topic {
+	overflow: hidden;
+}
+	#topic #tab {
+		float: left;
+		margin-top: -6px;
+	}
+		#topic #tab li {
+			height: 30px;
+			padding: 0 10px;
+			margin-right: 20px;
+			line-height: 1;
+			display: inline-block;
+			font-weight: bold;
+			border-bottom: 2px solid #F9F9F9;
+			cursor: pointer;
+		}
+	
+		#topic #tab li.act,
+		#topic #tab li:hover {
+			border-bottom-color: #003E8D;
+		}
+
+		#topic #tab li.act {
+			cursor: default;
+		}
+
+/* RSS */
+#topic .rss {
+	float: right;
+	transition: 0.2s;
+}
+#topic .rss:hover {
+	opacity: 0.6;
+	-ms-filter: "alpha(opacity=60)";
+}
+
+/* お知らせ一覧 */
+#topic #tabCont {
+	clear: both;
+}
+	#topic #tabCont ul {
+		display: none;
+		margin-top: 0;
+	}
+	#topic #tabCont ul:first-child {
+		display: block;
+	}
+
+
+/* トピック一覧へのリンク */
+#topic .link {
+	display: block;
+	margin-top: 18px;
+	float: right;
+}
+	#topic .link a:hover {
+		text-decoration: underline;
+	}
+
+/*  会社情報
+-------------------------------------------------- */
+#company {
+	padding: 80px 0 !important;
+	background: #F0F0F0 url("../image/top/company_bg.png") right bottom no-repeat;
+}
+	#company .infoBox {
+		float: left;
+	}
+		#company .infoBox h2 {
+			text-align: left;
+			margin: 5px 0 0;
+		}
+			#company .infoBox h2 span {
+				font-size: 25px;
+				margin: 0 10px 0 0;
+				display: inline-block;
+			}
+
+		#company .infoBox h2 + p {
+			font-weight: bold;
+			margin: 30px 0 20px;
+		}
+
+	/* お問い合わせ */
+	#company .contact {
+		width: 480px;
+		height: 215px;
+		float: right;
+		color: #000;
+		padding-top: 25px;
+	}
+	#company .contact p:first-child {
+		letter-spacing: 0.6px;
+	}
+	#company .contact .tel {
+		margin-top: 13px;
+	}

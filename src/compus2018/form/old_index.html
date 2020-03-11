@@ -1,0 +1,131 @@
+---
+layout: contact
+global_menu: contact
+description: "COMPUS2018でご案内させていただいております、RPA業務でお役に立つ無料プレゼントのお申込みフォームです。"
+keywords: お問い合わせ
+title: RPA業務でお役に立つ商品プレゼントお申込みフォーム
+---
+
+
+<h1>お申込みフォーム</h1>
+<br>
+<section>
+	<div class="smtSent">
+	<form class="rd-mailform" data-form-output="form-output-global" data-form-type="contact" method="post" action="mailer.php">
+		<table class="baseTb">
+			<tbody>
+			<tr>
+				<th><span style="color: red">【必須】</span>会社名</th>
+				<td><input type='text' name="company" required/></td>
+			</tr>
+			<tr>
+				<th><span style="color: red">【必須】</span>部署名</th>
+				<td><input type="text" name="department" required></td>
+			</tr>
+			<tr>
+				<th>お役職</th>
+				<td><input type="text" name="position"></td>
+			</tr>
+			<tr>
+				<th><span style="color: red">【必須】</span>姓</th>
+				<td><input type="text" name="name1" required></td>
+			</tr>	
+			<tr>
+				<th><span style="color: red">【必須】</span>名</th>
+				<td><input type="text" name="name2" required></td>
+			</tr>
+			<tr>
+				<th><span style="color: red">【必須】</span>電話番号</th>
+				<td><input type="Phone" name="phone" required placeholder="(例)03-1234-5678"></td>
+			</tr>
+			<tr>
+				<th><span style="color: red">【必須】</span>メールアドレス</th>
+				<td><input type="Email" name="emailAdd" required placeholder="企業ドメインでの入力をお願いいたします。"></td>
+			</tr>
+			<tr>
+				<th><span style="color: red">【必須】</span>郵便番号</th>
+				<td>〒<input type="text" name="zip" required placeholder="000-0000" maxlength="8"></td>
+			</tr>
+			<tr>
+				<th><span style="color: red">【必須】</span>都道府県</th>
+				<td>
+					<select style='width:250px;' name='prefectures' required>
+					<option value='北海道'>北海道</option>
+					<option value='青森県'>青森県</option>
+					<option value='岩手県'>岩手県</option>
+					<option value='宮城県'>宮城県</option>
+					<option value='秋田県'>秋田県</option>
+					<option value='山形県'>山形県</option>
+					<option value='福島県'>福島県</option>
+					<option value='茨城県'>茨城県</option>
+					<option value='栃木県'>栃木県</option>
+					<option value='群馬県'>群馬県</option>
+					<option value='埼玉県'>埼玉県</option>
+					<option value='千葉県'>千葉県</option>
+					<option value='東京都'>東京都</option>
+					<option value='神奈川県'>神奈川県</option>
+					<option value='新潟県'>新潟県</option>
+					<option value='富山県'>富山県</option>
+					<option value='石川県'>石川県</option>
+					<option value='福井県'>福井県</option>
+					<option value='山梨県'>山梨県</option>
+					<option value='長野県'>長野県</option>
+					<option value='岐阜県'>岐阜県</option>
+					<option value='静岡県'>静岡県</option>
+					<option value='愛知県'>愛知県</option>
+					<option value='三重県'>三重県</option>
+					<option value='滋賀県'>滋賀県</option>
+					<option value='京都府'>京都府</option>
+					<option value='大阪府'>大阪府</option>
+					<option value='兵庫県'>兵庫県</option>
+					<option value='奈良県'>奈良県</option>
+					<option value='和歌山県'>和歌山県</option>
+					<option value='鳥取県'>鳥取県</option>
+					<option value='島根県'>島根県</option>
+					<option value="岡山県">岡山県</option>
+					<option value='広島県'>広島県</option>
+					<option value='山口県'>山口県</option>
+					<option value='徳島県'>徳島県</option>
+					<option value='香川県'>香川県</option>
+					<option value='愛媛県'>愛媛県</option>
+					<option value='高知県'>高知県</option>
+					<option value='福岡県'>福岡県</option>
+					<option value='佐賀県'>佐賀県</option>
+					<option value='長崎県'>長崎県</option>
+					<option value='熊本県'>熊本県</option>
+					<option value='大分県'>大分県</option>
+					<option value='宮崎県'>宮崎県</option>
+					<option value='鹿児島県'>鹿児島県</option>
+					<option value='沖縄県'>沖縄県</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<th><span style="color: red">【必須】</span>市区町村</th>
+				<td><input type="text" name="address" required placeholder="文京区本郷2-27-20"></td>
+			</tr>
+			<tr>
+				<th>ビル名</th>
+				<td><input type="text" name="build" placeholder="本郷センタービル6F"></td>
+			</tr>
+			<tr>
+				<th>ご希望のプレゼント</th>
+				<td>
+					<input type="checkbox" name="book" value="◯" class="check">［本］RPAの威力<br>
+					<input type="checkbox" name="seminar" value="◯" class="check">［セミナー］「RPA導入前！導入成功のカギを握る業務把握等の進め方セミナー」(有償版)<br>
+					<input type="checkbox" name="tool" value="◯" class="check">［RPA効率化ツール］「xoBlos/xoBot セミナー&試用版」<br>
+				</td>
+				</select></td></tr>
+            </tr>
+			<tr>
+                <th>個人情報の取扱いについて</th>
+                <td>本フォームから送信頂きました個人情報については、弊社の「個人情報保護に対する基本方針」( <a href="https://www.iimhs.co.jp/privacy/contact.html">https://www.iimhs.co.jp/privacy/contact.html</a> ) に則り管理致します。何卒ご理解、ご了承賜ります様宜しくお願い致します。<br>
+                <input type="checkbox" name="check" value="同意する" required class="check">同意する</td>
+            </tr>
+			</tbody>
+		</table>
+		<br>
+		<input type="submit" value="送信する" style="width: 100px; height:30px; background-color: #0000FF; color: #FFF;">
+	</form>
+	</div>
+</section>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<!--▽ヘッド▽-->
+{% include head.html %}
+<!--△ヘッド△-->
+</head>
+<body>
+		<!--▽ヘッダー▽-->
+		{% include header.html %}
+		<!--△ヘッダー△-->
+
+		 <!--▽コンテンツ▽-->
+		<article>
+			<section>
+				<!--▼キービジュアル▼-->
+				{% if page.title == "個人情報保護ポリシー" %}{% include global/global_key_policy.html %}{% endif %}
+				{% if page.title == "サイトポリシー" %}{% include global/global_key_sitePolicy.html %}{% endif %}
+				{% if page.title == "お問い合わせにおける個人情報の取扱いについて" %}{% include global/global_key_contact_privacy.html %}{% endif %}
+				{% if page.title == "メールマガジン登録における個人情報の取扱いについて" %}{% include global/global_key_mailmagazine_privacy.html %}{% endif %}
+				{% if page.title == "セミナー応募者に対する個人情報の取扱いについて" %}{% include global/global_key_seminar_privacy.html %}{% endif %}
+				{% if page.title == "採用応募者に対する個人情報の取扱いについて" %}{% include global/global_key_recruit_privacy.html %}{% endif %}
+				{% if page.title == "インターンシップ応募者に対する個人情報の取扱いについて" %}{% include global/global_key_recruit_intern_privacy.html %}{% endif %}
+				{% if page.title == "サイトマップ" %}{% include global/global_key_siteMap.html %}{% endif %}
+				{% if page.title == "サイト内検索" %}{% include global/global_key_searchResult.html %}{% endif %}
+				{% if page.title == "404" %}{% include global/global_key_404.html %}{% endif %}
+				{% if page.title == "500" %}{% include global/global_key_500.html %}{% endif %}
+				<!--▲キービジュアル▲-->
+
+				<!--▼パンくずリスト▼-->
+				{% include pan.html %}
+				<!--▲パンくずリスト▲-->
+
+				<div class="wrap">
+					<div id="main">
+
+					{{ content }}
+
+					</div><!--/.main-->
+
+					<div id="sideMenu">
+					{% include side/side_utility.html %}
+					</div><!--/#sideMenu-->
+
+				</div><!--/.wrap-->
+			</section>
+		</article>
+		<!--△コンテンツ△-->
+
+		<!--▽フッター▽-->
+		{% include footer.html %}
+		<!--△フッター△-->
+
+</body>
+</html>

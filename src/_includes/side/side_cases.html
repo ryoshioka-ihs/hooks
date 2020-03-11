@@ -1,0 +1,25 @@
+<nav>
+    <dl>
+        <dt class="act"><a href="/cases/">導入事例</a></dt>
+        <dd>
+            <ul>
+            <!--リモート運用
+                <li{% if page.categories contains "リモート運用" %} class="act"{% endif %}><a href="/cases/remote/">リモート運用</a></li> 
+            -->           
+                <li{% if page.categories contains "インフラ運用" %} class="act"{% endif %}><a href="/cases/operation/">インフラ運用</a></li>
+                <li{% if page.categories contains "インフラ構築" %} class="act"{% endif %}><a href="/cases/construction/">インフラ構築</a></li>
+                <!--<li{% if page.categories contains "Webシステム最適化" %} class="act"{% endif %}><a href="#">Webシステム最適化</a></li>--><!-- ※導入事例の「Webシステム最適化」は一旦非表示 -->
+                <li{% if page.categories contains "セキュリティ" %} class="act"{% endif %}><a href="/cases/security/">セキュリティ</a></li>
+            </ul>
+        </dd>
+    </dl>
+</nav>
+
+    <aside id="bnr">
+        <ul>
+            {% include side/side_bn_cases.html %}
+            {% include side/side_bn_tech-rep.html %}
+            {% include side/side_bn_contact.html %}
+            {% include side/side_related-services.html %}
+        </ul>
+    </aside>

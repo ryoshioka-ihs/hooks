@@ -1,0 +1,239 @@
+---
+layout:       case
+global_menu:  cases
+title:        "サーバーOSを用いたVDIサービス構築"
+description:  "自社開発のアプリケーションをクラウドサービスとして展開する為の基盤として、VDI環境構築支援の事例をご紹介いたします。"
+keywords:     "VDI,ライセンスコストの削減,Windows Server 2008 R2 Data Center,View Security Server,リスク低減,事例"
+date:         2015-09-02 09:51:00 +0900
+PDF:          "case102"
+categories:
+ - "インフラ構築"
+tags:
+ - "VMware View"
+ - "VDI（仮想デスクトップ環境）"
+---
+
+<section>
+  <h1>{{ page.title }}</h1>
+  <ul class="linkInPage">
+    <li><a href="#toc-background">背景</a></li>
+    <li><a href="#toc-overview">概要</a></li>
+    <li><a href="#toc-sysCon">構成図</a></li>
+    <li><a href="#toc-effect">作業効果</a></li>
+    <li><a href="#toc-IHS-result">弊社利用による効果</a></li>
+    <li><a href="#toc-detail">作業内容の詳細</a></li>
+    <li><a href="#PdfDownload">PDFダウンロード</a></li>
+  </ul>
+
+  <section id="toc-background">
+    <h2>背景</h2>
+    <div class="smtSent">
+      <p>今回のお客様は、自社開発のアプリケーションをクラウドサービスとして展開する為の基盤として、仮想デスクトップインフラ（Virtual Desktop Infrastructure：VDI）の導入を検討されておりました。</p>
+      <br>
+      <p>本件では、弊社のVDI構築実績をご覧になったお客様より引き合いをいただき、VDI環境の設計を請け負わせていただく運びとなりました。</p>
+    </div>
+  </section>
+
+  <section id="toc-overview">
+    <h2>概要</h2>
+    <div class="smtSent">
+      <table class="baseTb">
+        <tbody>
+          <tr>
+          <th>業種</th>
+          <td>ITサービス業</td>
+          </tr>
+          <tr>
+          <th>目的</th>
+          <td>Windows Server 2008 R2をVDIクライアントにしたVDI環境構築</td>
+          </tr>
+          <tr>
+          <th>作業規模</th>
+          <td>
+            <ul class="grayDisc">
+            	<li>物理サーバー： 9台
+              <li>共有ストレージ： 2台</li>
+              <li>L2スイッチ： 5台</li>
+              <li>L3スイッチ： 2台</li>
+              <li>仮想サーバー：10台</li>
+              <li>仮想デスクトップ：500台</li>
+            </ul>
+          </td>
+          </tr>
+          <tr>
+          <th>作業ボリューム</th>
+          <td>8人月</td>
+          </tr>
+          <tr>
+          <th>作業内容</th>
+          <td>
+            <ul class="grayDisc">
+            	<li>仮想基盤設計/構築</li>
+              <li>VDI用認証基盤設計/構築</li>
+              <li>VDI 機能設計/構築</li>
+              <li>バックアップ機能設計/構築</li>
+              <li>ライセンス管理機能設計/構築</li>
+            </ul>
+          </td>
+          </tr>
+        </tbody>
+      </table>
+  </section>
+
+  <section id="toc-sysCon">
+    <h2>構成図</h2>
+    <div class="smtSent">
+    <div class="lightBox">
+    <figure><img src="/image/cases/case102_01.png" alt="図1" /></figure>
+    </div>
+    </div>
+  </section>
+
+  <section id="toc-effect">
+    <h2>作業効果</h2>
+    <div class="smtSent">
+      <h3>仮想デスクトップインフラを用いた、サービス提供基盤の展開管理とリソースの効率化</h3>
+        <p>本件では、自社開発のパッケージ製品を仮想サーバー上に構築し、クラウドサービスとして展開するという新しいソリューションにご協力させていただきました。本件のインフラ要件としましては、パッケージ製品が稼働することと、顧客ごとに仮想サーバーを準備したいとのご要望をいただきましたので、サーバー機をVDIとして展開するという手法を取りました。</p>
+        <br>
+        <p>上記要望を満たすために、今回は仮想デスクトッププール方式ではなく、仮想デスクトップ割り当て方式を選定いたしました。この方式であれば、サービス利用するお客様1人1人に対し、1台の仮想サーバーを割り当てることができます。<br />また、内部のデータに監視でも、お客様以外のユーザーは触れることがありませんので、内部情報の管理面についても安心です。</p>
+        <br>
+        <p>このように、仮想デスクトップの新規仮想マシンのプロビジョニング自動化とインフラ基盤の管理性が容易という特徴と、お客様の自社開発パッケージ製品の動作要件がマッチし、運用に乗せやすいというメリットがあった為、今回の構成が実現いたしました。</p>
+        <br>
+        <p>今回はサーバー機での導入となった為、以下のようなエンタープライズ向けの機能も併せて導入されました。</p>
+        <small class="notes">※重複排除機能を持ったストレージを利用した、ストレージ領域の削減。</small>
+        <br>
+        <small class="notes">※サービス停止時間を利用した、仮想デスクトップの同時メンテナンス。</small>
+        <br>
+        <small class="notes">※外部ネットワークからの通信をSSLトンネリング技術にてセキュアに保護。</small>
+        <div class="lightBox">
+        <figure><img src="/image/cases/case102_02.png" alt="図2" /></figure>
+        </div>
+        <br>
+        <p>これにより、お客様は自社内でサーバーを保有するよりもはるかに安価で、可用性に優れたシステムを利用することが可能になりました。</p>
+
+      <h3>Windows Server OS の利用による、ライセンスコストの削減</h3>
+        <p>VDI 基盤導入計画時の大きな課題の1つとして、ライセンスコストの高額化が挙げられます。<br />というのも、VDI 導入時には、Virtual Desktop Access (VDA) と、基盤となるサーバーへのアクセスCAL、他、VDI上で稼働させるアプリケーションのライセンスが必要になり、これらを合算すると、一般的なクライアントPCの購入費用より高額になってしまうのです。</p>
+        <br>
+        <p>この課題を解消する為に、今回はVDI 用のOSにWindows Server 2008 R2 Data Center エディションを利用いたしました。Windows Server 2008 R2 Data Center エディションは、同一ホスト上で、仮想インスタンスを無制限に構築することのできるライセンス体系となっており、VDAと異なり、仮想インスタンス毎にライセンスを購入する必要がありません。<br />ですので、仮想ホスト上のVDI集約率が高ければ高いほど、VDI 1台当たりのライセンスコストを抑えることが可能となります。</p>
+        <br>
+        <p>本件では、7台の仮想ホストに500台のVDIを集約させておりますので、表に示す通り、VDAと比較して80%以上ライセンスコストを削減しております。</p>
+        <br>
+        <strong>Windows ライセンスコスト</strong>
+        <table class="rangeTb">
+          <tbody>
+            <tr>
+            <th>形態</th>
+            <th>単価</th>
+            <th>必要数</th>
+            <th>合計</th>
+            </tr>
+            <tr>
+            <th>Microsoft Virtual Desktop Access</th>
+            <td>43,200</td>
+            <td>500</td>
+            <td>21,600,000</td>
+            </tr>
+            <tr>
+            <th>Windows Server 2008 R2 Data Center</th>
+            <td>463,000</td>
+            <td>7</td>
+            <td>3,241,000</td>
+            </tr>
+          </tbody>
+        </table>
+        <br>
+        <small class="notes">※記載の価格はOpen Value で購入する際の参考価格となります。</small>
+        <br>
+        <small class="notes">※VDA は1デバイス/3年間 の有効期限があります。</small>
+
+    <h3>Viewセキュリティサーバ導入によるアクセスセキュリティの確保</h3>
+      <p>本件では、インターネット経由にて、仮想デスクトップ環境への接続を行う必要がありましたので、View Security Server を導入いたしました。<br />
+      View Security Server　を導入することにより、SSLトンネルを介して、仮想デスクトップ環境への接続を行うことができる為、セキュアなネットワークを構成する事が可能です。</p>
+      <div class="lightBox">
+      <figure><img src="/image/cases/case102_03.png" alt="図3" /></figure>
+      </div>
+    </div>
+  </section>
+   
+  <section id="toc-IHS-result">
+    <h2>弊社利用による効果</h2>
+    <div class="smtSent">
+      <h3>効率化された作業手順と、リスク低減への取り組み</h3>
+      <p>弊社では、多くの仮想基盤構築を請け負わせていただいており、検証環境から、エンタープライズクラスまでと様々な規模での構築実績を有しております。また、それらの構築事例や構築前に社内で行っている事前試験を通して、システム設計において検討すべきポイントや、構築において注意すべきポイントを事前に把握することにより、導入時のリスクを低減することに努めております。</p>
+    </div>
+  </section>
+
+  <section id="toc-detail">
+    <h2>作業内容の詳細</h2>
+    <div class="smtSent">
+      <h3>設計</h3>
+        <ol class="numList">
+          <li><p>基本設計</p></li>
+        </ol>
+        <div class="textIndent--style3">
+          <ul class="grayDisc">
+            <li>プラットフォーム設計</li>
+            <li>ネットワーク設計</li>
+            <li>可用性設計</li>
+            <li>セキュリティ設計</li>
+            <li>仮想化設計</li>
+            <li>監視設計</li>
+            <li>電源設計</li>
+            <li>運用設計</li>
+          </ul>
+        </div>
+
+      <h3>環境構築</h3>
+        <ol class="numList">
+          <li><p>ハードウェア構築</p></li>
+          <div class="textIndent--style3">
+          <ul class="grayDisc">
+            <li> vSphere 5.5 ESXi 構築</li>
+          </ul>
+          </div>
+
+          <li><p>仮想基盤構築</p></li>
+          <div class="textIndent--style3">
+          <ul class="grayDisc">
+            <li>vSphere ESXi 5.5 構築</li>
+            <li>vCenter Server 5.5 構築</li>
+          </ul>
+          </div>
+
+          <li><p>システム基盤構築</p></li>
+          <div class="textIndent--style3">
+          <ul class="grayDisc">
+            <li>Active Directory / DNS / DHCP 構築</li>
+            <li>Key Management Service 構成</li>
+          </ul>
+          </div>
+
+          <li><p>VDI基盤構築</p></li>
+          <div class="textIndent--style3">
+          <ul class="grayDisc">
+            <li>View Connection Server 構築</li>
+            <li>View Administrator 構築</li>
+            <li>View Security Server 構築</li>
+          </ul>
+          </div>
+
+          <li><p>VDI機能構築</p></li>
+          <div class="textIndent--style3">
+          <ul class="grayDisc">
+            <li>マスターイメージ（Windows Server 2008 DC）構築</li>
+            <li>VDI展開</li>
+          </ul>
+          </div>
+        </ol>
+
+      <h3>納品ドキュメント</h3>
+        <ul class="grayDisc">
+          <li>基本設計書（全サーバー・機能）</li>
+          <li>詳細設計書（全サーバー・機能）</li>
+          <li>動作確認項目表兼結果報告書</li>
+          <li>運用手順書</li>
+        </ul>
+    </div>
+  </section>
+</section>
+
