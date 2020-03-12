@@ -431,6 +431,23 @@ span{
     margin-right: 5px;
 }
 
+#info .cont .sentBox .guide ul{
+    margin: 0px 15px 0px 30px;
+    width: 100%;
+    list-style-type:disc;
+}
+#info .cont .sentBox .guide ol {
+    margin: 10px 15px 0px 30px;
+    width: 100%;
+    list-style-type: decimal;
+}
+
+#info .cont .sentBox .guide ol li{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+
 /* エントリーボタン（申し込み方法） */
 #info .cont .sentBox .guide p.btn.entry {
 	background-color: #FF9B2A;
