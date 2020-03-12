@@ -97,7 +97,7 @@ $(function () {
       'icon_url': '/recruit/image/info/mapLogoTokyo.png',
       'icon_width': 100,
       'icon_height': 72,
-			'link_map_url': 'https://goo.gl/maps/GP4Uh3ATGFJ2'
+			'link_map_url': 'https://goo.gl/maps/rtucGz3FhXvUPWFH9'
 		}
 		showGoogleMap(args);
 	}
