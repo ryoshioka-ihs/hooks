@@ -1,0 +1,3408 @@
+@charset "UTF-8";
+/* CSS Document */
+/*===================================================
+	土台作成用CSS
+===================================================*/
+/*//////////////////////////////////////////////////
+	Base set
+///////////////////////////////////////////////////*/
+* {
+		-ms-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+			box-sizing: border-box;
+}
+
+html, body {
+	width: 100%;
+	height: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+
+body {
+	min-width: 1000px;
+	font-family: HiraKakuPro-W3, 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', sans-serif;
+	font-size: 14px;
+	line-height: 1.5;
+	word-break: normal;
+	text-align: left;
+	color: #282828;
+	background-color: #F9F9F9;
+	position: relative;
+}
+/* --------------------------------------------------------
+	clearfix
+	(overflow:hiddenでフロートを解除できない場合に使用)
+-------------------------------------------------------- */
+.clearfix:after {
+	content: ".";
+	display: block;
+	height: 0;
+	font-size: 0;
+	clear: both;
+	visibility: hidden;
+}
+/* --------------------------------------------------------
+	Helper
+	よく使うがモジュールと呼ぶほどでもないスタイル
+-------------------------------------------------------- */
+/* 強調 */
+em {
+	font-style: normal;
+	font-weight: bold;
+	}
+/* ボーダー */
+.borderd {
+	border: 1px solid #ccc;
+	padding: 0 0.5em;
+	}
+/* オレンジボーダー */
+.ora-borderd {
+	border: 1px solid #F6B234;
+	padding: 0 0.5em;
+	}	
+/* 左寄せ */
+.textLeft {
+	text-align: left;
+	}
+/* 真ん中寄せ */
+.textCenter {
+	text-align: center;
+	}
+/* 右寄せ */
+.textRight {
+	text-align: right;
+	}
+/* インデント（※注意文などで２行目以降を字下げしたい時） */
+.textIndent--style1 {
+	margin-top: 0;
+	margin-bottom: 0;
+	padding-left: 1em;
+	text-indent: -1em;
+}
+.textIndent--style2 {
+	margin-top: 0;
+	margin-bottom: 0;
+	padding-left: 1.5em;
+	text-indent: -1.5em;
+}
+/* インデント（文章が連続しない時） */
+.textIndent--style3 {
+	padding-left: 1em;
+}
+/* 定義リスト */
+.definition--style1 dl {
+	padding-bottom: 0.5em;
+	width:100%;
+}
+.definition--style1 dt {
+	clear: both;
+	float: left;
+	}
+.definition--style1 dd {
+	margin:0 0 1em 200px;
+}
+/* 注釈 */
+.notes {
+	font-size: 90%;
+	color: rgb(151, 151, 151);
+}
+
+/* 図のタイトル */
+figcaption.title {
+	font-size: 90%;
+	color: #333;
+	padding-top: 0.5em;
+}
+
+/* フリースペース */
+.free {
+	margin-top:20px;
+}
+
+/* --------------------------------------------------
+	リンク
+-------------------------------------------------- */
+a {
+	color: #003E8D;
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: underline;
+}
+
+/* スマホ用電話発信リンク */
+a[href^="tel:"] {
+	color: #003E8D !important;
+	text-decoration: none !important;
+	cursor: default !important;
+}
+a[href^="tel:"]:hover {
+	text-decoration: none !important;
+}
+
+/* --------------------------------------------------
+	外部リンク
+-------------------------------------------------- */
+.outLink a {
+	background: url("../image/common/icon_outlink_b.png") no-repeat scroll right 40% / 10px 10px;
+    padding-right: 15px;
+}
+
+
+/* --------------------------------------------------
+	input＆textarea
+-------------------------------------------------- */
+input, textarea {
+	-webkit-appearance: none;
+	border: none;
+	width: 480px;
+}
+
+input.check{
+	border: none;
+	width: auto;
+	-webkit-appearance: checkbox;
+}
+
+/* --------------------------------------------------
+	PHPでラジオを表示
+-------------------------------------------------- */
+.radio input{
+	-webkit-appearance: radio;
+	border: none;
+}
+
+/* --------------------------------------------------
+	PHPでチェックボックスを表示
+-------------------------------------------------- */
+.checkbox input{
+	-webkit-appearance: checkbox;
+	border: none;
+}
+
+/* --------------------------------------------------
+	本文の見出し
+-------------------------------------------------- */
+h1, h2, h3 {
+	font-weight: bold;
+	position: relative;
+}
+/* h4見出しを追加 */
+h4 {
+	font-size: 15px;
+	font-weight: bold;
+	margin: 10px 0;
+	}
+article h2:before,
+article h3:before {
+	content: "";
+	display: block;
+	position: absolute;
+	background-color: #003E8D;
+}
+
+article h1 {
+	font-size: 22px;
+	border-bottom: 4px solid #003E8D;
+	padding: 0 0 10px 5px;
+	letter-spacing: 1.5px;
+	overflow: hidden;
+}
+
+	article h1 time {
+		font-size: 16px;
+		margin-top: 5px;
+		font-weight: normal;
+		float: right;
+	}
+
+/* h1を支える文章 */
+article h1 + p {
+	color: #333;
+	margin: 15px 0 30px;
+}
+/* フォントサイズをあげる場合 */
+article h1 + p.big {
+	font-size: 16px;
+}
+
+article h2 {
+	min-height: 42px;
+	line-height: 1.3;
+	font-size: 18px;
+	padding: 10px 0 8px 30px;
+	margin: 70px 0 30px;
+	background-color: #F0F0F0;
+}
+article h2:before {
+	width: 5px;
+	height: 50%;
+	top: 25%;
+	left: 10px;
+}
+
+/* 一覧へのリンク */
+article h2 + .link {
+	font-size: 14px;
+	margin: -60px 10px 0 0;
+	float: right;
+	position: relative;
+}
+/* h1と隣接時は、上マージンを減らす */
+article h1 + section h2 {
+	margin-top: 40px;
+}
+
+article h3 {
+	font-size: 16px;
+	padding-left: 30px;
+	margin: 20px 0;
+}
+article h3:before {
+	width: 20px;
+	height: 3px;
+	top: 9px;
+	left: 0;
+}
+/*//////////////////////////////////////////////////
+	全ページ共通パーツ（テンプレート記載分）
+///////////////////////////////////////////////////*/
+/* --------------------------------------------------------
+	パンくずリスト
+-------------------------------------------------------- */
+#tpcpth {
+	width: 1000px;
+	margin: 10px auto 50px;
+	padding-bottom: 5px;
+	overflow: hidden;
+}
+
+/* パンくずの左に20pxの余白を追加(幅1024pxのブラウザだと余白がないため）*/
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+	/*　画面サイズが769pxから1024pxまではここを読み込む　*/
+	#tpcpth {padding-left:20px;}
+}
+
+	#tpcpth li {
+		display: inline;
+		font-size: 11px;
+		padding-left: 18px;
+		background: url("../image/common/tpcpth_arrow.png") left 3px no-repeat;
+	}
+	#tpcpth li:first-child {
+		padding-left: 0;
+		background: none;
+	}
+	#tpcpth li:last-child {
+		margin-right: 0;
+	}
+		#tpcpth li a {
+			height: 15px;
+			color: #282828;
+			line-height: 1.2;
+			display: inline-block;
+			border-bottom: 1px solid #909090;
+		}
+		#tpcpth li a:hover {
+			border-bottom: none;
+			text-decoration: none;
+		}
+
+/* --------------------------------------------------------
+	タイトル
+-------------------------------------------------------- */
+article .ttl {
+	height: 138px;
+	background: center top no-repeat;
+	background-size: 100% auto;
+	padding-top: 40px;
+}
+	article .ttl p {
+		width: 1000px;
+		margin: auto;
+		color: #FFF;
+		font-weight: bold;
+		font-size: 24px;
+		letter-spacing: 1.5px;
+		text-shadow: 0 2px 4px rgba(0,0,0,0.4);
+	}
+
+	/* 見出しの左右に20pxの余白を追加(幅1024pxのブラウザだと余白がないため）*/
+	@media screen and (min-width: 768px) and (max-width: 1024px) {
+		/*　画面サイズが768pxから1024pxまではここを読み込む　*/
+		article .ttl p {width: 960px;}
+	}
+
+		article .ttl p span {
+			display: block;
+			font-size: 13px;
+			font-family: "Myriad Pro", "メイリオ", "Meiryo UI", "ＭＳ Ｐゴシック", sans-serif;
+			letter-spacing: 1.5px;
+		}
+
+/* サービス・製品用 */
+article #Services.ttl {
+	background-image: url("../image/common/ttl_bg_Services.png");
+}
+
+/* 導入事例用 */
+article #CaseSt.ttl {
+	background-image: url("../image/common/ttl_bg_CaseSt.png");
+}
+
+/* トピックス用 */
+article #Topics.ttl {
+	background-image: url("../image/common/ttl_bg_Topics.png");
+}
+
+/* 会社情報用 */
+article #Company.ttl {
+	background-image: url("../image/common/ttl_bg_Company.png");
+}
+
+/* お問い合わせ用 */
+article #Contact.ttl {
+	background-image: url("../image/common/ttl_bg_Contact.png");
+}
+
+/* Compus */
+article #compus.ttl {
+	background-image: url("../image/common/ttl_bg_Utility.png");
+}
+
+/* その他汎用 */
+article #Utility.ttl {
+	background-image: url("../image/common/ttl_bg_Utility.png");
+}
+
+/* --------------------------------------------------------
+	左コンテンツのh1背景装飾用（背景画像写真ベース）
+-------------------------------------------------------- */
+.imgBase {
+	min-height: 180px;
+	padding: 35px 0 0 30px;
+	background: center top no-repeat;
+	background-size: 100% auto;
+}
+	.imgBase h1 {
+		font-size: 28px;
+		color: #FFF;
+		border-bottom: none;
+		padding: 0;
+	}
+	.imgBase h1 + p {
+		color: #FFF;
+		margin: 28px 0 0;
+	}
+
+/* インフラ運用 */
+.imgBase.bg1 {
+	background-image: url("../image/common/imgBase_bg1.png");
+}
+
+/* インフラ導入 */
+.imgBase.bg2 {
+	background-image: url("../image/common/imgBase_bg2.png");
+}
+
+/* webサービス */
+.imgBase.bg3 {
+	background-image: url("../image/common/imgBase_bg3.png");
+}
+
+/* セキュリティ */
+.imgBase.bg4 {
+	background-image: url("../image/common/imgBase_bg4.png");
+}
+
+/* その他のソリューションサービス */
+.imgBase.bg6 {
+	background-image: url("../image/common/imgBase_bg6.png");
+}
+
+/* リモート型サポートサービス */
+.imgBase.bg5 {
+	background-image: url("../image/common/imgBase_bg5.png");
+}
+
+/* クラウド型サポートサービス */
+.imgBase.bg7 {
+	background-image: url("../image/common/imgBase_bg7.png");
+}
+
+/* WinActor */
+.imgBase.bg8 {
+	background-image: url("../image/common/imgBase_bg8.png");
+}
+/* WinActor-seminar */
+.imgBase.bg9 {
+	background-image: url("../image/common/imgBase_bg9.png");
+}
+/* NEW WinActor */
+.imgBase.bg10 {
+	background-image: url("../image/common/imgBase_bg10.png");
+}
+
+/* 横幅を調整しました
+.topimgBase.bg10 {
+	
+	width: 716px;
+	height: 180px;
+	background-color: #EBEBEB;
+	position: relative;
+    box-shadow:5px 5px;
+    border:1px solid #000;     
+}
+　*/
+
+
+/* --------------------------------------------------------
+	お知らせトップバナー
+-------------------------------------------------------- */
+.topimgBase {
+	min-height: 180px;
+	padding: 35px 0 0 30px;
+	background: center top no-repeat;
+	background-size: 100% auto;
+}
+
+/* --------------------------------------------------------
+	左コンテンツのh1背景装飾用（アイコン表示）
+-------------------------------------------------------- */
+.iconBase {
+	min-height: 160px;
+	padding: 25px 160px 25px 35px;
+	background-color: #EBEBEB;
+	position: relative;
+}
+	.iconBase h1 {
+		font-size: 26px;
+		color: #003E8D;
+		border-bottom: none;
+		padding: 0;
+	}
+	.iconBase h1 + p {
+		margin: 22px 0 0;
+	}
+
+.iconBase:before {
+	content: "";
+	display: block;
+	width: 145px;
+	height: 145px;
+	background: #F5F5F5 center center no-repeat;
+	position: absolute;
+	top: 50%;
+	right: 8px;
+	margin-top: -72.5px;
+}
+
+/* インフラ運用 */
+.iconBase.icon1:before {
+	background-image: url("../image/common/tmp_icon1.png");
+}
+
+/* ServiceNow */
+.iconBase.icon2:before {
+	background-image: url("../image/common/tmp_icon2.png");
+}
+
+/* DRaaS with Azure */
+.iconBase.icon3:before {
+	background-image: url("../image/common/tmp_icon3.png");
+}
+
+/* Webシステム脆弱性診断 */
+.iconBase.icon4:before {
+	background-image: url("../image/common/tmp_icon4.png");
+}
+
+/* WebシステムAzure移行 */
+.iconBase.icon5:before {
+	background-image: url("../image/common/tmp_icon5.png");
+}
+
+/* IT資産管理 */
+.iconBase.icon6:before {
+	background-image: url("../image/common/tmp_icon6.png");
+}
+
+/* --------------------------------------------------
+	サービス対象範囲
+-------------------------------------------------- */
+.coverSv {
+	min-height: 160px;
+	background-color: #FFF;
+	padding: 30px 15px 30px 150px;
+	margin-bottom: 20px;
+	position: relative;
+}
+.coverSv:before {
+	content: "";
+	display: block;
+	width: 100px;
+	height: 100px;
+	background: #F0F0F0 center center no-repeat;
+	position: absolute;
+	top: 30px;
+	left: 20px;
+}
+	.coverSv h3 {
+		font-size: 18px;
+		color: #003E8D;
+		margin: 0 0 10px;
+		padding: 0;
+	}
+	.coverSv h3:before {
+		display: none;
+	}
+
+/* 背景アイコン設定 */
+.coverSv.icon7:before {
+	background-image: url("../image/common/tmp_icon7.png");
+}
+.coverSv.icon8:before {
+	background-image: url("../image/common/tmp_icon8.png");
+}
+.coverSv.icon9:before {
+	background-image: url("../image/common/tmp_icon9.png");
+}
+.coverSv.icon10:before {
+	background-image: url("../image/common/tmp_icon10.png");
+}
+.coverSv.icon11:before {
+	background-image: url("../image/common/tmp_icon11.png");
+}
+.coverSv.icon12:before {
+	background-image: url("../image/common/tmp_icon12.png");
+}
+.coverSv.icon13:before {
+	background-image: url("../image/common/tmp_icon13.png");
+}
+.coverSv.icon14:before {
+	background-image: url("../image/common/tmp_icon14.png");
+}
+.coverSv.icon15:before {
+	background-image: url("../image/common/tmp_icon15.png");
+}
+.coverSv.icon16:before {
+	background-image: url("../image/common/tmp_icon16.png");
+}
+
+/* --------------------------------------------------
+	解決できる課題
+-------------------------------------------------- */
+.problem {
+	padding: 20px;
+	background-color: #FFF;
+	margin-bottom: 20px;
+}
+	.problem h2 {
+		line-height: 1;
+		padding: 7px 0 0 55px;
+		margin-top: 0;
+		letter-spacing: 1px;
+		font-size: 20px;
+		background: url("../image/common/problem_ttl_bg.png") 12px top no-repeat;
+		background-size: 22px auto;
+		border-bottom: 2px solid #003E8D;
+	}
+	.problem h2:before {
+		display: none;
+	}
+
+	/* リスト形式 */
+	.problem .coverSv {
+		min-height: 100px;
+		padding: 0 0 0 130px;
+		margin-top: 40px;
+	}
+	.problem .coverSv:before {
+		top: 0;
+		left: 0;
+	}
+	.problem h2 + .coverSv {
+		margin-top: 0;
+	}
+		.problem .coverSv h3 {
+			color: #282828;
+			margin-bottom: 0;
+		}
+
+	/* 課題＆提案形式 */
+	.problem dl {
+		counter-reset: proCnt;
+		margin: 0 25px;
+	}
+	.problem dt {
+		font-weight: bold;
+		font-size: 18px;
+		position: relative;
+	}
+	.problem dt:before {
+		counter-increment: proCnt;
+		content: counter(proCnt)". ";
+		position: absolute;
+		top: 0;
+		left: -25px;
+	}
+
+	.problem dd {
+		margin: 10px 0 30px;
+		padding-left: 25px;
+		background: url("../image/common/problem_arrow.png") left 3px no-repeat;
+		background-size: 14px auto;
+	}
+
+/*//////////////////////////////////////////////////
+	全ページ共通パーツ（テンプレート記載以外）
+///////////////////////////////////////////////////*/
+/* --------------------------------------------------
+	アイコンつきリンク
+-------------------------------------------------- */
+/* 左三角アイコン */
+.link {
+	font-weight: bold;
+	background: url("../image/common/link_arrow1.png") left 55% no-repeat;
+	background-size: 4px auto;
+	padding-left: 15px;
+}
+
+/* PCアイコン */
+.linkPC {
+	font-weight: bold;
+	background: url("../image/common/icon_pc.png") left 55% no-repeat;
+	background-size: 15px auto;
+	padding-left: 30px;
+}
+
+/* 別ウィンドウリンク */
+a.outLink {
+	background: url("../image/common/icon_outlink_b.png") right 40% no-repeat;
+	background-size: 10px 10px;
+	padding-right: 15px;
+}
+
+/* --------------------------------------------------
+	リストの左側に画像や数字を表示する
+-------------------------------------------------- */
+/* 灰色の● */
+.grayDisc > li {
+	background: url("../image/common/grayDisc_bg.png") left 5px no-repeat;
+	background-size: 6px 6px;
+	padding-left: 15px;
+	margin: 5px 7px 0 7px;
+}
+
+/* 灰色の●（太字） */
+.bgrayDisc > li {
+	background: url("../image/common/grayDisc_bg.png") left 5px no-repeat;
+	background-size: 6px 6px;
+	padding-left: 15px;
+	margin-top: 5px;
+	font-weight: bold;
+}
+
+/* チェックボックスイメージ共通設定 */
+.ckImgBlue > li,
+.ckImgRed > li {
+	background: left 4px no-repeat;
+	background-size: 13px auto;
+	padding-left: 23px;
+	margin-top: 10px;
+}
+
+/* チェックボックスイメージ(青) */
+.ckImgBlue > li {
+	background-image: url("../image/common/ckImgBlue_bg.png");
+}
+
+/* チェックボックスイメージ(赤) */
+.ckImgRed > li {
+	background-image: url("../image/common/ckImgRed_bg.png");
+}
+
+/* point */
+.pointList {
+	counter-reset: cnt;
+}
+	.pointList > li {
+		min-height: 50px;
+		background: url("../image/common/pointList_bg.png") left top no-repeat;
+		background-size: 48px auto;
+		padding: 2px 0 0 70px;
+		margin-top: 20px;
+		position: relative;
+		counter-increment: cnt;
+	}
+	.pointList > li:first-child {
+		margin-top: 0;
+	}
+
+	.pointList > li:before {
+		content: counter(cnt);
+		display: block;
+		width: 48px;
+		height: 25px;
+		text-align: center;
+		font-weight: bold;
+		font-size: 22px;
+		color: #003E8D;
+		position: absolute;
+		top: 17px;
+		left: 0;
+	}
+	.pointList > li p:first-child {
+		font-weight: bold;
+		font-size: 16px;
+	}
+
+/* whiteBox内にあり、かつPタグの隣の場合はマージンを発生させる */
+.whiteBox p + .pointList {
+	margin-top: 20px;
+}
+
+/* 数字 */
+.numList {
+	counter-reset: num;
+	margin: 0 7px;
+}
+	.numList > li {
+		counter-increment: num;
+		position: relative;
+		margin-top: 15px;
+		padding-left: 20px;
+	}
+	.numList > li:before {
+		content: counter(num)".";
+		font-weight: bold;
+		font-size: 15px;
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+	.numList > li p:first-child {
+		font-weight: bold;
+		font-size: 15px;
+	}
+	.snumList > li {
+		list-style-type: decimal;
+		margin-top: 15px;
+		margin-left: 2em;
+		line-height: 18px;
+	}
+
+/* リストスタイルが数字ではなく、見出しが太字のリスト（坂本追加） */
+	.pointList2 > li:before {
+		content: "●";
+	}
+	.pointList2 > li {
+		font-weight: bold;
+		font-size: 16px;
+		margin-top: 20px;
+	}
+	.pointList2 > p {
+		margin-top: 5px;
+		padding-left: 1em;
+	}
+
+/* --------------------------------------------------
+	青色アイコン
+-------------------------------------------------- */
+.icon {
+	display: inline-block;
+	font-size: 9px;
+	font-weight: bold;
+	text-align: center;
+	line-height: 20px;
+	background-color: #E5EBF3;
+	color: #003E8D;
+	padding: 0 5px;
+	margin-right: 2px;
+	vertical-align: top;
+}
+
+/* --------------------------------------------------
+	青色アイコン(WinActorのコースの紹介)
+-------------------------------------------------- */
+.iconimage {
+	/*display: inline-block;*/
+	font-size: 9px;
+	font-weight: bold;
+	text-align: center;
+	line-height: 25px;
+	background-color: #E5EBF3;
+	color: #003E8D;
+	padding: 20px 5px;
+	vertical-align: top;
+	margin: 15px auto;
+}
+
+/* --------------------------------------------------
+	RSSアイコン(トップページを除き、aタグに定義する)
+-------------------------------------------------- */
+a.rss {
+	position: absolute;
+	top: 6px;
+	right: 10px;
+	transition: 0.2s;
+	background: none;
+}
+a.rss:hover {
+	opacity: 0.6;
+	-ms-filter: "alpha(opacity=60)";
+}
+	a.rss img {
+		vertical-align: middle;
+	}
+
+/* --------------------------------------------------
+	疑似チェックボックス
+-------------------------------------------------- */
+.ckBox {
+	display: inline-block;
+	height: 24px;
+	font-weight: bold;
+	overflow: hidden;
+	vertical-align: middle;
+	cursor: pointer;
+	background: url("../image/common/ckBox.png") left top no-repeat;
+}
+	.ckBox.checked {
+		background-position: left bottom;
+	}
+	.ckBox input {
+		width: 24px;
+		cursor: pointer;
+		opacity: 0;
+		-ms-filter: "alpha(opacity=0)";
+	}
+
+/* --------------------------------------------------
+	ボタン風リンク
+-------------------------------------------------- */
+.blueBtn,
+.blueBtn_btn,
+.oraBtn {
+	width: 360px;
+	height: 60px;
+	line-height: 60px;
+	background: url("../image/common/btn_arrow.png") 92% center no-repeat;
+	background-size: 10px auto;
+	display: block;
+	color: #FFF;
+	font-weight: bold;
+	font-size: 14px;
+	margin: auto;
+	transition: 0.3s;
+	text-align: center;
+	cursor: pointer;
+}
+
+/*ボタン並列表示*/
+.oraBtn_Parallel{
+  margin: 50px 20px 0 20px;
+  display: inline-block;
+	width: 360px;
+	height: 60px;
+	line-height: 60px;
+	background: url("../image/common/btn_arrow.png") 92% center no-repeat;
+	background-size: 10px auto;
+	color: #FFF;
+	font-weight: bold;
+	font-size: 14px;
+	transition: 0.3s;
+	text-align: center;
+	cursor: pointer;
+}
+
+/*渡辺追加ここから
+.redBtn,
+.pinkBtn{
+width: 360px;
+	height: 60px;
+	line-height: 60px;
+	background: url("../image/common/btn_arrow.png") 92% center no-repeat;
+	background-size: 10px auto;
+	display: inline-block;
+	font-weight: bold;
+	font-size: 14px;
+	margin: auto;
+	transition: 0.3s;
+	text-align: center;
+	cursor: pointer;
+
+}
+
+.redBtn{background-color: red;}
+.pinkBtn{background-color: pink;}
+
+.redBtn a,
+.pinkBtn a{
+color: #FFF !important; 
+}
+
+.redBtn:hover,
+.pinkBtn:hover{
+	opacity: 0.7;
+		-ms-filter: "alpha(opacity=70)";
+}
+
+.redBtn a:hover,
+.pinkBtn a:hover{
+	text-decoration: none;
+}
+
+
+/*渡辺ここまで*/
+
+
+	.blueBtn a,
+	.blueBtn_btn a,
+	.oraBtn a,
+	.oraBtn_Parallel a{
+		display: block;
+		width: 100%;
+		height: 100%;
+		color: #FFF !important;
+	}
+
+	/* ホバー対応 */
+	.blueBtn:hover,
+	.blueBtn_btn:hover,
+	.oraBtn:hover,
+	.oraBtn_Parallel:hover{
+		opacity: 0.7;
+		-ms-filter: "alpha(opacity=70)";
+	}
+	.blueBtn a:hover,
+	.blueBtn_btn a:hover,
+	.oraBtn a:hover,
+	.oraBtn_Parallel a:hover{
+		text-decoration: none;
+	}
+
+
+/* 青 */
+.blueBtn,
+.blueBtn_btn{
+	background-color: #003E8D;
+}
+
+/* オレンジ */
+.oraBtn,
+.oraBtn_Parallel{
+	background-color: #F3951B;
+}
+
+
+/* --------------------------------------------------
+	テーブル(ブランクセル)
+-------------------------------------------------- */
+.table-cell-blank {
+	background: #F0F0F0;
+}
+
+/* --------------------------------------------------
+	ベーステーブルレイアウト(見出し太字＆背景色あり)
+-------------------------------------------------- */
+.baseTb {
+	width: 100%;
+	background-color: #FFF;
+	border-top: 1px solid #DDD;
+}
+	.baseTb tr > * {
+		vertical-align: middle;
+		border-bottom: 1px solid #DDD;
+		padding: 10px 30px 10px 20px;
+	}
+	.baseTb th {
+		width: 22%;
+		height: 40px;
+		font-weight: bold;
+		padding-right: 10px;
+		background-color: #F0F0F0;
+	}
+/* --------------------------------------------------
+	ベーステーブルレイアウト(見出し太字＆背景色あり)
+	※パディング間隔少なめ
+-------------------------------------------------- */
+.baseTb--tight {
+	background-color: #FFF;
+	border-top: 1px solid #DDD;
+}
+	.baseTb--tight tr > * {
+		vertical-align: middle;
+		border-bottom: 1px solid #DDD;
+		padding: 0.5em;
+	}
+	.baseTb--tight th {
+		height: 40px;
+		font-weight: bold;
+		padding-right: 5px;
+		background-color: #F0F0F0;
+	}
+/* --------------------------------------------------
+    自動改行なし
+-------------------------------------------------- */
+.nowrap{
+	white-space: nowrap;
+}
+/* --------------------------------------------------
+	導入事例一覧
+-------------------------------------------------- */
+.caseList {
+	margin-top: 40px;
+}
+
+/* --------------------------------------------------
+	トピック一覧
+-------------------------------------------------- */
+.topicList {
+	margin-top: 40px;
+	border-top: 1px solid #CCC;
+}
+	.topicList li {
+		border-bottom: 1px solid #CCC;
+	}
+		.topicList li a {
+			display: table;
+			width: 100%;
+			height: 65px;
+			background: url("../image/common/link_arrow2.png") 98% center no-repeat;
+			background-size: 9px auto;
+			color: #000;
+			transition: 0.2s;
+		}
+		.topicList li a:hover {
+			background-color: #F0F0F0;
+			text-decoration: none;
+		}
+			.topicList li a > * {
+				display: table-cell;
+				vertical-align: middle;
+			}
+			.topicList li a > time {
+				width: 130px;
+				padding-left: 10px;
+			}
+			.topicList li a > div {
+				width: 100px;
+			}
+				.topicList li a .icon {
+					width: 100%;
+				}
+
+			.topicList li a > p {
+				padding: 5px 35px 5px 40px;
+				word-break: break-all;
+			}
+
+/* --------------------------------------------------
+	お問い合わせBox
+-------------------------------------------------- */
+.contact {
+	width: 100%;
+	height: 240px;
+	background-color: #FFF;
+	box-shadow: 0 1px 1px 1px rgba(0,0,0,0.2);
+	padding: 30px 0 0;
+	text-align: center;
+}
+.contact.noSmt {
+	margin-top: 80px;
+}
+	.contact h2 {
+		letter-spacing: 0.6px;
+		line-height: 1.7;
+		font-size: 20px;
+		padding: 0;
+		margin: 0 0 8px;
+		background: none;
+	}
+	.contact h2:before {
+		display: none;
+	}
+
+	.contact .tel {
+		font-family: 'Montserrat';
+		display: inline-block;
+		background: url("../image/common/icon_tel.png") left center no-repeat;
+		background-size: 22px 22px;
+		font-size: 24px;
+		color: #003E8D;
+		padding-left: 25px;
+		margin-bottom: 11px;
+	}
+
+		.contact .tel span {
+			display: inline-block;
+			vertical-align: middle;
+			margin-left: 10px;
+			font-size: 13px;
+			font-weight: normal;
+			color: #333;
+			font-family: HiraKakuPro-W3, 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', sans-serif;
+		}
+
+		@media (min-width: 769px) {
+			.contact .tel a {pointer-events:none}
+		}
+
+
+
+/* --------------------------------------------------
+	横並びリスト(導入事例にて使用)
+-------------------------------------------------- */
+.lineList {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: space-between;
+}
+	.lineList > li {
+	flex-basis: 360px;
+	background-color: #FFF;
+	margin-bottom: 20px;
+	}
+
+/* 横並びリストの幅を10px小さくする(幅1024pxのブラウザだと余白がないため）*/
+	@media screen and (min-width: 960px) and (max-width: 1024px) {
+		.lineList > li {flex-basis: 350px;}
+	}
+
+
+/* --------------------------------------------------
+	右下三角つきBOX　白ベース
+-------------------------------------------------- */
+.triBox {
+	display: inline-block;
+	background: #FFF url("../image/common/icon_tri.png") right bottom no-repeat;
+	background-size: 12px 12px;
+	border-left: 1px solid #EFEFEF;
+	border-right: 1px solid #EFEFEF;
+	box-shadow: 0 4px 2px -2px rgba(0,0,0,0.15);
+	transition: 0.3s;
+}
+.triBox:hover {
+	background-color: #F0F0F0;
+}
+	.triBox a {
+		display: block;
+		width: 100%;
+		height: 100%;
+		padding: 18px;
+	}
+	.triBox a:hover {
+		text-decoration: none;
+	}
+
+	.triBox h3 {
+		background: none;
+		padding-left: 0;
+		margin: 0 0 10px;
+		font-size: 16px;
+	}
+	.triBox h3:before {
+		display: none;
+	}
+	.triBox p {
+		font-weight: normal;
+		display: block;
+		color: #282828;
+		margin-top: 15px;
+	}
+
+/* --------------------------------------------------
+	右下三角つきBOX　青ベース
+-------------------------------------------------- */
+.triBoxBlue {
+	height: 60px;
+	display: inline-block;
+	background: #E5EBF3 url("../image/common/icon_tri.png") 99% 96% no-repeat;
+	background-size: 12px 12px;
+	border: 2px solid #CFD7E3;
+	transition: 0.3s;
+}
+.triBoxBlue:hover {
+	background-color: #CFD7E3;
+}
+	.triBoxBlue a {
+		display: block;
+		width: 100%;
+		height: 100%;
+		font-weight: bold;
+		padding: 9px 27px 10px 18px;
+	}
+	.triBoxBlue a:hover {
+		text-decoration: none;
+	}
+
+/* --------------------------------------------------
+	会社案内メニューリンク
+-------------------------------------------------- */
+.corpMenu {
+	margin-top: 40px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+	.corpMenu li {
+		width: 360px;
+		height: 160px;
+		margin-bottom: 20px;
+		transition: 0.3s;
+		background: #FFF 20px 20px no-repeat;
+		background-size: 120px 120px;
+	}
+	.corpMenu li:hover {
+		background-color: #F0F0F0;
+	}
+		.corpMenu li a {
+			display: table;
+			width: 100%;
+			height: 100%;
+			padding-left: 165px;
+		}
+		.corpMenu li a:hover {
+			text-decoration: none;
+		}
+			.corpMenu li a > p {
+				display: table-cell;
+				font-weight: bold;
+				color: #282828;
+				vertical-align: middle;
+				font-size: 16px;
+			}
+
+/* --------------------------------------------------
+	見出し青背景＆リンク一覧
+	(サービス・製品一覧ページにて使用)
+-------------------------------------------------- */
+.blueTtl {
+	background-color: #FFF;
+	padding: 20px 20px 10px;
+	margin-top: 40px;
+}
+	.blueTtl h2 {
+		background-color: #E5EBF3;
+		color: #003E8D;
+		margin: 0 0 20px;
+		padding-left: 20px;
+	}
+	.blueTtl h2:before {
+		display: none;
+	}
+
+	/* テキストエリア */
+	.blueTtl .textAr {
+		padding: 0 10px 0 222px;
+		min-height: 115px;
+		background: left top no-repeat;
+		background-size: 200px auto;
+		overflow: hidden;
+	}
+		.blueTtl .textAr .link {
+			float: right;
+		}
+
+	/* 詳細リンク */
+	.blueTtl .detail {
+		margin: 20px 0 40px;
+		border-top: 1px solid #EAEAEA;
+	}
+		.blueTtl .detail li {
+			border-bottom: 1px solid #EAEAEA;
+		}
+			.blueTtl .detail li a {
+				min-height: 50px;
+				display: block;
+				font-weight: bold;
+				background: url("../image/common/link_arrow2.png") 98% center no-repeat;
+				background-size: 9px auto;
+				padding: 13px 10px;
+				transition: 0.3s;
+			}
+			.blueTtl .detail li a:hover {
+				text-decoration: none;
+				background-color: #F0F0F0;
+			}
+
+/* --------------------------------------------------
+	技術レポート一覧
+-------------------------------------------------- */
+.repoList {
+	border-top: 1px solid #CCC;
+	clear: both;
+}
+	.repoList li {
+		border-bottom: 1px solid #CCC;
+	}
+		.repoList li a {
+			width: 100%;
+			min-height: 110px;
+			display: block;
+			padding: 15px 30px 15px 0;
+			background: url("../image/common/link_arrow2.png") 98% center no-repeat;
+			background-size: 9px auto;
+			transition: 0.2s;
+		}
+		.repoList li a:hover {
+			background-color: #F0F0F0;
+			text-decoration: none;
+		}
+			.repoList li a h3 {
+				background: none;
+				padding-left: 0;
+				margin: 0 0 10px;
+				font-size: 16px;
+			}
+			.repoList li a h3:before {
+				display: none;
+			}
+			.repoList li a p {
+				color: #282828;
+				margin-top: 15px;
+			}
+
+/* --------------------------------------------------
+   カテゴリから探す
+-------------------------------------------------- */
+.searchCat {
+	background-color: #FFF;
+	padding: 0 25px;
+}
+	.searchCat .textAr {
+		background: #FFF 14px 25px no-repeat;
+		background-size: 67px auto;
+		padding: 25px 0 25px 120px;
+		border-top: 1px solid #DDD;
+	}
+	.searchCat .textAr:first-child {
+		border-top: none;
+	}
+		.searchCat .textAr h3 {
+			background: url("../image/common/link_arrow4.png") left 3px no-repeat;
+			background-size: 14px 14px;
+			margin: 0 0 10px;
+			padding-left: 25px;
+		}
+		.searchCat .textAr h3:before {
+			display: none;
+		}
+			.searchCat .textAr h3 a {
+				color: #282828;
+			}
+
+		.searchCat .textAr li {
+			background: url("../image/common/link_arrow3.png") left 6px no-repeat;
+			background-size: 7px auto;
+			margin: 0 0 5px 25px;
+			padding-left: 20px;
+		}
+
+/* --------------------------------------------------
+   ピックアップ
+-------------------------------------------------- */
+.pickUp {
+	background-color: #FFF;
+	margin-top: 70px;
+	padding: 20px;
+	overflow: hidden;
+}
+	.pickUp h2 {
+		font-size: 20px;
+		padding-left: 63px;
+		margin: 0 0 25px;
+		background: url("../image/common/pickup_bg.png") 13px top no-repeat;
+		background-size: 30px auto;
+		border-bottom: 2px solid #003E8D;
+	}
+	.pickUp h2:before {
+		display: none;
+	}
+
+	.pickUp figure {
+		width: 240px;
+		float: left;
+		margin: 5px 0 0 10px;
+		border: 1px solid #DFDFDF;
+	}
+		.pickUp figure img {
+			width: 100%;
+			height: auto;
+		}
+
+	.pickUp div {
+		width: 420px;
+		float: right;
+	}
+		.pickUp h3 {
+			padding-left: 0;
+			margin: 0;
+			font-size: 18px;
+		}
+		.pickUp h3:before {
+			display: none;
+		}
+		.pickUp p {
+			margin-top: 15px;
+		}
+		.pickUp .name {
+			font-size: 12px;
+			font-weight: bold;
+			margin: 5px 0;
+		}
+
+
+/*2020年3月事例トピックス（２つ並び）用*/
+
+
+.pickUp2 {
+	background-color: #FFF;
+	margin-top: 70px;
+	padding: 20px;
+	overflow: hidden;
+
+}
+	.pickUp2 h2 {
+		font-size: 20px;
+		padding-left: 63px;
+		margin: 0 0 25px;
+		background: url("../image/common/pickup_bg.png") 13px top no-repeat;
+		background-size: 30px auto;
+		border-bottom: 2px solid #003E8D;
+	}
+	.pickUp2 h2:before {
+		display: none;
+	}
+
+	/*.pickUp2 figure {
+		width: 240px;
+		float: left;
+		margin: 5px 0 0 10px;
+		border: 1px solid #DFDFDF;
+	}
+		.pickUp2 figure img {
+			width: 100%;
+			height: auto;
+		}*/
+
+	
+
+		.pickUp2 h3 {
+			padding-left: 0;
+			margin: 0;
+			font-size: 18px;
+		}
+		.pickUp2 h3:before {
+			display: none;
+		}
+
+		.pickUp2 h3 a:hover {
+			text-decoration: none;
+		}
+
+		.pickUp2 p {
+			margin-top: 15px;
+		}
+		.pickUp2 .name {
+			font-size: 12px;
+			font-weight: bold;
+			margin: 5px 0;
+		}
+
+		.inremote {
+			padding-right: 3%;
+			margin-bottom: 15px;
+			width:50%;
+		}
+
+		.remotepick{
+			display: flex;
+	/*justify-content:flex-end;*/
+	/*flex-wrap: wrap;*/
+	
+		}
+/*2020年3月事例のピックアップ（２つ並び）用ここまで*/
+
+
+/* --------------------------------------------------
+   取り扱い製品一覧
+-------------------------------------------------- */
+.productPickUp {
+	border-collapse:separate;
+	border-spacing:10px;
+	background:#fff;
+	margin-top: 20px;
+	padding: 20px 10px;
+	overflow: hidden;
+	border: 9px solid #EEE;
+	box-sizing: border-box;
+}
+.productPickUp div {
+	vertical-align:top;
+	border-spacing: 0;
+}
+.productPickUp div.left {
+	width:200px;
+	float: left;
+}
+.productPickUp div.left .tag ul {
+margin: 0;
+padding-top: 10px;
+list-style: none;
+}
+.productPickUp div.left .tag li {
+display: inline-block;
+border: 1px solid #ccc;
+background-color: #DBEEF3;
+text-decoration: none;
+color: #3084AB;
+width: 61px;
+height: 40px;
+margin: 2px 1px 3px 1px;
+text-align: center;
+font-size: 10px;
+vertical-align:top;
+padding: 5px 0;
+}
+
+/* 製品機能のアイコン無効用 */
+.productPickUp div.left .tag li.blank {
+background-color: #F0F0F0;
+color: #ccc;
+border: 1px solid #ccc;
+}
+
+.productPickUp div.right {
+	width:70%;
+	vertical-align:top;
+	float: right;
+}
+.productPickUp div.right h2 {
+	font-size: 20px;
+	margin: 0 0 25px;
+	border-bottom: 2px solid #000;
+	background-color: #fff;
+	padding: 0.5em 0.5em 0;
+}
+.productPickUp div.right h2:before {
+	display: none;
+}
+
+.productPickUp div.right ul {
+	padding-bottom: 1em;
+}
+.productPickUp div.right li a {
+	padding-left: 15px;
+}
+/* 取り扱い製品一覧でのロゴではmargin-topに余白を入れない */
+.productPickUp div.lightBox {
+	margin-top: 0;
+}
+
+/* --------------------------------------------------
+   社長メッセージ
+-------------------------------------------------- */
+.msgWrap {
+	overflow: hidden;
+	margin-top: 40px;
+}
+	.msgWrap figure {
+		width: 240px;
+		float: left;
+	}
+		.msgWrap figure img {
+			width: 100%;
+			height: auto;
+		}
+
+	.msgWrap .msgBox {
+		width: 475px;
+		float: right;
+	}
+		.msgWrap .msgBox p {
+			margin-bottom: 30px;
+		}
+		.msgWrap .msgBox p.sign {
+			text-align: right;
+			margin-bottom: 0;
+		}
+
+/* --------------------------------------------------
+   アクセスマップ
+-------------------------------------------------- */
+.accessMap h2 {
+min-height: 42px;
+line-height: 1.3;
+font-size: 18px;
+padding: 10px 0 8px 30px;
+margin: 40px 0 0;
+background-color: #F0F0F0;
+}
+
+.ggmap {
+position: relative;
+padding-bottom: 56.25%;
+padding-top: 30px;
+height: 0;
+overflow: hidden;
+}
+
+.ggmap iframe,
+.ggmap object,
+.ggmap embed {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+}
+
+/* --------------------------------------------------
+	ページネーション
+-------------------------------------------------- */
+.pagenation {
+	margin-top: 40px;
+	text-align: center;
+}
+	.pagenation li {
+		width: 40px;
+		height: 40px;
+		line-height: 40px;
+		font-size: 13px;
+		display: inline-block;
+		vertical-align: top;
+		color: #003E8D;
+		text-align: center;
+		/*margin-left: 10px;*/
+		margin-bottom: 10px;
+		background-color: #F0F0F0;
+	}
+	.pagenation li:first-child {
+		margin-left: 0;
+	}
+		.pagenation li a {
+			display: block;
+			width: 100%;
+			height: 100%;
+		}
+		.pagenation li img {
+			vertical-align: middle;
+		}
+
+		.pagenation li a:hover,
+		.pagenation li.act a {
+			text-decoration: none;
+			background-color: #E5EBF3;
+		}
+
+/* --------------------------------------------------
+	ページ内リンク
+-------------------------------------------------- */
+.linkInPage {
+	margin-top: 20px;
+}
+/* 隣接しているセクションのh2タグの上マージンを調整 */
+.linkInPage + section h2 {
+	margin-top: 50px;
+}
+	.linkInPage li {
+		font-size: 13px;
+		font-weight: bold;
+		display: inline-block;
+		border: 1px solid #DDD;
+		margin: 0 10px 5px 0;
+	}
+	.linkInPage li:last-child {
+		margin-right: 0;
+	}
+		.linkInPage li a {
+			display: block;
+			width: 100%;
+			height: auto;
+			color: #282828;
+			padding: 5px 10px 5px 20px;
+			background: #FFF url("../image/common/linkInPage_arrow.png") 8px center no-repeat;
+			background-size: 7px auto;
+			transition: 0.3s;
+		}
+		.linkInPage li a:hover {
+			text-decoration: none;
+			background-color: #E5EBF3;
+		}
+
+/* --------------------------------------------------
+	PDFダウンロードリンク
+-------------------------------------------------- */
+.dlPdf {
+	height: 40px;
+	display: inline-block;
+	border: 2px solid #DDD;
+	background: #FFF url("../image/common/icon_tri_gray.png") right 3px bottom 3px no-repeat;
+	background-size: 14px auto;
+	margin-top: 15px;
+	transition: 0.3s;
+}
+.dlPdf:hover {
+	background-color: #F0F0F0;
+}
+	.dlPdf a {
+		display: block;
+		width: 100%;
+		height: 100%;
+		text-align: center;
+		padding: 8px 25px 0 10px;
+		text-decoration: none;
+		color: #282828;
+	}
+
+	.dlPdf a span {
+		padding-left: 27px;
+		background: url("../image/common/icon_pdf.png") left center no-repeat;
+		background-size: 14px auto;
+	}
+
+/* --------------------------------------------------
+	サービス内容
+-------------------------------------------------- */
+.svDetail {
+	background-color: #FFF;
+	overflow: hidden;
+	padding: 30px 35px 30px 20px;
+	margin-bottom: 20px;
+}
+	.svDetail dt {
+		width: 140px;
+		height: 140px;
+		float: left;
+		background: #F0F0F0 center 58px no-repeat;
+		color: #003E8D;
+		font-weight: bold;
+		font-size: 18px;
+		text-align: center;
+		padding-top: 25px;
+	}
+
+	.svDetail dd {
+		width: 515px;
+		float: right;
+		color: #000;
+	}
+		.svDetail dd ul {
+			margin-top: 15px;
+		}
+		.svDetail dd ul li {
+			margin-top: 8px;
+		}
+
+/* --------------------------------------------------
+	対応範囲の表
+-------------------------------------------------- */
+.rangeTb {
+	width: 100%;
+	background-color: #FFF;
+}
+	.rangeTb th {
+		width: 27%;
+		vertical-align: middle;
+		padding: 10px 18px 10px 10px;
+		border-bottom: 1px solid #DDD;
+	}
+	.rangeTb tr:first-child th {
+		height: 40px;
+		font-weight: bold;
+		background-color: #F0F0F0;
+		border-top: 1px solid #DDD;
+	}
+	.rangeTb + .rangeTb tr:first-child th {
+		border-top: none;
+	}
+
+	.rangeTb td {
+		vertical-align: middle;
+		padding: 10px 10px 10px 18px;
+		border-left: 1px solid #DDD;
+		border-bottom: 1px solid #DDD;
+	}
+/* --------------------------------------------------
+	対応範囲の表
+	※パディング間隔少なめ
+-------------------------------------------------- */
+.rangeTb--tight {
+	background-color: #FFF;
+}
+	.rangeTb--tight th {
+		vertical-align: middle;
+		padding: 0.5em;
+		border-bottom: 1px solid #DDD;
+	}
+	.rangeTb--tight tr:first-child th {
+		font-weight: bold;
+		background-color: #F0F0F0;
+		border-top: 1px solid #DDD;
+	}
+	.rangeTb--tight + .rangeTb--tight tr:first-child th {
+		border-top: none;
+	}
+
+	.rangeTb--tight td {
+		vertical-align: middle;
+		padding: 0.5em;
+		border-left: 1px solid #DDD;
+		border-bottom: 1px solid #DDD;
+	}
+/* --------------------------------------------------
+	お客様の声
+-------------------------------------------------- */
+.voiceWrap {
+	background-color: #FFF;
+	padding: 18px 20px 30px 20px;
+	margin: 70px 0 80px;
+}
+	.voiceWrap h2 {
+		height: 42px;
+		line-height: 1;
+		padding: 7px 0 0 68px;
+		letter-spacing: 1px;
+		font-size: 20px;
+		margin-top: 0;
+		background: url("../image/common/voice_ttl_bg.png") 9px top no-repeat;
+		background-size: 40px auto;
+		border-bottom: 2px solid #003E8D;
+	}
+	.voiceWrap h2:before {
+		display: none;
+	}
+
+	.voiceWrap .voice {
+		padding-left: 72px;
+		background: url("../image/common/voice_bg.png") 7px center no-repeat;
+		background-size: 36px auto;
+		margin-bottom: 20px;
+	}
+		.voiceWrap .voice section {
+			background-color: #F5F5F5;
+			padding: 18px 20px;
+			position: relative;
+		}
+		.voiceWrap .voice section:before {
+			content: "";
+			display: block;
+			width: 0;
+			height: 0;
+			border-style: solid;
+			border-width: 10px 15px 10px 0;
+			border-color: transparent #F5F5F5 transparent;
+			position: absolute;
+			left: -15px;
+			top: 50%;
+			margin-top: -10px;
+		}
+			.voiceWrap .voice section h3 {
+				font-size: 16px;
+				padding-left: 0;
+				margin: 0 0 8px;
+			}
+			.voiceWrap .voice section h3:before {
+				display: none;
+			}
+
+/* --------------------------------------------------
+	お客様の声(シンプル)
+-------------------------------------------------- */
+.nomvoiceWrap {
+	background-color: #FFF;
+	padding: 18px 20px 30px 20px;
+	margin: 30px 0 50px;
+}
+
+	.nomvoiceWrap h4 {
+	font-size: 16px;
+	font-weight: bold;
+	margin-bottom: 0px;
+}
+
+	.nomvoiceWrap p {
+	margin-left: 17px;
+}
+/* --------------------------------------------------
+	お問い合わせ一覧用
+-------------------------------------------------- */
+.contactBox {
+	background: #FFF 20px 30px no-repeat;
+	padding: 30px 25px 30px 200px;
+	margin-bottom: 20px;
+}
+	.contactBox h2 {
+		min-height: 0;
+		margin: 0 0 12px;
+		padding: 0;
+		background: none;
+	}
+	.contactBox h2:before {
+		display: none;
+	}
+
+	.contactBox ul {
+		margin: 13px 0 0 20px;
+	}
+		.contactBox ul li {
+			margin-bottom: 5px;
+		}
+
+	/* 採用情報へのリンク */
+	.contactBox .triBoxBlue {
+		margin: 20px 0 0 20px;
+	}
+
+/* --------------------------------------------------
+	メールマガジン登録
+-------------------------------------------------- */
+.mailM {
+	overflow: hidden;
+	background-color: #FFF;
+	padding: 20px 18px 20px 25px;
+}
+	.mailM .mail {
+		float: left;
+		padding-left: 40px;
+		background: url("../image/common/icon_mail_blue.png") left center no-repeat;
+		background-size: 22px auto;
+		padding-top: 3px;
+	}
+	.mailM .link {
+		float: right;
+		padding-top: 3px;
+	}
+
+/* --------------------------------------------------
+	メールフォーム
+-------------------------------------------------- */
+.formSet {
+	overflow: hidden;
+	margin-bottom: 30px;
+}
+	.formSet dt {
+		width: 185px;
+		height: 35px;
+		float: left;
+		font-weight: bold;
+		padding-top: 6px;
+	}
+
+	.formSet input,
+	.formSet textarea{
+		-webkit-appearance: none;
+		border: 2px solid #DDD;
+	}
+
+	.formSet input {
+		width: 320px;
+		height: 35px;
+		padding: 0 10px;
+	}
+
+	.formSet textarea {
+		width: 100%;
+		height: 280px;
+		margin-top: 10px;
+		padding: 15px 18px;
+		resize: none;
+	}
+
+/* 必須アイコン */
+img.req {
+	margin: 0 9px;
+	vertical-align: middle;
+}
+
+/* --------------------------------------------------
+	総合お問い合わせ
+-------------------------------------------------- */
+.googleForm {
+width: 760px;
+height: 1600px;
+overflow: hidden;
+position: relative;
+}
+.googleForm iframe {
+	width: 760px;
+	height: 9999px;
+}
+
+/* --------------------------------------------------
+	メルマガ登録
+-------------------------------------------------- */
+.googleForm-MG {
+width: 760px;
+height: 900px;
+overflow: hidden;
+position: relative;
+}
+
+/* --------------------------------------------------
+	WinActor申し込み
+-------------------------------------------------- */
+.googleForm-WA {
+width: 760px;
+/*height: 1700px;*/
+overflow: hidden;
+position: relative;
+}
+.googleForm iframe {
+	width: 760px;
+	height: 9999px;
+}
+
+/* --------------------------------------------------
+	ローディングGIF
+-------------------------------------------------- */
+.loading {
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	background-size: 40px 40px;
+	display: block;
+	height: 40px;
+	left: 50%;
+	margin-left: -20px;
+	position: absolute;
+	width: 40px;
+	z-index: 100;
+}
+
+/* --------------------------------------------------
+	個人情報の取扱いについて
+-------------------------------------------------- */
+.ckPrivacy {
+	background-color: #EEE;
+	padding: 25px 20px 30px;
+	margin-bottom: 60px;
+}
+	.ckPrivacy dt {
+		font-weight: bold;
+		margin-bottom: 12px;
+	}
+	.ckPrivacy .ckBox {
+		width: 90px;
+		display: block;
+		margin: 20px auto 0;
+	}
+
+/* --------------------------------------------------
+	サイトポリシー
+-------------------------------------------------- */
+/* 使用環境アイコン（Windows） */
+.sysWin {
+	background: transparent url("/image/common/icon_win.png") no-repeat scroll left 40% / 15px 15px;
+	padding-left: 1.5em;
+}
+/* 使用環境アイコン（Mac） */
+.sysMac {
+	background: transparent url("/image/common/icon_mac.png") no-repeat scroll left 40% / 15px 15px;
+	padding-left: 1.5em;
+}
+
+/* --------------------------------------------------
+	担当エンジニアから一言
+-------------------------------------------------- */
+.word {
+	border: 9px solid #EEE;
+	padding: 10px 20px 15px;
+	margin-bottom: 70px;
+	background-color: #F5F5F5;
+}
+	.word h2 {
+		margin: 0;
+		background: url("../image/common/word_ttl_bg.png") left 45% no-repeat;
+		background-size: 14px auto;
+	}
+	.word h2:before {
+		display: none;
+	}
+
+/* --------------------------------------------------
+	灰色背景ボックス
+-------------------------------------------------- */
+.grayBox {
+	background-color: #EEE;
+	padding: 30px;
+	margin-top: 70px;
+}
+	.grayBox h2 {
+		min-height: 0;
+		padding: 0;
+		margin: 0 0 15px;
+		background: none;
+	}
+	.grayBox h2:before {
+		display: none;
+	}
+
+/* --------------------------------------------------
+	灰色太線ボックス
+-------------------------------------------------- */
+.grayBorBox {
+	border: 10px solid #F0F0F0;
+	padding: 18px 15px;
+	margin-bottom: 20px;
+	background-color: #F7F7F7;
+}
+	.grayBorBox h3 {
+		margin: 0 0 10px;
+		padding-left: 0;
+	}
+	.grayBorBox h3:before {
+		display: none;
+	}
+	.grayBorBox p + .link,
+	.grayBorBox p + .linkPC {
+		margin-top: 10px;
+	}
+
+/* --------------------------------------------------
+	白背景ボックス
+-------------------------------------------------- */
+.whiteBox {
+	background-color: #FFF;
+	padding: 25px;
+}
+
+/* --------------------------------------------------
+	ライトボックス表示用
+-------------------------------------------------- */
+.lightBox {
+	margin-top: 25px;
+	overflow: hidden;
+}
+	.lightBox figure img {
+		max-width: 100%;
+	}
+	.lightBox p {
+		height: 20px;
+		padding: 2px 0 0 25px;
+		margin-top: 10px;
+		float: right;
+		background: url("../image/common/icon_loope.png") left center no-repeat;
+		font-weight: bold;
+		font-size: 12px;
+		color: #003E8D;
+		cursor: pointer;
+		transition: 0.3s;
+	}
+	.lightBox p:hover {
+		opacity: 0.7;
+		-ms-filter: "alpha(opacity=70)";
+	}
+
+/* ライトボックス表示時 */
+.overlay {
+	display: none;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background: rgba(0,0,0,0.5);
+	filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0,StartColorStr=#80000000,EndColorStr=#80000000);
+}
+	.overlay .tbl {
+		display: table;
+		width: 100%;
+		height: 100%;
+	}
+		.overlay .tbl .cell {
+			display: table-cell;
+			vertical-align: middle;
+		}
+			.overlay .tbl .cell .closeArea {
+				position: fixed;
+				left: 0;
+				top: 0;
+				width: 100%;
+				height: 100%;
+			}
+	/* イメージ表示 */
+	.overlay .imgCont {
+		display: inline-block;
+		width: 100%;
+		max-width: 1000px;
+		padding: 60px 28px 28px;
+		position: relative;
+		top: 50%;
+		background-color: #FFF;
+		text-align: center;
+	}
+		.overlay .imgCont .close {
+			width: 35px;
+			height: 35px;
+			border: 2px solid #003E8D;
+			background: #FFF url("../image/common/icon_close.png") center center no-repeat;
+			background-size: 20px auto;
+			position: absolute;
+			top: 10px;
+			right: 10px;
+			cursor: pointer;
+		}
+		.overlay .imgCont img {
+			width: 100%;
+			max-width: 940px;
+		}
+
+/* 画像に半透明のフィルターを乗せる */
+.ImgHov a:hover{
+	display: block;
+	color: #FFF;
+	opacity: 0.7;
+	-ms-filter: "alpha(opacity=70)";
+}
+/* --------------------------------------------------
+	メリットの見出し
+-------------------------------------------------- */
+.merit {
+	min-height: 60px;
+	padding: 17px 0 10px 78px;
+	background: #E5EBF3 url("../image/common/merit_bg.png") 20px center no-repeat;
+	background-size: 38px auto;
+	color: #003E8D;
+	font-size: 20px;
+	margin-bottom: 0;
+}
+.merit:before {
+	width: 0;
+	height: 0;
+	background: transparent;
+	border-style: solid;
+	border-width: 10px 10px 0 10px;
+	border-color: #E5EBF3 transparent transparent;
+	top: 100%;
+	left: 76px;
+}
+
+/* --------------------------------------------------
+	サービスの流れ
+-------------------------------------------------- */
+.flow {
+	overflow: hidden;
+	counter-reset: flowCnt;
+}
+	.flow ol {
+		float: left;
+		width: 360px;
+	}
+	/* 右側のリスト */
+	.flow ol.rightList {
+		float: right;
+	}
+		.flow li {
+			width: 100%;
+			min-height: 50px;
+			padding: 15px 15px 15px 27px;
+			margin-bottom: 30px;
+			background-color: #E5EBF3;
+			counter-increment: flowCnt;
+			position: relative;
+		}
+		.flow li:before {
+			content: counter(flowCnt)". ";
+			position: absolute;
+			top: auto;
+			left: 10px;
+		}
+		.flow li:after {
+			content: "";
+			display: block;
+			width: 22px;
+			height: 20px;
+			background: url("../image/common/flow_arrow.png") no-repeat;
+			background-size: 100% auto;
+			position: absolute;
+			left: 50%;
+			bottom: -26px;
+			margin-left: -11px;
+		}
+		.flow ol.rightList li:last-child:after {
+			display: none;
+		}
+
+/* --------------------------------------------------
+	サービスの流れ（幅100%）
+-------------------------------------------------- */
+.flow100 {
+	overflow: hidden;
+	counter-reset: flowCnt;
+	text-align: center;
+}
+	.flow100 ol {
+		width: auto;
+	}
+
+		.flow100 li {
+			width: 100%;
+			min-height: 50px;
+			padding: 15px 15px 15px 27px;
+			margin-bottom: 30px;
+			background-color: #E5EBF3;
+			counter-increment: flowCnt;
+			position: relative;
+		}
+		.flow100 li span {
+			font-weight: bold;
+		}
+
+		.flow100 li:before {
+			content: counter(flowCnt)". ";
+			top: auto;
+			left: 10px;
+			font-weight:bold
+		}
+		.flow100 li:after {
+			content: "";
+			display: block;
+			width: 22px;
+			height: 20px;
+			background: url("../image/common/flow_arrow.png") no-repeat;
+			background-size: 100% auto;
+			position: absolute;
+			left: 50%;
+			bottom: -26px;
+			margin-left: -11px;
+		}
+		.flow100 ol li:last-child:after {
+			display: none;
+		}
+
+/* --------------------------------------------------
+	留意事項
+-------------------------------------------------- */
+.heed {
+	background-color: #FEF3F0;
+	border: 1px solid #F0E6E3;
+	padding: 22px 30px;
+	margin-top: 70px;
+}
+	.heed h2 {
+		min-height: 26px;
+		line-height: 1.3;
+		letter-spacing: 1.5px;
+		font-size: 20px;
+		padding: 0 0 0 50px;
+		margin: 0 0 15px;
+		background: url("../image/common/heed_ttl_bg.png") left top no-repeat;
+		background-size: auto 26px;
+	}
+	.heed h2:before {
+		display: none;
+	}
+
+/* --------------------------------------------------
+	サイトマップ
+-------------------------------------------------- */
+.mapBox {
+	width: 355px;
+	margin-top: 40px;
+	float: left;
+}
+.mapBox + .mapBox {
+	float: right;
+}
+	.mapBox section {
+		padding: 23px 0;
+		border-top: 1px solid #DDD;
+	}
+		.mapBox h2 {
+			min-height: 0;
+			font-size: 16px;
+			padding: 0;
+			margin: 0;
+			background-color: transparent;
+			letter-spacing: 2px;
+		}
+		.mapBox h2:before {
+			display: none;
+		}
+
+	/* 一覧 */
+	.mapBox .mapLink > li {
+		font-size: 12px;
+		font-weight: bold;
+		background: url("../image/common/link_arrow3.png") 9px 4px no-repeat;
+		background-size: 7px auto;
+		margin-top: 20px;
+		padding-left: 25px;
+	}
+
+		/* 一覧中の一覧 */
+		.mapBox .mapLink .inMap > li {
+			background: url("../image/common/link_arrow1.png") left 5px no-repeat;
+			background-size: 4px auto;
+			font-weight: normal;
+			margin-top: 10px;
+			padding-left: 15px;
+		}
+
+/*//////////////////////////////////////////////////
+	Base layout
+///////////////////////////////////////////////////*/
+/* --------------------------------------------------
+	header
+-------------------------------------------------- */
+.siteHeader {
+	max-width: 1440px;
+	min-width: 1000px;
+	min-height: 90px;
+	padding: 5px 140px 0 30px;
+	position: relative;
+	margin: auto;
+}
+.siteHeader--en {
+	padding: 5px 30px 0 30px;
+}
+@media (max-width: 1052px) {
+	.siteHeader {
+		padding: 5px 130px 0 5px;
+	}
+	.siteHeader--en {
+		padding: 5px 30px 0 30px;
+	}
+}
+
+	/* スマホ表示での2段目 */
+	.headerMainNav {
+		display: block;
+	}
+	.headerMainNav--en {
+		/* 英語ページでキャッチを表示しないため、他の要素の高さを調整 */
+		padding-top: 15px;
+	}
+
+	/* キャッチコピー */
+	.slogan {
+		display: block;
+		font-weight: bold;
+		font-size: 9px;
+		color: #282828;
+	}
+
+	/* ロゴ */
+	.siteLogo {
+		display: inline-block;
+		margin-top: 13px;
+	}
+	.siteLogo:hover {
+		opacity: 0.7;
+		-ms-filter: "alpha(opacity=70)";
+		transition: 0.3s;
+	}
+	.siteLogo a {
+		text-decoration: none;
+	}
+
+/*  グローバルナビゲーション
+-------------------------------------------------- */
+#gNav {
+	position: absolute;
+	left: 15%;
+	bottom: 0;
+	z-index: 100;
+}
+	#gNav p {
+		display: none;
+	}
+	#gNav li {
+		display: inline-block;
+	}
+	#gNav a:hover {
+		text-decoration: none;
+	}
+	#gNav .navWrap > ul > li {
+		position: relative;
+	}
+
+		#gNav .navWrap > ul > li > a{
+			   height: 44px;
+			   }
+			#gNav .navWrap > ul > li a {
+				display: block;
+				color: #282828;
+				font-weight: bold;
+				border-bottom: 3px solid #F9F9F9;
+				padding: 0px 13px;
+				letter-spacing: 3px;
+				font-size: 13px;
+				}
+		#gNav .navWrap > ul > li.act > a {
+			border-bottom-color: #003E8D;
+		}
+
+	/* 下階層ナビ */
+	#gNav .navWrap .inNav {
+		width: 200px;
+		position: absolute;
+		top: 44px;
+		left: 0;
+		background-color: #F9F9F9;
+		display: none;
+		padding: 10px 0;
+	}
+
+		#gNav .navWrap .inNav li {
+			/* height: 30px; */
+			display: block;
+			padding: 3px 10px;
+		}
+			#gNav .navWrap .inNav li a {
+			/*
+				height: 24px;
+				line-height: 24px;
+			*/
+				padding: 0 7px;
+				letter-spacing: 0.5px;
+				border-bottom: none;
+			}
+
+			#gNav .navWrap .inNav li a:hover {
+				background-color: #F0F0F0;
+			}
+
+			#gNav .navWrap ul li.act li a:hover {
+					background-color: #F0F0F0;
+				}
+
+	/* サービス・製品のみサブメニュー追加*/
+	@media (min-width: 768px) {
+		/*　画面サイズが768px以上はここを読み込む　*/
+			#gNav .navWrap .inNav.services li {
+			/* height: 60px; */
+			display: block;
+			padding: 3px 10px;
+			}
+			#gNav .navWrap .inNav.services li a {
+			/*
+				height: 24px;
+				line-height: 24px;
+			
+				padding: 3px 7px;*/
+				letter-spacing: 0.5px;
+				border-bottom: none;
+			}
+
+			/*下階層ナビにサービス・製品サブメニュー追加*/
+				#gNav .navWrap .inNav.services li ul{
+					margin-bottom: 5px;
+				}
+
+			/*
+				#gNav .navWrap .inNav.services li ul li {
+					height: 15px !important;
+				}
+				*/
+
+				#gNav .navWrap .inNav.services li ul li span {
+				/*
+					line-height: 11px;
+				*/
+					padding: 0 2px 2px 0;
+					letter-spacing: 0.5px;
+					border-bottom: none;
+					display: block;
+				}
+				#gNav .navWrap .inNav.services li ul li span a {
+				/*一旦非表示
+					height: 17px !important;
+					line-height: 17px;
+				*/
+					font-size: 11px;
+					font-weight: normal;
+					background: url(/image/common/link_arrow1.png) 0px 7px no-repeat;
+					background-size: 4px auto;
+					padding-left: 8px;
+
+				}
+
+				#gNav .navWrap .inNav.services li ul li span a:hover {
+					background: url(/image/common/link_arrow1.png) 0px 7px no-repeat;
+					background-size: 4px auto;
+					padding-left: 8px;
+					background-color: #F0F0F0 !important;
+				}
+	}
+
+
+@media (max-width: 1052px) {
+	#gNav .navWrap > ul > li a {
+		padding: 0 10px;
+		letter-spacing: 2px;
+	}
+}
+
+/*  言語切り替え＆ページ内検索
+-------------------------------------------------- */
+#scWrap {
+	width: 180px;
+	float: right;
+}
+	#scWrap li {
+		display: inline-block;
+		color: #174682;
+		letter-spacing: 1px;
+		font-weight: bold;
+		font-family:"Myriad Pro", "メイリオ", "Meiryo UI", "ＭＳ Ｐゴシック", sans-serif;
+	}
+	#scWrap li:first-child:after {
+		content: "/";
+		margin: 0 5px;
+	}
+		#scWrap li a {
+			font-weight: normal;
+		}
+		#scWrap li a:hover {
+			text-decoration: underline;
+		}
+
+/* スマホで表示する検索ボタン*/
+#scBtn {
+	display: none;
+}
+
+/* サイト内検索フォーム */
+.siteSearchForm {
+	background: #F2F2F0;
+	position: relative;
+}
+	.siteSearchBox {
+		background: #F2F2F0;
+		width: calc(100% - 30px);
+		margin-left: 30px;
+		height: 30px;
+	}
+	.siteSearchBtn {
+		background: url("../image/common/icon_search.png") center center no-repeat;
+		background-size: 14px 14px;
+		cursor: pointer;
+		height: 30px;
+		left: 5px;
+		position: absolute;
+		top: 0;
+		width: 20px;
+	}
+
+/* 大きめのサイト内検索フォーム */
+.siteSearchForm--lg .siteSearchBox {
+	font-size: 15px;
+	width: calc(100% - 40px);
+	margin-left: 40px;
+	height: 40px;
+}
+.siteSearchForm--lg .siteSearchBtn {
+	height: 40px;
+	width: 40px;
+}
+
+/* コンテンツエリアの検索フォーム */
+.siteSearch--inContent {
+	padding: 20px 40px;
+}
+
+/*  情報リンク
+-------------------------------------------------- */
+#infoLink {
+	display: flex;
+	flex-direction: column;
+	width: 120px;
+	position: absolute;
+	top: 0;
+	right: 0;
+	clear: both;
+}
+	#infoLink li {
+		vertical-align: top;
+		width: 120px;
+		height: 45px;
+	}
+		#infoLink li a {
+			width: 100%;
+			height: 100%;
+			display: block;
+			line-height: 1;
+			padding-top: 17px;
+			color: #FFF;
+			font-weight: bold;
+			transition: 0.5s;
+			text-decoration: none;
+		}
+		#infoLink li a:hover {
+			opacity: 0.7;
+			-ms-filter: "alpha(opacity=70)";
+		}
+		#infoLink li.adop a {
+			text-align: center;
+			background-color: #F3951B;
+			letter-spacing: 3px;
+			padding-left: 3px;
+		}
+		#infoLink li.mail a {
+			font-size: 12px;
+			padding-left: 12px;
+			background: #003E8D url("../image/common/icon_mail.png") 98px center no-repeat;
+			background-size: 14px 14px;
+			letter-spacing: 1.5px;
+		}
+
+/* --------------------------------------------------
+	main
+-------------------------------------------------- */
+
+/*  メイン全体
+-------------------------------------------------- */
+article .wrap {
+	width: 1000px;
+	margin: auto;
+}
+
+article .wrap:after {
+	content: ".";
+	display: block;
+	height: 0;
+	font-size: 0;
+	clear: both;
+	visibility: hidden;
+}
+
+/*  メイン左側
+-------------------------------------------------- */
+ 	#main {
+	width: 740px;
+	float: left;
+}
+
+/*landingページの場合*/
+ 	#landing {
+	width: 1000px;
+	float: left;
+}
+
+/* 左に10pxのマージンを追加(幅1024pxのブラウザだと余白がないため）*/
+	@media screen and (min-width: 768px) and (max-width: 1024px) {
+	#main {
+    width: 720px;
+    float: left;
+    margin-left: 20px;
+    }
+}
+
+/* 左に10pxのマージンを追加(幅1024pxのブラウザだと余白がないため）*/
+	@media screen and (min-width: 768px) and (max-width: 1024px) {
+	#landing {
+    width: 720px;
+    float: left;
+    margin-left: 20px;
+    }
+}
+
+/*  メイン左側（右のナビゲーションなし）
+-------------------------------------------------- */
+ 	#noside-main {
+	float: left;
+}
+
+/* 左に10pxのマージンを追加(幅1024pxのブラウザだと余白がないため）*/
+	@media screen and (min-width: 768px) and (max-width: 1024px) {
+	#noside-main {
+    width: 720px;
+    float: left;
+    margin-left: 20px;
+    }
+}
+
+
+/*  メイン右側（サイドメニュー）
+-------------------------------------------------- */
+#sideMenu {
+	width: 220px;
+	float: right;
+	font-weight: bold;
+}
+
+/*1024pxブラウザ用*/
+@media screen and (min-width: 960px) and (max-width: 1024px) {
+	#sideMenu {
+    width: 220px;
+    float: right;
+    font-weight: bold;
+    margin-right: 20px;
+	}
+}
+
+	#sideMenu a {
+		color: #282828;
+		display: block;
+	}
+	#sideMenu a:hover {
+		text-decoration: none;
+	}
+
+	/* ローカルナビゲーション */
+	#sideMenu nav {
+		margin-top: 5px;
+		padding: 4px;
+		border: 1px solid #DDD;
+		margin-bottom: 20px;
+		background-color: #FFF;
+	}
+		#sideMenu nav li {
+			margin-top: 10px;
+		}
+			#sideMenu nav a {
+		/*一旦非表示
+				height: 36px;
+				line-height: 36px;
+		*/
+		    	padding-top: 7px;
+				padding-left: 30px;
+				padding-bottom: 7px;
+				background: url("../image/common/link_arrow3.png") 12px 14px no-repeat;
+				background-size: 6px auto;
+				transition: 0.3s;
+			}
+			#sideMenu nav dt a {
+				font-size: 15px;
+				background: url("../image/common/link_arrow4.png") 8px center no-repeat;
+				background-size: 14px auto;
+			}
+
+			#sideMenu nav .act > a,
+			#sideMenu nav a:hover {
+				background-color: #F0F0F0;
+			}
+
+			/*
+			#sideMenu nav .act a,
+			#sideMenu nav a:hover {
+				background-color: #F0F0F0;
+			}
+			*/
+
+		/* サービス・製品にサブメニュー追加 */
+/*
+		#sideMenu #sub_services nav li {
+			margin-top: 0px;
+		}
+		*/
+
+			#sideMenu #sub_services nav dl dd ul li ul li {
+				margin-top: 0;
+			}
+			#sideMenu #sub_services nav dl dd ul li ul li a {
+				font-weight: normal;
+				font-size: 85%;
+		/* height非表示開始
+				height: 28px !important;
+				line-height: 28px !important;
+		ine-height非表示終了*/
+				padding-top: 5px;
+				padding-left: 30px;
+				padding-bottom: 5px;
+				background: url("../image/common/link_arrow1.png") 20px 9px no-repeat;
+				background-size: 4px auto;
+				transition: 0.3s;
+			}
+			#sideMenu #sub_services nav dl dd ul li ul li a:hover {
+				background-color: #F0F0F0;
+			}
+
+			#sideMenu #sub_services nav dl dd ul li ul li.act a,
+			#sideMenu div#sub_services nav dl dd ul li ul li.act a:hover{
+				background-color: #F0F0F0;
+			}
+
+
+	/* バナー部共通設定 */
+	#sideMenu #bnr > ul > li {
+		min-height: 60px;
+		border: 1px solid #DDD;
+		margin-bottom: 20px;
+		background: #FFF 10px 45% no-repeat;
+		background-size: 48px auto;
+	}
+
+	/* 導入事例・技術レポート */
+	#sideMenu #bnr li.case,
+	#sideMenu #bnr li.report {
+		border-width: 2px;
+		transition: 0.3s;
+	}
+		#sideMenu #bnr li.case:hover,
+		#sideMenu #bnr li.report:hover {
+			background-color: #F0F0F0;
+		}
+		#sideMenu #bnr li.case {
+			margin-bottom: 10px;
+			background-image: url("../image/common/sideMenu_case.png");
+		}
+		#sideMenu #bnr li.report {
+			background-image: url("../image/common/sideMenu_report.png");
+		}
+			#sideMenu #bnr li.case a,
+			#sideMenu #bnr li.report a {
+				height: 100%;
+				line-height: 58px;
+				font-size: 15px;
+				padding-left: 75px;
+				background: url("../image/common/icon_tri.png") right 3px bottom 3px no-repeat;
+				background-size: 12px 12px;
+			}
+
+	.lightBox figure.imgTeam {
+		float:left;
+	}
+
+	.lightBox .imgTeam .title {
+		font-size: 75%;
+	}
+
+	.lightBox .read	{
+		background-color: #003e8d;
+		color: #FFF;
+		padding: 2em;
+		margin-left: 45.2%;
+	}
+
+	/* お問い合わせ */
+	#sideMenu #bnr li.contact {
+		height: auto;
+		font-weight: normal;
+		box-shadow: none;
+		padding: 18px 10px;
+	}
+		#sideMenu #bnr li.contact p {
+			font-size: 13px;
+		}
+
+		#sideMenu #bnr li.contact .oraBtn {
+			width: 180px;
+			height: 40px;
+			line-height: 40px;
+			background-size: 7px auto;
+			margin-bottom: 15px;
+		}
+			#sideMenu #bnr li.contact .oraBtn span {
+				display: none;
+			}
+
+		#sideMenu #bnr li.contact .tel {
+			font-size: 22px;
+			padding-left: 30px;
+			margin: 0;
+			position: relative;
+		}
+			#sideMenu #bnr li.contact .tel span {
+				display: block;
+				width: 100%;
+				font-size: 10px;
+				font-weight: normal;
+				margin-left: 0;
+				position: absolute;
+				left: 0;
+				color: #282828;
+				font-family: HiraKakuPro-W3, 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', sans-serif;
+			}
+
+		#sideMenu #bnr li.contact aside {
+			font-size: 10px;
+			margin-top: 15px;
+		}
+
+	/* 関連サービス */
+	#sideMenu #bnr li.svList dt {
+		font-size: 15px;
+		line-height: 50px;
+		text-align: center;
+		background-color: #EEE;
+		font-weight: bold;
+		border-bottom: 1px solid #DDD;
+	}
+	#sideMenu #bnr li.svList dd {
+		padding: 15px 15px 5px;
+	}
+		#sideMenu #bnr li.svList dd li {
+			background: url("../image/common/link_arrow3.png") left 5px no-repeat;
+			background-size: 6px auto;
+			padding-left: 15px;
+			margin-bottom: 10px;
+		}
+			#sideMenu #bnr li.svList dd li a:hover {
+				text-decoration: underline;
+			}
+
+/* --------------------------------------------------
+	footer
+-------------------------------------------------- */
+	footer {
+	width: 100%;
+	font-size: 12px;
+	margin-top: 100px;
+	position: relative;
+	background-color: #CEDDEF;
+}
+
+	/* ページトップへ */
+	footer #pageTop {
+		width: 100%;
+		text-align: right;
+		position: fixed;
+		top: auto;
+		bottom: 100px;
+		right: 0;
+		z-index: 999;
+		display: none;
+	}
+	footer #pageTop.stay {
+		position: relative;
+		bottom: 100px;
+	}
+		footer #pageTop.stay p {
+			right: 0;
+		}
+		footer #pageTop p {
+			width: 80px;
+			height: 100px;
+			position: absolute;
+			top: 0;
+			right: 0;
+			z-index: 1;
+			overflow: hidden;
+			text-indent: 100%;
+			white-space: nowrap;
+			background: url("../image/common/pageTop_pc.png") no-repeat;
+		}
+		footer #pageTop p:hover {
+			cursor: pointer;
+			opacity: 0.7;
+			-ms-filter: "alpha(opacity=70)";
+		}
+
+	footer #gmapTopFooter {
+		width: 100%;
+		height: 300px;
+	}
+
+	footer .outLink a {
+		background: url("../image/common/icon_outlink_b.png") right 40% no-repeat;
+		background-size: 10px 10px;
+		padding-right: 15px;
+	}
+	footer li.outLink a {
+		padding-right: 20px;
+	}
+
+/* フッターのサイトマップ */
+footer > div {
+	width: 1000px;
+	margin: auto;
+}
+
+footer .footTop {
+	padding-top: 25px;
+}
+
+/* フッターメニューの左に20pxの余白を追加(幅1024pxのブラウザだと余白がないため）*/
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+	footer .footTop {padding-left: 25px;}
+}
+
+	footer .footTop > p:first-child {
+		margin-bottom: 20px;
+		font-weight: bold;
+	}
+
+footer .tbWrap {
+	display: table;
+	position: relative;
+	z-index: 3;
+}
+	footer .tbWrap dl {
+		display: table-cell;
+		padding: 0 40px;
+		border-right: 1px solid #A9BFD9;
+		vertical-align: top;
+	}
+	footer .tbWrap dl:first-child {
+		padding-left: 0;
+	}
+	footer .tbWrap dl:nth-of-type(4) {
+		width: 210px;
+	}
+	footer .tbWrap dl:last-child {
+		padding-right: 0;
+		border-right: none;
+	}
+
+	footer .tbWrap p,
+	footer .tbWrap dt {
+		font-weight: bold;
+		margin-bottom: 13px;
+	}
+	footer .tbWrap dd li {
+		margin-bottom: 8px;
+	}
+
+/* コピーライトなど */
+footer .footBot {
+	padding: 35px 0 20px;
+	overflow: hidden;
+}
+
+/* コピーライトの左に20pxの余白を追加(幅1024pxのブラウザだと余白がないため）*/
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+	footer .footBot {padding: 35px 0 20px 20px;}
+}
+
+	footer .footBot ul {
+		float: left;
+	}
+
+/* コピーライトを画像から文字に置き換え（2017/1/5 坂本）*/
+	footer .footBot .cp {
+		font-family: "Myriad Pro", "メイリオ", "Meiryo UI", "ＭＳ Ｐゴシック", sans-serif;
+		color: #737c87;
+		width: 300px;
+		letter-spacing: 0.1em;
+		font-size: 13px;
+	}
+
+	footer .footBot ul {
+		width: 800px;
+		margin: 10px 0 15px;
+	}
+		footer .footBot li {
+			display: inline-block;
+			vertical-align: top;
+			margin-left: 30px;
+		}
+		footer .footBot li:first-child {
+			margin-left: 0;
+		}
+
+	/* GlobalSign */
+	footer .footBot #sign {
+		float: right;
+	}
+		footer .footBot #sign .pm {
+			margin-left: 21px;
+		}
+/* --------------------------------------------------------
+	WinActorー
+-------------------------------------------------------- */
+
+/*サービス紹介ボタン*/
+.con-services{
+}
+
+.con-services > a .box1,
+.con-services > a .box2{	
+	margin-right: 32px;
+	margin-top: 20px;
+}
+
+.con-services > a .box3{
+	margin-right: 0px;
+	margin-top: 20px;
+}
+
+@media screen and (max-width: 1024px) {
+	.con-services > a .box3{
+	margin-top: 20px;
+	}
+}
+
+/* 無料セミナー画像 */
+.pickup_seminar.iconimage:before {
+	background-image: url("../image/services/constrution/winactor/seminar/seminar2_01.png");
+	height: 200px;
+}
+
+/* 有料セミナー画像 */
+.pickup_handson.iconimage:before{
+	background-image: url("../image/services/constrution/winactor/seminar/seminar2_02.png");
+	height: 200px;
+}
+
+/* 準備中セミナー画像 
+.pickup10.iconimage:before {
+	background-image: url("../image/services/constrution/winactor/seminar/junbi.png");
+	height: 200px;
+}
+*/
+
+/*無料・有料ボタン*/
+.freeBtn,
+.tollBtn{
+	position: absolute;
+	left: 90%;
+	top: -4%;"
+}
+
+.pickup_seminar,
+.pickup_handson{
+	position: absolute; 
+	/*left: 1%; */
+	top: -4%;
+	min-height: 160px;
+	background-color: #EBEBEB;
+	position: relative;
+    box-shadow:5px 5px;
+    border:1px solid #000;
+    /*width:930px;*/
+    /*margin: 15px 15px 15px;*/
+}
+
+.pickup_seminar:before,
+.pickup_handson:before{
+	content: "";
+	display: block;
+	width: 240px;
+	background: #F5F5F5 center center no-repeat;
+	position: relative;
+	top: 10%;
+	margin: -8px 20px;
+}
+
+.pickup_seminar h1,
+.pickup_handson h1	{
+	margin-top: -21%;
+	margin-left: 30%;
+    border-bottom: none;
+    overflow: visible;
+    line-height: 30px;
+    padding-bottom: 1px;
+}
+
+.pickup_seminar p,
+.pickup_handson p{
+	margin: 1% 48%;
+	font-size: small;
+}
+
+
+.pickup_seminar.iconimage > p.Cont,
+.pickup_handson.iconimage > p.Cont{
+	margin-top:0px;
+	width: 360px;
+}
+
+.pickup_seminar.iconimage > p.benefits,
+.pickup_handson.iconimage > p.benefits{
+	font-size: medium;
+	color: red;
+	width: 350px;
+}
+
+.pic_oraBtn {	
+	height: 40px;
+	line-height: 40px;
+	background: url("../image/common/btn_arrow.png") 92% center no-repeat;
+	background-size: 10px auto;
+	display: block;
+	color: #FFF;
+	font-weight: bold;
+	font-size: 14px;
+	margin: auto;
+	transition: 0.3s;
+	text-align: center;
+	cursor: pointer;
+	width: 350px;
+}
+	.pic_oraBtn a {
+		display: block;
+		width: 100%;
+		height: 100%;
+		color: #FFF !important;
+	}
+
+	/* ホバー対応 */
+	.pic_oraBtn:hover{
+		opacity: 0.7;
+		-ms-filter: "alpha(opacity=70)";
+	}
+	.pic_oraBtn a:hover{
+		text-decoration: none;
+	}
+
+   .pic_oraBtn {
+	background-color: #F3951B;
+	}
+
+.pic_oraBnr {    
+	height: 60px;
+	line-height: 60px;
+	background: url("../image/common/btn_arrow.png") 92% center no-repeat;
+	background-size: 10px auto;
+	display: block;
+	color: #FFF;
+	font-weight: bold;
+	font-size: 22px;
+	margin: 30px 20px;
+	transition: 0.3s;
+	text-align: center;
+	cursor: pointer;
+	box-shadow: 5px 5px #9c3e16;
+}
+	.pic_oraBnr a {
+		display: block;
+		width: 100%;
+		height: 100%;
+		color: #FFF !important;
+	}
+
+	/* ホバー対応 */
+	.pic_oraBnr:hover{
+		opacity: 0.7;
+		-ms-filter: "alpha(opacity=70)";
+	}
+	.pic_oraBnr a:hover{
+		text-decoration: none;
+	}
+
+   .pic_oraBnr {
+	background-color: #F3951B;
+}
+/* ボックスサイズを小さくする(幅1024pxのブラウザだと余白がないため）*/
+@media screen and (min-width: 667px) and (max-width: 800px) {
+
+	.pickup_seminar.iconimage:before,
+	.pickup_handson.iconimage:before{
+		margin:auto;
+	}
+
+	.winseminar{
+		padding-right: 40px;
+	}
+
+	.pickup_seminar.iconimage
+	.pickup_handson.iconimage{
+		width: 670px;
+		margin-bottom: 15px;
+	}
+
+	.freeBtn,
+	.tollBtn{
+		width: 15%;
+	}
+
+/*pickup1、pickup2、のスタイル*/
+	.pickup_seminar.iconimage h1,
+	.pickup_handson.iconimage h1{
+		font-size: 20px;
+	}
+
+	.pic_oraBnr{
+		width: 280px;
+	}
+
+}
+
