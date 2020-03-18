@@ -1,4 +1,5 @@
 
+
 # frozen_string_literal: true
 # A sample Gemfile
 source "https://rubygems.org"
@@ -14,3 +15,4 @@ end
 source 'https://rubygems.org'
 
 # Specify your gem's dependencies in octopress-hooks.gemspec
+

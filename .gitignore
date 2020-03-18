@@ -1,3 +1,4 @@
+
 <<<<<<< HEAD
 ### Jekyll ###
 _site/
@@ -105,25 +106,4 @@ Session.vim
 # auto-generated tag files
 tags
 
-=======
-*.gem
-*.rbc
-.bundle
-.config
-.yardoc
-Gemfile.lock
-InstalledFiles
-_yardoc
-coverage
-doc/
-lib/bundler/man
-pkg
-rdoc
-spec/reports
-test/tmp
-test/version_tmp
-tmp
-.DS_Store
-_site
-.jekyll-metadata
 >>>>>>> ac460266254ed23e7d656767ec346eea63b29788
