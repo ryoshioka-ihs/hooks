@@ -10,7 +10,6 @@ $to                = $_ENV['TO'];
 
 
 //フォーム情報
-$new = $_POST['new'];//種別
 $name = $_POST['name'];//氏名
 $phonetic = $_POST['phonetic'];//フリガナ
 $sex = $_POST['sex'];//性別
@@ -55,7 +54,6 @@ $email->addTo($emailadd)->
        	採用担当より折り返しご連絡いたしますので、\r\n
        	今しばらくお待ちください。\r\n\r\n 
 
-       	種別: $new \r\n 
        	氏名: $name \r\n 
        	フリガナ: $phonetic \r\n 
        	性別: $sex \r\n 
@@ -87,7 +85,6 @@ $email->addTo($emailadd)->
        	採用担当より折り返しご連絡いたしますので、<br />
        	今しばらくお待ちください。<br /><br /> 
 
-       	種別: $new <br /> 
        	氏名: $name <br /> 
        	フリガナ: $phonetic <br /> 
        	性別: $sex <br /> 
@@ -124,7 +121,6 @@ $email->addTo($to)->
        	IHS採用サイトより、下記のエントリーがありました。\r\n
        	ご確認の上、ご対応をお願いいたします。\r\n\r\n
 
-       	種別: $new \r\n 
        	氏名: $name \r\n 
        	フリガナ: $phonetic \r\n 
        	性別: $sex \r\n 
@@ -150,7 +146,6 @@ $email->addTo($to)->
        	下記内容にて会社説明会へのお申込みを受け付けました。<br />
        	ご担当者は確認後、受付メールを送付してください。<br /><br />
 
-       	種別: $new <br /> 
        	氏名: $name <br /> 
        	フリガナ: $phonetic <br /> 
        	性別: $sex <br /> 
