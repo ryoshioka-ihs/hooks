@@ -270,8 +270,8 @@ footer {
 
 
 
-/*WinActor*→RPAdegitalセミナーに変更中20200226/
-/*#index #keyv .kvList .key5 {
+/*WinActor*/
+#index #keyv .kvList .key5 {
 	background-image: url("../image/top/keyv5.png");
 	padding-top: 50px;
 }
@@ -326,71 +326,7 @@ footer {
 			font-size: 28px;
 			letter-spacing: 2.5px;
 			text-align: center;
-		}*/
-
-
-
-/*RPA-degitalセミナー*/
-#index #keyv .kvList .key5 {
-	background-image: url("../image/top/keyv5.png");
-	padding-top: 50px;
-}
-	#index #keyv .kvList .key5 .textBox h2 {
-		border-bottom: 1px solid #fff;
-		letter-spacing: 7px;
-		padding-bottom: 10px;
-		color: navy;
-		text-shadow: 0 2px 4px #f8f8ff;
-	}
-
-	
-
-	#index #keyv .kvList .key5 .textBox h2 + p {
-		margin: 28px 0 45px;
-		font-size: 21px;
-		font-weight: bold;
-		letter-spacing: 2.5px;
-		color: navy;
-		text-shadow: 0 2px 3px #fff;
-	}
-
-	#index #keyv .kvList .key5 .textBox h2{
-		/*background-color:rgba(199,232,249,0.3);*/
-		background-color:rgba(255,255,255,0.7);
-
-
-	}
-
-	/*#index #keyv .kvList .key5 .textBox ul {
-		display: flex;
-		flex-direction: row;
-		justify-content: space-between;
-	}*/
-
-	@media (min-width: 1025px){
-		#index #keyv .kvList .key5 .textBox .rpah2-1{
-		font-size: 40px;
-	}
-
-	#index #keyv .kvList .key5 .textBox .rpah2-2{
-		font-size: 32px;
-	}
-
-	}
-
-	@media screen and (min-width: 824px) and (max-width: 1024px){
-		#index #keyv .kvList .key5 .textBox .rpah2-1{
-		font-size: 33px;
-	}
-
-	#index #keyv .kvList .key5 .textBox .rpah2-2{
-		font-size: 27px;
-	}
-	}
-
-	
-
-
+		}
 
 
 
