@@ -97,14 +97,21 @@ footer {
 				#index #keyv .kvList .textBox h2 {margin: 0 50px;}
 			}	
 
-			#index #keyv .kvList .oraBtn,
+			#index #keyv .kvList .KvBtn{
+				position: absolute;
+				left: 50%;
+				bottom: 45px;
+				margin-left: -180px;
+			}
+
+			/*#index #keyv .kvList .oraBtn,
 			#index #keyv .kvList .blueBtn,
 			#index #keyv .kvList .blueBtn_btn {
 				position: absolute;
 				left: 50%;
 				bottom: 45px;
 				margin-left: -180px;
-			}
+			}*/
 
 /* メインビジュアル */
 #index #keyv .kvList .key1 {
@@ -346,7 +353,7 @@ footer {
 	
 
 	#index #keyv .kvList .key5 .textBox h2 + p {
-		margin: 28px 0 45px;
+		margin: 30px auto;
 		font-size: 21px;
 		font-weight: bold;
 		letter-spacing: 2.5px;

@@ -329,7 +329,8 @@ body {
 
 		@media(max-width: 768px){
 			#index #keyv .kvList .key5 .textBox h2 + p {
-			margin: 12px 20px 17px;
+			/*margin: 12px 20px 17px;*/
+			margin: 20px auto;
 			}
 		}
 
