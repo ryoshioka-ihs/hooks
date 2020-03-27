@@ -30,13 +30,13 @@ $email    = new SendGrid\Email();
 $email->addTo($emailAdress)->
        setFrom($from)->
        setFromName("IIMヒューマン・ソリューション株式会社")->
-       setSubject("【デジタル時代の今こそ『BPR』に取り組むセミナーのキャンセルを承りました】" )->
+       setSubject("【4/24(金) デジタル時代の今こそ『BPR』に取り組むセミナーのキャンセルを承りました】" )->
        setText(
        	"$company \r\n
-       	 $lastname $firstname 様\r\n\r\nご連絡いただきまして、ありがとうございます。\r\n下記内容でお申し込みのキャンセルを承りました。\r\n\r\n　会社名: $company \r\n ご希望の開催日: $seminar \r\n メールアドレス: $emailAdress \r\n　電話番号: $phone \r\n　特記事項: $message \r\n　個人情報の取扱: $check \r\n\r\n　別日程でのご参加をご希望の方は、\r\n https://www.iimhs.co.jp/winactor/form/seminar_form/rpa-degital よりお申し込みください。\r\n")->
+       	 $lastname $firstname 様\r\n\r\nご連絡いただきまして、ありがとうございます。\r\n下記内容でお申し込みのキャンセルを承りました。\r\n\r\n　会社名: $company \r\n  メールアドレス: $emailAdress \r\n　電話番号: $phone \r\n　特記事項: $message \r\n　個人情報の取扱: $check \r\n\r\n　")->
 
 
-       setHtml("$company <br> $lastname $firstname 様<br><br>ご連絡いただきまして、ありがとうございます。<br>下記内容でお申し込みのキャンセルを承りました。<br><br>会社名: $company <br />ご希望の開催日： $seminar <br />メールアドレス: $emailAdress <br />電話番号: $phone <br />特記事項: $message <br />個人情報の取扱: $check <br /><br>別日程でのご参加をご希望の方は<br> https://www.iimhs.co.jp/winactor/form/seminar_form/rpa-degital")->
+       setHtml("$company <br> $lastname $firstname 様<br><br>ご連絡いただきまして、ありがとうございます。<br>下記内容でお申し込みのキャンセルを承りました。<br><br>会社名: $company <br />メールアドレス: $emailAdress <br />電話番号: $phone <br />特記事項: $message <br />個人情報の取扱: $check <br /><br>")->
        addCategory('contact');
 
 $response = $sendgrid->send($email);
@@ -48,11 +48,11 @@ $email    = new SendGrid\Email();
 $email->addTo($to)->
        setFrom($from)->
        //setFromName("")->
-       setSubject("【デジタル時代の今こそ『BPR』に取り組むセミナーのキャンセルを承りました】" )->
-       setText("下記内容にてセミナーのキャンセルを承りました。\r\nご担当者はご対応のほどよろしくお願いいたします。\r\n\r\n会社名: $company \r\n ご希望の開催日: $seminar\r\n 参加者名: $lastname $firstname 様\r\n メールアドレス: $emailAdress\r\n　電話番号: $phone \r\n　特記事項: $message\r\n　個人情報の取扱: $check")->
+       setSubject("【4/24(金)デジタル時代の今こそ『BPR』に取り組むセミナーのキャンセルを承りました】" )->
+       setText("下記内容にてセミナーのキャンセルを承りました。\r\nご担当者はご対応のほどよろしくお願いいたします。\r\n\r\n会社名: $company \r\n  参加者名: $lastname $firstname 様\r\n メールアドレス: $emailAdress\r\n　電話番号: $phone \r\n　特記事項: $message\r\n　個人情報の取扱: $check")->
 
 
-       setHtml("下記内容にてセミナーのキャンセルを承りました。<br>ご担当者はご対応のほどよろしくお願いいたします。<br><br>会社名: $company <br /> ご希望の開催日: $seminar <br /> 参加者名: $lastname $firstname 様<br /> メールアドレス: $emailAdress <br /> 電話番号: $phone <br /> 特記事項: $message <br /> 個人情報の取扱: $check <br />")->
+       setHtml("下記内容にてセミナーのキャンセルを承りました。<br>ご担当者はご対応のほどよろしくお願いいたします。<br><br>会社名: $company <br /> 参加者名: $lastname $firstname 様<br /> メールアドレス: $emailAdress <br /> 電話番号: $phone <br /> 特記事項: $message <br /> 個人情報の取扱: $check <br />")->
        addCategory('contact');
 
 $response = $sendgrid->send($email);
