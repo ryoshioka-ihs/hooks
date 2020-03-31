@@ -1,6 +1,6 @@
-title: "IHS新卒・中途採用サイト"
+﻿title: "IHS新卒・中途採用サイト"
 baseurl: "/recruit"
-url: "http://www.iimhs.co.jp"
+url: "https://www.iimhs.co.jp"
 port: 3000
 
 source: "src"
