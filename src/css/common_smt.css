@@ -481,7 +481,7 @@ footer #pageTop:hover {
 /*3月説明会表示渡辺*/
 @media screen and (max-width: 768px){
 
-#info .marchchange{
+.marchchange{
 	margin-left: 3%;
 	margin-right: 3%;
 }

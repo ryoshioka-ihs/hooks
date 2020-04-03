@@ -1344,7 +1344,7 @@ em {
 
 /*説明会3月変更ボタン*/
 
-#info .marchchange{	
+.marchchange{	
 	text-align: center;
 	padding: 10px 10px;
 	/*background-color: #add8e6;*/
@@ -1356,7 +1356,7 @@ em {
     border: 2px solid red;
 }
 
-#info .marchchange p{
+.marchchange p{
 	font-weight: bold;
 	color: red;
 	font-size: 20px;
