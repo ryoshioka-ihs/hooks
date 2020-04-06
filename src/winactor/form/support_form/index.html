@@ -46,16 +46,16 @@ title:      "RPA「WinActor」サポートフォーム"
               <p style="font-size: 20px; font-weight: bold;">【ご契約お客様情報】</p>
               <form class="rd-mailform" data-form-output="form-output-global" data-form-type="contact" method="post" action="mailer.php">
                 <div class="range range-20">
-		          <div class="cell-xs-6 offset-custom-1">
+		          <div class="cell-xs-12 offset-custom-1">
 		            <div class="form-wrap form-wrap-validation">
 		                <label class="form-label-outside" >【<span style="color: red">必須</span>】</label>
-		                <select class="form-control select-filter" data-placeholder="All" data-minimum-results-for-search="Infinity" name="status" required>
+		                <select class="form-control" data-placeholder="All" data-minimum-results-for-search="Infinity" name="status" required>
 	        				<option value="契約中">契約中</option>
 	        				<option value="トライアル">トライアル</option>
 	    				</select>
 		              </div>
 		            </div>
-                  <div class="cell-xs-6 offset-custom-1">
+                  <div class="cell-xs-12 offset-custom-1">
                     <div class="form-wrap form-wrap-validation">
                       <label class="form-label-outside">保守契約ID（サービス契約時に登録いただいた保守契約ID）</label>
                       <input class="form-input" type="text" name="id" required placeholder="トライアルの方は「トライアル」と記載ください。" style="font-size: 15px;">
@@ -122,7 +122,7 @@ title:      "RPA「WinActor」サポートフォーム"
                   <div class="cell-xs-6">
                     <div class="form-wrap form-wrap-validation">
                       <label class="form-label-outside">【<span style="color: red">必須</span>】お問い合わせ分類</label>
-                      	<select class="form-control select-filter" data-placeholder="All" data-minimum-results-for-search="Infinity" name="category" required>
+                      	<select class="form-control" data-placeholder="All" data-minimum-results-for-search="Infinity" name="category" required>
                       		<option value="シナリオ機能">シナリオ機能</option>
                       		<option value="動作環境、アップデート">動作環境、アップデート</option>
                       		<option value="マニュアル">マニュアル</option>
