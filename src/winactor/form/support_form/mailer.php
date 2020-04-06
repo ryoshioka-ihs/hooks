@@ -51,7 +51,10 @@ $email->addTo($emailAdress)->
                メールアドレス: $emailAdress\r\n
                ご利用中の製品バージョン: $version\r\n
                お問い合わせ分類： $category\r\n
-               お問い合わせ内容詳細: $message\r\n")->
+               お問い合わせ内容詳細: $message\r\n
+               \r\n
+               本メールはシステムより自動送信されています。\r\n
+               本メールに返信されましても、返答できませんのでご了承ください。\r\n")->
 
 
        setHtml("
@@ -70,7 +73,10 @@ $email->addTo($emailAdress)->
                メールアドレス: $emailAdress<br>
                ご利用中の製品バージョン: $version<br>
                お問い合わせ分類： $category<br>
-               お問い合わせ内容詳細: $message<br>")->
+               お問い合わせ内容詳細: $message<br>
+               <br>
+               本メールはシステムより自動送信されています。<br>
+               本メールに返信されましても、返答できませんのでご了承ください。<br>")->
        addCategory('contact');
 
 $response = $sendgrid->send($email);
