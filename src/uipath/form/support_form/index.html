@@ -1,0 +1,187 @@
+---
+layout:     "uipath-form"
+global_menu:  ""
+description:  ""
+keywords:   "RPA,Uipath,サポートフォーム"
+category:   ""
+title:      "RPA「UiPath」サポートフォーム"
+---
+
+      <!--<section class="section section-lg bg-white">
+        <div class="shell shell-bigger">
+          <div class="range range-ten range-50 range-sm-center range-lg-justify">
+            <div class="cell-md-12">
+              <h3 style="text-align: center;">お客様各位</h3>
+				<section style="text-align: center;">
+					<div class="smtSent">
+					<p>平素格別のご厚情賜り厚く御礼申し上げます。</p>
+					<br>
+					<p>さて、本年度ゴールデンウィーク期間でございますが、<br>
+						誠に勝手ながら、４月２７日（土）より５月６日（月）の１０日間を全社休業とさせていただきます。</p>
+					<br>
+					<p>休業期間中は、『RPA「WinActor」サポートフォーム』より受付可能ですが、<br>
+						弊社回答は５月７日（火）以降に順次確認後ご連絡とさせていただきます。</p>
+					<br>
+					<p>ご迷惑お掛けし誠に恐縮ではございますが、ご理解ご協力賜りますよう、<br>
+						何卒宜しくお願い申し上げます。</p>
+					</div>
+				</section>
+            </div>
+          </div>
+        </div>
+      </section>-->
+
+      <!-- Contact information-->
+      <section class="section section-lg bg-white">
+        <div class="shell shell-bigger">
+          <div class="range range-ten range-50 range-sm-center range-lg-justify">
+            <div class="cell-sm-9 cell-md-6">
+              <h3>RPA「UiPath」サポートフォーム</h3>
+              <!--<hr class="divider divider-left divider-default"/>-->            
+              <p>お問い合わせいただきました内容は、今後のよりよいサービス提供のため、開示させていただく場合がございます。予めご了承ください。<br>
+                ※会社名等、個人情報に関する情報は開示いたしません。
+              <!-- RD Mailform-->
+              <hr>
+              <p style="font-size: 20px; font-weight: bold;">【ご契約お客様情報】</p>
+              <form class="rd-mailform" data-form-output="form-output-global" data-form-type="contact" method="post" action="mailer.php">
+                <div class="range range-20">
+		          <!--<div class="cell-xs-6 offset-custom-1">
+		            <div class="form-wrap form-wrap-validation">
+		                <label class="form-label-outside" >【<span style="color: red">必須</span>】</label>
+		                <select class="form-control select-filter" data-placeholder="All" data-minimum-results-for-search="Infinity" name="status" required>
+	        				<option value="契約中">契約中</option>
+	        				<option value="トライアル">トライアル</option>
+	    				</select>
+		              </div>
+		            </div>-->
+                  <div class="cell-xs-12 offset-custom-1">
+                    <div class="form-wrap form-wrap-validation">
+                      <label class="form-label-outside">保守契約ID（サービス契約時に登録いただいた保守契約ID）</label>
+                      <input class="form-input" type="text" name="id" required style="font-size: 15px;">
+                    </div>
+                  </div>
+                  <div class="cell-xs-12 offset-custom-1">
+                    <div class="form-wrap form-wrap-validation">
+                      <label class="form-label-outside">【<span style="color: red">必須</span>】会社名（全角）</label>
+                      <input class="form-input" type="text" name="company" data-constraints="@Required"/ required>
+                    </div>
+                  </div>
+                  <div class="cell-xs-12 offset-custom-1">
+                    <div class="form-wrap form-wrap-validation">
+                      <label class="form-label-outside">【<span style="color: red">必須</span>】部署名（全角）</label>
+                      <input class="form-input" type="text" name="despartment" data-constraints="@Required"/ required>
+                    </div>
+                  </div>
+                  <div class="cell-sm-6">
+                    <div class="form-wrap form-wrap-validation">
+                      <label class="form-label-outside">【<span style="color: red">必須</span>】姓（全角）</label>
+                      <input class="form-input" type="text" name="lastname1" data-constraints="@Required"/ required placeholder="（例）本郷">
+                    </div>
+                  </div>
+                  <div class="cell-sm-6">
+                    <div class="form-wrap form-wrap-validation">
+                      <label class="form-label-outside">【<span style="color: red">必須</span>】名（全角）</label>
+                      <input class="form-input" type="text" name="firstname1" data-constraints="@Required"/ required placeholder="（例）太郎">
+                    </div>
+                  </div>
+                  <div class="cell-xs-12 offset-custom-1">
+                  <p style="font-size: 20px; font-weight: bold;">【お問合せ者情報】</p>
+              	  </div>
+                  <div class="cell-sm-6">
+                    <div class="form-wrap form-wrap-validation">
+                      <label class="form-label-outside">【<span style="color: red">必須</span>】姓（全角）</label>
+                      <input class="form-input" type="text" name="lastname2" data-constraints="@Required"/ required placeholder="（例）本郷">
+                    </div>
+                  </div>
+                  <div class="cell-sm-6">
+                    <div class="form-wrap form-wrap-validation">
+                      <label class="form-label-outside">【<span style="color: red">必須</span>】名（全角）</label>
+                      <input class="form-input" type="text" name="firstname2" data-constraints="@Required"/ required placeholder="（例）太郎">
+                    </div>
+                  </div>
+                  <div class="cell-sm-6">
+                    <div class="form-wrap form-wrap-validation">
+                      <label class="form-label-outside" for="form-1-email">【<span style="color: red">必須</span>】メールアドレス（半角）</label>
+                      <input class="form-input" id="form-1-email" type="email" name="emailAdress" data-constraints="@Email @Required" required>
+                    </div>
+                  </div>
+                  <div class="cell-sm-6">
+                    <div class="form-wrap form-wrap-validation">
+                      <label class="form-label-outside">【<span style="color: red">必須</span>】電話番号（半角）</label>
+                      <input class="form-input" type="text" name="phone" data-constraints="@Numeric @Required"/ required  placeholder="（例）03-5684-640">
+                    </div>            
+                  </div>
+                  <div class="cell-sm-6">
+                    <div class="form-wrap form-wrap-validation">
+                      <label class="form-label-outside">【<span style="color: red">必須</span>】ご利用中の製品バージョン</label>
+                      <input class="form-input" type="text" name="version" data-constraints="@Required"/ required>
+                    </div>            
+                  </div>
+
+                  <div class="cell-sm-6">
+                    <div class="form-wrap form-wrap-validation">
+                      <label class="form-label-outside">【<span style="color: red">必須</span>】お問い合わせ分類</label>
+		                <select class="form-control" data-placeholder="All" data-minimum-results-for-search="Infinity" name="category" required>
+                      		<option value="UiPath Studio操作">UiPath Studio操作</option>
+                      		<option value="ワークフロー機能">ワークフロー機能</option>
+                      		<option value="動作環境">動作環境</option>
+                      		<option value="アップデート">アップデート</option>
+                      		<option value="マニュアル">マニュアル</option>
+                      		<option value="ライセンス">ライセンス</option>
+                      		<option value="Orchestrator">Orchestrator</option>
+                      		<option value="その他">その他</option>
+                      	</select>
+                    </div>            
+                  </div>
+                  <div class="cell-xs-12 offset-custom-1">
+                    <div class="form-wrap form-wrap-validation">
+                      <label class="form-label-outside">【<span style="color: red">必須</span>】お問い合わせ概要（タイトル）</label>
+                      <input class="form-input" type="text" name="title" data-constraints="@Required"/ required>
+                    </div>
+                  </div>
+                  <div class="cell-xs-12">
+                    <div class="form-wrap form-wrap-validation">
+                      <label class="form-label-outside">【<span style="color: red">必須</span>】お問い合わせ内容詳細</label>
+                      <textarea class="form-input" id="form-1-message" name="message" type="text" placeholder="（例）このエラーの原因は何でしょうか？　あるいは、このアクティビティのプロパティ設定について教えてもらえますか？"></textarea>
+                    </div>
+                  </div>
+                  <div class="cell-xs-12">
+                    <div class="form-wrap">
+                      <label class="checkbox-inline">
+                        <input type="checkbox" name="check" value="同意する" required/>同意する<a href="https://www.iimhs.co.jp/privacy/policy.html" target="_blank">個人情報保護ポリシーについて</a>
+                      </label>
+                    </div>
+                  </div> 
+                  <div class="cell-xs-12 offset-custom-1">
+                    <div class="form-button">
+                      <button class="button button-primary" type="submit">送信</button>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <div class="cell-sm-9 cell-md-4 cell-lg-3">
+              <div class="column-aside">
+                <div class="range">
+                  <div class="cell-xs-10 cell-sm-6 cell-md-12">
+                    <h6>会社住所</h6>
+                    <hr class="divider-thin"/>
+                    <article class="box-inline"><span class="icon icon-md-smaller icon-primary mdi mdi-map-marker"></span><span>東京都千代田区内幸町1-1-6 　ＮＴＴ日比谷ビル4F<br>IIMヒューマン・ソリューション株式会社</span></article>
+                  </div>
+                  <div class="cell-xs-10 cell-sm-6 cell-md-12">
+                    <h6>メールアドレス</h6>
+                    <hr class="divider-thin"/>
+                    <article class="box-inline"><span class="icon icon-md-smaller icon-primary mdi mdi-email-open"></span>
+                    	<!--<span><a href="mailto:web@iimhs.co.jp?subject=【お問合わせ】WinActorセミナー受付状況について&amp;body=IIMヒューマン・ソリューション株式会社%0d%0a	WinActorセミナー担当者">web@iimhs.co.jp</a></span></article>-->
+                    	<span><a href="mailto:uipath-support@iimhs.co.jp">uipath-support@iimhs.co.jp</a></span></article>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- Page Footer-->
+      <!-- Footer Default-->
