@@ -1007,16 +1007,28 @@ color: #FFF !important;
 /* --------------------------------------------------
 	ベーステーブルレイアウト(見出し太字＆背景色あり)
 -------------------------------------------------- */
-.baseTb {
+.baseTb,
+.baseSeminar {
 	width: 100%;
 	background-color: #FFF;
 	border-top: 1px solid #DDD;
+	color: #000;
 }
-	.baseTb tr > * {
+
+	.baseTb tr > * ,
+	.baseSeminar tr > * {
 		vertical-align: middle;
 		border-bottom: 1px solid #DDD;
-		padding: 10px 30px 10px 20px;
 	}
+
+		.baseTb tr > *{
+			padding: 10px 30px 10px 20px;
+	}
+
+		.baseSeminar tr > *{
+			padding: 10px;
+	}
+
 	.baseTb th {
 		width: 22%;
 		height: 40px;
@@ -1024,6 +1036,33 @@ color: #FFF !important;
 		padding-right: 10px;
 		background-color: #F0F0F0;
 	}
+
+	.baseSeminar tr:hover{
+		opacity: 0.5;
+		background-color: #81BEF7;
+	}
+
+	.baseSeminar a,
+	.baseSeminar a:hover{
+		color: #000;
+		text-decoration: none;
+}
+
+
+/* --------------------------------------------------------
+	セミナー集約ページのテーブル
+-------------------------------------------------------- */
+img.seminar{
+	width: 50px;
+	padding: 5px 0px;
+}
+
+
+
+
+
+
+
 /* --------------------------------------------------
 	ベーステーブルレイアウト(見出し太字＆背景色あり)
 	※パディング間隔少なめ
@@ -3413,3 +3452,4 @@ footer .footBot {
 	width: 50px;
 	height: auto;
 }
+
