@@ -50,6 +50,7 @@ $email->addTo($emailAdress)->
                メールアドレス: $emailAdress\r\n
                ご利用中の製品バージョン: $version\r\n
                お問い合わせ分類： $category\r\n
+               お問い合わせ概要（タイトル）： $title\r\n
                お問い合わせ内容詳細: $message\r\n")->
 
 
@@ -68,7 +69,8 @@ $email->addTo($emailAdress)->
                メールアドレス: $emailAdress<br>
                ご利用中の製品バージョン: $version<br>
                お問い合わせ分類： $category<br>
-               お問い合わせ内容詳細: $message<br>")->
+               お問い合わせ概要（タイトル）： $title<br>
+               お問い合わせ内容詳細: $messagec")->
        addCategory('contact');
 
 $response = $sendgrid->send($email);
@@ -97,6 +99,7 @@ $email->addTo($to)->
                メールアドレス: $emailAdress\r\n
                ご利用中の製品バージョン: $version\r\n
                お問い合わせ分類： $category\r\n
+               お問い合わせ概要（タイトル）： $title\r\n
                お問い合わせ内容詳細: $message\r\n
                ")->
 
@@ -117,6 +120,7 @@ $email->addTo($to)->
                メールアドレス: $emailAdress<br>
                ご利用中の製品バージョン: $version<br>
                お問い合わせ分類： $category<br>
+               お問い合わせ概要（タイトル）： $title<br>
                お問い合わせ内容詳細: $message<br>
                ")->
        addCategory('contact');
