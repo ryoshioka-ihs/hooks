@@ -102,3 +102,27 @@ function hideFinishedDateSeminarStop() {
     }
   });
  });
+
+//======================================================================================================
+// 
+// 機能  ：セミナー毎にフィルタリング（セミナー集約ページにて適用、その①）
+
+// 引数  ：
+// 戻り値：
+//======================================================================================================
+function goFilter(){
+  var wTable = document.getElementById("allSeminarTable");
+  var wSelect = document.getElementById("allSeminarSelect");
+  var value  = wSelect.options[wSelect.selectedIndex ].value;  
+  if(value == 'all'){
+    // --- 全ての場合はクラスをクリア ---
+    wTable.className = 'baseSeminar';
+  }else{
+    // --- タイトル以外のTRを非表示＋指定属性を持つTRのみ表示 ---
+    wTable.className = 'allNoDisplay ' + value;
+  }
+}
+
+
+
+

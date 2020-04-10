@@ -4,138 +4,146 @@ global_menu:  "services"
 description:  "RPA製品「WinActor」「UiPath」のセミナー一覧ページです。"
 keywords:   "WinActor,RPA,セミナー,無料,入門,運用,活用,Uipath"
 category:   ""
-title:      "セミナー一覧ページ"
+title:      "RPAセミナー一覧"
 ---
+<script type="text/javascript" src="/js/seminar.js"></script>
 <div class="smtSent">
 <h1>{{ page.title }}</h1>
   	<section>
-  	<h2>4月セミナー一覧</h2>
-      <script type="text/javascript" src="/js/seminar.js"></script>
         <div class="msgWrap session">
-          <table class="baseSeminar">
-              <tr>
+			<table id="allSeminarTable" class="baseSeminar">
+			<thead>
+			  <tr class="colTitle">
+			    <th colspan="2">◆絞り込むセミナー</th>
+			    <th colspan="2">
+			        <select id="allSeminarSelect" onChange="goFilter();">
+			          <option value="all">全てのセミナー</option>
+			          <option value="WA">WinActor</option>
+			          <option value="UI">UiPath</option>
+			        </select>
+			    </th>
+			  </tr>
+			 </thead>
+			 <tr>
+			 	<th colspan="4"><h2>4月セミナー一覧</h2></th>
+			 </tr>
+              <tr WA>
                   <td><a href="/winactor/seminar/free-businessimprovement.html" target="_blank"><img src="../image/seminar/winactorlogo_03.png" class="seminar"></a></td>
-                  <td class="date"><a href="/winactor/seminar/free-businessimprovement.html" target="_blank">2020年4月9日(木)</a></td>
-                  <td><a href="/winactor/seminar/free-businessimprovement.html" target="_blank">RPA導入　成功に導くためのノウハウ（入門編）</a></td>
+                  <td class="date"><a href="/winactor/seminar/free-businessimprovement.html" target="_blank">2020年4月10日(金)</a></td>
+                  <td><a href="/winactor/seminar/free-businessimprovement.html" target="_blank">
+                  	<span class="online">オンライン</span>RPA導入　成功に導くためのノウハウ（入門編）</a></td>
                   <td><a href="/winactor/seminar/free-businessimprovement.html" target="_blank">詳細を見る</a></td>
               </tr>
 
-              <tr>
+              <!--<tr WA>
                   <td><a href="/winactor/seminar/free-process.html" target="_blank"><img src="../image/seminar/winactorlogo_03.png" class="seminar"></a></td>
                   <td class="date"><a href="/winactor/seminar/free-process.html" target="_blank">2020年4月14日(火)</a></td>
                   <td><a href="/winactor/seminar/free-process.html" target="_blank">業務プロセス分析（入門編）</a></td>
                   <td><a href="/winactor/seminar/free-process.html" target="_blank">詳細を見る</a></td>
               </tr>
 
-              <tr>
+              <tr UI>
                   <td><a href="/uipath/seminar/" target="_blank"><img src="../image/seminar/uipathlogo03.png" class="seminar"></a></td>
                   <td class="date"><a href="/uipath/seminar/" target="_blank">2020年4月15日(水)</a></td>
                   <td><a href="/uipath/seminar/" target="_blank">WinActorとUiPathの機能比較とUiPathハンズオンセミナー</a></td>
                   <td><a href="/uipath/seminar/" target="_blank">詳細を見る</a></td>
               </tr>
 
-              <tr>
+              <tr WA>
                   <td><a href="/winactor/seminar/free-businessimprovement-practice.html" target="_blank"><img src="../image/seminar/winactorlogo_03.png" class="seminar"></a></td>
                   <td class="date"><a href="/winactor/seminar/free-businessimprovement-practice.html" target="_blank">2020年4月16日(木)</a></td>
                   <td><a href="/winactor/seminar/free-businessimprovement-practice.html" target="_blank">RPA導入　成功に導くためのノウハウ（実践編）</a></td>
                   <td><a href="/winactor/seminar/free-businessimprovement-practice.html" target="_blank">詳細を見る</a></td>
               </tr>
 
-              <tr>
+              <tr WA>
                   <td><a href="/winactor/seminar/free-scenario.html" target="_blank"><img src="../image/seminar/winactorlogo_03.png" class="seminar"></a></td>
                   <td class="date"><a href="/winactor/seminar/free-scenario.html" target="_blank">2020年4月21日(火)</a></td>
                   <td><a href="/winactor/seminar/free-scenario.html" target="_blank">RPAツール『WinActor』シナリオ作成編</a></td>
                   <td><a href="/winactor/seminar/free-scenario.html" target="_blank">詳細を見る</a></td>
               </tr>
 
-              <tr>
+              <tr UI>
                   <td><a href="/uipath/seminar/" target="_blank"><img src="../image/seminar/uipathlogo03.png" class="seminar"></a></td>
                   <td class="date"><a href="/uipath/seminar/" target="_blank">2020年4月22日(水)</a></td>
                   <td><a href="/uipath/seminar/" target="_blank">WinActorとUiPathの機能比較とUiPathハンズオンセミナー</a></td>
                   <td><a href="/uipath/seminar/" target="_blank">詳細を見る</a></td>
               </tr>
 
-              <tr>
+              <tr WA>
                   <td><a href="/winactor/seminar/free-operation.html" target="_blank"><img src="../image/seminar/winactorlogo_03.png" class="seminar"></a></td>
                   <td class="date"><a href="/winactor/seminar/free-operation.html" target="_blank">2020年4月23日(木)</a></td>
                   <td><a href="/winactor/seminar/free-operation.html" target="_blank">RPA運用・保守標準化セミナー</a></td>
                   <td><a href="/winactor/seminar/free-operation.html" target="_blank">詳細を見る</a></td>
               </tr>
 
-              <tr>
+              <tr WA>
                   <td><a href="/winactor/seminar/free-gettingstarted.html" target="_blank"><img src="../image/seminar/winactorlogo_03.png" class="seminar"></a></td>
                   <td class="date"><a href="/winactor/seminar/free-gettingstarted.html" target="_blank">2020年4月28日(火)</a></td>
                   <td><a href="/winactor/seminar/free-gettingstarted.html" target="_blank">RPA入門＋WinActor基本機能編</a></td>
                   <td><a href="/winactor/seminar/free-gettingstarted.html" target="_blank">詳細を見る</a></td>
               </tr>
 
-          </table>              
-        </div>
-  </section>
-
-  <section>
-  	<h2>5月セミナー一覧</h2>
-      <script type="text/javascript" src="/js/seminar.js"></script>
-        <div class="msgWrap session">
-          <table class="baseSeminar">
-
-              <tr>
+			 <tr>
+			 	<th colspan="4"><h2>5月セミナー一覧</h2></th>
+			 </tr>
+              <tr WA>
                   <td><a href="/winactor/seminar/free-businessimprovement.html" target="_blank"><img src="../image/seminar/winactorlogo_03.png" class="seminar"></a></td>
                   <td class="date"><a href="/winactor/seminar/free-gettingstarted.html" target="_blank">2020年5月12日(火)</a></td>
                   <td><a href="/winactor/seminar/free-businessimprovement.html" target="_blank">RPA導入　成功に導くためのノウハウ（入門編）</a></td>
                   <td><a href="/winactor/seminar/free-businessimprovement.html" target="_blank">詳細を見る</a></td>
               </tr>
 
-              <tr>
+              <tr WA>
                   <td><a href="/winactor/seminar/free-process.html" target="_blank"><img src="../image/seminar/winactorlogo_03.png" class="seminar"></a></td>
                   <td class="date"><a href="/winactor/seminar/free-process.html" target="_blank">2020年5月14日(木)</a></td>
                   <td><a href="/winactor/seminar/free-process.html" target="_blank">業務プロセス分析（入門編）</a></td>
                   <td><a href="/winactor/seminar/free-process.html" target="_blank">詳細を見る</a></td>
               </tr>             
 
-              <tr>
+              <tr WA>
                   <td><a href="/winactor/seminar/free-businessimprovement-practice.html" target="_blank"><img src="../image/seminar/winactorlogo_03.png" class="seminar"></a></td>
                   <td class="date"><a href="/winactor/seminar/free-businessimprovement-practice.html" target="_blank">2020年5月19日(火)</a></td>
                   <td><a href="/winactor/seminar/free-businessimprovement-practice.html" target="_blank">RPA導入　成功に導くためのノウハウ（実践編）</a></td>
                   <td><a href="/winactor/seminar/free-businessimprovement-practice.html" target="_blank">詳細を見る</a></td>
               </tr>   
 
-              <tr>
+              <tr UI>
                   <td><a href="/uipath/seminar/" target="_blank"><img src="../image/seminar/uipathlogo03.png" class="seminar"></a></td>
                   <td class="date"><a href="/uipath/seminar/" target="_blank">2020年5月20日(水)</a></td>
                   <td><a href="/uipath/seminar/" target="_blank">WinActorとUiPathの機能比較とUiPathハンズオンセミナー</a></td>
                   <td><a href="/uipath/seminar/" target="_blank">詳細を見る</a></td>
               </tr>
 
-              <tr>
+              <tr WA>
                   <td><a href="/winactor/seminar/free-gettingstarted.html" target="_blank"><img src="../image/seminar/winactorlogo_03.png" class="seminar"></a></td>
                   <td class="date"><a href="/winactor/seminar/free-gettingstarted.html" target="_blank">2020年5月21日(木)</a></td>
                   <td><a href="/winactor/seminar/free-gettingstarted.html" target="_blank">RPA入門＋WinActor基本機能編</a></td>
                   <td><a href="/winactor/seminar/free-gettingstarted.html" target="_blank">詳細を見る</a></td>
               </tr>
 
-              <tr>
+              <tr WA>
                   <td><a href="/winactor/seminar/free-scenario.html" target="_blank"><img src="../image/seminar/winactorlogo_03.png" class="seminar"></a></td>
                   <td class="date"><a href="/winactor/seminar/free-scenario.html" target="_blank">2020年5月26日(火)</a></td>
                   <td><a href="/winactor/seminar/free-scenario.html" target="_blank">RPAツール『WinActor』シナリオ作成編</a></td>
                   <td><a href="/winactor/seminar/free-scenario.html" target="_blank">詳細を見る</a></td>
               </tr>
 
-              <tr>
+              <tr UI>
                   <td><a href="/uipath/seminar/" target="_blank"><img src="../image/seminar/uipathlogo03.png" class="seminar"></a></td>
                   <td class="date"><a href="/uipath/seminar/" target="_blank">2020年5月27日(水)</a></td>
                   <td><a href="/uipath/seminar/" target="_blank">WinActorとUiPathの機能比較とUiPathハンズオンセミナー</a></td>
                   <td><a href="/uipath/seminar/" target="_blank">詳細を見る</a></td>
               </tr>
 
-              <tr>
+              <tr WA>
                   <td><a href="/winactor/seminar/free-operation.html" target="_blank"><img src="../image/seminar/winactorlogo_03.png" class="seminar"></a></td>
                   <td class="date"><a href="/winactor/seminar/free-operation.html" target="_blank">2020年5月28日(木)</a></td>
                   <td><a href="/winactor/seminar/free-operation.html" target="_blank">RPA運用・保守標準化セミナー</a></td>
                   <td><a href="/winactor/seminar/free-operation.html" target="_blank">詳細を見る</a></td>
-              </tr>
+              </tr>-->
 
-          </table>              
+          </table>      
         </div>
   </section>
 </div>
