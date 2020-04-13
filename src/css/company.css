@@ -212,6 +212,7 @@ article h3.adopt:before {
     width: 100%;
 }
 
+
 #company .cont .sentBox table.profile th,
 #company .cont .sentBox table.profile td {
     padding: 10px;
@@ -221,7 +222,7 @@ article h3.adopt:before {
 #company .cont .sentBox table.profile th {
     background-color: #F9FAFC;
     text-align: center;
-    width: 7em;
+    width: 100px;
 }
 
 #company .cont .sentBox table.profile tbody td ul {
@@ -280,12 +281,15 @@ article h3.adopt:before {
 }
 #company .cont .sentBox .imgArea03 img {
     height: auto;
+    width: 90%;
 }
 
+
 /* 所在地写真 */
-@media screen and (min-width: 356px) and (max-width: 768px){
+@media screen and (min-width: 356px) and (max-width: 792px){
 #company .cont .sentBox .imgArea03 img{
-    width: 80%;
+    width: 70%;
+    background-image: url(/recruit/image/company/ntt_hibiyabldg_smt.png);
 	}
 }
 
