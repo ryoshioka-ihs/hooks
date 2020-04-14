@@ -1,0 +1,152 @@
+---
+layout:       case
+global_menu:  cases
+title:        "P2Vによる仮想化移行"
+description:  "物理サーバの仮想化環境移行(P2V)をご検討のお客様に対し、当社では経験豊富な仮想化技術者が、作業からその後の保守運用まで対応致します。"
+keywords:     "P2V,サーバー仮想化,移行"
+date:         2010-03-30 10:38:00 +0900
+PDF:          "case048"
+categories: 
+ - "インフラ構築"
+tags:
+ - "VMware vSphere"
+ - "仮想化基盤"
+---
+
+<section>
+  <h1>{{ page.title }}</h1>
+  <ul class="linkInPage">
+    <li><a href="#toc-background">導入までの背景</a></li>
+    <li><a href="#toc-lisk">本番サーバに対する変更作業によるリスクを体制により最小化</a></li>
+    <li><a href="#toc-overview">作業概要</a></li>
+    <li><a href="#toc-effect">導入効果</a></li>
+    <li><a href="#toc-IHS-result">弊社利用による効果</a></li>  
+    <li><a href="#PdfDownload">PDFダウンロード</a></li>
+  </ul>
+
+  <section id="toc-background">
+    <h2>導入までの背景</h2>
+    <div class="smtSent">
+    <p>お客様にて、物理サーバ保守期限切れ対応のため、物理サーバの仮想化環境移行(P2V)が検討されていました。仮想環境を導入したばかりということもあり、仮想化対応可能者がまだ少なくイレギュラー対応が難しいとの事でした。また、仮想化サイジング後の実際のP2V作業が長時間にわたることも懸念されていました。</p>
+    <br>
+
+    <div class="borderd">
+      <h3>P2Vとは</h3>
+        <p>「 Physical to Virtual 」の略。物理サーバー上の既存のオペレーティング システムを同一のシステムおよびファイル システムの仮想化されたインスタンスに作り直し、転送、インスタンス化を行うプロセスです。仮想化されたインスタンスは、ハイパーバイザなどを用いて仮想化されたホスト上で仮想マシンとして起動されます。</p>
+        <br>
+    </div>
+    </div>
+  </section>
+
+  <section id="toc-lisk">
+    <h2>本番サーバに対する変更作業によるリスクを体制により最小化</h2>
+    <div class="smtSent">
+    <p>本案件を実施するにあたり弊社が重要視した点は、本番稼動サーバに対して変更が発生するという点です。本案件の物理サーバのP2Vでは、移行元の物理サーバに対しツールの導入や、設定の確認を行う必要があり、手違いが発生した場合、サービス停止や業務停止に繋がる可能性があります。</p>
+    <br>
+    <p>弊社では、その発生を予防するため、作業前に作業者に対し擬似環境を使ったレクチャーの実施、作業中においては、作業者が実施した作業内容を、別の人間が再度確認するダブルチェック体制を設けました。</p>
+    <div class="lightBox">
+    <figure>
+    <img src="/image/cases/case048_01.png" alt="図1" />
+    </figure>
+    </div>
+    </div>
+  </section>
+
+  <section id="toc-overview">
+    <h2>作業概要</h2>
+    <div class="smtSent">
+      <h3>目的</h3>
+      <ul class="grayDisc">
+        <li>保守切れサーバを限られたサービス停止期間内に仮想化移行を行う</li>
+      </ul>
+
+      <h3>作業内容</h3>
+        <ol class="numList">
+          <li><p>移行リハーサル</p></li>
+            <div class="textIndent--style3">
+            <ul class="grayDisc">
+              <li>移行対象の物理サーバを実際に仮想環境へ移行し、移行時間と移行時に発生する問題を解決</li>
+            </ul>
+            </div>
+
+          <li><p>本番移行</p></li>
+            <div class="textIndent--style3">
+            <ul class="grayDisc">
+              <li>移行対象物理サーバのリソース確認、Diskのエラーチェック</li>
+              <li>移行ツール導入</li>
+              <li>P2V実施</li>
+            </ul>
+            </div>
+
+          <li><p>移行後作業</p></li>
+            <div class="textIndent--style3">
+            <ul class="grayDisc">
+              <li>仮想マシンへVMwareTools適用</li>
+              <li>仮想環境で不要なアプリケーション、デバイス削除</li>
+              <li>仮想環境で不要なサービス停止</li>
+              <li>ネットワーク設定</li>
+              <li>ドメイン再参加</li>
+              <li>時刻同期設定</li>
+            </ul>
+            </div>
+
+          <li><p>動作検証</p></li>
+            <div class="textIndent--style3">
+            <ul class="grayDisc">
+              <li>ネットワーク疎通確認</li>
+              <li>イベントログ確認</li>
+              <li>システム検証</li>
+            </ul>
+            <div class="lightBox">
+            <figure>
+            <img src="/image/cases/case048_02.png" alt="図2" />
+            </figure>
+            </div>
+          </ol>
+        </div>
+  </section>
+   
+  <section id="toc-effect">
+    <h2>導入効果</h2>
+    <div class="smtSent">
+      <ol class="numList">
+        <li><p>物理サーバ統合によるTCO削減</p></li>
+          <div class="textIndent--style3">
+          <ul class="grayDisc">
+            <li>物理サーバ数減少により消費電力の節約</li>
+            <li>物理サーバ数減少によりサーバ、ストレージなどの購入費用、保守費用の削減</li>
+            <li>物理サーバ数減少によりスペース費用の節約</li>
+            <li>運用簡素化により運用費の削減</li>
+          </ul>
+          </div>
+
+        <li><p>仮想化移行に伴う人件費削減</p></li>
+          <div class="textIndent--style3">
+          <ul class="grayDisc">
+            <li>サイジング後の実際の仮想化移行作業を協力他社に移行することで人件費削減</li>
+            <li>お客様社員が要件定義、概要設計、移行方針など上流工程へ専任可能</li>
+            <li>仮想化移行後の運用を移行担当者が継続して対応可能</li>
+          </ul>
+          </div>
+      </ol>
+    </div>
+  </section>
+
+  <section id="toc-IHS-result">
+    <h2>弊社利用による効果</h2>
+    <div class="smtSent">
+      <h3>1.イレギュラー発生時の対処</h3>
+      <p>豊富な経験を持つ仮想化技術者が作業に従事するため、イレギュラーや障害発生時の対処が可能</p>
+
+      <h3>2.効率的で正確な作業</h3>
+      <p>作業前に擬似環境でレクチャーを実施するため、実作業時に効率的に作業可能<br /> 実作業時において、作業者以外の人間によるチェック(ダブルチェック体制)を行う事で、作業ミス発生を抑えられる</p>
+
+      <h3>3.仮想化移行後の保守運用対応</h3>
+      <p>仮想化移行対応者がお客様先の仮想化後の運用を行なうため、移行後の運用がスムーズに対応可能</p>
+      <br>
+
+      <p>上記内容に関して、ご不明な点またはご質問などがございましたら、お気軽にお問い合わせ下さい。     また、インフラ構築作業に関しましてご興味がございましたら、 IIMヒューマン・ソリューション営業担当までお問い合わせ下さい。</p>
+    </div>
+  </section>
+</section>
+

@@ -1,0 +1,204 @@
+---
+layout:       case
+global_menu:  cases
+title:        "ADドメインサービス/AD証明書サービス/ Exchange Server移行"
+description:  "ADドメインサービス/AD証明書サービス/Exchange Serverを利用したシステムのリプレイス事例をご紹介いたします。"
+keywords:     "Active Directory,Exchange,リプレイス,事例"
+date:         2013-06-26 09:24:00 +0900
+PDF:          "case096"
+categories: 
+ - "インフラ構築"
+tags: 
+ - "Active Directory"
+ - "Exchange Server"
+---
+
+<section>
+  <h1>{{ page.title }}</h1>
+  <ul class="linkInPage">
+    <li><a href="#toc-1">背景</a></li>
+    <li><a href="#toc-2">システム構成</a></li>
+    <li><a href="#toc-3">作業概要</a></li>
+    <li><a href="#toc-4">作業内容</a></li>
+    <li><a href="#toc-5">作業効果</a></li>
+    <li><a href="#toc-6">弊社利用による効果</a></li>
+    <li><a href="#PdfDownload">PDFダウンロード</a></li>
+  </ul>
+
+  <section id="toc-1">
+    <h2>背景</h2>
+    <div class="smtSent">
+    <p>ハードウェア・ソフトウェアの保守切れによるシステムリプレイスは、システムのライフサイクルの中で不可避なイベントです。多くのシステムは認証基盤を中心に複数の機能が連携するため、ユーザーへの影響を最小限にするためには入念な準備が必要となり大きな労力を要します。</p>
+    <br>
+    <p>今回ご紹介する事例では、認証基盤は「Active Directoryドメインサービス」、クライアント無線LAN接続認証を行う「Active Directory証明書サービス」、メール基盤「Exchange Server 2003」を連携して使用されており、お客様はこれらのシステムのリプレイスを計画されていました。移行に際して、システムのユーザーに及ぼす影響を抑える必要がありましたが、前述した機能に長けた技術者が社内におらず苦慮されていたそうです。そうした中、システム移行の実績のある弊社にお声がけ頂き、ご支援させて頂く運びとなりました。</p>
+    <br>
+    <table class="baseTb">
+      <tbody>
+        <tr>
+        <th>作業規模</th>
+        <td>
+        <ul class="grayDisc">
+          <li>既存サーバー環境
+            <ul class="grayDisc">  
+              <li>ドメインコントローラサーバ：2台</li>
+              <li>Exchange サーバー：1台</li>
+            </ul>
+          </li>
+        </ul>
+      
+        <ul class="grayDisc">
+          <li>新サーバー環境
+            <ul class="grayDisc">
+              <li>ドメインコントローラサーバ：2台</li>
+              <li>Exchange サーバー：1台</li>
+            </ul>
+          </li>
+        </ul>
+
+        <ul class="grayDisc">
+          <li>ユーザー数：約350人</li>
+        </ul>
+        </td>
+        </tr>
+        <tr>
+        <th>作業期間</th>
+        <td>
+        <p>5ヶ月</p>
+        </td>
+        </tr>
+        <tr>
+        <th>作業人数</th>
+        <td>2人</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section id="toc-2">
+    <h2>システム構成</h2>
+    <div class="smtSent">
+      <h3>全体構成図</h3>
+      <div class="lightBox">
+      <figure><img src="/image/cases/case096_01.png" alt="図「1"/></figure>
+      </div>
+    </div>
+  </section>
+
+  <section id="toc-3">
+    <h2>作業概要</h2>
+    <div class="smtSent">
+      <h3>1.Active Directoryドメインサービス移行</h3>
+      <p>概要： ドメイン名/ホスト名/IPアドレスを引き継いでWindows 2003からWindows 2008 R2へDC移行</p>
+      <ol class="snumList">
+        <li>新Domain Controllerドメイン昇格</li>
+        <li>LDAPデータベースレプリケーション</li>
+        <li>旧Domain Controllerドメイン降格</li>
+      </ol>
+      <div class="lightBox">
+      <figure><img src="/image/cases/case096_02.png" alt="図2"/></figure>
+      </div>
+      <h3>2.Active Directory証明書サービス移行</h3>
+      <p>概要： エンタープライズCAをCA名/CAデータベース/CA秘密鍵を引き継いで新規サーバーへ移行</p>
+      <ol class="snumList">
+        <li>新規証明機関構築</li>
+        <li>CAデータベース/秘密鍵移行</li>
+        <li>CAレジストリ/CAポリシー移行</li>
+        <li>証明書テンプレート移行</li>
+      </ol>
+      <div class="lightBox">
+      <figure><img src="/image/cases/case096_03.png" alt="図3"/></figure>
+      </div>
+      <h3>3.Microsoft Exchange Serverバージョンアップ/移行（ユーザーメールボックス移行）</h3>
+      <p>概要： Microsoft Exchange 2010へメールボックス・パブリックフォルダー・その他Exchange機能の移行</p>
+      <ol class="snumList">
+        <li>Exchange 2003 - 2010間のルーティンググループコネクタ作成</li>
+        <li>メールボックス/パブリックフォルダー/Exchange機能移行</li>
+        <li>Exchange連携アプリケーション機能/データ移行</li>
+        <li>ウイルス対策ソフト設定移行</li>
+        <li>Exchange 2003機能削除</li>
+      </ol>
+      <div class="lightBox">
+      <figure><img src="/image/cases/case096_04.png" alt="図4"/></figure>
+      </div>
+    </div>
+  </section>
+
+  <section id="toc-4">
+    <h2>作業内容</h2>
+    <div class="smtSent">
+      <h3>1.要件定義</h3>
+      <ul class="grayDisc">
+        <li>性能要件</li>
+        <li>可用性要件</li>
+        <li>拡張性要件</li>
+        <li>セキュリティ要件</li>
+        <li>外部接続要件</li>
+        <li>運用要件</li>
+      </ul>
+
+      <h3>2.設計</h3>
+      <ul class="grayDisc">
+        <li>Active Directory設計</li>
+        <li>Exchange設計</li>
+        <li>Exchange連携アプリケーション設計</li>
+        <li>ウイルス対策設計</li>
+        <li>移行設計</li>
+      </ul>
+
+      <h3>3.環境構築</h3>
+      <ul class="grayDisc">
+        <li>Active Directoryドメインサービス構築</li>
+        <li>Exchange Server 2010構築</li>
+        <li>グループウェア構築</li>
+        <li>ウイルス対策ソフト構築</li>
+        <li>Active Directoryドメインサービス移行</li>
+        <li>Active Directory証明書サービス移行</li>
+        <li>Exchangeメールボックス移行</li>
+        <li>パブリックフォルダー移行</li>
+        <li>オフラインアドレス帳移行</li>
+        <li>受信者ポリシー移行</li>
+        <li>Exchange連携アプリケーション移行</li>
+      </ul>
+
+      <h3>4.動作検証</h3>
+      <ul class="grayDisc">
+        <li>Active Directory基本動作確認</li>
+        <li>サイトレプリケーション動作検証</li>
+        <li>電子証明書発行検証</li>
+        <li>メール送受信</li>
+        <li>パブリックフォルダー動作確認</li>
+        <li>Exchange連携アプリケーション動作確認</li>
+        <li>AD/Exchange/グループウェアソフト連携確認</li>
+        <li>ウイルス検索動作確認</li>
+      </ul>
+
+      <h3>5.納品ドキュメント</h3>
+      <ul class="grayDisc">
+        <li>基本設計書</li>
+        <li>環境定義書</li>
+        <li>動作検証項目表兼結果報告書</li>
+      </ul>
+  </section>
+   
+  <section id="toc-5">
+    <h2>作業効果</h2>
+    <div class="smtSent">
+      <h3>ドメインセキュリティ強化</h3>
+      <p>強化されたWindows Server 2008 R2のグループポリシーを使用することにより、強固なセキュリティを実現。</p>
+
+      <h3>メールセキュリティ/コンプライアンス強化</h3>
+      <p>Microsoft Exchange Server 2010の新機能によりExchange Server 2003以上にメールボックスの詳細なポリシー管理が可能になりました。悪質な○ユーザーからのメールボックス改ざん防止やメールアーカイブ機能が使用可能になり、コンプライアンスや法的な情報開示の問題に対応。</p>
+
+      <h3>ハードウェア/ソフトウェアのサポート延命</h3>
+      <p>最新機器・最新ソフトウェアへのリプレイスによりベンダーサポート延命。</p>
+    </div>
+  </section>
+
+  <section id="toc-6">
+    <h2>弊社利用による効果</h2>
+    <div class="smtSent">
+      <p>ベンダーよって公開されている移行手順は、複数の機能の同時移行を想定したものではなく、一つの機能のみの移行を想定したものが一般的です。そのため、今回のようなActive Directoryドメインサービス / 証明書サービス / Exchange / Exchange連携アプリケーションの同時移行は容易ではありません。今回の事例では、弊社にて各機能の移行手順を調査・検証し、お客様のご要件・ご要望に合った最適な移行方式と手順をご提案。ユーザーの業務停止を招くことなく、全機能をスムーズに移行することができました。</p>
+    </div>
+  </section>
+</section>
+

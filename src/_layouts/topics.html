@@ -41,6 +41,9 @@
 													<div><span class="icon">事例紹介</span></div>
 													<p>『{{ post.title }}』を追加しました</p>
 
+												{% else if post.categories[0] == "column" %}
+													<div><span class="icon">コラム紹介</span></div>
+													<p>『{{ post.title }}』を追加しました</p>
 
 												{% else %}
 													<div><span class="icon">{{ post.categories[1] }}</span></div>

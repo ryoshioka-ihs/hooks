@@ -1,0 +1,173 @@
+---
+layout:       case
+global_menu:  cases
+title:        "SCCM 2012 SP1構築"
+description:  "SCCM構築支援およびクライアント展開支援事例をご紹介いたします。"
+keywords:     "SCCM,SCEP,工数削減,クライアント展開,事例"
+date:         2015-11-26 17:00:00 +0900
+PDF:          "case113"
+categories: 
+ - "インフラ構築"
+tags:
+ - "System Center Configuration Manager"
+ - "System Center Endpoint Protection"
+---
+
+<section>
+  <h1>{{ page.title }}</h1>
+  <ul class="linkInPage">
+    <li><a href="#toc-background">背景</a></li>
+    <li><a href="#toc-overview">概要</a></li>
+    <li><a href="#toc-sysCon">システム構成図</a></li>
+    <li><a href="#toc-effect">作業効果</a></li>
+    <li><a href="#toc-IHS-result">弊社利用による効果</a></li>
+    <li><a href="#toc-detail">作業内容の詳細</a></li> 
+    <li><a href="#PdfDownload">PDFダウンロード</a></li>
+  </ul>
+
+  <section id="toc-background">
+    <h2>背景</h2>
+    <div class="smtSent">
+    お客様は、クライアントの入れ替えに伴い、構成管理システムの構築を検討されておりました。<br>
+    製品選定において、お客様は既にMicrosoft社と EA契約を結ばれていたことから※1、同社の構成管理製品であるSystem Center 2012Configuration Manager (SCCM2012) の導入を決定されました。<br>
+    <small class="notes">※Microsoft EA契約の一種である、Client ML には、標準でSCCM 2012のClient CALが含まれております。</small><br>
+    <br>
+    ベンダー選定を行う中で、弊社のSCCM構築実績に目をとめていただき、今回ご協力させていただく形となりました。
+    </div>
+  </section>
+
+  <section id="toc-overview">
+    <h2>概要</h2>
+    <div class="smtSent">
+      <table class="baseTb">
+        <tr>
+        <th>業種</th>
+        <td>教育機関</td>
+        <tr>
+        <th>目的</th>
+        <td>構成管理システム構築</td>
+        <tr>
+        <th>作業規模</th>
+        <td>
+        <ul class="grayDisc">
+          <li>管理対象クライアント数: 約100名</li>
+          <li>総サーバー台数: 1台</li>
+        </ul>
+        </td>
+        <tr>
+        <th>作業ボリューム</th>
+        <td>3人月</td>
+        <tr>
+        <th>作業内容</th>
+        <td>
+        <ul class="grayDisc">
+          <li>System Center　2012 Configuration Manger 構築</li>
+          <li>クライアント展開支援</li>
+        </ul>
+        </td>
+      </table>
+    </div>
+  </section>
+
+  <section id="toc-sysCon">
+    <h2>システム構成図</h2>
+    <div class="lightBox">
+    <figure><img src="/image/cases/case113_01.png" alt="図1" /></figure>
+    </div>
+  </section>
+
+  <section id="toc-effect">
+    <h2>作業効果</h2>
+    <div class="smtSent">
+      <h3>1. Endpoint Protection 連動によるクライアントセキュリティ対策ツールの一元管理</h3>
+      <p>SCCM 2012 では、同社製のクライアントセキュリティソフトウェア 「System Center 2012 Endpoint Protection（SCEP 2012）」と統合したことにより、SCCMの管理コンソールにて、クライアントにインストールされたSCEP2012の定義更新ファイルの情報や、ウイルススキャンの情報、ウイルスの駆除実績などの閲覧およびレポート化が可能となりました。</p>
+      <p>また、SCCM2012では、ソフトウェア更新の自動展開が可能になり、本機能を用いて、SCEP2012の定義更新ファイルを自動展開することができます。これらの新機能により、クライアント管理にかかる工数を削減することが可能です。</p>
+      <div class="lightBox">
+      <figure><img src="/image/cases/case113_02.png" alt="図2" /></figure>
+      </div>
+
+      <h3>2.タスクシーケンスによるOS展開の簡素化</h3>
+      <p>SCCM2012では、内部で「Acceleration Deployment kit(ADK)」を用いて、OS展開を行うことが可能です。</p>
+      <br>
+      <p>これまで、Windows システムを用いたOS展開といえば、Windows Deployment　Server 等を用いる必要がありましたが、これらのツールは、OS展開時の実行タスク（デバイスドライバーの組み込みや、Sysprepの応答ファイルの作り込みなど）を全て手作業で作成する必要があり、高い技術が求められていました。</p>
+      <br>
+      <p>SCCM2012では、タスクシーケンスという機能が加わっており、これを用いることにより、ウィザード形式のGUIから、必要な情報やファイルを選定するだけで、OS展開時に必要になるタスクを全て組み込むことが可能となっています。</p>
+      <br>
+      <p>これにより、これまでより早くかつ簡単な手順でOS展開のタスクを構成する事が可能となりました。</p>
+      <div class="lightBox">
+      <figure><img src="/image/cases/case113_03.png" alt="図3" /></figure>
+      </div>
+    </div>
+  </section>
+   
+  <section id="toc-IHS-result">
+    <h2>弊社利用による効果</h2>
+    <div class="smtSent">
+      <h3>クライアント展開実績に基づく、OS展開方針策定の支援</h3>
+      弊社では、クライアントOSのマスター設計／キッティングの案件も数多く対応しており、クライアントの分野に対して高い技術を持ったメンバーが多く在籍しております。<br>
+      <br>
+      本件では、クライアントマスター設計の設計／構築技術を活用したタスクシーケンスの組み込みを行い、ほぼ自動でクライアントOSの展開を行うことのできる設計といたしました。これにより、これまで、手動で行っていたクライアント展開にかかる工数を大幅に削減することができました。
+    </div>
+  </section>
+
+  <section id="toc-detail">
+    <h2>作業内容の詳細</h2>
+    <div class="smtSent">
+      <h3>設計</h3>
+        <ol class="numList">
+          <li><p>基本設計</p></li>
+          <div class="textIndent--style3">
+          <ul class="grayDisc">
+           <li>プラットフォーム設計</li>
+           <li>ネットワーク設計</li>
+           <li>可用性設計</li>
+           <li>セキュリティ設計</li>
+          </ul>
+          </div>
+
+        <li><p>運用設計</p></li>
+        <div class="textIndent--style3">
+        <ul class="grayDisc">
+         <li><p>インベントリ収集方針</p></li>
+         <li>OS展開方針</li>
+        </ul>
+        </div>
+      </ol>
+
+    <h3>環境構築</h3>
+      <ol class="numList">
+        <li><p>クライアント構成管理機能</p></li>
+        <div class="textIndent--style3">
+        <ul class="grayDisc">
+         <li>SCCM2012 基本構築</li>
+         <li>インベントリ収集機能</li>
+         <li>ソフトウェア配布機能</li>
+         <li>リモートコントロール機能</li>
+         <li>Endpoint Protection 管理機能</li>
+         <li>OS展開機能</li>
+        </ul>
+        </div>
+
+    <h3>納品ドキュメント</h3>
+      <ul class="grayDisc">
+       <li>基本設計書（サーバー・機能）</li>
+       <li>詳細設計書（サーバー・機能）</li>
+       <li>動作確認項目表兼結果報告書</li>
+       <li>運用手順書</li>
+      </ul>
+
+    <h3>スキルトランスファー</h3>
+      <ul class="grayDisc">
+       <li>SCCM 2012基本操作説明</li>
+       <li>インベントリ管理機能操作説明</li>
+       <li>ソフトウェア配信木の操作説明</li>
+       <li>リモートコントロール機能操作説明</li>
+       <li>Endpoint Protection 管理機能操作説明</li>
+       <li>OS展開機能操作説明</li>
+      </ul>
+      <br>
+      <small class="notes">※運用技術者向けのハンズオン形式での操作説明会となります。</small>
+    </div>
+  </section>
+</section>
+

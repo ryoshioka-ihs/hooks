@@ -1,0 +1,162 @@
+---
+layout:       case
+global_menu:  cases
+title:        "国際貨物の業務支援システムの再構築"
+description:  "老朽化したサーバーの再構築に関する事例をご紹介いたします。
+IIMヒューマンソリューションでは、お客様のセキュリティ対策基準を元にした対応やシステムの統合的な視点でリスクの未然防止策等を提案するなど、お客様の環境に即した柔軟な対応を実施しております。"
+keywords:     "PowerShell,Jboss,WebSphere MQ"
+date:         2017-12-10 00:00:00 +0900
+PDF:          "case146"
+categories:
+ - "インフラ構築"
+
+tags:
+- "PowerShell"
+- "JBoss"
+- "WebSphere MQ"
+---
+
+<section>
+  <h1>{{ page.title }}</h1>
+  <ul class="linkInPage">
+    <li><a href="#toc-1">背景</a></li>
+    <li><a href="#toc-2">概要</a></li>
+    <li><a href="#toc-3">構成図</a></li>
+    <li><a href="#toc-4">作業効果</a></li>
+    <li><a href="#toc-5">弊社利用による効果</a></li>
+    <li><a href="#toc-6">作業内容の詳細</a></li>
+    <li><a href="#PdfDownload">PDFダウンロード</a></li>
+  </ul>
+
+  <section id="toc-1">
+    <h2>背景</h2>
+    <div class="smtSent">
+      <p>国内大手輸送会社のデータセンター移転に伴い、老朽化した現行の貨物基盤サーバーを新データセンター側にて再構築しました。再構築にあたり、以下の 3 点を加味するようご要望があり、その全てに対応できるように検討しました。</p>
+      <ol class="snumList">
+      	<li>現行の貨物基盤サーバー上で稼働しており、今後も継続して利用することが必要なアプリケーションについては継続して利用することが可能となるよう再構築を行うこと。</li>
+      	<li>個別システムとのファイルの受け渡しは、これまで OA サーバーを利用していたが、セキュリティ基準の強化に伴い OA サーバーを使用することができなくなる。 OA サーバーを使用しなくともユーザーが既存システムとのファイルの送受信ができるようにすること。</li>
+      	<li>貨物基盤サーバーとは異なる環境にある旅客システムとの連携を可能とし、旅客システムの旅客数ファイルをユーザーが参照できるようにすること。</li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="toc-2">
+    <h2>概要</h2>
+    <div class="smtSent">
+      <table class="baseTb">
+        <tbody>
+          <tr>
+            <th>業種</th>
+            <td>輸送業</td>
+          </tr>
+
+          <tr>
+            <th>目的</th>
+            <td>
+            	<ol class="snumList">
+			      	<li>貨物情報システムのユーザーがブラウザより貨物基盤サーバー機能にログイン(※)することにより、貨物情報システムとの各種連携機能を利用する。</li>
+			      	<li>貨物基盤サーバーは旅客数情報を旅客システムから Daily に受信する。</li>
+			      	<li>フライトコントローラーはブラウザから貨物基盤サーバー機能にログイン(※) することにより、旅客数ファイルをダウンロードする。<br>※AD 認証システムを利用してユーザー認証を行う</li>
+      			</ol>
+      		</td>
+          </tr>
+
+          <tr>
+            <th>作業規模</th>
+            <td>
+              <ul class="grayDisc">
+              	<li>利用ユーザー数： 300 名</li>
+              	<li>総サーバー台数： 2 台</li>
+              </ul>
+            </td>
+          </tr>
+
+          <tr>
+            <th>作業ボリューム</th>
+            <td>第一フェーズ／ 2.5 人月</td>
+          </tr>
+
+          <tr>
+            <th>作業内容</th>
+            <td>
+            	<ul class="grayDisc">
+            	<li>基盤構築</li>
+            	<li>定義書作成</li>
+            	<li>開発・単体テスト</li>
+            	</ul>
+            </td>
+          </tr>
+
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section id="toc-3">
+    <h2>構成図</h2>
+    <div class="smtSent">
+      <div class="lightBox">
+        <figure>
+          <img src="/image/cases/case146_01.png" alt="図1">
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section id="toc-4">
+    <h2>作業効果</h2>
+    <div class="smtSent">
+        <ol class="snumList">
+			<li>貨物情報システムのユーザーがブラウザから貨物基盤サーバー機能にログイン(※)することにより、貨物情報システムから各種連携機能をシームレスに利用できるようになる。</li>
+			<li>旅客数情報を旅客システムから Daily に受信できるようになる。</li>
+			<li>外部連携システムであるフライトコントローラーから貨物基盤サーバー機能にログイン(※)することにより、旅客システムから送信してきた旅客数ファイルをダウンロードすることが可能となる。<br>※ AD 認証システムを利用してユーザー認証を行う</li>
+      	</ol>
+
+    </div>
+  </section>
+
+  <section id="toc-5">
+    <h2>弊社利用による効果</h2>
+    <div class="smtSent">
+      <ul class="grayDisc">
+      	<li>プロジェクトの進行途中でセキュリティ対策基準の提出があり、設計書に記載された要件のままでは進められず OS やミドルウィエアの修正が発生しましたが、当社にはセキュリティ対策の豊富な実績があることから躊躇することなくスムーズに対応することができました。</li>
+      	<li>上記の修正に伴い、アプリケーション側で必要な権限が付与されない等想定外のトラブルが発生しましたが、これまでに積重ねたノウハウにより、迅速にトラブルの切り分けと対応ができたためプロジェクトへの影響を最小限に抑えることができました。</li>
+      	<li>長年に亘るお客様先のシステム環境に対する理解を活かし、統合的な視点でリスクの未然防止策等を提案することができたため、プロジェクトを無事に完了させることができました。</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="toc-6">
+  <h2>作業内容の詳細</h2>
+  <div class="smtSent">
+
+    <h3>環境構築</h3>
+    <ol class="numList">
+    	<li><p>OS 構築</p>
+    		<ul class="grayDisc">
+    			<li>Redhat Enterprise Linux 6.8 ( 64 bit )</li>
+    		</ul>
+    	</li>
+    	<li><p>ミドルウェア構築</p>
+    		<ul class="grayDisc">
+    			<li>Apache 2.4.22</li>
+    			<li>Jboss - EAP 7.0.6</li>
+    			<li>WebSphere MQ Manager 8.0.0.6</li>
+    		</ul>    		
+    	</li>
+    </ol>
+
+   <h3>納品ドキュメント</h3>
+    	<ul class="grayDisc">
+    		<li>環境定義書（全サーバー・機能）</li>
+    		<li>情報セキュリティ対策基準チェックシート（全サーバー・機能）</li>
+    		<li>動作確認項目表兼結果報告書</li>
+    		<li>運用手順書</li>
+    		<li>運用テスト手順書</li>
+    	</ul>
+
+  </div>
+  </section>
+
+</section>
+

@@ -1,0 +1,140 @@
+---
+layout:       case
+global_menu:  cases
+title:        "VMware　のハードウェア増強、仮想マシンのOSバージョンアップ"
+description:  "仮想環境の増強及び仮想環境のバージョンアップの事例をご紹介いたします。"
+keywords:     "VMwareバージョンアップ,ハードウェア増強,事例"
+date:         2010-08-27 17:01:00 +0900
+PDF:          "case055"
+categories: 
+ - "インフラ構築"
+tags:
+ - "VMware vSphere"
+ - "仮想化基盤"
+---
+
+<section>
+  <h1>{{ page.title }}</h1>
+  <ul class="linkInPage">
+    <li><a href="#toc-1">背景</a></li>
+    <li><a href="#toc-2">目的</a></li>
+    <li><a href="#toc-3">作業時のポイント</a></li>
+    <li><a href="#toc-4">作業内容</a></li>
+    <li><a href="#toc-5">作業効果</a></li>
+    <li><a href="#toc-6">弊社利用による効果</a></li>    
+    <li><a href="#PdfDownload">PDFダウンロード</a></li>
+  </ul>
+
+  <div class="free">
+  <div class="smtSent">
+  <p>IIM ヒューマン・ソリューションでは、 VMware 社より提供されている仮想環境の運用・保守をご支援しています。</p>
+  <p>今回は、仮想環境拡張の具体的な事例をご紹介いたします。</p>
+  </div>
+  </p>
+
+  <section id="toc-1">
+  	<h2>背景</h2>
+  	<div class="smtSent">
+	  	<p>今回依頼を頂いたお客様では、VMware（注 1 ） 仮想環境を 2 年前に導入、現在 100 台近くの仮想マシンが稼動しており、以下の課題・検討事項を抱えておりました。</p>
+	  	<br>
+	  	<p>( 注 1 ) VMware ：<br>コンピュータの仮想化用ソフトウェアを製造、販売する会社、またはそのソフトウェア製品である。</p>
+	</div>
+  </section>
+
+  <section id="toc-2">
+  	<h2>目的</h2>
+  	<div class="smtSent">
+  		<h3>仮想環境ホストサーバーのハードウェアリソース( CPU ,メモリ ) 増強</h3>
+  		<p>現状使用できる ESX ( 注 2 ) サーバーのハードウェアリソース( CPU , Memory ) が全体で残り 2 割を切っており、今後予定されている仮想環境でのサーバー構築やリプレースができないため、 ESX の増強を検討されていました。</p>
+  		<br>
+  		<p>( 注 2 ) ESX ：<br>VMware 社による、コンピュータを仮想化にするためのハイパーバイザー・ソフトウェア。</p>
+
+  		<h3>仮想環境のバージョンアップ</h3>
+  		<p>今後利用されるであろう、「 Windows 2008 R2 」「 Windows 7 」といった OS の仮想マシン上での利用を検討されていました。<br>
+  		<small class="notes">※現状の ESX サーバーバージョンは 3.5 で上記 OS は仮想マシンとしてサポート OS ではありませんでした。</small></p>
+  	</div>
+  </section>
+
+  <section id="toc-3">
+  	<h2>作業時のポイント</h2>
+  	<div class="smtSent">
+  		<p>仮想環境のバージョンアップを行う際、 VMware の要件として作業時に仮想マシンを停止させる必要がありました。そのため、仮想マシンのサービス停止時間を最小限に抑えるかということが、今回の重要なポイントの一つでした。</p>
+  		<br>
+  		<p>事前に仮想環境を把握することは勿論ですが、仮想マシン全てのサービス提供状況についても調査した上で、分単位の作業スケジュールを示した手順書を作成し、対応させて頂きました。</p>
+  		<figure><img src="/image/cases/case055_01.png"></figure>
+  	</div>
+  </section>
+
+  <section id="toc-4">
+  	<h2>作業内容</h2>
+  	<div class="smtSent">
+  		<h3>計画・準備</h3>
+  		<ul class="grayDisc">
+  			<li>環境、サービス状況の把握</li>
+  			<li>作業タスクの洗い出し / WBS 作成</li>
+  			<li>実施計画策定</li>
+  		</ul>
+  		<h3>増強環境の設計・手順策定</h3>
+  		<ul class="grayDisc">
+  			<li>増強 ESX のパラメータ設計</li>
+  			<li>仮想環境バージョンアップ手順書作成</li>
+  			<li>仮想マシン移行スケジュール作成</li>
+  		</ul>
+  		<h3>実作業</h3>
+  		<ul class="grayDisc">
+  			<li>増強 ESX 構築</li>
+  			<li>ESX バージョンアップ</li>
+  			<li>vCenter Server (注 3 )バージョンアップ</li>
+  			<li>仮想マシンバージョンアップに伴う移行</li>
+  			<li>仮想マシンバージョンアップ</li>
+  		</ul>
+  		<br>
+  		<p>( 注 3 ) vCenter Server ：<br>VMware 仮想環境の一元管理を行うサーバー、仮想マシンの作成や ESX の設定変更等を GUI で行うことが可能</p>
+  		<h3>検証</h3>
+  		<ul class="grayDisc">
+  			<li>増強 ESX の動作検証</li>
+  			<li>ESX 機能検証/仮想マシン動作検証</li>
+  			<li>ESX バージョンアップ</li>
+  			<li>ESX 機能検証/仮想マシン動作検証</li>
+  			<li>vCenter Server バージョンアップ</li>
+  			<li>vCenter Server 機能検証/システム間の接続検証</li>
+  			<li>仮想マシンバージョンアップ</li>
+  			<li>仮想マシン動作検証</li>
+  		</ul>
+  	</div>
+  </section>
+
+  <section id="toc-5">
+  	<h2>作業効果</h2>
+  	<div class="smtSent">
+  		<h3>仮想環境バージョンアップの効果</h3>
+  		<ul class="grayDisc">
+  			<li>仮想マシンの上で使用できる「 OS 」の種類が増加</li>
+  			<li>仮想マシンのパフォーマンス向上</li>
+  		</ul>
+  		<h3>仮想化環境の増強</h3>
+  		<ul class="grayDisc">
+  			<li>新規構築やリプレースの仮想マシン枠の拡大</li>
+  		</ul>
+  	</div>
+  </section>
+
+  <section id="toc-6">
+  	<h2>弊社利用による効果</h2>
+  	<div class="smtSent">
+  		<h3>イレギュラー発生時の対処</h3>
+  		<p>豊富な経験を持つ仮想化技術者が作業に従事するため、イレギュラー対応や 障害発生時の対処が可能</p>
+  		<h3>仮想化移行後の保守運用対応</h3>
+  		<ul class="grayDisc">
+  			<li>お客様先の仮想環境運用のサポートが可能</li>
+  			<li>お客様がスムーズに仮想環境の運用を始められるよう、スキルトランスファー( 注 4 )が可能。</li>
+  		</ul>
+  		<br>
+  		<p>( 注 4 )スキルトランスファー：<br>仮想マシンの作成、クローン、スナップショットといった vCenter 上で利用できる機能を中心に、仮想環境の運用で頻繁に利用する可能性がある機能を、実機を通してお客様にお伝え致します。</p>
+  		<br>
+  		<p>上記内容に関して、ご不明な点またはご質問などがございましたら、お気軽にお問い合わせ下さい。また、インフラ構築作業に関しましてご興味がございましたら、 IIM ヒューマン・ソリューション営業担当までお問い合わせ下さい。</p>
+  	</div>
+  </section>
+
+</section>
+

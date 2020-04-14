@@ -1,0 +1,378 @@
+---
+layout:       case
+global_menu:  cases
+title:        "官公庁向けシステム全体のリプレース"
+description:  "官公庁向けサーバーおよびクライアントのリプレースに伴う仮想環境の構築支援の事例をご紹介いたします。"
+keywords:     "システム更改,リプレース,セキュリティ強化,災害対策,ゼロクライアント化,負荷軽減,JP1/NETM/DM,ARCServe,VMware View,事例"
+date:         2015-10-05 17:01:00 +0900
+PDF:          "case108"
+categories: 
+ - "インフラ構築"
+tags:
+ - "VMware vSphere"
+ - "仮想化基盤"
+ - "Inter Scan Messeging Security Suite"
+ - "Virus Baster Corp"
+ - "Deep Security"
+ - "FFRyarai"
+ - "ARCServe Backup"
+ - "ARCserve D2D"
+ - "ARCServe Reprication"
+ - "JP1/NETM/DM"
+ - "HP Zero Client Service"
+ - "HP Device manager"
+ - "DeviceLock"
+---
+
+<section>
+  <h1>{{ page.title }}</h1>
+  <ul class="linkInPage">
+    <li><a href="#toc-background">背景</a></li>
+    <li><a href="#toc-overview">概要</a></li>
+    <li><a href="#toc-sysCon">システム構成図</a></li>
+    <li><a href="#toc-effect">作業効果</a></li>
+    <li><a href="#toc-detail">作業内容の詳細</a></li>
+    <li><a href="#toc-IHS-result">弊社利用による効果</a></li>   
+    <li><a href="#PdfDownload">PDFダウンロード</a></li>
+  </ul>
+
+  <section id="toc-background">
+    <h2>背景</h2>
+    <div class="smtSent">
+      <p>保守期限が終了したシステムには、不具合や脆弱性が修正されないことによる業務停止やセキュリティのリスクが伴います。<br /> 
+      今回の事例では、お客様の要望として利便性の向上を図るとともに運用に伴う情報セキュリティおよび障害、災害対策の強化、運用業務での安定稼働の課題がありました。<br />
+      <br /> 弊社にて課題と目的に沿ったハード、ソフトウェアの更改に伴うシステム基盤の刷新の一部分を対応致しました。</p>
+    </div>
+  </section>
+
+  <section id="toc-overview">
+    <h2>概要</h2>
+    <div class="smtSent">
+      <table class="baseTb">
+        <tbody>
+          <tr>
+          <th>業種</th>
+          <td>官公庁</td>
+          </tr>
+          <tr>
+          <th>目的</th>
+          <td>官公庁向けサーバーおよびクライアントのリプレースに伴う仮想環境の構築</td>
+          </tr>
+          <tr>
+          <th>作業規模</th>
+          <td>
+            <ul class="grayDisc">
+              <li>利用ユーザー数: 約 100名</li>
+              <li>総サーバー台数:  21台</li>
+            </ul>
+          </td>
+          </tr>
+          <tr>
+          <th>作業ボリューム</th>
+          <td>12人月（期間：3.5ヶ月間）</td>
+          </tr>
+          <tr>
+          <th>作業内容</th>
+          <td>
+            <ul class="grayDisc">
+              <li>現状調査</li>
+              <li>基本設計</li>
+              <li>詳細設計</li>
+              <li>検証環境構築</li>
+              <li>本番環境構築</li>
+              <li>移行</li>
+              <li>ドキュメント作成</li>
+            </ul>
+          </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section id="toc-sysCon">
+    <h2>システム構成図</h2>
+    <div class="smtSent">
+    <div class="lightBox">
+    <figure><img src="/image/cases/case108_01.png" alt="図1" /></figure>
+    </div>
+    </div>
+  </section>
+
+  <section id="toc-effect">
+    <h2>作業効果</h2>
+    <div class="smtSent">
+      <h3>1.情報セキュリティの強化</h3>
+
+        <h4>●課題の詳細</h4>
+          <ol class="snumList">
+            <li>メール送受信時におけるウイルス感染の防止、スパムメール防御</li>
+            <li>各サーバー、クライアントのウイルス対策および集中管理</li>
+            <li>従来のウイルス対策ソフトで防げなかった標的型攻撃で利用される未知の脆弱性やマルウェアの検知・防御</li>
+          </ol>
+
+        <h4>●どのように改善したか</h4>
+          <ol class="snumList">
+            <li>ネットワークの出入口へInterScan Messaging Security Suite、IPSを導入</li>
+            <li>Trend Micro社製のウイルスバスターを物理PCへ導入、同社のDeep Securityを仮想サーバー/PCへ導入し管理サーバーの構築</li>
+            <li>FFRyaraiを導入および管理サーバーの構築</li>
+          </ol>
+
+        <h4>●どんな効果があったか</h4>
+        <p class="textIndent--style3">⇒サーバー、クライアントをウイルス等の脅威から、3段構えで防ぐことが可能となった</p>
+        <div class="textIndent--style3">
+          <ol class="snumList">
+            <li>ユーザーにメールが配布される前に、最新のパターンファイルから</li>
+            <li>仮想マシンへDeeｐ Securityを導入することで、ESX Hostの負荷を下げることが可能となりオフラインでの利用を考慮する物理PCには一般的に利用されているウイルスバスターCorpを導入致しました。</li>
+            <li>クライアントからマルウェアによる被害を振る舞い検知により、事前に情報漏洩を防げるようになり 上記2、3を集中的に管理するためvCenterに導入し、ウイルス感染時はウイルス検知メールをシステム管理者へ連絡することで早急な対応ができるよう運用時のメリットを考慮致しました。</li>
+          </ol>
+        </div>
+
+      <h3>2.災害対策の強化</h3>
+
+        <h4>●課題の詳細</h4>
+        <div class="textIndent--style3">
+          <ul class="grayDisc">
+            <li>障害や災害時が起きると1台に複数の機能が搭載されており業務が停止してしまう</li>
+            <li>障害時のシステム復旧を容易にし、業務への影響を最小化すること</li>
+          </ul>
+        </div>
+
+        <h4>●どのように改善したか</h4>
+        <div class="textIndent--style3">
+          <ul class="grayDisc">
+            <li>仮想サーバーを複数に構成</li>
+            <li>ファイルサーバー、グループウェアサーバーへARCServe Replicationの構築</li>
+            <li>通常利用DCの仮想サーバーへARCServe Backupの設定、構築</li>
+            <li>vCenterサーバーへARCServe Backup、D2D、Agent for Open Filesの設定、構築</li>
+            <li>タブレット端末からインターネット経由で、災害対策用DCの仮想PCへVMware View Clientを利用して接続</li>
+          </ul>
+        </div>
+
+        <h4>●どんな効果があったか</h4>
+        <div class="textIndent--style3">
+          <ul class="grayDisc">
+            <li>仮想サーバーを複数構成することで機能を分散することで、障害発生時の影響を小さくできた</li>
+            <li>ファイルサーバー、グループウェアサーバーへ設定したARCServe Replicationの機能にて欠損データを最小にするため「リアルタイムレプリケーション」を採用し、対象サーバーが当該データをHDDに書き込み後に災害対策用DCのサーバーと同期することで災害対策用DCへ接続することで復旧時間を短縮できる</li>
+            <li>vCenterに導入したARCServe Backupにて、通常利用DCの仮想サーバーを定期的にバックアップしvCenterサーバーのローカルに保存後、D2Dの遠隔地にて保管（ローテーション形式）することで安全にバックアップデータを保管でき、ARCserve Backup Agent for Open Filesによって、常時稼働させておく必要があるサーバーや使用中のファイルデータを安全にバックアップが可能になった</li>
+            <li>災害時にMobile Wi-Fiを利用してインターネット経由で、災害対策用DCへActive Directoryの認証を利用して接続することで業務が可能になった</li>
+          </ul>
+        </div>
+          
+      <h3>3.ゼロクライアント化による負荷の軽減</h3>
+
+        <h4>●課題の詳細</h4>
+          <ol class="snumList">
+            <li>ユーザーやレイアウト変更による端末内のデータ移行やPC移動作業が必要となる</li>
+            <li>会議で利用する紙資源等の削減</li>
+            <li>クライアントPCのUSBデバイス制御</li>
+          </ol>
+
+        <h4>●どのように改善したか</h4>
+          <ol class="snumList">
+            <li>仮想デスクトップ環境、ゼロクライアント管理サーバー、vCenterサーバーの構築</li>
+            <li>タブレットPCにJP1/NETM/Remote Controlを導入し画面の共有</li>
+            <li>DeviceLock管理サーバー構築、USBデバイスサーバー設定および仮想PCへエージェントのインストール</li>
+          </ol>
+
+        <h4>●どんな効果があったか</h4>
+          <ol class="snumList">
+            <li>ユーザーが利用する端末には、情報が残らないためセキュリティが向上し端末の移動が不要となりVMware Viewにて一元管理が可能になった</li>
+            <li>仮想マシンへタブレットPCからVDIを利用して接続し、画面を他のタブレットと共有することで、ペーパーレスな会議方法可能になった</li>
+            <li>ゼロクライントPCのUSBポートを禁止（キーボード/マウス以外）することで、不要なデータ通信をDCと行う必要がなくなり通信の負荷も軽減され、部署ごとにUSBデバイスサーバーを配置することでUSB機器の管理が可能になり、管理サーバーではクライアントが何のデータを持出したログによる管理が可能となったことでセキュリティ面が強化された</li>
+          </ol>
+      <h3>4. JP1/NETM/DM製品を利用した構築</h3>
+        <h4>●課題の詳細</h4>
+        <div class="textIndent--style3">
+          <ul class="grayDisc">
+            <li>Windows ベースのサーバー、クライアントに対し、資産情報管理、各種ソフトウェアの配信</li>
+          </ul>
+        </div>
+
+        <h4>●どのように改善したか</h4>
+        <div class="textIndent--style3">
+          <ul class="grayDisc">
+            <li>JP1/NETM/DM/Managerを管理サーバーに構築し、JP1/NETM/DM Agentを監視、配布対象のサーバー、クライアントへ導入</li>
+          </ul>
+        </div>
+
+        <h4>●どんな効果があったか</h4>
+          <div class="textIndent--style3">
+          <ul class="grayDisc">
+            <li>ソフトウェアやハードウェアの資産管理を一元管理でき、配布機能ではアプリケーションのインストールやファイル配布をサイレントで実施できユーザーへの負担が軽減される</li>
+          </ul>
+          </div>
+    </div>
+  </section>
+   
+  <section id="toc-detail">
+    <h2>作業内容の詳細</h2>
+    <div class="smtSent">
+      <h3>設計</h3>
+
+        <ol class="numList">
+          <li><p>基本設計</p></li>
+          <div class="textIndent--style3">
+          <ul class="grayDisc">
+            <li>システム方式設計</li>
+            <li>クライアント/サーバーウイルス対策機能</li>
+            <li>クライアント/サーバーOS ウイルス対策</li>
+            <li>メールウイルス対策</li>
+            <li>振る舞い検知機能</li>
+            <li>クライアントPC機能</li>
+            <li>ゼロクライアントPC</li>
+            <li>仮想PC</li>
+            <li>汎用PC</li>
+            <li>モバイル端末</li>
+            <li>マスタの種類</li>
+            <li>マスタ設計</li>
+            <li>リカバリ方法</li>
+            <li>デバイス機能</li>
+            <li>デバイス利用機能</li>
+            <li>デバイス制御機能</li>
+            <li>リモートコントロール機能</li>
+            <li>モバイル端末のリモートコントロール</li>
+            <li>モバイル端末以外のリモートコントロール</li>
+            <li>配布・資産管理機能</li>
+            <li>サーバハードウェア劣化監視</li>
+            <li>バックアップ状態監視</li>
+            <li>信頼性設計</li>
+            <li>バックアップ管理機能</li>
+            <li>イメージバックアップ機能</li>
+            <li>データバックアップ機能</li>
+            <li>データレプリケーション機能</li>
+            <li>リストア機能</li>
+            <li>バックアップ媒体の遠隔地保管</li>
+          </ul>
+          </div>
+
+          <li><p>詳細設計<p></li>
+          <div class="textIndent--style3">
+          <ul class="grayDisc">
+            <li>Inter Scan Messeging Security Suite</li>
+            <li>JP1/NETM/DM/Client</li>
+            <li>JP1/NETM/DM/Manager</li>
+            <li>ARCServe Backup</li>
+            <li>ARCserve D2D</li>
+            <li>ARCServe Reprication</li>
+            <li>Deep Security</li>
+            <li>ウイルスバスターCorp</li>
+            <li>FFRyarai</li>
+            <li>Server ConductorAgent</li>
+            <li>vCenter監視</li>
+            <li>HP Zero Client Service</li>
+            <li>HP Device manager</li>
+            <li>DeviceLock</li>
+            <li>仮想PC</li>
+            <li>汎用PC</li>
+            <li>モバイル端末</li>
+          </ul>
+          </div>
+        </ol>
+        
+
+      <h3>構築</h3>
+        <ol class="numList">
+          <li><p>仮想サーバー構築</p></li>
+          <div class="textIndent--style3">
+          <ul class="grayDisc">
+            <li>Inter Scan Messeging Security Suite</li>
+            <li>JP1/NETM/DM/Client</li>
+            <li>JP1/NETM/DM/Manager</li>
+            <li>ARCServe Backup</li>
+            <li>ARCserve D2D</li>
+            <li>ARCServe Reprication</li>
+            <li>Deep Security</li>
+            <li>ウイルスバスターCorp</li>
+            <li>FFRyarai</li>
+            <li>Server ConductorAgent</li>
+            <li>vCenter監視</li>
+            <li>HP Zero Client Service</li>
+            <li>HP Device manager</li>
+            <li>DeviceLock</li>
+          </ul>
+          </div>
+
+          <li><p>仮想PC構築</p></li>
+          <div class="textIndent--style3">
+          <ul class="grayDisc">
+            <li>Windows7</li>
+            <li>Office 2013</li>
+            <li>Visio2013</li>
+            <li>JP1/NETM/DM/Client</li>
+            <li>Java</li>
+            <li>Quick Time</li>
+            <li>Acrobat Professional 11</li>
+            <li>Adobe Reader</li>
+            <li>Adobe Flash Player</li>
+            <li>Lhaplus</li>
+            <li>一太郎ビューア</li>
+            <li>一太郎7</li>
+            <li>本格翻訳8</li>
+            <li>VMware Agent</li>
+            <li>VMware Tool</li>
+            <li>Device Lock</li>
+            <li>ThinClient USB Link</li>
+            <li>ウイルスバスターCorp</li>
+            <li>FFRyarai</li>
+          </ul>
+          </div>
+
+          <li><p>汎用PC構築</p></li>
+          <div class="textIndent--style3">
+          <ul class="grayDisc">
+            <li>Windows7</li>
+            <li>Office 2013</li>
+            <li>JP1/NETM/DM/Client</li>
+            <li>Java</li>
+            <li>Quick Time</li>
+            <li>Adobe Reader</li>
+            <li>Adobe Flash Player</li>
+            <li>Lhaplus</li>
+            <li>一太郎ビューア</li>
+            <li>ウイルスバスターCorp</li>
+            <li>FFRyarai</li>
+          </ul>
+          </div>
+
+          <li><p>タブレットPC構築</p></li>
+          <div class="textIndent--style3">
+          <ul class="grayDisc">
+            <li>Windows8</li>
+            <li>JP1/NETM/DM/Remote Control Manager</li>
+            <li>JP1/NETM/DM/Remote Control Agent</li>
+            <li>VMware Agent</li>
+            <li>ウイルスバスターCorp</li>
+          </ul>
+          </div>
+
+          <li><p>データベース構築</p></li>
+          <div class="textIndent--style3">
+          <ul class="grayDisc">
+            <li>SQL Server 2008 R2 SP2 Express Edition</li>
+            <li>SQL Server 2012 Express Edition</li>
+          </ul>
+          </div>
+        </ol>
+
+      <h3>納品ドキュメント</h3>
+        <ul class="grayDisc">
+          <li>基本設計書（全サーバー・機能）</li>
+          <li>詳細設計書（全サーバー・機能）</li>
+          <li>動作確認項目表兼結果報告書</li>
+          <li>操作手順書</li>
+        </ul>
+  </section>
+
+  <section id="toc-IHS-result">
+    <h2>弊社利用による効果</h2>
+    <div class="smtSent">
+      <h3>1.弊社で多数の実績あるクライアントマスターイメージ作成</h3>
+        <p>クライアントにWindows7を利用するにあたり、2011年以降多数の案件を行ってきた弊社のノウハウを元に、最適な設定をお客様に提示することやトラブルの多い箇所を事前にサーバー構築チームと情報共有することでトラブル無く短納期のスケジュールに合わせてリリースすることが可能となった</p>
+
+      <h3>2.システム基盤の構築実績の多い弊社だからこそ</h3>
+        <p>今回の事例でも、VMware社の仮想基板構築経験が豊富な弊社担当が基本設計から運用開始までを対応させて頂き、新基盤構築の課題を解決し、短納期であった今回の案件をスケジュールに合わせてリリースすることが可能となった</p>
+    </div>
+  </section>
+</section>
+

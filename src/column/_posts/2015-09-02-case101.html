@@ -1,0 +1,218 @@
+---
+layout:       case
+global_menu:  cases
+title:        "SCCM2012＋SCEP構築"
+description:  "SCCMによるクライアント構成管理機能、およびセキュリティ対策機能の実装、および運用設計事例をご紹介いたします。"
+keywords:     "SCCM,SCEP,コスト削減,Active Directory,事例"
+date:         2015-09-02 09:50:00 +0900
+PDF:          "case101"
+categories: 
+ - "インフラ構築"
+tags:
+ - "System Center Configuration Manager"
+ - "System Center Endpoint Protection"
+---
+
+<section>
+  <h1>{{ page.title }}</h1>
+  <ul class="linkInPage">
+    <li><a href="#toc-background">背景</a></li>
+    <li><a href="#toc-overview">概要</a></li>
+    <li><a href="#toc-sysCon">構成図</a></li>
+    <li><a href="#toc-IHS-result">弊社利用による効果</a></li>
+    <li><a href="#toc-detail">作業内容の詳細</a></li>    
+    <li><a href="#PdfDownload">PDFダウンロード</a></li>
+  </ul>
+
+  <section id="toc-background">
+    <h2>背景</h2>
+    <div class="smtSent">
+      <p>今回のお客様はクライアント構成管理システムリプレースの為、System Center 製品を用いた運用管理基盤の構築を検討しており、その中でも、弊社ではクライアント構成管理製品である「Configuration Manager (SCCM)」の導入実績が豊富にあったことから、お声掛け頂き、ご支援する運びになりました。</p>
+      <br>
+      <p>本SCCMのバージョン（2012）より、今まで別製品であった「Forefront Endpoint Security」の後継製品である、「System Center Endpoint Protection」の管理が統合され、クライアントPCに関わるセキュリティ機能を提供でき、3rdパーティ製のウイルス対策ソフトウェアが不要となります。</p>
+      <br>
+      <p>本事例では、SCCMによるクライアント構成管理機能、およびセキュリティ対策機能の実装、および運用設計を弊社にて対応致しました。</p>
+    </div>
+  </section>
+
+  <section id="toc-overview">
+    <h2>概要</h2>
+    <div class="smtSent">
+      <table class="baseTb">
+        <tbody>
+        <tr>
+        <th>業種</th>
+        <td>流通・小売業</td>
+        </tr>
+        <tr>
+        <th>目的</th>
+        <td>
+          <ul class="grayDisc">
+            <li>クライアント切り替えに伴う構成管理基盤のリプレース</li>
+            <li>クライアントセキュリティ機能のリプレース</li>
+            <li>セキュリティパッチ導入機能のリプレース</li>
+            <li>リモートコントロールツールのリプレース</li>
+          </ul>
+        </td>
+        </tr>
+        <tr>
+        <th>作業規模</th>
+        <td>
+          <ul class="grayDisc">
+          	<li>利用ユーザー数: 約5万名</li>
+          	<li>総サーバー台数：2台</li>
+          </ul>
+        </td>
+        </tr>
+        <tr>
+        <th>作業ボリューム</th>
+        <td>3人月</td>
+        </tr>
+        <tr>
+        <th>作業内容</th>
+        <td>System Center 2012 Configuration Manager 機能設計/構築/動作試験</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section id="toc-sysCon">
+    <h2>構成図</h2>
+    <div class="smtSent">
+    <div class="lightBox">
+    <figure><img src="/image/cases/case101_01.png" alt="図1"/></figure>
+    </div>
+    </div>
+  </section>
+
+  <section id="point">
+    <h2>作業効果</h2>
+    <div class="smtSent">
+      <h3>SCCM によるSCEPの統合管理</h3>
+        <p>今回、お客様はクライアントのリプレースに伴い、ウイルス対策製品をサードパーティ製製品から、Microsoft 社のSystem Center 2012 Endpoint Protection (SCEP)に切り替えを実施されました。</p>
+        <br>
+        <p>SCCM 2012 では、SCEP の統合管理機能が標準として実装されている為、今回の機能設計に伴って、SCEPの統合管理規則及び定義更新ファイルの自動更新規則を設定いたしました。<br>
+        <p class="textIndent--style1">
+        <small class="notes">※SCEPの定義更新ファイルは、Microsoft Updateの更新分類の1つとなっている為、SCCMのセキュリティパッチ展開機能で、展開することができます。</small></p>
+        <br>
+        これによりコストを抑え且つ、構成管理機能とウイルス対策機能を一元管理することができました。また、SCEPを用いることにより副次的な効果としてコスト削減にもつながっております。
+        <p class="textIndent--style1">
+        <small class="notes">※SCEP のクライアントライセンスは、Microsoft製品のCore CAL Suite に内包されております。</small></p>
+        <div class="lightBox">
+        <figure><img src="/image/cases/case101_02.png" alt="図2" /></figure>
+        </div>
+
+      <h3>BITSによる帯域負荷の平準化</h3>
+      <p>お客様環境では、各地の拠点にWANを介してネットワークが構成されておりました。</p>
+      <p>しかし、拠点によりネットワーク帯域が異なっており、帯域が狭い拠点に関しては、SCCMの通信により既存のネットワーク通信に影響を与えないようシステムを構成する必要がありました。</p>
+      <p>SCCMでは、セキュリティパッチなどを展開する際に、クライアントからサーバーの保有しているファイルなどの資源にアクセスする仕様となっている為、各拠点の出口ネットワークの帯域使用率を考慮する必要がありました。</p>
+      <br>
+      <p>今回は、拠点毎にコレクション*1を作成し、拠点出口ネットワークの帯域幅により、異なる手法で帯域制御を行いました。</p>
+      <br>
+      <ul class="grayDisc">
+        <li>帯域が広い拠点 ： BITS*2による帯域制御を行い、ネットワーク負荷を平準化</li>
+        <li>帯域が狭い拠点 ： 拠点内部に配布ポイントを設置することにより、クライアントから出口回線への通信を抑制</li>
+      </ul>
+      <br>
+      これにより、既存のネットワーク通信に影響を与えず、ネットワーク帯域を多く使用する機能(セキュリティパッチ展開等)を利用することが可能となっております。
+      <div class="lightBox">
+      <figure><img src="/image/cases/case101_03.png" alt="図3" /></figure>
+      </div>
+      <br>
+      <small class="notes">※1：コレクション<br>
+      <div class="textIndent--style3">
+      <p>SCCMの管理対象デバイスおよびグループを論理的にグループ化する機能。</p>
+      <p>SCCMでは、このコレクションに対して、クライアント設定、ソフトウェア展開などを定義することができる。</p>
+      <p>管理対象は複数のコレクションに設定することができ、競合するような設定に関しては、優先順位を設定することが可能。</p>
+      </div>
+      </small>
+      
+
+      <br>
+      
+      <small class="notes">※2： BITS（Background Intelligent　Transfer　Services）<br>
+      <div class="textIndent--style3">
+      <p>アイドル状態のネットワーク帯域幅のみを使用して、インターネット経由でファイルを転送するように設計されたファイル転送サービスHTTP、FTP、または共有フォルダーでのファイルの転送と異なり、BITS では利用可能な帯域幅をすべて使用するわけではないので、他サービスなどのネットワーク通信に影響を与えることなく、ファイルをダウンロードすることが可能。</p>
+      </div>
+      </small>
+    </div>
+  </section>
+   
+  <section id="toc-IHS-result">
+    <h2>弊社利用による効果</h2>
+    <div class="smtSent">
+      <h3>Power Shell スクリプトを活用した運用手法の効率化</h3>
+      <p>管理規模が大きくなれば大きくなるほど、SCCMに設定すべき項目も増え管理作業も増加していきます。</p>
+      <p>特に、SCCMは管理するネットワーク境界や、コレクション、クライアント設定、セキュリティ規則、セキュリティパッチの展開情報など管理するべき情報も多く、管理業務は多岐に渡ります。</p>
+      <br>
+      <p>SCCM 2012 SP1より、管理を効率化する為に有用なPowerShell のコマンドレットが内包されました。これらのコマンドレットを活用して運用スクリプトを作成することにより、お客様の工数を削減することに貢献いたしました。</p>
+      <br>
+      <p>例えば、SCCM上でのコレクション作成作業は一般的に1コレクション10～15分程度かかるのですが、本件では、CSVに記述された設定を元にコレクションを自動設定するスクリプトを作成させていただき、1コレクションあたり数秒で作成可能になりました。また、コレクションの設定をCSVファイルから一括で読み込むことが可能ですので、 1回の操作で複数のコレクションを一度に作成することが可能な仕様としております。</p>
+      <div class="lightBox">
+      <figure><img src="/image/cases/case101_04.png" alt="図4" /></figure>
+      </div>
+
+      <h3>実績に基づく柔軟な機能設計</h3>
+      <p>SCCMを用いた構成管理は、コレクションの切り分けや、展開規則の設定により多種多様なクライアント運用を行うことが可能です。</p>
+      <p>特に、SCCM 2012 から、Active Directory と連携し、ユーザーアカウントとクライアント端末の紐づけが可能になり、より自由度の高いクライアント運用が可能になりました。</p>
+      <br>
+      <p>SCCMでは、Microsoft社から提供されているドキュメントを用いることにより、基本的な運用機能までは直ぐに構築することが可能ですが、お客様の機能要件にSCCMを併せていくとなると、製品の自由度が高い分、設計は容易ではありません。</p>
+      <br />
+      <p>弊社では、他業種のお客様の元でSCCMの設計／構築を担当させていただいた実績がございます。</p>
+      <p>本件では、機能の要件定義から、案件に携わらせていただき、お客様の求める機能がSCCMをどのように利用すれば実現できるかを様々な観点から提案させていただき、運用機能を構築させていただきました。</p>
+      <p>それにより、よりお客様が活用することのできるシステムを構成する事ができました。</p>
+    </div>
+    </section>
+
+  <section id="toc-detail">
+    <h2>作業内容の詳細</h2>
+    <div class="smtSent">
+      <h3>設計</h3>
+        <ol class="numList">
+          <li><p>基本設計</p></li>
+          <div class="textIndent--style3">
+          <ul class="grayDisc">
+          	<li>ネットワーク設計</li>
+          	<li>運用設計</li>
+          </ul>
+          </div>
+        </ol>
+
+
+      <h3>環境構築</h3>
+        <ol class="numList">
+          <li><p>構成管理機能</p></li>
+          <div class="textIndent--style3">
+          <ul class="grayDisc">
+          	<li>System Center　2012 SP1 Configuration Manager</li>
+          </ul>
+          </div>
+
+          <li><p>セキュリティ管理</p></li>
+          <div class="textIndent--style3">
+          <ul class="grayDisc">
+            <li>System Center 2012 SP1 Endpoint Protection</li>
+          </ul>
+          </div>
+        </ol>
+
+      <h3>環境移行対象</h3>
+        <ol class="numList">
+          <li><p>セキュリティ管理</p></li>
+          <div class="textIndent--style3">
+          <ul class="grayDisc">
+            <li>クライアントウイルス対策製品切替</li>
+          </ul>
+          </div>
+        </ol>
+
+      <h3>納品ドキュメント</h3>
+        <ul class="grayDisc">
+          <li>運用設計書</li>
+          <li>動作確認項目表兼結果報告書</li>
+          <li>運用手順書</li>
+        </ul>
+  </section>
+</section>
+

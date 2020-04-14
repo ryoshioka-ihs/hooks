@@ -1,0 +1,244 @@
+---
+layout:       case
+global_menu:  cases
+title:        "情報系次期基盤システム更改"
+description:  "ハードウェア・ソフトウェアの保守切れによる業務停止やセキュリティのリスク回避や運用で生じた課題の改善を目的とした情報系基盤刷新の事例をご紹介いたします。"
+keywords:     "システム更改,運用コスト削減,基盤刷新,事例"
+date:         2013-12-12 09:11:00 +0900
+PDF:          "case099"
+categories: 
+ - "インフラ構築"
+tags: 
+---
+
+<section>
+  <h1>{{ page.title }}</h1>
+  <ul class="linkInPage">
+    <li><a href="#toc-background">背景</a></li>
+    <li><a href="#toc-overview">概要</a></li>
+    <li><a href="#toc-sysCon">構成図</a></li>
+    <li><a href="#toc-effect">作業効果</a></li>
+    <li><a href="#toc-IHS-result">弊社利用による効果</a></li>
+    <li><a href="#toc-detail">作業内容の詳細</a></li>
+    <li><a href="#PdfDownload">PDFダウンロード</a></li>
+  </ul>
+
+  <section id="toc-background">
+    <h2>背景</h2>
+    <div class="smtSent">
+    保守期限が終了したシステムには、不具合や脆弱性が修正されないことによる業務停止やセキュリティのリスクが伴います。本事例では、お客様はそうしたリスクの回避に加え、運用で生じた課題の改善を目的に情報系基盤の刷新を計画されていました。<br>
+    <br>
+    また、運用業務のアウトソースも希望されていたため、最適な運用を見据えた構成案のご提案から構築・運用まで、情報系基盤刷新を弊社にてワンストップで対応致しました。
+    </div>
+  </section>
+
+  <section id="toc-overview">
+    <h2>概要</h2>
+    <div class="smtSent">
+    <table class="baseTb">
+      <tbody>
+        <tr>
+        <th>業種</th>
+        <td>
+        <ul class="grayDisc">
+          <li>製造業</li>
+        </ul>
+        </td>
+        </tr>
+        <tr>
+        <th>目的</th>
+        <td>
+        <ul class="grayDisc">
+        <li>ハードウェア・ソフトウェアの保守切れによる業務停止やセキュリティリスクの回避</li>
+        <li>運用の中で発生した課題の改善</li>
+        <li>運用業務のアウトソース</li>
+        </ul>
+        </td>
+        </tr>
+        <tr>
+        <th>作業規模</th>
+        <td>
+        <ul class="grayDisc">
+        <li>利用ユーザー数：約300人</li>
+        <li>総サーバー台数：14台</li>
+        </ul>
+        </td>
+        </tr>
+        <tr>
+        <th>作業ボリューム</th>
+        <td>
+        <ul class="grayDisc">
+          <li>15人月</li>
+        </ul>
+        </td>
+        </tr>
+        <tr>
+        <th>作業内容</th>
+        <td>
+        <ul class="grayDisc">
+        <li>システムの設計、構築、移行を実施</li>
+        <li>運用業務</li>
+        </ul>
+        </td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+  </section>
+
+  <section id="toc-sysCon">
+    <h2>構成図</h2>
+    <div class="smtSent">
+    <img src="/image/cases/case099_01.png" alt="図1" />
+    </div>
+  </section>
+
+  <section id="toc-effect">
+    <h2>作業効果</h2>
+    <div class="smtSent">
+      <h3>保守切れに伴うリスクを回避</h3>
+      ハードウェア/ソフトウェアの刷新により、セキュリティや保守部品の提供停止によるハードウェア停止などのリスクを回避。
+      
+      <h3>課題の解決</h3>
+      <p>更改前のシステムから不満点を洗い出し、システム更改と同時に改善を実施。</p>
+        <ul class="numList">
+          <li>
+          <p>メール中継機能</p>
+          <p>既存のアプライアンス製品で不具合が多発していたことから、更改に伴いシンプルで信頼性の高い「Linux + Sendmail」に移行。メール送信時のエラーや速度遅延が解消されました。</p>
+          </li>
+          <li>
+          <p>資産管理ソフト</p>
+          <p>更改前は、資産管理、ログ管理など、用途に併せて複数のシステムが併用されており、運用業務が煩雑になっていました。そこで、統合的な機能と分かりやすいUIを持つ資産管理ソフトを導入。運用負荷が大きく軽減されました。</p>
+          </li>
+          <li>
+          <p>負荷の少ないサーバーの仮想化</p>
+          <p>サーバーの増築によってハードウェアの台数が増え、更改時のハードウェアの費用や電力等のランニングコストが問題視されていました。そこで、負荷の少ないサーバーを１台の物理サーバー内に仮想化して集約する事で初期費用と電力等のランニングコストを削減。</p>
+          </li>
+        </ul>
+
+      <h3>システム更改後、弊社作業員にて運用交代</h3>
+      管理対象のシステム規模が年々拡大する中、人材不足によって運用担当者の業務負荷が増大し、通常業務に支障きたしていました。当初より運用業務のアウトソースのご希望があったため、構築フェーズから本システム更改に関わった弊社技術者が運用業務を担当。今回のシステムを理解していたため、既存の運用担当者からスムーズに交代することができました。
+    </div>
+  </section>
+   
+  <section id="toc-IHS-result">
+    <h2>弊社利用による効果</h2>
+    <div class="smtSent">
+    <h3>企画・設計から運用までワンストップで対応</h3>
+    弊社はシステム更改を多数経験しており、大規模なシステムでも企画・提案から構築、運用までワンストップで対応可能です。<br>
+    <br>
+    今回の事例でも、構成案の提案から運用までを対応させて頂き、既存環境の課題を解決。運用を担当する技術者が構築フェーズから担当することで、運用業務のスムーズな引き継ぎを実現。<br>
+    <br>
+    運用引き継ぎ後もバックアップ要員・品質管理担当を含む体制づくりを行ない、お客様のシステムの運用品質の向上、運用コスト削減に貢献できるよう業務を担当させて頂いております。
+  </div>
+  </section>
+
+  <section id="toc-detail">
+    <h2>作業内容の詳細</h2>
+    <div class="smtSent">
+      <h3>設計</h3>
+        <ol class="numList">
+          <li><p>基本設計</p></li>
+        </ol>
+        <div class="textIndent--style3">
+        <ul class="grayDisc">
+        <li>プラットフォーム設計</li>
+        <li>ネットワーク設計</li>
+        <li>可用性設計</li>
+        <li>セキュリティ設計</li>
+        <li>仮想化設計</li>
+        <li>監視設計</li>
+        <li>バックアップ設計</li>
+        <li>電源設計</li>
+        <li>運用設計</li>
+   		</ul>
+        </div>
+
+      <h3>環境構築</h3>
+        <ol class="numList">
+          <li><p>統合認証機能</p></li>
+          <div class="textIndent--style3">
+          <ul class="grayDisc">
+            <li>Active Directory Domain Service</li>
+          </ul>
+          </div>
+
+          <li><p>更新プログラム一元化機能</p></li>
+          <div class="textIndent--style3">
+          <ul class="grayDisc">
+            <li>Windows Server Update Services</li>
+          </ul>
+          </div>
+
+          <li><p>共有ファイルサーバー機能</li>
+
+          <li><p>メール機能</p></li>
+          <div class="textIndent--style3">
+          <ul class="grayDisc">
+            <li>Microsoft Exchange Server 2010</li>
+          </ul>
+          </div>
+
+          <li><p>メール中継機能</p></li>
+          <div class="textIndent--style3">
+          <ul class="grayDisc">
+            <li>Sendmail</li>
+          </ul>
+          </div>
+
+          <li><p>システムバックアップ機能</p></li>
+          <div class="textIndent--style3">
+           <ul class="grayDisc">
+            <li>Symantec Backup Exec</li>
+          </ul>
+          </div>
+
+          <li><p>資産管理・ライセン管理機能</p></li>
+          <div class="textIndent--style3">
+          <ul class="grayDisc">
+            <li>LanScope</li>
+          </ul>
+          </div>
+
+          <li><p>仮想化機能</p></li>
+          <div class="textIndent--style3">
+          <ul class="grayDisc">
+            <li>Microsoft Hyper-V</li>
+          </ul>
+          </div>
+
+          <li><p>ウイルス対策機能</p></li>
+          <div class="textIndent--style3">
+          <ul class="grayDisc">
+            <li>サーバー用ウイルス対策</li>
+            <li>クライアント用ウイルス対策</li>
+          </ul>
+          </div>
+
+          <li><p style="text-indent:5px;">ログ収集機能</p></li>
+          <li><p style="text-indent:5px;">システム監視機能</li>
+          <div class="textIndent--style3">
+          <ul class="grayDisc">
+            <li>Zabbix</li>
+          </ul>
+          </div>
+        
+          <li><p style="text-indent:5px;">電源管理機能</p></li>
+
+      <h3>環境移行対象</h3>
+        <h4>1.統合認証機能</h4>
+        <h4>2.共有ファイルサーバー機能</h4>
+        <h4>3.メール機能</h4>
+        <h4>4.その他機能</h4>
+
+      <h3>納品ドキュメント</h3>
+      <ul class="grayDisc">
+      <li>基本設計(全サーバー・機能)</li>
+      <li>詳細設計(全サーバー・機能)</li>
+      <li>動作確認項目表兼結果報告書</li>
+      <li>運用手順書</li>
+      </ul>
+    </div>
+  </section>
+</section>
+

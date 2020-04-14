@@ -1,0 +1,180 @@
+---
+layout:       case
+global_menu:  cases
+title:        "VMware Horizon View構築"
+description:  "VMware Horizon View 5.3を使用したVDI環境の構築支援の事例をご紹介いたします。"
+keywords:     "VMware Horizon View,VDI,リプレース,事例"
+date:         2015-10-06 10:41:00 +0900
+PDF:          "case111"
+categories: 
+ - "インフラ構築"
+tags:
+ - "VMware Horizon"
+ - "VDI（仮想デスクトップ環境）"
+---
+
+<section>
+  <h1>{{ page.title }}</h1>
+  <ul class="linkInPage">
+    <li><a href="#toc-background">背景</a></li>
+    <li><a href="#toc-overview">概要</a></li>
+    <li><a href="#toc-sysCon">システム構成図(全体構成図)</a></li>
+    <li><a href="#toc-work">作業内容</a></li>
+    <li><a href="#toc-effect">作業効果</a></li>
+    <li><a href="#toc-IHS-result">弊社利用による効果</a></li>
+    <li><a href="#PdfDownload">PDFダウンロード</a></li>
+  </ul>
+
+  <section id="toc-background">
+    <h2>背景</h2>
+    <div class="smtSent">
+      <p>今回は、VMware製品VMware Horizon View 5.3を使用したVDI環境の構築について紹介します。<br>
+      <br>
+      お客様は東京に本社、全国に多数拠点があり、クライアントコンピュータはWindows XPで動作しており、管理は其々の拠点毎に行っていました。今回Windows XPの保守切れに伴いWindows 7へのリプレースを計画しており、且つリプレースは拠点毎に異なったセキュリティ方針や運用体制等の改善を希望されていました。このような問題から弊社でデスクトップ仮想化（以下VDI）を提案し、拠点毎の仕組み・体制の統一、クライアントが一元管理可能な環境をご提供させて頂きました。</p>
+    </div>
+  </section>
+
+  <section id="toc-overview">
+    <h2>概要</h2>
+    <div class="smtSent">
+      <table class="baseTb">
+        <tr>
+        <th>作業規模</th>
+        <td>[サーバー]<br>
+      <ul class="grayDisc">
+        <li>VMware ESXi   8台</li>
+        <li>VMware vCenter Server   1台</li>
+        <li>VMware View Connection Server   2台</li>
+        <li>DHCPサーバー   1台</li>
+        <li>データベースサーバー   2台</li>
+        <li>仮想デスクトップ   500台</li>
+      </ul>
+      <br>
+      [ネットワーク]<br>
+      <ul class="grayDisc">
+        <li>L3スイッチ   2台</li>
+        <li>L2スイッチ   2台</li>
+        <li>10Gigabitスイッチ   2台</li>
+      </ul>
+      </td>
+          <tr>
+          <th>作業期間</th>
+          <td>3ヶ月</td>
+          <tr>
+          <th>作業人数</th>
+          <td>3人</td>
+      </table>
+    </div>
+  </section>
+
+  <section id="toc-sysCon">
+    <h2>システム構成図（全体構成図）</h2>
+      <div class="lightBox">
+      <figure><img src="/image/cases/case111_01.png" alt="図1" /></figure>
+      </div>
+
+      <h3>VDI接続イメージ</h3>
+        <p>首都圏の本社及び地方に散らばる拠点から専用線を使用し、デスクトップ（Windows 7）に接続しています。</p>
+        <div class="lightBox">
+        <figure><img src="/image/cases/case111_02.png" alt="図2" /></figure>
+        </div>
+
+
+      <h3>ネットワーク環境の強化</h3>
+       <p>VDIを選択したほとんどの環境で最初にボトルネックになるのがネットワークです。本システムではネットワークの強化を考慮し、仮想環境は通常の「標準仮想スイッチ」ではなく機能拡張された「分散仮想スイッチ」を選択しました。「分散仮想スイッチ」では《ネットワークI/O》や《LLDP》、《動的リンクアグリゲーション》等が構成出来ます。</p>
+       <br>
+       <div class="lightbox">
+       <figure><img src="/image/cases/case111_03.png" alt="図3" /></figure>
+       </div>
+  </section>
+
+  <section id="toc-work">
+    <h2>作業内容</h2>
+    <div class="smtSent">
+      <ol class="numList">
+        <li><p>要件定義</p></li>
+        <div class="textIndent--style3">
+        <ul class="grayDisc">
+          <li>セキュリティ要件</li>
+          <li>外部接続要件</li>
+        </ul>
+        </div>
+
+        <li><p>設計</p></li>
+        <div class="textIndent--style3">
+        <ul class="grayDisc">
+          <li>ネットワーク設計</li>
+          <li>Active Directory設計</li>
+          <li>データベース設計</li>
+          <li>仮想化設計</li>
+          <li>VDI設計</li>
+          <li>マスター仮想デスクトップPC設計</li>
+        </ul>
+        </div>
+
+        <li><p>環境構築</p></li>
+        <div class="textIndent--style3">
+        <ul class="grayDisc">
+          <li>L3スイッチ構築</li>
+          <li>L2スイッチ構築</li>
+          <li>10Gigabitスイッチ構築</li>
+          <li>VMware ESXi 5.5構築</li>
+          <li>Microsoft SQL Server 2008 R2構築</li>
+          <li>VMware vCenter Server 5.5構築</li>
+          <li>VMware View Connection Server 5.2構築</li>
+          <li>VMware View Composer 構築</li>
+          <li>DHCP構築</li>
+          <li>KMS構築</li>
+          <li>マスター仮想デスクトップPC構築/最適化</li>
+          <li>リンククローン仮想デスクトップ複製</li>
+          <li>フルクローン仮想デスクトップ複製</li>
+        </ul>
+        </div>
+
+        <li><p>動作検証</p></li>
+        <div class="textIndent--style3">
+        <ul class="grayDisc">
+          <li>仮想化基本動作確認</li>
+          <li>仮想デスクトップ接続検証</li>
+          <li>移動ユーザープロファイル動作確認</li>
+          <li>ネットワーク構成確認</li>
+        </ul>
+        </div>
+
+        <li><p>納品ドキュメント</p></li>
+        <div class="textIndent--style3">
+        <ul class="grayDisc">
+          <li>基本設計書</li>
+          <li>詳細設計書</li>
+          <li>動作検証項目表兼結果報告書</li>
+          <li>運用手順書</li>
+        </ul>
+        </div>
+    </div>
+  </section>
+   
+  <section id="toc-effect">
+    <h2>作業効果</h2>
+    <div class="smtSent">
+      <h3>Windows 7へリプレース</h3>
+        <p>拠点毎に点在するクライアントにWindows 7を展開せず、VDI技術で集約させる事でスピーディにWindows 7へリプレースが可能となりました。</p>
+      <h3>ネットワーク環境の強化</h3>
+        <p>分散仮想スイッチを使用したネットワーク構成を採用し、信頼性の向上及び帯域が増強されました。</p>
+      <h3>VDI用にクライアントを最適化</h3>
+        <p>クライアントは通常のPCと違いVDIでは不要な処理が多数存在します。本システムでは不要な処理・サービスの停止等、クライアントの最適化を行い、通常より大幅にパフォーマンスが向上しました。</p>
+    </div>
+  </section>
+
+  <section id="toc-IHS-result">
+    <h2>弊社利用による効果</h2>
+    <div class="smtSent">
+      <h3>弊社利用メリット</h3>
+        <p>VMware Horizon View及び関連ソフトウェア（AD/DHCP等）の経験豊富なエンジニアが要件に合わせた最適なソリューションの提供が可能</p>
+        <br>
+        <p>仮想環境と密接に連携したネットワーク環境をワンストップで提供が可能</p>
+        <br>
+        <p>IHS独自でクライアントをVDI用に最適化致します。最適化する事でパフォーマンス向上が図れます。この項目は約20項目に及びます。</p>
+    </div>
+  </section>
+</section>
+

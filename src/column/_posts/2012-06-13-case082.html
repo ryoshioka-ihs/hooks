@@ -1,0 +1,180 @@
+---
+layout:       case
+global_menu:  cases
+title:        "APサーバー統合化とOSSの活用"
+description:  "サーバー統合化とOSSの活用による環境構築支援の事例をご紹介いたします。"
+keywords:     "統合化,OSS,環境構築,事例"
+date:         2012-06-13 09:24:00 +0900
+PDF:          "case082"
+categories: 
+ - "インフラ構築"
+tags:
+ - "VMware vSphere"
+ - "仮想化基盤"
+---
+
+<section>
+  <h1>{{ page.title }}</h1>
+  <ul class="linkInPage">
+    <li><a href="#toc-1">背景</a></li>
+    <li><a href="#toc-2">概要</a></li>
+    <li><a href="#toc-3">作業内容</a></li>
+    <li><a href="#toc-4">作業効果</a></li>
+    <li><a href="#toc-5">弊社利用による効果</a></li>   
+    <li><a href="#PdfDownload">PDFダウンロード</a></li>
+  </ul>
+
+  <section id="toc-1">
+    <h2>背景</h2>
+    <div class="smtSent">
+      <p>お客様のシステム環境においては、各部署単位で Unix や Windows 、 Linux 上へ独自に Web / AP サーバーを構築されており、システム管理者は同一アーキテクチャに基づいて構成されていないため運用・管理・開発面でコストが増大しておりました。</p>
+      <br>
+      <p>また、 1 つ 1 つのアプリケーションが利用する CPU / Memory といったシステムリソースの使用状況は、近年のサーバーハードウェア性能の向上に伴い平均 10 %程度と高くない状況でした。</p>
+      <br>
+      <p>そこで、次のような目標設定と方針のもとに統合化を進めることが決定され、弊社は社内共通基盤構築フェーズ※の作業を担わせていただきました。</p>
+      <small class="notes">※概要-統合化作業のイメージ参照</small>
+        <h3>目標</h3>
+       <ul class="grayDisc">
+        <li>社内共用基盤( OS / MW を共用利用する環境)を新規に構築し、各部署単位で構築されていたアプリケーションを基盤更新タイミングに併せ順次移行していく。</li>
+        <li>社内共用基盤は、社内 IaaS (ハードウェアリソースを共用利用する仮想基盤環境)上に構築することでシステムリソースの有効活用を実現する。</li>
+        <li> OS / MW は、既存環境で利用していた高価な有償製品ではなく OSS 製品を採用し、購入・保守費用を削減する。</li>
+      </ul>
+        
+        <h3>前提条件</h3>
+        <ul class="grayDisc">
+          <li>アプリケーションの移行は、移行・改修コストを鑑みて HW / OS / MW 保守満了時のシステム更新に併せて実施する。</li>
+          <li>サーバー構成は、 20 程度のアプリケーションを統合出来るサーバー 2 台の環境とする。 MW 構成は、搭載予定の最も重要なアプリケーションに合わせクラスタ構成とする。</li>
+          <li>運用保守時の技術支援として OSS 提供ベンダーの保守契約を利用する。</li>
+        </ul>
+        
+        <h3>実施方針</h3>
+        <ul class="grayDisc">
+          <li>アプリケーションの統合プロジェクトは、「社内共用基盤構築フェーズ」とアプリケーション移行の「アプリケーション移行フェーズ」の 2 つに分け実施する。</li>
+          <li>社内共用基盤構築フェーズでアプリケーション移行の手順書を整備し、以降のアプリケーション・システムの移行作業をルーチンワーク化する。</li>
+        </ul>
+    </div>
+  </section>
+
+  <section id="toc-2">
+    <h2>概要</h2>
+    <div class="smtSent">
+    <p>統合化作業のイメージを下記に示します。</p>
+    <div class="lightBox">
+    <figure><img src="/image/cases/case082_01.png" alt="図1"/></figure>
+    </div>
+    <br>
+    統合化前（現行）と統合化実現後（約 5 年後）のシステム・イメージを下記に示します。</p>
+    <div class="lightBox">
+    <figure><img src="/image/cases/case082_02.png" alt="図2"/></figure>
+    </div>
+    </div>
+  </section>
+
+  <section id="toc-3">
+    <h2>作業内容</h2>
+    <div class="smtSent">
+      <table class="baseTb">
+        <tbody>
+          <tr>
+          <th>目的</th>
+          <td>AP サーバー統合化のための社内共用基盤構築</td>
+          </tr>
+          <tr>
+          <th>作業規模</th>
+          <td>サーバー{物理}： 20 台（統合化前）<br>
+          <span style="white-space:pre-wrap">　　　 　　　: 2 台（統合後）</span></td>
+          </tr>
+          <tr>
+          <th>作業期間</th>
+          <td>
+          <ul class="grayDisc">
+            <li>現状調査・要件定義： 4 週間</li>
+            <li>基本設計： 3 週間</li>
+            <li>詳細設計： 4 週間</li>
+            <li>インフラ環境構築： 3 週間</li>
+            <li>動作検証： 2 週間</li>
+            <li>維持管理文書作成： 2 週間</li>
+          </ul>
+          </td>
+          </tr>
+          <tr>
+          <th>作業人月</th>
+          <td>3 人月</td>
+          </tr>
+        </tbody>
+      </table>
+      <br>
+      <p>下記に社内共用基盤構築フェーズのタスクをリストします。</p>
+        <h3>1.現状調査・要件定義</h3>
+        <ul class="grayDisc">
+          <li>既存システム調査、統合対象システム選定</li>
+          <li>新システム HW 、 SW 選定</li>
+          <li>SW 利用機能選定</li>
+        </ul>
+
+        <h3>2.基本設計</h3>
+        <ul class="grayDisc">
+          <li>ネットワーク設計</li>
+          <li>運用設計(メンテナンス、拡張、監視、バックアップ)</li>
+        </ul>
+
+        <h3>3.詳細設計</h3>
+        <ul class="grayDisc">
+          <li>OS パラメーター設計</li>
+          <li>Web サーバーパラメーター設計</li>
+          <li>AP サーバーパラメーター設計</li>
+        </ul>
+
+        <h3>4.インフラ環境構築</h3>
+        <ul class="grayDisc">
+          <li>仮想マシンの作成</li>
+          <li>OS の導入、設定</li>
+          <li>Web サーバー導入、負荷分散、セッション維持設定</li>
+          <li>AP サーバー導入、クラスタリング設定</li>
+          <li>監視設定</li>
+          <li>バックアップ設定</li>
+        </ul>
+
+        <h3>5.導入サポート</h3>
+        <ul class="grayDisc">
+          <li>サンプルアプリケーションデプロイ</li>
+          <li>Web 負荷分散テスト</li>
+          <li>Web - AP セッション維持テスト</li>
+          <li>片系ホスト、 Web 、 AP 障害時動作テスト</li>
+          <li>外部 DB 接続性テスト</li>
+          <li>監視検知テスト</li>
+          <li>リストアテスト</li>
+          <li>QA　対応</li>
+        </ul>
+
+        <h3>6.運用ドキュメント作成</h3>
+        <ul class="grayDisc">
+          <li>基本設計書</li>
+          <li>詳細設計書</li>
+          <li>通常時運用手順書</li>
+          <li>アプリケーション移行手順書</li>
+          <li>障害時対応手順書</li>
+        </ul>
+    </div>
+  </section>
+
+  <section id="toc-4">
+    <h2>作業効果</h2>
+    <div class="smtSent">
+    <ol class="snumList">
+    	<li>OS / Web / AP サーバーを統合化することにより特定の技術が必要なくなり、人に依存しない運用が可能となる予定。</li>
+    	<li>HW /SW の統合化とオープンソース化により、従来かかっていた導入/保守費用を約 5 割～ 6 割削減予定。</li>
+    </ol>
+  </section>
+   
+  <section id="toc-5">
+    <h2>弊社利用による効果</h2>
+    <div class="smtSent">
+    <ol class="snumList">
+	    <li>製品特長とお客様システムを知る IHS 常駐者が社内共用基盤構築プロジェクトを担当させていただくことで、「お客様(環境を熟知しているが製品知識を得る時間が無い)」-「ベンダー(製品知識はあるが環境を知る機会が無い)」間に発生するコミュニケーションエラーが無く構築を対応させていただきました。</li>
+		<li>インフラシステムの豊富な構築実績から、設計・運用方針を見直すことができ、より良いものとなりました。</li>
+	</ol>
+    </div>
+  </section>
+</section>
+

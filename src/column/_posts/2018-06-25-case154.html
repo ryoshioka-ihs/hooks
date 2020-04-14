@@ -1,0 +1,143 @@
+---
+layout:       case
+global_menu:  cases
+title:        "WinActorによる交通費確認の自動化"
+description:  "IIMヒューマンソリューションではWinActorの導入を支援させていただいております。
+今回は定型業務をWinActorによって自動化し、WinActorの利点を発揮することができる利用方法をご紹介させていただきます。"
+keywords:     "WinActor,RPA,業務効率化,業務自動化"
+date:         2018-06-25 00:00:00 +0900
+PDF:          "case154"
+categories:
+ - "運用支援サービス"
+tags:
+  - "業務効率化"
+  - "業務自動化"
+  - "WinActor"
+  - "RPA"
+---
+
+<section>
+  <h1>{{ page.title }}</h1>
+  <ul class="linkInPage">
+    <li><a href="#toc-1">背景</a></li>
+    <li><a href="#toc-2">概要</a></li>
+    <li><a href="#toc-3">RPA の使用により得られた効果</a></li>
+    <li><a href="#toc-4">作業効果</a></li>
+    <li><a href="#toc-5">作業内容の詳細</a></li>
+    <li><a href="#PdfDownload">PDFダウンロード</a></li>
+  </ul>
+
+  	<section id="toc-1">
+    <h2>背景</h2>
+ 	<div class="smtSent">
+    	<p>「 RPA (ロボティック・プロセス・オートメーション)」は日常の定型業務に関するあらゆる課題を解決します。<br>普段の業務を RPA に任せることで、作業時間やコストの削減、業務の品質向上など、あらゆるメリットがあります。<br>弊社では数ある RPA ツールのなかでも操作しやすい GUI を完備し、システム開発の経験がなくても安心してお使いいただくことができる「 WinActor 」をお勧めしています。</p>
+    	<br>
+    	<p>今回は、定型業務の効率化を図り、作業コストを削減すことができないかとのご要望にお応えするべく、社内業務を調査したところ、毎月発生する交通費計算作業に関して WinActor を使用すれば、作業時間の短縮化を図ることができるのではないかと提案させていただき、シナリオ作成の支援をさせていただいた事例をご紹介します。</p>
+    </div>
+	</section>
+
+	<section id="toc-2">
+    <h2>概要</h2>
+  	<div class="smtSent">
+     	<table class="baseTb">
+        <tbody>
+         	<tr>
+            	<th>業種</th>
+            	<td>IT</td>
+          	</tr>
+          	<tr>
+            	<th>目的</th>
+            	<td>
+            		<ul class="grayDisc">
+            		<li>業務の自動化、効率化</li>
+            		</ul>
+            	</td>
+          	</tr>
+			<tr>
+            	<th>作業ボリューム</th>
+            	<td>0.5 人月</td>
+          	</tr>
+          	<tr>
+            	<th>作業内容</th>
+            	<td>
+            		<ul class="grayDisc">
+            			<li>現状の作業プロセス、手順の確認</li>
+            			<li>WinActor のシナリオ作成</li>
+            			<li>動作検証</li>
+            		</ul>
+            	</td>
+          	</tr>
+        </tbody>
+      	</table>
+    </div>
+  	</section>
+
+	<section id="toc-3">
+    <h2>RPA の使用により得られた効果</h2>
+  	<div class="smtSent">
+		<div class="lightBox">
+        <figure><img src="/image/cases/case154_01.png" alt="業務フロー"></figure>
+    	</div>
+   	</div>
+  	</section>
+
+
+	<section id="toc-4">
+    <h2>作業効果</h2>
+    <div class="smtSent">
+    		<p>今回自動化した交通費確認は、申請を提出する社員の管理者（承認者）が実施していました。<br>
+    		特に難しい作業ではないものの、管理する社員数の増加に伴い作業量が増え、単純ミスを起こすリスクも生じやすいことが課題となっていましたが、当該作業のようなフローの分岐がないものは、WinActor のシナリオ作成には最も適しており、カスタマイズも必要ありません。 WinActor の利点を発揮することができ、さらに作業量の削減、および作業ミスの発生リスクを回避することができました。また管理者が本来しなければならない承認作業のみに注力することができる環境作りができました。<br>今後も WinActor の幅広い利用をご提案できるよう他の業務の見直しを継続して行っていく予定です。</p>
+    	<h3>確認作業の自動化</h3>
+    		<p>＜どのように改善したか＞<br>
+    		<p>現状の業務を確認するため、作業プロセス、および作業手順を確認し、WinActor にてシナリオ作成に入りました。<br>
+    		具体的な作業プロセスは、社員が管理者にメール添付にて交通費の申請を行い、管理者が受信したメールのファイルを元に申請内容を所定のシステムに転記し、交通費を計算、計算結果を申請書に反映させる、という内容であり、WinActor にメール受信から計算結果を申請書に反映させるまでの作業を移管することで、確認者は承認作業のみを行うようにいたしました。</p>
+    </div>
+  	</section>
+
+	<section id="toc-5">
+  	<h2>作業内容の詳細</h2>
+  	<div class="smtSent">
+  		<h3>移行対象</h3>
+  		<ol class="numList">
+  			<li><p>交通費計算処理</p></li>
+  		</ol>
+        <h3>業務整理</h3>
+  		<ol class="numList">
+  			<li><p>現状確認</p></li>
+  				<ul class="grayDisc">
+  					<li>作業プロセスの確認</li>
+  					<li>作業手順確認</li>
+  				</ul>
+  		</ol>
+  		<h3>WinActor への業務移管</h3>
+  		<ol class="numList">
+  			<li><p>シナリオ化のための作業準備</p></li>
+  				<ul class="grayDisc">
+  					<li>現状確認で整理した情報を元に、 WinActor へ移管するための作業プロセスの設計</li>
+  					<li>元データ（ Excel ファイル）のフォーマットを WinActor で利用できるようにカスタマイズ</li>
+  				</ul>
+  			<li><p>シナリオ作成</p></li>
+  				<p>以下の作業プロセスを WinActor にシナリオとして登録</p>
+  				<ul class="grayDisc">
+  					<li>メールを確認し、添付された元データ（ Excel ファイル）を所定のフォルダに格納</li>
+  					<li>交通費計算システムにログイン</li>
+  					<li>元データ（ Excel ）を開き、内容をシステムに転記し、交通費を計算</li>
+  					<li>計算結果を元データに反映</li>
+  					<li>交通費計算システムからログオフ</li>
+  					<li>交通費計算が完了したことを管理者に通知するメールを発報</li>
+  				</ul>
+  			<li><p>動作検証</p></li>
+  				<ul class="grayDisc">
+  					<li>テスト実行</li>
+  					<li>エラーハンドリングのためのシナリオ修正</li>
+  					<li>修正結果の確認</li>
+  				</ul>
+  			<li><p>リリース</p></li>
+  				<ul class="grayDisc">
+  					<li>実環境での稼働確認</li>
+  				</ul>
+  		</ol>
+  	</div>
+  	</section>
+
+</section>
