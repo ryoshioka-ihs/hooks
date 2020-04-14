@@ -1087,7 +1087,8 @@ span.online{
   .WA        tr[WA]         {display: table-row;}
   .UI    tr[UI]     {display: table-row;}
   .know-how    tr[know-how]     {display: table-row;}
-  .BPR    tr[BPR]     {display: table-row;}
+  .know-how    tr[know-how]     {display: table-row;}
+  .Remote    tr[Remote]     {display: table-row;}
 
 
 
