@@ -1084,11 +1084,11 @@ span.online{
 }
 
   .allNoDisplay tr:not(.colTitle) {display: none;}
-  .WA        tr[WA]         {display: table-row;}
-  .UI    tr[UI]     {display: table-row;}
-  .know-how    tr[know-how]     {display: table-row;}
-  .know-how    tr[know-how]     {display: table-row;}
-  .Remote    tr[Remote]     {display: table-row;}
+  .WA        tr[WA]         {display: table-row;}/*WinActorハンズオン系*/
+  .UI    tr[UI]     {display: table-row;}/*UiPathハンズオン系*/
+  .Operation    tr[Operation]     {display: table-row;}/*RPA運用・保守標準化セミナー、RPAロボット群の運用管理セミナー*/
+  .know-how    tr[know-how]     {display: table-row;}/*RPA導入　成功に導くためのノウハウ（入門編、実践編）*/
+  .Remote    tr[Remote]     {display: table-row;}/*リモートワークセミナー*/
 
 
 
