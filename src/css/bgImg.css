@@ -44,6 +44,20 @@
 }
 
 /*//////////////////////////////////////////////////
+    セミナー一覧
+///////////////////////////////////////////////////*/
+.blueTtl .winactor_rogo {
+	background-image: url("../image/seminar/winactorlogo_03.png");
+}
+.blueTtl .uipath_rogo {
+	background-image: url("../image/seminar/uipathlogo03.png");
+}
+
+.blueTtl .know-how_rogo {
+	background-image: url("../image/seminar/rpa.png");
+}
+
+/*//////////////////////////////////////////////////
     導入事例
 ///////////////////////////////////////////////////*/
 .searchCat .ope {

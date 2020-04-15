@@ -1007,16 +1007,37 @@ color: #FFF !important;
 /* --------------------------------------------------
 	ベーステーブルレイアウト(見出し太字＆背景色あり)
 -------------------------------------------------- */
-.baseTb {
+.baseTb,
+.baseSeminar,
+.allNoDisplay{
 	width: 100%;
 	background-color: #FFF;
 	border-top: 1px solid #DDD;
+	color: #000;
 }
-	.baseTb tr > * {
+
+	.baseSeminar thead tr:hover,
+	.allNoDisplay thead tr:hover {
+		background-color: #FFF;
+		opacity: 1;
+	}
+
+	.baseTb tr > * ,
+	.baseSeminar tr > * ,
+	.allNoDisplay tr > *{
 		vertical-align: middle;
 		border-bottom: 1px solid #DDD;
-		padding: 10px 30px 10px 20px;
 	}
+
+		.baseTb tr > *{
+			padding: 10px 30px 10px 20px;
+	}
+
+		.baseSeminar tr > *,
+		.allNoDisplay tr > *{
+			padding: 10px;
+	}
+
 	.baseTb th {
 		width: 22%;
 		height: 40px;
@@ -1024,6 +1045,55 @@ color: #FFF !important;
 		padding-right: 10px;
 		background-color: #F0F0F0;
 	}
+
+	.baseSeminar tr:hover,
+	.allNoDisplay tr:hover{
+		opacity: 0.5;
+		background-color: #81BEF7;
+	}
+
+	.baseSeminar a,
+	.baseSeminar a:hover,
+	.allNoDisplay a,
+	.allNoDisplay a:hover,{
+		color: #000;
+		text-decoration: none;
+	}
+
+
+/* --------------------------------------------------------
+	セミナー集約ページのテーブル
+-------------------------------------------------------- */
+img.seminar{
+	width: 50px;
+	padding: 5px 0px;
+}
+
+.winactoricon{
+	display: block;
+	width: 50px;
+	height: auto;
+}
+
+span.online{
+	background-color: #5882FA;
+	color: #fff;
+	font-size: 12px;
+	padding: 2px;
+	margin:0 5px;
+}
+
+  .allNoDisplay tr:not(.colTitle) {display: none;}
+  .WA        tr[WA]         {display: table-row;}
+  .UI    tr[UI]     {display: table-row;}
+  .know-how    tr[know-how]     {display: table-row;}
+  .know-how    tr[know-how]     {display: table-row;}
+  .Remote    tr[Remote]     {display: table-row;}
+
+
+
+
+
 /* --------------------------------------------------
 	ベーステーブルレイアウト(見出し太字＆背景色あり)
 	※パディング間隔少なめ
@@ -2851,6 +2921,7 @@ article .wrap:after {
 		margin-top: 5px;
 		padding: 4px;
 		border: 1px solid #DDD;
+
 		margin-bottom: 20px;
 		background-color: #FFF;
 	}
@@ -3406,10 +3477,3 @@ footer .footBot {
 
 }
 
-/*セミナー集約ページ*/
-
-.winactoricon{
-	display: block;
-	width: 50px;
-	height: auto;
-}
