@@ -1008,15 +1008,23 @@ color: #FFF !important;
 	ベーステーブルレイアウト(見出し太字＆背景色あり)
 -------------------------------------------------- */
 .baseTb,
-.baseSeminar {
+.baseSeminar,
+.allNoDisplay{
 	width: 100%;
 	background-color: #FFF;
 	border-top: 1px solid #DDD;
 	color: #000;
 }
 
+	.baseSeminar thead tr:hover,
+	.allNoDisplay thead tr:hover {
+		background-color: #FFF;
+		opacity: 1;
+	}
+
 	.baseTb tr > * ,
-	.baseSeminar tr > * {
+	.baseSeminar tr > * ,
+	.allNoDisplay tr > *{
 		vertical-align: middle;
 		border-bottom: 1px solid #DDD;
 	}
@@ -1025,7 +1033,8 @@ color: #FFF !important;
 			padding: 10px 30px 10px 20px;
 	}
 
-		.baseSeminar tr > *{
+		.baseSeminar tr > *,
+		.allNoDisplay tr > *{
 			padding: 10px;
 	}
 
@@ -1037,16 +1046,19 @@ color: #FFF !important;
 		background-color: #F0F0F0;
 	}
 
-	.baseSeminar tr:hover{
+	.baseSeminar tr:hover,
+	.allNoDisplay tr:hover{
 		opacity: 0.5;
 		background-color: #81BEF7;
 	}
 
 	.baseSeminar a,
-	.baseSeminar a:hover{
+	.baseSeminar a:hover,
+	.allNoDisplay a,
+	.allNoDisplay a:hover,{
 		color: #000;
 		text-decoration: none;
-}
+	}
 
 
 /* --------------------------------------------------------
@@ -1057,7 +1069,26 @@ img.seminar{
 	padding: 5px 0px;
 }
 
+.winactoricon{
+	display: block;
+	width: 50px;
+	height: auto;
+}
 
+span.online{
+	background-color: #5882FA;
+	color: #fff;
+	font-size: 12px;
+	padding: 2px;
+	margin:0 5px;
+}
+
+  .allNoDisplay tr:not(.colTitle) {display: none;}
+  .WA        tr[WA]         {display: table-row;}/*WinActorハンズオン系*/
+  .UI    tr[UI]     {display: table-row;}/*UiPathハンズオン系*/
+  .Operation    tr[Operation]     {display: table-row;}/*RPA運用・保守標準化セミナー、RPAロボット群の運用管理セミナー*/
+  .know-how    tr[know-how]     {display: table-row;}/*RPA導入　成功に導くためのノウハウ（入門編、実践編）*/
+  .Remote    tr[Remote]     {display: table-row;}/*リモートワークセミナー*/
 
 
 
@@ -2890,6 +2921,7 @@ article .wrap:after {
 		margin-top: 5px;
 		padding: 4px;
 		border: 1px solid #DDD;
+
 		margin-bottom: 20px;
 		background-color: #FFF;
 	}
@@ -3443,13 +3475,5 @@ footer .footBot {
 		width: 280px;
 	}
 
-}
-
-/*セミナー集約ページ*/
-
-.winactoricon{
-	display: block;
-	width: 50px;
-	height: auto;
 }
 
