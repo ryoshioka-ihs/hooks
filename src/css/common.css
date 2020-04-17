@@ -1083,6 +1083,14 @@ span.online{
 	margin:0 5px;
 }
 
+span.stop{
+	background-color: #808080;
+	color: #fff;
+	font-size: 12px;
+	padding: 2px;
+	margin:0 5px;
+}
+
   .allNoDisplay tr:not(.colTitle) {display: none;}
   .WA        tr[WA]         {display: table-row;}/*WinActorハンズオン系*/
   .UI    tr[UI]     {display: table-row;}/*UiPathハンズオン系*/
