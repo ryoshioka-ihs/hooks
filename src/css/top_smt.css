@@ -531,6 +531,31 @@ body {
 	#sv .triBox li {
 		margin-top: 7px;
 	}
+/* リモート */
+#sv #remo {
+	width: 100%;
+	height: auto;
+	margin: 0 0 20px;
+}
+	#sv #remo h3 {
+		text-align: center;
+		margin-left: 0;
+	}
+	#sv #remo a {
+		padding: 15px 12px 15px 7px;
+	}
+
+	#sv #remo a:before {
+		width: 170px;
+		height: 98px;
+		margin: 0 auto 15px;
+		float: none;
+		position: static;
+	}
+	#sv #remo ul {
+		padding-top: 0;
+	}
+
 /* WinActor */
 #sv #win {
 	width: 100%;
