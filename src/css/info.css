@@ -100,8 +100,13 @@
     padding: 10px;
 }
 
-#info .cont .sentBox table.info tbody td ul {
+#info .cont .sentBox table.info tbody td ul, 
+#info .cont .sentBox table.info tbody td ol {
     margin-left: 15px;
+}
+
+#info .cont .sentBox table.info tbody td ol li{
+    list-style-type: decimal;
 }
 
 #info .cont .sentBox table.info tbody td li {
