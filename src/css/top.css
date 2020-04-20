@@ -584,7 +584,26 @@ footer {
 		background-image: url("../image/top/sv_img6.png");
 	}
 
+/*リモート運用 */
+#sv #remo {
+	width: 690px;
+	height: 230px;
+	margin: 0 0 30px 310px;
+}
+	#sv #remo a {
+		padding: 25px 40px 0 130px;
+	}
 
+	#sv #remo a:before {
+		width: 400px;
+		height: 230px;
+		border: none;
+		margin-bottom: 0;
+		position: absolute;
+		top: -28px;
+		left: -310px;
+		background-image: url("../image/top/sv_img7.png");
+	}
 
 /* インフラ構築 New 2017.08.03 
 #sv #intro2 {
