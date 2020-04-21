@@ -1,56 +1,74 @@
 <!DOCTYPE html>
 <html lang="ja">
-	<head>
-		<!--▽ヘッド▽-->
-		{% include head.html %}
-		<!--△ヘッド△-->
-	</head>
-	<body>
-		<!--▽ヘッダー▽-->
-		{% include header.html %}
-		<!--△ヘッダー△-->
+<head>
+<!--▽ヘッド▽-->
+{% include head.html %}
+<!--△ヘッド△-->
+</head>
+<body>
+	<!--▽ヘッダー▽-->
+	{% include header.html %}
+	<!--△ヘッダー△-->
 
-		<!--▽コンテンツ▽-->
-		<article>
+	 <!--▽コンテンツ▽-->
+	<article>
 			<section>
-				<!--▼キービジュアル▼-->
-				{% include global/global_key_services.html %}
-				<!--▲キービジュアル▲-->
+					<!--▼キービジュアル▼-->
+					{% include global/global_key_topics.html %}
+					<!--▲キービジュアル▲-->
 
-				<!--▼パンくずリスト▼-->
-				{% include pan.html %}
-				<!--▲パンくずリスト▲-->
+					<!--▼パンくずリスト▼-->
+					{% include pan.html %}
+					<!--▲パンくずリスト▲-->
 
-				<div class="wrap">
-					<div id="main">
-						<section>
+					<div class="wrap">
+							<div id="main">
 
-						{{ content }}
+								<h1>{{ page.title }}</h1>
 
-						<!--▽関連事例▽-->
-						{% include content/content_relationCase.html %}
-						<!--△関連事例△-->
+								<ul class="topicList">
 
+									{% for post in paginator.posts %}
+										<li>
+											{% if post.link and post.link != "" %}
+												<a href="{{ post.link }}" target="_self">
+											{% else %}
+												<a href="{{ post.url }}" target="_self">
+											{% endif %}
+												<time>{{ post.date | date: '%Y/%m/%d' }}</time>
 
-						<!--▽お問い合わせ▽-->
-						{% include content/content_bn_contact.html %}
-						<!--△お問い合わせ△-->
-						</section>
-					</div><!--/.main-->
+												{% if post.categories[0] == "column" %}
+													<div><span class="icon">コラム</span></div>
+													<p>『{{ post.title }}』を追加しました</p>
 
-					<div id="sideMenu">
-						{% include side/side_services.html %}
-					</div><!--/#sideMenu-->
+												{% else %}
+													<div><span class="icon">{{ post.categories[1] }}</span></div>
+													<p>{{ post.title }}</p>
+												{% endif %}
 
-				</div><!--/.wrap-->
+											</a>
+										</li>
+									{% endfor %}
+
+								</ul>
+
+								{% include pagination.html %}
+
+							</div><!--/.main-->
+
+							<div id="sideMenu">
+							{% include side/side_topics.html %}
+							</div><!--/#sideMenu-->
+
+					</div><!--/.wrap-->
 			</section>
-		</article>
-		<!--△コンテンツ△-->
+	</article>
+	<!--△コンテンツ△-->
 
+	<!--▽フッター▽-->
+	{% include footer.html %}
+	<!--△フッター△-->
 
-		<!--▽フッター▽-->
-		{% include footer.html %}
-		<!--△フッター△-->
-	</body>
+</body>
 
 </html>
