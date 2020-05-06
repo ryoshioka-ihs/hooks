@@ -17,14 +17,11 @@ title: IT基礎知識セミナー　お申込みフォーム
 
 <section style="text-align: left;">
 	<div class="smtSent">
-	<p>リモートワーク・在宅勤務を推進している企業も増えてきている中、IHSでは、セキュアな環境下でリモートワークを進めるための秘訣をお知らせするセミナーを、Zoomを用いてオンラインで開催します。</p>
-	<p style="font-size: 16px;"><b>【開催日程】4月24日（金）12:00～12:30</b></p>
-	<p>ぜひ、ご参加ください！</p>
-		<ol class="snumList">
-			<li>下記のフォームに必要事項をご入力下さい</li>
-			<li>入力いただいたメールアドレスに「ウェビナーに参加」のリンクがついたメールが送信されます。</li>
-			<li>当日は、お時間になりましたら、「ウェビナーに参加」をクリックしお待ちください。</li>
-		</ol>
+		<p>セミナーへのご参加をご希望される方は、必要事項を明記の上、下記フォームよりお申し込みください。<br>
+<span style="color: red">※gmail等フリーメールアドレスからのお申込みはお断りさせていただいております。（但し、学生の方に限りフリーメールアドレスからのお申込みが可能です）<br>
+※参加者様御本人がお申込みいただきますようお願い申し上げます。<br>
+※セミナー当日はセミナーの様子を撮影させていただきます。予めご了承ください。</span></p>
+
 	</div>
 </section>
 <br>
@@ -41,7 +38,7 @@ title: IT基礎知識セミナー　お申込みフォーム
 				<td><input type='text' name="Company" required placeholder="（例）ＩＩＭヒューマン・ソリューション株式会社"></td>
 			</tr>
 			<tr>
-				<th><span style="color: red">【必須】</span>部署名（全角）</th>
+				<th>部署名（全角）</th>
 				<td><input type="text" name="LEADCF18" required placeholder="（例）情報システム部"></td>
 			</tr>
 			<tr>
@@ -61,21 +58,67 @@ title: IT基礎知識セミナー　お申込みフォーム
 				<td><input type="Phone" name="Phone" required placeholder="（例）03-6811-1260"></td>
 			</tr>
 			<tr>
+				<th>従業員数</th>
+            	<td>
+                    <select name="LEADCF18" required>
+                      <option value="①100名以上～500名未満">①100名以上～500名未満</option>
+                      <option value="②500名以上～1000名未満">②500名以上～1000名未満</option>
+                      <option value="③1000名以上">③1000名以上</option>
+                    </select>
+                </td>
+			</tr>
+			<tr>
 				<th><span style="color: red">【必須】</span>メールアドレス（半角）</th>
 				<td><input type="Email" name="Email" required placeholder="企業ドメインでの入力をお願いいたします。"></td>
 			</tr>
 
             <tr>
-            	<th>【<span style="color: red">必須</span>】RPAの導入経験はございますか。</th>
+            	<th>RPAの導入経験はございますか。</th>
             	<td>
-                    <select name="LEADCF45" required>
+                    <select name="LEADCF121" required>
                       <option value="導入経験あり">導入経験あり</option>
-                      <option value="②UiPath初級講座">②UiPath初級講座</option>
-                      <option value="③WinActor初級講座">③WinActor初級講座</option>
+                      <option value="導入経験なし">導入経験なし</option>
+                      <option value="導入検討中">導入検討中</option>
                     </select>
                 </td>
             </tr>
-
+            <tr>
+            	<th>RPAの導入経験在り、あるいは、導入検討中の方にお伺いします。お使い中のアプリケーションについて教えてください。</th>
+            	<td>
+                    <select name="LEADCF49" required>
+                      <option value="WinActor">WinActor</option>
+                      <option value="UiPath">UiPath</option>
+                      <option value="その他">その他</option>
+                    </select>
+                </td>
+            </tr>
+			<tr>
+				<th>上記質問で「その他」を選択された方</th>
+				<td><input type='text' name="LEADCF50" required placeholder="導入製品"></td>
+			</tr>
+            <tr>
+            	<th>本セミナーに参加され、講演内容として、あるいは、質疑応答のセッションで盛り込んでほしいこと、質問したいことなどがあれば教えて下さい。RPA導入をしている箇所、全体管理なのか、部門管理なのか、効果測定の出し方、経営部門との調整の仕方など、知りたいこと、聞きたいことを教えてください。（200字まで）</th>
+				<td><input type='text' name="LEADCF122"></td>
+            </tr>
+            <tr>
+            	<th>【<span style="color: red">必須</span>】本セミナーを知ったきっかけ</th>
+            	<td>
+                    <select name="LEADCF132" required>
+                      <option value="インターネットからの検索">インターネットからの検索</option>
+                      <option value="弊社からのＤＭ">弊社からのＤＭ</option>
+                      <option value="御社社員様からのご紹介">御社社員様からのご紹介</option>
+                      <option value="他企業様からのご紹介">他企業様からのご紹介</option>
+                      <option value="パートナー企業様">パートナー企業様</option>
+                      <option value="弊社開催セミナー">弊社開催セミナー</option>
+                      <option value="ＪＵＡＳ">ＪＵＡＳ</option>
+                      <option value="その他">その他</option>
+                    </select>
+                </td>
+            </tr>
+			<tr>
+				<th>上記質問で「その他」を選択された方</th>
+				<td><input type='text' name="LEADCF122"></td>
+			</tr>
 
 			<tr>
                 <th>個人情報の取扱いについて</th>
