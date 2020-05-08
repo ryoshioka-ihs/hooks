@@ -70,7 +70,7 @@ title:      "WinActor無料セミナー「RPA導入　成功に導くための�
             <option class="view_timer" value="選択してください">選択してください</option> 
             <!--date-end-dateはセミナー開催から8日目-->
     
-             <option class="view_timer" data-start-date="2020/5/13 14:00" data-end-date="2020/5/21 0:00" value="2020年5月13日">2020年3月13日(水)</option>
+             <option class="view_timer" data-start-date="2020/5/13 14:00" data-end-date="2020/5/21 0:00" value="2020年5月13日">2020年5月13日(水)</option>
 
              <option class="view_timer" data-start-date="2020/6/17 14:00" data-end-date="2020/6/25 0:00" value="2020年6月17日">2020年6月17日(水)</option>
 
@@ -85,7 +85,7 @@ title:      "WinActor無料セミナー「RPA導入　成功に導くための�
       <td class="question">【<span style="color:red;">必須</span>】今回、セミナーを受講されたきっかけをお聞かせください</td>
       <td>
         <select name='COBJ4CF2' required class="answer">
-          <option value='RPAやWinActorの情報収集のため'>RPAやWinActorの情報収集のため</option>
+          <option value='RPAの運用に関する情報収集のため'>RPAの運用に関する情報収集のため</option>
           <option value='業務で必要になったため自主的に受講'>業務で必要になったため自主的に受講</option>
           <option value='上司に勧められたため'>上司に勧められたため</option>
           <option value='その他'>その他</option>
@@ -109,33 +109,47 @@ title:      "WinActor無料セミナー「RPA導入　成功に導くための�
       </td>
     </tr>
     <tr>
-      <td class="question">ご説明した標準手法について、イメージできない、わかりにくい点、ご要望等はありますか？</td>
-      <td><input type='text' maxlength='255' name='COBJ4CF6' class="answer" /></td>
-    </tr>
-    <tr>
-      <td class="question">【<span style="color:red;">必須</span>】御社では、現在、このような手法を必要とされていますか？</td>
+      <td class="question">ロボットの運用管理ツールの導入状況をお聞かせください。</td>
       <td>
         <select name='COBJ4CF7' required class="answer">
-          <option value='必要と感じている'>必要と感じている</option>
-          <option value='あまり必要ではない'>あまり必要ではない</option>
-          <option value='必要ではない'>必要ではない</option>
-          <option value='わからない'>わからない</option>
+          <option value='導入を検討中'>導入を検討中</option>
+          <option value='すでに導入済み、運用中'>すでに導入済み、運用中</option>
+          <option value='情報収集段階'>情報収集段階</option>
+          <option value='その他'>その他</option>
         </select>
       </td>
     </tr>
     <tr>
-      <td class="question">標準手法についてなにか具体的なご要望はございますか？</td>
-      <td><input type='text' maxlength='255' name='COBJ4CF10' class="answer" /></td>
+      <td class="question">導入を検討中もしくは、運用中を選択された方はツール名をご記載ください。</td>
+      <td><input type='text' maxlength='255' name='COBJ4CF3' class="answer" /></td>
     </tr>
     <tr>
-      <td class="question">御社で実施する際に、手法の内容で難しいと感じる点はございますか？</td>
-      <td><input type='text' maxlength='255' name='COBJ4CF9' class="answer" /></td>
+      <td class="question">その他を選択された場合はご記載ください。</td>
+      <td><input type='text' maxlength='255' name='COBJ4CF3' class="answer" /></td>
     </tr>
-<tr>
-      <td class="question">セミナー全体に関してご意見・ご感想をお聞かせください</td>
+    <tr>
+      <td class="question">御社では複数のロボットを運用されていらっしゃいますか？<br>よろしければ、製品名もお聞かせください。</td>
+      <td>
+        <select name='COBJ4CF7' required class="answer">
+          <option value='10体以上のロボットを運用中'>10体以上のロボットを運用中</option>
+          <option value='10体未満のロボットを運用中'>10体未満のロボットを運用中</option>
+          <option value='今後増える予定だが、まだ1体のみ、もしくは検討中'>今後増える予定だが、まだ1体のみ、もしくは検討中</option>
+          <option value='その他'>その他</option>
+        </select>
+      </td>
+    </tr>
+    <tr>
+      <td class="question">運用中選択をされた方は製品名をご記載ください。</td>
+      <td><input type='text' maxlength='255' name='COBJ4CF3' class="answer" /></td>
+    </tr>
+    <tr>
+      <td class="question">その他を選択された場合はご記載ください。</td>
+      <td><input type='text' maxlength='255' name='COBJ4CF3' class="answer" /></td>
+    </tr>
+    <tr>
+      <td class="question">RPAツールの運用・保守に関する課題はありますか？</td>
       <td><input type='text' maxlength='2000' name='COBJ4CF4' class="answer" /></td>
     </tr>
-
     <tr>
       <td colspan='2' class="title"><strong>貴社のRPAに関する取り組み状況をお聞かせください。</strong></td>
     </tr>
@@ -152,7 +166,7 @@ title:      "WinActor無料セミナー「RPA導入　成功に導くための�
       </td>
     </tr>
     <tr>
-      <td class="question">【<span style="color:red;">必須</span>】WinActorの導入を検討していますか？</td>
+      <td class="question">【<span style="color:red;">必須</span>】RPAなどの自動化ツールの乗り換え、導入を検討していますか？</td>
       <td>
         <select name='COBJ4CF20' required class="answer">
           <option value='検討している'>検討している</option>
@@ -174,7 +188,7 @@ title:      "WinActor無料セミナー「RPA導入　成功に導くための�
       <td><input type='text' maxlength='255' name='COBJ4CF19' class="answer" /></td>
     </tr>
     <tr>
-      <td class="question">【<span style="color:red;">必須</span>】RPAのご検討やご導入にあたりお困りのことはございますか？(複数回答可)<br>※Ctrlキーを押下しながらクリックすると複数選択が可能です。</td>
+      <td class="question">【<span style="color:red;">必須</span>】RPAのご検討やご導入、運用・保守にあたりお困りのことはございますか？<br>※Ctrlキーを押下しながらクリックすると複数選択が可能です。</td>
       <td>
         <select name='COBJ4CF21' multiple required class="answer">
           <option value='製品について'>製品について</option>
@@ -250,4 +264,3 @@ title:      "WinActor無料セミナー「RPA導入　成功に導くための�
   }
 </script>
   </form>
-</div>
