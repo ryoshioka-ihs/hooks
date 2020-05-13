@@ -22,31 +22,22 @@
 								<!--▲パンくずリスト▲-->
 
 								<div class="wrap">
-										<div id="main">
+					<div id="main">
+						<section>
 
-										{{ content }}
+						{{ content }}
 
-											
+						<!--▽お問い合わせ▽-->
+						{% include content/content_bn_contact.html %}
+						<!--△お問い合わせ△-->
+						</section>
+					</div><!--/.main-->
 
-											<!--▽関連事例▽-->
-												<!-- {% include content/content_relationCase.html %} -->
-											<!--△関連事例△-->
+					<div id="sideMenu">
+						{% include side/side_column.html %}
+					</div><!--/#sideMenu-->
 
-											<!--▽技術レポート▽-->
-												<!-- {% include content/content_techRep.html %} -->
-											<!--△技術レポート△-->
-
-											<!--▽お問い合わせ▽-->
-											<!-- {% include content/content_bn_contact.html %} -->
-											<!--△お問い合わせ△-->
-
-										</div><!--/.main-->
-
-										<div id="sideMenu">
-										{% include side/side_contact.html %}
-										</div><!--/#sideMenu-->
-
-								</div><!--/.wrap-->
+				</div><!--/.wrap-->
 						</section>
 				</article>
 				<!--△コンテンツ△-->
