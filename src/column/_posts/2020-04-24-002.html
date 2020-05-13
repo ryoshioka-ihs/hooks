@@ -2,15 +2,16 @@
 layout:       "column"
 global_menu:  "columns"
 title:        "4月コラム『リモートワーク』"
-description:  "IIMヒューマンソリューションのSEが常駐しているお客様の環境において、稼働開始から10年以上が経過しているアプリケーション、OS、ミドルウェアを新環境へ刷新するご支援をさせていただいた事例をご紹介いたします。"
+description:  "４月のコラムです"
 keywords:     "Windows Server、SQL Server"
 date:         2020-04-24 00:00:00 +0900
 PDF:          "case174"
 categories:
+ - "コラム"
  - "column"
 
 tags:
- - "コラム" 
+ - "" 
 
 ---
 
@@ -20,10 +21,10 @@ tagsは1語ずつ区切る! -->
 
 <section>
   <h1>{{ page.title }}</h1>
-  <ul class="linkInPage">
+
+ <!--  <ul class="linkInPage">
     <li><a href="#toc-1">背景</a></li>
     <li><a href="#toc-2">概要</a></li>
-    <!-- <li><a href="#toc-3">構成図</a></li> -->
     <li><a href="#toc-4">作業効果</a></li>
     <li><a href="#toc-5">弊社利用による効果</a></li>
     <li><a href="#toc-6">作業内容の詳細</a></li>
@@ -198,7 +199,17 @@ tagsは1語ずつ区切る! -->
      
      
     </div>
-  </section>
+  </section> -->
+  <div class="grayBox">
+                        <section id="PdfDownload">
+                          <h2>このコラムのPDFをダウンロード</h2>
+                          <p>「{{ page.title }}」のPDFはこちらからダウンロードできます。</p>
+                          <p class="dlPdf">
+                            <a href="https://www.iimhs.co.jp/image/cases/{{ page.PDF }}.pdf" onclick="ga('send','event','pdf','click','{{ page.PDF }}');" target="_blank"><span>このコラムをダウンロード</span></a>
+                            <!-- アナリティクス　イベントハンドラ設置のため絶対パスに変更 -->
+                          </p>
+                        </section>
+                      </div>
 
 </section>
 

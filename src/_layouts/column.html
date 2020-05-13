@@ -14,7 +14,7 @@
 				<article>
 						<section>
 								<!--▼キービジュアル▼-->
-								{% include global/global_key_cases.html %}
+								{% include global/global_key_column.html %}
 								<!--▲キービジュアル▲-->
 
 								<!--▼パンくずリスト▼-->
@@ -26,33 +26,24 @@
 
 										{{ content }}
 
-											<div class="grayBox">
-												<section id="PdfDownload">
-													<h2>この事例のPDFをダウンロード</h2>
-													<p>「{{ page.title }}」のPDFはこちらからダウンロードできます。</p>
-													<p class="dlPdf">
-														<a href="https://www.iimhs.co.jp/image/cases/{{ page.PDF }}.pdf" onclick="ga('send','event','pdf','click','{{ page.PDF }}');" target="_blank"><span>この事例をダウンロード</span></a>
-														<!-- アナリティクス　イベントハンドラ設置のため絶対パスに変更 -->
-													</p>
-												</section>
-											</div>
+											
 
 											<!--▽関連事例▽-->
-												{% include content/content_relationCase.html %}
+												<!-- {% include content/content_relationCase.html %} -->
 											<!--△関連事例△-->
 
 											<!--▽技術レポート▽-->
-												{% include content/content_techRep.html %}
+												<!-- {% include content/content_techRep.html %} -->
 											<!--△技術レポート△-->
 
 											<!--▽お問い合わせ▽-->
-											{% include content/content_bn_contact.html %}
+											<!-- {% include content/content_bn_contact.html %} -->
 											<!--△お問い合わせ△-->
 
 										</div><!--/.main-->
 
 										<div id="sideMenu">
-										{% include side/side_cases.html %}
+										{% include side/side_contact.html %}
 										</div><!--/#sideMenu-->
 
 								</div><!--/.wrap-->
