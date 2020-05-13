@@ -6,68 +6,40 @@
 <!--△ヘッド△-->
 </head>
 <body>
-	<!--▽ヘッダー▽-->
-	{% include header.html %}
-	<!--△ヘッダー△-->
+        <!--▽ヘッダー▽-->
+        {% include header.html %}
+        <!--△ヘッダー△-->
 
-	 <!--▽コンテンツ▽-->
-	<article>
-			<section>
-					<!--▼キービジュアル▼-->
-					{% include global/global_key_column.html %}
-					<!--▲キービジュアル▲-->
+         <!--▽コンテンツ▽-->
+        <article>
+            <section>
+                <!--▼キービジュアル▼-->
+                {% include global/global_key_cases.html %}
+                <!--▲キービジュアル▲-->
+                
+                <!--▼パンくずリスト▼-->
+                {% include pan.html %}
+                <!--▲パンくずリスト▲-->
 
-					<!--▼パンくずリスト▼-->
-					{% include pan.html %}
-					<!--▲パンくずリスト▲-->
+                <div class="wrap">
+                    <div id="main">
 
-					<div class="wrap">
-							<div id="main">
+                    {{ content }}
 
-								<h1>{{ page.title }}</h1>
+                    </div><!--/.main-->
 
-								<ul class="topicList">
+                    <div id="sideMenu">
+                    {% include side/side_cases.html %}
+                    </div><!--/#sideMenu-->
 
-									{% for post in paginator.posts %}
-										<li>
-											{% if post.link and post.link != "" %}
-												<a href="{{ post.link }}" target="_self">
-											{% else %}
-												<a href="{{ post.url }}" target="_self">
-											{% endif %}
-												<time>{{ post.date | date: '%Y/%m/%d' }}</time>
+                </div><!--/.wrap-->
+            </section>
+        </article>
+        <!--△コンテンツ△-->
 
-												{% if post.categories[0] == "column" %}
-													<div><span class="icon">コラム</span></div>
-													<p>『{{ post.title }}』を追加しました</p>
-
-												{% else %}
-													<div><span class="icon">{{ post.categories[1] }}</span></div>
-													<p>{{ post.title }}</p>
-												{% endif %}
-
-											</a>
-										</li>
-									{% endfor %}
-
-								</ul>
-
-								{% include pagination.html %}
-
-							</div><!--/.main-->
-
-							<div id="sideMenu">
-							{% include side/side_topics.html %}
-							</div><!--/#sideMenu-->
-
-					</div><!--/.wrap-->
-			</section>
-	</article>
-	<!--△コンテンツ△-->
-
-	<!--▽フッター▽-->
-	{% include footer.html %}
-	<!--△フッター△-->
+        <!--▽フッター▽-->
+        {% include footer.html %}
+        <!--△フッター△-->
 
 </body>
 
