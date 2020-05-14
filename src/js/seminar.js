@@ -122,6 +122,130 @@ function goFilter(){
     wTable.className = 'allNoDisplay ' + value;
   }
 }
+          		
+ 		
+
+
+//======================================================================================================
+// 
+// 機能  ：セミナーに紐づく料金を取得、表示
+
+// 引数  ：
+// 戻り値：
+//======================================================================================================
+
+function priceset(){
+	var courseelement = document.getElementById( "course" ) ;//id="course"の値を取得
+	var priceelement = document.getElementById( "price" ) ;//id="price"の値を取得
+	priceelement.value = "";
+
+	            		
+	if ( courseelement.value == "ITパスポート試験対策＆社会人に必要なEXCEL技術を完全習得研修（10日間）") {
+		// ITパスポート試験対策＆社会人に必要なEXCEL技術を完全習得研修（10日間）と一致する場合
+		priceelement.value="30,000円";
+		} else if( courseelement.value == "RPA(WinActor)を学んでさらに飛躍を！研修（3日間）") {
+		// IRPA(WinActor)を学んでさらに飛躍を！研修（3日間）と一致する場合
+		priceelement.value="10,000円";
+		} else if( courseelement.value == "ITパスポート＆EXCEL完全習得＋RPA(WinActor)コース") {
+		// ITパスポート＆EXCEL完全習得＋RPA(WinActor)コースと一致する場合
+		priceelement.value="35,000円";	
+		} else{
+		priceelement.value="";
+		}    
+
+	changedate();			
+}
+
+
+//======================================================================================================
+// 
+// 機能  ：セミナーに紐づく料金を取得、表示
+
+// 引数  ：
+// 戻り値：
+//======================================================================================================
+
+function changedate(){
+	var courseelement = document.getElementById( "course" ) ;//id="course"を取得
+	var seminarClass = document.getElementById( "seminardate") ;//id="seminardate"を取得
+	alert(seminarClass(0).className+"クラス名取得");//id="course"の値を取得、表示
+}
+	//var seminarelement =  document.getElementById( "seminardate" ).value ;//id="seminarDate"の値を取得
+	
+	//seminarelement=options.allNoDisplay;
+
+	            		
+	/*if ( courseelement.value == "ITパスポート試験対策＆社会人に必要なEXCEL技術を完全習得研修（10日間）") {
+		for (var i = options.length i >= 0;) {
+			if (className[i] == "IT"){
+				options[i] = allNoDisplay;
+			}else{
+				options[i] = disabled;
+			}
+		}
+	}*/
 
 
 
+
+
+
+
+
+		/*// プルダウンの表示リセット
+		if ( seminarelement.className != "IT"){ 
+			seminarelement=options.allNoDisplay;
+			}
+		} else if( courseelement.value == "RPA(WinActor)を学んでさらに飛躍を！研修（3日間）") {
+		// IRPA(WinActor)を学んでさらに飛躍を！研修（3日間）と一致する場合
+		if ( seminarelement.className != "WinActor"){ 
+			seminarelement=options.disabled;
+			}
+		} else if( courseelement.value == "ITパスポート＆EXCEL完全習得＋RPA(WinActor)コース") {
+		// ITパスポート＆EXCEL完全習得＋RPA(WinActor)コースと一致する場合
+		if ( seminarelement.className != "ITWinActor"){ 
+			seminarelement=options.disabled;
+			}
+
+		} else{
+		priceelement.value="";
+		}    		
+}
+
+
+
+
+
+
+//======================================================================================================
+// 
+// 機能  ：料金に紐づく日程を表示
+
+// 引数  ：
+// 戻り値：
+//======================================================================================================
+/*	  	const dateAll = 
+      	{
+        "ITパスポート試験対策＆社会人に必要なEXCEL技術を完全習得研修（10日間）": ["30,000円"],
+        "RPA(WinActor)を学んでさらに飛躍を！研修（3日間）": ["10,000円"],
+        "ITパスポート＆EXCEL完全習得＋RPA(WinActor)コース": ["35,000円"]
+      	};
+
+
+		function changedate(selectprice){
+  			let seminarDate = document.getElementById('seminarDate');
+			  seminarDate.disabled = false;
+			  seminarDate.innerHTML = '';
+			  let option = document.createElement('option');
+			  option.innerHTML = '日程を選択してください。';
+			  option.defaultSelected = true;
+			  option.disabled = true;
+			  seminarDate.appendChild(option);  
+			  
+			  dateAll[selectprice].forEach( menu => {
+			    let option = document.createElement('option');
+			    option.innerHTML = menu;
+			    seminarDate.appendChild(option);  
+  			});    
+		}
+		*/
