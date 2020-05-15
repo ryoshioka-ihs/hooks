@@ -176,7 +176,7 @@ function priceset(){
 			priceelement.value="10,000円";
 			seminarDate.options[3].disabled = false;
     		seminarDate.options[4].disabled = false;
-		} else if( courseelement.value == "【セットコース】ITパスポート＆EXCEL完全習得＋RPA(WinActor)") {
+		} else if( courseelement.value == "【セットコース】ITパスポート＆EXCEL完全習得＋RPA(WinActor)（13日間）") {
 		// ITパスポート＆EXCEL完全習得＋RPA(WinActor)コースと一致する場合
 			priceelement.value="35,000円";
 			seminarDate.options[5].disabled = false;
