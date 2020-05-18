@@ -3485,4 +3485,11 @@ footer .footBot {
 	}
 
 }
+/* --------------------------------------------------------
+	セミナー料金
+-------------------------------------------------------- */
 
+  .allNoDisplay option:not(.colTitle) {display: none;}
+  .ITExcel        option[ITExcel]         {display: table-row;}/*ITEcel*/
+  .WinActor        option[WinActor]         {display: table-row;}/*ITEcel*/
+  .ITExcel-WinActor        option[ITExcel-WinActor]         {display: table-row;}/*ITEcel*/
