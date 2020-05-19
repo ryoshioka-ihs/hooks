@@ -122,7 +122,68 @@ function goFilter(){
     wTable.className = 'allNoDisplay ' + value;
   }
 }
+          		
+ 		
+//======================================================================================================
+// 
+// 機能  ：ページを開いたときにＩＴセミナーの日程、料金のみ表示
+
+// 引数  ：
+// 戻り値：
+//======================================================================================================
+
+function openwindow(){
+
+	var seminarDate = document.getElementById( "seminardate") ;//id="seminardate"を取得
+	var priceelement = document.getElementById( "price" ) ;//id="price"の値を取得
+	// 初期化
+    for (var i = 0; i < seminarDate.length; i++){
+       seminarDate.options[i].disabled = true;//trueで日程を非表示でリセットする、後続はfalseで表示させる
+    }
+    priceelement.value="30,000円";
+	seminarDate.options[1].disabled = false;
+	seminarDate.options[2].disabled = false;
+
+}
 
 
+//======================================================================================================
+// 
+// 機能  ：セミナーに紐づく料金を表示する。セミナー名に紐づく日程の選択制御。
 
+// 引数  ：
+// 戻り値：
+//======================================================================================================
+
+function priceset(){
+	var courseelement = document.getElementById( "course" ) ;//id="course"の値を取得
+	var priceelement = document.getElementById( "price" ) ;//id="price"の値を取得
+	priceelement.value = "";
+
+	var seminarDate = document.getElementById( "seminardate") ;//id="seminardate"を取得
+	// 初期化
+    for (var i = 0; i < seminarDate.length; i++){
+       seminarDate.options[i].disabled = true;//trueで日程を非表示でリセットする、後続はfalseで表示させる
+    }
+	            		
+	if ( courseelement.value == "ITパスポート試験対策＆社会人に必要なEXCEL技術を完全習得研修（10日間）") {
+		// ITパスポート試験対策＆社会人に必要なEXCEL技術を完全習得研修（10日間）と一致する場合
+			priceelement.value="30,000円";
+			seminarDate.options[1].disabled = false;
+    		seminarDate.options[2].disabled = false;
+		} else if( courseelement.value == "RPA(WinActor)を学んでさらに飛躍を！研修（3日間）") {
+		// IRPA(WinActor)を学んでさらに飛躍を！研修（3日間）と一致する場合
+			priceelement.value="10,000円";
+			seminarDate.options[3].disabled = false;
+    		seminarDate.options[4].disabled = false;
+		} else if( courseelement.value == "【セットコース】ITパスポート＆EXCEL完全習得＋RPA(WinActor)（13日間）") {
+		// ITパスポート＆EXCEL完全習得＋RPA(WinActor)コースと一致する場合
+			priceelement.value="35,000円";
+			seminarDate.options[5].disabled = false;
+    		seminarDate.options[6].disabled = false;	
+		} else{
+			priceelement.value="";
+		}    
+		
+}
 
