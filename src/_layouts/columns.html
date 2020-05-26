@@ -1,74 +1,30 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-<!--▽ヘッド▽-->
-{% include head.html %}
-<!--△ヘッド△-->
-</head>
-<body>
-	<!--▽ヘッダー▽-->
-	{% include header.html %}
-	<!--△ヘッダー△-->
+---
+layout: column
+---
 
-	 <!--▽コンテンツ▽-->
-	<article>
-			<section>
-					<!--▼キービジュアル▼-->
-					{% include global/global_key_topics.html %}
-					<!--▲キービジュアル▲-->
+<h1>{{ page.title }}</h1>
 
-					<!--▼パンくずリスト▼-->
-					{% include pan.html %}
-					<!--▲パンくずリスト▲-->
+<ul class="caseList lineList">
 
-					<div class="wrap">
-							<div id="main">
+  {% for case in paginator.posts %}
+    <li class="triBox">
+      <a href="{{ case.url }}">
+        <section>
+          <h3>{{ case.title }}</h3>
 
-								<h1>{{ page.title }}</h1>
+          {% for category in case.categories %}
+          {% if category != "column" %}
+          <span class="icon">{{ "コラム" }}</span>
+          {% endif %}
+          {% endfor %}
 
-								<ul class="topicList">
+          <p>{{ case.description | slice: 0, 43 }}...</p>
+        </section>
+      </a>
+    </li>
+  {% endfor %} 
 
-									{% for post in paginator.posts %}
-										<li>
-											{% if post.link and post.link != "" %}
-												<a href="{{ post.link }}" target="_self">
-											{% else %}
-												<a href="{{ post.url }}" target="_self">
-											{% endif %}
-												<time>{{ post.date | date: '%Y/%m/%d' }}</time>
+</ul>
 
-												{% if post.categories[0] == "column" %}
-													<div><span class="icon">コラム紹介</span></div>
-													<p>『{{ post.title }}』を追加しました</p>
+{% include pagination.html %}
 
-												{% else %}
-													<div><span class="icon">{{ post.categories[1] }}</span></div>
-													<p>{{ post.title }}</p>
-												{% endif %}
-
-											</a>
-										</li>
-									{% endfor %}
-
-								</ul>
-
-								{% include pagination.html %}
-
-							</div><!--/.main-->
-
-							<div id="sideMenu">
-							{% include side/side_topics.html %}
-							</div><!--/#sideMenu-->
-
-					</div><!--/.wrap-->
-			</section>
-	</article>
-	<!--△コンテンツ△-->
-
-	<!--▽フッター▽-->
-	{% include footer.html %}
-	<!--△フッター△-->
-
-</body>
-
-</html>

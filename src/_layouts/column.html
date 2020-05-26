@@ -6,40 +6,40 @@
 <!--△ヘッド△-->
 </head>
 <body>
-	<!--▽ヘッダー▽-->
-	{% include header.html %}
-	<!--△ヘッダー△-->
+        <!--▽ヘッダー▽-->
+        {% include header.html %}
+        <!--△ヘッダー△-->
 
-	 <!--▽コンテンツ▽-->
-	<article>
-			<section>
-					<!--▼キービジュアル▼-->
-					{% include global/global_key_topics.html %}
-					<!--▲キービジュアル▲-->
-					
-					<!--▼パンくずリスト▼-->
-					{% include pan.html %}
-					<!--▲パンくずリスト▲-->
+         <!--▽コンテンツ▽-->
+        <article>
+            <section>
+                <!--▼キービジュアル▼-->
+                {% include global/global_key_column.html %}
+                <!--▲キービジュアル▲-->
+                
+                <!--▼パンくずリスト▼-->
+                {% include pan.html %}
+                <!--▲パンくずリスト▲-->
 
-					<div class="wrap">
-							<div id="main">
-								<section>
-									<h1>{{ page.title }}<time>{{ page.date | date: "%Y/%m/%d" }}</time></h1>
-									{{ content }}
-								</section>
-							</div><!--/.main-->
+                <div class="wrap">
+                    <div id="main">
 
-							<div id="sideMenu">
-							{% include side/side_topics.html %}
-							</div><!--/#sideMenu-->
-					</div><!--/.wrap-->
-			</section>
-	</article>
-	<!--△コンテンツ△-->
+                    {{ content }}
 
-	<!--▽フッター▽-->
-	{% include footer.html %}
-	<!--△フッター△-->
+                    </div><!--/.main-->
+
+                    <div id="sideMenu">
+                    {% include side/side_column.html %}
+                    </div><!--/#sideMenu-->
+
+                </div><!--/.wrap-->
+            </section>
+        </article>
+        <!--△コンテンツ△-->
+
+        <!--▽フッター▽-->
+        {% include footer.html %}
+        <!--△フッター△-->
 
 </body>
 
