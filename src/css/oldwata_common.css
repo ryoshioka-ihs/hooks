@@ -3206,7 +3206,7 @@ footer .tbWrap {
 }
 	footer .tbWrap dl {
 		display: table-cell;
-		padding: 0 40px 0 20px;
+		padding: 0 40px;
 		border-right: 1px solid #A9BFD9;
 		vertical-align: top;
 	}
@@ -3214,7 +3214,7 @@ footer .tbWrap {
 		padding-left: 0;
 	}
 	footer .tbWrap dl:nth-of-type(4) {
-		/*width: 210px;*/
+		width: 210px;
 	}
 	footer .tbWrap dl:last-child {
 		padding-right: 0;
