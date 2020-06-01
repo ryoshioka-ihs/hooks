@@ -1,0 +1,30 @@
+---
+layout: columns
+---
+
+<h1>{{ page.title }}</h1>
+
+<ul class="columnList lineList">
+
+  {% for column in paginator.posts %}
+    <li class="triBox">
+      <a href="{{ url }}">
+        <section>
+          <h3>{{ column.title }}</h3>
+
+          {% for category in column.categories %}
+          {% if category != "columns" %}
+          <span class="icon">{{ category }}</span>
+          {% endif %}
+          {% endfor %}
+
+          <p>{{ column.description | slice: 0, 43 }}...</p>
+        </section>
+      </a>
+    </li>
+  {% endfor %} 
+
+</ul>
+
+{% include pagination.html %}
+

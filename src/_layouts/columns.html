@@ -1,30 +1,46 @@
----
-layout: column
----
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<!--▽ヘッド▽-->
+{% include head.html %}
+<!--△ヘッド△-->
+</head>
+<body>
+        <!--▽ヘッダー▽-->
+        {% include header.html %}
+        <!--△ヘッダー△-->
 
-<h1>{{ page.title }}</h1>
+         <!--▽コンテンツ▽-->
+        <article>
+            <section>
+                <!--▼キービジュアル▼-->
+                {% include global/global_key_cases.html %}
+                <!--▲キービジュアル▲-->
+                
+                <!--▼パンくずリスト▼-->
+                {% include pan.html %}
+                <!--▲パンくずリスト▲-->
 
-<ul class="columnList lineList">
+                <div class="wrap">
+                    <div id="main">
 
-  {% for column in paginator.posts %}
-    <li class="triBox">
-      <a href="{{ column.url }}">
-        <section>
-          <h3>{{ column.title }}</h3>
+                    {{ content }}
 
-          {% for category in column.categories %}
-          {% if category != "column" %}
-          <span class="icon">{{ column.keywords }}</span>
-          {% endif %}
-          {% endfor %}
+                    </div><!--/.main-->
 
-          <p>{{ column.description | slice: 0, 43 }}...</p>
-        </section>
-      </a>
-    </li>
-  {% endfor %} 
+                    <div id="sideMenu">
+                    {% include side/side_cases.html %}
+                    </div><!--/#sideMenu-->
 
-</ul>
+                </div><!--/.wrap-->
+            </section>
+        </article>
+        <!--△コンテンツ△-->
 
-{% include pagination.html %}
+        <!--▽フッター▽-->
+        {% include footer.html %}
+        <!--△フッター△-->
 
+</body>
+
+</html>

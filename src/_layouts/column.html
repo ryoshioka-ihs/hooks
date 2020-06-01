@@ -6,41 +6,60 @@
 <!--△ヘッド△-->
 </head>
 <body>
-        <!--▽ヘッダー▽-->
-        {% include header.html %}
-        <!--△ヘッダー△-->
+				<!--▽ヘッダー▽-->
+				{% include header.html %}
+				<!--△ヘッダー△-->
 
-         <!--▽コンテンツ▽-->
-        <article>
-            <section>
-                <!--▼キービジュアル▼-->
-                {% include global/global_key_column.html %}
-                <!--▲キービジュアル▲-->
-                
-                <!--▼パンくずリスト▼-->
-                {% include pan.html %}
-                <!--▲パンくずリスト▲-->
+				 <!--▽コンテンツ▽-->
+				<article>
+						<section>
+								<!--▼キービジュアル▼-->
+								{% include global/global_key_cases.html %}
+								<!--▲キービジュアル▲-->
 
-                <div class="wrap">
-                    <div id="main">
+								<!--▼パンくずリスト▼-->
+								{% include pan.html %}
+								<!--▲パンくずリスト▲-->
 
-                    {{ content }}
+								<div class="wrap">
+										<div id="main">
 
-                    </div><!--/.main-->
+										{{ content }}
 
-                    <div id="sideMenu">
-                    {% include side/side_column.html %}
-                    </div><!--/#sideMenu-->
+											<!--<div class="grayBox">
+												<section id="PdfDownload">
+													<h2>この事例のPDFをダウンロード</h2>
+													<p>「{{ page.title }}」のPDFはこちらからダウンロードできます。</p>
+													<p class="dlPdf">
+														<a href="https://www.iimhs.co.jp/image/cases/{{ page.PDF }}.pdf" onclick="ga('send','event','pdf','click','{{ page.PDF }}');" target="_blank"><span>この事例をダウンロード</span></a>
+														
+													</p>
+												</section>
+											</div>-->
 
-                </div><!--/.wrap-->
-            </section>
-        </article>
-        <!--△コンテンツ△-->
+											<!--▽関連事例▽-->
+												{% include content/content_relationColumn.html %}
+											<!--△関連事例△-->
 
-        <!--▽フッター▽-->
-        {% include footer.html %}
-        <!--△フッター△-->
+
+											<!--▽お問い合わせ▽-->
+											{% include content/content_bn_contact.html %}
+											<!--△お問い合わせ△-->
+
+										</div><!--/.main-->
+
+										<div id="sideMenu">
+										{% include side/side_cases.html %}
+										</div><!--/#sideMenu-->
+
+								</div><!--/.wrap-->
+						</section>
+				</article>
+				<!--△コンテンツ△-->
+
+				<!--▽フッター▽-->
+				{% include footer.html %}
+				<!--△フッター△-->
 
 </body>
-
 </html>
