@@ -14,15 +14,15 @@ layout: columns
 
           {% for category in column.categories %}
           {% if category != "columns" %}
-          <span class="icon">{{ keywords }}</span>
-          <{% endif %}
+          <span class="icon">{{ category }}</span>
+          {% endif %}
           {% endfor %}
 
           <p>{{ column.description | slice: 0, 43 }}...</p>
         </section>
       </a>
     </li>
-  {% endfor %} 
+  {% endfor %}
 
 </ul>
 
