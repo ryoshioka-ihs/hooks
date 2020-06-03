@@ -35,20 +35,20 @@
 		{% endif %}
 
 
-<!-- 渡辺追加ここから 20200513-->
-{% comment %}
-      * 該当ページのカテゴリに'columns'または'コラム'が含まれていれば
-        パンクズリストにコラムのリンクを追加
-     
+    {% comment %}
+      * 該当ページのカテゴリに'columns'が含まれていれば
+        パンクズリストに導入事例のリンクを追加
+      * columnsカテゴリは、記事を/columns/_posts/に格納することで自動的に付与されます。
     {% endcomment %}
-    {% if page.categories contains 'column' or page.categories contains 'コラム' %}
+    {% if page.categories contains 'columns' %}
     <li property="itemListElement" typeof="ListItem">
-      <a href="/topics/" itemprop="url">
+      <a href="/columns/" itemprop="url">
         <span itemprop="title">コラム</span>
       </a>
     </li>
     {% endif %}
-    <!-- 渡辺追加ここまで -->
+
+
 
 
     <!-- パンくずリストアイテムの繰り返し -->
