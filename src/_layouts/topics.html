@@ -37,12 +37,7 @@
 											{% endif %}
 												<time>{{ post.date | date: '%Y/%m/%d' }}</time>
 
-
-												{% if post.categories[0] == "columns" %}
-													<div><span class="icon">コラム</span></div>
-													<p>『{{ post.title }}』を追加しました</p>
-
-												{% else if post.categories[0] == "case" %}
+												{% if post.categories[0] == "cases" %}
 													<div><span class="icon">事例紹介</span></div>
 													<p>『{{ post.title }}』を追加しました</p>
 
