@@ -106,6 +106,16 @@
 							
 						</ul>
 					</li>
+					<li{% if page.global_menu == "columns" %} class="act"{% endif %}>
+						<a href="/columns/">コラム</a>
+						<!--<ul class="inNav">
+							<li><a href="/cases/remote/">リモート運用</a></li>
+							<li><a href="/cases/operation/">インフラ運用</a></li>
+							<li><a href="/cases/construction/">インフラ構築</a></li>
+							
+							<li><a href="/cases/security/">セキュリティ</a></li>
+						</ul>-->
+					</li>
 					<li{% if page.global_menu == "topics" %} class="act"{% endif %}>
 						<a href="/topics/">トピックス</a>
 						<ul class="inNav">
@@ -121,6 +131,9 @@
 							-->
 							{% if site.categories["セミナー"].size > 0 %}
 								<li><a href="/topics/seminar/">セミナー</a></li>
+							{% endif %}
+							{% if site.categories["コラム"].size > 0 %}
+								<li><a href="/topics/column/">コラム</a></li>
 							{% endif %}
 						</ul>
 					</li>

@@ -1091,29 +1091,6 @@ span.stop{
 	margin:0 5px;
 }
 
-span.full{
-	background-color: #e60000;
-	color: #fff;
-	font-size: 12px;
-	padding: 2px;
-	margin:0 5px;
-}
-
-span.blinking{
-    animation:blinkingText 1.2s infinite;
-    background-color: #e60000;
-    font-size: 12px;
-	padding: 2px;
-	margin:0 5px;
-}
-@keyframes blinkingText{
-    0%{     color: #fff; }
-    49%{    color: #fff; }
-    60%{    color: transparent; }
-    99%{    color:transparent;  }
-    100%{   color: #fff;    }
-}
-
   .allNoDisplay tr:not(.colTitle) {display: none;}
   .WA        tr[WA]         {display: table-row;}/*WinActorハンズオン系*/
   .UI    tr[UI]     {display: table-row;}/*UiPathハンズオン系*/
@@ -1154,13 +1131,6 @@ span.blinking{
 	導入事例一覧
 -------------------------------------------------- */
 .caseList {
-	margin-top: 40px;
-}
-
-/* --------------------------------------------------
-	コラム一覧
--------------------------------------------------- */
-.columnList {
 	margin-top: 40px;
 }
 
@@ -3236,7 +3206,7 @@ footer .tbWrap {
 }
 	footer .tbWrap dl {
 		display: table-cell;
-		padding: 0 40px 0 20px;
+		padding: 0 40px;
 		border-right: 1px solid #A9BFD9;
 		vertical-align: top;
 	}
@@ -3244,7 +3214,7 @@ footer .tbWrap {
 		padding-left: 0;
 	}
 	footer .tbWrap dl:nth-of-type(4) {
-		/*width: 210px;*/
+		width: 210px;
 	}
 	footer .tbWrap dl:last-child {
 		padding-right: 0;
