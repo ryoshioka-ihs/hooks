@@ -3515,3 +3515,12 @@ footer .footBot {
   .ITExcel        option[ITExcel]         {display: table-row;}/*ITEcel*/
   .WinActor        option[WinActor]         {display: table-row;}/*ITEcel*/
   .ITExcel-WinActor        option[ITExcel-WinActor]         {display: table-row;}/*ITEcel*/
+
+
+/* --------------------------------------------------------
+	クッキング動画
+-------------------------------------------------------- */
+ .mov iframe{
+ 	width: 100%;
+ 	height: 500px;
+ }
