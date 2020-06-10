@@ -1,21 +1,18 @@
 ---
 layout:     "win-form"
 global_menu:  ""
-description:  "業務プロセス分析セミナー（入門編）のアンケートフォームです。"
-keywords:   "WinActor,無料,RPA,セミナー,入門,使い方"
+description:  "RPAロボット群の運用管理セミナーのアンケートフォームです。"
+keywords:   "WinActor,RPA,無料,導入,ノウハウ,プロジェクト管理,WinActorシナリオ作成,セミナー"
 category:   ""
-title:      "「業務プロセス分析セミナー（入門編）」アンケートフォーム"
+title:      "WinActor無料セミナー「RPAロボット群の運用管理セミナー」アンケートフォーム"
 ---
-<!--<center>
-<iframe style="width: 1000px; height: 1000px;"src='https://crm.zoho.com/crm/WebFormServeServlet?rid=3274827e535aa235eb0e4d31761d06eff9b71c2dfb5926ed678a315fc50183a6gid316e26c9b0a075a403259d161e079bc597c321456c0f197bcbf531ae844af7c7'></iframe></center>-->
-<div>
 <script type="text/javascript" src="/js/seminar.js"></script>
 <div id='crmWebToEntityForm'>
    <META HTTP-EQUIV ='content-type' CONTENT='text/html;charset=SHIFT-JIS'>
-   <form action='https://crm.zoho.com/crm/WebForm'  name=WebForm2591799000011410021 method='POST' onSubmit='javascript:document.charset="UTF-8"; return checkMandatory2591799000011410021()' accept-charset='UTF-8'>
+   <form action='https://crm.zoho.com/crm/WebForm'  name=WebForm2591799000015464001 method='POST' onSubmit='javascript:document.charset="UTF-8"; return checkMandatory2591799000015464001()' accept-charset='UTF-8'>
  <input type='text' style='display:none;' name='xnQsjsdp' value='316e26c9b0a075a403259d161e079bc597c321456c0f197bcbf531ae844af7c7'></input> 
  <input type='hidden' name='zc_gad' id='zc_gad' value=''></input> 
- <input type='text' style='display:none;' name='xmIwtLD' value='3274827e535aa235eb0e4d31761d06ef5fba069a3092dededc663aff1f304040'></input> 
+ <input type='text' style='display:none;' name='xmIwtLD' value='3274827e535aa235eb0e4d31761d06efa4195c22ef24b28c14e3a51165d2faa4'></input> 
  <input type='text'  style='display:none;' name='actionType' value='Q3VzdG9tTW9kdWxlNA=='></input>
  <input type='text' style='display:none;' name='returnURL' value='https://www.iimhs.co.jp/seminar_enquete/thanks.html' > </input><br></br>
    <!-- Do not remove this code. -->
@@ -46,57 +43,51 @@ title:      "「業務プロセス分析セミナー（入門編）」アンケ�
   </style>
   <div style="text-align: center;">本日はセミナーへご参加頂きまして誠にありがとうございます。<br>
   お手数ですが、アンケートにご協力の程よろしくお願いいたします。</div>
-  <!--<table style='background-color:#ffffff;background-color:white;color:black'>-->
   <table>
     <tr>
-      <td colspan='2'><h2>『業務プロセス分析セミナー（入門編）』アンケート</h2></td>
+     <td colspan='2'><h2>『RPAロボット群の運用管理セミナー』アンケート</h2></td>
     </tr>
-    <tr>
-      <td class="question">【<span style="color:red;">必須</span>】貴社名</td>
-      <td><input type='text' maxlength='120' name='NAME' class="answer" required /></td>
-    </tr>
-    <tr>
-      <td class="question">【<span style="color:red;">必須</span>】姓（全角）</td>
-      <td><input type='text' maxlength='255' name='COBJ4CF26' class="answer" required/></td>
-    </tr>
-    <tr>
-      <td class="question">【<span style="color:red;">必須</span>】名（全角）</td>
-      <td><input type='text' maxlength='255' name='COBJ4CF25' class="answer" required/></td>
-    </tr>
+      <tr>
+        <td class="question">【<span style="color:red;">必須</span>】貴社名</td>
+        <td><input type='text' maxlength='120' name='NAME' class="answer" required /></td>
+      </tr>
+      <tr>
+        <td class="question">【<span style="color:red;">必須</span>】姓（全角）</td>
+        <td><input type='text' maxlength='255' name='COBJ4CF26' class="answer" required/></td>
+      </tr>
+      <tr>
+        <td class="question">【<span style="color:red;">必須</span>】名（全角）</td>
+        <td><input type='text' maxlength='255' name='COBJ4CF25' class="answer" required/></td>
+      </tr>
     <tr>
       <td class="question">【<span style="color:red;">必須</span>】メールアドレス</td>
-      <td><input type='text'  maxlength='100' name='Email' class="answer" required/></td>
+      <td><input type='text' maxlength='100' name='Email' class="answer" required /></td>
     </tr>
     <tr>
-      <td class="question">【<span style="color:red;">必須</span>】参加されたセミナー日程</td>
+      <td class="question">【<span style="color:red;">必須</span>】参加日程</td>
       <td>
-        <select class="answer" name='COBJ4CF24' required>
-          <option class="view_timer" value="選択してください">選択してください</option>     
+        <select name='COBJ4CF24' required class="answer">
+            <option class="view_timer" value="選択してください">選択してください</option> 
+            <!--date-end-dateはセミナー開催から8日目-->
+    
+             <option class="view_timer" data-start-date="2020/5/13 14:00" data-end-date="2020/5/21 0:00" value="2020年5月13日">2020年5月13日(水)</option>
 
-          
-          <option class="view_timer" data-start-date="2020/3/17 14:00" data-end-date="2020/3/25 0:00" value="2020年3月17日">2020年3月17日(火)</option>
+             <option class="view_timer" data-start-date="2020/6/17 14:00" data-end-date="2020/6/25 0:00" value="2020年6月17日">2020年6月17日(水)</option>
 
-          <option class="view_timer" data-start-date="2020/4/14 14:00" data-end-date="2020/4/22 0:00" value="2020年4月14日">2020年4月14日(火)</option>
+              <option class="view_timer" data-start-date="2020/7/8 14:00" data-end-date="2020/7/16 0:00" value="2020年7月8日">2020年7月8日(火)</option>
 
-           <option class="view_timer" data-start-date="2020/5/14 14:00" data-end-date="2020/5/22 0:00" value="2020年5月14日">2020年5月14日(木)</option>
+              <option class="view_timer" data-start-date="2020/8/28 14:00" data-end-date="2020/9/5 0:00" value="2020年8月28日">2020年8月28日(金)</option>
 
-           <option class="view_timer" data-start-date="2020/6/16 14:00" data-end-date="2020/6/24 0:00" value="2020年6月16日">2020年6月16日(火)</option>
-
-           <option class="view_timer" data-start-date="2020/7/16 14:00" data-end-date="2020/7/24 0:00" value="2020年7月16日">2020年7月16日(木)</option>
-
-           <option class="view_timer" data-start-date="2020/8/6 14:00" data-end-date="2020/8/14 0:00" value="2020年8月6日">2020年8月6日(木)</option>
-          
-        </select>
       </td>
     </tr>
     <tr>
       <td colspan='2' class="title"><strong>セミナーに関してご意見・ご感想を聞かせください</strong></td>
     </tr>
     <tr>
-      <td class="question">【<span style="color:red;">必須</span>】今回セミナーを受講されたきっかけをお聞かせください。</td>
+      <td class="question">【<span style="color:red;">必須</span>】今回、セミナーを受講されたきっかけをお聞かせください</td>
       <td>
-        <select name='COBJ4CF2' class="answer" required>
-          <option value='RPA業務やWinActorの情報収集のため'>RPA業務やWinActorの情報収集のため</option>
+        <select name='COBJ4CF2' required class="answer">
+          <option value='RPAの運用に関する情報収集のため'>RPAの運用に関する情報収集のため</option>
           <option value='業務で必要になったため自主的に受講'>業務で必要になったため自主的に受講</option>
           <option value='上司に勧められたため'>上司に勧められたため</option>
           <option value='その他'>その他</option>
@@ -107,7 +98,7 @@ title:      "「業務プロセス分析セミナー（入門編）」アンケ�
       <td class="question">その他を選択された場合はご記載ください。</td>
       <td><input type='text' maxlength='255' name='COBJ4CF3' class="answer" /></td>
     </tr>
-    <tr>
+<tr>
       <td class="question">【<span style="color:red;">必須</span>】セミナーの内容は参考になりましたか？</td>
       <td>
         <select name='COBJ4CF1' required class="answer">
@@ -120,34 +111,49 @@ title:      "「業務プロセス分析セミナー（入門編）」アンケ�
       </td>
     </tr>
     <tr>
-      <td class="question">【<span style="color:red;">必須</span>】ご説明した手法について、イメージできない、わかりにくい点、ご要望等はありますか？</td>
-      <td><input type='text' maxlength='2000' name='COBJ4CF28' class="answer" /></td>
-    </tr>
-      
-    <tr>
-      <td class="question">【<span style="color:red;">必須</span>】御社では、現在、このようなプロセス分析を必要とされていますか
-     ？</td>
+      <td class="question">ロボットの運用管理ツールの導入状況をお聞かせください。</td>
       <td>
-        <select name='COBJ4CF29' required class="answer">
-          <option value='必要と感じている'>必要と感じている</option>
-          <option value='あまり必要ではない'>あまり必要ではない</option>
-          <option value='必要ではない'>必要ではない</option>
-          <option value='わからない'>わからない</option>
-          
+        <select name='COBJ4CF48' required class="answer">
+          <option value='導入を検討中'>導入を検討中</option>
+          <option value='すでに導入済み、運用中'>すでに導入済み、運用中</option>
+          <option value='情報収集段階'>情報収集段階</option>
+          <option value='その他'>その他</option>
         </select>
       </td>
     </tr>
     <tr>
-      <td class="question">演習について、難しい、分かりにくい点はございましたか？</td>
-      <td><textarea name='COBJ4CF30' maxlength='2000' class="answer"></textarea></td>
+      <td class="question">導入を検討中もしくは、運用中を選択された方はツール名をご記載ください。</td>
+      <td><input type='text' maxlength='255' name='COBJ4CF41' class="answer" /></td>
     </tr>
-
- <tr>
-      <td class="question">セミナーの内容は御社のご要望に即した内容でしたか？</td>
-      <td><textarea name='COBJ4CF27' maxlength='2000' class="answer"></textarea></td>
-    </tr>   
     <tr>
-      <td colspan='2' class="title"><strong>貴社のRPAに関する取り組み状況をお聞かせください</strong></td>
+      <td class="question">その他を選択された場合はご記載ください。</td>
+      <td><input type='text' maxlength='255' name='COBJ4CF40' class="answer" /></td>
+    </tr>
+    <tr>
+      <td class="question">御社では複数のロボットを運用されていらっしゃいますか？<br>よろしければ、製品名もお聞かせください。</td>
+      <td>
+        <select name='COBJ4CF43' required class="answer">
+          <option value='10体以上のロボットを運用中'>10体以上のロボットを運用中</option>
+          <option value='10体未満のロボットを運用中'>10体未満のロボットを運用中</option>
+          <option value='今後増える予定だが、まだ1体のみ、もしくは検討中'>今後増える予定だが、まだ1体のみ、もしくは検討中</option>
+          <option value='その他'>その他</option>
+        </select>
+      </td>
+    </tr>
+    <tr>
+      <td class="question">運用中選択をされた方は製品名をご記載ください。</td>
+      <td><input type='text' maxlength='255' name='COBJ4CF42' class="answer" /></td>
+    </tr>
+    <tr>
+      <td class="question">その他を選択された場合はご記載ください。</td>
+      <td><input type='text' maxlength='255' name='COBJ4CF44' class="answer" /></td>
+    </tr>
+    <tr>
+      <td class="question">RPAツールの運用・保守に関する課題はありますか？</td>
+      <td><input type='text' maxlength='2000' name='COBJ4CF47' class="answer" /></td>
+    </tr>
+    <tr>
+      <td colspan='2' class="title"><strong>貴社のRPAに関する取り組み状況をお聞かせください。</strong></td>
     </tr>
     <tr>
       <td class="question">【<span style="color:red;">必須</span>】RPA（業務自動化ツール）に関し、貴社の取り組み状況をお聞かせください。</td>
@@ -162,9 +168,9 @@ title:      "「業務プロセス分析セミナー（入門編）」アンケ�
       </td>
     </tr>
     <tr>
-      <td class="question">【<span style="color:red;">必須</span>】WinActorの導入を検討していますか？</td>
+      <td class="question">【<span style="color:red;">必須</span>】RPAなどの自動化ツールの乗り換え、導入を検討していますか？</td>
       <td>
-        <select name='COBJ4CF20' required class="answer">
+        <select name='COBJ4CF46' required class="answer">
           <option value='検討している'>検討している</option>
           <option value='他社の製品を検討している'>他社の製品を検討している</option>
           <option value='わかない'>わからない</option>
@@ -184,7 +190,7 @@ title:      "「業務プロセス分析セミナー（入門編）」アンケ�
       <td><input type='text' maxlength='255' name='COBJ4CF19' class="answer" /></td>
     </tr>
     <tr>
-      <td class="question">【<span style="color:red;">必須</span>】RPAのご検討やご導入にあたりお困りのことはございますか？(複数回答可)<br>※Ctrlキーを押下しながらクリックすると複数選択が可能です。</td>
+      <td class="question">【<span style="color:red;">必須</span>】RPAのご検討やご導入、運用・保守にあたりお困りのことはございますか？<br>※Ctrlキーを押下しながらクリックすると複数選択が可能です。</td>
       <td>
         <select name='COBJ4CF21' multiple required class="answer">
           <option value='製品について'>製品について</option>
@@ -210,25 +216,21 @@ title:      "「業務プロセス分析セミナー（入門編）」アンケ�
       </td>
     </tr>
     <tr>
-      <td><a href="/privacy/seminar.html" target="_blank">個人情報保護ポリシー</a>について同意する</td>
-      <td><input type='checkbox'  name='COBJ4CF106' required="" /></td>
-    </tr>
-    <tr> 
-      <td colspan='2' style='text-align:center; padding-top:15px;font-size:12px;'>
-      <input style='font-size:12px;color:black' id='formsubmit' type='submit' value='送信' ></input> <input type='reset' name='reset' style='font-size:12px;color:black' value='リセット' ></input></td>
-    </tr>
+      <td  style='nowrap:nowrap;text-align:left;font-size:12px;font-family:Arial;width:200px;'>
+      	<a href="/privacy/seminar.html" target="_blank">個人情報保護ポリシー</a>について同意する<span style='color:red;'>*</span> </td>
+      <td style='width:250px;' ><input type='checkbox'  name='COBJ4CF110' /></td></tr>
 
-
-    </table>
+  <tr><td colspan='2' style='text-align:center; padding-top:15px;font-size:12px;'>
+    <input style='font-size:12px;color:black' id='formsubmit' type='submit' value='送信' ></input> <input type='reset' name='reset' style='font-size:12px;color:black' value='リセット' ></input> </td></tr></table>
   <script>
-    var mndFileds=new Array('NAME','COBJ4CF104','COBJ4CF5');
-    var fldLangVal=new Array('会社名','個人情報保護ポリシーについて同意する','ご記入いただいたアンケート内容を匿名で弊社サイトにてご紹介させていただいてもよろしいでしょうか。'); 
+    var mndFileds=new Array('NAME');
+    var fldLangVal=new Array('会社名'); 
     var name='';
     var email='';
 
-    function checkMandatory2591799000010082814() {
+    function checkMandatory2591799000010173070() {
     for(i=0;i<mndFileds.length;i++) {
-      var fieldObj=document.forms['WebForm2591799000010082814'][mndFileds[i]];
+      var fieldObj=document.forms['WebForm2591799000010173070'][mndFileds[i]];
       if(fieldObj) {
       if (((fieldObj.value).replace(/^\s+|\s+$/g, '')).length==0) {
        if(fieldObj.type =='file')
@@ -264,5 +266,3 @@ title:      "「業務プロセス分析セミナー（入門編）」アンケ�
   }
 </script>
   </form>
-</div>
-</div>

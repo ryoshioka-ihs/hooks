@@ -1091,13 +1091,36 @@ span.stop{
 	margin:0 5px;
 }
 
+span.full{
+	background-color: #e60000;
+	color: #fff;
+	font-size: 12px;
+	padding: 2px;
+	margin:0 5px;
+}
+
+span.blinking{
+    animation:blinkingText 1.2s infinite;
+    background-color: #e60000;
+    font-size: 12px;
+	padding: 2px;
+	margin:0 5px;
+}
+@keyframes blinkingText{
+    0%{     color: #fff; }
+    49%{    color: #fff; }
+    60%{    color: transparent; }
+    99%{    color:transparent;  }
+    100%{   color: #fff;    }
+}
+
   .allNoDisplay tr:not(.colTitle) {display: none;}
   .WA        tr[WA]         {display: table-row;}/*WinActorハンズオン系*/
   .UI    tr[UI]     {display: table-row;}/*UiPathハンズオン系*/
   .Operation    tr[Operation]     {display: table-row;}/*RPA運用・保守標準化セミナー、RPAロボット群の運用管理セミナー*/
   .know-how    tr[know-how]     {display: table-row;}/*RPA導入　成功に導くためのノウハウ（入門編、実践編）*/
   .Remote    tr[Remote]     {display: table-row;}/*リモートワークセミナー*/
-
+  .IT    tr[IT]     {display: table-row;}/*IT全般*/
 
 
 
@@ -3484,4 +3507,11 @@ footer .footBot {
 	}
 
 }
+/* --------------------------------------------------------
+	セミナー料金
+-------------------------------------------------------- */
 
+  .allNoDisplay option:not(.colTitle) {display: none;}
+  .ITExcel        option[ITExcel]         {display: table-row;}/*ITEcel*/
+  .WinActor        option[WinActor]         {display: table-row;}/*ITEcel*/
+  .ITExcel-WinActor        option[ITExcel-WinActor]         {display: table-row;}/*ITEcel*/
