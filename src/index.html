@@ -332,6 +332,17 @@ title:			"IIMヒューマン・ソリューション"
 				{% endif %}
 		{% endfor %}
 
+		{% comment %} コラム {% endcomment %}
+		{% assign columns_posts = "" | split: "" %}
+		{% for post in site.posts %}
+				{% if columns_posts.size >= max_posts %}
+					{% break %}
+				{% endif %}
+				{% if post.categories contains "columns"  %}
+					{% assign columns_posts = columns_posts | push: post %}
+				{% endif %}
+		{% endfor %}
+
 		{% comment %} セミナー {% endcomment %}
 		{% assign seminar_posts = "" | split: "" %}
 		{% for post in site.posts %}
@@ -371,6 +382,7 @@ title:			"IIMヒューマン・ソリューション"
 				<li class="act">最新</li>
 				{% if service_posts.size > 0 %}<li>サービス・製品</li>{% endif %}
 				{% if case_posts.size    > 0 %}<li>導入事例</li>{% endif %}
+				{% if columns_posts.size    > 0 %}<li>コラム</li>{% endif %}
 				{% if seminar_posts.size > 0 %}<li>セミナー</li>{% endif %}
 				{% if faq_posts.size     > 0 %}<li>FAQ</li>{% endif %}
 				{% if other_posts.size   > 0 %}<li>その他</li>{% endif %}
@@ -388,7 +400,12 @@ title:			"IIMヒューマン・ソリューション"
 							{% endif %}
 								<time>{{ post.date | date: '%Y/%m/%d' }}</time>
 
-								{% if post.categories[0] == "cases" %}
+								{% if post.categories[0] == "columns" %}
+									<div><span class="icon">コラム</span></div>
+									<p>『{{ post.title }}』を追加しました</p>
+
+
+								{% else if post.categories[0] == "cases" %}
 									<div><span class="icon">事例紹介</span></div>
 									<p>『{{ post.title }}』を追加しました</p>
 
@@ -435,6 +452,26 @@ title:			"IIMヒューマン・ソリューション"
 							{% endif %}
 								<time>{{ post.date | date: '%Y/%m/%d' }}</time>
 								<div><span class="icon">導入事例</span></div>
+								<p>『{{ post.title }}』を追加しました</p>
+							</a>
+						</li>
+					{% endfor %}
+				</ul>
+				{% endif %}
+				<!--▲導入事例▲-->
+
+				<!--▼コラム▼-->
+				{% if columns_posts.size > 0 %}
+				<ul class="topicList">
+					{% for post in columns_posts limit:max_posts %}
+						<li>
+							{% if post.link %}
+								<a href="{{ post.link }}" target="_self">
+							{% else %}
+								<a href="{{ post.url }}" target="_self">
+							{% endif %}
+								<time>{{ post.date | date: '%Y/%m/%d' }}</time>
+								<div><span class="icon">コラム</span></div>
 								<p>『{{ post.title }}』を追加しました</p>
 							</a>
 						</li>
