@@ -34,6 +34,23 @@
     </li>
 		{% endif %}
 
+
+    {% comment %}
+      * 該当ページのカテゴリに'columns'が含まれていれば
+        パンクズリストに導入事例のリンクを追加
+      * columnsカテゴリは、記事を/columns/_posts/に格納することで自動的に付与されます。
+    {% endcomment %}
+    {% if page.categories contains 'columns' %}
+    <li property="itemListElement" typeof="ListItem">
+      <a href="/columns/" itemprop="url">
+        <span itemprop="title">コラム</span>
+      </a>
+    </li>
+    {% endif %}
+
+
+
+
     <!-- パンくずリストアイテムの繰り返し -->
     {% assign position = 0 %}
     {% for crumb in breadcrumbs %}
