@@ -15,12 +15,17 @@
 				<a href="/topics/cases/">導入事例</a>
 			</li>
 			{% endif %}
+			{% if site.categories["columns"].size > 0 %}
+			<li{% if page.categories contains "コラム" %} class="act"{% endif %}>
+				<a href="/topics/columns/">コラム</a>
+			</li>
+			{% endif %}
 			<!--{% if site.categories["技術レポート"].size > 0 %}
 			<li{% if page.categories contains "技術レポート" %} class="act"{% endif %}>
 				<a href="/topics/reports/">技術レポート</a>
 			</li>
 			{% endif %}-->
-			{% if site.categories["seminar"].size > 0 %}
+			{% if site.categories["セミナー"].size > 0 %}
 			<li{% if page.categories contains "セミナー" %} class="act"{% endif %}>
 				<a href="/topics/seminar/">セミナー</a>
 			</li>

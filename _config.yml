@@ -1,4 +1,4 @@
-# サイト設定
+﻿# サイト設定
 title: "IIMヒューマン・ソリューション株式会社"
 description: >
   IIMヒューマン・ソリューション株式会社は、ITインフラを支えるスペシャリストの集団です。
@@ -81,6 +81,16 @@ defaults:
     values:
       layout: "win-topics"
       permalink: /topics/:year/:month/:title.html
+
+
+  -
+    scope:
+      path: "columns"
+      type: "posts"
+    values:
+      layout: "columns"
+      permalink: /columns/:year/:month/:title.html
+  -
       
 # Gemfileで追加した拡張機能
 gems:
