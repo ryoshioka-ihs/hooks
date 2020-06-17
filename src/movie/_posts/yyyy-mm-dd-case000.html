@@ -1,0 +1,167 @@
+---
+layout:       case
+global_menu:  cases
+title:        "タイトルを入力"
+description:  "ディスクリプションを入力"
+keywords:     "キーワードを入力（複数ある場合は、半角カンマで区切る）"
+date:         yyyy-mm-dd 00:00:00 +0900
+PDF:          "case000"
+categories:
+ - "カテゴリ名"
+tags:
+ - "タグ名"
+---
+
+<section>
+  <h1>{{ page.title }}</h1>
+  <ul class="linkInPage">
+    <li><a href="#toc-1">背景</a></li>
+    <li><a href="#toc-2">概要</a></li>
+    <li><a href="#toc-3">構成図</a></li>
+    <li><a href="#toc-4">作業のポイント</a></li>
+    <li><a href="#toc-5">弊社利用による効果</a></li>
+    <li><a href="#toc-6">作業内容の詳細</a></li>
+    <li><a href="#PdfDownload">PDFダウンロード</a></li>
+  </ul>
+
+  <section id="toc-1">
+    <h2>背景</h2>
+    <div class="smtSent">
+      <p>お客様は、以前からマイクロソフト社の運用管理ソリューション System Center を用いてPCを一元管理されていました。</p>
+      <br>
+      <p>ところが、企業規模の拡大にともなってクライアント管理台数が1サーバで管理できる台数の上限を超え、部分的にウイルス対策ソフトの導入状況やセキュリティパッチの適用状況が把握できない状態になったため、管理台数を増やすことが急務となりました・・・</p>
+    </div>
+  </section>
+
+  <section id="toc-2">
+    <h2>概要</h2>
+    <div class="smtSent">
+      <table class="baseTb">
+        <tbody>
+          <tr>
+            <th>業種</th>
+            <td>小売業</td>
+          </tr>
+          <tr>
+            <th>目的</th>
+            <td>クライアント増加による、管理ポイントの増加</td>
+          </tr>
+          <tr>
+            <th>作業規模</th>
+            <td>
+              <p>利用ユーザー数：約30,000名</p>
+              <br>
+              <p>[既存サーバ環境]</p>
+              <ul class="grayDisc">
+                <li>Active Directory ドメインコントローラ</li>
+                <li>System Center 2012 Configuration Manager プライマリサーバ</li>
+                <li>Microsoft SQL Server 2008 R2</li>
+              </ul>
+              <br>
+              <p>[新規サーバ環境]</p>
+              <ul class="grayDisc">
+                <li>System Center 2012 Configuration Manager 管理ポイント</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <th>作業ボリューム</th>
+            <td>6人月</td>
+          </tr>
+          <tr>
+            <th>作業内容</th>
+            <td>
+              <ul class="grayDisc">
+                <li>要件定義</li>
+                <li>基本設計</li>
+                <li>設定作業/動作試験</li>
+                <li>ドキュメント作成</li>
+              </ul>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section id="toc-3">
+    <h2>構成図</h2>
+    <div class="smtSent">
+      <div class="lightBox">
+        <figure>
+          <img src="/image/cases/case125_01.png" alt="システム構成図">
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section id="toc-4">
+    <h2>作業のポイント</h2>
+    <div class="smtSent">
+      <h3>新規管理ポイント増設による管理対象クライアント追加</h3>
+      <p>マイクロソフト社のSystem Center 2012 Configuration Manager（SCCM）は、1つのサイトシステムに「管理ポイント」「配布ポイント」等の役割が割り当てられます。</p>
+      <p>お客様の環境でも、これまで1台のプライマリサイトがすべての役割を担っていました。</p>
+      <p>しかし、プライマリサイトの管理ポイントで管理可能なクライアント数の上限は25,000台。</p>
+      <p>お客様は、30,000台を管理する必要があったため、今回、「管理ポイント」の役割だけを担うサーバを新規に増設されました。</p>
+      <p>これにより、喫緊の課題であったクライアントの一元管理を取り戻すことが出来ました。</p>
+      <h3>複数の管理ポイント導入による高可用性の実現</h3>
+      <p>サイト内に管理ポイントを複数インストールすると、ネットワーク負荷分散（NLB）機能が自動的に搭載されます。今回、管理ポイントを増設することによってNLBが搭載され、サーバのネットワーク負荷分散につながりました。管理対象のクライアントは増えていますが、管理ポイントの増設前より可用性が向上しました。</p>
+    </div>
+  </section>
+
+  <section id="toc-5">
+    <h2>弊社利用による効果</h2>
+    <div class="smtSent">
+      <h3>System Center製品構築実績</h3>
+      <p>IHSでは、近年SCCM リプレースによる移行作業など様々な環境でのSystem Center 製品の構築を経験しており、System Center を用いた基盤構築についてのノウハウを蓄積、社内で共有しています。</p>
+      <p>今回のお客様のように、日本国内だけで大規模なクライアント管理をされる例は非常にまれですが、これまでの経験を活かして適切な提案ができました。</p>
+      <h3>確かな技術力</h3>
+      <p>今回のお客様は、初期導入直後から長期間にわたってIHSが運用をご支援させていただいています。</p>
+      <p>お客様のシステム環境を熟知しているということや製品知識があるという理由だけでなく、トータルな技術力についても評価していただき、これまでもお客様から様々なご相談をいただいておりました。</p>
+      <p>時には、お客様のご相談内容をそのまま実行するのではなく、別の解決方法をご提案させていただいたこともあります。</p>
+      <p>そうしたことを続ける中で、お客様との信頼関係を築くことができたと感じています。</p>
+    </div>
+  </section>
+
+  <section id="toc-6">
+  <h2>作業内容の詳細</h2>
+  <div class="smtSent">
+
+    <h3>設計</h3>
+    <h4>1. 基本設計</h4>
+      <ul class="grayDisc">
+        <li>運用設計</li>
+        <li>環境設計</li>
+        <li>保守設計</li>
+      </ul>
+
+    <h3>環境構築</h3>
+    <h4>1. 構成管理機能</h4>
+    <ul class="grayDisc">
+      <li>System Center 2012 Configuration Manager</li>
+      <li>System Center 2012 R2 Configuration Manage</li>
+      <li>Microsoft SQL Server 2012 SP2 Standard</li>
+    </ul>
+
+    <h3>環境構築</h3>
+    <h4>1. 資産管理機能</h4>
+    <h4>2. 管理クライアント</h4>
+    <ul class="grayDisc">
+      <li>OU／グループ／ユーザー</li>
+      <li>Group Policy</li>
+      <li>移動ユーザープロファイル</li>
+    </ul>
+
+    <h3>納品ドキュメント</h3>
+    <ul class="grayDisc">
+      <li>基本設計</li>
+      <li>詳細設計書</li>
+      <li>作業手順書</li>
+      <li>結果報告書</li>
+    </ul>
+
+  </div>
+  </section>
+
+</section>
+
