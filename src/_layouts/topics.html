@@ -17,9 +17,9 @@
 					{% include global/global_key_topics.html %}
 					<!--▲キービジュアル▲-->
 
-					<!--▼パンくずリスト▼-->
-					{% include pan.html %}
-					<!--▲パンくずリスト▲-->
+						<!--▼パンくずリスト▼-->
+						{% include pan.html %}
+						<!--▲パンくずリスト▲-->
 
 					<div class="wrap">
 							<div id="main">
@@ -40,7 +40,11 @@
 												{% if post.categories[0] == "cases" %}
 													<div><span class="icon">事例紹介</span></div>
 													<p>『{{ post.title }}』を追加しました</p>
+												
 
+												{% elsif post.categories[0] == "columns" %}
+													<div><span class="icon">コラム</span></div>
+													<p>『{{ post.title }}』を追加しました</p>
 
 												{% else %}
 													<div><span class="icon">{{ post.categories[1] }}</span></div>
