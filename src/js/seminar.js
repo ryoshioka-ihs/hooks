@@ -187,3 +187,27 @@ function priceset(){
 		
 }
 
+
+//======================================================================================================
+// 
+// 機能  ：MS365セミナー
+
+// 引数  ：
+// 戻り値：
+//======================================================================================================
+// 要素を取得
+var courseelement = document.getElementById( "course" ) ;//id="course"の値を取得
+var seminarDate = document.getElementById( "seminardate") ;//id="seminardate"を取得
+
+// プロパティを取得
+function showdate () {
+	// disabledを取得
+	var returnValue = seminarDate.disabled ;
+}
+
+// プロパティに代入
+function showdate () {
+	// disabledに代入
+	if ( courseelement.value == "【MS365 PowerAutomate】業務効率化の強い味方！MS365の機能をフル活用しよう！") {
+	seminarDate.disabled = false ;
+}
