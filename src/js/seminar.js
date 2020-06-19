@@ -187,27 +187,28 @@ function priceset(){
 		
 }
 
-
 //======================================================================================================
 // 
-// 機能  ：MS365セミナー
+// 機能  ：PowerAutomateセミナー日程表示/非表示
 
 // 引数  ：
 // 戻り値：
 //======================================================================================================
-// 要素を取得
+function showdate () {
 var courseelement = document.getElementById( "course" ) ;//id="course"の値を取得
 var seminarDate = document.getElementById( "seminardate") ;//id="seminardate"を取得
 
-// プロパティを取得
-function showdate () {
-	// disabledを取得
-	var returnValue = seminarDate.disabled ;
-}
-
-// プロパティに代入
-function showdate () {
+  for (var i = 0; i < seminarDate.length; i++){
+       seminarDate.options[i].disabled = true;
+  }
 	// disabledに代入
-	if ( courseelement.value == "【MS365 PowerAutomate】業務効率化の強い味方！MS365の機能をフル活用しよう！") {
-	seminarDate.disabled = false ;
+     if ( courseelement.value == "【MS365 PowerAutomate】業務効率化の強い味方！MS365の機能をフル活用しよう！") {
+	   seminarDate.options[1].disabled = false;
+     } else if ( courseelement.value == "仮1") {
+	   seminarDate.options[2].disabled = false;
+     } else if ( courseelement.value == "仮2") {
+	   seminarDate.options[3].disabled = false;
+     } else if ( courseelement.value == "仮3") {
+	   seminarDate.options[4].disabled = false;
+  }
 }
