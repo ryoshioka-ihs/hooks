@@ -194,7 +194,7 @@ function priceset(){
 // 引数  ：
 // 戻り値：
 //======================================================================================================
-function showdate () {
+/*function showdate () {
 var courseelement = document.getElementById( "course" ) ;//id="course"の値を取得
 var seminarDate = document.getElementById( "seminardate") ;//id="seminardate"を取得
 
@@ -211,4 +211,4 @@ var seminarDate = document.getElementById( "seminardate") ;//id="seminardate"を
      } else if ( courseelement.value == "仮3") {
 	   seminarDate.options[4].disabled = false;
   }
-}
+}/*
