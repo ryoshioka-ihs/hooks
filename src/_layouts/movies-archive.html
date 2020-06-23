@@ -10,7 +10,7 @@ layout: movies
     <li class="triBox">
       <a href="{{ movies.url }}">
         <section>
-          <h3>{{ movie.title }}</h3>
+          <h3>{{ movies.title }}</h3>
 
           {% for category in movies.categories %}
           <!--{% if category != "columns" %}
@@ -18,7 +18,7 @@ layout: movies
           {% endif %}-->
           {% endfor %}
 
-          <p>{{ movie.description | slice: 0, 43 }}...</p>
+          <p>{{ movies.description | slice: 0, 43 }}...</p>
         </section>
       </a>
     </li>
