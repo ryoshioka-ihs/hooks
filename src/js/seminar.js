@@ -155,7 +155,7 @@ function openwindow(){
 // 戻り値：
 //======================================================================================================
 
-function priceset(){
+/*function priceset(){
 	var courseelement = document.getElementById( "course" ) ;//id="course"の値を取得
 	var priceelement = document.getElementById( "price" ) ;//id="price"の値を取得
 	priceelement.value = "";
@@ -185,5 +185,5 @@ function priceset(){
 			priceelement.value="";
 		}    
 		
-}
+}*/
 
