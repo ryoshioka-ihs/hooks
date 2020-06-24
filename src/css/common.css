@@ -1121,7 +1121,7 @@ span.blinking{
   .know-how    tr[know-how]     {display: table-row;}/*RPA導入　成功に導くためのノウハウ（入門編、実践編）*/
   .Remote    tr[Remote]     {display: table-row;}/*リモートワークセミナー*/
   .IT    tr[IT]     {display: table-row;}/*IT全般*/
-
+  .MS365    tr[MS365]     {display: table-row;}/*Microsoft 365*/
 
 
 
@@ -3522,3 +3522,12 @@ footer .footBot {
   .ITExcel        option[ITExcel]         {display: table-row;}/*ITEcel*/
   .WinActor        option[WinActor]         {display: table-row;}/*ITEcel*/
   .ITExcel-WinActor        option[ITExcel-WinActor]         {display: table-row;}/*ITEcel*/
+
+
+/* --------------------------------------------------------
+	クッキング動画
+-------------------------------------------------------- */
+ .mov iframe{
+ 	width: 100%;
+ 	height: 500px;
+ }

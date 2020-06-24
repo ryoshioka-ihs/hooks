@@ -1,0 +1,30 @@
+---
+layout: movies
+---
+
+<h1>{{ page.title }}</h1>
+
+<ul class="columnList lineList">
+
+  {% for movies in paginator.posts %}
+    <li class="triBox">
+      <a href="{{ movies.url }}">
+        <section>
+          <h3>{{ movies.title }}</h3>
+
+          {% for category in movies.categories %}
+          <!--{% if category != "columns" %}
+          <span class="icon">{{ category }}</span>
+          {% endif %}-->
+          {% endfor %}
+
+          <p>{{ movies.description | slice: 0, 43 }}...</p>
+        </section>
+      </a>
+    </li>
+  {% endfor %}
+
+</ul>
+
+{% include pagination.html %}
+

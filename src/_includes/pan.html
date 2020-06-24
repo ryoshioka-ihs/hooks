@@ -48,6 +48,19 @@
     </li>
     {% endif %}
 
+        {% comment %}
+      * 該当ページのカテゴリに'movies'が含まれていれば
+        パンクズリストに導入事例のリンクを追加
+      * moviesカテゴリは、記事を/movies/_posts/に格納することで自動的に付与されます。
+    {% endcomment %}
+    {% if page.categories contains 'movies' %}
+    <li property="itemListElement" typeof="ListItem">
+      <a href="/movies/" itemprop="url">
+        <span itemprop="title">動画</span>
+      </a>
+    </li>
+    {% endif %}
+
 
 
 
