@@ -202,7 +202,7 @@ var seminarDate = document.getElementById( "seminardate") ;//id="seminardate"を
        seminarDate.options[i].disabled = true;
   }
 	// disabledに代入
-     if ( courseelement.value == "【MS365 PowerAutomate】業務効率化の強い味方！MS365の機能をフル活用しよう！") {
+     if ( courseelement.value == "【PowerAutomate】業務効率化の強い味方！MS 365の機能をフル活用しよう！") {
 	   seminarDate.options[1].disabled = false;
      } else if ( courseelement.value == "仮1") {
 	   seminarDate.options[2].disabled = false;
