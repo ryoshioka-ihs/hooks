@@ -200,6 +200,21 @@ article h3.adopt:before {
     padding-left: 0;
     list-style-type: disc;
 }
+.imgDes {
+  margin-right: : 180px;
+  overflow: hidden;
+  text-align: right;
+}
+
+
+.textArea1 {
+	margin: 10px 0px;
+	text-align: left;
+	/*float: left;*/
+	margin-left: 5%;
+	font-size: 20px;
+	font-weight: bold;
+}
 
 
 /* --------------------------------------------------------
@@ -341,23 +356,3 @@ h4 {
 		color: #FF3300;
 	}
 
-.imgDes {
-  float:right;
-  margin-right: : 180px;
-  overflow: hidden;
-  text-align: right;
-}
-/*.imgDes p {
-text-align: left;
-line-height: 50px;
-font-size: 30px;
-font-weight: bold;
-}*/
-
-
-.textArea1 {
-text-align: left;
-line-height: 50px;
-font-size: 20px;
-font-weight: bold;
-}
