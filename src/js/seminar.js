@@ -189,7 +189,7 @@ function openwindow(){
 
 //======================================================================================================
 // 
-// 機能  ：PowerAutomateセミナー日程表示/非表示
+// 機能  ：Microsoft 365セミナー日程表示/非表示
 
 // 引数  ：
 // 戻り値：
@@ -202,7 +202,7 @@ var seminarDate = document.getElementById( "seminardate") ;//id="seminardate"を
        seminarDate.options[i].disabled = true;
   }
 	// disabledに代入
-     if ( courseelement.value == "【MS365 PowerAutomate】業務効率化の強い味方！MS365の機能をフル活用しよう！") {
+     if ( courseelement.value == "【Microsoft 365を使い倒す！】第一弾　Power Automate") {
 	   seminarDate.options[1].disabled = false;
      } else if ( courseelement.value == "仮1") {
 	   seminarDate.options[2].disabled = false;
