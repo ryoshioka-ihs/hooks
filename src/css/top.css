@@ -92,6 +92,32 @@ footer {
 				padding: 0;
 				margin: 0;
 			}
+
+			#index #keyv .kvList .textBox h2.whiteBox{
+				background-color:rgba(255,255,255,0.7);
+			}
+
+			@media (min-width: 1025px){
+				#index #keyv .kvList .textBox .title{
+				font-size: 40px;
+			}
+
+			#index #keyv .kvList .textBox .subtitle{
+				font-size: 32px;
+			}
+
+			}
+
+			@media screen and (min-width: 824px) and (max-width: 1024px){
+				#index #keyv .kvList .textBox .title{
+				font-size: 33px;
+			}
+
+			#index #keyv .kvList .textBox .subtitle{
+				font-size: 27px;
+			}
+			}
+
 			
 			@media screen and (min-width: 960px) and (max-width: 1024px) {
 				#index #keyv .kvList .textBox h2 {margin: 0 50px;}
@@ -361,12 +387,7 @@ footer {
 		text-shadow: 0 2px 3px #fff;
 	}
 
-	#index #keyv .kvList .key5 .textBox h2{
-		/*background-color:rgba(199,232,249,0.3);*/
-		background-color:rgba(255,255,255,0.7);
 
-
-	}
 
 	/*#index #keyv .kvList .key5 .textBox ul {
 		display: flex;
@@ -374,26 +395,7 @@ footer {
 		justify-content: space-between;
 	}*/
 
-	@media (min-width: 1025px){
-		#index #keyv .kvList .key5 .textBox .rpah2-1{
-		font-size: 40px;
-	}
 
-	#index #keyv .kvList .key5 .textBox .rpah2-2{
-		font-size: 32px;
-	}
-
-	}
-
-	@media screen and (min-width: 824px) and (max-width: 1024px){
-		#index #keyv .kvList .key5 .textBox .rpah2-1{
-		font-size: 33px;
-	}
-
-	#index #keyv .kvList .key5 .textBox .rpah2-2{
-		font-size: 27px;
-	}
-	}
 
 	
 /*ITセミナー*/

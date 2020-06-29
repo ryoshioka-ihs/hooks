@@ -54,6 +54,15 @@ body {
 		line-height: 1.3;
 	}
 
+	#index #keyv .kvList .textBox .title{
+		font-size: 20px;
+	}
+
+	#index #keyv .kvList .textBox .subtitle{
+		font-size:15px;
+	}
+
+
 /* ページャー調整 */
 .slick-prev,
 .slick-next
