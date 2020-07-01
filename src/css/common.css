@@ -549,6 +549,21 @@ h3 + figure {
 		padding-top: 20px;
 	}
 
+	.sentBoxT2  ul {
+     margin-left: 45px;
+    }
+
+    .sentBoxT2 li {
+     padding-left: 0;
+     list-style-type: disc;
+    }
+
+  .sentBoxT2 .box .imgDes {
+    display: block;
+    overflow: hidden;
+    text-align : center;
+   }
+
 /* --------------------------------------------------------
     採用に関するお問い合わせ
 -------------------------------------------------------- */
@@ -1366,3 +1381,39 @@ em {
 }
 
 /*渡辺ここまで*/
+
+.linkInPage1 {
+	margin-top: 20px;
+	text-align: center;
+	
+}
+
+.linkInPage1 + section h2 {
+	margin-top: 50px;
+}
+	.linkInPage1 li {
+		font-size: 13px;
+		font-weight: bold;
+		display: inline-block;
+		border: outset 1px #F0BE0F;
+		border-radius: 2px;
+		margin: 0 10px 5px 0;
+	}
+	.linkInPage1 li:last-child {
+		margin-right: 0;
+	}
+		.linkInPage1 li a {
+			display: block;
+			width: 100%;
+			height: auto;
+			color: #282828;
+			padding: 5px 10px 5px 20px;
+			background: #FFF url("/recruit/image/interview/linkInPage_arrow.png") 8px center no-repeat;
+			background-size: 7px auto;
+			transition: 0.3s;
+		}
+		.linkInPage1 li a:hover {
+			text-align: center;
+			text-decoration: none;
+			background-color: #F0BE0F;
+		}
