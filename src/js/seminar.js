@@ -132,7 +132,7 @@ function goFilter(){
 // 戻り値：
 //======================================================================================================
 
-function openwindow(){
+/*function openwindow(){
 
 	var seminarDate = document.getElementById( "seminardate") ;//id="seminardate"を取得
 	var priceelement = document.getElementById( "price" ) ;//id="price"の値を取得
@@ -145,7 +145,7 @@ function openwindow(){
 	seminarDate.options[2].disabled = false;
 
 }
-
+*/
 
 //======================================================================================================
 // 
@@ -211,4 +211,5 @@ var seminarDate = document.getElementById( "seminardate") ;//id="seminardate"を
      } else if ( courseelement.value == "仮3") {
 	   seminarDate.options[4].disabled = false;
   }
-}/*
+}
+*/
