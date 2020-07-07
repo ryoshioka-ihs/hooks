@@ -265,6 +265,33 @@ article h3:before {
 	top: 9px;
 	left: 0;
 }
+
+
+
+h6 {
+	font-weight: bold;
+	position: relative;
+}
+
+article h6:before {
+	content: "";
+	display: block;
+	position: absolute;
+	background-color: #003E8D;
+}
+
+article h6 {
+	font-size: 30px;
+	padding-left:0px;
+	margin: 20px 0;
+}
+/*article h6:before {
+	width: 20px;
+	height: 3px;
+	top: 9px;
+	left: 0;
+}*/
+
 /*//////////////////////////////////////////////////
 	全ページ共通パーツ（テンプレート記載分）
 ///////////////////////////////////////////////////*/
