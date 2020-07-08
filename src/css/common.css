@@ -261,7 +261,7 @@ article .ttl h1 span{
 /* h2タイトル */
 article .ttl h2 {
 	max-width: 580px;
-	/*height: 100px;*/
+	height: 95px;
 	background-color: #FFF;
 	text-align: center;
 	margin: auto;
@@ -901,7 +901,7 @@ header {
 
 #lNav {
 	overflow: hidden;
-	margin-bottom: 95px;
+	margin-bottom: 55px;
 }
 
 	#lNav li {
