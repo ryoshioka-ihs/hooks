@@ -108,6 +108,7 @@ figure.right{
 }
 #appeal .cont .sentBox .textArea dt {
 	font-weight: bold;
+	font-size: 18px;
 }
 #appeal .cont .sentBox .textArea ul {
 	margin-left:20px;
@@ -117,7 +118,23 @@ figure.right{
 	list-style-type: disc;
 }
 
+/*さとまりさんの画像の上の間隔*/
+.sentBox .imgArea02 .imgArea {
+	padding-top: 70px;
+}
+/*画像の間隔*/
+.sentBox .imgArea {
+	padding-bottom:55px;
+}
+
+/*画像サイズ*/
+.sentBox .imgArea img {
+	width: 570px;
+	height: 220px;
+}
+
 /* 産休・育休取得者の声 */
+
 #appeal .cont .sentBox .voice {	
 	margin-top: 40px;
 }
