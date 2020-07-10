@@ -194,7 +194,7 @@ function goFilter(){
 // 引数  ：
 // 戻り値：
 //======================================================================================================
-/*function showdate () {
+function showdate () {
 var courseelement = document.getElementById( "course" ) ;//id="course"の値を取得
 var seminarDate = document.getElementById( "seminardate") ;//id="seminardate"を取得
 
@@ -204,12 +204,9 @@ var seminarDate = document.getElementById( "seminardate") ;//id="seminardate"を
 	// disabledに代入
      if ( courseelement.value == "【Microsoft 365を使い倒す！】第一弾　Power Automate") {
 	   seminarDate.options[1].disabled = false;
-     } else if ( courseelement.value == "仮1") {
+     } else if ( courseelement.value == "【Microsoft 365を使い倒す！】第二弾　PowerShellを使用したアカウント操作") {
 	   seminarDate.options[2].disabled = false;
-     } else if ( courseelement.value == "仮2") {
+     } else if ( courseelement.value == "【Microsoft 365を使い倒す！】第二弾　Azure チャットボット 構築方法") {
 	   seminarDate.options[3].disabled = false;
-     } else if ( courseelement.value == "仮3") {
-	   seminarDate.options[4].disabled = false;
   }
 }
-*/
