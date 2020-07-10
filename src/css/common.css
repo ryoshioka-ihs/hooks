@@ -471,6 +471,10 @@ article #Utility.ttl {
 	background-image: url("../image/common/imgBase_bg10.png");
 }
 
+.imgBase.bg11 {
+	background-image: url("../image/common/imgBase_bg11.png");
+}
+
 /* 横幅を調整しました
 .topimgBase.bg10 {
 	
