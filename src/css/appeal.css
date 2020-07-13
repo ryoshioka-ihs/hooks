@@ -108,7 +108,7 @@ figure.right{
 }
 #appeal .cont .sentBox .textArea dt {
 	font-weight: bold;
-	font-size: 18px;
+	font-size: 16px;
 }
 #appeal .cont .sentBox .textArea ul {
 	margin-left:20px;
@@ -117,19 +117,31 @@ figure.right{
 	padding-left:0px;
 	list-style-type: disc;
 }
-
-/*さとまりさんの画像の上の間隔*/
+/*女性が活躍できる職場の画像間隔*/
 .sentBox .imgArea02 .imgArea {
-	padding-top: 70px;
+	margin-top:-56px;
 }
+
+/*女性のための環境づくりの画像の間隔*/
+.sentBox .imgArea03 .imgArea {
+	margin-top: -37px;
+	padding-bottom:65px;
+}
+
+/*さとまりさんの上の間隔*/
+.sentBox .imgArea04 .imgArea {
+	padding-top:82px;
+}
+
 /*画像の間隔*/
 .sentBox .imgArea {
-	padding-bottom:55px;
+	margin-top: -42px;
+	padding-bottom:123px;
 }
 
 /*画像サイズ*/
 .sentBox .imgArea img {
-	width: 570px;
+	width: 590px;
 	height: 220px;
 }
 
