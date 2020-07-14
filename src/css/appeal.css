@@ -110,44 +110,35 @@ figure.right{
 	font-weight: bold;
 	font-size: 16px;
 }
-/*#appeal .cont .sentBox .textArea ul {
+#appeal .cont .sentBox .textArea ul {
 	margin-left:20px;
 }
 #appeal .cont .sentBox .textArea li {
 	padding-left:0px;
 	list-style-type: disc;
-}*/
+}
 #appeal .cont .sentBox .textArea {
 	padding-bottom: 50px;
 }
 
-
-/*画像の間隔*/
-#appeal .cont .sentBox .imgArea {
-	margin-top: -42px;
-	padding-bottom:123px;
-}
-
 /*女性が活躍できる職場の画像間隔*/
 #appeal .cont .sentBox .imgArea02 .imgArea {
-	margin-top:-56px;
+	padding-bottom: 60px;
 }
 
 /*女性のための環境づくりの画像の間隔*/
 #appeal .cont .sentBox .imgArea03 .imgArea {
 	margin-top: -41px;
-	padding-bottom:65px;
+	padding-bottom:84px;
 }
 
-/*さとまりさんの上の間隔*/
+/*女性のキャリアアップを応援画像の間隔*/
 #appeal .cont .sentBox .imgArea04 .imgArea {
-	padding-top:96px;
+	padding-bottom:200px;
 }
 
-/*画像サイズ*/
-#appeal .cont .sentBox .imgArea img {
-	width: 590px;
-	height: 220px;
+#appeal .cont .sentBox .imgArea05 .imgArea {
+	padding-bottom:100px;
 }
 
 /* 産休・育休取得者の声 */
