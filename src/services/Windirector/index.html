@@ -133,12 +133,141 @@ tags:
 </section>
 
   <section id="sec4">
-		<div class="smtSent">
-			<h2>推奨動作環境</h2>
-			 <figure>			
+    <h2>推奨動作環境</h2>
+    <h4>推奨動作環境(ソフトウェア)は以下の通りです。</h4>
+		<table class="baseTb">
+        <tbody> 
+          <tr>
+            <th colspan="2"></th>
+            <th style="text-align: center;">OS</th>
+            <th>ミドルウェア/ソフトウェア</th>
+          </tr>
+          <tr>
+            <td>管理ロボ環境</td>
+            <td>管理サーバ</td>
+            <td>
+              <ul>
+                <li>Windows Server 2012 R2</li>
+                <li>Windows Server 2016</li>
+              </ul>
+            </td>
+            <td>
+              <ul class="grayDisc">
+                <li>Amazon Corretto 11(JDK)</li>
+                <li>Apache Tomcat</li>
+                <li>Postgre SQL</li>
+                <li>OpenSSL</li>
+                <li>WinActor Manager</li>
+                <li>RDCM(Remote Desktop Connection Manager)</br>(注1)</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>実行ロボ環境</td>
+            <td>RDSサーバ</td>
+            <td>
+              <ul>
+                <li>Windows Server 2012 R2</li>
+                <li>Windows Server 2016</li>
+              </ul>
+            </td>
+            <td>WinActor(注2)</td>
+          </tr>
+          <tr>
+            <td colspan="2">Active Directoryサーバ</td>
+            <td>
+              <ul>
+                <li>Windows Server 2012 R2</li>
+                <li>Windows Server 2016</li>
+              </ul>
+            </td>
+            <td> -</td>
+          </tr>
+        </tbody>
+      </table></br>
+      <ul class="grayDisc">
+        <li>(※注1)各ミドルウェアのバージョンにおきましては、WinDirector製品リリースにより対応バージョンが異なります。</li>
+        <li>(※注2)サポート対象のWinActorのバージョンにつきましては、WinDirectorのバージョンによって異なります。</br>
+        サポート対象バージョンの詳細につきましては、最新のリリースノートを参照願います。</li>
+      </ul></br>
+
+      <h4>推奨動作環境(ソフトウェア)は以下の通りです。</h4>
+    <table class="baseTb">
+        <tbody> 
+          <tr>
+            <th colspan="3"></th>
+            <th>実行ロボの台数 20台(注1)</th>
+            <th>実行ロボの台数 50台(注1)</th>
+            <th>実行ロボの台数 100台(注1)</th>
+          </tr>
+          <tr>
+            <td rowspan="3">管理ロボ環境</td>
+            <td rowspan="3">管理サーバ</td>
+            <td>CPU</td>
+            <td>2.5GHz 64bitプロセッサ以上(2コア以上)</td>
+            <td>2.5GHz 64bitプロセッサ以上(4コア以上)</td>
+            <td>2.5GHz 64bitプロセッサ以上(8コア以上)</td>
+          </tr>
+          <tr>
+            <td>メモリ</td>
+            <td>8GB以上</td>
+            <td>16GB以上</td>
+            <td>32以上</td>
+          </tr>
+          <tr>
+            <td>HDD</td>
+            <td colspan="3">500GB以上(500GB以内100GB程度はシステム領域として使用)</td>
+          </tr>
+          <tr>
+            <td rowspan="4">実行ロボ環境</td>
+            <td rowspan="4">RDSサーバ</br>(注1)</td>
+            <td>CPU</td>
+            <td>3GHz 64bitプロセッサ(8コア以上)</td>
+            <td>3GHz 64bitプロセッサ(8コア以上)</td>
+            <td>3GHz 64bitプロセッサ(16コア以上)</td>
+          </tr>
+          <tr>
+            <td>メモリ</td>
+            <td>16GB以上</td>
+            <td>16GB以上</td>
+            <td>32GB以上</td>
+          </tr>
+          <tr>
+            <td>HDD</td>
+            <td>300GB以上</td>
+            <td>350GB以上</td>
+            <td>450GB以上</td>
+          </tr>
+          <tr>
+            <td>サーバ台数</td>
+            <td>1台</td>
+            <td>2台</td>
+            <td>3台</td>
+          </tr>
+          <tr>
+            <td colspan="2" rowspan="3">Active Directoryサーバ(注2)</td>
+            <td>CPU</td>
+            <td colspan="3">1.4GHz 64bitプロセッサ以上</td>
+          </tr>
+          <tr>
+            <td>メモリ</td>
+            <td colspan="3">2GB以上</td>
+          </tr>
+          <tr>
+            <td>HDD</td>
+            <td colspan="3">146GB以上</td>
+          </tr>
+        </tbody>
+      </table></br>
+      <ul class="grayDisc">
+        <li>(※注1)リモートデスクトップサービスのサーバ戦略仕様</br>実行するシナリオ内容によりCPU使用率やメモリ使用量が変化するため、別途、適切にマシンスペックのサイジングを行う必要がある。</br>また、RDSサーバは、実行ロボの台数により、複数構成にて構築する想定である。(実行ロボ20台：1台構成、実行ロボ50台：2台構成(25台×2),実行ロボ100台：3台構成(33台×3))</li>
+        <li>(※注2)Active Directoryサーバ戦略仕様</br>
+        新規Active Directoryサーバの導入を行う場合における推奨スペックとなる。</br>既にネットワーク上にActive Directoryサーバが存在する環境の場合、既存のActive Directoryサーバを流用することを推奨とする。</br></li>
+      </ul></br>
+			 <!--<figure>			
 			    <img src="/image/services/Environment1.png"></figure><br>
 			 <figure>			
-			    <img src="/image/services/Environment2.png"></figure>
+			    <img src="/image/services/Environment2.png"></figure>-->
 	 </div>
 	</section>
 
