@@ -1058,7 +1058,7 @@ color: #FFF !important;
 	.allNoDisplay tr > *{
 		vertical-align: middle;
 		border-bottom: 1px solid #DDD;
-		border-right: 1px solid #DDD;
+		border-right:1px solid #DDD;
 	}
 
 		.baseTb tr > *{
