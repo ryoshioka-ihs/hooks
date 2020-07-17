@@ -433,7 +433,8 @@ h3 + figure {
 .catchSent {
 	max-width: 840px;
 	margin: 0 auto 60px;
-	line-height: 2;
+	/*line-height: 2;*/
+	line-height: 1.5;
 }
 	.catchSent strong {
 		display: block;
@@ -458,7 +459,8 @@ h3 + figure {
 	letter-spacing: 1px;
 	overflow: hidden;
 	position: relative;
-	line-height: 2;
+	/*line-height: 2;*/
+	line-height: 1.5;
 }
 	/* 見出し */
 	.sentBox .hline {
@@ -503,6 +505,7 @@ h3 + figure {
 		width: 64.488%;
 		padding: 14px 4% 0 0;
 		word-break: normal;
+		line-height: 1.5;
 		float: left;
 	}
 	.sentBox .imgArea {
@@ -546,7 +549,8 @@ h3 + figure {
 		margin: 15px auto 0;
 		border-top: solid 1px #E4DFCF;
 		word-break: normal;
-		line-height: 2;
+		/*line-height: 2;*/
+		line-height: 1.5;
 		padding-top: 20px;
 	}
 
@@ -1112,6 +1116,7 @@ footer #sign .pm {
 }
 
 .mt20 {
+	line-height: 1.5;
     margin-top: 20px !important;
 }
 
