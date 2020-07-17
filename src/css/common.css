@@ -350,7 +350,8 @@ article h3 {
 	font-size: 15px;
 	letter-spacing: 2.2px;
 	position: relative;
-	margin: 95px 0 55px;
+	/*margin: 95px 0 55px;*/
+	margin: 40px 0 55px;
 }
 #lNav + section h3 {
 	margin-top: 0;
@@ -901,7 +902,9 @@ header {
 
 #lNav {
 	overflow: hidden;
+	/*margin-bottom: 55px;*/
 	margin-bottom: 40px;
+
 }
 
 	#lNav li {
@@ -973,7 +976,8 @@ header {
 	
 #info #lNav,
 #intern #lNav {
-	margin-bottom: 60px;
+	/*margin-bottom: 60px;*/
+	margin-bottom: 40px;
 }
 	#info #lNav li,
 	#intern #lNav li {
