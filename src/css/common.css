@@ -1058,7 +1058,6 @@ color: #FFF !important;
 	.allNoDisplay tr > *{
 		vertical-align: middle;
 		border-bottom: 1px solid #DDD;
-		border-right: 1px solid #DDD;
 	}
 
 		.baseTb tr > *{
@@ -1092,6 +1091,62 @@ color: #FFF !important;
 		text-decoration: none;
 	}
 
+
+/* --------------------------------------------------
+	Windirector推奨環境ベーステーブルレイアウト(見出し太字＆背景色あり)
+-------------------------------------------------- */
+.baseTable,
+.baseSeminar,
+.allNoDisplay{
+	width: 100%;
+	background-color: #FFF;
+	border-top: 1px solid #DDD;
+	color: #000;
+}
+
+	.baseSeminar thead tr:hover,
+	.allNoDisplay thead tr:hover {
+		background-color: #FFF;
+		opacity: 1;
+	}
+
+	.baseTable tr > *
+	{
+		vertical-align: middle;
+		border-bottom: 1px solid #DDD;
+		border-right: 1px solid #DDD;
+	}
+
+		.baseTable tr > *{
+			padding: 10px 30px 10px 20px;
+	}
+
+		.baseSeminar tr > *,
+		.allNoDisplay tr > *{
+			padding: 10px;
+	}
+
+	.baseTable th {
+		width: 22%;
+		height: 40px;
+		font-weight: bold;
+		padding-right: 10px;
+		background-color: #F0F0F0;
+	}
+
+	.baseSeminar tr:hover,
+	.allNoDisplay tr:hover{
+		opacity: 0.5;
+		background-color: #81BEF7;
+	}
+
+	.baseSeminar a,
+	.baseSeminar a:hover,
+	.allNoDisplay a,
+	.allNoDisplay a:hover,{
+		color: #000;
+		text-decoration: none;
+	}
 
 /* --------------------------------------------------------
 	セミナー集約ページのテーブル
