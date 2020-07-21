@@ -350,7 +350,8 @@ article h3 {
 	font-size: 15px;
 	letter-spacing: 2.2px;
 	position: relative;
-	margin: 95px 0 55px;
+	/*margin: 95px 0 55px;*/
+	margin: 40px 0 55px;
 }
 #lNav + section h3 {
 	margin-top: 0;
@@ -432,7 +433,8 @@ h3 + figure {
 .catchSent {
 	max-width: 840px;
 	margin: 0 auto 60px;
-	line-height: 2;
+	/*line-height: 2;*/
+	line-height: 1.5;
 }
 	.catchSent strong {
 		display: block;
@@ -457,7 +459,8 @@ h3 + figure {
 	letter-spacing: 1px;
 	overflow: hidden;
 	position: relative;
-	line-height: 2;
+	/*line-height: 2;*/
+	line-height: 1.5;
 }
 	/* 見出し */
 	.sentBox .hline {
@@ -502,6 +505,7 @@ h3 + figure {
 		width: 64.488%;
 		padding: 14px 4% 0 0;
 		word-break: normal;
+		line-height: 1.5;
 		float: left;
 	}
 	.sentBox .imgArea {
@@ -545,7 +549,8 @@ h3 + figure {
 		margin: 15px auto 0;
 		border-top: solid 1px #E4DFCF;
 		word-break: normal;
-		line-height: 2;
+		/*line-height: 2;*/
+		line-height: 1.5;
 		padding-top: 20px;
 	}
 
@@ -901,7 +906,9 @@ header {
 
 #lNav {
 	overflow: hidden;
-	margin-bottom: 55px;
+	/*margin-bottom: 55px;*/
+	margin-bottom: 40px;
+
 }
 
 	#lNav li {
@@ -973,7 +980,8 @@ header {
 	
 #info #lNav,
 #intern #lNav {
-	margin-bottom: 60px;
+	/*margin-bottom: 60px;*/
+	margin-bottom: 40px;
 }
 	#info #lNav li,
 	#intern #lNav li {
@@ -1108,6 +1116,7 @@ footer #sign .pm {
 }
 
 .mt20 {
+	line-height: 1.5;
     margin-top: 20px !important;
 }
 
@@ -1442,7 +1451,7 @@ em {
 
 #lNav1 {
 	overflow: hidden;
-	margin-bottom: 95px;
+	/*margin-bottom: 95px;*/
 }
 
 	#lNav1 li {
