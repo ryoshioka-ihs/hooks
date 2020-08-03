@@ -85,7 +85,7 @@
 		}
 
 .preMsg + .sentBox {
-	line-height: 2;
+	line-height: 1.5;
 }
 
 /* モバイルとPCの間で写真にメッセージが掛からないよう調整 */
