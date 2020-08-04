@@ -8,7 +8,8 @@
 /* カテゴリー　リンクボタン */
 #index {
     overflow: hidden;
-    margin-bottom: 95px;
+    /*margin-bottom: 95px;*/
+    margin-bottom: 0;
 }
 
     #index li {

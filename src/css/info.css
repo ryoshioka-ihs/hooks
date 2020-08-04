@@ -11,7 +11,7 @@
 /* インデックス　リンクボタン */
 #index {
     overflow: hidden;
-    margin-bottom: 95px;
+    /*margin-bottom: 95px;*/
 }
 
     #index li {

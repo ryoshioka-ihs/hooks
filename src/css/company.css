@@ -1,3 +1,4 @@
+
 @charset "UTF-8";
 /* CSS Document */
 /*===================================================
@@ -25,6 +26,18 @@
 	color: #E36D45;
 	letter-spacing: 2px;
 }
+
+	.sentBox  ul {
+     margin-left: 45px;
+     word-break: normal;
+     /*line-height: 20px;*/
+    }
+
+    .sentBox li {
+     padding-left: 0;
+     list-style-type: disc;
+    }
+
 
 /* --------------------------------------------------------
     社長メッセージ
@@ -72,7 +85,7 @@
 		}
 
 .preMsg + .sentBox {
-	line-height: 2;
+	line-height: 1.5;
 }
 
 /* モバイルとPCの間で写真にメッセージが掛からないよう調整 */
