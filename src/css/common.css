@@ -3605,16 +3605,16 @@ footer .footBot {
 	セミナー料金
 -------------------------------------------------------- */
 
-  .allNoDisplay option:not(.colTitle) {display: none;}
-  .ITExcel        option[ITExcel]         {display: table-row;}/*ITEcel*/
-  .WinActor        option[WinActor]         {display: table-row;}/*ITEcel*/
-  .ITExcel-WinActor        option[ITExcel-WinActor]         {display: table-row;}/*ITEcel*/
+/*   .allNoDisplay option:not(.colTitle) {display: none;}
+/*   .ITExcel        option[ITExcel]         {display: table-row;}/*ITEcel*/
+/*   .WinActor        option[WinActor]         {display: table-row;}/*ITEcel*/
+/*   .ITExcel-WinActor        option[ITExcel-WinActor]         {display: table-row;}/*ITEcel*/
 
 
 /* --------------------------------------------------------
 	クッキング動画
 -------------------------------------------------------- */
  .mov iframe{
- 	width: 100%;
- 	height: 500px;
+ 	width: 560px/* 100%*/;
+ 	height: 315px/* 500px*/;
  }
