@@ -140,7 +140,7 @@ figure.right{
 
 /*リスト黒丸*/
  #appeal .cont .sentBox #ten li{
- 	margin: 5px 15px 0px 30px;
+ 	margin: 0px 15px 0px 30px;
     list-style-type: disc;
 }
 
