@@ -265,3 +265,7 @@ figure.right{
 		#lNav2 li a:hover {
 			opacity: 0.7;
 		}
+
+#appeal .cont .sentBox #imgcen {
+  	text-align: center;
+}
