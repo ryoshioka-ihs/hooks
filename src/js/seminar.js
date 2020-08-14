@@ -203,7 +203,7 @@ var seminarDate = document.getElementById( "seminardate") ;//id="seminardate"を
   }
 	// disabledに代入
      if ( courseelement.value == "【MS365】PowerAutomateを使用した申請業務 (第1回目)") {
-	   seminarDate.options[1].disabled = false;
+	   seminarDate.options[1].disabled = true;//trueで日程を非表示でリセットする;
      } else if ( courseelement.value == "【MS365】PowerShellを利用したユーザアカウント管理方法 (第1回目)") {
 	   seminarDate.options[2].disabled = false;
      } else if ( courseelement.value == "【MS365】Azureでのチャットボット機能の構築") {
