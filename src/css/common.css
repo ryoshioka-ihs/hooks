@@ -3682,16 +3682,16 @@ footer .footBot {
 .sentBox.msg .imgArea figcaption {
 	font-weight: 500;
 	font-family: 'Noto Sans Japanese';
-	font-size: 11px;
+	font-size: 15px;
 	letter-spacing: 2px;
 	line-height: 1.5;
 	text-align: left;
 }
 	.sentBox.msg .imgArea figcaption > span {
-		font-size: 12px;
-		margin: 15px 0 0 20px;
+		font-size: 20px;
+		/*margin: 15px 0 0 20px;*/
 		display: inline-block;
-		vertical-align: -15px;
+		/*vertical-align: -15px;*/
 		text-align: left;
 		letter-spacing: 3px;
 	}
