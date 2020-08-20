@@ -3619,7 +3619,7 @@ footer .footBot {
  	height: 315px/* 500px*/;
  }
 
-.sentBox {
+.sentBox1 {
 	background-color: #FFF;
 	font-family: HiraKakuPro-W3, 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', sans-serif;
 	padding: 60px 3%;
@@ -3630,44 +3630,44 @@ footer .footBot {
 	line-height: 1.5;
 }
 	/* 見出し */
-	.sentBox .hline {
+	.sentBox1 .hline {
 		font-weight: bold;
 		font-size: 18px;
 		line-height: 1.5;
 	}
 	
-	/* sentBox内のbtnの幅とマージンの設定 */
-	.sentBox .btn {
+	/* sentBox1内のbtnの幅とマージンの設定 */
+	.sentBox1 .btn {
 		float: left;
 		width: 280px;
 		margin-top: 30px;
 	}
 
 	/* 画像 */
-	.sentBox .textArea {
+	.sentBox1 .textArea {
 		width: 64.488%;
 		padding: 14px 4% 0 0;
 		word-break: normal;
 		float: left;
 	}
-	.sentBox .imgArea {
+	.sentBox1 .imgArea {
 		width: 35.512%;
 		text-align: center;
 		padding-top: 15px;
 		float: right;
 	}
-		.sentBox .imgArea img {
+		.sentBox1 .imgArea img {
 			width: 100%;
 			max-width: 300px;
 			height: auto;
 		}
 
-.sentBox figure {
+.sentBox1 figure {
 	max-width: 760px;
 	margin: 0 auto 10px;
 	text-align: left;
 }
-.sentBox figure img {
+.sentBox1 figure img {
 		width: auto;
 		max-width: 100%;
 	}
@@ -3679,7 +3679,7 @@ footer .footBot {
 	letter-spacing: 2px;
 }
 
-.sentBox.msg .imgArea figcaption {
+.sentBox1.msg .imgArea figcaption {
 	font-weight: 500;
 	font-family: 'Noto Sans Japanese';
 	font-size: 15px;
@@ -3687,7 +3687,7 @@ footer .footBot {
 	line-height: 1.5;
 	text-align: left;
 }
-	.sentBox.msg .imgArea figcaption > span {
+	.sentBox1.msg .imgArea figcaption > span {
 		font-size: 20px;
 		/*margin: 15px 0 0 20px;*/
 		display: inline-block;
@@ -3695,6 +3695,6 @@ footer .footBot {
 		text-align: left;
 		letter-spacing: 3px;
 	}
-	.sentBox.msg .imgArea figcaption .roma {
+	.sentBox1.msg .imgArea figcaption .roma {
 		display: block;
 	}
