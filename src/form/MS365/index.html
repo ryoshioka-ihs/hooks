@@ -63,7 +63,7 @@ title: 【MS365】オンラインセミナーお申込みフォーム
             <tr>
             	<th><span style="color: red">【必須】</span>ご希望のセミナーコース</th>
             	<td>
-                    <select id="course" onchange="showdate()" name="LEADCF154">
+                    <select id="course" onchange="showdate()" name="LEADCF154" required>
                     	<!--select id="course" name="LEADCF154"-->
                       <!--option value="【MS365】PowerAutomateを使用した申請業務 (第1回目)"selected>【MS365】PowerAutomateを使用した申請業務 (第1回目)(受付終了)</option>
                       <option value="【MS365】PowerShellを利用したユーザアカウント管理方法 (第1回目)"selected>【MS365】PowerShellを利用したユーザアカウント管理方法 (第1回目)</option-->
@@ -74,7 +74,7 @@ title: 【MS365】オンラインセミナーお申込みフォーム
                       <option value="" disabled selected>コースを選択してください</option>                                                         
                     </select>
 
-                    <select name="LEADCF155" id="seminardate">
+                    <select name="LEADCF155" id="seminardate" required>
                     <option value="" disabled selected>日付を選択してください</option>
                    	<!--Power Automate1-->
                     <!--option value="2020年8月13日" class="view_timer" data-end-date="2020/8/7 0:00" disabled="">2020年8月13日（木）</option-->
