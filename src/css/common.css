@@ -3631,7 +3631,7 @@ footer .footBot {
 }
 	/* 見出し */
 	.sentBox1 .hline {
-		font-weight: bold;
+		/* font-weight: bold;*/
 		font-size: 18px;
 		line-height: 1.5;
 	}
@@ -3657,8 +3657,8 @@ footer .footBot {
 		float: right;
 	}
 		.sentBox1 .imgArea img {
-			width: 100%;
-			max-width: 300px;
+			width: 90%;
+			max-width: 250px;
 			height: auto;
 		}
 
@@ -3666,6 +3666,7 @@ footer .footBot {
 	max-width: 760px;
 	margin: 0 auto 10px;
 	text-align: left;
+	padding-left: 2em;
 }
 .sentBox1 figure img {
 		width: auto;
@@ -3680,15 +3681,16 @@ footer .footBot {
 }
 
 .sentBox1.msg .imgArea figcaption {
-	font-weight: 500;
-	font-family: 'Noto Sans Japanese';
-	font-size: 15px;
+	font-weight: 290;
+	font-family: 'Meiryo';/*Noto Sans Japanese*/
+	font-size: 12.5px;
 	letter-spacing: 2px;
 	line-height: 1.5;
 	text-align: left;
 }
 	.sentBox1.msg .imgArea figcaption > span {
-		font-size: 20px;
+		font-size: 18px;
+		font-weight: bold;
 		/*margin: 15px 0 0 20px;*/
 		display: inline-block;
 		/*vertical-align: -15px;*/
