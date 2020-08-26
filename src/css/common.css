@@ -1201,6 +1201,21 @@ span.blinking{
     100%{   color: #fff;    }
 }
 
+span.blinking1{
+    animation:blinkingText 1.2s infinite;
+    /*background-color: #e60000;*/
+    font-size: 50px;
+	/*padding: 2px;
+	margin:0 5px;*/
+}
+@keyframes blinkingText{
+    0%{     color: #FFC300; }
+    49%{    color: #FFC300; }
+    60%{    color: transparent; }
+    99%{    color:transparent;  }
+    100%{   color: #FFC300;    }
+}
+
   .allNoDisplay tr:not(.colTitle) {display: none;}
   .WA        tr[WA]         {display: table-row;}/*WinActorハンズオン系*/
   .UI    tr[UI]     {display: table-row;}/*UiPathハンズオン系*/
