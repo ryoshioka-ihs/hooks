@@ -207,14 +207,14 @@ var seminarDate = document.getElementById( "seminardate") ;//id="seminardate"を
 	   seminarDate.options[1].disabled = true;//trueで日程を非表示でリセットする;
      } else if ( courseelement.value == "【MS365】PowerShellを利用したユーザアカウント管理方法 (第1回目)") {
 	   seminarDate.options[2].disabled = false;*/
-     /*} else if*/ ( courseelement.value == "【MS365】Azureでのチャットボット機能の構築") {
+     /*} else if ( courseelement.value == "【MS365】Azureでのチャットボット機能の構築") {
 	   seminarDate.options[1].disabled = false;
-     } else if ( courseelement.value == "【MS365】PowerAutomateを使用した日報作成 (条件分岐の設定方法）") {
-	   seminarDate.options[2].disabled = false;
+     } else if */( courseelement.value == "【MS365】PowerAutomateを使用した日報作成 (条件分岐の設定方法）") {
+	   seminarDate.options[1].disabled = false;
 	 } else if ( courseelement.value == "【MS365】PowerAutomateを使用した申請業務 (第2回目)") {
-	   seminarDate.options[3].disabled = false;
+	   seminarDate.options[2].disabled = false;
 	 } else if ( courseelement.value == "【MS365】PowerShellを利用したユーザアカウント管理方法 (第2回目)") {
-	   seminarDate.options[4].disabled = false;
+	   seminarDate.options[3].disabled = false;
 	 } else if ( courseelement.value = "") {
 	   seminarDate.disabled = true;
 	}
