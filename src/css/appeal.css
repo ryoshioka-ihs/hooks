@@ -144,6 +144,11 @@ figure.right{
     list-style-type: disc;
 }
 
+@media screen and (min-width: 824px){
+#appeal .welfare .imgArea img{
+	margin-top: -40px;}
+}
+
 /*//////////////////////////////////////////////////
     女性が活躍できる職場
 ///////////////////////////////////////////////////*/
