@@ -19,13 +19,12 @@ title: 採用に関するお問い合わせ | IHS新卒・中途採用サイト
             </nav>
             -->
             <section>
-                <h3><span>採用についてのお問合わせ</h3>
                 <div class="sentBox margb60">
 
                 	<form action="mailer.php" method="post">
                     <section>
+                        <p><b>携帯電話・スマートフォンからエントリーの方へ</b><br>「ドメイン指定受信」機能を利用されている方は、「iimhs.co.jp」からメールを受信できるよう設定してください。</p>
                         <p>「<span style="color: red">※</span>」が付いている項目は必須項目です。</p>
-                        <p>携帯電話・スマートフォンからエントリーの方へ<br>「ドメイン指定受信」機能を利用されている方は、「iimhs.co.jp」からメールを受信できるよう設定してください。</p>
                         <table class="form">
                             <tbody>
                             　　<tr>
@@ -40,12 +39,6 @@ title: 採用に関するお問い合わせ | IHS新卒・中途採用サイト
                                 </td>
                               </tr>
                               <tr>
-                                <th><span class="R">※</span>メールアドレス</th>
-                                <td colspan="6">
-                                    <input type="email" name="emailadd" placeholder="(例)abc@iimhs.co.jp" required>
-                                </td>
-                              </tr>
-                              <tr>
                                 <th><span class="R">※</span>電話番号（携帯番号）</th>
                                 <td>
                                     <input type="tel" name="phone1" required placeholder="070" maxlength='3'>
@@ -57,6 +50,22 @@ title: 採用に関するお問い合わせ | IHS新卒・中途採用サイト
                                 <td>-</td>
                                 <td colspan="2">
                                     <input type="tel" name="phone3" required placeholder="0000" maxlength='4'>
+                                </td>
+                              </tr>
+                              <tr>
+                                <th><span class="R">※</span>メールアドレス</th>
+                                <td colspan="6">
+                                    <input type="email" name="emailadd" placeholder="(例)abc@iimhs.co.jp" required>
+                                </td>
+                              </tr>
+                              <tr>
+                                <th><span class="R">※</span>お問い合わせの対象</th>
+                                <td colspan="6">
+                                    <input type="checkbox" name="enquete1[]" class="none" value="新卒採用">新卒採用
+                                    <input type="checkbox" name="enquete1[]" class="none" value="中途採用">中途採用
+                                    <input type="checkbox" name="enquete1[]" class="none" value="エキスパート採用">エキスパート採用
+                                    <input type="checkbox" name="enquete1[]" class="none" value="業務委託契約">業務委託契約
+                                    <input type="checkbox" name="enquete1[]" class="none" value="その他">その他
                                 </td>
                               </tr>
                                	<tr>
