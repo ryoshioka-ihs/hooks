@@ -915,7 +915,8 @@ a.rss:hover {
 -------------------------------------------------- */
 .blueBtn,
 .blueBtn_btn,
-.oraBtn {
+.oraBtn,
+.shiny-btn {
 	width: 360px;
 	height: 60px;
 	line-height: 60px;
@@ -992,7 +993,8 @@ color: #FFF !important;
 	.blueBtn a,
 	.blueBtn_btn a,
 	.oraBtn a,
-	.oraBtn_Parallel a{
+	.oraBtn_Parallel a,
+	.shiny-btn a{
 		display: block;
 		width: 100%;
 		height: 100%;
@@ -1003,21 +1005,24 @@ color: #FFF !important;
 	.blueBtn:hover,
 	.blueBtn_btn:hover,
 	.oraBtn:hover,
-	.oraBtn_Parallel:hover{
+	.oraBtn_Parallel:hover,
+	.shiny-btn:hover {
 		opacity: 0.7;
 		-ms-filter: "alpha(opacity=70)";
 	}
 	.blueBtn a:hover,
 	.blueBtn_btn a:hover,
 	.oraBtn a:hover,
-	.oraBtn_Parallel a:hover{
+	.oraBtn_Parallel a:hover,
+	.shiny-btn a:hover{
 		text-decoration: none;
 	}
 
 
 /* 青 */
 .blueBtn,
-.blueBtn_btn{
+.blueBtn_btn,
+.shiny-btn {
 	background-color: #003E8D;
 }
 
@@ -3715,3 +3720,4 @@ footer .footBot {
 	.sentBox1.msg .imgArea figcaption .roma {
 		display: block;
 	}
+	

@@ -214,6 +214,8 @@ body {
 				}
 
 		/* ボタンとテキストは非表示 */
+		#index #keyv .kvList .key1 .blueBtn,
+		#index #keyv .kvList .key1 .textBox li p.text,
 		#index #keyv .kvList .key3 .blueBtn,
 		#index #keyv .kvList .key3 .textBox li p.text,
 		#index #keyv .kvList .key4 .blueBtn,
@@ -777,4 +779,53 @@ body {
 /* ページトップへ */
 footer #pageTop {
 	top: auto;
+}
+
+.shiny-btn{
+	width: 75%;
+	font-size: 15px;
+	/*padding: 10px 0;
+	margin:0 5px 0;
+	/*height: 40px;
+	line-height: 40px;
+	transition: none;*/
+}
+/* ホバー対応 */
+.shiny-btn:hover {
+	opacity: 1;
+}
+
+.clear-btn{
+	width: 40%;
+	padding:10px 0;
+	margin:0 5px 0;
+	font-size: 15px;
+}
+.clear-btn2{
+	width: 100%;
+	padding: 2px;
+	margin:0 5px 0;
+	font-size: 18px;
+}
+.clear-btn3{
+	width: 100%;
+	padding: 2px;
+	margin:0 5px 0;
+	font-size: 18px;
+}
+
+.navy-btn{
+	width: 22%;
+	padding: 10px 0;
+	margin:0 5px 0;
+	font-size: 5px;
+	/*height: 40px;
+	line-height: 40px;
+	transition: none;*/
+}
+.clear-btn4{
+	width: 100%;
+	padding: 2px;
+	margin:0 5px 0;
+	font-size: 5px;
 }
