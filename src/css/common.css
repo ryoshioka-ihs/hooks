@@ -468,6 +468,11 @@ h3 + figure {
 		font-size: 18px;
 		line-height: 1.5;
 	}
+	.sentBox .hline2 {
+		font-weight: bold;
+		font-size: 18px;
+		line-height: 1.5;
+	}
 	/* 見出し色 */
 	#company .sentBox .hline {
 		color: #E36D45;
@@ -475,6 +480,10 @@ h3 + figure {
 
 	#appeal .sentBox .hline {
 		color: #F48494;
+	}
+
+	#appeal .sentBox .hline2 {
+		color: #333333;
 	}
 
 	#interview .sentBox .hline {
@@ -567,6 +576,7 @@ h3 + figure {
     display: block;
     overflow: hidden;
     text-align : center;
+    width: 100%;
    }
 
 /* --------------------------------------------------------

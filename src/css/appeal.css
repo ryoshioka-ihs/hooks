@@ -18,9 +18,9 @@
 	margin-top: 27px;
 }
 
-.boxImg{
+/*.boxImg{
 	display: inline-flex;
-}
+}*/
 
 figure.right{
 	margin-left: 10px;
@@ -209,8 +209,7 @@ figure.right{
 	font-weight: bold;
 	margin-bottom: 10px;
 }
-#appeal .cont .sentBox .voice p {
-}
+
 
 /*//////////////////////////////////////////////////
     成長できる環境
@@ -279,4 +278,27 @@ figure.right{
 
 #appeal .cont .sentBox #imgcen {
   	text-align: center;
+}
+
+@media screen and (min-width: 529px){
+#appeal .cont .sentBox #pd1 {
+	padding-left: 55%
+}
+}
+@media screen and (max-width: 529px){
+#appeal .cont .sentBox #pd1{
+	text-align: center;
+}
+}
+
+@media screen and (min-width: 697px){
+#appeal .cont .sentBox #pd2 {
+	padding-left: 39%
+}
+}
+
+@media screen and (max-width: 696px){
+#appeal .cont .sentBox #pd2{
+	text-align: center;
+}
 }
