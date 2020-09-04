@@ -781,6 +781,16 @@ footer #pageTop {
 	top: auto;
 }
 
+.navy-btn{
+	width: 28%;
+	padding: 10px 0;
+	margin:0 5px 0;
+	font-size: 13px !important;
+	/*height: 40px;
+	line-height: 40px;
+	transition: none;*/
+}
+
 .shiny-btn{
 	width: 75%;
 	font-size: 15px;
@@ -799,30 +809,21 @@ footer #pageTop {
 	width: 40%;
 	padding:10px 0;
 	margin:0 5px 0;
-	font-size: 15px;
+	font-size: 13px !important;
 }
 .clear-btn2{
 	width: 100%;
 	padding: 2px;
 	margin:0 5px 0;
-	font-size: 18px;
+	font-size: 12px;
 }
 .clear-btn3{
 	width: 100%;
 	padding: 2px;
 	margin:0 5px 0;
-	font-size: 18px;
+	font-size: 10px !important;
 }
 
-.navy-btn{
-	width: 28%;
-	padding: 10px 0;
-	margin:0 5px 0;
-	font-size: 15px;
-	/*height: 40px;
-	line-height: 40px;
-	transition: none;*/
-}
 .clear-btn4{
 	width: 50%;
 	padding: 2px;
@@ -835,4 +836,27 @@ footer #pageTop {
 	padding:10px 0;
 	margin-bottom: -5px !important;
 	font-size: 8px !important;
+}
+
+.clear-btn6{
+	width: 100%;
+	padding: 2px;
+	margin:0 5px 0;
+	font-size: 14px !important;
+}
+
+.clear-btn7{
+	width: 100%;
+	padding: 2px;
+	margin:0 5px 0;
+	font-size: 12px;
+}
+
+.clear-btn8{
+	font-size: 5px !important;
+	margin: 0px 20px 0px;
+}
+
+.clear-btn9{
+	font-size: 13px !important;
 }
