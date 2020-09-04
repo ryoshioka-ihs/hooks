@@ -895,12 +895,12 @@ footer {
 .navy-btn {
     display: inline-block;
     position: relative;
-    width: 12%;/*ボタンの幅*/
+    width: 18%;/*ボタンの幅*/
     padding: 10px 0;
-    margin: 0px 1px 0px;
+    margin: 0;
     background-color: #003E8D;/*ボタンの色*/
     font-weight: bold;
-    font-size: 16px;
+    font-size: 25px;
     font-family: HiraKakuPro-W3, 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', sans-serif;
     color: #FFFFFF;
     text-align: center;
@@ -951,7 +951,7 @@ footer {
 
 .clear-btn {
     display: inline-block;
-    line-height: 1.0em;
+    /*line-height: 1.0em;*/
     position: relative;
     width: 30%;/*ボタンの幅*/
     padding: 10px 0;
@@ -1006,16 +1006,46 @@ footer {
 .clear-btn4 {
     /*display: inline-block;*/
     position: absolute;
-    width: 100%;/*ボタンの幅*/
+    width: 33%;/*ボタンの幅*/
     padding: 5px 0;
     margin: 0;
     font-weight: bold;
-    font-size: 12px;
+    font-size: 18px;
     font-family: HiraKakuPro-W3, 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', sans-serif;
     color: #FFFFFF;
-    text-align: right;
+    /*text-shadow: 0 0 10px blue,0 0 15px blue;*/
     text-decoration: none;
     overflow: hidden;
     top: 8px;
     right: 16px;
+    text-align: center;
+    -webkit-animation: clear-btn4 1s ease-in-out infinite alternate;
+    -moz-animation: clear-btn4 1s ease-in-out infinite alternate;
+  animation: clear-btn4 1s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes clear-btn4 {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+  }
+  
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+  }
+}
+
+
+.clear-btn5 {
+    display: inline-block;
+    bottom: -5px;
+    position: relative;
+    width: 40%;/*ボタンの幅*/
+    /*padding: 1px 0;
+    margin: 0;*/
+    font-weight: bold;
+    font-size: 22px;
+    color: #FFFFFF;
+    text-align: center;
+    text-decoration: none;
+    overflow: hidden;
 }
