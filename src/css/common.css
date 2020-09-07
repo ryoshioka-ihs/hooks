@@ -576,8 +576,20 @@ h3 + figure {
     display: block;
     overflow: hidden;
     text-align : center;
-    width: 100%;
-   }
+  }
+  #appeal .sentBox .clearfix .imgDes  {
+  	display: block;
+    overflow: hidden;
+	max-width: 760px;
+	margin: 0 auto 50px;
+	text-align: center;
+}
+	#appeal .sentBox .clearfix .imgDes img {
+		width: auto;
+		max-width: 100%;
+	}
+
+ 
 
 /* --------------------------------------------------------
     採用に関するお問い合わせ
