@@ -288,7 +288,8 @@ a.rss:hover {
 -------------------------------------------------- */
 .blueBtn,
 .blueBtn_btn,
-.oraBtn{
+.oraBtn,
+.shiny-btn{
 	width: 100%;
 	height: 40px;
 	line-height: 40px;
@@ -298,7 +299,8 @@ a.rss:hover {
 .blueBtn:hover,
 .blueBtn_btn:hover,
 .oraBtn:hover,
-.oraBtn_Parallel:hover {
+.oraBtn_Parallel,
+.shiny-btn:hover {
 	opacity: 1;
 }
 
