@@ -214,6 +214,8 @@ body {
 				}
 
 		/* ボタンとテキストは非表示 */
+		#index #keyv .kvList .key1 .blueBtn,
+		#index #keyv .kvList .key1 .textBox li p.text,
 		#index #keyv .kvList .key3 .blueBtn,
 		#index #keyv .kvList .key3 .textBox li p.text,
 		#index #keyv .kvList .key4 .blueBtn,
@@ -777,4 +779,84 @@ body {
 /* ページトップへ */
 footer #pageTop {
 	top: auto;
+}
+
+.navy-btn{
+	width: 28%;
+	padding: 10px 0;
+	margin:0 5px 0;
+	font-size: 13px !important;
+	/*height: 40px;
+	line-height: 40px;
+	transition: none;*/
+}
+
+.shiny-btn{
+	width: 75%;
+	font-size: 15px;
+	/*padding: 10px 0;
+	margin:0 5px 0;
+	/*height: 40px;
+	line-height: 40px;
+	transition: none;*/
+}
+/* ホバー対応 */
+.shiny-btn:hover {
+	opacity: 1;
+}
+
+.clear-btn{
+	width: 40%;
+	padding:10px 0;
+	margin:0 5px 0;
+	font-size: 13px !important;
+}
+.clear-btn2{
+	width: 100%;
+	padding: 2px;
+	margin:0 5px 0;
+	font-size: 12px;
+}
+.clear-btn3{
+	width: 100%;
+	padding: 2px;
+	margin:0 5px 0;
+	font-size: 10px !important;
+}
+
+.clear-btn4{
+	width: 50%;
+	padding: 2px;
+	margin:0 5px 0;
+	font-size: 8px !important;
+}
+
+.clear-btn5{
+	width: 40%;
+	padding:10px 0;
+	margin-bottom: -5px !important;
+	font-size: 8px !important;
+}
+
+.clear-btn6{
+	width: 100%;
+	padding: 2px;
+	margin:0 5px 0;
+	font-size: 14px !important;
+}
+
+.clear-btn7{
+	width: 100%;
+	padding: 2px;
+	margin:0 5px 0;
+	font-size: 12px;
+}
+
+.clear-btn8{
+	font-size: 5px !important;
+	margin: 0px 20px 0px;
+}
+
+.clear-btn9{
+	font-size: 13px !important;
 }
