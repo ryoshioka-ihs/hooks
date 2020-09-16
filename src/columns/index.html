@@ -1,9 +1,9 @@
 ---
-layout:			"columns-archive"
+layout:			"columns"
 global_menu:	"columns"
 description:	"従来よりIIMヒューマンソリューションでは、既存のお客様やセミナーにご出席いただいた方々へ、月に1度、「お役立ちメール」を配信しています。そのお役立ちメールの中で人気が高いコラムをご紹介させていただきます。"
 keywords:		"コラム,リモート運用,インフラ運用,インフラ構築,セキュリティ"
-title:			"コラム一覧"
+title:			"お役立ちコラム"
 noindex:		true
 paginate:
   collection:	posts
@@ -14,3 +14,50 @@ paginate:
   categories:
     - "columns"
 ---
+<article>
+<h1>{{ page.title }}</h1>
+<p>従来よりIIMヒューマンソリューションでは、既存のお客様やセミナーにご出席いただいた方々へ、月に1度、「お役立ちメール」を配信しています。そのお役立ちメールの中で人気が高いコラムを以下にまとめました。2020年4月からのコラムを以下にまとめています。ぜひご覧ください。<br>
+お役立ちメールには、弊社新サービス、セミナー情報、またお得な情報が含まれています。メルマガ配信をご希望の方は、<a href="mailto:web@iimhs.co.jp?subject=メルマガ配信希望&amp;body=会社名：%0D%0A部署名：%0D%0Aお名前：%0D%0Aご連絡先：">web@iimhs.co.jp</a> まで、「メルマガ配信希望」とタイトルに記載し、御社名、部署名、お名前、ご連絡先（メールアドレス）をご記載いただき、メールをお送りください。</p>
+
+			<section>
+
+					<div class="wrap">
+							<div id="main">
+
+								<ul class="topicList">
+
+									{% for post in paginator.posts %}
+										<li>
+											{% if post.link and post.link != "" %}
+												<a href="{{ post.link }}" target="_self">
+											{% else %}
+												<a href="{{ post.url }}" target="_self">
+											{% endif %}
+												<time>{{ post.date | date: '%Y/%m/%d' }}</time>
+
+												{% if post.categories[0] == "cases" %}
+													<div><span class="icon">事例紹介</span></div>
+													<p>{{ post.title }}</p>
+												
+												{% elsif post.categories[0] == "columns" %}
+													<div><span class="icon">{{ post.categories[1] }}</span></div>
+													<p><b>{{ post.title }}</b></p>
+
+												{% else %}
+													<div><span class="icon">{{ post.categories[1] }}</span></div>
+													<p>{{ post.title }}</p>
+												{% endif %}
+
+											</a>
+										</li>
+									{% endfor %}
+
+								</ul>
+
+								{% include pagination.html %}
+
+							</div><!--/.main-->
+
+					</div><!--/.wrap-->
+			</section>
+	</article>

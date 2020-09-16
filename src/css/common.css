@@ -2670,7 +2670,7 @@ position: relative;
 	max-width: 1440px;
 	min-width: 1000px;
 	min-height: 90px;
-	padding: 5px 140px 0 30px;
+	padding: 5px 135px 0 30px;
 	position: relative;
 	margin: auto;
 }
@@ -2746,7 +2746,7 @@ position: relative;
 				color: #282828;
 				font-weight: bold;
 				border-bottom: 3px solid #F9F9F9;
-				padding: 0px 13px;
+				padding: 0px 10px;
 				letter-spacing: 3px;
 				font-size: 13px;
 				}
