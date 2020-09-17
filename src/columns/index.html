@@ -19,45 +19,55 @@ paginate:
 <p>従来よりIIMヒューマンソリューションでは、既存のお客様やセミナーにご出席いただいた方々へ、月に1度、「お役立ちメール」を配信しています。そのお役立ちメールの中で人気が高いコラムを以下にまとめました。2020年4月からのコラムを以下にまとめています。ぜひご覧ください。<br>
 お役立ちメールには、弊社新サービス、セミナー情報、またお得な情報が含まれています。メルマガ配信をご希望の方は、<a href="mailto:web@iimhs.co.jp?subject=メルマガ配信希望&amp;body=会社名：%0D%0A部署名：%0D%0Aお名前：%0D%0Aご連絡先：">web@iimhs.co.jp</a> まで、「メルマガ配信希望」とタイトルに記載し、御社名、部署名、お名前、ご連絡先（メールアドレス）をご記載いただき、メールをお送りください。</p>
 
-			<section>
+<script type="text/javascript" src="/js/seminar.js"></script>
+<div class="smtSent">
+  	<section>
+        <div class="msgWrap session">
+			<table id="allSeminarTable" class="baseSeminar">
+			<thead>
+			  <tr class="colTitle">
+			    ◆カテゴリから探す：&nbsp;&nbsp;			    
+			        <select id="allSeminarSelect" onChange="goFilter()">
+			          <option value="all">全てのコラム</option>
+              　      <option value="MS365">Microsoft 365</option>   
+             	　    <option value="Remote">リモートワーク</option> 
+             	      <option value="RPA">RPA</option>        
+			        </select>
+			  </tr>
+			</thead>
+　　　       <th colspan="4"><!--最新のコラムは一番上に乗せる--></th>
 
-					<div class="wrap">
-							<div id="main">
+              <tr MS365>
+                  <td><a href="/columns/2020/09/case006.html" target="_blank">2020/09/08</a></td>
+                  <td colspan="3"><a href="/columns/2020/09/case006.html" target="_blank"><span class="MS365">&nbsp;Microsoft365&nbsp;</span>Microsoft 365で実現する日報入力の省力化と確認業務の効率化</a></td>
+              </tr>
 
-								<ul class="topicList">
+              <tr MS365>
+                  <td><a href="/columns/2020/08/case005.html" target="_blank">2020/08/12</a></td>
+                  <td colspan="3"><a href="/columns/2020/08/case005.html" target="_blank"><span class="MS365">&nbsp;Microsoft365&nbsp;</span>SharepointとPowerautomateを使った在宅勤務のための申請業務の自動化</a></td>
+              </tr>
 
-									{% for post in paginator.posts %}
-										<li>
-											{% if post.link and post.link != "" %}
-												<a href="{{ post.link }}" target="_self">
-											{% else %}
-												<a href="{{ post.url }}" target="_self">
-											{% endif %}
-												<time>{{ post.date | date: '%Y/%m/%d' }}</time>
+              <tr MS365>
+                  <td><a href="/columns/2020/07/case004.html" target="_blank">2020/07/10</a></td>
+                  <td colspan="3"><a href="/columns/2020/07/case004.html" target="_blank"><span class="MS365">&nbsp;Microsoft365&nbsp;</span>問い合わせ工数削減のためのチャットボット利用</a></td>
+              </tr>          
 
-												{% if post.categories[0] == "cases" %}
-													<div><span class="icon">事例紹介</span></div>
-													<p>{{ post.title }}</p>
-												
-												{% elsif post.categories[0] == "columns" %}
-													<div><span class="icon">{{ post.categories[1] }}</span></div>
-													<p><b>{{ post.title }}</b></p>
+              <tr RPA>
+                  <td><a href="/columns/2020/06/case003.html" target="_blank">2020/06/12</a></td>
+                  <td colspan="3"><a href="/columns/2020/06/case003.html" target="_blank"><span class="RPA">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;RPA&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>リモートワークとRPA</a></td>
+              </tr>
 
-												{% else %}
-													<div><span class="icon">{{ post.categories[1] }}</span></div>
-													<p>{{ post.title }}</p>
-												{% endif %}
+              <tr Remote>
+                  <td><a href="/columns/2020/05/case002.html" target="_blank">2020/05/18</a></td>
+                  <td colspan="3"><a href="/columns/2020/05/case002.html" target="_blank"><span class="Remote">リモートワーク</span>リモートワークに最適なサービス</a></td>
+              </tr>
 
-											</a>
-										</li>
-									{% endfor %}
-
-								</ul>
-
-								{% include pagination.html %}
-
-							</div><!--/.main-->
-
-					</div><!--/.wrap-->
-			</section>
-	</article>
+              <tr Remote>
+                  <td><a href="/columns/2020/04/case001.html" target="_blank">2020/04/16</a></td>
+                  <td colspan="3"><a href="/columns/2020/04/case001.html" target="_blank"><span class="Remote">リモートワーク</span>リモートワーク＆リモートサポート</a></td>
+              </tr>
+          </table>
+        </div>
+     </section>
+   </div>
+ </article>

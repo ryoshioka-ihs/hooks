@@ -1221,6 +1221,30 @@ span.blinking1{
     100%{   color: #FFC300;    }
 }
 
+span.MS365{
+	background-color: #FF6600;
+	color: #fff;
+	font-size: 12px;
+	padding: 2px;
+	margin:0 5px;
+}
+
+span.Remote{
+	background-color: #5882FA;
+	color: #fff;
+	font-size: 12px;
+	padding: 2px;
+	margin:0 5px;
+}
+
+span.RPA{
+	background-color: #800080;
+	color: #fff;
+	font-size: 12px;
+	padding: 2px;
+	margin:0 5px;
+}
+
   .allNoDisplay tr:not(.colTitle) {display: none;}
   .WA        tr[WA]         {display: table-row;}/*WinActorハンズオン系*/
   .UI    tr[UI]     {display: table-row;}/*UiPathハンズオン系*/
@@ -1229,7 +1253,7 @@ span.blinking1{
   .Remote    tr[Remote]     {display: table-row;}/*リモートワークセミナー*/
   .IT    tr[IT]     {display: table-row;}/*IT全般*/
   .MS365    tr[MS365]     {display: table-row;}/*Microsoft 365*/
-
+  .RPA    tr[RPA]     {display: table-row;}/*Microsoft 365*/
 
 
 /* --------------------------------------------------
