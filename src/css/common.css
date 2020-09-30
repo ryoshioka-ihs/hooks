@@ -3368,7 +3368,7 @@ footer .tbWrap {
 }
 	footer .tbWrap dl {
 		display: table-cell;
-		padding: 0 40px 0 20px;
+		padding: 0 30px 0 20px;
 		border-right: 1px solid #A9BFD9;
 		vertical-align: top;
 	}
