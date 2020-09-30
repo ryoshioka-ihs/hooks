@@ -2892,7 +2892,7 @@ position: relative;
 		font-weight: bold;
 		font-family:"Myriad Pro", "メイリオ", "Meiryo UI", "ＭＳ Ｐゴシック", sans-serif;
 	}
-	#scWrap li:first-child:after {
+	#scWrap .language li:first-child:after {
 		content: "/";
 		margin: 0 5px;
 	}
@@ -2902,6 +2902,12 @@ position: relative;
 		#scWrap li a:hover {
 			text-decoration: underline;
 		}
+#scWrap .facebook img{
+	margin: -15px 5px 0px 50px;
+}
+#scWrap .youtube img{
+	margin-top: -15px;
+}
 
 /* スマホで表示する検索ボタン*/
 #scBtn {
@@ -2912,6 +2918,7 @@ position: relative;
 .siteSearchForm {
 	background: #F2F2F0;
 	position: relative;
+	margin: -5px 0 0px 0;
 }
 	.siteSearchBox {
 		background: #F2F2F0;
