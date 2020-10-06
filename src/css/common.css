@@ -2902,6 +2902,12 @@ position: relative;
 		#scWrap li a:hover {
 			text-decoration: underline;
 		}
+#scWrap .facebook img{
+	margin: -15px 5px 0px 50px;
+}
+#scWrap .youtube img{
+	margin-top: -15px;
+}
 
 /* スマホで表示する検索ボタン*/
 #scBtn {
@@ -3368,7 +3374,7 @@ footer .tbWrap {
 }
 	footer .tbWrap dl {
 		display: table-cell;
-		padding: 0 40px 0 20px;
+		padding: 0 30px 0 20px;
 		border-right: 1px solid #A9BFD9;
 		vertical-align: top;
 	}
