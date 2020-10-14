@@ -7,14 +7,14 @@ category:   ""
 title:      "Microsoft365関連のセミナーアンケート"
 ---
 <script type="text/javascript" src="/js/seminar.js"></script>
-<div id='crmWebToEntityForm' style='width:600px;margin:auto;'>
+<div id='crmWebToEntityForm'>
    <META HTTP-EQUIV ='content-type' CONTENT='text/html;charset=SHIFT-JIS'>
    <form action='https://crm.zoho.com/crm/WebForm'  name=WebForm2591799000018451159 method='POST' onSubmit='javascript:document.charset="UTF-8"; return checkMandatory2591799000018451159()' accept-charset='UTF-8'>
  <input type='text' style='display:none;' name='xnQsjsdp' value='316e26c9b0a075a403259d161e079bc597c321456c0f197bcbf531ae844af7c7'></input> 
  <input type='hidden' name='zc_gad' id='zc_gad' value=''></input> 
  <input type='text' style='display:none;' name='xmIwtLD' value='3274827e535aa235eb0e4d31761d06ef2bfe62649d0095fbc23d871c5b9c0d03'></input> 
  <input type='text'  style='display:none;' name='actionType' value='Q3VzdG9tTW9kdWxlNA=='></input>
- <input type='text' style='display:none;' name='returnURL' value='https://www.iimhs.co.jp/seminar_enquete/thanks.html' > </input><br></br>
+ <input type='text' style='display:none;' name='returnURL' value='https://www.iimhs.co.jp/seminar_enquete/MS365/thanks.html' > </input><br></br>
    <!-- Do not remove this code. -->
   <style>
     table{
@@ -78,6 +78,69 @@ title:      "Microsoft365関連のセミナーアンケート"
       <td class="question">【<span style="color:red;">必須</span>】メールアドレス</td>
       <td><input type='text' maxlength='100' name='Email' class="answer" required /></td>
     </tr>
+
+    <tr>
+          <td class="question">【<span style="color:red;">必須</span>】参加されたセミナーコース</td>
+          <td>
+            <select id="course" name='COBJ4CF152' onchange="showdate()" required class="answer">
+        <option class="view_timer" value="日付を選択してください">日付を選択してください</option> 
+                  <option value="【MS365】PowerAutomateを使用した申請業務 (第2回目)"selected>【MS365】PowerAutomateを使用した申請業務 (第2回目)</option>
+
+                  <option value="【MS365】PowerShellを利用したユーザアカウント管理方法 (第2回目)"selected>【MS365】PowerShellを利用したユーザアカウント管理方法 (第2回目)</option>
+
+                  <option value="【MS365】PowerAutomateを使用した申請業務 (第3回目)"selected>【MS365】PowerAutomateを使用した申請業務 (第3回目)</option>
+
+                  <option value="【MS365】PowerShellを利用したユーザアカウント管理方法 (第3回目)"selected>【MS365】PowerShellを利用したユーザアカウント管理方法 (第3回目)</option>
+
+                  <option value="【MS365】Azureでのチャットボット機能の構築（第2回目）"selected>【MS365】Azureでのチャットボット機能の構築（第2回目）</option>
+                  
+                  <option value="【MS365】PowerAutomateを使用した申請業務 (第4回目)"selected>【MS365】PowerAutomateを使用した申請業務 (第4回目)</option>
+
+                  <option value="【MS365】Azureでのチャットボット機能の構築（第3回目）"selected>【MS365】Azureでのチャットボット機能の構築（第3回目）</option>
+                  <!--option value="【MS365】PowerAutomateを使用した日報作成 (条件分岐の設定方法）"selected>【MS365】PowerAutomateを使用した日報作成 (条件分岐の設定方法）</option-->
+                  
+                  <option value="【MS365】PowerShellを利用したユーザアカウント管理方法 (第4回目)"selected>【MS365】PowerShellを利用したユーザアカウント管理方法 (第4回目)</option>
+                  <option value="" disabled selected>コースを選択してください</option>                                                         
+                  </select>
+
+                  <select name="COBJ4CF153" id="seminardate" required>
+                  <option value="" disabled selected>日付を選択してください</option>
+                    
+                  <!--Power Automate3-->
+                  <option value="2020年9月28日" class="view_timer" data-start-date="2020/9/28 12:00" data-end-date="2020/10/6 0:00" disabled="">2020年9月28日（月）</option>
+                  <!--Power Automate3-->
+
+                  <!--PowerShell2-->
+                  <option value="2020年9月30日" class="view_timer" data-start-date="2020/9/30 14:00" data-end-date="2020/10/8 0:00" disabled="">2020年9月30日（水）</option>
+                  <!--PowerShell2-->
+
+                  <!--Power Automate3-->
+                  <option value="2020年10月9日" class="view_timer" data-start-date="2020/10/9 14:00" data-end-date="2020/10/17 0:00" disabled="">2020年10月9日（金）</option>
+                  <!--Power Automate3-->
+
+                  <!--PowerShell2-->
+                  <option value="2020年10月16日" class="view_timer" data-start-date="2020/10/16 14:00" data-end-date="2020/10/24 0:00" disabled="">2020年10月16日（金）</option>
+                  <!--PowerShell2-->
+
+                  <!--Azure-->
+                  <option value="2020年10月23日" class="view_timer" data-start-date="2020/10/23 14:00" data-end-date="2020/10/31 0:00" disabled="">2020年10月23日（金）</option>
+                  <!--Azure-->
+
+                  <!--Power Automate3-->
+                  <option value="2020年11月6日" class="view_timer" data-start-date="2020/11/6 14:00" data-end-date="2020/11/14 14:00" disabled="">2020年11月6日（金）</option>
+                  <!--Power Automate3-->
+
+                  <!--Azure-->
+                  <option value="2020年11月13日" class="view_timer" data-start-date="2020/11/13 14:00" data-end-date="2020/11/21 0:00" disabled="">2020年11月13日（金）</option>
+                   <!--Azure-->
+
+                  <!--PowerShell2-->
+                  <option value="2020年11月19日" class="view_timer" data-start-date="2020/11/19 14:00" data-end-date="2020/11/27 0:00" disabled="">2020年11月19日（木）</option>
+                  <!--PowerShell2-->
+
+                  </select>
+              </td>
+            </tr>
     
     <tr>
       <td colspan='2' class="title"><strong>セミナーに関してご意見・ご感想を聞かせください</strong></td>
@@ -160,8 +223,8 @@ title:      "Microsoft365関連のセミナーアンケート"
     </tr>
     <tr>
       <td  style='nowrap:nowrap;text-align:left;font-size:12px;font-family:Arial;width:200px;'>
-      	<a href="/privacy/seminar.html" target="_blank">個人情報保護ポリシー</a>について同意する<span style='color:red;'>*</span> </td>
-      <td style='width:250px;' ><input type='checkbox'  name='COBJ4CF101' /></td></tr>
+        <a href="/privacy/seminar.html" target="_blank">個人情報保護ポリシー</a>について同意する<span style='color:red;'>*</span> </td>
+      <td style='width:250px;' ><input type='checkbox'  name='COBJ4CF132' /></td></tr>
 
   <tr><td colspan='2' style='text-align:center; padding-top:15px;font-size:12px;'>
     <input style='font-size:12px;color:black' id='formsubmit' type='submit' value='送信' ></input> <input type='reset' name='reset' style='font-size:12px;color:black' value='リセット' ></input> </td></tr></table>

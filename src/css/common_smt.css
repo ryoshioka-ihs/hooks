@@ -1207,6 +1207,12 @@ input,textarea{
 	width: auto;
 	padding-right: 12px;
 }
+#scWrap .facebook img{
+	margin: -7px 5px 0px 50px;
+}
+#scWrap .youtube img{
+	margin-top: -7px;
+}
 	#scBtn {
 		width: 100%;
 		height: 30px;

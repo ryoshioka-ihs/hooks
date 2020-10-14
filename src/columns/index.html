@@ -1,9 +1,9 @@
 ---
-layout:			"columns-archive"
+layout:			"columns"
 global_menu:	"columns"
 description:	"従来よりIIMヒューマンソリューションでは、既存のお客様やセミナーにご出席いただいた方々へ、月に1度、「お役立ちメール」を配信しています。そのお役立ちメールの中で人気が高いコラムをご紹介させていただきます。"
 keywords:		"コラム,リモート運用,インフラ運用,インフラ構築,セキュリティ"
-title:			"コラム一覧"
+title:			"お役立ちコラム"
 noindex:		true
 paginate:
   collection:	posts
@@ -14,3 +14,59 @@ paginate:
   categories:
     - "columns"
 ---
+<article>
+<h1>{{ page.title }}</h1>
+<p>従来よりIIMヒューマンソリューションでは、既存のお客様やセミナーにご出席いただいた方々へ、月に1度、「お役立ちメール」を配信しています。そのお役立ちメールの中で人気が高いコラムを以下にまとめました。ぜひご覧ください。<br>
+IHSが月に一度配信しているお役立ちメールには、弊社新サービス、セミナー情報、多くの企業で運用・管理・シナリオを作成したりと多くのスキルを持ったスタッフ情報を記載しています。メルマガ配信をご希望の方は、<a href="mailto:web@iimhs.co.jp?subject=メルマガ配信希望&amp;body=会社名：%0D%0A部署名：%0D%0Aお名前：%0D%0Aご連絡先：">web@iimhs.co.jp</a> まで、「メルマガ配信希望」というタイトルで、御社名、部署名、お名前、ご連絡先（メールアドレス）をご記載いただき、メールをお送りください。</p>
+
+<script type="text/javascript" src="/js/seminar.js"></script>
+<div class="smtSent">
+  	<section>
+        <div class="msgWrap session">
+			<table id="allSeminarTable" class="baseSeminar">
+			<thead>
+			  <tr class="colTitle">
+			    ◆カテゴリから探す：&nbsp;&nbsp;			    
+			        <select id="allSeminarSelect" onChange="goFilter()">
+			          <option value="all">全てのコラム</option>
+              　      <option value="MS365">Microsoft 365</option>   
+             	　    <option value="Remote">リモートワーク</option> 
+             	      <option value="RPA">RPA</option>        
+			        </select>
+			  </tr>
+			</thead>
+			 <br>
+　　　       <!--th colspan="4"><最新のコラムは一番上に乗せる></th-->
+
+              <tr MS365>
+                  <td align="left"><a href="/columns/2020/10/case007.html" target="_blank">2020/10&nbsp;&nbsp;<span class="MS365">&nbsp;Microsoft365&nbsp;</span>Power Automate を使った作業の無人化</a></td>
+              </tr>
+
+              <tr MS365>
+                  <td align="left"><a href="/columns/2020/09/case006.html" target="_blank">2020/09&nbsp;&nbsp;<span class="MS365">&nbsp;Microsoft365&nbsp;</span>Microsoft 365で実現する日報入力の省力化と確認業務の効率化</a></td>
+              </tr>
+
+              <tr MS365>
+                  <td align="left"><a href="/columns/2020/08/case005.html" target="_blank">2020/08&nbsp;&nbsp;<span class="MS365">&nbsp;Microsoft365&nbsp;</span>SharepointとPowerautomateを使った在宅勤務のための申請業務の自動化</a></td>
+              </tr>
+
+              <tr MS365>
+                  <td align="left"><a href="/columns/2020/07/case004.html" target="_blank">2020/07&nbsp;&nbsp;<span class="MS365">&nbsp;Microsoft365&nbsp;</span>問い合わせ工数削減のためのチャットボット利用</a></td>
+              </tr>          
+
+              <tr RPA>
+                  <td align="left"><a href="/columns/2020/06/case003.html" target="_blank">2020/06&nbsp;&nbsp;<span class="RPA">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;RPA&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>リモートワークとRPA</a></td>
+              </tr>
+
+              <tr Remote>
+                  <td align="left"><a href="/columns/2020/05/case002.html" target="_blank">2020/05&nbsp;&nbsp;<span class="Remote">リモートワーク</span>リモートワークに最適なサービス</a></td>
+              </tr>
+
+              <tr Remote>
+                  <td align="left"><a href="/columns/2020/04/case001.html" target="_blank">2020/04&nbsp;&nbsp;<span class="Remote">リモートワーク</span>リモートワーク＆リモートサポート</a></td>
+              </tr>
+          </table>
+        </div>
+     </section>
+   </div>
+ </article>
