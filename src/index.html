@@ -61,19 +61,23 @@ title:			"IIMヒューマン・ソリューション"
 				<div class="textBox">
 					<span class="clear-btn4">NTTデータ WinDirector技術認定取得</span><br>
 					<br><br>
-					<h2><span class="clear-btn5">WinActor管理・統制ロボ</span><span style="color: blue;text-shadow: 0 0 12px #FFF,0 0 18px #FFF;">WinDirector&reg;</span></h2><br>
-						<span class="clear-btn6">RPAの普及・利用が進む中、ロボットの管理、統制の重要性がますます高まっています。</span><br>
-						<span class="clear-btn7">弊社ではWinDirectorの環境構築やサポート対応など幅広い対応が可能です。</span><br>
+					<!--span class="clear-btn5">WinActor管理・統制ロボ</span><span style="color: blue;text-shadow: 0 0 12px #FFF,0 0 18px #FFF;">WinDirector&reg;</span><br-->
+						<span class="clear-btn6" style="text-shadow:3px 3px 2px #0000ff;">RPAの普及・利用が進み、自動化する範囲や業務を拡大していく環境下、<br>
+                          ロボット管理・統制をすることで業務の効率化がさらにアップします。</span><br>
+						<span class="clear-btn7" style="text-shadow:3px 3px 2px #0000ff;">IHSは、WinActor&reg;管理・統制ロボWinDirector&reg;について、<br>
+                         環境構築・サポート体制など幅広い対応が可能です。</span><br>
 					<br><span class="shiny-btn"><a href="/services/Windirector/" onclick="ga('send','event','keyv','services','Windirector,50');" target="_blank">詳細はこちら</a></span>
 				</div>
 			</div>
 
 			<div class="key5">
 				<div class="textBox">
-					<h2 class="whiteBox"><span style="color: navy;">NEW TOPICS</span><br>
-						<span class="title">Microsoft 365とPower Platformでアフターコロナの業務デジタル化を実現する​<br>
-							<span class="subtitle">～IHSがテレワークや業務自動化、顧客関係強化などをフルサポート～</span></h2>
-					<span class="blueBtn_btn"><a href="/services/MS365/" onclick="ga('send','event','keyv','seminar','MS365,50');" target="_blank">詳細はこちら</a></span>
+					
+					<span class="clear-btn6" style="font-size: 50px;color: navy;text-shadow:3px 3px 2px #FFF">Microsoft 365で業務効率アップ！</span>
+					  <span class="clear-btn6" style="font-size: 35px;color: navy;text-shadow:3px 3px 2px #FFF">Microsoft365とPower Platformで業務のデジタル化を実現<br>
+							<span class="clear-btn7" style="font-size: 28px;color: navy;text-shadow:3px 3px 2px #FFF">IHSがリモートワークや業務の自動化、顧客関係強化をフルサポート</span></span>
+					  <span class="shiny-btn"><a href="/services/MS365/" onclick="ga('send','event','keyv','seminar','MS365,50');" target="_blank">詳細はこちら</a></span>
+					</span>	
 				</div>
 			</div>
 
@@ -136,9 +140,9 @@ title:			"IIMヒューマン・ソリューション"
 
 			<div class="key2">
 				<div class="textBox">
-					<h2>一人一人が輝いて、<span>HAPPY LIFE を実現させる</span></h2>
-
-				<p>やる気をチャンスに変えることができる会社</p>
+					<span class="clear-btn6" style="font-size: 32px;color: navy;">IHS採用情報</span>
+					<span class="clear-btn3">ひとりひとりが輝いてHappy Lifeを実現させる</span>
+                      <span class="clear-btn7">やる気をチャンスに変えることができる会社</span>
 				<!-- 渡辺ここから -->
 			<!-- </div>
 			<div>
@@ -196,7 +200,7 @@ title:			"IIMヒューマン・ソリューション"
 			<div class="key3">
 				<div class="textBox">
 					<h2>最新導入事例</h2>
-					<p>IIMヒューマン・ソリューションがご提供するサービスの最新導入事例をご紹介します。</p>
+					<p>IHSが提供している製品・サービスの導入事例</p>
 
 					<ul>
 										{% for post in site.categories["cases"] limit:2 %}
@@ -206,14 +210,14 @@ title:			"IIMヒューマン・ソリューション"
 												{% else %}
 													<a href="{{ post.url }}" target="_self">
 												{% endif %}
-													<p class="case">CASE<span>{{ forloop.index }}</span></p>
+													<p class="case">最新事例<span>{{ forloop.index }}</span></p>
 													<p>{{ post.title }}</p>
 													<p class="text">{{ post.description | slice: 0, 43 }}...</p>
 												</a>
 											</li>
 										{% endfor %}
 					</ul><br>
-					<p class="blueBtn"><a href="/cases/" onclick="ga('send','event','keyv','case','case,50');">導入事例一覧をみる</a></p>
+					 <span class="shiny-btn"><a href="/cases/" onclick="ga('send','event','keyv','case','case,50');">導入事例一覧をみる</a></span>
 				</div>
 			</div>
 		</div>
@@ -323,7 +327,7 @@ title:			"IIMヒューマン・ソリューション"
 			</div>
 
 
-			<p class="blueBtn"><a href="/services/">サービス・製品一覧</a></p>
+		 <p class="blueBtn"><a href="/services/">サービス・製品一覧</a></p>
 		</div>
 	</section><!--/#sv-->
 
