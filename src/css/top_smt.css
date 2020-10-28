@@ -821,7 +821,7 @@ footer #pageTop {
 	width: 100%;
 	padding: 2px;
 	margin:0 5px 0;
-	font-size: 10px !important;
+	font-size: 15px !important;
 }
 
 .clear-btn4{
@@ -842,14 +842,14 @@ footer #pageTop {
 	width: 100%;
 	padding: 2px;
 	margin:0 5px 0;
-	font-size: 14px !important;
+	font-size: 10px !important;
 }
 
 .clear-btn7{
 	width: 100%;
 	padding: 2px;
 	margin:0 5px 0;
-	font-size: 12px;
+	font-size: 8px !important;
 }
 
 .clear-btn8{

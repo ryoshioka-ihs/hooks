@@ -934,16 +934,16 @@ a.rss:hover {
 
 /*ボタン並列表示*/
 .oraBtn_Parallel{
-  margin: 50px 20px 0 20px;
+  margin: 10px 5px 0 5px;
   display: inline-block;
-	width: 360px;
-	height: 60px;
-	line-height: 60px;
+	width: 250px;
+	height: 50px;
+	line-height: 50px;
 	background: url("../image/common/btn_arrow.png") 92% center no-repeat;
 	background-size: 10px auto;
 	color: #FFF;
 	font-weight: bold;
-	font-size: 14px;
+	font-size: 18px;
 	transition: 0.3s;
 	text-align: center;
 	cursor: pointer;
