@@ -5,13 +5,11 @@
    - It is important that you test the modified form before going live.-->
 <div id='crmWebToEntityForm' style='width:600px;margin:auto;'>
    <META HTTP-EQUIV ='content-type' CONTENT='text/html;charset=SHIFT-JIS'>
-   <form action='https://crmsandbox.zoho.com/crm/WebToContactForm'  name=WebToContacts2033041000000212434 method='POST' onSubmit='javascript:document.charset="UTF-8"; return checkMandatory2033041000000212434()' accept-charset='UTF-8'>
-
-	 <!-- Do not remove this code. -->
-	<input type='text' style='display:none;' name='xnQsjsdp' value='5b07d521b46845ce27cb2e86d4f463b4813f606ac76f87e50de266fe2d08fe35'/>
-	<input type='hidden' name='zc_gad' id='zc_gad' value=''/>
-	<input type='text' style='display:none;' name='xmIwtLD' value='e85736963f89e2a7592c4a40c401063ac927b43b005d71753e68c754ad091fbc'/>
-	<input type='text' style='display:none;'  name='actionType' value='Q29udGFjdHM='/>
+   <form action='https://crm.zoho.com/crm/WebToLeadForm' name=WebToLeads2591799000019942044 method='POST' onSubmit='javascript:document.charset="UTF-8"; return checkMandatory2591799000019942044()' accept-charset='UTF-8'>
+ <input type='text' style='display:none;' name='xnQsjsdp' value='316e26c9b0a075a403259d161e079bc597c321456c0f197bcbf531ae844af7c7'></input> 
+ <input type='hidden' name='zc_gad' id='zc_gad' value=''></input> 
+ <input type='text' style='display:none;' name='xmIwtLD' value='3274827e535aa235eb0e4d31761d06ef57ebe59c13267046c0c060bb5a795c8c'></input> 
+ <input type='text'  style='display:none;' name='actionType' value='TGVhZHM='></input>
 
 	<input type='text' style='display:none;' name='returnURL' value='https	://ihs-corporate-site-stage.azurewebsites.net/form/MS365/documentrequest_form/thanks.html' /> 
 	 <!-- Do not remove this code. -->
@@ -39,9 +37,7 @@
 
 	<tr><td  style='nowrap:nowrap;text-align:left;font-size:12px;font-family:Arial;width:200px;'>メールアドレス</td><td style='width:250px;' ><input type='text' style='width:250px;'  maxlength='100' name='Email' /></td></tr>
 
-	<tr><td  style='nowrap:nowrap;text-align:left;font-size:12px;font-family:Arial;width:200px;'>HSメルマガ</td><td style='width:250px;' ><input type='checkbox'  name='CONTACTCF101' /></td></tr>
-
-	<tr><td  style='nowrap:nowrap;text-align:left;font-size:12px;font-family:Arial;width:200px;'>xoBlos資料DL </td><td style='width:250px;' ><input type='checkbox'  name='CONTACTCF135' /></td></tr>
+	<tr><td  style='nowrap:nowrap;text-align:left;font-size:12px;font-family:Arial;width:200px;'>MS365資料DL</td><td style='width:250px;' ><input type='checkbox'  name='CONTACTCF135' /></td></tr>
 
 	<tr><td colspan='2' style='text-align:center; padding-top:15px;font-size:12px;'>
 		<input style='font-size:12px;color:black'  type='submit' value='送信' />
@@ -55,9 +51,9 @@
 		var name='';
 		var email='';
 
- 	  function checkMandatory2033041000000212434() {
+ 	  function checkMandatory2591799000019942044(){
 		for(i=0;i<mndFileds.length;i++) {
-		  var fieldObj=document.forms['WebToContacts2033041000000212434'][mndFileds[i]];
+		  var fieldObj=document.forms['WebToLeads2591799000019942044'][mndFileds[i]];
 		  if(fieldObj) {
 			if (((fieldObj.value).replace(/^\s+|\s+$/g, '')).length==0) {
 			 if(fieldObj.type =='file')
