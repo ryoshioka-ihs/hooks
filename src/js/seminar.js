@@ -222,10 +222,10 @@ var seminarDate = document.getElementById( "seminardate") ;//id="seminardate"を
 	   seminarDate.options[1].disabled = false;
 	 } else if ( courseelement.value == "【MS365】PowerAutomateを使用した申請業務 (第4回目)") {
 	   seminarDate.options[1].disabled = false;
-	 } else if */( courseelement.value == "【MS365】Azureでのチャットボット機能の構築（第3回目）") {
+	 } else if ( courseelement.value == "【MS365】Azureでのチャットボット機能の構築（第3回目）") {
 	   seminarDate.options[1].disabled = false;
-	 } else if ( courseelement.value == "【MS365】PowerShellを利用したユーザアカウント管理方法 (第4回目)") {
-	   seminarDate.options[2].disabled = false;
+	 } else if */( courseelement.value == "【MS365】PowerShellを利用したユーザアカウント管理方法 (第4回目)") {
+	   seminarDate.options[1].disabled = false;
 	 } else if ( courseelement.value = "") {
 	   seminarDate.disabled = true;
 	}
