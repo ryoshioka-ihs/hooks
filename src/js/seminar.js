@@ -226,7 +226,25 @@ var seminarDate = document.getElementById( "seminardate") ;//id="seminardate"を
 	   seminarDate.options[1].disabled = false;
 	 } else if */( courseelement.value == "【MS365】PowerShellを利用したユーザアカウント管理方法 (第4回目)") {
 	   seminarDate.options[1].disabled = false;
-	 } else if ( courseelement.value = "") {
+
+	} else if  ( courseelement.value == "【MS365】Azureでのチャットボット機能の構築（第4回目）") {
+	   seminarDate.options[2].disabled = false;
+    
+    } else if( courseelement.value == "【MS365】PowerAutomateを使用した申請業務 (第5回目)") {
+	   seminarDate.options[3].disabled = false;
+
+    } else if ( courseelement.value == "【MS365】PowerShellを利用したユーザアカウント管理方法 (第5回目)") {
+	   seminarDate.options[4].disabled = false;
+
+    } else if  ( courseelement.value == "【MS365】Azureでのチャットボット機能の構築（第5回目）") {
+	   seminarDate.options[5].disabled = false;
+
+    } else if( courseelement.value == "【MS365】PowerAutomateを使用した申請業務 (第6回目)") {
+	   seminarDate.options[6].disabled = false;
+    } else if ( courseelement.value == "【MS365】PowerShellを利用したユーザアカウント管理方法 (第6回目)") {
+	   seminarDate.options[7].disabled = false;
+
+	} else if ( courseelement.value = "") {
 	   seminarDate.disabled = true;
 	}
 }
