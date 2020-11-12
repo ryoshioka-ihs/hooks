@@ -169,6 +169,11 @@ figure.right{
 	padding-bottom: 20px;
 	line-height: 22px;
 }
+@media screen and (min-width: 1443px){
+#appeal .textArea .ma {
+    margin-bottom: 150px;
+}
+}
 
 /* 産休・育休取得者の声 */
 
