@@ -26,7 +26,8 @@ $(document).ready(function() {
     if (startDate <= nowDate && (!endDate || nowDate <= endDate)) {
       $(this).show();
     } else {
-      $(this).hide();
+      $(this).wrap("<span class='wrap'>");
+      /*$(this).hide();*/
     }
   });
 });
