@@ -195,39 +195,28 @@ function goFilter(){
 // 引数  ：
 // 戻り値：
 //======================================================================================================
-function showdate () {
-var courseelement = document.getElementById( "course" ) ;//id="course"の値を取得
+function showdate (e) {
+	// 親セレクタで選択したカテゴリ番号
+    const selectCategory = e.options[e.selectedIndex].dataset.category;
+    // 子セレクタのoptionリスト
+    const childs = document.getElementById('seminardate').children;
+    for(let i in childs) {
+        const child = childs[i];
+        // 子セレクタのoptionにdata-categoryが設定されている
+        if(child.dataset !== undefined && child.dataset.category !== undefined) {
+            // 親で選択したcategoryと異なればdisabledをtrueに、同じならfalseに変更
+            child.disabled = child.dataset.category !== selectCategory ? true : false;
+        }
+    }
+}
+/*var courseelement = document.getElementById( "course" ) ;//id="course"の値を取得
 var seminarDate = document.getElementById( "seminardate") ;//id="seminardate"を取得
 
   for (var i = 0; i < seminarDate.length; i++){
        seminarDate.options[i].disabled = true;
   }
 	// disabledに代入
-     if /*( courseelement.value == "【MS365】PowerAutomateを使用した申請業務 (第1回目)") {
-	   seminarDate.options[1].disabled = true;//trueで日程を非表示でリセットする;
-     } else if ( courseelement.value == "【MS365】PowerShellを利用したユーザアカウント管理方法 (第1回目)") {
-	   seminarDate.options[2].disabled = false;
-     
-     /*} else if ( courseelement.value == "【MS365】PowerAutomateを使用した日報作成 (条件分岐の設定方法）") {
-	   seminarDate.options[1].disabled = false;*/
-	 /*} else if ( courseelement.value == "【MS365】PowerAutomateを使用した申請業務 (第2回目)") {
-	   seminarDate.options[1].disabled = false;
-	 } else if ( courseelement.value == "【MS365】PowerShellを利用したユーザアカウント管理方法 (第2回目)") {
-	   seminarDate.options[2].disabled = false;
-	 } else if ( courseelement.value == "【MS365】PowerAutomateを使用した申請業務 (第3回目)") {
-	   seminarDate.options[1].disabled = false;
-	 /*} else if( courseelement.value == "【MS365】PowerShellを利用したユーザアカウント管理方法 (第3回目)") {
-	   seminarDate.options[1].disabled = false;
-	 } else if  ( courseelement.value == "【MS365】Azureでのチャットボット機能の構築（第2回目）") {
-	   seminarDate.options[1].disabled = false;
-	 } else if ( courseelement.value == "【MS365】PowerAutomateを使用した申請業務 (第4回目)") {
-	   seminarDate.options[1].disabled = false;
-	 } else if ( courseelement.value == "【MS365】Azureでのチャットボット機能の構築（第3回目）") {
-	   seminarDate.options[1].disabled = false;
-	 } else if ( courseelement.value == "【MS365】PowerShellを利用したユーザアカウント管理方法 (第4回目)") {
-	   seminarDate.options[1].disabled = false;
-
-	} else if  */( courseelement.value == "【MS365】Azureでのチャットボット機能の構築（第4回目）") {
+     if ( courseelement.value == "【MS365】Azureでのチャットボット機能の構築（第4回目）") {
 	   seminarDate.options[1].disabled = false;
     
     } else if( courseelement.value == "【MS365】PowerAutomateを使用した申請業務 (第5回目)") {
@@ -247,5 +236,5 @@ var seminarDate = document.getElementById( "seminardate") ;//id="seminardate"を
 	} else if ( courseelement.value = "") {
 	   seminarDate.disabled = true;
 	}
-}
+}*/
 
