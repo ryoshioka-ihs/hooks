@@ -3752,3 +3752,44 @@ footer .footBot {
 		display: block;
 	}
 	
+/* --------------------------------------------------------
+	MS365申し込みページ
+-------------------------------------------------------- */
+#seminardate option:disabled{
+  display:none;
+}
+#seminardate option{
+  display:block;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+.table-custom {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 100%;
+    font-weight: 300;
+    text-align: left;
+    background: #fff;
+}
+.table-custom th:first-child, .table-custom td:first-child {
+    padding: 15px 30px 15px 20px;
+}
+.table-custom th, .table-custom td {
+    padding: 15px 20px 15px 15px;
+    font-weight: 300;
+    letter-spacing: 0.02em;
+    color: #1f2323;
+    background: #fff;
+    border-bottom: 1px solid #ededed;
+}
+.table-color-header tr:nth-child(even) td {
+    background-color: #f6f6f6;
+}
+.table-color-header th {
+    border: none;
+    color: #fff;
+    background-color: #003E8D;
+}
+

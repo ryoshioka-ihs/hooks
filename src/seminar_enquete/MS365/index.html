@@ -80,62 +80,52 @@ title:      "Microsoft365関連のセミナーアンケート"
     </tr>
 
     <tr>
-          <td class="question">【<span style="color:red;">必須</span>】参加されたセミナーコース</td>
-          <td>
-            <select id="course" name='COBJ4CF152' required class="answer">
-        <option class="view_timer" value="日付を選択してください">日付を選択してください</option> 
-                  <!--option value="【MS365】PowerAutomateを使用した申請業務 (第2回目)"selected>【MS365】PowerAutomateを使用した申請業務 (第2回目)</option>
+      <td class="question">【<span style="color:red;">必須</span>】参加されたセミナーコース</td>
+      <td>
+        <select id="course" name='COBJ4CF152'  required class="answer" onchange="showdate(this)">
+              
+            <option value="【MS365】Azureでのチャットボット機能の構築" data-category="Az" selected>【MS365】Azureでのチャットボット機能の構築</option>
 
-                  <option value="【MS365】PowerShellを利用したユーザアカウント管理方法 (第2回目)"selected>【MS365】PowerShellを利用したユーザアカウント管理方法 (第2回目)</option>
+            <option value="【MS365】PowerAutomateを使用した申請業務" data-category="PA" selected>【MS365】PowerAutomateを使用した申請業務</option>
 
-                  <option value="【MS365】PowerShellを利用したユーザアカウント管理方法 (第3回目)"selected>【MS365】PowerShellを利用したユーザアカウント管理方法 (第3回目)</option>
-                  
-                  <option value="【MS365】PowerAutomateを使用した申請業務 (第4回目)"selected>【MS365】PowerAutomateを使用した申請業務 (第4回目)</option-->
+            <option value="【MS365】PowerShellを利用したユーザアカウント管理方法" data-category="PS" selected>【MS365】PowerShellを利用したユーザアカウント管理方法</option>
+            
+         
+            <option value="" disabled selected>コースを選択してください</option>                                                         
+            </select>
 
-                  <option value="【MS365】PowerAutomateを使用した申請業務 (第4回目)" class="view_timer" data-start-date="2020/11/6 14:00" data-end-date="2020/11/14 14:00">【MS365】PowerAutomateを使用した申請業務 (第4回目)</option>
+            <select name="COBJ4CF153" id="seminardate" class="answer" required >
+            <option value="" disabled selected>日付を選択してください</option>
 
-                  <option value="【MS365】PowerAutomateを使用した申請業務 (第5回目)" class="view_timer" data-start-date="2020/12/18 14:00" data-end-date="2020/12/26 0:00">【MS365】PowerAutomateを使用した申請業務 (第5回目)</option>
+            <!--Azure-->
+            <option value="2020年12月11日" class="view_timer" data-start-date="2020/12/11 14:00" data-end-date="2020/12/19 0:00" data-category="Az">2020年12月11日(金)</option>
 
-                  <option value="【MS365】PowerAutomateを使用した申請業務 (第6回目)" class="view_timer" data-start-date="2021/1/15 14:00" data-end-date="2021/1/23 0:00">【MS365】PowerAutomateを使用した申請業務 (第6回目)</option>
+            <option value="2021年1月13日" class="view_timer" data-start-date="2021/1/13 14:00" data-end-date="2021/1/21 0:00" data-category="Az">2021年1月13日(水)</option>
 
-                  <option value="【MS365】Azureでのチャットボット機能の構築（第3回目）" class="view_timer" data-start-date="2020/11/13 14:00" data-end-date="2020/11/21 0:00">【MS365】Azureでのチャットボット機能の構築（第3回目）</option>
+            <option value="2021年2月5日" class="view_timer" data-start-date="2021/2/5 14:00" data-end-date="2021/2/13 0:00" 
+             data-category="Az">2021年2月5日(金)</option>
+             <!--Azure-->
 
-                  <option value="【MS365】Azureでのチャットボット機能の構築（第4回目）" class="view_timer" data-start-date="2020/12/11 14:00" data-end-date="2020/12/19 0:00">【MS365】Azureでのチャットボット機能の構築（第4回目）</option>
+            <!--PowerAutomate-->
+            <option value="2020年12月18日" class="view_timer" data-start-date="2020/12/18 14:00" data-end-date="2020/12/26 0:00" data-category="PA">2020年12月18日(金)</option>
 
-                  <option value="【MS365】Azureでのチャットボット機能の構築（第5回目）" class="view_timer" data-start-date="2021/1/13 14:00" data-end-date="2021/1/21 0:00">【MS365】Azureでのチャットボット機能の構築（第5回目）</option>
+            <option value="2021年1月15日" class="view_timer" data-start-date="2021/1/15 14:00" data-end-date="2021/1/23 0:00" data-category="PA">2021年1月15日(金)</option>
 
-                  <option value="【MS365】PowerShellを利用したユーザアカウント管理方法 (第4回目)" class="view_timer" data-start-date="2020/11/19 14:00" data-end-date="2020/11/27 0:00">【MS365】PowerShellを利用したユーザアカウント管理方法 (第4回目)</option>
+            <option value="2021年2月8日" class="view_timer" data-start-date="2021/2/8 14:00" data-end-date="2021/2/16 0:00" 
+             data-category="PA">2021年2月8日(月)</option>
 
-                  <option value="【MS365】PowerShellを利用したユーザアカウント管理方法 (第5回目)" class="view_timer" data-start-date="2020/12/22 14:00" data-end-date="2020/12/30 0:00">【MS365】PowerShellを利用したユーザアカウント管理方法 (第5回目)</option>
+            <!--PowerAutomate-->
 
-                  <option value="【MS365】PowerShellを利用したユーザアカウント管理方法 (第6回目)" class="view_timer" data-start-date="2021/1/25 14:00" data-end-date="2021/2/2 0:00">【MS365】PowerShellを利用したユーザアカウント管理方法 (第6回目)</option>                 
-                  <option value="" disabled selected>コースを選択してください</option>                                                         
-                  </select>
+            <!--PowerShell-->
+            <option value="2020年12月22日" class="view_timer" data-start-date="2020/12/22 14:00" data-end-date="2020/12/30 0:00" data-category="PS">2020年12月22日(火)</option>
 
-                  <select name="COBJ4CF153" id="seminardate" required>
-                  <option value="" disabled selected>日付を選択してください</option>
-                
-                  <option value="2020年11月6日" class="view_timer" data-start-date="2020/11/6 14:00" data-end-date="2020/11/14 14:00" >2020年11月6日（金）</option>
-                           
-                  <option value="2020年11月13日" class="view_timer" data-start-date="2020/11/13 14:00" data-end-date="2020/11/21 0:00" >2020年11月13日（金）</option>
- 
-                  <option value="2020年11月19日" class="view_timer" data-start-date="2020/11/19 14:00" data-end-date="2020/11/27 0:00" >2020年11月19日（木）</option>
+            <option value="2021年1月25日" class="view_timer" data-start-date="2021/1/25 14:00" data-end-date="2021/2/2 0:00" data-category="PS">2021年1月25日(月)</option>
 
-                  <option value="2020年12月11日" class="view_timer" data-start-date="2020/12/11 14:00" data-end-date="2020/12/19 0:00" >2020年12月11日（金）</option>
-
-                  <option value="2020年12月18日" class="view_timer" data-start-date="2020/12/18 14:00" data-end-date="2020/12/26 0:00" >2020年12月18日（金）</option>
-
-                  <option value="2020年12月22日" class="view_timer" data-start-date="2020/12/22 14:00" data-end-date="2020/12/30 0:00" >2020年12月22日（火）</option>
-
-                  <option value="2021年1月13日" class="view_timer" data-start-date="2021/1/13 14:00" data-end-date="2021/1/21 0:00" >2021年1月13日（水）</option>
-
-                  <option value="2021年1月15日" class="view_timer" data-start-date="2021/1/15 14:00" data-end-date="2021/1/23 0:00" >2021年1月15日（金）</option>
-
-                  <option value="2021年1月25日" class="view_timer" data-start-date="2021/1/25 14:00" data-end-date="2021/2/2 0:00" >2021年1月25日（月）</option>
-
-                  </select>
-              </td>
-            </tr>
+            <option value="2021年2月26日" class="view_timer" data-start-date="2021/2/26 14:00" data-end-date="2021/3/6 0:00" data-category="PS">2021年2月26日(金)</option>
+            <!--PowerShell-->
+       </section>
+        </td>
+      </tr>
     
     <tr>
       <td colspan='2' class="title"><strong>セミナーに関してご意見・ご感想を聞かせください</strong></td>
