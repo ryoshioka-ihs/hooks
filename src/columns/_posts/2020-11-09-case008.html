@@ -1,0 +1,61 @@
+---
+layout:       column
+global_menu:  columns
+title:        "Microsoft 365 を利用した自動化の使いどころ"
+description:  "先月のコラムで Microsoft 365 や Power Automate を活用した、AzureVM の申請～作成までの定型業務の無人化についてお伝えしました。
+仕組みを簡単に作った次の段階についてお伝えしたいと思います。
+"
+keywords:     "Microsoft 365,Powerautomate,Forms,AzureVM,SharePoint, Power Platform"
+date:         2020-11-09 00:00:00 +0900
+categories:  
+tags:
+
+---
+
+<!-- コメント
+tagsは1語ずつ区切る! -->
+
+
+<section>
+ <h1>{{ page.title }}</h1>
+  
+ <div style="margin: 20px 15px 20px 0;">
+
+  <p>先月のコラムで Microsoft 365 や Power Automate を活用した、AzureVM の申請～作成までの定型業務の無人化についてお伝えしました。<br>
+仕組みを簡単に作った次の段階についてお伝えしたいと思います。
+</p>
+ 
+
+  <h3>類似定型業務への横展開</h3>
+
+  <p>先月のコラムと動画でご紹介したAzureVMの自動作成処理は大きく3つのステップで構成されています。</p>
+  <ul class="numList">
+   <li>Microsoft Forms よる申請</li>
+   <li>SharePoint リストへデータ保存</li>
+   <li>Power Automate 経由のAzureVMよる自動作成</li>
+  </ul><br>
+
+<p>この業務の流れがひとつできてしまえば「LinuxOS の仮想マシンが欲しい」という要望についても、3番のステップを変更すればよさそうです。
+今回の自動化ソリューションは、実はそれぞれのステップは独立して開発を行うため、まるでブロックを組み合わせるように必要なところを再利用して、例えば3番の自動作成する処理だけをカスタマイズすることが可能です。
+類似業務がある場合は非常に横展開しやすい仕組みとなっています。
+</p>
+
+  <h3>Microsoft 365 を使う理由</h3>
+
+<p>たくさんありますがシンプルな理由として「いつも使っているログインIDで利用できる」です。
+とくに普段からよく利用する業務であれば、別システムへのサインインは面倒なものです。
+自動化を行うような定型業務は、サッと入力して後はシステムに任せて自分は別な業務に移ったほうが生産性が高いです。そのためにはサインインを都度しなくてよい仕組みはとてもありがたいものです。
+もちろん専用ソリューションには専用としてのメリットもたくさんありますが導入のハードルと実現したい業務の重要度を考えて、必要なソリューションを選択してください。
+</p><br>
+
+<h3>まとめ</h3>
+
+<p>横展開のしやすさと、普段使っているMicrosoft 365 のIDを利用できる。というのはシステム選定時にとても大きな要因になります。
+すぐに実現できそうな業務はMicrosoft 365 を活用してスピーディに構築してみてはいかがでしょうか。</p><br>
+
+<p>これらMicrosoft 365 と Power Platform の仕組みを活用したAzureVM作成ソリューションを動画でご紹介しております。<br>
+動画にてご紹介した自動化ソリューションはテンプレートとして皆様へご提供しておりますので下記リンクをご参照ください。<br>
+<a href="https://www.iimhs.co.jp/form/MS365/documentrequest_form/index.html">https://www.iimhs.co.jp/form/MS365/documentrequest_form/index.html</a></p>
+
+</div>
+</section>
