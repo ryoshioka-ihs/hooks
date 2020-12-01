@@ -8580,6 +8580,17 @@ ul > .post-blog-tags {
   }
 }
 
+#ms365d {
+  color: #000;
+  display: flex;
+  padding-left: 20px;
+}
+@media screen and (max-width: 767px){
+  #ms365d {
+    display: block;
+  }
+}
+
 /**
 * Pricing Table, Box Style
 */
