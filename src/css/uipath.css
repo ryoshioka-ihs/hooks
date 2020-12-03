@@ -575,6 +575,45 @@ mark,
   color: #0404B4;
 }
 
+/* --------------------------------------------------
+  灰色太線ボックス
+-------------------------------------------------- */
+.grayBorBox {
+  border: 10px solid #F0F0F0;
+  padding: 18px 15px;
+  margin-bottom: 20px;
+  margin-right: 165px;
+  margin-left: 165px;
+  background-color: #F7F7F7;
+}
+  .grayBorBox h3 {
+    margin: 0 0 10px;
+    padding-left: 0;
+  }
+  .grayBorBox h3:before {
+    display: none;
+  }
+  .grayBorBox p + .link,
+  .grayBorBox p + .linkPC {
+    margin-top: 10px;
+  }
+@media screen and (max-width: 991px) {
+  .grayBorBox {
+    margin-right: 0px;
+    margin-left: 0px;
+  }
+}
+/* --------------------------------------------------
+  アイコンつきリンク
+-------------------------------------------------- */
+/* 左三角アイコン */
+.link {
+  font-weight: bold;
+  background: url("/image/common/link_arrow1.png") left 55% no-repeat;
+  background-size: 4px auto;
+  padding-left: 15px;
+}
+/*---------------------------------------------------*/
 /*
 *
 * Main layout

@@ -994,9 +994,9 @@ footer {
     padding: 5px 0;
     margin: 0;
     font-weight: bold;
-    font-size: 32px;
+    font-size: 55px;
     font-family: HiraKakuPro-W3, 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', sans-serif;
-    color:  #F39C12 ;
+    color:  #FFFFFF;
     text-shadow: 1px 1px 30px rgba(1, 251, 248, 0.3), -1px 1px 30px rgba(1, 251, 248, 0.3), 1px -1px 30px rgba(1, 251, 248, 0.3), -1px -1px 30px rgba(1, 251, 248, 0.3), 1px 1px 30px rgba(1, 251, 248, 0.3);
     text-align: center;
     text-decoration: none;
@@ -1006,7 +1006,7 @@ footer {
 .clear-btn4 {
     /*display: inline-block;*/
     position: absolute;
-    width: 33%;/*ボタンの幅*/
+    width: 40%;/*ボタンの幅*/
     padding: 5px 0;
     margin: 0;
     font-weight: bold;
@@ -1017,7 +1017,7 @@ footer {
     text-decoration: none;
     overflow: hidden;
     top: 8px;
-    right: 16px;
+    right: 5px;
     text-align: center;
     -webkit-animation: clear-btn4 1s ease-in-out infinite alternate;
     -moz-animation: clear-btn4 1s ease-in-out infinite alternate;
@@ -1052,7 +1052,7 @@ footer {
 
 .clear-btn6 {
     display: inline-block;
-    line-height: 1.2em;
+    line-height: 1.5em;
     position: relative;
     width: 100%;/*ボタンの幅*/
     padding: 10px 0;
@@ -1060,7 +1060,7 @@ footer {
     /*box-shadow: 0 3px 0 0 rgba(198, 39, 39, 1);/*影の色(rgbaの値を変更)
     border-radius: 5px;*/
     font-weight: bold;
-    font-size: 24.5px;
+    font-size: 30px;
     font-family: HiraKakuPro-W3, 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', sans-serif;
     color: #FFFFFF;
     /*text-shadow: 1px 1px 30px rgba(1, 251, 248, 0.3), -1px 1px 30px rgba(1, 251, 248, 0.3), 1px -1px 30px rgba(1, 251, 248, 0.3), -1px -1px 30px rgba(1, 251, 248, 0.3), 1px 1px 30px rgba(1, 251, 248, 0.3);*/
@@ -1071,7 +1071,7 @@ footer {
 
 .clear-btn7 {
     display: inline-block;
-    line-height: 1.2em;
+    line-height: 1.5em;
     position: relative;
     width: 100%;/*ボタンの幅*/
     padding: 10px 0;
@@ -1079,7 +1079,7 @@ footer {
     /*box-shadow: 0 3px 0 0 rgba(198, 39, 39, 1);/*影の色(rgbaの値を変更)
     border-radius: 5px;*/
     font-weight: bold;
-    font-size: 22.5px;
+    font-size: 26px;
     font-family: HiraKakuPro-W3, 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', sans-serif;
     color: #FFFFFF;
     /*text-shadow: 1px 1px 30px rgba(1, 251, 248, 0.3), -1px 1px 30px rgba(1, 251, 248, 0.3), 1px -1px 30px rgba(1, 251, 248, 0.3), -1px -1px 30px rgba(1, 251, 248, 0.3), 1px 1px 30px rgba(1, 251, 248, 0.3);*/
