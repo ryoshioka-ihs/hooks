@@ -3751,7 +3751,75 @@ footer .footBot {
 	.sentBox1.msg .imgArea figcaption .roma {
 		display: block;
 	}
-	
+/* --------------------------------------------------------
+	特別企画ページ
+-------------------------------------------------------- */
+#special {
+    margin-left: 20px;
+}
+#special .imgtext2 {
+    display: flex;
+}
+#special .imgtext2 .imgtext {
+	float: left;
+    margin-right: 10px;
+    width: 32%;
+    padding-bottom: 30px;
+}
+#special .imgtext img {
+	width: 150px;
+	float: left;
+}
+#special .imgtext p {
+    padding: 15% 0 0 5%; 
+    text-align: center;
+}
+#special dl {
+    background-color: #fafafa;
+    border: #F0F0F0 1px solid;
+    margin-bottom: 10px;
+    padding: 20px 20px;
+}
+#special dt {
+    width: 70px;
+    height: 100%;
+    /*float: left;*/
+    margin-right: 30px;
+}
+#special dt img {
+    padding-left: 10px;
+    width: 60px;
+    clear: both;
+}
+#special dd {
+    padding-left: 100px;
+}
+#special figure img {
+	width: 100%;
+}
+@media screen and (max-width: 767px){
+#special .imgtext2 {
+    display: flex;
+    padding-left: 10px;
+}
+#special .imgtext2 .imgtext {
+	float: none;
+	padding-left: 10px;
+	width: 100%;
+} 
+#special .imgtext img {
+	width: 100px;
+	/*float: left;*/
+}
+#special .imgtext p {
+    display: inline-block; 
+    padding: 0% 0 0 7%;
+}
+#special .mov .iframe {
+	width: 100%;
+}
+}
+
 /* --------------------------------------------------------
 	MS365申し込みページ
 -------------------------------------------------------- */
