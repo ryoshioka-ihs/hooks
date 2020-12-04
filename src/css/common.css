@@ -3754,9 +3754,6 @@ footer .footBot {
 /* --------------------------------------------------------
 	特別企画ページ
 -------------------------------------------------------- */
-#special {
-    margin-left: 20px;
-}
 #special .imgtext2 {
     display: flex;
 }
@@ -3775,7 +3772,7 @@ footer .footBot {
     text-align: center;
 }
 #special dl {
-    background-color: #fafafa;
+    background-color: #FFF;
     border: #F0F0F0 1px solid;
     margin-bottom: 10px;
     padding: 20px 20px;
@@ -3783,16 +3780,16 @@ footer .footBot {
 #special dt {
     width: 70px;
     height: 100%;
-    /*float: left;*/
-    margin-right: 30px;
+    float: left;
+    margin-right: 10px;
 }
 #special dt img {
-    padding-left: 10px;
     width: 60px;
     clear: both;
+    margin-top: -10px;
 }
 #special dd {
-    padding-left: 100px;
+    /*padding-left: 100px;*/
 }
 #special figure img {
 	width: 100%;
@@ -3807,6 +3804,11 @@ footer .footBot {
 	padding-left: 10px;
 	width: 100%;
 } 
+#special dt {
+    float: none;
+    width: auto;
+    text-align: center;
+}
 #special .imgtext img {
 	width: 100px;
 	/*float: left;*/
@@ -3815,7 +3817,7 @@ footer .footBot {
     display: inline-block; 
     padding: 0% 0 0 7%;
 }
-#special .mov .iframe {
+#special .mov iframe {
 	width: 100%;
 }
 }
