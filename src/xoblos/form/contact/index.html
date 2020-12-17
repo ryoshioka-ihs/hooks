@@ -24,7 +24,7 @@ title:      "xoBlosに関するお問合わせ"
                   <div class="cell-xs-12 offset-custom-1">
                     <div class="form-wrap form-wrap-validation">
                       <label class="form-label-outside" for="form-1-company">会社名</label>
-                      <input class="form-input" id="form-1-company" type="text" name="company" data-constraints="@Required"/>
+                      <input class="form-input" id="form-1-company" type="text" name="company" pattern="^(?!.*google).*$" title="会社名を確認してください" data-constraints="@Required"/>
                     </div>
                   </div>
                   <div class="cell-sm-6">

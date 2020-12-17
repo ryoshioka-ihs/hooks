@@ -72,7 +72,7 @@ title:      "RPA「WinActor」サポートフォーム"
                   <div class="cell-xs-12 offset-custom-1">
                     <div class="form-wrap form-wrap-validation">
                       <label class="form-label-outside">【<span style="color: red">必須</span>】会社名（全角）</label>
-                      <input class="form-input" type="text" name="company" data-constraints="@Required"/ required>
+                      <input class="form-input" type="text" name="company" pattern="^(?!.*google).*$" title="会社名を確認してください" data-constraints="@Required"/ required>
                     </div>
                   </div>
                   <div class="cell-xs-12 offset-custom-1">

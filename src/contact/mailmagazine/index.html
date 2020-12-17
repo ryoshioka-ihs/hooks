@@ -25,7 +25,7 @@ title: メールマガジン登録
 					<tbody>
 						<tr>
 							<th>【<span style="color: red">必須</span>】会社名</th>
-							<td><input type="text" name="Account Name" required></td>
+							<td><input type="text" name="Account Name" pattern="^(?!.*google).*$" title="会社名を確認してください" required></td>
 						</tr>
 						<tr>
 							<th>【<span style="color: red">必須</span>】部署名</th>

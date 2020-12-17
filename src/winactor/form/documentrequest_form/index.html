@@ -38,7 +38,7 @@ title:      "資料請求フォーム"
                   <div class="cell-xs-12 offset-custom-1">
                     <div class="form-wrap form-wrap-validation">
                       <label class="form-label-outside">【<span style="color: red">必須</span>】会社名（全角）</label>
-                      <input class="form-input" type="text" name="Company" data-constraints="@Required" required placeholder="（例）ＩＩＭヒューマン・ソリューション株式会社">
+                      <input class="form-input" type="text" name="Company" pattern="^(?!.*google).*$" title="会社名を確認してください" data-constraints="@Required" required placeholder="（例）ＩＩＭヒューマン・ソリューション株式会社">
                     </div>
                   </div>
                   <div class="cell-sm-6">
